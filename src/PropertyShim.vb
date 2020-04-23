@@ -1,7 +1,7 @@
 ﻿'Imports System.Runtime.CompilerServices
 Imports Inventor
 
-Public Class IpropertyShim
+Public Class PropertyShim
 
         Shared ReadOnly PropertyLookup As Dictionary(Of String, String) = New Dictionary(Of String,String)(StringComparer.OrdinalIgnoreCase) From 
         {{"Title", "Inventor Summary Information"},
@@ -70,44 +70,55 @@ Public Class IpropertyShim
         {"Appearance","Design Tracking Properties"},
         {"Flat Pattern Defer Update","Design Tracking Properties"}}
 
+        Public Shared PropertySetLookup As HashSet(Of String) = New HashSet(Of String) From {
+            "Inventor Summary Information",
+            "Inventor Document Summary Information",
+            "Design Tracking Properties",
+            "Inventor User Defined Properties"
+        }
 
+        ''' <summary>
+        ''' Return the specified document property's value.  Only requires a document and property propertyName. 
+        ''' </summary>
+        ''' <param name="doc">Inventor Document</param>
+        ''' <param name="propertyName">Name of the Property</param>
+        ''' <returns></returns>
+        Shared Function GetProperty(ByRef doc As Inventor.Document, ByVal propertyName As String) As Object
 
-''' <summary>
-''' Return the specified document property's value.  Only requires a document and property name. 
-''' </summary>
-''' <param name="doc"></param>
-''' <param name="key"></param>
-''' <returns></returns>
-    Shared Function GetProperty(ByRef doc As Inventor.Document, ByVal key As String) As Object
+            Dim setName As String
+            Dim documentPropertySets As Inventor.PropertySets = doc.PropertySets
+            'Get propertySet for provided propertyName (if exists)
+            If PropertyLookup.TryGetValue(propertyName, setName) then
+                return documentPropertySets.Item(setName).Item(propertyName).Value
+            End If
 
-        Dim value As String
-        If PropertyLookup.TryGetValue(key, value) then
-            return doc.PropertySets.Item(value).Item(key).Value
-        End If
+            'Not found in standard properties, search custom properties
+            Dim curentPropertySet As Inventor.PropertySet = documentPropertySets.Item("Inventor User Defined Properties")
+            Try
+                return curentPropertySet.Item(propertyName).Value
+            Catch
+            End Try
 
-        'Not found in standard properties, search custom properties
-        Dim customPropertySet As Inventor.PropertySet = doc.PropertySets.Item("Inventor User Defined Properties")
-        Dim items as Integer() = {}
-        Dim names As String() = {}
-        Dim values As Object() = {}
+            'Still not found, search other custom property sets!
+            If documentPropertySets.Count >= PropertySetLookup.Count Then
+                For Each curentPropertySet in doc.PropertySets
+                    If PropertySetLookup.Contains(curentPropertySet.DisplayName)
+                        Return ""
+                    End If
 
-        customPropertySet.GetPropertyInfo(items,names,values)
+                    Try
+                        return curentPropertySet.Item(propertyName).Value
+                    Catch ex As Exception
+                        return ""
+                    End Try
+                Next
+            End If
 
-        If names.Contains(key, StringComparer.OrdinalIgnoreCase)
-            return customPropertySet.Item(key).Value
-        End If
-        'TODO: If still not found, search other custom property sets!
+            'Still not found, return nothing...
+            return ""
 
-        If doc.PropertySets.Count >= 5 Then
-            'go through the custom ones...
-        End If
-
-        'Still not found, return nothing...
-        return ""
-
-    End Function
-
-    Shared Sub SetProperty(ByRef doc As Inventor.Document, ByVal key As String, ByVal value as Object)
+        End Function
+    Shared Sub SetProperty(ByRef doc As Inventor.Document, ByVal name As String, ByVal value as Object)
         
     End Sub
 
