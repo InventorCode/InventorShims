@@ -72,7 +72,7 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IpropertyShim.vb" />
+    <Compile Include="PropertyShim.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -89,9 +89,13 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <Compile Include="TestCode\ListIprops.vb" />
-    <Compile Include="TestCode\IpropertyShim.GetProperty Test.vb" />
-    <Compile Include="TestCode\PropertySet Get Items SpeedTest.vb" />
+    <Compile Include="TestCode\PropertyShim.GetProperty SpeedTest custom property.vb" />
+    <Compile Include="TestCode\PropertyShim.GetProperty SpeedTest no parameter.vb" />
+    <Compile Include="TestCode\PropertyShim.GetProperty Test.vb" />
+    <Compile Include="TestCode\PropertyShim.GetProperty SpeedTest.vb" />
     <Compile Include="TestCode\Iproperty SpeedTest.vb" />
+    <Compile Include="TestCode\PropertyShim SpeedTest try vs getpropinfo.vb" />
+    <Compile Include="TestCode\SpeedTest.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="My Project\Resources.resx">
@@ -112,6 +116,8 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <Content Include="Research\Property Info.txt" />
+    <None Include="TestCode\PropertyShim.GetProperty SpeedTest Results.md" />
+    <None Include="TestCode\SpeedTest Results - try vs GetPropsInfo.md" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
