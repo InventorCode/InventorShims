@@ -93,21 +93,21 @@ Public Class PropertyShim
             End If
 
             'Not found in standard properties, search custom properties
-            Dim curentPropertySet As Inventor.PropertySet = documentPropertySets.Item("Inventor User Defined Properties")
+            Dim currentPropertySet As Inventor.PropertySet = documentPropertySets.Item("Inventor User Defined Properties")
             Try
-                return curentPropertySet.Item(propertyName).Value
+                return currentPropertySet.Item(propertyName).Value
             Catch
             End Try
 
             'Still not found, search other custom property sets!
             If documentPropertySets.Count >= PropertySetLookup.Count Then
-                For Each curentPropertySet in doc.PropertySets
-                    If PropertySetLookup.Contains(curentPropertySet.DisplayName)
+                For Each currentPropertySet in doc.PropertySets
+                    If PropertySetLookup.Contains(currentPropertySet.DisplayName)
                         Return ""
                     End If
 
                     Try
-                        return curentPropertySet.Item(propertyName).Value
+                        return currentPropertySet.Item(propertyName).Value
                     Catch ex As Exception
                         return ""
                     End Try
