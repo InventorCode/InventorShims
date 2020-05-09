@@ -78,7 +78,8 @@ Public Class PropertyShim
         }
 
         ''' <summary>
-        ''' Return the specified document property's value.  Only requires a document and property propertyName. 
+        ''' Return the specified document property's value. This is the short form of this function.
+        ''' Only requires a document and property propertyName. 
         ''' </summary>
         ''' <param name="doc">Inventor Document</param>
         ''' <param name="propertyName">Name of the Property</param>
@@ -116,6 +117,19 @@ Public Class PropertyShim
 
             'Still not found, return nothing...
             return ""
+
+        End Function
+
+        Shared Function GetProperty(ByRef doc As Inventor.Document, ByVal setName As String, ByVal propertyName As String) As Object
+
+            Dim documentPropertySets As Inventor.PropertySets = doc.PropertySets
+            Try
+                Dim currentPropertySet As Inventor.PropertySet = documentPropertySets.Item(setName)
+                Dim currentProperty As Inventor.Property = currentPropertySet.Item(propertyName)
+                return currentProperty.Value
+            Catch ex As Exception
+                return ""
+            End Try
 
         End Function
     Shared Sub SetProperty(ByRef doc As Inventor.Document, ByVal propertyName As String, ByVal value as Object)
