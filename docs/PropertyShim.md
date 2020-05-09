@@ -8,22 +8,53 @@ nav_order:
 
 ## Methods
 
-GetProperty (function)
-: Return the specified document property's value as an object.  Tries to get the built-in properties first, then resorts to User-Defined Iproperties, and then searches through totally custom property groups.
+### GetProperty (function)
 
-Syntax: `GetProperty(doc As Inventor.Document, propertyName As String)`
+Return the specified document property's value as an object.  Tries to get the built-in properties first, then resorts to User-Defined Iproperties, and then searches through totally custom property groups.  If the property is not found, an empty string is returned.
 
-Usage: 
+Syntax:
 
-    Dim oDoc As Inventor.Document = ThisApplication.ActiveDocument
-    Dim value As String
-    value = GetProperty(oDoc, "Title")    
+    GetProperty(doc As Inventor.Document, propertyName As String)
 
-SetProperty
-: Set the specified document property's value.  If the ipropery name exist it will set the value.  If the name does not exist, it will add the property with the value you have specified.  Completely custom property groups are not utilized in this signature.
+    GetProperty(doc As Inventor.Document, propertySetName As String, propertyName As String)
 
-Usage: 
+#### Usage:
+
+Get the property (short form):
 
     Dim oDoc As Inventor.Document = ThisApplication.ActiveDocument
-    Dim value As String
-    value = SetProperty(oDoc, "Title", "Custom File Title!")    
+    msgbox(GetProperty(oDoc, "Title"))  
+
+Get the property from a specific property set:
+
+    Dim oDoc As Inventor.Document = ThisApplication.ActiveDocument
+    msgbox(GetProperty(oDoc, "Property Set", Title"))  
+
+
+### SetProperty
+
+Set the specified document property's value.  If the ipropery name exist it will set the value.  If the name does not exist, it will add the property with the value you have specified.  Completely custom property groups are not utilized in this signature.
+
+### Syntax:
+
+    SetProperty(doc As Inventor.Document, propertyName As String)
+
+    SetProperty(doc As Inventor.Document, PropertySetName As String, propertyName As String)
+
+
+### Usage:
+
+Set value for built-in property:
+
+    Dim oDoc As Inventor.Document = ThisApplication.ActiveDocument
+    SetProperty(oDoc, "Title", "Custom File Title!")    
+
+Set value for custom property:
+
+    Dim oDoc As Inventor.Document = ThisApplication.ActiveDocument
+    SetProperty(oDoc, "CustomProperty", "Value Here!")    
+
+Set value for a property in a specific property set:
+
+    Dim oDoc As Inventor.Document = ThisApplication.ActiveDocument
+    SetProperty(oDoc, "Property Group", CustomProperty", "Value Here!")    

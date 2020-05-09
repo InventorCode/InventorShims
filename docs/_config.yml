@@ -15,9 +15,9 @@ remote_theme: pmarsceill/just-the-docs
 # you will see them accessed via {{ site.title }}, {{ site.github_repo }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Calculator Formulas
-description: Formulas for Scenic-Shop.com calculators
-baseurl: "/Calculators" # the subpath of your site, e.g. /blog
+title: Inventor Shims
+description: Extension API for Autodesk Inventor
+baseurl: "/InventorShims" # the subpath of your site, e.g. /blog
 url: "https://jordanrobot.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 
 permalink: pretty
@@ -37,13 +37,13 @@ heading_anchors: true
 
 # Aux links for the upper right navigation
 aux_links:
-  "Scenic-Shop Calculators":
-    - "https://scenic-shop.com/Calculators"
-  "Calculators at Github":
-    - "https://github.com/jordanrobot/Calculators"
+  "Repository":
+    - "https://github.com/jordanrobot/InventorShims"
+  "Github":
+    - "https://github.com/jordanrobot/"
 
 # Footer content appears at the bottom of every page's main content
-footer_content: "Copyright &copy; 2013-2020 Matthew D. Jordan."
+footer_content: "Copyright &copy; 2020 Matthew D. Jordan."
 
 # Color scheme currently only supports "dark" or nil (default)
 color_scheme: nil
@@ -62,4 +62,3 @@ compress_html:
   startings: []
   blanklines: false
   profile: false
-theme: jekyll-theme-modernist
