@@ -12,7 +12,7 @@ nav_order:
 
 Return the specified document property's value as an object.  Tries to get the built-in properties first, then resorts to User-Defined Iproperties, and then searches through totally custom property groups.  If the property is not found, an empty string is returned.
 
-Syntax:
+#### Syntax:
 
     GetProperty(doc As Inventor.Document, propertyName As String)
 
@@ -35,14 +35,14 @@ Get the property from a specific property set:
 
 Set the specified document property's value.  If the ipropery name exist it will set the value.  If the name does not exist, it will add the property with the value you have specified.  Completely custom property groups are not utilized in this signature.
 
-### Syntax:
+#### Syntax:
 
     SetProperty(doc As Inventor.Document, propertyName As String)
 
     SetProperty(doc As Inventor.Document, PropertySetName As String, propertyName As String)
 
 
-### Usage:
+#### Usage:
 
 Set value for built-in property:
 
