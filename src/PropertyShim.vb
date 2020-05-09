@@ -118,8 +118,49 @@ Public Class PropertyShim
             return ""
 
         End Function
-    Shared Sub SetProperty(ByRef doc As Inventor.Document, ByVal name As String, ByVal value as Object)
+    Shared Sub SetProperty(ByRef doc As Inventor.Document, ByVal propertyName As String, ByVal value as Object)
         
+        Dim setName As String
+        Dim documentPropertySets As Inventor.PropertySets = doc.PropertySets
+
+        'If the property exists as a built-in property, set the value
+        If PropertyLookup.TryGetValue(propertyName, setName) then
+            Try
+                documentPropertySets.Item(setName).Item(propertyName).Value = value
+                Exit Sub
+            Catch
+            End Try
+            
+        End If
+
+        'Not found in standard properties, search custom properties
+        Dim currentPropertySet As Inventor.PropertySet = documentPropertySets.Item("Inventor User Defined Properties")
+            Try
+                currentPropertySet.Item(propertyName).Value = value
+                Exit Sub
+            Catch
+                currentPropertySet.Add(value, propertyname)
+            End Try
     End Sub
 
+    Shared Function CustomPropertyExists(currentPropertySet As Inventor.PropertySet, propertyName As String)
+        'Dim currentProperty As Inventor.Property
+'        For Each currentProperty In currentPropertySet
+'            If currentProperty.Name = propertyName Then
+'                Return True
+'            End If
+'        Next
+'        Return false
+        Dim a As Object
+        Try
+            a = currentPropertySet.Name(propertyName)
+            return true
+        Catch
+            return false
+        End Try
+    End Function
+
+        Shared Sub SetProperty(ByRef doc As Inventor.Document, ByVal propertySet As String, ByVal propertyName As String, ByVal value as Object)
+
+        End Sub
 End Class

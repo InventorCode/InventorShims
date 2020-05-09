@@ -95,6 +95,7 @@
     <Compile Include="TestCode\PropertyShim.GetProperty SpeedTest.vb" />
     <Compile Include="TestCode\Iproperty SpeedTest.vb" />
     <Compile Include="TestCode\PropertyShim SpeedTest try vs getpropinfo.vb" />
+    <Compile Include="TestCode\PropertyShim.SetProperty Test.vb" />
     <Compile Include="TestCode\SpeedTest.vb" />
   </ItemGroup>
   <ItemGroup>
