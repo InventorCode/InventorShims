@@ -1,6 +1,6 @@
-AddVbFile "PropertyShim.vb"
-AddVbFile "TestCode/SpeedTest.vb"
-AddVbFile "TestCode/Timer.vb"
+AddVbFile "src/PropertyShim.vb"
+AddVbFile "tests/SpeedTest.vb"
+AddVbFile "tests/Timer.vb"
 
 'This is a speed test between several methods to access all iproperties within a propertyset.
 '   Results: accessing all properties in a propertyset with GetPropertyInfo is faster than

@@ -1,6 +1,6 @@
-AddVbFile "PropertyShim.vb"
-AddVbFile "TestCode/SpeedTest.vb"
-AddVbFile "TestCode/Timer.vb"
+AddVbFile "src/PropertyShim.vb"
+AddVbFile "tests/SpeedTest.vb"
+AddVbFile "tests/Timer.vb"
 
 'This is a speed test between several methods to access all iproperties within a propertyset.
 '   Results: accessing all properties in a propertyset with GetPropertyInfo is faster than
@@ -12,7 +12,7 @@ AddVbFile "TestCode/Timer.vb"
         Dim test As SpeedTest = New SpeedTest()
 
         test.AddTest("PropertyShim.GetProperty", AddressOf Test1)
-        test.AddTest("Inventor API", AddressOf Test2)
+        'test.AddTest("Inventor API", AddressOf Test2)
 
         test.Iterations = 100
         test.RunTests()
@@ -24,7 +24,7 @@ AddVbFile "TestCode/Timer.vb"
     Public Sub Test1()
         Dim _doc As Inventor.Document = ThisApplication.ActiveDocument
         Dim value As String
-        value = PropertyShim.GetProperty(_doc, "Part Number")
+        value = PropertyShim.GetProperty(_doc, "Part Numberz")
 
     End Sub
 

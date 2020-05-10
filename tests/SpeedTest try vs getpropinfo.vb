@@ -1,7 +1,6 @@
-
-AddVbFile "IpropertyShim.vb"
-AddVbFile "TestCode/SpeedTest.vb"
-AddVbFile "TestCode/Timer.vb"
+AddVbFile "src/IpropertyShim.vb"
+AddVbFile "tests/SpeedTest.vb"
+AddVbFile "tests/Timer.vb"
 
 
 'Module SpeedTestMain '<CollectorPrepend>'</CollectorPrepend>

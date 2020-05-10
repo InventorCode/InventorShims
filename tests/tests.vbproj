@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{5AC007C3-85E2-4DDE-A5DE-E7C48CF59BE5}</ProjectGuid>
+    <ProjectGuid>{295AABC2-2250-4279-B9C7-E33C352FCDE4}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>InventorShims</RootNamespace>
-    <AssemblyName>InventorShims</AssemblyName>
+    <RootNamespace>tests</RootNamespace>
+    <AssemblyName>tests</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <MyType>Windows</MyType>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
@@ -18,8 +18,8 @@
     <DebugType>full</DebugType>
     <DefineDebug>true</DefineDebug>
     <DefineTrace>true</DefineTrace>
-    <OutputPath>..\..\build\debug\</OutputPath>
-    <DocumentationFile>InventorShims.xml</DocumentationFile>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>tests.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
@@ -27,8 +27,8 @@
     <DefineDebug>false</DefineDebug>
     <DefineTrace>true</DefineTrace>
     <Optimize>true</Optimize>
-    <OutputPath>..\..\build\</OutputPath>
-    <DocumentationFile>InventorShims.xml</DocumentationFile>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>tests.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup>
@@ -47,7 +47,7 @@
     <Reference Include="Autodesk.iLogic.Interfaces">
       <HintPath>..\..\..\..\..\..\Program Files\Autodesk\Inventor 2019\Bin\Autodesk.iLogic.Interfaces.dll</HintPath>
     </Reference>
-    <Reference Include="Autodesk.Inventor.Interop, Version=23.2.0.0, Culture=neutral, PublicKeyToken=d84147f8b4276564, processorArchitecture=MSIL">
+    <Reference Include="Autodesk.Inventor.Interop, Version=25.0.0.0, Culture=neutral, PublicKeyToken=d84147f8b4276564, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <EmbedInteropTypes>True</EmbedInteropTypes>
       <HintPath>..\..\..\..\..\..\Program Files\Autodesk\Inventor 2019\Bin\Public Assemblies\Autodesk.Inventor.Interop.dll</HintPath>
@@ -72,7 +72,8 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="PropertyShim.vb" />
+    <Compile Include="Iproperty SpeedTest.vb" />
+    <Compile Include="ListIprops.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -88,6 +89,14 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="PropertyShim.GetProperty SpeedTest.vb" />
+    <Compile Include="PropertyShim.GetProperty.SpeedTest custom property.vb" />
+    <Compile Include="PropertyShim.GetProperty.SpeedTest no parameter.vb" />
+    <Compile Include="PropertyShim.GetProperty.vb" />
+    <Compile Include="PropertyShim.SetProperty.vb" />
+    <Compile Include="SpeedTest try vs getpropinfo.vb" />
+    <Compile Include="SpeedTest.vb" />
+    <Compile Include="Timer.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="My Project\Resources.resx">
@@ -107,8 +116,12 @@
       <CustomToolNamespace>My</CustomToolNamespace>
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
-    <Content Include="Research\Property Info.txt" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\src\InventorShims.vbproj">
+      <Project>{5ac007c3-85e2-4dde-a5de-e7c48cf59be5}</Project>
+      <Name>InventorShims</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
