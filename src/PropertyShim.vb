@@ -158,13 +158,7 @@ Public Class PropertyShim
     End Sub
 
     Shared Function CustomPropertyExists(currentPropertySet As Inventor.PropertySet, propertyName As String)
-        'Dim currentProperty As Inventor.Property
-'        For Each currentProperty In currentPropertySet
-'            If currentProperty.Name = propertyName Then
-'                Return True
-'            End If
-'        Next
-'        Return false
+
         Dim a As Object
         Try
             a = currentPropertySet.Name(propertyName)
@@ -174,7 +168,37 @@ Public Class PropertyShim
         End Try
     End Function
 
-        Shared Sub SetProperty(ByRef doc As Inventor.Document, ByVal propertySet As String, ByVal propertyName As String, ByVal value as Object)
+    Shared Function PropertySetExists(ByRef doc As Inventor.Document, ByVal propertySetName As String)
+        For each propertySet in doc.PropertySets
+            If String.Equals(propertySet.Name, propertySetName, StringComparison.OrdinalIgnoreCase)
+                return True
+            End If
+        Next
+        Return False
+    End Function
 
+        Shared Sub SetProperty(ByRef doc As Inventor.Document, ByVal propertySetName As String, ByVal propertyName As String, ByVal value as Object)
+            
+            Dim documentPropertySets As Inventor.PropertySets = doc.PropertySets
+            'If the property set exists, set the value, or add it if needed
+            If PropertySetExists(doc, propertySetName) then
+                Try
+                    documentPropertySets.Item(propertySetName).Item(propertyName).Value = value
+                    Exit Sub
+                Catch
+                    documentPropertySets.Item(propertySetName).Add(value, propertyname)
+                End Try
+            
+            Else
+
+                'Create the property set, then the property
+                Try
+                    documentPropertySets.Add(propertySetName)
+                    documentPropertySets.Item(propertySetName).Add(value, propertyname)
+                Catch ex As Exception
+
+                End Try
+            
+            End If
         End Sub
 End Class
