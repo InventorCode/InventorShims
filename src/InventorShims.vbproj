@@ -72,8 +72,10 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AttributeShim.vb" />
     <Compile Include="DocumentShim.vb" />
     <Compile Include="DrawingViewShim.vb" />
+    <Compile Include="ObjectShim.vb" />
     <Compile Include="ParameterShim.vb" />
     <Compile Include="PropertyShim.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
