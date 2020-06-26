@@ -72,6 +72,7 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DocumentShim.Test.vb" />
     <Compile Include="Iproperty SpeedTest.vb" />
     <Compile Include="ListIprops.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
