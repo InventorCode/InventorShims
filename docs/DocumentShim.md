@@ -8,7 +8,7 @@ nav_order:
 
 ## Methods
 
-### DocumentType Functions (function)
+### DocumentType Functions
 
 A series of functions that return true or false depending on the document type of the supplied document.  The functions are listed in a table below.
 
@@ -30,7 +30,7 @@ A series of functions that return true or false depending on the document type o
 
 #### Usage:
 
-Get the property (short form):
+Show a dialogue returning the answer to "Is the provided document an assembly?":
 
     Dim oDoc As Inventor.Document = ThisApplication.ActiveDocument
     msgbox(IsAssembly(oDoc))
