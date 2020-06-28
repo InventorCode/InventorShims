@@ -10,6 +10,10 @@ Public Class AttributeShim
         SetAttributeEngine(obj, attributeSet, attribute, value, Inventor.ValueTypeEnum.kIntegerType)
     End Sub
 
+    Shared Sub SetAttribute(obj As Object, attributeSet As String, attribute As String, value As Boolean)
+        SetAttributeEngine(obj, attributeSet, attribute, value, Inventor.ValueTypeEnum.kBooleanType)
+    End Sub
+
     Shared Sub SetAttribute(obj As Object, attributeSet As String, attribute As String, value As Double)
         SetAttributeEngine(obj, attributeSet, attribute, value, Inventor.ValueTypeEnum.kDoubleType)
     End Sub

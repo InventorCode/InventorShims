@@ -22,6 +22,8 @@ Creates or modifies an attribute in the provided object.  If the AttributeSet do
 
     SetAttribute(obj As Object, attributeSet As String, attribute As String, value As Byte())
 
+    SetAttribute(obj As Object, attributeSet As String, attribute As String, value As Boolean)
+
 
 #### Usage:
 
