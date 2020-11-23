@@ -31,6 +31,18 @@ Contributions of any type are welcome!  If you want to help...
 * Add any issues you want and we can discuss.
 * Fork the code and add some functionality!
 
+## Branch Guidance
+
+*Master* will be the main repository branch; this branch will contain the most up-to-date code.  All short-lived branches will be merged back into *Main*.
+The following branch naming guidelines should be observed for short-lived branches...
+
+* feature/xx
+* bugfix/xx
+* issue/xx
+* username/xx
+
+Users are urged to use pull requests to merge into *Master*, instead of directly pushing to master.  This should foster discussion about the proposed merges.
+
 ## License
 
 This code is under an MIT license.
