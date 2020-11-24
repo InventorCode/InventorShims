@@ -1,4 +1,4 @@
-AddVbFile "src/PropertyShim.vb"
+AddVbFile "src-vb/iProperty.vb"
 AddVbFile "tests/SpeedTest.vb"
 AddVbFile "tests/Timer.vb"
 
@@ -11,8 +11,8 @@ AddVbFile "tests/Timer.vb"
         
         Dim test As SpeedTest = New SpeedTest()
 
-        test.AddTest("PropertyShim.GetProperty", AddressOf Test1)
-        test.AddTest("Inventor API", AddressOf Test2)
+    test.AddTest("iProperty.GetProperty", AddressOf Test1)
+    test.AddTest("Inventor API", AddressOf Test2)
 
         test.Iterations = 100
         test.RunTests()
@@ -24,9 +24,9 @@ AddVbFile "tests/Timer.vb"
     Public Sub Test1()
         Dim _doc As Inventor.Document = ThisApplication.ActiveDocument
         Dim value As String
-        value = PropertyShim.GetProperty(_doc, "Sheet")
+    value = iProperty.GetProperty(_doc, "Sheet")
 
-    End Sub
+End Sub
 
     Public Sub Test2()
         Dim _doc As Inventor.Document = ThisApplication.ActiveDocument

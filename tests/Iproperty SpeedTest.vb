@@ -12,8 +12,8 @@
         test.AddTest("SetByName", AddressOf AccessPropertySetByName)
         test.AddTest("SetByUnique", AddressOf AccessPropertySetByUniqueID)
 
-        test.Iterations = 50000
-        test.RunTests()
+    test.Iterations = 100
+    test.RunTests()
         test.ShowResultsInDialog()
 
     End Sub

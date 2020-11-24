@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{5AC007C3-85E2-4DDE-A5DE-E7C48CF59BE5}</ProjectGuid>
+    <ProjectGuid>{FB816A14-783C-4DF1-9975-F384CF56A7C8}</ProjectGuid>
     <OutputType>Library</OutputType>
     <RootNamespace>InventorShims</RootNamespace>
     <AssemblyName>InventorShims</AssemblyName>
@@ -72,12 +72,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AttributeShim.vb" />
-    <Compile Include="DocumentShim.vb" />
-    <Compile Include="DrawingViewShim.vb" />
-    <Compile Include="ObjectShim.vb" />
-    <Compile Include="ParameterShim.vb" />
-    <Compile Include="PropertyShim.vb" />
+    <None Include="Attribute.vb" />
+    <Compile Include="DocumentType.vb" />
+    <Compile Include="DrawingView.vb" />
+    <Compile Include="Object.vb" />
+    <Compile Include="Parameter.vb" />
+    <Compile Include="iProperty.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>

@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29709.97
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "InventorShims-vb", "src-vb\InventorShims.vbproj", "{5AC007C3-85E2-4DDE-A5DE-E7C48CF59BE5}"
-EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "tests", "tests\tests.vbproj", "{295AABC2-2250-4279-B9C7-E33C352FCDE4}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "InventorShims-vb", "src-vb\InventorShims-vb.vbproj", "{FB816A14-783C-4DF1-9975-F384CF56A7C8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,14 +13,14 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{5AC007C3-85E2-4DDE-A5DE-E7C48CF59BE5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5AC007C3-85E2-4DDE-A5DE-E7C48CF59BE5}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5AC007C3-85E2-4DDE-A5DE-E7C48CF59BE5}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5AC007C3-85E2-4DDE-A5DE-E7C48CF59BE5}.Release|Any CPU.Build.0 = Release|Any CPU
 		{295AABC2-2250-4279-B9C7-E33C352FCDE4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{295AABC2-2250-4279-B9C7-E33C352FCDE4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{295AABC2-2250-4279-B9C7-E33C352FCDE4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{295AABC2-2250-4279-B9C7-E33C352FCDE4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FB816A14-783C-4DF1-9975-F384CF56A7C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB816A14-783C-4DF1-9975-F384CF56A7C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB816A14-783C-4DF1-9975-F384CF56A7C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB816A14-783C-4DF1-9975-F384CF56A7C8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
