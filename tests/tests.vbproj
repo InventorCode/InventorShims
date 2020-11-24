@@ -72,8 +72,8 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AttributeShim.Test.vb" />
-    <Compile Include="DocumentShim.Test.vb" />
+    <Compile Include="Attribute.Test.vb" />
+    <Compile Include="DocumentType.Test.vb" />
     <Compile Include="Iproperty SpeedTest.vb" />
     <Compile Include="ListIprops.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -91,12 +91,11 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="PropertyShim.GetProperty SpeedTest.vb" />
-    <Compile Include="PropertyShim.GetProperty.SpeedTest custom property.vb" />
-    <Compile Include="PropertyShim.GetProperty.SpeedTest no parameter.vb" />
-    <Compile Include="PropertyShim.GetProperty.vb" />
-    <Compile Include="PropertyShim.SetProperty.vb" />
-    <Compile Include="SpeedTest try vs getpropinfo.vb" />
+    <Compile Include="iProperty.GetProperty SpeedTest.vb" />
+    <Compile Include="iProperty.GetProperty.SpeedTest custom property.vb" />
+    <Compile Include="iProperty.GetProperty.SpeedTest no parameter.vb" />
+    <Compile Include="iProperty.GetProperty.vb" />
+    <Compile Include="iProperty.SetProperty.vb" />
     <Compile Include="SpeedTest.vb" />
     <Compile Include="Timer.vb" />
   </ItemGroup>
@@ -120,9 +119,9 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\src\InventorShims.vbproj">
-      <Project>{5ac007c3-85e2-4dde-a5de-e7c48cf59be5}</Project>
-      <Name>InventorShims</Name>
+    <ProjectReference Include="..\src-vb\InventorShims-vb.vbproj">
+      <Project>{fb816a14-783c-4df1-9975-f384cf56a7c8}</Project>
+      <Name>InventorShims-vb</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />

@@ -1,6 +1,7 @@
 Imports Inventor
 
-Public Class AttributeShim
+
+Public Class Attribute
 
     Shared Sub SetAttribute(obj As Object, attributeSet As String, attribute As String, value As String)
         SetAttributeEngine(obj, attributeSet, attribute, value, Inventor.ValueTypeEnum.kStringType)
@@ -34,7 +35,7 @@ Public Class AttributeShim
         oAttributeSet = CreateAttributeSet(obj, attributeSet)
 
         If DoesAttributeExist(obj, attributeSet, attribute) Then
-            oAttributeSet.Item(attribute).value = value
+            oAttributeSet.Item(attribute).Value = value
         Else
             oAttributeSet.Add(attribute, kind, value)
         End If
@@ -42,17 +43,17 @@ Public Class AttributeShim
 
     End Sub
 
-    Shared Function CreateAttributeSet(obj as Object, attributeSet As String) As Inventor.AttributeSet
-        
+    Shared Function CreateAttributeSet(obj As Object, attributeSet As String) As Inventor.AttributeSet
+
         If IsAttributeCapable(obj) = False Then
             Throw New SystemException("The selected object is not attribute-capable.")
         End If
 
         If DoesAttributeSetExist(obj, attributeSet) Then
             Return obj.AttributeSets.Item(attributeSet)
-        
-        Else 
-            
+
+        Else
+
             Dim oAttributeSets As Inventor.AttributeSets = obj.AttributeSets
             Return oAttributeSets.Add(attributeSet)
         End If
@@ -63,7 +64,7 @@ Public Class AttributeShim
 
         If DoesAttributeExist(obj, attributeSet, attribute) Then
             Dim oAttributeSets As Inventor.AttributeSets = obj.AttributeSets
-            Dim oAttributeSet  As Inventor.AttributeSet = oAttributeSets.Item(attributeSet)
+            Dim oAttributeSet As Inventor.AttributeSet = oAttributeSets.Item(attributeSet)
             Return oAttributeSet.Item(attribute).Value
         Else
             Return ""
@@ -75,7 +76,7 @@ Public Class AttributeShim
 
         If DoesAttributeExist(obj, attributeSet, attribute) Then
             Dim oAttributeSets As Inventor.AttributeSets = obj.AttributeSets
-            Dim oAttributeSet  As Inventor.AttributeSet = oAttributeSets.Item(attributeSet)
+            Dim oAttributeSet As Inventor.AttributeSet = oAttributeSets.Item(attributeSet)
             oAttributeSet.Item(attribute).Delete()
         End If
 
@@ -97,7 +98,7 @@ Public Class AttributeShim
             Return False
         End If
 
-        Dim oAttributeSets As Inventor.AttributeSets= obj.AttributeSets
+        Dim oAttributeSets As Inventor.AttributeSets = obj.AttributeSets
         Return oAttributeSets.NameIsUsed(attributeSet)
 
     End Function
@@ -108,11 +109,11 @@ Public Class AttributeShim
             Return False
         End If
 
-        If DoesAttributeSetExist(obj, attributeSet) = False
+        If DoesAttributeSetExist(obj, attributeSet) = False Then
             Return False
         End If
 
-        Dim oAttributeSets As Inventor.AttributeSets= obj.AttributeSets
+        Dim oAttributeSets As Inventor.AttributeSets = obj.AttributeSets
         Dim oAttributeSet As Inventor.AttributeSet = oAttributeSets.Item(attributeSet)
         Return oAttributeSet.NameIsUsed(attribute)
 
@@ -122,7 +123,7 @@ Public Class AttributeShim
 
         Dim oAttributeSets As Inventor.AttributeSets
 
-        Try 
+        Try
             oAttributeSets = obj.AttributeSets
             Return True
         Catch ex As Exception

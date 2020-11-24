@@ -1,10 +1,10 @@
 ﻿'Imports System.Runtime.CompilerServices
 
-Public Class DocumentShim
+Public Class DocumentType
 
     Shared Function IsPart(document As Inventor.Document) As Boolean
-    
-        If document.DocumentType = Inventor.DocumentTypeEnum.kPartDocumentObject
+
+        If document.DocumentType = Inventor.DocumentTypeEnum.kPartDocumentObject Then
             Return True
         End If
 
@@ -13,7 +13,7 @@ Public Class DocumentShim
 
     Shared Function IsAssembly(document As Inventor.Document) As Boolean
 
-        If document.DocumentType = Inventor.DocumentTypeEnum.kAssemblyDocumentObject
+        If document.DocumentType = Inventor.DocumentTypeEnum.kAssemblyDocumentObject Then
             Return True
         End If
 
@@ -22,7 +22,7 @@ Public Class DocumentShim
 
     Shared Function IsDrawing(document As Inventor.Document) As Boolean
 
-        If document.DocumentType = Inventor.DocumentTypeEnum.kDrawingDocumentObject
+        If document.DocumentType = Inventor.DocumentTypeEnum.kDrawingDocumentObject Then
             Return True
         End If
 
@@ -31,7 +31,7 @@ Public Class DocumentShim
 
     Shared Function IsPresentation(document As Inventor.Document) As Boolean
 
-        If document.DocumentType = Inventor.DocumentTypeEnum.kPresentationDocumentObject
+        If document.DocumentType = Inventor.DocumentTypeEnum.kPresentationDocumentObject Then
             Return True
         End If
 
@@ -40,7 +40,7 @@ Public Class DocumentShim
 
     Shared Function IsForeignModel(document As Inventor.Document) As Boolean
 
-        If document.DocumentType = Inventor.DocumentTypeEnum.kForeignModelDocumentObject
+        If document.DocumentType = Inventor.DocumentTypeEnum.kForeignModelDocumentObject Then
             Return True
         End If
 
@@ -48,18 +48,18 @@ Public Class DocumentShim
     End Function
 
     Shared Function IsNest(document As Inventor.Document) As Boolean
-'        Try
-'        If document.DocumentType = Inventor.DocumentTypeEnum.kNestingDocument
-'            Return True
-'        End If
-'        Catch
-'            End Try
+        '        Try
+        '        If document.DocumentType = Inventor.DocumentTypeEnum.kNestingDocument
+        '            Return True
+        '        End If
+        '        Catch
+        '            End Try
         Return False
     End Function
 
     Shared Function IsSAT(document As Inventor.Document) As Boolean
-        
-        If document.DocumentType = Inventor.DocumentTypeEnum.kSATFileDocumentObject
+
+        If document.DocumentType = Inventor.DocumentTypeEnum.kSATFileDocumentObject Then
             Return True
         End If
 
@@ -69,7 +69,7 @@ Public Class DocumentShim
 
     Shared Function IsUnknown(document As Inventor.Document) As Boolean
 
-        If document.DocumentType = Inventor.DocumentTypeEnum.kUnknownDocumentObject
+        If document.DocumentType = Inventor.DocumentTypeEnum.kUnknownDocumentObject Then
             Return True
         End If
 
