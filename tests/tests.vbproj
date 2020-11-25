@@ -96,6 +96,7 @@
     <Compile Include="iProperty.GetProperty.SpeedTest no parameter.vb" />
     <Compile Include="iProperty.GetProperty.vb" />
     <Compile Include="iProperty.SetProperty.vb" />
+    <Compile Include="PathShim.Test.vb" />
     <Compile Include="SpeedTest.vb" />
     <Compile Include="Timer.vb" />
   </ItemGroup>
