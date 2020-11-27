@@ -1,8 +1,9 @@
-﻿'Imports System.Runtime.CompilerServices
+﻿Imports System.Runtime.CompilerServices
 
-Public Class DocumentType
+Public Module DocumentExtension
 
-    Shared Function IsPart(document As Inventor.Document) As Boolean
+    <Extension()>
+    Public Function IsPart(document As Inventor.Document) As Boolean
 
         If document.DocumentType = Inventor.DocumentTypeEnum.kPartDocumentObject Then
             Return True
@@ -11,7 +12,8 @@ Public Class DocumentType
         Return False
     End Function
 
-    Shared Function IsAssembly(document As Inventor.Document) As Boolean
+    <Extension()>
+    Public Function IsAssembly(document As Inventor.Document) As Boolean
 
         If document.DocumentType = Inventor.DocumentTypeEnum.kAssemblyDocumentObject Then
             Return True
@@ -20,7 +22,8 @@ Public Class DocumentType
         Return False
     End Function
 
-    Shared Function IsDrawing(document As Inventor.Document) As Boolean
+    <Extension()>
+    Public Function IsDrawing(document As Inventor.Document) As Boolean
 
         If document.DocumentType = Inventor.DocumentTypeEnum.kDrawingDocumentObject Then
             Return True
@@ -29,7 +32,8 @@ Public Class DocumentType
         Return False
     End Function
 
-    Shared Function IsPresentation(document As Inventor.Document) As Boolean
+    <Extension()>
+    Public Function IsPresentation(document As Inventor.Document) As Boolean
 
         If document.DocumentType = Inventor.DocumentTypeEnum.kPresentationDocumentObject Then
             Return True
@@ -38,7 +42,8 @@ Public Class DocumentType
         Return False
     End Function
 
-    Shared Function IsForeignModel(document As Inventor.Document) As Boolean
+    <Extension()>
+    Public Function IsForeignModel(document As Inventor.Document) As Boolean
 
         If document.DocumentType = Inventor.DocumentTypeEnum.kForeignModelDocumentObject Then
             Return True
@@ -47,17 +52,18 @@ Public Class DocumentType
         Return False
     End Function
 
-    Shared Function IsNest(document As Inventor.Document) As Boolean
-        '        Try
-        '        If document.DocumentType = Inventor.DocumentTypeEnum.kNestingDocument
-        '            Return True
-        '        End If
-        '        Catch
-        '            End Try
+    <Extension()>
+    Public Function IsNest(document As Inventor.Document) As Boolean
+
+        If document.DocumentType = Inventor.DocumentTypeEnum.kNestingDocument Then
+            Return True
+        End If
+
         Return False
     End Function
 
-    Shared Function IsSAT(document As Inventor.Document) As Boolean
+    <Extension()>
+    Public Function IsSAT(document As Inventor.Document) As Boolean
 
         If document.DocumentType = Inventor.DocumentTypeEnum.kSATFileDocumentObject Then
             Return True
@@ -67,7 +73,8 @@ Public Class DocumentType
         Return False
     End Function
 
-    Shared Function IsUnknown(document As Inventor.Document) As Boolean
+    <Extension()>
+    Public Function IsUnknown(document As Inventor.Document) As Boolean
 
         If document.DocumentType = Inventor.DocumentTypeEnum.kUnknownDocumentObject Then
             Return True
@@ -77,4 +84,4 @@ Public Class DocumentType
     End Function
 
 
-End Class
+End Module
