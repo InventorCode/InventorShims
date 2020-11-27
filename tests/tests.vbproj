@@ -19,7 +19,8 @@
     <DefineDebug>true</DefineDebug>
     <DefineTrace>true</DefineTrace>
     <OutputPath>bin\Debug\</OutputPath>
-    <DocumentationFile>tests.xml</DocumentationFile>
+    <DocumentationFile>
+    </DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
@@ -28,7 +29,8 @@
     <DefineTrace>true</DefineTrace>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
-    <DocumentationFile>tests.xml</DocumentationFile>
+    <DocumentationFile>
+    </DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup>
@@ -72,10 +74,10 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Attribute.Test.vb" />
-    <Compile Include="DocumentType.Test.vb" />
-    <Compile Include="Iproperty SpeedTest.vb" />
-    <Compile Include="ListIprops.vb" />
+    <None Include="Attribute.Test.vb" />
+    <None Include="DocumentType.Test.vb" />
+    <None Include="Iproperty SpeedTest.vb" />
+    <None Include="ListIprops.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -91,14 +93,14 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="iProperty.GetProperty SpeedTest.vb" />
-    <Compile Include="iProperty.GetProperty.SpeedTest custom property.vb" />
-    <Compile Include="iProperty.GetProperty.SpeedTest no parameter.vb" />
-    <Compile Include="iProperty.GetProperty.vb" />
-    <Compile Include="iProperty.SetProperty.vb" />
-    <Compile Include="PathShim.Test.vb" />
-    <Compile Include="SpeedTest.vb" />
-    <Compile Include="Timer.vb" />
+    <None Include="iProperty.GetProperty SpeedTest.vb" />
+    <None Include="iProperty.GetProperty.SpeedTest custom property.vb" />
+    <None Include="iProperty.GetProperty.SpeedTest no parameter.vb" />
+    <None Include="iProperty.GetProperty.vb" />
+    <None Include="iProperty.SetProperty.vb" />
+    <None Include="PathShim.Test.vb" />
+    <None Include="SpeedTest.vb" />
+    <None Include="Timer.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="My Project\Resources.resx">
