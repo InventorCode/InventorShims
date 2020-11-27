@@ -76,7 +76,7 @@
     <Compile Include="PathShim.vb" />
     <None Include="Attribute.vb" />
     <Compile Include="DocumentType.vb" />
-    <Compile Include="DrawingView.vb" />
+    <None Include="DrawingView.vb" />
     <Compile Include="Object.vb" />
     <Compile Include="Parameter.vb" />
     <Compile Include="iProperty.vb" />
