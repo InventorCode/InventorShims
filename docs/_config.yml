@@ -18,7 +18,7 @@ remote_theme: pmarsceill/just-the-docs
 title: Inventor Shims
 description: Extension API for Autodesk Inventor
 baseurl: "/InventorShims" # the subpath of your site, e.g. /blog
-url: "https://jordanrobot.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://inventorcode.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 
 permalink: pretty
 #exclude: ["node_modules/", "*.gemspec", "*.gem", "Gemfile", "Gemfile.lock", "package.json", "package-lock.json",  "script/", "LICENSE.txt", "lib/", "bin/", "README.md", "Rakefile"]
@@ -38,12 +38,12 @@ heading_anchors: true
 # Aux links for the upper right navigation
 aux_links:
   "Repository":
-    - "https://github.com/jordanrobot/InventorShims"
+    - "https://github.com/InventorCode/InventorShims"
   "Github":
-    - "https://github.com/jordanrobot/"
+    - "https://github.com/InventorCode/"
 
 # Footer content appears at the bottom of every page's main content
-footer_content: "Copyright &copy; 2020 Matthew D. Jordan."
+footer_content: "MIT License"
 
 # Color scheme currently only supports "dark" or nil (default)
 color_scheme: nil
