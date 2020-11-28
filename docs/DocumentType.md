@@ -1,16 +1,14 @@
 ---
 layout: default
-title: DocumentShim Class
+title: Document[Type] Extension Methods
 nav_order: 
 ---
 
-# DocumentShim Class
+# Document[Type] Extension Methods
 
-## Methods
+## DocumentType Functions
 
-### DocumentType Functions
-
-A series of functions that return true or false depending on the document type of the supplied document.  The functions are listed in a table below.
+A group of extension functions for the `Inventor.Document` object; each returns a boolean value indicating if the supplied document is of that particular type. The functions are listed in a table below.
 
 | Function|Return Type|
 |-
@@ -26,14 +24,14 @@ A series of functions that return true or false depending on the document type o
 
 #### Syntax:
 
-    IsAssembly(doc As Inventor.Document)
+    Document.IsPart
 
 #### Usage:
 
 Show a dialogue returning the answer to "Is the provided document an assembly?":
 
     Dim oDoc As Inventor.Document = ThisApplication.ActiveDocument
-    msgbox(IsAssembly(oDoc))
+    msgbox(oDoc.IsAssembly)
 
 
 
