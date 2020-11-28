@@ -1,6 +1,6 @@
 ﻿Imports System.Runtime.CompilerServices
 
-Public Module DocumentExtension
+Public Module DocumentType
 
     <Extension()>
     Public Function IsPart(document As Inventor.Document) As Boolean
