@@ -7,6 +7,8 @@ This is an unofficial collection of extension APIs for Autodesk Inventor.  The g
 * Additional API functionality that is not included with Inventor.  E.g. a set of simple regex functions that help the developer parse string object more effectively.
 * Improved functionality of stock API objects/methods.  This may included simplified access to objects, more advanced management of objects, or safer code with better error handling outcomes.  E.g. an example is an iproperty access method that will not throw an exception when a non-present property is accessed.
 
+The minimum supported version of Inventor will be 2020.
+
 ## How to Use
 
 This package may be best utilized in one of the following ways...
@@ -31,17 +33,24 @@ Contributions of any type are welcome!  If you want to help...
 * Add any issues you want and we can discuss.
 * Fork the code and add some functionality!
 
+If you want to contribute, the process proceeds as follows:
+
+1. fork the repo
+2. create a new feature branch in your forked repo
+3. make changes
+4. commit your work
+5. then issue a pull request back to this repo (upstream) for a code review.
+
 ## Branch Guidance
 
-*Master* will be the main repository branch; this branch will contain the most up-to-date code.  All short-lived branches will be merged back into *Main*.
-The following branch naming guidelines should be observed for short-lived branches...
+*Master* will be the main repository branch; this branch will contain the most up-to-date code.  All short-lived branches will be merged back into *Master* after a code review by repo maintainers.
+
+The following branch names are suggested for short-lived branches...
 
 * feature/xx
 * bugfix/xx
 * issue/xx
 * username/xx
-
-Users are urged to use pull requests to merge into *Master*, instead of directly pushing to master.  This should foster discussion about the proposed merges.
 
 ## License
 
