@@ -79,7 +79,6 @@
   <ItemGroup>
     <Compile Include="PathShim.vb" />
     <Compile Include="Attribute.vb" />
-    <Compile Include="DocumentType.vb" />
     <None Include="DrawingView.vb" />
     <Compile Include="Object.vb" />
     <Compile Include="Parameter.vb" />

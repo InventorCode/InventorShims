@@ -231,5 +231,87 @@ namespace InventorShims
             // Change the value
             documentPropertySet[nameOfiProperty].Value = newValue;
         }
+
+        #region Document type booleans
+        /// <summary>
+        /// Returns true if document is a part
+        /// </summary>
+        /// <param name="documentToTest"></param>
+        /// <returns></returns>
+        public static bool IsPart(this Document documentToTest)
+        {
+            return documentToTest.DocumentType == Inventor.DocumentTypeEnum.kPartDocumentObject ? true : false;
+        }
+
+        /// <summary>
+        /// Returns true if document is an assembly
+        /// </summary>
+        /// <param name="documentToTest"></param>
+        /// <returns></returns>
+        public static bool IsAssembly(this Document documentToTest)
+        {
+            return documentToTest.DocumentType == Inventor.DocumentTypeEnum.kAssemblyDocumentObject ? true : false;
+        }
+
+        /// <summary>
+        /// Returns true if document is an drawing
+        /// </summary>
+        /// <param name="documentToTest"></param>
+        /// <returns></returns>
+        public static bool IsDrawing(this Document documentToTest)
+        {
+            return documentToTest.DocumentType == Inventor.DocumentTypeEnum.kDrawingDocumentObject ? true : false;
+        }
+
+        /// <summary>
+        /// Returns true if document is a presentation
+        /// </summary>
+        /// <param name="documentToTest"></param>
+        /// <returns></returns>
+        public static bool IsPresentation(this Document documentToTest)
+        {
+            return documentToTest.DocumentType == Inventor.DocumentTypeEnum.kPresentationDocumentObject ? true : false;
+        }
+
+        /// <summary>
+        /// Returns true if document is a presentation
+        /// </summary>
+        /// <param name="documentToTest"></param>
+        /// <returns></returns>
+        public static bool IsForeignModel(this Document documentToTest)
+        {
+            return documentToTest.DocumentType == Inventor.DocumentTypeEnum.kForeignModelDocumentObject ? true : false;
+        }
+
+        /// <summary>
+        /// Returns true if document is a nest
+        /// </summary>
+        /// <param name="documentToTest"></param>
+        /// <returns></returns>
+        public static bool IsNest(this Document documentToTest)
+        {
+            return documentToTest.DocumentType == Inventor.DocumentTypeEnum.kNestingDocument ? true : false;
+        }
+
+        /// <summary>
+        /// Returns true if document is a nest
+        /// </summary>
+        /// <param name="documentToTest"></param>
+        /// <returns></returns>
+        public static bool IsSat(this Document documentToTest)
+        {
+            return documentToTest.DocumentType == Inventor.DocumentTypeEnum.kSATFileDocumentObject ? true : false;
+        }
+
+        /// <summary>
+        /// Returns true if document is a nest
+        /// </summary>
+        /// <param name="documentToTest"></param>
+        /// <returns></returns>
+        public static bool IsUnknown(this Document documentToTest)
+        {
+            return documentToTest.DocumentType == Inventor.DocumentTypeEnum.kUnknownDocumentObject ? true : false;
+        }
+        #endregion
     }
 }
