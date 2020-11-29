@@ -21,12 +21,24 @@ namespace InventorShims
             return inputNum * 2.54;
         }
 
+        // Int overload of the above
+        public static double ToCentimeters(this int inputNum)
+        {
+            return inputNum * 2.54;
+        }
+
         /// <summary>
         /// Handles extending a double and returns that double converted to inches
         /// </summary>
         /// <param name="inputNum"></param>
         /// <returns></returns>
         public static double ToInches(this double inputNum)
+        {
+            return inputNum / 2.54;
+        }
+
+        // Int overload of the above
+        public static double ToInches(this int inputNum)
         {
             return inputNum / 2.54;
         }
