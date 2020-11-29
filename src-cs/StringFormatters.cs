@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace InventorShims
 {
-    class StringFormatters
+    /// <summary>
+    /// String formatting methods
+    /// </summary>
+    public static class StringFormatters
     {
         /// <summary>
         /// Takes a double of inches and returns the string of a fraction equivalent.
