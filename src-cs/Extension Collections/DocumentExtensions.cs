@@ -100,34 +100,6 @@ namespace InventorShims
         /// <param name="documentToWork"></param>
         /// <param name="nameOfParameterToGet"></param>
         /// <returns></returns>
-        public static string GetParameterByName(this Document documentToWork, string nameOfParameterToGet)
-        {
-            Parameters listOfParameters;
-
-            if(documentToWork.DocumentType == DocumentTypeEnum.kAssemblyDocumentObject)
-            {
-                AssemblyDocument identifiedAssemblyDocument = (AssemblyDocument)documentToWork;
-
-                listOfParameters = identifiedAssemblyDocument.ComponentDefinition.Parameters;
-            }
-            else if(documentToWork.DocumentType == DocumentTypeEnum.kPartDocumentObject)
-            {
-                PartDocument identifiedPartDocument = (PartDocument)documentToWork;
-
-                listOfParameters = identifiedPartDocument.ComponentDefinition.Parameters;
-            }
-            else
-            {
-                throw new Exception("Unknown type of document passed to GetParameterByName");
-            }
-
-            return (string)listOfParameters[nameOfParameterToGet].Value.ToString();
-        }
-        /// <summary>
-        /// Gets all names of user parameters in a document
-        /// </summary>
-        /// <param name="documentToWork"></param>
-        /// <returns></returns>
         public static List<string> GetParameterNames(this Document documentToWork)
         {
             Parameters listOfParameters;
@@ -165,72 +137,6 @@ namespace InventorShims
         /// <param name="documentToWork"></param>
         /// <param name="parameterName"></param>
         /// <param name="newValue"></param>
-        public static void SetParameterByName<T>(this Document documentToWork, string parameterName, T newValue)
-        {
-            Parameters listOfParameters;
-
-            if(documentToWork.DocumentType == DocumentTypeEnum.kAssemblyDocumentObject)
-            {
-                AssemblyDocument identifiedAssemblyDocument = (AssemblyDocument)documentToWork;
-
-                listOfParameters = identifiedAssemblyDocument.ComponentDefinition.Parameters;
-            }
-            else if(documentToWork.DocumentType == DocumentTypeEnum.kPartDocumentObject)
-            {
-                PartDocument identifiedPartDocument = (PartDocument)documentToWork;
-
-                listOfParameters = identifiedPartDocument.ComponentDefinition.Parameters;
-            }
-            else
-            {
-                throw new Exception("Unknown type of document passed to GetParameterByName");
-            }
-
-            listOfParameters[parameterName].Value = newValue;
-        }
-        /// <summary>
-        /// Pass the name of an iProperty and this method returns the value in that iProperty
-        /// </summary>
-        /// <param name="documentToWork"></param>
-        /// <param name="nameOfiProperty"></param>
-        /// <returns></returns>
-        public static string GetiPropertyByName(this Document documentToWork, string nameOfiProperty)
-        {
-            // Get custom iProp set
-            Inventor.PropertySet documentPropertySet = documentToWork.PropertySets["Inventor User Defined Properties"];
-
-            // Change the value
-            return (string)documentPropertySet[nameOfiProperty].Value;
-        }
-        /// <summary>
-        /// Sets an iProperty of the passed name to a new value. This is a generic, so if you were setting an iProperty to hold a string value,
-        /// 
-        /// You would use SetiPropertyByName/<string/>
-        /// </summary>
-        /// <typeparam name="T"></typeparam>
-        /// <param name="documentToWork"></param>
-        /// <param name="nameOfiProperty"></param>
-        /// <param name="newValue"></param>
-        /// <param name="createIfNecessary"></param>
-        public static void SetiPropertyByName<T>(this Document documentToWork, string nameOfiProperty, T newValue, bool createIfNecessary = true)
-        {
-            // Get custom iProp set
-            Inventor.PropertySet documentPropertySet = documentToWork.PropertySets["Inventor User Defined Properties"];
-
-            // If programmer wants to create it if it doesn't exist
-            if(createIfNecessary)
-            {
-                // It will throw an exception if the property already exists that we don't care about
-                try
-                {
-                    documentPropertySet.Add("", nameOfiProperty);
-                }
-                catch(System.ArgumentException) { }
-            }
-
-            // Change the value
-            documentPropertySet[nameOfiProperty].Value = newValue;
-        }
 
         #region Document type booleans
         /// <summary>
