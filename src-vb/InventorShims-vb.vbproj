@@ -7,7 +7,7 @@
     <ProjectGuid>{FB816A14-783C-4DF1-9975-F384CF56A7C8}</ProjectGuid>
     <OutputType>Library</OutputType>
     <RootNamespace>InventorShims</RootNamespace>
-    <AssemblyName>InventorShims</AssemblyName>
+    <AssemblyName>InventorShims_vb</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <MyType>Windows</MyType>
     <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
@@ -20,7 +20,7 @@
     <DefineDebug>true</DefineDebug>
     <DefineTrace>true</DefineTrace>
     <OutputPath>..\build\debug\</OutputPath>
-    <DocumentationFile>InventorShims.xml</DocumentationFile>
+    <DocumentationFile>InventorShims_vb.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
@@ -28,8 +28,8 @@
     <DefineDebug>false</DefineDebug>
     <DefineTrace>true</DefineTrace>
     <Optimize>true</Optimize>
-    <OutputPath>..\build\</OutputPath>
-    <DocumentationFile>InventorShims.xml</DocumentationFile>
+    <OutputPath>..\build\release\</OutputPath>
+    <DocumentationFile>InventorShims_vb.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup>
@@ -46,7 +46,8 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Autodesk.iLogic.Interfaces">
-      <HintPath>..\..\..\..\..\..\Program Files\Autodesk\Inventor 2019\Bin\Autodesk.iLogic.Interfaces.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\..\Program Files\Autodesk\Inventor 2021\Bin\Autodesk.iLogic.Interfaces.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="Autodesk.Inventor.Interop, Version=23.2.0.0, Culture=neutral, PublicKeyToken=d84147f8b4276564, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -120,4 +121,17 @@
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>If EXIST "$(TargetDir)InventorShims_cs.dll" (
+$(ILMergeConsolePath) /target:library /allowDup /out:$(TargetDir)InventorShims.dll $(TargetDir)InventorShims_vb.dll $(TargetDir)InventorShims_cs.dll
+)
+
+If EXIST "$(TargetDir)InventorShims.dll" (
+DEL $(TargetDir)InventorShims_cs.dll
+DEL $(TargetDir)InventorShims_vb.dll )
+
+If EXIST "$(TargetDir)InventorShims.pdb" (
+DEL $(TargetDir)InventorShims_cs.pdb
+DEL $(TargetDir)InventorShims_vb.pdb )</PostBuildEvent>
+  </PropertyGroup>
 </Project>

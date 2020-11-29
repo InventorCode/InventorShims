@@ -7,6 +7,8 @@ Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "tests", "tests\tests.vbproj
 EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "InventorShims-vb", "src-vb\InventorShims-vb.vbproj", "{FB816A14-783C-4DF1-9975-F384CF56A7C8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InventorShims-cs", "src-cs\InventorShims-cs.csproj", "{DE9044A0-4809-4828-ADEE-FA787925CBCF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -14,13 +16,15 @@ Global
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{295AABC2-2250-4279-B9C7-E33C352FCDE4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{295AABC2-2250-4279-B9C7-E33C352FCDE4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{295AABC2-2250-4279-B9C7-E33C352FCDE4}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{295AABC2-2250-4279-B9C7-E33C352FCDE4}.Release|Any CPU.Build.0 = Release|Any CPU
 		{FB816A14-783C-4DF1-9975-F384CF56A7C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{FB816A14-783C-4DF1-9975-F384CF56A7C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FB816A14-783C-4DF1-9975-F384CF56A7C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FB816A14-783C-4DF1-9975-F384CF56A7C8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DE9044A0-4809-4828-ADEE-FA787925CBCF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE9044A0-4809-4828-ADEE-FA787925CBCF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE9044A0-4809-4828-ADEE-FA787925CBCF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE9044A0-4809-4828-ADEE-FA787925CBCF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
