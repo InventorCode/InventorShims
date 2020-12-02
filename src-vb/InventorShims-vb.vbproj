@@ -82,7 +82,7 @@
     <None Include="DrawingView.vb" />
     <Compile Include="Object.vb" />
     <Compile Include="Parameter.vb" />
-    <Compile Include="iProperty.vb" />
+    <None Include="iProperty.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -136,6 +136,13 @@ DEL $(TargetDir)InventorShims_vb.dll )
 If EXIST "$(TargetDir)InventorShims.pdb" (
 DEL $(TargetDir)InventorShims_cs.pdb
 DEL $(TargetDir)InventorShims_vb.pdb )</PostBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PreBuildEvent>If EXIST "$(TargetDir)InventorShims_cs.dll" (DEL "$(TargetDir)InventorShims_cs.dll")
+if EXIST "$(TargetDir)InventorShims_cs.pdb" (DEL "$(TargetDir)InventorShims_cs.pdb")
+
+If EXIST "$(TargetDir)InventorShims.dll" (DEL "$(TargetDir)InventorShims.dll")
+if EXIST "$(TargetDir)InventorShims.pdb" (DEL "$(TargetDir)InventorShims.pdb")</PreBuildEvent>
   </PropertyGroup>
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
