@@ -2,10 +2,14 @@
 
 ## About
 
-This is an unofficial collection of extension APIs for Autodesk Inventor.  The goal is to present developers and iLogic users with the following:
+This is an unofficial collection of extension APIs for Autodesk Inventor.  The goal is to present developers and iLogic users with any of the following:
 
-* Additional API functionality that is not included with Inventor.  E.g. a set of simple regex functions that help the developer parse string object more effectively.
-* Improved functionality of stock API objects/methods.  This may included simplified access to objects, more advanced management of objects, or safer code with better error handling outcomes.  E.g. an example is an iproperty access method that will not throw an exception when a non-present property is accessed.
+* Additional API functionality that is not included in Inventor's APIs.  E.g. a method that indexes availible ilogic rules loaded into memory.
+* Improved functionality of stock API objects/methods.  This may include:
+  * simplified access to API objects, functions, and values,
+  * functions designed to reduce boilerplate code,
+  * more advanced management of API objects, and
+  * better error handling outcomes.  E.g. an example is an iproperty access method that will not throw an exception when a non-present property is accessed.
 
 The minimum supported version of Inventor will be 2020.
 
@@ -22,6 +26,8 @@ This package may be utilized in one of the following ways...
 ```VB
 AddReference "C:\Path\To\File\InventorShims.dll"
 Imports InventorShims
+
+'Add your code here, include InventorShims API functions as you need...
 ```
 
 2. By cloning this repo and building the dll yourself.
@@ -30,7 +36,7 @@ Imports InventorShims
 
 ## Languages
 
-At this time there are two languages in this repo: vb.net; and c#.  Each resides in it's own project within the Visual Studio solution.  There is still development on the integration of these two projects into a single dll resource file.
+At this time there are two languages in this repo - vb.net and c#.  Each resides within a seperate project within the Visual Studio solution. These two projects are built and merged into a single dll resource file by post-build hooks in the visual studio solution.
 
 ## Contributions
 
@@ -62,7 +68,7 @@ The following branch names are suggested for short-lived branches...
 ## Dependencies for Build
 
 * Visual Studio Compatible IDE
-* .Net 4.7 (Inventor 2020 support)
+* .Net 4.7 (for Inventor 2020 support)
 * ILMerge nuget package
 * Inventor 2020 SDK installation
 
