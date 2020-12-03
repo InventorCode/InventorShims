@@ -2,9 +2,10 @@
 
 ## About
 
-This is an unofficial collection of extension APIs for Autodesk Inventor.  The goal is to present developers and iLogic users with any of the following:
+This is an unofficial collection of extension APIs for Autodesk Inventor.  The goal is to present developers and iLogic users with the following:
 
-* Additional API functionality that is not included in Inventor's APIs.  E.g. a method that indexes availible ilogic rules loaded into memory.
+* Code that promises to be routinely and consistently useful,
+* Additional API functionality that is not included in Inventor's public APIs, or
 * Improved functionality of stock API objects/methods.  This may include:
   * simplified access to API objects, functions, and values,
   * functions designed to reduce boilerplate code,
