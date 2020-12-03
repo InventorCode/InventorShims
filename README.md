@@ -31,8 +31,9 @@ Imports InventorShims
 ```
 
 2. By cloning this repo and building the dll yourself.
-3. By copying out the methods, classes, or modules that are useful and including those in your own vb or C# code-base. This will result in a smaller code footprint.
-4. By using the code in this package as reference material and examples to build your own solution.
+3. By installing the (forthcoming) nuget package for use in Visual Studio.
+4. By copying out the methods, classes, or modules that are useful and including those in your own vb or C# code-base. This will result in a smaller code footprint.
+5. By using the code in this package as reference material and examples to build your own solution.
 
 ## Languages
 
