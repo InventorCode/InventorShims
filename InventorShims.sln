@@ -12,6 +12,8 @@ Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "InventorShims-vb", "src-vb\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InventorShims-cs", "src-cs\InventorShims-cs.csproj", "{DE9044A0-4809-4828-ADEE-FA787925CBCF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tests", "tests\tests.csproj", "{9A4C4253-55EA-4218-9FE0-9E473562A096}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -28,6 +30,9 @@ Global
 		{DE9044A0-4809-4828-ADEE-FA787925CBCF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DE9044A0-4809-4828-ADEE-FA787925CBCF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DE9044A0-4809-4828-ADEE-FA787925CBCF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9A4C4253-55EA-4218-9FE0-9E473562A096}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A4C4253-55EA-4218-9FE0-9E473562A096}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9A4C4253-55EA-4218-9FE0-9E473562A096}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

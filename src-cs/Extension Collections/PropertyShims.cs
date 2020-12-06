@@ -129,7 +129,7 @@ namespace InventorShims.Extension_Collections
         /// <param name="document"></param>
         /// <param name="propertyName"></param>
         /// <returns></returns>
-        public static object GetProperty(this Inventor.Document document, string propertyName)
+        public static object GetProperty(this Document document, string propertyName)
         {
             PropertySets propertySets = document.PropertySets;
 
@@ -153,7 +153,8 @@ namespace InventorShims.Extension_Collections
             return "";
         } //End GetProperty
 
-        public static object GetProperty(this Inventor.Document document, string setName, string propertyName)
+
+        public static object GetProperty(this Document document, string setName, string propertyName)
         {
             PropertySets propertySets = document.PropertySets;
 
