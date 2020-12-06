@@ -1,5 +1,6 @@
 ﻿AddReference "InventorShims.dll"
 Imports InventorShims.Extension_Collections.PropertyShims
+'Imports InventorShims.PropertyShims
 'Run this test from inventor's ilogic environment.
 
 	Dim oDoc As Inventor.Document = ThisApplication.ActiveDocument

@@ -96,8 +96,6 @@
     <None Include="iProperty.GetProperty SpeedTest.vb" />
     <None Include="iProperty.GetProperty.SpeedTest custom property.vb" />
     <None Include="iProperty.GetProperty.SpeedTest no parameter.vb" />
-    <None Include="iProperty.GetProperty.vb" />
-    <None Include="iProperty.SetProperty.vb" />
     <None Include="PathShim.Test.vb" />
     <None Include="SpeedTest.vb" />
     <None Include="Timer.vb" />
