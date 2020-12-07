@@ -130,13 +130,7 @@ namespace InventorShims
 
             return returnList;
         }
-        /// <summary>
-        /// Set a parameter to a new value, this is a generic so to pass a string into a parameter you would use SetParameterByName/<string/>
-        /// </summary>
-        /// <typeparam name="T"></typeparam>
-        /// <param name="documentToWork"></param>
-        /// <param name="parameterName"></param>
-        /// <param name="newValue"></param>
+
 
         #region Document type booleans
         /// <summary>
@@ -160,7 +154,7 @@ namespace InventorShims
         }
 
         /// <summary>
-        /// Returns true if document is an drawing
+        /// Returns true if document is a drawing
         /// </summary>
         /// <param name="documentToTest"></param>
         /// <returns></returns>
@@ -180,7 +174,7 @@ namespace InventorShims
         }
 
         /// <summary>
-        /// Returns true if document is a presentation
+        /// Returns true if document is a ForeignModel
         /// </summary>
         /// <param name="documentToTest"></param>
         /// <returns></returns>
@@ -190,17 +184,7 @@ namespace InventorShims
         }
 
         /// <summary>
-        /// Returns true if document is a nest
-        /// </summary>
-        /// <param name="documentToTest"></param>
-        /// <returns></returns>
-        public static bool IsNest(this Document documentToTest)
-        {
-            return documentToTest.DocumentType == Inventor.DocumentTypeEnum.kNestingDocument ? true : false;
-        }
-
-        /// <summary>
-        /// Returns true if document is a nest
+        /// Returns true if document is an SAT reference
         /// </summary>
         /// <param name="documentToTest"></param>
         /// <returns></returns>
@@ -210,7 +194,7 @@ namespace InventorShims
         }
 
         /// <summary>
-        /// Returns true if document is a nest
+        /// Returns true if document is unknown
         /// </summary>
         /// <param name="documentToTest"></param>
         /// <returns></returns>

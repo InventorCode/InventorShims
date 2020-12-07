@@ -120,16 +120,16 @@ Returns a boolean value indicating if the specified AttributeSet exists.
 
 
 
-### IsAttributeCapable
+### IsObjectAttributeCapable
 
 Returns a boolean value indicating if the specified object has Attribute capability.
 
 #### Syntax:
-    IsAttributeCapable(obj As Object) As Boolean
+    IsObjectAttributeCapable(obj As Object) As Boolean
 
 #### Usage:
 
     Dim oDoc As Inventor.Document = ThisApplication.ActiveDocument
-    If IsAttributeCapable(oDoc) Then
+    If IsObjectAttributeCapable(oDoc) Then
         'true
     End If
