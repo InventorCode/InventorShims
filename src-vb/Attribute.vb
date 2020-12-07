@@ -25,7 +25,7 @@ Public Class Attribute
 
     Shared Sub SetAttributeEngine(obj As Object, attributeSet As String, attribute As String, value As Object, kind As Inventor.ValueTypeEnum)
 
-        If IsAttributeCapable(obj) = False Then
+        If IsObjectAttributeCapable(obj) = False Then
             Throw New SystemException("The selected object is not attribute-capable.")
         End If
 
@@ -45,7 +45,7 @@ Public Class Attribute
 
     Shared Function CreateAttributeSet(obj As Object, attributeSet As String) As Inventor.AttributeSet
 
-        If IsAttributeCapable(obj) = False Then
+        If IsObjectAttributeCapable(obj) = False Then
             Throw New SystemException("The selected object is not attribute-capable.")
         End If
 
@@ -94,7 +94,7 @@ Public Class Attribute
 
     Shared Function DoesAttributeSetExist(obj As Object, attributeSet As String) As Boolean
 
-        If IsAttributeCapable(obj) = False Then
+        If IsObjectAttributeCapable(obj) = False Then
             Return False
         End If
 
@@ -105,7 +105,7 @@ Public Class Attribute
 
     Shared Function DoesAttributeExist(obj As Object, attributeSet As String, attribute As String) As Boolean
 
-        If IsAttributeCapable(obj) = False Then
+        If IsObjectAttributeCapable(obj) = False Then
             Return False
         End If
 
@@ -119,7 +119,7 @@ Public Class Attribute
 
     End Function
 
-    Shared Function IsAttributeCapable(obj As Object) As Boolean
+    Shared Function IsObjectAttributeCapable(obj As Object) As Boolean
 
         Dim oAttributeSets As Inventor.AttributeSets
 
