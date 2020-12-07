@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using Inventor;
 
-namespace InventorShims.Extension_Collections
+namespace InventorShims
 {
     /// <summary>
     /// Static class to manipulate iproperties.
