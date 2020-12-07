@@ -1,8 +1,11 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
+using System.Linq.Expressions;
+using System.Runtime.InteropServices;
 using Inventor;
-using static InventorShims.Extension_Collections.PropertyShims;
-using InventorShims.Extension_Collections;
+using static InventorShims.PropertyShims;
+using InventorShims;
+
 
 namespace InventorShimsTest
 {
@@ -30,17 +33,24 @@ namespace InventorShimsTest
         [TestMethod]
         public void IsPropertyGetProperty_ShortGoodInput()
         {
-
-            Inventor.ApprenticeServerComponent _apprentice = new Inventor.ApprenticeServerComponent();
-            ApprenticeServerDocument document = _apprentice.Open(@"T:\$Work\Part1.ipt");
-            document.Close();
-
-
-            //            apprentice = null;
-            //            Assert.IsFalse(PropertyShims.GetProperty("ThisShouldBeFalse"));
+            
             Assert.IsFalse(PropertyShims.IsPropertyNative("ThisShouldBeFalse"));
 
         }
+
+        [TestMethod]
+        public void GetProperty_SetProperty_short()
+        {
+            var getInventor = GetInventor.Instance;
+            var app = GetInventor.Application;
+            var path = app.DesignProjectManager.ActiveDesignProject.TemplatesPath;
+            var doc = app.Documents.Add(DocumentTypeEnum.kPartDocumentObject, path + "Standard.ipt", true);
+            
+            doc.SetProperty("Title", "Bob");
+            
+            Assert.AreEqual(doc.GetProperty("Title"), "Bob");
+        }
+
 
     }
 }

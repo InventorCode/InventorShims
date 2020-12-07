@@ -34,6 +34,7 @@
     <OutputPath>..\build\release\</OutputPath>
     <DocumentationFile>InventorShims_vb.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <PlatformTarget>AnyCPU</PlatformTarget>
   </PropertyGroup>
   <PropertyGroup>
     <OptionExplicit>On</OptionExplicit>
@@ -48,13 +49,9 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Autodesk.iLogic.Interfaces">
-      <HintPath>..\..\..\..\..\..\..\Program Files\Autodesk\Inventor 2021\Bin\Autodesk.iLogic.Interfaces.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="Autodesk.Inventor.Interop, Version=23.2.0.0, Culture=neutral, PublicKeyToken=d84147f8b4276564, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
       <HintPath>..\..\..\..\..\..\Program Files\Autodesk\Inventor 2019\Bin\Public Assemblies\Autodesk.Inventor.Interop.dll</HintPath>
     </Reference>
     <Reference Include="System" />
@@ -126,7 +123,7 @@
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <PropertyGroup>
     <PostBuildEvent>If EXIST "$(TargetDir)InventorShims_cs.dll" (
-$(ILMergeConsolePath) /target:library /allowDup /out:$(TargetDir)InventorShims.dll $(TargetDir)InventorShims_vb.dll $(TargetDir)InventorShims_cs.dll
+$(ILMergeConsolePath) /target:library /allowDup /out:"$(TargetDir)InventorShims.dll" "$(TargetDir)InventorShims_vb.dll" "$(TargetDir)InventorShims_cs.dll"
 )
 
 REM If EXIST "$(TargetDir)InventorShims.dll" (

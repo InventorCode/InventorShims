@@ -34,6 +34,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <DocumentationFile>..\build\release\InventorShims_cs.xml</DocumentationFile>
+    <PlatformTarget>AnyCPU</PlatformTarget>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Autodesk.iLogic.Interfaces">
@@ -59,6 +60,7 @@
     <Compile Include="Conversions.cs" />
     <Compile Include="Extension Collections\DocumentExtensions.cs" />
     <Compile Include="Extension Collections\PropertyShims.cs" />
+    <Compile Include="GetInventor.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StringFormatters.cs" />
     <Compile Include="WinMacros.cs" />
@@ -109,7 +111,7 @@
   </Target>
   <PropertyGroup>
     <PostBuildEvent>If EXIST "$(TargetDir)InventorShims_vb.dll" (
-$(ILMergeConsolePath) /target:library /allowDup /out:$(TargetDir)InventorShims.dll $(TargetDir)InventorShims_vb.dll $(TargetDir)InventorShims_cs.dll
+$(ILMergeConsolePath) /target:library /allowDup /out:"$(TargetDir)InventorShims.dll" "$(TargetDir)InventorShims_vb.dll" "$(TargetDir)InventorShims_cs.dll"
 )
 
 REM If EXIST "$(TargetDir)InventorShims.dll" (
