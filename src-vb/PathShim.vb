@@ -27,13 +27,14 @@ Public Class PathShim
 
     Shared Function IsLibraryPath(ByVal path As String, ByRef inventorApp As Inventor.Application) As Boolean
 
-        Dim designprojectmanager As DesignProjectManager = inventorApp.DesignProjectManager
-        Dim designproject As Inventor.DesignProject = designprojectmanager.ActiveDesignProject
+        If (String.IsNullOrEmpty(path)) Then Return False
+
+        Dim designproject As Inventor.DesignProject = inventorApp.DesignProjectManager.ActiveDesignProject
         Dim librarypaths As ProjectPaths = designproject.LibraryPaths
         Dim librarypath As ProjectPath
 
         For Each librarypath In librarypaths
-            If path.Contains(librarypath.Path) Then
+            If path.Contains(TrimTrailingSlash(librarypath.Path)) Then
                 Return True
             End If
         Next
@@ -43,13 +44,14 @@ Public Class PathShim
 
     Shared Function IsContentCenterPath(ByVal path As String, ByRef inventorApp As Inventor.Application) As Boolean
 
-        Dim designprojectmanager As DesignProjectManager = inventorApp.DesignProjectManager
-        Dim designproject As Inventor.DesignProject = designprojectmanager.ActiveDesignProject
-        Dim useProjectCCPath As Boolean = designproject.ContentCenterPathOverridden
+        If (String.IsNullOrEmpty(path)) Then Return False
+
+        Dim designProject As Inventor.DesignProject = inventorApp.DesignProjectManager.ActiveDesignProject
+        Dim useProjectCCPath As Boolean = designProject.ContentCenterPathOverridden
         Dim ccpath As String
 
         If useProjectCCPath Then
-            ccpath = designproject.ContentCenterPath
+            ccpath = designProject.ContentCenterPath
         Else
             ccpath = inventorApp.FileOptions.ContentCenterPath
         End If
