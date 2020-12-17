@@ -1,7 +1,7 @@
 Imports Inventor
 
 
-Public Class Attribute
+Public Class AttributeShims
 
     Shared Sub SetAttribute(obj As Object, attributeSet As String, attribute As String, value As String)
         SetAttributeEngine(obj, attributeSet, attribute, value, Inventor.ValueTypeEnum.kStringType)

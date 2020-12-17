@@ -9,7 +9,7 @@ namespace InventorShims
     /// <summary>
     /// String formatting methods
     /// </summary>
-    public static class StringFormatters
+    public static class StringShims
     {
         /// <summary>
         /// Takes a double of inches and returns the string of a fraction equivalent.

@@ -74,9 +74,9 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="PathShim.vb" />
-    <Compile Include="Attribute.vb" />
-    <None Include="DrawingView.vb" />
+    <Compile Include="PathShims.vb" />
+    <Compile Include="AttributeShims.vb" />
+    <None Include="DrawingViewShims.vb" />
     <Compile Include="Object.vb" />
     <Compile Include="Parameter.vb" />
     <None Include="iProperty.vb" />

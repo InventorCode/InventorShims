@@ -55,14 +55,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Extension Collections\DrawingDocumentExtensions.cs" />
-    <Compile Include="Extension Collections\ApplicationExtensions.cs" />
+    <Compile Include="Extension Collections\DrawingDocumentShims.cs" />
+    <Compile Include="Extension Collections\UiShims.cs" />
     <Compile Include="Conversions.cs" />
-    <Compile Include="Extension Collections\DocumentExtensions.cs" />
+    <Compile Include="Extension Collections\DocumentShims.cs" />
     <Compile Include="Extension Collections\PropertyShims.cs" />
     <Compile Include="GetInventor.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="StringFormatters.cs" />
+    <Compile Include="StringShims.cs" />
     <Compile Include="WinMacros.cs" />
   </ItemGroup>
   <ItemGroup>

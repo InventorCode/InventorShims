@@ -10,7 +10,7 @@ namespace InventorShims
     /// <summary>
     /// Extension methods that work on an inventor application com object reference
     /// </summary>
-    public static class ApplicationExtensions
+    public static class UiShims
     {
         /// <summary>
         /// Gets the active color scheme name as a string
