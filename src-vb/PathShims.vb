@@ -66,8 +66,10 @@ Public Class PathShims
     End Function
     Shared Function TrimEndingDirectorySeparator(ByVal path As String) As String
 
-        If path.EndsWith("\") Then
-            path = Left(path, path.LastIndexOf("\"))
+        If path.EndsWith(IO.Path.DirectorySeparatorChar) Then
+            path = Left(path, path.LastIndexOf(IO.Path.DirectorySeparatorChar))
+        ElseIf path.EndsWith(IO.Path.AltDirectorySeparatorChar) Then
+            path = Left(path, path.LastIndexOf(IO.Path.AltDirectorySeparatorChar))
         End If
 
         Return path
