@@ -112,21 +112,10 @@
   <PropertyGroup>
     <PostBuildEvent>If EXIST "$(TargetDir)InventorShims_vb.dll" (
 $(ILMergeConsolePath) /target:library /allowDup /out:"$(TargetDir)InventorShims.dll" "$(TargetDir)InventorShims_vb.dll" "$(TargetDir)InventorShims_cs.dll"
-)
-
-REM If EXIST "$(TargetDir)InventorShims.dll" (
-REM DEL $(TargetDir)InventorShims_cs.dll
-REM DEL $(TargetDir)InventorShims_vb.dll )
-
-REM If EXIST "$(TargetDir)InventorShims.pdb" (
-REM DEL $(TargetDir)InventorShims_cs.pdb
-REM DEL $(TargetDir)InventorShims_vb.pdb )</PostBuildEvent>
+)</PostBuildEvent>
   </PropertyGroup>
   <PropertyGroup>
-    <PreBuildEvent>If EXIST "$(TargetDir)InventorShims_cs.dll" (DEL "$(TargetDir)InventorShims_cs.dll")
-if EXIST "$(TargetDir)InventorShims_cs.pdb" (DEL "$(TargetDir)InventorShims_cs.pdb")
-
-If EXIST "$(TargetDir)InventorShims.dll" (DEL "$(TargetDir)InventorShims.dll")
-if EXIST "$(TargetDir)InventorShims.pdb" (DEL "$(TargetDir)InventorShims.pdb")</PreBuildEvent>
+    <PreBuildEvent>
+    </PreBuildEvent>
   </PropertyGroup>
 </Project>
