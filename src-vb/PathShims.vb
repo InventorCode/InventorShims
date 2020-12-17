@@ -14,7 +14,7 @@ Public Class PathShims
 
         'Catch paths which end with a delimiter, such as C:\Work\Stuff\
         'Clean up so that they look like C:\Work\Stuff
-        path = TrimTrailingSlash(path)
+        path = TrimEndingDirectorySeparator(path)
 
         Dim delimPos As Integer = path.LastIndexOf(delimiter)
         If (delimPos <= 0) Then
@@ -34,7 +34,7 @@ Public Class PathShims
         Dim librarypath As ProjectPath
 
         For Each librarypath In librarypaths
-            If path.Contains(TrimTrailingSlash(librarypath.Path)) Then
+            If path.Contains(TrimEndingDirectorySeparator(librarypath.Path)) Then
                 Return True
             End If
         Next
@@ -56,7 +56,7 @@ Public Class PathShims
             ccpath = inventorApp.FileOptions.ContentCenterPath
         End If
 
-        ccpath = TrimTrailingSlash(ccpath)
+        ccpath = TrimEndingDirectorySeparator(ccpath)
 
         If path.Contains(ccpath) Then
             Return True
@@ -64,7 +64,7 @@ Public Class PathShims
 
         Return False
     End Function
-    Shared Function TrimTrailingSlash(ByVal path As String) As String
+    Shared Function TrimEndingDirectorySeparator(ByVal path As String) As String
 
         If path.EndsWith("\") Then
             path = Left(path, path.LastIndexOf("\"))
