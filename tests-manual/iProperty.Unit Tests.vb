@@ -1,5 +1,5 @@
 ﻿AddReference "InventorShims.dll"
-Imports InventorShims.Extension_Collections.PropertyShims
+Imports InventorShims.PropertyShims
 'Imports InventorShims.PropertyShims
 'Run this test from inventor's ilogic environment.
 

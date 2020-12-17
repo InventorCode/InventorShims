@@ -1,24 +1,30 @@
 ﻿Imports Inventor
 
-Public Class PathShim
+Public Class PathShims
 
-    Shared Function UpOneLevel(ByVal path As String, Optional delimiter As String = "\") As String
+    Shared Function UpOneLevel(ByVal path As String) As String
 
-        'fix paths with incorrect backslashes
-        If delimiter = "\" Then path = Replace(path, "/", "\")
+        Dim delimiter As Char
 
-        'no slashes?  not a path...
-        If Not path.Contains(delimiter) Then
+        If path.Contains(IO.Path.DirectorySeparatorChar) Then
+            delimiter = IO.Path.DirectorySeparatorChar
+        ElseIf path.Contains(IO.Path.AltDirectorySeparatorChar) Then
+            delimiter = IO.Path.AltDirectorySeparatorChar
+        Else
+            'no slashes?  not a path...
             Return Nothing
         End If
 
+
         'Catch paths which end with a delimiter, such as C:\Work\Stuff\
         'Clean up so that they look like C:\Work\Stuff
-        path = TrimTrailingSlash(path)
+        path = TrimEndingDirectorySeparator(path)
 
         Dim delimPos As Integer = path.LastIndexOf(delimiter)
-        If (delimPos <= 0) Then
+        If (delimPos = 0) Then
             Return Nothing
+        ElseIf (delimPos < 0) Then
+            Return path
         End If
 
         Return Left(path, delimPos + 1)
@@ -34,7 +40,7 @@ Public Class PathShim
         Dim librarypath As ProjectPath
 
         For Each librarypath In librarypaths
-            If path.Contains(TrimTrailingSlash(librarypath.Path)) Then
+            If path.Contains(TrimEndingDirectorySeparator(librarypath.Path)) Then
                 Return True
             End If
         Next
@@ -56,7 +62,7 @@ Public Class PathShim
             ccpath = inventorApp.FileOptions.ContentCenterPath
         End If
 
-        ccpath = TrimTrailingSlash(ccpath)
+        ccpath = TrimEndingDirectorySeparator(ccpath)
 
         If path.Contains(ccpath) Then
             Return True
@@ -64,10 +70,12 @@ Public Class PathShim
 
         Return False
     End Function
-    Shared Function TrimTrailingSlash(ByVal path As String) As String
+    Shared Function TrimEndingDirectorySeparator(ByVal path As String) As String
 
-        If path.EndsWith("\") Then
-            path = Left(path, path.LastIndexOf("\"))
+        If path.EndsWith(IO.Path.DirectorySeparatorChar) Then
+            path = Left(path, path.LastIndexOf(IO.Path.DirectorySeparatorChar))
+        ElseIf path.EndsWith(IO.Path.AltDirectorySeparatorChar) Then
+            path = Left(path, path.LastIndexOf(IO.Path.AltDirectorySeparatorChar))
         End If
 
         Return path

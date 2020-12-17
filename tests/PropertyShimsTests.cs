@@ -3,7 +3,6 @@ using System;
 using System.Linq.Expressions;
 using System.Runtime.InteropServices;
 using Inventor;
-using static InventorShims.PropertyShims;
 using InventorShims;
 
 
