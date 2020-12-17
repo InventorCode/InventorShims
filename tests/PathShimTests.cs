@@ -40,6 +40,14 @@ namespace PathShims_Tests
             Assert.AreEqual(PathShims.UpOneLevel(stringA), stringB);
         }
 
+        [TestMethod]
+        public void UpOneLevel_TopLevel_ReturnsSelf()
+        {
+            var stringA = @"C:\";
+            var stringB = @"C:";
+            Assert.AreEqual(PathShims.UpOneLevel(stringA), stringB);
+        }
+
     }
 
 

@@ -2,23 +2,25 @@
 
 Public Class PathShims
 
-    Shared Function UpOneLevel(ByVal path As String, Optional delimiter As String = "\") As String
+    Shared Function UpOneLevel(ByVal path As String) As String
 
-        'fix paths with incorrect backslashes
-        If delimiter = "\" Then path = Replace(path, "/", "\")
+        Dim delimiter As Char = IO.Path.DirectorySeparatorChar
 
         'no slashes?  not a path...
-        If Not path.Contains(delimiter) Then
+        If (Not path.Contains(delimiter)) Then
             Return Nothing
         End If
+
 
         'Catch paths which end with a delimiter, such as C:\Work\Stuff\
         'Clean up so that they look like C:\Work\Stuff
         path = TrimEndingDirectorySeparator(path)
 
         Dim delimPos As Integer = path.LastIndexOf(delimiter)
-        If (delimPos <= 0) Then
+        If (delimPos = 0) Then
             Return Nothing
+        ElseIf (delimPos < 0) Then
+            Return path
         End If
 
         Return Left(path, delimPos + 1)
