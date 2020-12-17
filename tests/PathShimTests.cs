@@ -48,6 +48,14 @@ namespace PathShims_Tests
             Assert.AreEqual(PathShims.UpOneLevel(stringA), stringB);
         }
 
+        [TestMethod]
+        public void UpOneLevel_ForwardSlashes_ReturnNothing()
+        {
+            var stringA = @"C:/Users/";
+            var stringB = @"C:/";
+            Assert.AreEqual(PathShims.UpOneLevel(stringA), stringB);
+        }
+
     }
 
 

@@ -4,10 +4,14 @@ Public Class PathShims
 
     Shared Function UpOneLevel(ByVal path As String) As String
 
-        Dim delimiter As Char = IO.Path.DirectorySeparatorChar
+        Dim delimiter As Char
 
-        'no slashes?  not a path...
-        If (Not path.Contains(delimiter)) Then
+        If path.Contains(IO.Path.DirectorySeparatorChar) Then
+            delimiter = IO.Path.DirectorySeparatorChar
+        ElseIf path.Contains(IO.Path.AltDirectorySeparatorChar) Then
+            delimiter = IO.Path.AltDirectorySeparatorChar
+        Else
+            'no slashes?  not a path...
             Return Nothing
         End If
 
