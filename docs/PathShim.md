@@ -30,7 +30,7 @@ Tis function takes a file or directory path as a string and will determine if th
 
 #### Syntax:
 
-IsContentCenterPath(path As String, inventorApp As Inventor.Application) As Boolean
+    IsContentCenterPath(path As String, inventorApp As Inventor.Application) As Boolean
 
 
 ### Usage:
@@ -63,4 +63,4 @@ This function trims the last directory separator character (if it exists) from a
 
 #### Syntax:
 
-TrimEndingDirectorySeparator(ByVal path As String)
+    TrimEndingDirectorySeparator(ByVal path As String)

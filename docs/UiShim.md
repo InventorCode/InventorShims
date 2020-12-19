@@ -22,7 +22,7 @@ Sets the active color scheme name as a string.
 
 #### Syntax:
 
-InventorApplication.SetActiveColorScheme(string colorSchemeNameToActivate)
+    InventorApplication.SetActiveColorScheme(string colorSchemeNameToActivate)
 
 
 ## GetActiveColorSchemeBackground
@@ -31,5 +31,4 @@ Gets the background type enum in a more memorable way.
 
 #### Syntax:
 
-InventorApplication.GetActiveColorSchemeBackground
-
+    InventorApplication.GetActiveColorSchemeBackground

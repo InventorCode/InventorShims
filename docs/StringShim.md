@@ -13,6 +13,4 @@ Takes a double of inches and returns the string of a fraction equivalent. If you
 
 #### Syntax:
 
-double.ToFractionStringRoundedUp(int roundingAccuracy = 8)
-
-## 
+    double.ToFractionStringRoundedUp(int roundingAccuracy = 8)

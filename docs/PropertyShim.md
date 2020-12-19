@@ -127,7 +127,8 @@ A simple static function that returns true/false if the specified property is on
 
 #### Syntax:
 
-IsPropertyNative(string name)
+    IsPropertyNative(string name)
+    
 #### Usage:
 
     Dim oDoc As Inventor.Document = ThisApplication.ActiveDocument
