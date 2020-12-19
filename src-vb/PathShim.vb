@@ -1,6 +1,6 @@
 ﻿Imports Inventor
 
-Public Class PathShims
+Public Class PathShim
 
     Shared Function UpOneLevel(ByVal path As String) As String
 

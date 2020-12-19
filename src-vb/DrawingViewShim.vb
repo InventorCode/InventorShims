@@ -1,6 +1,6 @@
 ﻿Imports Inventor
 
-Public Class DrawingViewShims
+Public Class DrawingViewShim
 
     Public View As Inventor.DrawingView
 

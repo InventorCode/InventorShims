@@ -17,7 +17,7 @@ namespace InventorShimsTest
         public void IsPropertyNative_GoodInput()
         {
             
-            Assert.IsTrue(PropertyShims.IsPropertyNative("Title"));
+            Assert.IsTrue(PropertyShim.IsPropertyNative("Title"));
 
         }
 
@@ -25,7 +25,7 @@ namespace InventorShimsTest
         public void IsPropertyNative_BadInput()
         {
 
-            Assert.IsFalse(PropertyShims.IsPropertyNative("ThisShouldBeFalse"));
+            Assert.IsFalse(PropertyShim.IsPropertyNative("ThisShouldBeFalse"));
 
         }
 
@@ -33,7 +33,7 @@ namespace InventorShimsTest
         public void IsPropertyGetProperty_ShortGoodInput()
         {
             
-            Assert.IsFalse(PropertyShims.IsPropertyNative("ThisShouldBeFalse"));
+            Assert.IsFalse(PropertyShim.IsPropertyNative("ThisShouldBeFalse"));
 
         }
 

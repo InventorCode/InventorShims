@@ -10,7 +10,7 @@ namespace InventorShims
     /// <summary>
     /// Methods that extend Inventor.DrawingDocument
     /// </summary>
-    public static class DrawingDocumentShims
+    public static class DrawingDocumentShim
     {
         /// <summary>
         /// Saves a drawing document with a file dialog shown to the user
@@ -19,7 +19,7 @@ namespace InventorShims
         public static void SaveWithFileDialog(this DrawingDocument documentToWork)
         {
             // Cast it to document and send it to main method that takes Document
-            DocumentShims.SaveWithFileDialog((Document)documentToWork);
+            DocumentShim.SaveWithFileDialog((Document)documentToWork);
         }
     }
 }

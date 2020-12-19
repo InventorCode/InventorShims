@@ -7,7 +7,7 @@ namespace InventorShims
     /// <summary>
     /// Static class to manipulate iproperties.
     /// </summary>
-    public static class PropertyShims
+    public static class PropertyShim
     {
             private static Dictionary<string, string> NativePropertyLookup = new Dictionary<string, string>()
         {

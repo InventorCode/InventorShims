@@ -74,11 +74,11 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="PathShims.vb" />
-    <Compile Include="AttributeShims.vb" />
-    <None Include="DrawingViewShims.vb" />
+    <Compile Include="PathShim.vb" />
+    <Compile Include="AttributeShim.vb" />
+    <None Include="DrawingViewShim.vb" />
     <Compile Include="Object.vb" />
-    <Compile Include="Parameter.vb" />
+    <Compile Include="ParameterShim.vb" />
     <None Include="iProperty.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">

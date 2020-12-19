@@ -10,7 +10,7 @@ namespace InventorShims
     /// <summary>
     /// Methods having to do with working with inventor document objects
     /// </summary>
-    public static class DocumentShims
+    public static class DocumentShim
     {
         /// <summary>
         /// Zooms extents in a drawing, part, or assembly.
