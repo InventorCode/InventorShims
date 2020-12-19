@@ -40,14 +40,24 @@ namespace InventorShimsTest
         [TestMethod]
         public void GetProperty_SetProperty_short()
         {
-            var getInventor = GetInventor.Instance;
-            var app = GetInventor.Application;
+            Inventor.Application app = ApplicationShim.Instance();
+//            DesignProject designProject = app.DesignProjectManager.DesignProjects.ItemByName["Default"];
+//            designProject.Activate();
+
             var path = app.DesignProjectManager.ActiveDesignProject.TemplatesPath;
             var doc = app.Documents.Add(DocumentTypeEnum.kPartDocumentObject, path + "Standard.ipt", true);
             
             doc.SetProperty("Title", "Bob");
-            
-            Assert.AreEqual(doc.GetProperty("Title"), "Bob");
+
+            try
+            {
+                Assert.AreEqual(doc.GetProperty("Title"), "Bob");
+            }
+            finally
+            {
+                app.Quit();
+                app = null;
+            }
         }
 
 

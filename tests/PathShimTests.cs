@@ -66,8 +66,8 @@ namespace PathShims_Tests
         [TestMethod]
         public void GoodInput()
         {
-            var getInventor = GetInventor.Instance;
-            var app = GetInventor.Application;
+            Inventor.Application app = ApplicationShim.Instance();
+
             var designProject = app.DesignProjectManager.ActiveDesignProject;
             var libraryPaths = designProject.LibraryPaths;
             bool addedFlag = false;
@@ -81,45 +81,76 @@ namespace PathShims_Tests
             var test = libraryPaths[1].Path;
             test = PathShim.TrimEndingDirectorySeparator(test);
 
-            Assert.IsTrue(PathShim.IsLibraryPath(test, ref app));
 
-
-            if (addedFlag = true)
+            try
             {
-                libraryPaths.Clear();
-                addedFlag = false;
+                Assert.IsTrue(PathShim.IsLibraryPath(test, ref app));
+
             }
+            finally
+            {
+                if (addedFlag = true)
+                {
+                    libraryPaths.Clear();
+                    addedFlag = false;
+                }
+                app.Quit();
+                app = null;
+            }
+
 
         }
 
         public void BadInput_WrongPath()
         {
-            var getInventor = GetInventor.Instance;
-            var app = GetInventor.Application;
+            Inventor.Application app = ApplicationShim.Instance();
 
             var test = @"C:\Windows";
-            Assert.IsFalse(PathShim.IsLibraryPath(test, ref app));
-
+            try
+            {
+                Assert.IsFalse(PathShim.IsLibraryPath(test, ref app));
+            }
+            finally
+            {
+                app.Quit();
+                app = null;
+            }
         }
 
         [TestMethod]
         public void BadInput_Empty()
         {
-            var getInventor = GetInventor.Instance;
-            var app = GetInventor.Application;
+            Inventor.Application app = ApplicationShim.Instance();
+
             var test = "";
 
-            Assert.IsFalse(PathShim.IsLibraryPath(test, ref app));
+            try
+            {
+                Assert.IsFalse(PathShim.IsLibraryPath(test, ref app));
+            }
+            finally
+            {
+                app.Quit();
+                app = null;
+            }
         }
 
         [TestMethod]
         public void BadInput_Null()
         {
-            var getInventor = GetInventor.Instance;
-            var app = GetInventor.Application;
+            Inventor.Application app = ApplicationShim.Instance();
+
             string test = null;
 
-            Assert.IsFalse(PathShim.IsLibraryPath(test, ref app));
+            try
+            {
+                Assert.IsFalse(PathShim.IsLibraryPath(test, ref app));
+            }
+            finally
+            {
+                app.Quit();
+                app = null;
+            }
         }
 
     }
@@ -130,53 +161,93 @@ namespace PathShims_Tests
         [TestMethod]
         public void GoodInput()
         {
-            var getInventor = GetInventor.Instance;
-            var app = GetInventor.Application;
+            Inventor.Application app = ApplicationShim.Instance();
+
             string test = app.DesignProjectManager.ActiveDesignProject.ContentCenterPath;
 
-            Assert.IsTrue(PathShim.IsContentCenterPath(test, ref app));
+            try
+            {
+                Assert.IsTrue(PathShim.IsContentCenterPath(test, ref app));
+            }
+            finally
+            {
+                app.Quit();
+                app = null;
+            }
         }
 
         [TestMethod]
         public void GoodInput_NoTrailingSlash()
         {
-            var getInventor = GetInventor.Instance;
-            var app = GetInventor.Application;
+            Inventor.Application app = ApplicationShim.Instance();
+
             string test = app.DesignProjectManager.ActiveDesignProject.ContentCenterPath;
             test = PathShim.TrimEndingDirectorySeparator(test);
 
-            Assert.IsTrue(PathShim.IsContentCenterPath(test, ref app));
+            try
+            {
+                Assert.IsTrue(PathShim.IsContentCenterPath(test, ref app));
+            }
+            finally
+            {
+                app.Quit();
+                app = null;
+            }
         }
 
 
         [TestMethod]
         public void BadInput_Wrong()
         {
-            var getInventor = GetInventor.Instance;
-            var app = GetInventor.Application;
+            Inventor.Application app = ApplicationShim.Instance();
             string test = @"C:\Windows\";
 
-            Assert.IsFalse(PathShim.IsContentCenterPath(test, ref app));
+            try
+            {
+                Assert.IsFalse(PathShim.IsContentCenterPath(test, ref app));
+            }
+            finally
+            {
+                app.Quit();
+                app = null;
+            }
         }
 
         [TestMethod]
         public void BadInput_Empty()
         {
-            var getInventor = GetInventor.Instance;
-            var app = GetInventor.Application;
+            Inventor.Application app = ApplicationShim.Instance();
             var test = string.Empty;
 
-            Assert.IsFalse(PathShim.IsContentCenterPath(test, ref app));
+            try
+            {
+                Assert.IsFalse(PathShim.IsContentCenterPath(test, ref app));
+            }
+            finally
+            {
+                app.Quit();
+                app = null;
+            }
         }
 
         [TestMethod]
         public void BadInput_Null()
         {
-            var getInventor = GetInventor.Instance;
-            var app = GetInventor.Application;
+            Inventor.Application app = ApplicationShim.Instance();
+            var dp = app.DesignProjectManager.DesignProjects.ItemByName["Default"];
+            dp.Activate();
+
             string test = null;
 
-            Assert.IsFalse(PathShim.IsContentCenterPath(test, ref app));
+            try
+            {
+                Assert.IsFalse(PathShim.IsContentCenterPath(test, ref app));
+            }
+            finally
+            {
+                app.Quit();
+                app = null;
+            }
         }
 
     }

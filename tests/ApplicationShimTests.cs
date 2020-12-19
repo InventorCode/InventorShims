@@ -4,50 +4,67 @@ using System.Linq.Expressions;
 using Inventor;
 using InventorShims;
 
-namespace tests
+namespace ApplicationShimTests
 {
     [TestClass]
-    public class ApplicationShimTests
+    public class Instance
     {
-            [TestMethod]
-            public void GetInstance_GetsOrStartsInstance()
+        [TestMethod]
+        public void GetsOrStartsInstance()
+        {
+
+            Inventor.Application app = ApplicationShim.Instance();
+            app.Visible = true;
+
+            var testVariable = app.AssemblyOptions.DeferUpdate;
+
+            Assert.IsNotNull(testVariable);
+
+            app.Quit();
+            app = null;
+
+        }
+    }
+
+    [TestClass]
+    public class CurrentInstance
+    {
+
+
+        [TestMethod]
+        public void CurrentInstance_NoInventorInstance_ReturnsNothing()
+        {
+            Inventor.Application app = null;
+            app = ApplicationShim.CurrentInstance();
+
+            if (app != null)
             {
-
-                Inventor.Application app = ApplicationShim.Instance();
-                app.Visible = true;
-
-
-                var testVariable = app.AssemblyOptions.DeferUpdate;
-
-                Assert.IsNotNull(testVariable);
-
                 app.Quit();
                 app = null;
-
             }
 
-            [TestMethod]
-            public void CurrentInstance_NoInventorInstance_ReturnsNothing()
+            app = ApplicationShim.CurrentInstance();
+
+            try
             {
-                Inventor.Application app = null;
-                app = ApplicationShim.CurrentInstance();
-
-                try
+                Assert.IsNull(app);
+            }
+            catch (AssertFailedException e)
+            {
+                if (app != null)
                 {
-                    Assert.IsNull(app);
+                    app.Quit();
+                    app = null;
                 }
-                catch (AssertFailedException e)
-                {
-                    if (app != null)
-                    {
-                        app.Quit();
-                        app = null;
-                    }
-                }
-
             }
 
-            [TestMethod]
+        }
+    }
+
+    [TestClass]
+    public class NewInstance {
+
+    [TestMethod]
             public void NewInstance_StartsNewInventorInstance()
             {
                 Inventor.Application app = null;
