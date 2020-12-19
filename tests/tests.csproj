@@ -57,9 +57,9 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ApplicationShimTests.cs" />
     <Compile Include="PropertyShimsTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="GetInventorTests.cs" />
     <Compile Include="PathShimTests.cs" />
   </ItemGroup>
   <ItemGroup>
