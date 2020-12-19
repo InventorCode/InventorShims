@@ -14,7 +14,7 @@ A simple parser that takes in a file or directory path as a string and returns t
 
 #### Syntax:
 
-    UpOneLevel(path As String, Optional delimiter As String = "\") As String
+    UpOneLevel(path As String) As String
 
 
 #### Usage:
@@ -22,7 +22,7 @@ A simple parser that takes in a file or directory path as a string and returns t
     PathShim.UpOneLevel("C:\This\Is\A\Test")
 
 will return the following
-`"C:\This\Is\A\"`
+`"C:\This\Is\A"`
 
 ### IsContentCenterPath Function
 
@@ -43,7 +43,7 @@ or...
 
 ### IsLibraryPath Function
 
-Tis function takes a file or directory path as a string and will determine if that path is a Library path.  This function will return a boolean value. 
+This function takes a file or directory path as a string and will determine if that path is a Library path.  This function will return a boolean value. 
 
 #### Syntax:
 
@@ -56,3 +56,11 @@ IsLibraryPath(path As String, inventorApp As Inventor.Application) As Boolean
 or...
 
     PathShim.IsLibraryPath(ThisDocument.FullFileName, ThisApplication)
+
+### TrimEndingDirectorySeparator Function
+
+This function trims the last directory separator character (if it exists) from a string.
+
+#### Syntax:
+
+TrimEndingDirectorySeparator(ByVal path As String)
