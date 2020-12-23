@@ -1,5 +1,6 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
+using Inventor;
 using InventorShims;
 
 namespace PathShims_Tests
@@ -70,15 +71,12 @@ namespace PathShims_Tests
 
             var designProject = app.DesignProjectManager.ActiveDesignProject;
             var libraryPaths = designProject.LibraryPaths;
-            bool addedFlag = false;
 
-            if (libraryPaths.Count > 0)
-            {
+            var i = libraryPaths.Count + 1;
+
                 libraryPaths.Add("temporary path", @"C:\");
-                addedFlag = true;
-            }
 
-            var test = libraryPaths[1].Path;
+            string test = libraryPaths[1].Path;
             test = PathShim.TrimEndingDirectorySeparator(test);
 
 
@@ -89,32 +87,18 @@ namespace PathShims_Tests
             }
             finally
             {
-                if (addedFlag = true)
-                {
-                    libraryPaths.Clear();
-                    addedFlag = false;
-                }
-                app.Quit();
-                app = null;
+                //libraryPaths[i].Delete();
             }
-
-
         }
 
+        [TestMethod]
         public void BadInput_WrongPath()
         {
             Inventor.Application app = ApplicationShim.Instance();
 
-            var test = @"C:\Windows";
-            try
-            {
+            var test = @"C:\Zarthastoriatarigula\the\fiverth";
+ 
                 Assert.IsFalse(PathShim.IsLibraryPath(test, ref app));
-            }
-            finally
-            {
-                app.Quit();
-                app = null;
-            }
         }
 
         [TestMethod]
@@ -124,15 +108,7 @@ namespace PathShims_Tests
 
             var test = "";
 
-            try
-            {
                 Assert.IsFalse(PathShim.IsLibraryPath(test, ref app));
-            }
-            finally
-            {
-                app.Quit();
-                app = null;
-            }
         }
 
         [TestMethod]
@@ -142,15 +118,7 @@ namespace PathShims_Tests
 
             string test = null;
 
-            try
-            {
                 Assert.IsFalse(PathShim.IsLibraryPath(test, ref app));
-            }
-            finally
-            {
-                app.Quit();
-                app = null;
-            }
         }
 
     }
@@ -158,6 +126,7 @@ namespace PathShims_Tests
     [TestClass]
     public class IsContentCenterPath
     {
+
         [TestMethod]
         public void GoodInput()
         {
@@ -165,15 +134,7 @@ namespace PathShims_Tests
 
             string test = app.DesignProjectManager.ActiveDesignProject.ContentCenterPath;
 
-            try
-            {
                 Assert.IsTrue(PathShim.IsContentCenterPath(test, ref app));
-            }
-            finally
-            {
-                app.Quit();
-                app = null;
-            }
         }
 
         [TestMethod]
@@ -184,15 +145,7 @@ namespace PathShims_Tests
             string test = app.DesignProjectManager.ActiveDesignProject.ContentCenterPath;
             test = PathShim.TrimEndingDirectorySeparator(test);
 
-            try
-            {
                 Assert.IsTrue(PathShim.IsContentCenterPath(test, ref app));
-            }
-            finally
-            {
-                app.Quit();
-                app = null;
-            }
         }
 
 
@@ -202,15 +155,7 @@ namespace PathShims_Tests
             Inventor.Application app = ApplicationShim.Instance();
             string test = @"C:\Windows\";
 
-            try
-            {
                 Assert.IsFalse(PathShim.IsContentCenterPath(test, ref app));
-            }
-            finally
-            {
-                app.Quit();
-                app = null;
-            }
         }
 
         [TestMethod]
@@ -219,35 +164,19 @@ namespace PathShims_Tests
             Inventor.Application app = ApplicationShim.Instance();
             var test = string.Empty;
 
-            try
-            {
                 Assert.IsFalse(PathShim.IsContentCenterPath(test, ref app));
-            }
-            finally
-            {
-                app.Quit();
-                app = null;
-            }
         }
 
         [TestMethod]
         public void BadInput_Null()
         {
             Inventor.Application app = ApplicationShim.Instance();
-            var dp = app.DesignProjectManager.DesignProjects.ItemByName["Default"];
+            DesignProject dp = app.DesignProjectManager.ActiveDesignProject;
             dp.Activate();
 
             string test = null;
 
-            try
-            {
                 Assert.IsFalse(PathShim.IsContentCenterPath(test, ref app));
-            }
-            finally
-            {
-                app.Quit();
-                app = null;
-            }
         }
 
     }
@@ -270,8 +199,5 @@ namespace PathShims_Tests
             string test2 = @"C:\Windows\SysWow";
             Assert.AreEqual(PathShim.TrimEndingDirectorySeparator(test), test2);
         }
-
-
-
     }
 }
