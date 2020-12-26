@@ -46,6 +46,7 @@ namespace InventorShimsTest
             doc.SetProperty("Title", "Bob");
             
             Assert.AreEqual(doc.GetProperty("Title"), "Bob");
+            doc.Close(true);
         }
 
 

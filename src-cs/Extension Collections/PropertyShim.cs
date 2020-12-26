@@ -311,7 +311,7 @@ namespace InventorShims
             PropertySet i = document.PropertySets["Inventor User Defined Properties"];
             try
             {
-                var temp = i[propertyName].Value();
+                var temp = i[propertyName].Value;
                 return true;
             }
             catch { }
