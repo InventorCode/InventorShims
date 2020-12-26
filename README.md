@@ -18,23 +18,28 @@ The minimum supported version of Inventor will be 2020.
 
 API Documentation can be found at [InventorShims API Docs](https://inventorcode.github.io/InventorShims/).  The source files for these documents are located in [/docs/](https://github.com/InventorCode/InventorShims/tree/master/docs).
 
-## How to Use
+## Getting Started
 
-This package may be utilized in one of the following ways...
+First off, you'll want to get or build a copy of the InventorShims.dll file, or (or advanced users) extract whatever source code you want.  There are several ways to do this:
 
-1. By downloading the compiled InventorShims.dll file to your computer and including it into your Inventor iLogic code.  This will allow you to access the entirety of the InventorShims API.  Insert the following code in your iLogic rule header:
-
-```VB
-AddReference "C:\Path\To\File\InventorShims.dll"
-Imports InventorShims
-
-'Add your code here, include InventorShims API functions as you need...
-```
-
+1. By visiting the [Releases page](https://github.com/InventorCode/InventorShims/releases), downloading the compiled InventorShims.dll file to your computer, and referencing it in your Inventor iLogic or add-in code.  This will allow you to access the entirety of the InventorShims API.
 2. By cloning this repo and building the dll yourself.
 3. By installing the (forthcoming) nuget package for use in Visual Studio.
-4. By copying out the methods, classes, or modules that are useful and including those in your own vb or C# code-base. This will result in a smaller code footprint.
+4. By copying out the methods, classes, or modules that are useful and including those in your own vb or C# code-base.
 5. By using the code in this package as reference material and examples to build your own solution.
+
+## How to Use
+
+* For iLogic, add the following code in your iLogic rule header:
+
+    ```VB
+    AddReference "C:\Path\To\File\InventorShims.dll"
+    Imports InventorShims
+    
+    'Add your code here, include InventorShims API functions as you need...
+    ```
+* For add-in development, add the InventorShims.dll as a reference to your project.
+* Visit the [InventorShims API Documentation](https://inventorcode.github.io/InventorShims/) for a more detailed guide.
 
 ## Languages
 
@@ -60,6 +65,8 @@ If you want to contribute, the process proceeds as follows:
 
 *Master* will be the main repository branch; this branch will contain the most up-to-date code.  All short-lived branches will be merged back into *Master* after a code review by repo maintainers.
 
+*release* will be utilized as the release branch.  Releases will be tagged and binary builds added into github as a Release.  Long term support releases may be supported in the future; if implementated, they will each reside in a *release/v#.#.#* branch.
+
 The following branch names are suggested for short-lived branches...
 
 * feature/xx
@@ -72,7 +79,7 @@ The following branch names are suggested for short-lived branches...
 * Visual Studio Compatible IDE
 * .Net 4.7 (for Inventor 2020 support)
 * ILMerge nuget package
-* Inventor 2020 SDK installation
+* Inventor 2020 SDK installation (minimum)
 
 ## Version Numbers
 
