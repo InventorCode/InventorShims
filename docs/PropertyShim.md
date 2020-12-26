@@ -73,15 +73,15 @@ Removes the specified document property.  If the property is native, it will onl
 
 #### Usage:
 
-Set value for built-in property:
+Remove value for built-in property:
 
     Dim oDoc As Inventor.Document = ThisApplication.ActiveDocument
-    oDoc.RemoveProperty("Title")    
+    oDoc.RemoveProperty("Title")
 
-Set value for custom property:
+Remove custom property from document:
 
     Dim oDoc As Inventor.Document = ThisApplication.ActiveDocument
-    oDoc.RemoveProperty("CustomPropertySet", "Custom Property Name") 
+    oDoc.RemoveProperty("Custom Property Name") 
 
 
 ### PropertySetExists

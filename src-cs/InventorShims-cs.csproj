@@ -61,6 +61,7 @@
     <Compile Include="Conversions.cs" />
     <Compile Include="Extension Collections\DocumentShim.cs" />
     <Compile Include="Extension Collections\PropertyShim.cs" />
+    <Compile Include="ParameterShim.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StringShim.cs" />
     <Compile Include="WinMacros.cs" />
@@ -93,7 +94,7 @@
       <Lcid>0</Lcid>
       <WrapperTool>primary</WrapperTool>
       <Isolated>False</Isolated>
-      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
     </COMReference>
     <COMReference Include="stdole1">
       <Guid>{00020430-0000-0000-C000-000000000046}</Guid>

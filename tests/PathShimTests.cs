@@ -87,7 +87,7 @@ namespace PathShims_Tests
             }
             finally
             {
-                //libraryPaths[i].Delete();
+                libraryPaths[i].Delete();
             }
         }
 
