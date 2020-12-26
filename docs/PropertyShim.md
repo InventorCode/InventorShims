@@ -1,10 +1,10 @@
 ---
 layout: default
-title: PropertyShim Class
+title: PropertyShim
 nav_order: 
 ---
 
-# PropertyShim Class
+# PropertyShim
 
 ## Methods
 

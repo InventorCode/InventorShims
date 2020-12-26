@@ -31,25 +31,31 @@ Set the specified document parameter's value.  If the parameter already exists i
 #### Syntax:
 
 Numeric signature:
+
     document.SetParameter(string parameterName, string parameterValue, string units, optional bool clobberFlag)
 
 Text signature:
+
     document.SetParameter(string parameterName, string parameterValue, optional bool clobberFlag)
 
 Boolean signature:
+
     document.SetParameter(string parameterName, bool parameterValue, optional bool clobberFlag)
 
 #### Usage:
 
 Set value for a numeric parameter:
+
     Dim oDoc As Inventor.Document = ThisApplication.ActiveDocument
     oDoc.SetParameter("MyNumericParameter", "20.000", "in")
 
 Set value for a text parameter:
+
     Dim oDoc As Inventor.Document = ThisApplication.ActiveDocument
     oDoc.SetParameter("MyTextParameter", "Here we go!")
 
 Set value for a boolean parameter:
+
     Dim oDoc As Inventor.Document = ThisApplication.ActiveDocument
     oDoc.SetParameter("MyBooleanParameter", True)
 

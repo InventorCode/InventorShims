@@ -1,10 +1,10 @@
 ---
 layout: default
-title: PathShim Class
+title: PathShim
 nav_order: 
 ---
 
-# PathShim Class
+# PathShim
 
 ## Methods
 

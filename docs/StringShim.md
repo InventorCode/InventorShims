@@ -4,7 +4,7 @@ title: StringShim
 nav_order: 
 ---
 
-# StringShim Class
+# StringShim
 
 ## ToFractionStringRoundedUp
 

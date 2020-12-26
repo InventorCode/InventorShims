@@ -4,7 +4,7 @@ title: UiShim
 nav_order: 
 ---
 
-# UiShim Class
+# UiShim
 
 ## GetActiveColorSchemeName
 
