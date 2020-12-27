@@ -41,13 +41,15 @@ namespace InventorShims.TranslatorShim
         {
             oTranslatorData = new TranslatorData(addinGUID: "{90AF7F40-0C01-11D5-8E83-0010B541CD80}", fullFileName: OutputFile, doc: Document);
 
-            oTranslatorData.oOptions.Value["IncludeSketches"] = IncludeSketches;
-            oTranslatorData.oOptions.Value["ApplicationProtocolType"] = ApplicationProtocol;
-            oTranslatorData.oOptions.Value["Author"] = Author;
-            oTranslatorData.oOptions.Value["Organization"] = Organization;
-            oTranslatorData.oOptions.Value["Authorization"] = Authorization;
-            oTranslatorData.oOptions.Value["Description"] = Description;
-            oTranslatorData.oOptions.Value["export_fit_tolerance"] = ExportFitTolerance;
+            NameValueMap op = oTranslatorData.oOptions;
+
+            op.Value["IncludeSketches"] = IncludeSketches;
+            op.Value["ApplicationProtocolType"] = ApplicationProtocol;
+            op.Value["Author"] = Author;
+            op.Value["Organization"] = Organization;
+            op.Value["Authorization"] = Authorization;
+            op.Value["Description"] = Description;
+            op.Value["export_fit_tolerance"] = ExportFitTolerance;
 
             TranslatorAddIn oTranslatorAddIn = (TranslatorAddIn)oTranslatorData.oAppAddIn;
 
