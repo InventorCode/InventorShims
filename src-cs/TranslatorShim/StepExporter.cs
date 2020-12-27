@@ -50,7 +50,7 @@ namespace InventorShims.TranslatorShim
         ///<value>Accepted range of 0.00001 to 0.001 (centimeters)</value>
         public float SplineFitAccuracy { get; set; } = .001f;
 
-        ///<summary>Initializes a new instance of <see cref="StepExporter"/>r</summary>
+        ///<summary>Initializes a new instance of <see cref="StepExporter"/></summary>
         public StepExporter(Inventor.Document Document)
         {
             this.Document = Document;
