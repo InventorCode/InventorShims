@@ -23,7 +23,7 @@ namespace InventorShims.TranslatorShim
         /// <see cref="MaxEdgeLength"/><br/>
         /// <see cref="MaxAspectRatio"/><br/>
         /// </summary>
-        public StlResolutionEnum Resolution { get; set; } = StlResolutionEnum.High;
+        public StlResolutionEnum Resolution { get; set; } = StlResolutionEnum.Custom;
 
         public bool AllowMoveMeshNodes { get; set; } = false;
 
