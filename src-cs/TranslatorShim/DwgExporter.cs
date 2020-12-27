@@ -43,6 +43,9 @@ namespace InventorShims.TranslatorShim
 
             oTranslatorData.oOptions.Value["Export_Acad_IniFile"] = ConfigurationFile;
 
+            //Create output directory if it does not exist
+            System.IO.Directory.CreateDirectory(System.IO.Path.GetDirectoryName(OutputFile));
+
             TranslatorAddIn oTranslatorAddIn = (TranslatorAddIn)oTranslatorData.oAppAddIn;
 
             oTranslatorAddIn.SaveCopyAs(this.Document, oTranslatorData.oContext, oTranslatorData.oOptions, oTranslatorData.oDataMedium);
