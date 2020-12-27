@@ -67,6 +67,9 @@
     <Compile Include="TranslatorShim\DwgExporter.cs" />
     <Compile Include="TranslatorShim\StepExporter.cs" />
     <Compile Include="TranslatorShim\StepProtocolEnum.cs" />
+    <Compile Include="TranslatorShim\StlExporter.cs" />
+    <Compile Include="TranslatorShim\StlFormatEnum.cs" />
+    <Compile Include="TranslatorShim\StlResolutionEnum.cs" />
     <Compile Include="TranslatorShim\TranslatorData.cs" />
     <Compile Include="WinMacros.cs" />
   </ItemGroup>
