@@ -11,8 +11,14 @@ namespace InventorShims.TranslatorShim
     /// </summary>
     public enum StepProtocolEnum
     {
-        Step203 = 2, //Configuration Controlled Design
-        Step214 = 3, //Automotive Design
-        Step242 = 5  //Managed Model Based 3D Engineering (Includes 3D Annotations)
+        /// <summary>Configuration Controlled Design</summary>
+        AP203 = 2,
+
+        /// <summary>Automotive Design</summary>
+        AP214 = 3,
+
+        /// <summary>Managed Model Based 3D Engineering</summary>
+        /// <remarks>Includes PMI and meshes</remarks>
+        AP242 = 5
     }
 }
