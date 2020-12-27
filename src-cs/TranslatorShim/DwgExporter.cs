@@ -7,6 +7,7 @@ using Inventor;
 
 namespace InventorShims.TranslatorShim
 {
+    /// <summary>Exports a document to a DWG file</summary>
     public class DwgExporter
     {
         ///<summary>The document to be exported</summary>

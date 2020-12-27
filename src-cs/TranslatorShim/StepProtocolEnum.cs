@@ -6,9 +6,7 @@ using System.Threading.Tasks;
 
 namespace InventorShims.TranslatorShim
 {
-    /// <summary>
-    /// Wrapper for the ApplicationProtocolType that is used by the STEP export method.
-    /// </summary>
+    /// <summary>Wrapper for the ApplicationProtocolType that is used by the STEP export method.</summary>
     public enum StepProtocolEnum
     {
         /// <summary>Configuration Controlled Design</summary>
