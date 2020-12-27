@@ -14,7 +14,7 @@ namespace InventorShims.TranslatorShim
         public Inventor.Document Document { get; set; } = null;
 
         ///<value>Defaults to mm.</value>
-        public ImportUnitsTypeEnum ExportUnits { get; set; } = ImportUnitsTypeEnum.kMillimeterUnitsType;
+        public ImportUnitsTypeEnum Units { get; set; } = ImportUnitsTypeEnum.kMillimeterUnitsType;
 
         /// <summary>
         /// Setting this to anything other than Custom will cause the exporter to ignore the following variables: <br/>
@@ -137,41 +137,41 @@ namespace InventorShims.TranslatorShim
             TranslatorData oTranslatorData = new TranslatorData(addinGUID: "{533E9A98-FC3B-11D4-8E7E-0010B541CD80}", fullFileName: OutputFile, doc: this.Document);
 
             //Convert the ExportUnits enum to the integer values expected by the STL exporter
-            int intExportUnits = 0;
-            switch (ExportUnits)
+            int exportUnits = 0;
+            switch (Units)
             {
                 case ImportUnitsTypeEnum.kSourceUnitsType:
-                    intExportUnits = 1;
+                    exportUnits = 1;
                     break;
 
                 case ImportUnitsTypeEnum.kInchUnitsType:
-                    intExportUnits = 2;
+                    exportUnits = 2;
                     break;
 
                 case ImportUnitsTypeEnum.kFootUnitsType:
-                    intExportUnits = 3;
+                    exportUnits = 3;
                     break;
 
                 case ImportUnitsTypeEnum.kCentimeterUnitsType:
-                    intExportUnits = 4;
+                    exportUnits = 4;
                     break;
 
                 case ImportUnitsTypeEnum.kMillimeterUnitsType:
-                    intExportUnits = 5;
+                    exportUnits = 5;
                     break;
 
                 case ImportUnitsTypeEnum.kMeterUnitsType:
-                    intExportUnits = 6;
+                    exportUnits = 6;
                     break;
 
                 case ImportUnitsTypeEnum.kMicronUnitsType:
-                    intExportUnits = 7;
+                    exportUnits = 7;
                     break;
             }
 
             NameValueMap op = oTranslatorData.oOptions;
 
-            op.Value["ExportUnits"] = intExportUnits;
+            op.Value["ExportUnits"] = exportUnits;
             op.Value["Resolution"] = Resolution;
             op.Value["AllowMoveMeshNode"] = AllowMoveMeshNodes;
             op.Value["SurfaceDeviation"] = SurfaceDeviation;
