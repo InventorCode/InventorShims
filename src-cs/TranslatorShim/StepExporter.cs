@@ -20,9 +20,9 @@ namespace InventorShims.TranslatorShim
             set {
                 _document = value;
 
-                Description = (string)_document.PropertySets["Design Tracking Properties"]["Description"].Value;
+                Description = (string)_document.GetProperty("Description");
 
-                Organization = (string)_document.PropertySets["Inventor Document Summary Information"]["Company"].Value;
+                Organization = (string)_document.GetProperty("Company");
             }
         }
 
