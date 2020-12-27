@@ -10,10 +10,9 @@ namespace InventorShims.TranslatorShim
     /// <summary>Exports a document to a STP file</summary>
     public class StepExporter
     {
-        private TranslatorData oTranslatorData = null;
-
         ///<value>The document to be exported</value>
         public Document Document { get; set; } = null;
+
         public bool IncludeSketches { get; set; } = false;
         public StepProtocolEnum ApplicationProtocol { get; set; } = StepProtocolEnum.Step214;
         public string Author { get; set; } = "";
@@ -39,7 +38,7 @@ namespace InventorShims.TranslatorShim
         ///<summary>Export to STP file with the specified full file path.</summary>
         public void Export(string OutputFile)
         {
-            oTranslatorData = new TranslatorData(addinGUID: "{90AF7F40-0C01-11D5-8E83-0010B541CD80}", fullFileName: OutputFile, doc: Document);
+            TranslatorData oTranslatorData = new TranslatorData(addinGUID: "{90AF7F40-0C01-11D5-8E83-0010B541CD80}", fullFileName: OutputFile, doc: Document);
 
             NameValueMap op = oTranslatorData.oOptions;
 
