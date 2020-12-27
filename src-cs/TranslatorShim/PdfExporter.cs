@@ -92,7 +92,7 @@ namespace InventorShims.TranslatorShim
             op.Value["Sheet_Range"] = SheetRangeType;
             op.Value["Custom_Begin_Sheet"] = SheetRangeStart;
             op.Value["Custom_End_Sheet"] = SheetRangeEnd;
-            //op.Value["Launch_Viewer"] = Convert.ToInt32(OpenWhenComplete);  //Does not work.  Workaround is at the bottom of this function.
+            //op.Value["Launch_Viewer"] = Convert.ToInt32(OpenWhenDone);  //Does not work.  Workaround is at the bottom of this function.
 
             Inventor.Application app = (Inventor.Application)this.Document.Parent;
 
