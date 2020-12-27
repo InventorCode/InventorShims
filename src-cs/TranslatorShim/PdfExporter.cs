@@ -98,33 +98,23 @@ namespace InventorShims.TranslatorShim
 
             Transaction tempTransaction = null;
 
-            if (PrintExcludedSheets)
+            //This is wrapped in a try/catch block to ensure the transaction gets aborted
+            try
             {
-                DrawingDocument dwgDoc = (DrawingDocument)this.Document;
-
-                List<Sheet> excludedSheets = dwgDoc.Sheets.OfType<Sheet>().Where(x => x.ExcludeFromPrinting).ToList();
-
-                if (excludedSheets.Count > 0)
+                if (PrintExcludedSheets)
                 {
-                    //This is wrapped in a try/catch block to ensure the transaction gets aborted
-                    try
+                    DrawingDocument dwgDoc = (DrawingDocument)this.Document;
+
+                    List<Sheet> excludedSheets = dwgDoc.Sheets.OfType<Sheet>().Where(x => x.ExcludeFromPrinting).ToList();
+
+                    if (excludedSheets.Count > 0)
                     {
                         tempTransaction = app.TransactionManager.StartTransaction((Inventor._Document)this.Document, "Temporary Transaction");
 
                         excludedSheets.ForEach(x => x.ExcludeFromPrinting = false);
                     }
-                    catch
-                    {
-                        if (tempTransaction != null) { tempTransaction.Abort(); }
-
-                        throw;
-                    }
                 }
-            }
 
-            //This is wrapped in a try/catch block to ensure the transaction gets aborted
-            try
-            {
                 //Create output directory if it does not exist
                 System.IO.Directory.CreateDirectory(System.IO.Path.GetDirectoryName(OutputFile));
 
