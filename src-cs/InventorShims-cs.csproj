@@ -64,6 +64,14 @@
     <Compile Include="ParameterShim.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StringShim.cs" />
+    <Compile Include="TranslatorShim\DwgExporter.cs" />
+    <Compile Include="TranslatorShim\PdfExporter.cs" />
+    <Compile Include="TranslatorShim\StepExporter.cs" />
+    <Compile Include="TranslatorShim\StepProtocolEnum.cs" />
+    <Compile Include="TranslatorShim\StlExporter.cs" />
+    <Compile Include="TranslatorShim\StlFormatEnum.cs" />
+    <Compile Include="TranslatorShim\StlResolutionEnum.cs" />
+    <Compile Include="TranslatorShim\TranslatorData.cs" />
     <Compile Include="WinMacros.cs" />
   </ItemGroup>
   <ItemGroup>
