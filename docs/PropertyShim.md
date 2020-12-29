@@ -39,9 +39,9 @@ Set the specified document property's value.  If the iproperty name exist it wil
 
 #### Syntax:
 
-    document.SetPropertyValue(string propertyName)
+    document.SetPropertyValue(string propertyName, object value)
 
-    document.SetPropertyValue(string PropertySetName, string propertyName)
+    document.SetPropertyValue(string PropertySetName, string propertyName, object value)
 
 #### Usage:
 
@@ -60,6 +60,17 @@ Set value for a property in a specific property set:
     Dim oDoc As Inventor.Document = ThisApplication.ActiveDocument
     oDoc.SetPropertyValue("Property Group", CustomProperty", "Value Here!")    
 
+### GetProperty
+
+Returns the specified document property.  Tries to get the built-in properties first, then resorts to User-Defined Iproperties, and then searches through totally custom property groups.  If the property is not found, a null Property is returned.
+
+(Long form signature) returns the specified property (from the specified property set).
+
+#### Syntax:
+
+    document.GetProperty(string propertyName)
+    
+    document.GetProperty(string setName, string propertyName)
 
 ### RemoveProperty
 
