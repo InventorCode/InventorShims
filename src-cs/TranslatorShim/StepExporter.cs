@@ -20,9 +20,9 @@ namespace InventorShims.TranslatorShim
             set {
                 _document = value;
 
-                Description = (string)_document.GetProperty("Description");
+                Description = (string)_document.GetPropertyValue("Description");
 
-                Organization = (string)_document.GetProperty("Company");
+                Organization = (string)_document.GetPropertyValue("Company");
             }
         }
 

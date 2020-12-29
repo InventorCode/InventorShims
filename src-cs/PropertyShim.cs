@@ -129,7 +129,7 @@ namespace InventorShims
         /// <param name="document"></param>
         /// <param name="propertyName"></param>
         /// <returns></returns>
-        public static object GetProperty(this Document document, string propertyName)
+        public static object GetPropertyValue(this Document document, string propertyName)
         {
             PropertySets propertySets = document.PropertySets;
 
@@ -151,10 +151,10 @@ namespace InventorShims
 
             //still not found, return nothing...
             return "";
-        } //End GetProperty
+        } //End GetPropertyValue
 
 
-        public static object GetProperty(this Document document, string setName, string propertyName)
+        public static object GetPropertyValue(this Document document, string setName, string propertyName)
         {
             PropertySets propertySets = document.PropertySets;
 
@@ -176,7 +176,7 @@ namespace InventorShims
         }
 
 
-        public static void SetProperty(this Document document, string propertyName, Object value)
+        public static void SetPropertyValue(this Document document, string propertyName, Object value)
         {
             PropertySets propertySets = document.PropertySets;
             
@@ -204,7 +204,7 @@ namespace InventorShims
             }
         }
 
-        public static void SetProperty(this Document document, string propertySetName, string propertyName, object value)
+        public static void SetPropertyValue(this Document document, string propertySetName, string propertyName, object value)
         {
             PropertySets documentPropertySets = document.PropertySets;
 
