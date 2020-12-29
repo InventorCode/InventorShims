@@ -171,12 +171,14 @@ namespace PathShims_Tests
         public void BadInput_Null()
         {
             Inventor.Application app = ApplicationShim.Instance();
+            app.Documents.CloseAll();
             DesignProject dp = app.DesignProjectManager.ActiveDesignProject;
             dp.Activate();
 
             string test = null;
+            
+            Assert.IsFalse(PathShim.IsContentCenterPath(test, ref app));
 
-                Assert.IsFalse(PathShim.IsContentCenterPath(test, ref app));
         }
 
     }
