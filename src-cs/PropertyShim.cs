@@ -87,16 +87,40 @@ namespace InventorShims
             "Inventor User Defined Properties"
         };
 
-            /// <summary>
-            /// Returns a boolean indicating if the document contains custom PropertySets
-            /// </summary>
-            /// <param name="propertySets"></param>
-            /// <returns>boolean</returns>
-            private static bool UserPropertySetsExist(PropertySets propertySets)
-            {
-                return propertySets.Count >= NativePropertySetLookup.Count ? true : false;
+        /// <summary>
+        /// Returns a boolean indicating if the document contains custom PropertySets
+        /// </summary>
+        /// <param name="propertySets"></param>
+        /// <returns>boolean</returns>
+        private static bool UserPropertySetsExist(PropertySets propertySets)
+        {
+            return propertySets.Count >= NativePropertySetLookup.Count ? true : false;
 
+        }
+
+        /// <summary>
+        /// Returns a property object for a user-created custom property.
+        /// </summary>
+        /// <param name="document"></param>
+        /// <param name="propertyName"></param>
+        /// <returns></returns>
+        private static Property GetSuperCustomProperty(this Inventor.Document document, string propertyName)
+        {
+            foreach (PropertySet i in document.PropertySets)
+            {
+                //ignore stock propertySets
+                if (NativePropertySetLookup.Contains(i.DisplayName))
+                { continue; }
+                foreach (Property j in i)
+                {
+                    if (j.DisplayName == propertyName)
+                    {
+                        return j;
+                    }
+                }
             }
+            return null;
+        }
 
             /// <summary>
             /// Returns a string if the user propertySets contain the specified property name.
@@ -104,71 +128,84 @@ namespace InventorShims
             /// <param name="document"></param>
             /// <param name="propertyName"></param>
             /// <returns>string</returns>
-            private static object GetSuperCustomProperty(Inventor.Document document, string propertyName)
+            private static object GetSuperCustomPropertyValue(Inventor.Document document, string propertyName)
             {
-                foreach (PropertySet i in document.PropertySets)
-                {
-                    if (NativePropertySetLookup.Contains(i.DisplayName))
-                        return "";
 
-                    try
-                    {
-                        return i[propertyName].Value;
-                    }
-                    catch {};
-                }
-                
-                return "";
+                Property temp = document.GetSuperCustomProperty(propertyName);
+                //try
+                //    {
+                        return temp.Value ?? "";
+                //    }
+                //catch { return "";}
             }
 
-        
 
-        /// <summary>
-        /// Returns the iProperty for a provided document and propertyName. Short signature.
-        /// </summary>
-        /// <param name="document"></param>
-        /// <param name="propertyName"></param>
-        /// <returns></returns>
-        public static object GetPropertyValue(this Document document, string propertyName)
+            /// <summary>
+            /// Returns the iProperty Value for a provided document and propertyName. Short signature.
+            /// </summary>
+            /// <param name="document"></param>
+            /// <param name="propertyName"></param>
+            /// <returns></returns>
+            public static object GetPropertyValue(this Document document, string propertyName)
         {
-            PropertySets propertySets = document.PropertySets;
+            Property prop = document.GetProperty(propertyName);
+            if (prop is null)
+                return "";
 
-            //get the propertySet for the provided propertyName (if it exists)
-            if (NativePropertyLookup.TryGetValue(propertyName, out string setName))
-                return propertySets[setName][propertyName].Value;
+            return prop.Value;
 
-            //not found in the standard properties, search the custom properties
-            PropertySet currentPropertySet = propertySets["Inventor User Defined Properties"];
-            try
-            {
-                return currentPropertySet[propertyName].Value;
-            }
-            catch { };
-
-            //still not found, search other custom property sets!
-            if (UserPropertySetsExist(propertySets))
-                return GetSuperCustomProperty(document, propertyName);
-
-            //still not found, return nothing...
-            return "";
         } //End GetPropertyValue
 
 
         public static object GetPropertyValue(this Document document, string setName, string propertyName)
         {
+            Property prop = document.GetProperty(setName, propertyName);
+            if (prop is null) return "";
+            
+            return prop.Value;
+        }
+
+
+        public static Property GetProperty(this Document document, string propertyName)
+        {
             PropertySets propertySets = document.PropertySets;
 
+            //get the propertySet for the provided propertyName (if it exists)
+            if (NativePropertyLookup.TryGetValue(propertyName, out string setName))
+                return propertySets[setName][propertyName];
+
+            //not found in the standard properties, search the custom properties
+            PropertySet currentPropertySet = propertySets["Inventor User Defined Properties"];
             try
             {
-                PropertySet currentPropertySet = propertySets[setName];
-                Property currentProperty = currentPropertySet[propertyName];
-                return currentProperty.Value;
+                return currentPropertySet[propertyName];
+            }
+            catch { };
+
+            //still not found, search other custom property sets!
+            if (UserPropertySetsExist(propertySets))
+            {
+                return GetSuperCustomProperty(document, propertyName) ?? null;
+            }
+
+            //still not found, return nothing...
+            return null;
+        }
+
+
+        public static Property GetProperty(this Document document, string setName, string propertyName)
+        {
+            try
+            {
+            Property prop = document.PropertySets[setName][propertyName];
+            return prop ?? null;
             }
             catch (Exception ex)
             {
-                return "";
+                return null;
             }
         }
+
 
         public static bool IsPropertyNative(string name)
         {
