@@ -1,10 +1,10 @@
 ---
 layout: default
-title: AttributeShim Class
+title: AttributeShim
 nav_order: 
 ---
 
-# AttributeShim Class
+# AttributeShim
 
 ## Methods
 

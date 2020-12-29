@@ -4,7 +4,7 @@ title: ApplicationShim
 nav_order: 
 ---
 
-# ApplicationShim Class
+# ApplicationShim
 
 ## Instance
 
