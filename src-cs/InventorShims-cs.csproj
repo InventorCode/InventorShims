@@ -60,7 +60,7 @@
     <Compile Include="Extension Collections\UiShim.cs" />
     <Compile Include="Conversions.cs" />
     <Compile Include="Extension Collections\DocumentShim.cs" />
-    <Compile Include="Extension Collections\PropertyShim.cs" />
+    <Compile Include="PropertyShim.cs" />
     <Compile Include="ParameterShim.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StringShim.cs" />

@@ -8,7 +8,7 @@ nav_order:
 
 ## Methods
 
-### GetProperty
+### GetPropertyValue
 
 (Short form signature) returns the specified document property's value as an object.  Tries to get the built-in properties first, then resorts to User-Defined Iproperties, and then searches through totally custom property groups.  If the property is not found, an empty string is returned.
 
@@ -16,50 +16,61 @@ nav_order:
 
 #### Syntax:
 
-    document.GetProperty(string propertyName)
+    document.GetPropertyValue(string propertyName)
 
-    document.GetProperty(string propertySetName, string propertyName)
+    document.GetPropertyValue(string propertySetName, string propertyName)
 
 #### Usage:
 
 Get the property (short form):
 
     Dim oDoc As Inventor.Document = ThisApplication.ActiveDocument
-    msgbox(oDoc.GetProperty("Title"))  
+    msgbox(oDoc.GetPropertyValue("Title"))  
 
 Get the property from a specific property set:
 
     Dim oDoc As Inventor.Document = ThisApplication.ActiveDocument
-    msgbox(oDoc.GetProperty("Property Set", Title"))  
+    msgbox(oDoc.GetPropertyValue("Property Set", Title"))  
 
 
-### SetProperty
+### SetPropertyValue
 
 Set the specified document property's value.  If the iproperty name exist it will set the value.  If the name does not exist, it will add the property with the value you have specified in the "User Defined Properties" property set.  The long signature function must be used to specify custom property groups.
 
 #### Syntax:
 
-    document.SetProperty(string propertyName)
+    document.SetPropertyValue(string propertyName, object value)
 
-    document.SetProperty(string PropertySetName, string propertyName)
+    document.SetPropertyValue(string PropertySetName, string propertyName, object value)
 
 #### Usage:
 
 Set value for built-in property:
 
     Dim oDoc As Inventor.Document = ThisApplication.ActiveDocument
-    oDoc.SetProperty("Title", "Custom File Title!")    
+    oDoc.SetPropertyValue("Title", "Custom File Title!")    
 
 Set value for custom property:
 
     Dim oDoc As Inventor.Document = ThisApplication.ActiveDocument
-    oDoc.SetProperty("CustomProperty", "Value Here!")    
+    oDoc.SetPropertyValue("CustomProperty", "Value Here!")    
 
 Set value for a property in a specific property set:
 
     Dim oDoc As Inventor.Document = ThisApplication.ActiveDocument
-    oDoc.SetProperty("Property Group", CustomProperty", "Value Here!")    
+    oDoc.SetPropertyValue("Property Group", CustomProperty", "Value Here!")    
 
+### GetProperty
+
+Returns the specified document property.  Tries to get the built-in properties first, then resorts to User-Defined Iproperties, and then searches through totally custom property groups.  If the property is not found, a null Property is returned.
+
+(Long form signature) returns the specified property (from the specified property set).
+
+#### Syntax:
+
+    document.GetProperty(string propertyName)
+    
+    document.GetProperty(string setName, string propertyName)
 
 ### RemoveProperty
 
