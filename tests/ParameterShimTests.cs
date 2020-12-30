@@ -7,17 +7,57 @@ using System.Windows.Forms;
 namespace ParameterShim_Tests
 {
     [TestClass]
-    public class ParameterShimTests
+    public class GetParameter
     {
-
         [TestMethod]
-        public void SetParameter_Numeric_Sucessful()
+        public void ParameterExists_returnsParameter()
         {
             Inventor.Application app = ApplicationShim.Instance();
             var path = app.DesignProjectManager.ActiveDesignProject.TemplatesPath;
             Document doc = app.Documents.Add(DocumentTypeEnum.kPartDocumentObject, path + "Standard.ipt", true);
 
-            doc.SetParameter("testing", "16", "cm");
+            doc.SetParameterValue("testing", "16", "cm");
+            Parameter test = doc.GetParameter("testing");
+
+            try
+            {
+                Assert.IsNotNull(test);
+            }
+            finally { doc.Close(true); }
+
+        }
+
+        [TestMethod]
+        public void ParameterDoesNotExist_returnsNull()
+        {
+            Inventor.Application app = ApplicationShim.Instance();
+            var path = app.DesignProjectManager.ActiveDesignProject.TemplatesPath;
+            Document doc = app.Documents.Add(DocumentTypeEnum.kPartDocumentObject, path + "Standard.ipt", true);
+
+            Parameter test = doc.GetParameter("testing");
+
+            try
+            {
+                Assert.IsNull(test);
+            }
+            finally { doc.Close(true); }
+
+        }
+    }
+
+
+            [TestClass]
+    public class SetParameterValue
+    {
+
+        [TestMethod]
+        public void Numeric_CreatesNew()
+        {
+            Inventor.Application app = ApplicationShim.Instance();
+            var path = app.DesignProjectManager.ActiveDesignProject.TemplatesPath;
+            Document doc = app.Documents.Add(DocumentTypeEnum.kPartDocumentObject, path + "Standard.ipt", true);
+
+            doc.SetParameterValue("testing", "16", "cm");
 
             PartDocument part = (PartDocument)doc;
             Parameter parameter = part.ComponentDefinition.Parameters["testing"];
@@ -33,15 +73,38 @@ namespace ParameterShim_Tests
             }
         }
 
-
         [TestMethod]
-        public void SetParameter_Text_Sucessful()
+        public void Numeric_OverwritesExisting()
         {
             Inventor.Application app = ApplicationShim.Instance();
             var path = app.DesignProjectManager.ActiveDesignProject.TemplatesPath;
             Document doc = app.Documents.Add(DocumentTypeEnum.kPartDocumentObject, path + "Standard.ipt", true);
 
-            doc.SetParameter("testing", "This is a test");
+            doc.SetParameterValue("testing", "16", "cm");
+            doc.SetParameterValue("testing", "19", "cm");
+
+            PartDocument part = (PartDocument)doc;
+            Parameter parameter = part.ComponentDefinition.Parameters["testing"];
+            double testing = (double)parameter.Value;
+
+            try
+            {
+                Assert.AreEqual(19, testing);
+            }
+            finally
+            {
+                doc.Close(true);
+            }
+        }
+
+        [TestMethod]
+        public void Text_CreatesNew()
+        {
+            Inventor.Application app = ApplicationShim.Instance();
+            var path = app.DesignProjectManager.ActiveDesignProject.TemplatesPath;
+            Document doc = app.Documents.Add(DocumentTypeEnum.kPartDocumentObject, path + "Standard.ipt", true);
+
+            doc.SetParameterValue("testing", "This is a test");
 
             PartDocument part = (PartDocument)doc;
             Parameter parameter = part.ComponentDefinition.Parameters["testing"];
@@ -58,13 +121,38 @@ namespace ParameterShim_Tests
         }
 
         [TestMethod]
-        public void SetParameter_Bool_Sucessful()
+        public void Text_OverwritesExisting()
         {
             Inventor.Application app = ApplicationShim.Instance();
             var path = app.DesignProjectManager.ActiveDesignProject.TemplatesPath;
             Document doc = app.Documents.Add(DocumentTypeEnum.kPartDocumentObject, path + "Standard.ipt", true);
 
-            doc.SetParameter("testing", true);
+            doc.SetParameterValue("testing", "This is a test");
+            doc.SetParameterValue("testing", "This is a test60");
+
+            PartDocument part = (PartDocument)doc;
+            Parameter parameter = part.ComponentDefinition.Parameters["testing"];
+            var testing = parameter.Value;
+
+            try
+            {
+                Assert.AreEqual("This is a test60", testing);
+            }
+            finally
+            {
+                doc.Close(true);
+            }
+        }
+
+
+        [TestMethod]
+        public void Bool_CreatesNew()
+        {
+            Inventor.Application app = ApplicationShim.Instance();
+            var path = app.DesignProjectManager.ActiveDesignProject.TemplatesPath;
+            Document doc = app.Documents.Add(DocumentTypeEnum.kPartDocumentObject, path + "Standard.ipt", true);
+
+            doc.SetParameterValue("testing", true);
 
             PartDocument part = (PartDocument)doc;
             Parameter parameter = part.ComponentDefinition.Parameters["testing"];
@@ -81,15 +169,43 @@ namespace ParameterShim_Tests
         }
 
         [TestMethod]
-        public void GetParameter_GoodInput_ReturnsValue()
+        public void Bool_OverwritesExisting()
         {
             Inventor.Application app = ApplicationShim.Instance();
             var path = app.DesignProjectManager.ActiveDesignProject.TemplatesPath;
             Document doc = app.Documents.Add(DocumentTypeEnum.kPartDocumentObject, path + "Standard.ipt", true);
 
-            doc.SetParameter("testing", "16", "cm");
+            doc.SetParameterValue("testing", true);
+            doc.SetParameterValue("testing", false);
 
-            var testing = doc.GetParameter("testing");
+            PartDocument part = (PartDocument)doc;
+            Parameter parameter = part.ComponentDefinition.Parameters["testing"];
+            var testing = parameter.Value;
+
+            try
+            {
+                Assert.AreEqual(false, testing);
+            }
+            finally
+            {
+                doc.Close(true);
+            }
+        }
+    }
+
+    [TestClass]
+    public class GetParameterValue
+    {
+        [TestMethod]
+        public void GoodInput_ReturnsValue()
+        {
+            Inventor.Application app = ApplicationShim.Instance();
+            var path = app.DesignProjectManager.ActiveDesignProject.TemplatesPath;
+            Document doc = app.Documents.Add(DocumentTypeEnum.kPartDocumentObject, path + "Standard.ipt", true);
+
+            doc.SetParameterValue("testing", "16", "cm");
+
+            var testing = doc.GetParameterValue("testing");
 
             try
             {
@@ -104,13 +220,13 @@ namespace ParameterShim_Tests
 
 
         [TestMethod]
-        public void GetParameter_NoParameter_ReturnsEmpty()
+        public void NoParameter_ReturnsEmpty()
         {
             Inventor.Application app = ApplicationShim.Instance();
             var path = app.DesignProjectManager.ActiveDesignProject.TemplatesPath;
             Document doc = app.Documents.Add(DocumentTypeEnum.kPartDocumentObject, path + "Standard.ipt", true);
 
-            var testing = doc.GetParameter("testing");
+            var testing = doc.GetParameterValue("testing");
 
             try
             {
@@ -121,17 +237,22 @@ namespace ParameterShim_Tests
                 doc.Close(true);
             }
         }
+    }
+
+    [TestClass]
+    public class RemoveParameter
+    {
 
         [TestMethod]
-        public void RemoveParameter_Works()
+        public void Works()
         {
             Inventor.Application app = ApplicationShim.Instance();
             var path = app.DesignProjectManager.ActiveDesignProject.TemplatesPath;
             Document doc = app.Documents.Add(DocumentTypeEnum.kPartDocumentObject, path + "Standard.ipt", true);
 
-            doc.SetParameter("testing", "16", "cm");
+            doc.SetParameterValue("testing", "16", "cm");
             doc.RemoveParameter("testing");
-            string testing = doc.GetParameter("testing");
+            string testing = doc.GetParameterValue("testing");
 
             try
             {

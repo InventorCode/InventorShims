@@ -17,25 +17,22 @@ namespace InventorShims
         /// <param name="parameterValue"></param>
         /// <param name="units"></param>
         /// <param name="clobberFlag"></param>
-        public static void SetParameter(this Document document, string parameterName, string parameterValue, string units, bool clobberFlag = true)
+        public static void SetParameterValue(this Document document, string parameterName, string parameterValue, string units, bool clobberFlag = true)
         {
+            Parameter parameter = document.GetParameter(parameterName);
 
-            Parameters parameters = GetParameters(document);
-            _ = parameters ?? throw new ArgumentException("This document " + document.FullDocumentName + " does not support parameters.");
-
-
-            if (!ParameterExists(parameters, parameterName))
+            if (!ParameterExists(parameter))
             {
                 try
                 {
+                    Parameters parameters = document.GetParameters();
                     parameters.UserParameters.AddByExpression(parameterName, parameterValue, units);
                 }
                 catch { }
                 return;
             }
 
-            Parameter parameter = parameters[parameterName];
-            if (clobberFlag && IsParameterWritable(parameter))
+            if (clobberFlag && ParameterIsWritable(parameter))
             {
                 try
                 {
@@ -43,7 +40,6 @@ namespace InventorShims
                 }
                 catch { }
             }
-
         }
 
         /// <summary>
@@ -53,28 +49,24 @@ namespace InventorShims
         /// <param name="parameterName"></param>
         /// <param name="parameterValue"></param>
         /// <param name="clobberFlag"></param>
-        public static void SetParameter(this Document document, string parameterName, string parameterValue, bool clobberFlag = true)
+        public static void SetParameterValue(this Document document, string parameterName, string parameterValue, bool clobberFlag = true)
         {
+            Parameter parameter = document.GetParameter(parameterName);
 
-            Parameters parameters = GetParameters(document);
-            _ = parameters ?? throw new ArgumentException("This document " + document.FullDocumentName + " does not support parameters.");
-
-
-            if (!ParameterExists(parameters, parameterName))
+            if (!ParameterExists(parameter))
             {
                 try
                 {
-                    parameters.UserParameters.AddByValue(parameterName, parameterValue, "TEXT");
+                    Parameters parameters = document.GetParameters();
+                    parameters.UserParameters.AddByValue(parameterName, parameterValue, UnitsTypeEnum.kTextUnits);
                 }
                 catch { }
                 return;
             }
 
-            Parameter parameter = parameters[parameterName];
             var unit = parameter.get_Units();
 
-
-            if (clobberFlag && IsParameterWritable(parameter) && unit == "TEXT")
+            if (clobberFlag && ParameterIsWritable(parameter) && unit.Equals("Text", StringComparison.OrdinalIgnoreCase))
             {
                 try
                 {
@@ -82,7 +74,6 @@ namespace InventorShims
                 }
                 catch { }
             }
-
         }
 
 
@@ -91,31 +82,27 @@ namespace InventorShims
         /// </summary>
         /// <param name="document"></param>
         /// <param name="parameterName"></param>
-        /// <param name="parameterBool"></param>
+        /// <param name="parameterValue"></param>
         /// <param name="clobberFlag"></param>
-        public static void SetParameter(this Document document, string parameterName, bool parameterValue, bool clobberFlag = true)
+        public static void SetParameterValue(this Document document, string parameterName, bool parameterValue, bool clobberFlag = true)
         {
+            Parameter parameter = document.GetParameter(parameterName);
 
-            Parameters parameters = GetParameters(document);
-            _ = parameters ?? throw new ArgumentException("This document " + document.FullDocumentName + " does not support parameters.");
-
-//            string parameterValue = parameterBool ? "true" : "false";
-
-            if (!ParameterExists(parameters, parameterName))
+            if (!ParameterExists(parameter))
             {
                 try
                 {
-                    parameters.UserParameters.AddByValue(parameterName, parameterValue, "BOOLEAN");
+                    Parameters parameters = document.GetParameters();
+                    parameters.UserParameters.AddByValue(parameterName, parameterValue, UnitsTypeEnum.kBooleanUnits);
                 }
                 catch { }
                 return;
             }
 
-            Parameter parameter = parameters[parameterName];
             var unit = parameter.get_Units();
 
 
-            if (clobberFlag && IsParameterWritable(parameter) && unit == "BOOLEAN")
+            if (clobberFlag && ParameterIsWritable(parameter) && unit.Equals("Boolean", StringComparison.OrdinalIgnoreCase))
             {
                 try
                 {
@@ -123,7 +110,6 @@ namespace InventorShims
                 }
                 catch { }
             }
-
         }
 
 
@@ -133,19 +119,17 @@ namespace InventorShims
         /// <param name="document"></param>
         /// <param name="parameterName"></param>
         /// <returns></returns>
-        public static string GetParameter(this Inventor.Document document, string parameterName)
+        public static string GetParameterValue(this Inventor.Document document, string parameterName)
         {
-            Parameters parameters = GetParameters(document);
-            _ = parameters ?? throw new ArgumentException("This document " + document.FullDocumentName + " does not support parameters.");
+            Parameter parameter = document.GetParameter(parameterName);
 
             UnitsOfMeasure uom = document.UnitsOfMeasure;
             
-            if (!ParameterExists(parameters, parameterName))
+            if (!ParameterExists(parameter))
             {
                 return String.Empty;
             }
 
-            Parameter parameter = parameters[parameterName];
             var value = parameter.Value;
             var unit = parameter.get_Units();
 
@@ -162,25 +146,21 @@ namespace InventorShims
 
                 default:
                     return uom.GetStringFromValue((double)value, unitEnum);
-
             }
-
-
-
         }
 
         public static void RemoveParameter(this Inventor.Document document, string parameterName)
         {
-            Parameters parameters = GetParameters(document);
-            _ = parameters ?? throw new ArgumentException("This document " + document.FullDocumentName + " does not support parameters.");
+            //Parameters parameters = GetParameters(document);
+            //_ = parameters ?? throw new ArgumentException("This document " + document.FullDocumentName + " does not support parameters.");
+            Parameter parameter = document.GetParameter(parameterName);
 
-            if (!ParameterExists(parameters, parameterName))
+            if (!ParameterExists(parameter))
             {
                 return;
             }
 
-            Parameter parameter = parameters[parameterName];
-            if (!IsParameterWritable(parameter))
+            if (!ParameterIsWritable(parameter))
             {
                 return;
             }
@@ -193,14 +173,22 @@ namespace InventorShims
             parameter.Delete();
         }
 
-        private static bool ParameterExists(Parameters parameters, string parameterName)
+        public static Parameter GetParameter(this Inventor.Document document, string parameterName)
         {
+            Parameters parameters = GetParameters(document);
+            _ = parameters ?? throw new ArgumentException("This document " + document.FullDocumentName + " does not support parameters.");
+
             foreach (Parameter parameter in parameters)
             {
-                if (parameter.Name == parameterName) { return true; }
+                if (parameter.Name == parameterName) { return parameter; }
             }
 
-            return false;
+            return null;
+        }
+
+        private static bool ParameterExists(Parameter parameter)
+        {
+            return (parameter is null) ? false : true;
         }
 
         public static Parameters GetParameters(this Document document)
@@ -219,9 +207,8 @@ namespace InventorShims
                     return null;
             }
         }
-        private static bool IsParameterWritable(Parameter parameter)
+        public static bool ParameterIsWritable(Parameter parameter)
         {
-
             if (parameter.ParameterType == ParameterTypeEnum.kModelParameter || parameter.ParameterType == ParameterTypeEnum.kUserParameter)
             {
                 return true;
@@ -229,7 +216,5 @@ namespace InventorShims
 
             return false;
         }
-
-
     }
 }

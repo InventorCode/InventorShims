@@ -20,6 +20,10 @@ nav_order:
 
     document.GetPropertyValue(string propertySetName, string propertyName)
 
+    This is an alternate form of this style of extension method. This alternate will work on similar methods listed throughout this document:
+
+    PropertyShim.GetPropertyValue(string propertyName)
+
 #### Usage:
 
 Get the property (short form):

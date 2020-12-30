@@ -26,6 +26,10 @@ A group of extension functions for the `Inventor.Document` object; each returns 
 
     Document.IsPart
 
+This is an alternate form of this style of extension method. This alternate will work on similar methods listed throughout this document:
+
+    DocumentShim.IsPart(Document document)
+
 #### Usage:
 
 Show a dialogue returning the answer to "Is the provided document an assembly?":
