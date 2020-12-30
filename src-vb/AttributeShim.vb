@@ -12,6 +12,12 @@ Public Class AttributeShim
     End Sub
 
     Shared Sub SetAttributeValue(obj As Object, attributeSet As String, attribute As String, value As Boolean)
+        Dim i As Integer
+        If (value = True) Then
+            i = 1
+        Else
+            i = 0
+        End If
         SetAttributeValueEngine(obj, attributeSet, attribute, value, Inventor.ValueTypeEnum.kBooleanType)
     End Sub
 
@@ -23,7 +29,7 @@ Public Class AttributeShim
         SetAttributeValueEngine(obj, attributeSet, attribute, value, Inventor.ValueTypeEnum.kByteArrayType)
     End Sub
 
-    Shared Sub SetAttributeValueEngine(obj As Object, attributeSet As String, attribute As String, value As Object, kind As Inventor.ValueTypeEnum)
+    Shared Sub SetAttributeValueEngine(obj As Object, attributeSet As String, attribute As String, value As Object, valueType As Inventor.ValueTypeEnum)
 
         If ObjectIsAttributeCapable(obj) = False Then
             Throw New SystemException("The selected object is not attribute-capable.")
@@ -37,7 +43,7 @@ Public Class AttributeShim
         If AttributeExists(obj, attributeSet, attribute) Then
             oAttributeSet.Item(attribute).Value = value
         Else
-            oAttributeSet.Add(attribute, kind, value)
+            oAttributeSet.Add(attribute, valueType, value)
         End If
 
 
