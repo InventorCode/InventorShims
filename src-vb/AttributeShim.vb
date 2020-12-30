@@ -3,29 +3,29 @@ Imports Inventor
 
 Public Class AttributeShim
 
-    Shared Sub SetAttribute(obj As Object, attributeSet As String, attribute As String, value As String)
-        SetAttributeEngine(obj, attributeSet, attribute, value, Inventor.ValueTypeEnum.kStringType)
+    Shared Sub SetAttributeValue(obj As Object, attributeSet As String, attribute As String, value As String)
+        SetAttributeValueEngine(obj, attributeSet, attribute, value, Inventor.ValueTypeEnum.kStringType)
     End Sub
 
-    Shared Sub SetAttribute(obj As Object, attributeSet As String, attribute As String, value As Integer)
-        SetAttributeEngine(obj, attributeSet, attribute, value, Inventor.ValueTypeEnum.kIntegerType)
+    Shared Sub SetAttributeValue(obj As Object, attributeSet As String, attribute As String, value As Integer)
+        SetAttributeValueEngine(obj, attributeSet, attribute, value, Inventor.ValueTypeEnum.kIntegerType)
     End Sub
 
-    Shared Sub SetAttribute(obj As Object, attributeSet As String, attribute As String, value As Boolean)
-        SetAttributeEngine(obj, attributeSet, attribute, value, Inventor.ValueTypeEnum.kBooleanType)
+    Shared Sub SetAttributeValue(obj As Object, attributeSet As String, attribute As String, value As Boolean)
+        SetAttributeValueEngine(obj, attributeSet, attribute, value, Inventor.ValueTypeEnum.kBooleanType)
     End Sub
 
-    Shared Sub SetAttribute(obj As Object, attributeSet As String, attribute As String, value As Double)
-        SetAttributeEngine(obj, attributeSet, attribute, value, Inventor.ValueTypeEnum.kDoubleType)
+    Shared Sub SetAttributeValue(obj As Object, attributeSet As String, attribute As String, value As Double)
+        SetAttributeValueEngine(obj, attributeSet, attribute, value, Inventor.ValueTypeEnum.kDoubleType)
     End Sub
 
-    Shared Sub SetAttribute(obj As Object, attributeSet As String, attribute As String, value As Byte())
-        SetAttributeEngine(obj, attributeSet, attribute, value, Inventor.ValueTypeEnum.kByteArrayType)
+    Shared Sub SetAttributeValue(obj As Object, attributeSet As String, attribute As String, value As Byte())
+        SetAttributeValueEngine(obj, attributeSet, attribute, value, Inventor.ValueTypeEnum.kByteArrayType)
     End Sub
 
-    Shared Sub SetAttributeEngine(obj As Object, attributeSet As String, attribute As String, value As Object, kind As Inventor.ValueTypeEnum)
+    Shared Sub SetAttributeValueEngine(obj As Object, attributeSet As String, attribute As String, value As Object, kind As Inventor.ValueTypeEnum)
 
-        If IsObjectAttributeCapable(obj) = False Then
+        If ObjectIsAttributeCapable(obj) = False Then
             Throw New SystemException("The selected object is not attribute-capable.")
         End If
 
@@ -34,7 +34,7 @@ Public Class AttributeShim
 
         oAttributeSet = CreateAttributeSet(obj, attributeSet)
 
-        If DoesAttributeExist(obj, attributeSet, attribute) Then
+        If AttributeExists(obj, attributeSet, attribute) Then
             oAttributeSet.Item(attribute).Value = value
         Else
             oAttributeSet.Add(attribute, kind, value)
@@ -45,11 +45,11 @@ Public Class AttributeShim
 
     Shared Function CreateAttributeSet(obj As Object, attributeSet As String) As Inventor.AttributeSet
 
-        If IsObjectAttributeCapable(obj) = False Then
+        If ObjectIsAttributeCapable(obj) = False Then
             Throw New SystemException("The selected object is not attribute-capable.")
         End If
 
-        If DoesAttributeSetExist(obj, attributeSet) Then
+        If AttributeSetExists(obj, attributeSet) Then
             Return obj.AttributeSets.Item(attributeSet)
 
         Else
@@ -60,9 +60,9 @@ Public Class AttributeShim
 
     End Function
 
-    Shared Function GetAttribute(obj As Object, attributeSet As String, attribute As Object) As Object
+    Shared Function GetAttributeValue(obj As Object, attributeSet As String, attribute As Object) As Object
 
-        If DoesAttributeExist(obj, attributeSet, attribute) Then
+        If AttributeExists(obj, attributeSet, attribute) Then
             Dim oAttributeSets As Inventor.AttributeSets = obj.AttributeSets
             Dim oAttributeSet As Inventor.AttributeSet = oAttributeSets.Item(attributeSet)
             Return oAttributeSet.Item(attribute).Value
@@ -74,7 +74,7 @@ Public Class AttributeShim
 
     Shared Sub RemoveAttribute(obj As Object, attributeSet As String, attribute As Object)
 
-        If DoesAttributeExist(obj, attributeSet, attribute) Then
+        If AttributeExists(obj, attributeSet, attribute) Then
             Dim oAttributeSets As Inventor.AttributeSets = obj.AttributeSets
             Dim oAttributeSet As Inventor.AttributeSet = oAttributeSets.Item(attributeSet)
             oAttributeSet.Item(attribute).Delete()
@@ -84,7 +84,7 @@ Public Class AttributeShim
 
     Shared Sub RemoveAttributeSet(obj As Object, attributeSet As String)
 
-        If DoesAttributeSetExist(obj, attributeSet) Then
+        If AttributeSetExists(obj, attributeSet) Then
             Dim oAttributeSets As Inventor.AttributeSets = obj.AttributeSets
             oAttributeSets.Item(attributeSet).Delete()
         End If
@@ -92,9 +92,9 @@ Public Class AttributeShim
     End Sub
 
 
-    Shared Function DoesAttributeSetExist(obj As Object, attributeSet As String) As Boolean
+    Shared Function AttributeSetExists(obj As Object, attributeSet As String) As Boolean
 
-        If IsObjectAttributeCapable(obj) = False Then
+        If ObjectIsAttributeCapable(obj) = False Then
             Return False
         End If
 
@@ -103,13 +103,13 @@ Public Class AttributeShim
 
     End Function
 
-    Shared Function DoesAttributeExist(obj As Object, attributeSet As String, attribute As String) As Boolean
+    Shared Function AttributeExists(obj As Object, attributeSet As String, attribute As String) As Boolean
 
-        If IsObjectAttributeCapable(obj) = False Then
+        If ObjectIsAttributeCapable(obj) = False Then
             Return False
         End If
 
-        If DoesAttributeSetExist(obj, attributeSet) = False Then
+        If AttributeSetExists(obj, attributeSet) = False Then
             Return False
         End If
 
@@ -119,7 +119,7 @@ Public Class AttributeShim
 
     End Function
 
-    Shared Function IsObjectAttributeCapable(obj As Object) As Boolean
+    Shared Function ObjectIsAttributeCapable(obj As Object) As Boolean
 
         Dim oAttributeSets As Inventor.AttributeSets
 
