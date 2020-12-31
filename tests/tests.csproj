@@ -47,6 +47,7 @@
       <HintPath>..\..\..\..\..\..\..\Program Files\Autodesk\Inventor 2021\Bin\Public Assemblies\Autodesk.Inventor.Interop.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="Microsoft.CSharp" />
     <Reference Include="Microsoft.VisualStudio.TestPlatform.TestFramework, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\MSTest.TestFramework.2.1.1\lib\net45\Microsoft.VisualStudio.TestPlatform.TestFramework.dll</HintPath>
     </Reference>
@@ -60,6 +61,7 @@
   <ItemGroup>
     <Compile Include="ApplicationShimTests.cs" />
     <Compile Include="AttributeShimTests.cs" />
+    <Compile Include="DocumentShimTests.cs" />
     <Compile Include="ParameterShimTests.cs" />
     <Compile Include="PropertyShimsTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
