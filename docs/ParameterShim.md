@@ -128,3 +128,17 @@ A simple function that returns a boolean value indicating if the provided parame
         'do something with the parameter
     End If
         
+        
+### GetParameterNames
+
+Return a list of parameter names within the specified document.
+
+#### Syntax:
+
+    GetParameterNames(Document document)
+    
+#### Usage:
+
+    Dim oDoc As Inventor.Document = ThisApplication.ActiveDocument
+    Dim list As List(Of String) = New List(Of String)
+    list = oDoc.GetParameterNames

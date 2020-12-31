@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using Inventor;
 
 namespace InventorShims
@@ -215,6 +216,42 @@ namespace InventorShims
             }
 
             return false;
+        }
+
+        /// <summary>
+        /// Return a list of parameter names within the specified document.
+        /// </summary>
+        /// <param name="document"></param>
+        /// <returns></returns>
+        public static List<string> GetParameterNames(this Document document)
+        {
+            Parameters parameters;
+
+            if (document.DocumentType == DocumentTypeEnum.kAssemblyDocumentObject)
+            {
+                AssemblyDocument identifiedAssemblyDocument = (AssemblyDocument)document;
+
+                parameters = identifiedAssemblyDocument.ComponentDefinition.Parameters;
+            }
+            else if (document.DocumentType == DocumentTypeEnum.kPartDocumentObject)
+            {
+                PartDocument identifiedPartDocument = (PartDocument)document;
+
+                parameters = identifiedPartDocument.ComponentDefinition.Parameters;
+            }
+            else
+            {
+                throw new Exception("Unknown type of document passed to GetParameterNames");
+            }
+
+            var returnList = new List<string>();
+
+            foreach (Parameter parameter in parameters)
+            {
+                returnList.Add(parameter.Name);
+            }
+
+            return returnList;
         }
     }
 }

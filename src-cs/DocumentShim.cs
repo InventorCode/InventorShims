@@ -94,42 +94,7 @@ namespace InventorShims
             ((Inventor.Application)documentToWork.Parent).SilentOperation = false;
             documentToWork.Save();
         }
-        /// <summary>
-        /// Pass a string that is the name of the parameter and the value of the parameter will be returned as a string
-        /// </summary>
-        /// <param name="documentToWork"></param>
-        /// <param name="nameOfParameterToGet"></param>
-        /// <returns></returns>
-        public static List<string> GetParameterNames(this Document documentToWork)
-        {
-            Parameters listOfParameters;
 
-            if(documentToWork.DocumentType == DocumentTypeEnum.kAssemblyDocumentObject)
-            {
-                AssemblyDocument identifiedAssemblyDocument = (AssemblyDocument)documentToWork;
-
-                listOfParameters = identifiedAssemblyDocument.ComponentDefinition.Parameters;
-            }
-            else if(documentToWork.DocumentType == DocumentTypeEnum.kPartDocumentObject)
-            {
-                PartDocument identifiedPartDocument = (PartDocument)documentToWork;
-
-                listOfParameters = identifiedPartDocument.ComponentDefinition.Parameters;
-            }
-            else
-            {
-                throw new Exception("Unknown type of document passed to GetParameterNames");
-            }
-
-            var returnList = new List<string>();
-
-            foreach(Parameter parameter in listOfParameters)
-            {
-                returnList.Add(parameter.Name);
-            }
-
-            return returnList;
-        }
 
 
         #region Document type booleans
@@ -203,5 +168,31 @@ namespace InventorShims
             return documentToTest.DocumentType == Inventor.DocumentTypeEnum.kUnknownDocumentObject ? true : false;
         }
         #endregion
+
+        /// <summary>
+        /// Returns a Document Object subtype if a subtype exists.  If not, a generic Inventor.Document is returned.
+        /// </summary>
+        /// <param name="document"></param>
+        /// <returns></returns>
+        public static dynamic ReturnSpecificDocumentObject(this Inventor.Document document)
+        {
+            switch (document)
+            {
+                case PartDocument d:
+                    return d;
+
+                case AssemblyDocument d:
+                    return d;
+
+                case DrawingDocument d:
+                    return d;
+
+                case PresentationDocument d:
+                    return d;
+
+                default:
+                    return document;
+            }
+        }
     }
 }

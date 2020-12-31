@@ -73,4 +73,20 @@ Saves, but shows the user a file dialog so they can pick where to save the docum
 #### Syntax:
     document.SaveWithFileDialog()
 
-## GetParameterNames
+
+## ReturnSpecificDocumentObject
+
+Returns a Document Object subtype if a subtype exists.  If not, a generic Inventor.Document is returned.  One caveat, objects that are created with this will not be able to use extension methods due to a limitation in .net.  You can instead use their customary method/function form instead.  E.g. When using late-bound objects extension methods of this form do not work...
+
+    var tt = doc2.GetPropertyValue("Author");
+
+But when using the below form those same methods do work...
+
+    var tt = PropertyShim.GetPropertyValue(doc2, "Author");
+
+#### Syntax:
+    document.ReturnSpecificDocumentObject()
+
+or
+
+    ReturnSpecificDocumentObject(document)
