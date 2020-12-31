@@ -15,9 +15,9 @@ namespace InventorShims.TranslatorShim
         internal readonly NameValueMap oOptions;
         internal readonly DataMedium oDataMedium;
 
-        internal TranslatorData(string addinGUID, string fullFileName, Document doc)
+        internal TranslatorData(string addinGUID, string fullFileName, Document doc = null, Inventor.Application app = null)
         {
-            Application app = (Application)doc.Parent;
+            if (app == null) { app = (Application)doc.Parent; }
 
             oAppAddIn = app.ApplicationAddIns.ItemById[addinGUID];
 

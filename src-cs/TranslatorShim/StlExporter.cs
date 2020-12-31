@@ -141,7 +141,7 @@ namespace InventorShims.TranslatorShim
 
             NameValueMap op = oTranslatorData.oOptions;
 
-            op.Value["ExportUnits"] = (int)Units - 110080; //Convert the ExportUnits enum to the integer values expected by the STL exporter
+            op.Value["ExportUnits"] = (int)Units - 110080; //Convert ImportUnitsTypeEnum to the integer values expected by the STL exporter
             op.Value["Resolution"] = Resolution;
             op.Value["AllowMoveMeshNode"] = AllowMoveMeshNodes;
             op.Value["SurfaceDeviation"] = SurfaceDeviation;
