@@ -30,11 +30,11 @@ Gets a current `Inventor.Application` instance.  This will not create a new inst
 
 ## NewInstance
 
-Creates a new, hidden `Inventor.Application` instance.
+Creates a new `Inventor.Application` instance.  An optional boolean value indicates the visibility of the new Inventor instance: true = visible.
 
 #### Syntax:
 
-    ApplicationShim.NewInstance
+    ApplicationShim.NewInstance(Boolean visible = true)
 
 #### Usage:
     Dim app As Inventor.Application = ApplicationShim.NewInstance()

@@ -60,7 +60,12 @@ namespace InventorShims
             return null;
         }
 
-        public static Inventor.Application NewInstance()
+        /// <summary>
+        /// Creates a new Inventor Application instance.
+        /// </summary>
+        /// <param name="visibility">An optional boolean value indicates the visibility of the new Inventor instance: true = visible.</param>
+        /// <returns></returns>
+        public static Inventor.Application NewInstance(bool visibility = true)
         {
             Inventor.Application app = null;
 
@@ -68,7 +73,7 @@ namespace InventorShims
                 {
                     Type appType = Type.GetTypeFromProgID("Inventor.Application");
                     app = (Inventor.Application)Activator.CreateInstance(appType);
-                    app.Visible = false;
+                    app.Visible = visibility;
                     return app;
                 }
                 catch (Exception e2)
