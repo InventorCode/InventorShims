@@ -31,7 +31,7 @@ namespace ApplicationShimTests
     public class NewInstance {
 
     [TestMethod]
-            public void NewInstance_StartsNewInventorInstance()
+            public void Works_isVisible()
             {
                 Inventor.Application app = null;
                 app = ApplicationShim.NewInstance();
@@ -52,6 +52,27 @@ namespace ApplicationShimTests
 
             }
 
+        [TestMethod]
+        public void Works_isInvisible()
+        {
+            Inventor.Application app = null;
+            app = ApplicationShim.NewInstance(false);
+
+            try
+            {
+                Assert.IsNotNull(app);
+            }
+
+            finally
+            {
+                if (app != null)
+                {
+                    app.Quit();
+                    app = null;
+                }
+            }
+
+        }
     }
 
 }
