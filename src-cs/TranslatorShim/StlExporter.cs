@@ -113,11 +113,14 @@ namespace InventorShims.TranslatorShim
         /// <summary>Determines whether an assembly is exported as one or multiple files.</summary>
         public bool OneFilePerPartInstance { get; set; } = false;
 
-        /// <summary>The format of the STL file.  Binary supports colors.</summary>
-        public StlFormatEnum Format { get; set; } = StlFormatEnum.binary;
-
-        /// <remarks>Requires <see cref="Format"/> = <see cref="StlFormatEnum.binary"/></remarks>
+        /// <remarks>Requires <see cref="Binary"/> = true</remarks>
         public bool ExportColors { get; set; } = true;
+
+        /// <summary>
+        /// Exported STL file will be binary instead of plaintext ASCII. <br/>
+        /// Binary files have a smaller filesize, and support colors.<br/>
+        /// </summary>
+        public bool Binary { get; set; } = true;
 
         ///<summary>Initializes a new instance of <see cref="StlExporter"/></summary>
         public StlExporter(Inventor.Document Document)
@@ -136,42 +139,9 @@ namespace InventorShims.TranslatorShim
         {
             TranslatorData oTranslatorData = new TranslatorData(addinGUID: "{533E9A98-FC3B-11D4-8E7E-0010B541CD80}", fullFileName: OutputFile, doc: this.Document);
 
-            //Convert the ExportUnits enum to the integer values expected by the STL exporter
-            int exportUnits = 0;
-            switch (Units)
-            {
-                case ImportUnitsTypeEnum.kSourceUnitsType:
-                    exportUnits = 1;
-                    break;
-
-                case ImportUnitsTypeEnum.kInchUnitsType:
-                    exportUnits = 2;
-                    break;
-
-                case ImportUnitsTypeEnum.kFootUnitsType:
-                    exportUnits = 3;
-                    break;
-
-                case ImportUnitsTypeEnum.kCentimeterUnitsType:
-                    exportUnits = 4;
-                    break;
-
-                case ImportUnitsTypeEnum.kMillimeterUnitsType:
-                    exportUnits = 5;
-                    break;
-
-                case ImportUnitsTypeEnum.kMeterUnitsType:
-                    exportUnits = 6;
-                    break;
-
-                case ImportUnitsTypeEnum.kMicronUnitsType:
-                    exportUnits = 7;
-                    break;
-            }
-
             NameValueMap op = oTranslatorData.oOptions;
 
-            op.Value["ExportUnits"] = exportUnits;
+            op.Value["ExportUnits"] = (int)Units - 110080; //Convert ImportUnitsTypeEnum to the integer values expected by the STL exporter
             op.Value["Resolution"] = Resolution;
             op.Value["AllowMoveMeshNode"] = AllowMoveMeshNodes;
             op.Value["SurfaceDeviation"] = SurfaceDeviation;
@@ -179,7 +149,7 @@ namespace InventorShims.TranslatorShim
             op.Value["MaxEdgeLength"] = MaxEdgeLength;
             op.Value["AspectRatio"] = MaxAspectRatio;
             op.Value["ExportFileStructure"] = Convert.ToInt32(OneFilePerPartInstance);
-            op.Value["OutputFileType"] = Format;
+            op.Value["OutputFileType"] = Convert.ToInt32(!Binary);
             op.Value["ExportColor"] = ExportColors;
 
             TranslatorAddIn oTranslatorAddIn = (TranslatorAddIn)oTranslatorData.oAppAddIn;
