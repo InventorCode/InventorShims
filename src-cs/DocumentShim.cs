@@ -194,5 +194,37 @@ namespace InventorShims
                     return document;
             }
         }
+
+        /// <summary>
+        /// Returns a list of Documents from a provided SelectSet.  If no Documents are found, an
+        /// empty list is returned.
+        /// </summary>
+        /// <param name="selectSet">Inventor.SelectSet</param>
+        /// <returns>List(of Documents)</returns>
+        public static List<Document> GetDocumentsFromSelectSet(this SelectSet selectSet)
+        {
+
+            List<Document> documentList = null;
+
+            if (selectSet.Count == 0)
+            {       
+                    //nothing is selected, return an null list!
+                    return documentList;
+            }
+
+            Document tempDocument = null;
+
+            foreach (var i in selectSet)
+                {
+                    tempDocument = GetDocFromObject(i);
+
+                    if (tempDocument is null) {
+                        continue;
+                    }
+
+                documentList.Add(tempDocument);
+                }
+            return documentList;
+        }
     }
 }
