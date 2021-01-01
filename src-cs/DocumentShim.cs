@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using Inventor;
 
 namespace InventorShims 
@@ -197,14 +198,14 @@ namespace InventorShims
 
         /// <summary>
         /// Returns a list of Documents from a provided SelectSet.  If no Documents are found, an
-        /// empty list is returned.
+        /// empty list is returned.  Only unique documents objects are returned.
         /// </summary>
         /// <param name="selectSet">Inventor.SelectSet</param>
         /// <returns>List(of Documents)</returns>
         public static List<Document> GetDocumentsFromSelectSet(this SelectSet selectSet)
         {
 
-            List<Document> documentList = null;
+            List<Document> documentList = new List<Document>();
 
             if (selectSet.Count == 0)
             {       
@@ -214,17 +215,162 @@ namespace InventorShims
 
             Document tempDocument = null;
 
-            foreach (var i in selectSet)
+            foreach (dynamic i in selectSet)
                 {
-                    tempDocument = GetDocFromObject(i);
-
-                    if (tempDocument is null) {
-                        continue;
+                tempDocument = GetDocumentFromObject(i);
+                Console.WriteLine("item  " + i.type);
+                
+                if (tempDocument is null) {
+                    Console.WriteLine("this object is not a document");
+                    continue;
                     }
-
+                Console.WriteLine("this object is a document.");
                 documentList.Add(tempDocument);
                 }
+
+            if (documentList != null)
+                documentList = documentList.Distinct().ToList();
+
             return documentList;
+        }
+
+
+        public static Document GetDocumentFromObject(this Object obj)
+        {
+            if (ObjectIsDocument(obj))
+                return (Document)obj;
+
+            Inventor.Application app = ApplicationShim.CurrentInstance();
+            if (app == null) return null;
+            
+            Document currentDocument = app.ActiveEditDocument;
+            switch (currentDocument.DocumentType)
+            {
+                case DocumentTypeEnum.kPartDocumentObject:
+                    return currentDocument;
+
+                case DocumentTypeEnum.kAssemblyDocumentObject:
+                    return GetDocumentFromObjectInAssembly(obj);
+
+                case DocumentTypeEnum.kDrawingDocumentObject:
+                    return GetDocumentFromObjectInDrawing(obj, (DrawingDocument)currentDocument);
+
+                case DocumentTypeEnum.kDesignElementDocumentObject: //12294
+                case DocumentTypeEnum.kForeignModelDocumentObject:  //12295
+                case DocumentTypeEnum.kNoDocument:                  //12297
+                case DocumentTypeEnum.kPresentationDocumentObject:  //12293
+                case DocumentTypeEnum.kSATFileDocumentObject:       //12296
+                case DocumentTypeEnum.kUnknownDocumentObject:       //12289
+                default:
+                    return null;
+            }
+        }
+
+        private static Document GetDocumentFromObjectInAssembly(dynamic obj)
+        {
+            switch (obj.type) {
+
+                //###   In Assembly Document [kAssemblyDocumentObject]   ###
+                case 67113776: //kComponentOccurrenceObject:
+                case 67113888: //kComponentOccurrenceProxyObject
+                    return obj.Definition.Document;
+
+                case 100674816: //ObjectTypeEnum.kBOMRowObject
+                    return obj.ComponentDefinitions(1).Document;
+
+                default:
+                    return null;
+            }
+        }
+
+        private static Document GetDocumentFromObjectInDrawing(dynamic obj, DrawingDocument document)
+        {
+            Document returnDocument = null;
+
+            switch (obj.type)
+            {
+                //Drawing View, Section View, Detail View
+                case 117441536: //kDrawingViewObject:
+                case 117463296: //kSectionDrawingViewObject
+                case 117474304: //kDetailDrawingViewObject
+                    return obj.ReferencedFile.ReferencedDocument;
+
+                case 2130706445: //kGenericObject:
+                    dynamic returnObject = null;
+                    try {
+                        //try to get single document from selected part
+                        document.ProcessViewSelection((GenericObject)obj, out _, out returnObject);
+                    } catch { break;}
+
+                    if (returnObject == null) break;
+
+                    switch (returnObject) {
+                        case Document doc:
+                            returnDocument = doc;
+                            break;
+
+                        case ComponentOccurrence componentOccurrence:
+                            //if this doesn't work, try to get the component occurrence instead, and then get the document from that
+                            returnDocument = (Document)componentOccurrence.Definition.Document;
+                            break;
+                            }
+                    break;
+                    //There was an error at 'Set oCCdef = oCompOcc.Definition.Document'
+
+//TODO: still not working here!!!!!!!!!!
+
+
+                case 117478144: //kDrawingCurveSegmentObject
+                    //try to set the drawing curve object to point at the containingOccurrence object.
+                    //Edge Objects and Edge Proxy Objects   
+                    
+                    DrawingCurveSegment drawingCurveSegment = (DrawingCurveSegment)obj;
+                    DrawingCurve drawingCurve = drawingCurveSegment.Parent;
+                    dynamic modelGeometry = drawingCurve.Parent;
+
+                    try //for a selected DrawingCurveSegment belonging to an assembly component
+                    {
+                        returnDocument = modelGeometry.ContainingOccurrence.Definition.Document;
+                        break;
+                    } catch { }
+
+                    try //for a selected DrawingCurveSegment belonging to a part
+                    {
+                        returnDocument = modelGeometry.Parent.ComponentDefinition.Document;
+                        break;
+                    } catch { }
+                    break;
+
+
+                case 117444096: //kPartsListObject:
+                    returnDocument = obj.ReferencedFile.ReferencedDocument;
+                    break;
+
+                case 117445120: //kPartsListRowObject:
+                    returnDocument = obj.ReferencedFiles.Item(1).ReferencedDocument;
+                    break;
+
+                case 100674816: //kBOMRowObject:
+                    returnDocument = obj.ComponentDefinitions(1).Document;
+                    break;
+
+                default:
+                    return null;
+            }
+
+            return returnDocument ?? null;
+
+        }
+
+        /// <summary>
+        /// Returns true if an object is a document
+        /// </summary>
+        /// <param name="obj"></param>
+        /// <returns></returns>
+        public static bool ObjectIsDocument(dynamic obj)
+        {   
+            //ObjectTypeEnum.kDocumentObject
+            return obj.type == 50332160 ? true : false;
         }
     }
 }
