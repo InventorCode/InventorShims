@@ -62,6 +62,7 @@
     <Compile Include="ApplicationShimTests.cs" />
     <Compile Include="AttributeShimTests.cs" />
     <Compile Include="DocumentShimTests.cs" />
+    <Compile Include="GetDocumentFromObjectTests.cs" />
     <Compile Include="ParameterShimTests.cs" />
     <Compile Include="PropertyShimsTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

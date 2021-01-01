@@ -77,7 +77,6 @@
     <Compile Include="PathShim.vb" />
     <Compile Include="AttributeShim.vb" />
     <None Include="DrawingViewShim.vb" />
-    <Compile Include="Object.vb" />
     <None Include="iProperty.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
@@ -122,7 +121,7 @@
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <PropertyGroup>
     <PostBuildEvent>If EXIST "$(TargetDir)InventorShims_cs.dll" (
-$(ILMergeConsolePath) /target:library /allowDup /out:"$(TargetDir)InventorShims.dll" "$(TargetDir)InventorShims_vb.dll" "$(TargetDir)InventorShims_cs.dll"
+$(ILMergeConsolePath) /target:library /allowDup /xmldocs /out:"$(TargetDir)InventorShims.dll" "$(TargetDir)InventorShims_vb.dll" "$(TargetDir)InventorShims_cs.dll"
 )</PostBuildEvent>
   </PropertyGroup>
   <PropertyGroup>
