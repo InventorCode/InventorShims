@@ -74,7 +74,6 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Attribute.Test.vb" />
     <None Include="DocumentType.Test.vb" />
     <None Include="Iproperty SpeedTest.vb" />
     <None Include="ListIprops.vb" />
