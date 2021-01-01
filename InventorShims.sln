@@ -14,6 +14,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InventorShims-cs", "src-cs\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tests", "tests\tests.csproj", "{9A4C4253-55EA-4218-9FE0-9E473562A096}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tests-GetDocumentFromObjects", "tests-GetDocumentFromObject\tests-GetDocumentFromObjects.csproj", "{E3FBC284-4903-491E-9665-DD34D1A0D5B0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -34,6 +36,9 @@ Global
 		{9A4C4253-55EA-4218-9FE0-9E473562A096}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9A4C4253-55EA-4218-9FE0-9E473562A096}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9A4C4253-55EA-4218-9FE0-9E473562A096}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E3FBC284-4903-491E-9665-DD34D1A0D5B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E3FBC284-4903-491E-9665-DD34D1A0D5B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E3FBC284-4903-491E-9665-DD34D1A0D5B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
