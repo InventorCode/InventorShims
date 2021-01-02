@@ -12,34 +12,30 @@ namespace InventorShims.TranslatorShim
     {
         private readonly Inventor.Application _application = null;
 
-        /// <summary>The full file path of the STEP file to be imported.</summary>
-        /// <remarks>Defaults to the location of the STEP file if left blank.</remarks>
+        /// <summary>The full file path of the STEP file to be imported. <br/>
+        /// Defaults to the location of the STEP file if left blank.
+        /// </summary>
         public string Filename { get; set; } = "";
 
-        /// <summary>The folder where imported files will be saved.</summary>
-        /// 
-        /// <remarks>
+        /// <summary>The folder where imported files will be saved. <br/>
         /// This just sets the location that will be used when the files are eventually saved. <br/>
         /// <see cref="SaveDuringLoad"/> actually saves the files automatically.
-        /// </remarks>
+        /// </summary>
         public string SaveLocation { get; set; } = "";
 
         /// <summary>Automatically saves the imported components into <see cref="SaveLocation"/>.</summary>
         public bool SaveDuringLoad { get; set; } = false;
 
-        /// <summary>Added to filenames of all components in imported assembly.</summary>
-        /// 
-        /// <remarks>
-        /// <see cref="FilenamePrefix"/> and <see cref="FilenameSuffix"/> cannot both be used.<br/>
+        /// <summary>Added to filenames of all components in imported assembly. <br/>
+        /// <see cref="FilenamePrefix"/> and <see cref="FilenameSuffix"/> cannot both be used. <br/>
         /// If both variables are set, <see cref="FilenamePrefix"/> will take precedence.
-        /// </remarks>
+        /// </summary>
         public string FilenamePrefix { get; set; } = "";
 
-        /// <summary>Added to filenames of all components in imported assembly.</summary>
-        /// <remarks>
-        /// <see cref="FilenamePrefix"/> and <see cref="FilenameSuffix"/> cannot both be used.<br/>
+        /// <summary>Added to filenames of all components in imported assembly. <br/>
+        /// <see cref="FilenamePrefix"/> and <see cref="FilenameSuffix"/> cannot both be used. <br/>
         /// If both variables are set, <see cref="FilenamePrefix"/> will take precedence.
-        /// </remarks>
+        /// </summary>
         public string FilenameSuffix { get; set; } = "";
 
         /// <summary>Stores a translation report as a 3rd-party file inside the imported file.</summary>
@@ -66,23 +62,22 @@ namespace InventorShims.TranslatorShim
         /// <summary>Includes graphical PMI in import.</summary>
         public bool ImportGraphicalPMI { get; set; } = true;
 
-        /// <summary>determines how surfaces will be imported</summary>
+        /// <summary>Determines how surfaces will be imported.</summary>
         public ImportedSurfaceOrganizationTypeEnum SurfaceType { get; set; } = ImportedSurfaceOrganizationTypeEnum.kImportedAsSingleCompositeFeature;
 
-        /// <summary>Sets the document units for the imported file</summary>
+        /// <summary>Sets the document units for the imported file.</summary>
         public ImportUnitsTypeEnum Units { get; set; } = ImportUnitsTypeEnum.kSourceUnitsType;
 
         /// <summary>
-        /// Checks the quality of imported data.<br/>
-        /// If a bad data is found, the composite is marked with an exclamation mark in the browser and the remaining bodies are not checked.
+        /// Checks the quality of imported data. <br/>
+        /// If a bad data is found, the composite is marked with an exclamation mark in the browser and the remaining bodies are not checked. <br/>
+        /// This option may significantly increase the amount of time required to translate a file.
         /// </summary>
-        /// 
-        /// <remarks>This option may significantly increase the amount of time required to translate a file.</remarks>
         public bool CheckDuringLoad { get; set; } = false;
 
         /// <summary>
-        /// Inventor attempts to stitch surfaces into a quilt or solid.<br/>
-        /// If the surfaces are stitched into a single quilt or body, the resulting quilt or body is promoted to the Part environment.<br/>
+        /// Inventor attempts to stitch surfaces into a quilt or solid. <br/>
+        /// If the surfaces are stitched into a single quilt or body, the resulting quilt or body is promoted to the Part environment. <br/>
         /// Otherwise, the surfaces remain in the Construction environment.
         /// </summary>
         public bool AutoStitchAndPromote { get; set; } = true;
@@ -95,13 +90,13 @@ namespace InventorShims.TranslatorShim
         public bool FaceSplitAndMerge { get; set; } = true;
 
         /// <summary>
-        /// Displays the document after it has imported.<br/>
+        /// Displays the document after it has imported. <br/>
         /// Otherwise, it will be opened as a hidden document, which can be shown using <c>Document.Views.Add()</c>
         /// </summary>
         public bool DisplayWhenDone { get; set; } = true;
 
         /// <summary>
-        /// Initializes a new instance of <see cref="StepImporter"/>.<br/>
+        /// Initializes a new instance of <see cref="StepImporter"/>. <br/>
         /// <paramref name="Filename"/> is the full file path of the STEP file to be imported.
         /// </summary>
         public StepImporter(string Filename, Inventor.Application Application)
@@ -111,10 +106,10 @@ namespace InventorShims.TranslatorShim
             _application = Application;
         }
 
-        /// <summary>Import STEP file</summary>
-        /// 
-        /// <remarks>The structure of the STEP file determines whether it imports as a part or an assembly.</remarks>
-        /// 
+        /// <summary>
+        /// Import STEP file. <br/>
+        /// The structure of the STEP file determines whether it imports as a part or an assembly.
+        /// </summary>
         /// <returns>Imported part or assembly document</returns>
         public Document Import()
         {
@@ -137,10 +132,10 @@ namespace InventorShims.TranslatorShim
             return (PartDocument)DoImport(ImportAASP: true, ImportAASPIndex : 1);
         }
 
-        /// <summary>Import STEP file associatively.</summary>
-        /// 
-        /// <remarks>The structure of the STEP file determines whether it imports as a part or an assembly.</remarks>
-        /// 
+        /// <summary>
+        /// Import STEP file associatively. <br/>
+        /// The structure of the STEP file determines whether it imports as a part or an assembly.
+        /// </summary>
         /// <returns>Imported part or assembly document</returns>
         public Document ImportAsReference()
         {

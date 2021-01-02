@@ -28,18 +28,16 @@ namespace InventorShims.TranslatorShim
         ///<summary>Exports all lines to have the thinnest lineweight possible</summary>
         public bool RemoveLineWeights { get; set; } = false;
 
-        ///<summary>Determines how closely curved edges are approximated by straight line segments</summary>
-        ///<value>dots per inch</value>
+        ///<summary>Determines how closely curved edges are approximated by straight line segments (in dots per inch)</summary>
         public int VectorResolution { get; set; } = 1200;
 
         ///<summary>Opens the PDF file in its default viewer after it has been created</summary>
         public bool OpenWhenDone { get; set; } = false;
 
-        ///<summary>Includes sheets in the exported file, even if they have the "Exclude fron printing" option checked.</summary>
-        ///<remarks>
-        ///This export option applies to any of the <see cref="ExportSheets()"/> methods, but not to the <see cref="ExportSheet()"/> methods.<br/>
+        ///<summary>Includes sheets in the exported file, even if they have the "Exclude from printing" option checked. <br/>
+        ///This export option applies to any of the <see cref="ExportSheets()"/> methods, but not to the <see cref="ExportSheet()"/> methods. <br/>
         ///This makes temporary edits to the file in memory, which may cause an unwanted Vault checkout prompt to appear if the drawing file is not checked out.
-        ///</remarks>
+        ///</summary>
         public bool PrintExcludedSheets { get; set; } = false;
 
         ///<summary>Initializes a new instance of <see cref="PdfExporter"/></summary>
@@ -164,11 +162,10 @@ namespace InventorShims.TranslatorShim
             );
         }
 
-        ///<summary>Export specific sheets to a single PDF file with the same folder and filename as the document.</summary>
-        ///<remarks>
-        ///The option <see cref="PrintExcludedSheets"/> still applies when using this method.<br/>
+        ///<summary>Export specific sheets to a single PDF file with the same folder and filename as the document. <br/>
+        ///The option <see cref="PrintExcludedSheets"/> still applies when using this method. <br/>
         ///This makes temporary edits to the file in memory, which may cause an unwanted Vault checkout prompt to appear if the drawing file is not checked out.
-        ///</remarks>
+        ///</summary>
         public void ExportSheets(IEnumerable<Sheet> Sheets)
         {
             Export
@@ -179,11 +176,10 @@ namespace InventorShims.TranslatorShim
             );
         }
 
-        ///<summary>Export specific sheets to a single PDF file with the specified full file path.</summary>
-        ///<remarks>
-        ///The option <see cref="PrintExcludedSheets"/> still applies when using this method.<br/>
+        ///<summary>Export specific sheets to a single PDF file with the specified full file path. <br/>
+        ///The option <see cref="PrintExcludedSheets"/> still applies when using this method. <br/>
         ///This makes temporary edits to the file in memory, which may cause an unwanted Vault checkout prompt to appear if the drawing file is not checked out.
-        ///</remarks>
+        ///</summary>
         public void ExportSheets(IEnumerable<Sheet> Sheets, string OutputFile)
         {
             Export
@@ -194,11 +190,10 @@ namespace InventorShims.TranslatorShim
             );
         }
 
-        ///<summary>Export specific sheet numbers to a single PDF file with the same folder and filename as the document.</summary>
-        ///<remarks>
-        ///The option <see cref="PrintExcludedSheets"/> still applies when using this method.<br/>
+        ///<summary>Export specific sheet numbers to a single PDF file with the same folder and filename as the document. <br/>
+        ///The option <see cref="PrintExcludedSheets"/> still applies when using this method. <br/>
         ///This makes temporary edits to the file in memory, which may cause an unwanted Vault checkout prompt to appear if the drawing file is not checked out.
-        ///</remarks>
+        ///</summary>
         public void ExportSheets(IEnumerable<int> SheetNumbers)
         {
             Export
@@ -209,11 +204,10 @@ namespace InventorShims.TranslatorShim
             );
         }
 
-        ///<summary>Export specific sheet numbers to a single PDF file with the specified full file path.</summary>
-        ///<remarks>
-        ///The option <see cref="PrintExcludedSheets"/> still applies when using this method.<br/>
+        ///<summary>Export specific sheet numbers to a single PDF file with the specified full file path. <br/>
+        ///The option <see cref="PrintExcludedSheets"/> still applies when using this method. <br/>
         ///This makes temporary edits to the file in memory, which may cause an unwanted Vault checkout prompt to appear if the drawing file is not checked out.
-        ///</remarks>
+        ///</summary>
         public void ExportSheets(IEnumerable<int> SheetNumbers, string OutputFile)
         {
             Export

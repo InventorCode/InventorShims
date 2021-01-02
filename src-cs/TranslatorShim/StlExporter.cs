@@ -118,7 +118,7 @@ namespace InventorShims.TranslatorShim
 
         /// <summary>
         /// Exported STL file will be binary instead of plaintext ASCII. <br/>
-        /// Binary files have a smaller filesize, and support colors.<br/>
+        /// Binary files have a smaller filesize, and support colors. <br/>
         /// </summary>
         public bool Binary { get; set; } = true;
 
