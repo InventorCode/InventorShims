@@ -15,8 +15,10 @@ namespace InventorShims.TranslatorShim
         /// <summary>Automotive Design</summary>
         AP214 = 3,
 
-        /// <summary>Managed Model Based 3D Engineering</summary>
-        /// <remarks>Includes PMI and meshes</remarks>
+        /// <summary>
+        /// Managed Model Based 3D Engineering <br/>
+        /// (Includes PMI and meshes)
+        /// </summary>
         AP242 = 5
     }
 }

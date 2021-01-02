@@ -26,28 +26,30 @@ namespace InventorShims.TranslatorShim
             }
         }
 
-        /// <remarks>Does not include 2d or 3d sketch points.</remarks>
+        /// <summary>Include 2d and 3d sketch lines and curves in the export.  Does not include 2d or 3d sketch points.</summary>
         public bool IncludeSketches { get; set; } = false;
 
-        ///<summary>The type of the STEP file to be created: AP203 / AP214 / AP242</summary>
-        ///<value>Defaults to AP214 for compatibility with other software.</value>
+        ///<summary>
+        ///The type of STEP file to be created: AP203 / AP214 / AP242. <br/>
+        ///Defaults to AP214 for compatibility with other software.
+        ///</summary>
         public StepProtocolEnum ApplicationProtocol { get; set; } = StepProtocolEnum.AP214;
 
-        /// <value>Defaults to the current username that is defined in Inventor's Application Options</value>
+        /// <summary>Defaults to the current username that is defined in Inventor's Application Options</summary>
         public string Author { get; set; } = "";
 
-        /// <value>Defaults to the document's Company iProperty</value>
+        /// <summary>Defaults to the document's Company iProperty</summary>
         public string Organization { get; set; } = "";
 
-        /// <value>Not set by default.</value>
-        /// <remarks>from ISO 10303-21: The name/mailing address of the person who authorized this file.</remarks>
+        /// <summary>Not set by default. From ISO 10303-21: The name/mailing address of the person who authorized this file.</summary>
         public string Authorization { get; set; } = "";
 
-        /// <value>Defaults to the document's Description iProperty</value>
+        /// <summary>Defaults to the document's Description iProperty</summary>
         public string Description { get; set; } = "";
 
-        ///<summary>How far curves can deviate from their true value (also known as ExportFitTolerance)</summary>
-        ///<value>Accepted range of 0.00001 to 0.001 (centimeters)</value>
+        ///<summary>How far curves can deviate from their true value (also known as ExportFitTolerance). <br/>
+        ///Accepted range of 0.00001 to 0.001 (centimeters)
+        ///</summary>
         public float SplineFitAccuracy { get; set; } = .001f;
 
         ///<summary>Initializes a new instance of <see cref="StepExporter"/></summary>

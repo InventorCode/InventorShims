@@ -15,6 +15,7 @@ namespace InventorShims.TranslatorShim
         internal readonly NameValueMap oOptions;
         internal readonly DataMedium oDataMedium;
 
+        ///<summary>Initializes a new instance of <see cref="TranslatorData"/></summary>
         internal TranslatorData(string addinGUID, string fullFileName, Document doc = null, Inventor.Application app = null)
         {
             if (app == null) { app = (Application)doc.Parent; }

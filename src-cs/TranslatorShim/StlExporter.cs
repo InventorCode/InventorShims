@@ -18,10 +18,10 @@ namespace InventorShims.TranslatorShim
 
         /// <summary>
         /// Setting this to anything other than Custom will cause the exporter to ignore the following variables: <br/>
-        /// <see cref="SurfaceDeviation"/><br/>
-        /// <see cref="NormalDeviation"/><br/>
-        /// <see cref="MaxEdgeLength"/><br/>
-        /// <see cref="MaxAspectRatio"/><br/>
+        /// <see cref="SurfaceDeviation"/>, <br/>
+        /// <see cref="NormalDeviation"/>, <br/>
+        /// <see cref="MaxEdgeLength"/>, <br/>
+        /// <see cref="MaxAspectRatio"/>
         /// </summary>
         public StlResolutionEnum Resolution { get; set; } = StlResolutionEnum.Custom;
 
@@ -31,11 +31,10 @@ namespace InventorShims.TranslatorShim
         ///<summary>backing variable for <see cref="SurfaceDeviation"/></summary>
         private double _surfaceDeviation = 0.005;
 
-        /// <summary>Max distance between facet edges and surface edges (as a percentage of each body's RangeBox size).</summary>
-        /// <value>
-        /// Valid values: 0 to 100 <br/>
+        /// <summary>Max distance between facet edges and surface edges (as a percentage of each body's RangeBox size). <br/>
+        /// Valid values: 0 to 100. <br/>
         /// Modifying this value automatically changes <see cref="Resolution"/> to <see cref="StlResolutionEnum.Custom"/>
-        /// </value>
+        /// </summary>
         public double SurfaceDeviation
         {
             get { return _surfaceDeviation; }
@@ -51,11 +50,10 @@ namespace InventorShims.TranslatorShim
         ///<summary>backing variable for <see cref="NormalDeviation"/></summary>
         private double _normalDeviation = 10.0;
 
-        /// <summary>The max angle between adjacent face normals of approximated curves.</summary>
-        /// <value>
-        /// Valid values: 0 to 41 <br/>
+        /// <summary>The max angle between adjacent face normals of approximated curves. <br/>
+        /// Valid values: 0 to 41. <br/>
         /// Modifying this value automatically changes <see cref="Resolution"/> to <see cref="StlResolutionEnum.Custom"/>
-        /// </value>
+        /// </summary>
         public double NormalDeviation
         {
             get { return _normalDeviation; }
@@ -71,12 +69,10 @@ namespace InventorShims.TranslatorShim
         ///<summary>backing variable for <see cref="MaxEdgeLength"/></summary>
         private double _maxEdgeLength = 0.0;
 
-        /// <summary>Max distance between the grid lines that are placed on a face during the tessellation process (as a percentage of each body's RangeBox size).</summary>
-        /// <value>
-        /// Valid Values: 0 to 100 <br/>
-        /// 0 to disable <br/> 
+        /// <summary>Max distance between the grid lines that are placed on a face during the tessellation process (as a percentage of each body's RangeBox size). <br/>
+        /// Valid Values: 0 to 100 (0 to disable). <br/> 
         /// Modifying this value automatically changes <see cref="Resolution"/> to <see cref="StlResolutionEnum.Custom"/>
-        /// </value>
+        /// </summary>
         public double MaxEdgeLength
         {
             get { return _maxEdgeLength; }
@@ -92,12 +88,10 @@ namespace InventorShims.TranslatorShim
         ///<summary>backing variable for <see cref="MaxAspectRatio"/></summary>
         private double _maxAspectRatio = 0.0;
 
-        /// <summary>Ratio between height and width of facets.</summary>
-        /// <value>
-        /// Valid Values: 0 to 21.5 <br/>
-        /// 0 to disable <br/>
+        /// <summary>Ratio between height and width of facets. <br/>
+        /// Valid Values: 0 to 21.5 (0 to disable). <br/>
         /// Modifying this value automatically changes <see cref="Resolution"/> to <see cref="StlResolutionEnum.Custom"/>
-        /// </value>
+        /// </summary>
         public double MaxAspectRatio
         {
             get { return _maxAspectRatio; }
@@ -113,12 +107,12 @@ namespace InventorShims.TranslatorShim
         /// <summary>Determines whether an assembly is exported as one or multiple files.</summary>
         public bool OneFilePerPartInstance { get; set; } = false;
 
-        /// <remarks>Requires <see cref="Binary"/> = true</remarks>
+        /// <summary>Requires <see cref="Binary"/> = true</summary>
         public bool ExportColors { get; set; } = true;
 
         /// <summary>
         /// Exported STL file will be binary instead of plaintext ASCII. <br/>
-        /// Binary files have a smaller filesize, and support colors.<br/>
+        /// Binary files have a smaller filesize, and support colors.
         /// </summary>
         public bool Binary { get; set; } = true;
 
