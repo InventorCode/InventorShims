@@ -12,9 +12,9 @@ namespace InventorShims
     {
         /// <summary>
         /// Gets an existing Inventor.Application instance, and creates a new instance if one cannot be retrieved.
+        /// VB.net/iLogic example: <code>Dim oApp As Application = ApplicationShim.Instance()</code>
         /// </summary>
         /// <remarks>
-        /// VB.net/iLogic example: <code>Dim oApp As Application = ApplicationShim.Instance()</code>
         /// C# example: <code>Application app = ApplicationShim.Instance()</code>
         /// </remarks>
         /// <returns>Inventor.Application</returns>
@@ -24,8 +24,7 @@ namespace InventorShims
 
             try
             {
-                app = (Inventor.Application) Marshal.GetActiveObject("Inventor.Application");
-                return app;
+                return (Inventor.Application) Marshal.GetActiveObject("Inventor.Application");
             }
             catch (Exception e)
             {
@@ -35,7 +34,6 @@ namespace InventorShims
             //perhaps inventor needs to be started...
             if (app == null)
             {
-
                 try //to start inventor
                 {
                     Type appType = Type.GetTypeFromProgID("Inventor.Application");
@@ -47,7 +45,6 @@ namespace InventorShims
                 {
                     MessageBox.Show("Unable to start Inventor.  Error message: " + e2.Message);
                 }
-
             }
 
             return null;
@@ -55,20 +52,17 @@ namespace InventorShims
 
         /// <summary>
         /// Gets a current Inventor.Application instance.  This will not create a new instance if one cannot be found.
+        /// VB.net/iLogic example: <code>Dim oApp As Application = ApplicationShim.CurrentInstance()</code>
         /// </summary>
         /// <remarks>
-        /// VB.net/iLogic example: <code>Dim oApp As Application = ApplicationShim.CurrentInstance()</code>
         /// C# example: <code>Application app = ApplicationShim.CurrentInstance()</code>
         /// </remarks>
         /// <returns>Inventor.Application</returns>
         public static Inventor.Application CurrentInstance()
         {
-            Inventor.Application app = null;
-
             try
             {
-                app = (Inventor.Application)Marshal.GetActiveObject("Inventor.Application");
-                return app;
+                return (Inventor.Application)Marshal.GetActiveObject("Inventor.Application");
             }
             catch (Exception e)
             {
@@ -82,14 +76,14 @@ namespace InventorShims
         /// Creates a new Inventor Application instance.
         /// </summary>
         /// <param name="visibility">An optional boolean value indicates the visibility of the new Inventor instance: true = visible.</param>
-        /// <remarks>
         /// VB.net/iLogic example: <code>Dim oApp As Application = ApplicationShim.NewInstance()</code>
+        /// <remarks>
         /// C# example: <code>Application app = ApplicationShim.NewInstance()</code>
         /// </remarks>
         /// <returns>Inventor.Application</returns>
         public static Inventor.Application NewInstance(bool visibility = true)
         {
-            Inventor.Application app = null;
+            Inventor.Application app;
 
                 try //to start inventor
                 {
@@ -103,22 +97,8 @@ namespace InventorShims
                     MessageBox.Show("Unable to start Inventor.  Error message: " + e2.Message);
                 }
 
-
             return null;
         }
-
-
-        //Code to open Apprentice Server below...
-        //Inventor.ApprenticeServerComponent oSvr = new Inventor.ApprenticeServerComponent();
-        //Inventor.ApprenticeServerDocument oAppDoc;
-        //Inventor.ApprenticeServerDrawingDocument oDwgDoc;
-
-        //    ApprenticeServerDocument document = _apprentice.Open(@"T:\$Work\Part1.ipt");
-        //    document.Close();
-        //    _apprentice = null;
-        //}
-        //catch (System.Exception e) { }
     }
-
 }
 
