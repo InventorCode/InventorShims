@@ -5,9 +5,19 @@ using Inventor;
 
 namespace InventorShims
 {
+    /// <summary>
+    /// A simple set of static methods to access the Inventor Application.
+    /// </summary>
     public static class ApplicationShim
     {
-
+        /// <summary>
+        /// Gets an existing Inventor.Application instance, and creates a new instance if one cannot be retrieved.
+        /// </summary>
+        /// <remarks>
+        /// VB.net/iLogic example: <code>Dim oApp As Application = ApplicationShim.Instance()</code>
+        /// C# example: <code>Application app = ApplicationShim.Instance()</code>
+        /// </remarks>
+        /// <returns>Inventor.Application</returns>
         public static Inventor.Application Instance()
         {
             Inventor.Application app = null;
@@ -43,6 +53,14 @@ namespace InventorShims
             return null;
         }
 
+        /// <summary>
+        /// Gets a current Inventor.Application instance.  This will not create a new instance if one cannot be found.
+        /// </summary>
+        /// <remarks>
+        /// VB.net/iLogic example: <code>Dim oApp As Application = ApplicationShim.CurrentInstance()</code>
+        /// C# example: <code>Application app = ApplicationShim.CurrentInstance()</code>
+        /// </remarks>
+        /// <returns>Inventor.Application</returns>
         public static Inventor.Application CurrentInstance()
         {
             Inventor.Application app = null;
@@ -64,7 +82,11 @@ namespace InventorShims
         /// Creates a new Inventor Application instance.
         /// </summary>
         /// <param name="visibility">An optional boolean value indicates the visibility of the new Inventor instance: true = visible.</param>
-        /// <returns></returns>
+        /// <remarks>
+        /// VB.net/iLogic example: <code>Dim oApp As Application = ApplicationShim.NewInstance()</code>
+        /// C# example: <code>Application app = ApplicationShim.NewInstance()</code>
+        /// </remarks>
+        /// <returns>Inventor.Application</returns>
         public static Inventor.Application NewInstance(bool visibility = true)
         {
             Inventor.Application app = null;
