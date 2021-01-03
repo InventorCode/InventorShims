@@ -3,18 +3,18 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29709.97
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "tests-manual", "tests-manual\tests-manual.vbproj", "{295AABC2-2250-4279-B9C7-E33C352FCDE4}"
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "InventorShims.manual", "tests\InventorShims.manual\InventorShims.manual.vbproj", "{295AABC2-2250-4279-B9C7-E33C352FCDE4}"
 	ProjectSection(ProjectDependencies) = postProject
 		{DE9044A0-4809-4828-ADEE-FA787925CBCF} = {DE9044A0-4809-4828-ADEE-FA787925CBCF}
 	EndProjectSection
 EndProject
-Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "InventorShims-vb", "src-vb\InventorShims-vb.vbproj", "{FB816A14-783C-4DF1-9975-F384CF56A7C8}"
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "InventorShims-vb", "src\InventorShims-vb\InventorShims-vb.vbproj", "{FB816A14-783C-4DF1-9975-F384CF56A7C8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InventorShims-cs", "src-cs\InventorShims-cs.csproj", "{DE9044A0-4809-4828-ADEE-FA787925CBCF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InventorShims-cs", "src\InventorShims-cs\InventorShims-cs.csproj", "{DE9044A0-4809-4828-ADEE-FA787925CBCF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tests", "tests\tests.csproj", "{9A4C4253-55EA-4218-9FE0-9E473562A096}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InventorShims.tests", "tests\InventorShims.tests\InventorShims.tests.csproj", "{9A4C4253-55EA-4218-9FE0-9E473562A096}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tests-GetDocumentFromObjects", "tests-GetDocumentFromObject\tests-GetDocumentFromObjects.csproj", "{E3FBC284-4903-491E-9665-DD34D1A0D5B0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GetDocumentFromObject.tests", "tests\GetDocumentFromObject.tests\GetDocumentFromObject.tests.csproj", "{E3FBC284-4903-491E-9665-DD34D1A0D5B0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,7 +35,6 @@ Global
 		{9A4C4253-55EA-4218-9FE0-9E473562A096}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{9A4C4253-55EA-4218-9FE0-9E473562A096}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9A4C4253-55EA-4218-9FE0-9E473562A096}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9A4C4253-55EA-4218-9FE0-9E473562A096}.Release|Any CPU.Build.0 = Release|Any CPU
 		{E3FBC284-4903-491E-9665-DD34D1A0D5B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{E3FBC284-4903-491E-9665-DD34D1A0D5B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E3FBC284-4903-491E-9665-DD34D1A0D5B0}.Release|Any CPU.ActiveCfg = Release|Any CPU

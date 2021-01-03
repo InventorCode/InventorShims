@@ -12,6 +12,7 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -24,7 +25,6 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
@@ -33,7 +33,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>..\build\debug\</OutputPath>
+    <OutputPath>..\..\artifacts\debug\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -42,7 +42,7 @@
     <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
+    <OutputPath>..\..\artifacts\Release\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -54,7 +54,7 @@
     <Reference Include="Autodesk.Inventor.Interop, Version=25.2.0.0, Culture=neutral, PublicKeyToken=d84147f8b4276564, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <EmbedInteropTypes>False</EmbedInteropTypes>
-      <HintPath>..\..\..\..\..\..\..\Program Files\Autodesk\Inventor 2021\Bin\Public Assemblies\Autodesk.Inventor.Interop.dll</HintPath>
+      <HintPath>C:\Program Files\Autodesk\Inventor 2021\Bin\Public Assemblies\Autodesk.Inventor.Interop.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -73,11 +73,11 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\src-cs\InventorShims-cs.csproj">
+    <ProjectReference Include="..\..\src\InventorShims-cs\InventorShims-cs.csproj">
       <Project>{de9044a0-4809-4828-adee-fa787925cbcf}</Project>
       <Name>InventorShims-cs</Name>
     </ProjectReference>
-    <ProjectReference Include="..\src-vb\InventorShims-vb.vbproj">
+    <ProjectReference Include="..\..\src\InventorShims-vb\InventorShims-vb.vbproj">
       <Project>{fb816a14-783c-4df1-9975-f384cf56a7c8}</Project>
       <Name>InventorShims-vb</Name>
     </ProjectReference>
