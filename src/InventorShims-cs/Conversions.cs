@@ -13,10 +13,10 @@ namespace InventorShims
     {
         #region InchesTo
         /// <summary>
-        /// Handles extending an inches double and returns that double converted to centimeters
+        /// Handles extending an inches double and returns that double converted to centimeters.
         /// </summary>
         /// <param name="inputNum"></param>
-        /// <returns></returns>
+        /// <returns>double</returns>
         public static double InchesToCentimeters(this double inputNum)
         {
             return inputNum * 2.54;
@@ -32,7 +32,7 @@ namespace InventorShims
         /// Handles extending an inches double and returns that double converted to millimeters
         /// </summary>
         /// <param name="inputNum"></param>
-        /// <returns></returns>
+        /// <returns>double</returns>
         public static double InchesToMillimeters(this double inputNum)
         {
             return InchesToCentimeters(inputNum) * 10;
@@ -50,7 +50,7 @@ namespace InventorShims
         /// Handles extending a double and returns that double converted to inches
         /// </summary>
         /// <param name="inputNum"></param>
-        /// <returns></returns>
+        /// <returns>double</returns>
         public static double CentimetersToInches(this double inputNum)
         {
             return inputNum / 2.54;
@@ -66,7 +66,7 @@ namespace InventorShims
         /// Handles extending a double and returns that double converted to millimeters
         /// </summary>
         /// <param name="inputNum"></param>
-        /// <returns></returns>
+        /// <returns>double</returns>
         public static double CentimetersToMillimeters(this double inputNum)
         {
             return inputNum * 10;
@@ -85,7 +85,7 @@ namespace InventorShims
         /// Handles extending a double and returns that double converted to millimeters
         /// </summary>
         /// <param name="inputNum"></param>
-        /// <returns></returns>
+        /// <returns>double</returns>
         public static double MillimetersToInches(this double inputNum)
         {
             return inputNum * 2.54 * 10;
@@ -101,7 +101,7 @@ namespace InventorShims
         /// Handles extending a double and returns that double converted to millimeters
         /// </summary>
         /// <param name="inputNum"></param>
-        /// <returns></returns>
+        /// <returns>double</returns>
         public static double MillimetersToCentimeters(this double inputNum)
         {
             return inputNum / 10;
