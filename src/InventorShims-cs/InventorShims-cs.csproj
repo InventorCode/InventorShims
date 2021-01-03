@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="..\packages\ILMerge.3.0.41\build\ILMerge.props" Condition="Exists('..\packages\ILMerge.3.0.41\build\ILMerge.props')" />
+  <Import Project="..\..\packages\ILMerge.3.0.41\build\ILMerge.props" Condition="Exists('..\..\packages\ILMerge.3.0.41\build\ILMerge.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -20,26 +20,23 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>..\build\debug\</OutputPath>
+    <OutputPath>..\..\artifacts\debug\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <DocumentationFile>..\build\debug\InventorShims_cs.xml</DocumentationFile>
+    <DocumentationFile>..\..\artifacts\debug\InventorShims_cs.xml</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>..\build\release\</OutputPath>
+    <OutputPath>..\..\artifacts\release\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <DocumentationFile>..\build\release\InventorShims_cs.xml</DocumentationFile>
+    <DocumentationFile>..\..\artifacts\release\InventorShims_cs.xml</DocumentationFile>
     <PlatformTarget>AnyCPU</PlatformTarget>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Autodesk.iLogic.Interfaces">
-      <HintPath>..\..\..\..\..\..\..\Program Files\Autodesk\Inventor 2021\Bin\Autodesk.iLogic.Interfaces.dll</HintPath>
-    </Reference>
     <Reference Include="stdole, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
@@ -56,8 +53,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApplicationShim.cs" />
-    <Compile Include="Extension Collections\DrawingDocumentShim.cs" />
-    <Compile Include="Extension Collections\UiShim.cs" />
+    <Compile Include="DrawingDocumentShim.cs" />
+    <Compile Include="UiShim.cs" />
     <Compile Include="Conversions.cs" />
     <Compile Include="DocumentShim.cs" />
     <Compile Include="PropertyShim.cs" />
@@ -75,7 +72,7 @@
     <Compile Include="WinMacros.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\src-vb\InventorShims-vb.vbproj">
+    <ProjectReference Include="..\InventorShims-vb\InventorShims-vb.vbproj">
       <Project>{fb816a14-783c-4df1-9975-f384cf56a7c8}</Project>
       <Name>InventorShims-vb</Name>
       <Private>False</Private>
@@ -89,7 +86,7 @@
     <PropertyGroup>
       <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
     </PropertyGroup>
-    <Error Condition="!Exists('..\packages\ILMerge.3.0.41\build\ILMerge.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\ILMerge.3.0.41\build\ILMerge.props'))" />
+    <Error Condition="!Exists('..\..\packages\ILMerge.3.0.41\build\ILMerge.props')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\ILMerge.3.0.41\build\ILMerge.props'))" />
   </Target>
   <ItemGroup>
     <PackageReference Include="ILMerge" Version="3.0.29" />
@@ -103,6 +100,7 @@
       <WrapperTool>primary</WrapperTool>
       <Isolated>False</Isolated>
       <EmbedInteropTypes>False</EmbedInteropTypes>
+      <Private>False</Private>
     </COMReference>
     <COMReference Include="stdole1">
       <Guid>{00020430-0000-0000-C000-000000000046}</Guid>

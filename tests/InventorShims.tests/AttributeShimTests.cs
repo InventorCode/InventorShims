@@ -33,7 +33,7 @@ namespace AttributeShim_Tests
 
             //create the test attribute
             AttributeSet attributeSet = doc.AttributeSets.Add("testSet");
-            Inventor.Attribute attribute = attributeSet.Add("testAttribute", ValueTypeEnum.kStringType, "test string");
+            Attribute _ = attributeSet.Add("testAttribute", ValueTypeEnum.kStringType, "test string");
 
 
             var result = AttributeShim.AttributeExists(doc, "testSet", "testAttribute");
