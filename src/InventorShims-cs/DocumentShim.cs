@@ -1,42 +1,42 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 using Inventor;
 
-namespace InventorShims 
+namespace InventorShims
 {
     /// <summary>
-    /// Methods having to do with working with inventor document objects
+    /// Methods that extended the Inventor.Document object with additional functionality.
     /// </summary>
     public static class DocumentShim
     {
         /// <summary>
         /// Zooms extents in a drawing, part, or assembly.
         /// </summary>
-        /// <param name="documentToWork"></param>
+        /// <param name="documentToWork">Document object</param>
         public static void ZoomExtents(this Document documentToWork)
         {
             documentToWork.Activate();
             ((Inventor.Application)documentToWork.Parent).CommandManager.ControlDefinitions["AppZoomallCmd"].Execute();
         }
+        
         /// <summary>
         /// Orbits around the part/assembly to show the view from a front isometric angle on the view cube
         /// </summary>
-        /// <param name="documentToWork"></param>
+        /// <param name="documentToWork">Document object</param>
         public static void OrbitToIsoFrontRightTop(this Document documentToWork)
         {
             ((Inventor.Application)documentToWork.Parent).CommandManager.ControlDefinitions["AppIsometricViewCmd"].Execute();
         }
+
         /// <summary>
         /// Takes a screenshot of the document
         /// </summary>
-        /// <param name="documentToWork"></param>
+        /// <param name="documentToWork">Document object</param>
         /// <param name="locationToSaveImage"></param>
         /// <param name="setWhiteBg"></param>
         /// <param name="orbitToIso"></param>
+        
         public static void ScreenShot(this Document documentToWork, string locationToSaveImage, bool setWhiteBg = false, bool orbitToIso = false)
         {
             Inventor.Application invObj = (Inventor.Application)documentToWork.Parent;
@@ -74,10 +74,11 @@ namespace InventorShims
                 invObj.ColorSchemes.BackgroundType = userBackgroundType;
             }
         }
+        
         /// <summary>
         /// Saves the document without showing anything to the user
         /// </summary>
-        /// <param name="documentToWork"></param>
+        /// <param name="documentToWork">Document object</param>
         public static void SaveSilently(this Document documentToWork)
         {
             // Save files without prompt
@@ -85,6 +86,7 @@ namespace InventorShims
             documentToWork.Save();
             ((Inventor.Application)documentToWork.Parent).SilentOperation = false;
         }
+        
         /// <summary>
         /// Saves, but shows the user a file dialog so they can pick where to save the document
         /// </summary>
@@ -95,8 +97,6 @@ namespace InventorShims
             ((Inventor.Application)documentToWork.Parent).SilentOperation = false;
             documentToWork.Save();
         }
-
-
 
         #region Document type booleans
         /// <summary>
@@ -173,7 +173,7 @@ namespace InventorShims
         /// <summary>
         /// Returns a Document Object subtype if a subtype exists.  If not, a generic Inventor.Document is returned.
         /// </summary>
-        /// <param name="document"></param>
+        /// <param name="document">Document object</param>
         /// <returns></returns>
         public static dynamic ReturnSpecificDocumentObject(this Inventor.Document document)
         {
@@ -234,7 +234,11 @@ namespace InventorShims
             return documentList;
         }
 
-
+        /// <summary>
+        /// Tries to get an Inventor.Document object from a supplied object.  If one is found it will be returned; if not, null is returned.
+        /// </summary>
+        /// <param name="obj">Object</param>
+        /// <returns>Inventor.Document</returns>
         public static Document GetDocumentFromObject(this Object obj)
         {
             if (ObjectIsDocument(obj))
@@ -266,6 +270,11 @@ namespace InventorShims
             }
         }
 
+        /// <summary>
+        /// Tries to get an Inventor.Document object from a supplied object.  If one is found it will be returned; if not, null is returned.
+        /// </summary>
+        /// <param name="obj">Object</param>
+        /// <returns>Inventor.Document</returns>
         private static Document GetDocumentFromObjectInAssembly(dynamic obj)
         {
             switch (obj.type) {
@@ -283,6 +292,12 @@ namespace InventorShims
             }
         }
 
+        /// <summary>
+        /// Tries to get an Inventor.Document object from a supplied object.  If one is found it will be returned; if not, null is returned.
+        /// </summary>
+        /// <param name="obj">Object</param>
+        /// <param name="document">Inventor.DrawingDocument</param>
+        /// <returns></returns>
         private static Document GetDocumentFromObjectInDrawing(dynamic obj, DrawingDocument document)
         {
             Document returnDocument = null;
@@ -365,8 +380,8 @@ namespace InventorShims
         /// <summary>
         /// Returns true if an object is a document
         /// </summary>
-        /// <param name="obj"></param>
-        /// <returns></returns>
+        /// <param name="obj">Object</param>
+        /// <returns>Boolean</returns>
         public static bool ObjectIsDocument(dynamic obj)
         {   
             //ObjectTypeEnum.kDocumentObject
