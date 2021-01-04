@@ -106,7 +106,7 @@ namespace InventorShims
         /// <returns></returns>
         public static bool IsPart(this Document documentToTest)
         {
-            return documentToTest.DocumentType == Inventor.DocumentTypeEnum.kPartDocumentObject ? true : false;
+            return documentToTest.DocumentType == Inventor.DocumentTypeEnum.kPartDocumentObject;
         }
 
         /// <summary>
@@ -116,7 +116,7 @@ namespace InventorShims
         /// <returns></returns>
         public static bool IsAssembly(this Document documentToTest)
         {
-            return documentToTest.DocumentType == Inventor.DocumentTypeEnum.kAssemblyDocumentObject ? true : false;
+            return documentToTest.DocumentType == Inventor.DocumentTypeEnum.kAssemblyDocumentObject;
         }
 
         /// <summary>
@@ -126,7 +126,7 @@ namespace InventorShims
         /// <returns></returns>
         public static bool IsDrawing(this Document documentToTest)
         {
-            return documentToTest.DocumentType == Inventor.DocumentTypeEnum.kDrawingDocumentObject ? true : false;
+            return documentToTest.DocumentType == Inventor.DocumentTypeEnum.kDrawingDocumentObject;
         }
 
         /// <summary>
@@ -136,7 +136,7 @@ namespace InventorShims
         /// <returns></returns>
         public static bool IsPresentation(this Document documentToTest)
         {
-            return documentToTest.DocumentType == Inventor.DocumentTypeEnum.kPresentationDocumentObject ? true : false;
+            return documentToTest.DocumentType == Inventor.DocumentTypeEnum.kPresentationDocumentObject;
         }
 
         /// <summary>
@@ -146,7 +146,7 @@ namespace InventorShims
         /// <returns></returns>
         public static bool IsForeignModel(this Document documentToTest)
         {
-            return documentToTest.DocumentType == Inventor.DocumentTypeEnum.kForeignModelDocumentObject ? true : false;
+            return documentToTest.DocumentType == Inventor.DocumentTypeEnum.kForeignModelDocumentObject;
         }
 
         /// <summary>
@@ -156,7 +156,7 @@ namespace InventorShims
         /// <returns></returns>
         public static bool IsSat(this Document documentToTest)
         {
-            return documentToTest.DocumentType == Inventor.DocumentTypeEnum.kSATFileDocumentObject ? true : false;
+            return documentToTest.DocumentType == Inventor.DocumentTypeEnum.kSATFileDocumentObject;
         }
 
         /// <summary>
@@ -166,7 +166,7 @@ namespace InventorShims
         /// <returns></returns>
         public static bool IsUnknown(this Document documentToTest)
         {
-            return documentToTest.DocumentType == Inventor.DocumentTypeEnum.kUnknownDocumentObject ? true : false;
+            return documentToTest.DocumentType == Inventor.DocumentTypeEnum.kUnknownDocumentObject;
         }
         #endregion
 
@@ -174,7 +174,7 @@ namespace InventorShims
         /// Returns a Document Object subtype if a subtype exists.  If not, a generic Inventor.Document is returned.
         /// </summary>
         /// <param name="document">Document object</param>
-        /// <returns></returns>
+        /// <returns>dynamic</returns>
         public static dynamic ReturnSpecificDocumentObject(this Inventor.Document document)
         {
             switch (document)
