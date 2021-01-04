@@ -30,7 +30,7 @@ namespace InventorShims.TranslatorShim
         public bool IncludeSketches { get; set; } = false;
 
         ///<summary>
-        ///The type of STEP file to be created: AP203 / AP214 / AP242. <br/>
+        ///The type of STEP file to be created: AP203 / AP214 / AP242.<code/>
         ///Defaults to AP214 for compatibility with other software.
         ///</summary>
         public StepProtocolEnum ApplicationProtocol { get; set; } = StepProtocolEnum.AP214;
@@ -47,7 +47,7 @@ namespace InventorShims.TranslatorShim
         /// <summary>Defaults to the document's Description iProperty</summary>
         public string Description { get; set; } = "";
 
-        ///<summary>How far curves can deviate from their true value (also known as ExportFitTolerance). <br/>
+        ///<summary>How far curves can deviate from their true value (also known as ExportFitTolerance).<code/>
         ///Accepted range of 0.00001 to 0.001 (centimeters)
         ///</summary>
         public float SplineFitAccuracy { get; set; } = .001f;

@@ -12,13 +12,15 @@ namespace InventorShims.TranslatorShim
     {
         private readonly Inventor.Application _application = null;
 
-        /// <summary>The full file path of the STEP file to be imported. <br/>
+        /// <summary>
+        /// The full file path of the STEP file to be imported.<code/>
         /// Defaults to the location of the STEP file if left blank.
         /// </summary>
         public string Filename { get; set; } = "";
 
-        /// <summary>The folder where imported files will be saved. <br/>
-        /// This just sets the location that will be used when the files are eventually saved. <br/>
+        /// <summary>
+        /// The folder where imported files will be saved.<code/>
+        /// This just sets the location that will be used when the files are eventually saved.<code/>
         /// <see cref="SaveDuringLoad"/> actually saves the files automatically.
         /// </summary>
         public string SaveLocation { get; set; } = "";
@@ -26,14 +28,15 @@ namespace InventorShims.TranslatorShim
         /// <summary>Automatically saves the imported components into <see cref="SaveLocation"/>.</summary>
         public bool SaveDuringLoad { get; set; } = false;
 
-        /// <summary>Added to filenames of all components in imported assembly. <br/>
-        /// <see cref="FilenamePrefix"/> and <see cref="FilenameSuffix"/> cannot both be used. <br/>
+        /// <summary>
+        /// Added to filenames of all components in imported assembly.<code/>
+        /// <see cref="FilenamePrefix"/> and <see cref="FilenameSuffix"/> cannot both be used.<code/>
         /// If both variables are set, <see cref="FilenamePrefix"/> will take precedence.
         /// </summary>
         public string FilenamePrefix { get; set; } = "";
 
-        /// <summary>Added to filenames of all components in imported assembly. <br/>
-        /// <see cref="FilenamePrefix"/> and <see cref="FilenameSuffix"/> cannot both be used. <br/>
+        /// <summary>Added to filenames of all components in imported assembly.<code/>
+        /// <see cref="FilenamePrefix"/> and <see cref="FilenameSuffix"/> cannot both be used.<code/>
         /// If both variables are set, <see cref="FilenamePrefix"/> will take precedence.
         /// </summary>
         public string FilenameSuffix { get; set; } = "";
@@ -69,15 +72,15 @@ namespace InventorShims.TranslatorShim
         public ImportUnitsTypeEnum Units { get; set; } = ImportUnitsTypeEnum.kSourceUnitsType;
 
         /// <summary>
-        /// Checks the quality of imported data. <br/>
-        /// If a bad data is found, the composite is marked with an exclamation mark in the browser and the remaining bodies are not checked. <br/>
+        /// Checks the quality of imported data.<code/>
+        /// If a bad data is found, the composite is marked with an exclamation mark in the browser and the remaining bodies are not checked.<code/>
         /// This option may significantly increase the amount of time required to translate a file.
         /// </summary>
         public bool CheckDuringLoad { get; set; } = false;
 
         /// <summary>
-        /// Inventor attempts to stitch surfaces into a quilt or solid. <br/>
-        /// If the surfaces are stitched into a single quilt or body, the resulting quilt or body is promoted to the Part environment. <br/>
+        /// Inventor attempts to stitch surfaces into a quilt or solid.<code/>
+        /// If the surfaces are stitched into a single quilt or body, the resulting quilt or body is promoted to the Part environment.<code/>
         /// Otherwise, the surfaces remain in the Construction environment.
         /// </summary>
         public bool AutoStitchAndPromote { get; set; } = true;
@@ -90,13 +93,13 @@ namespace InventorShims.TranslatorShim
         public bool FaceSplitAndMerge { get; set; } = true;
 
         /// <summary>
-        /// Displays the document after it has imported. <br/>
+        /// Displays the document after it has imported.<code/>
         /// Otherwise, it will be opened as a hidden document, which can be shown using <c>Document.Views.Add()</c>
         /// </summary>
         public bool DisplayWhenDone { get; set; } = true;
 
         /// <summary>
-        /// Initializes a new instance of <see cref="StepImporter"/>. <br/>
+        /// Initializes a new instance of <see cref="StepImporter"/>.<code/>
         /// <paramref name="Filename"/> is the full file path of the STEP file to be imported.
         /// </summary>
         public StepImporter(string Filename, Inventor.Application Application)
@@ -107,7 +110,7 @@ namespace InventorShims.TranslatorShim
         }
 
         /// <summary>
-        /// Import STEP file. <br/>
+        /// Import STEP file.<code/>
         /// The structure of the STEP file determines whether it imports as a part or an assembly.
         /// </summary>
         /// <returns>Imported part or assembly document</returns>
@@ -133,7 +136,7 @@ namespace InventorShims.TranslatorShim
         }
 
         /// <summary>
-        /// Import STEP file associatively. <br/>
+        /// Import STEP file associatively.<code/>
         /// The structure of the STEP file determines whether it imports as a part or an assembly.
         /// </summary>
         /// <returns>Imported part or assembly document</returns>
