@@ -9,15 +9,14 @@ namespace InventorShims
     /// </summary>
     public static class ParameterShim
     {
-
         /// <summary>
         /// Sets the value of a numeric parameter, or creates one if one does not exist.
         /// </summary>
-        /// <param name="document"></param>
+        /// <param name="document">Inventor.Document</param>
         /// <param name="parameterName"></param>
         /// <param name="parameterValue"></param>
-        /// <param name="units"></param>
-        /// <param name="clobberFlag"></param>
+        /// <param name="units">Units as a string, e.g. in, mm, cm, etc</param>
+        /// <param name="clobberFlag">If set to false, will not overwrite an existing parameter.</param>
         public static void SetParameterValue(this Document document, string parameterName, string parameterValue, string units, bool clobberFlag = true)
         {
             Parameter parameter = document.GetParameter(parameterName);
@@ -46,10 +45,10 @@ namespace InventorShims
         /// <summary>
         /// Sets the value of a text parameter, or creates one if one does not exist.
         /// </summary>
-        /// <param name="document"></param>
+        /// <param name="document">Inventor.Document</param>
         /// <param name="parameterName"></param>
         /// <param name="parameterValue"></param>
-        /// <param name="clobberFlag"></param>
+        /// <param name="clobberFlag">If set to false, will not overwrite an existing parameter.</param>
         public static void SetParameterValue(this Document document, string parameterName, string parameterValue, bool clobberFlag = true)
         {
             Parameter parameter = document.GetParameter(parameterName);
@@ -81,10 +80,10 @@ namespace InventorShims
         /// <summary>
         /// Sets the value of a boolean parameter, or creates one if one does not exist.
         /// </summary>
-        /// <param name="document"></param>
+        /// <param name="document">Inventor.Document</param>
         /// <param name="parameterName"></param>
         /// <param name="parameterValue"></param>
-        /// <param name="clobberFlag"></param>
+        /// <param name="clobberFlag">If set to false, will not overwrite an existing parameter.</param>
         public static void SetParameterValue(this Document document, string parameterName, bool parameterValue, bool clobberFlag = true)
         {
             Parameter parameter = document.GetParameter(parameterName);
@@ -117,8 +116,8 @@ namespace InventorShims
         /// <summary>
         /// Gets the value of a numeric parameter.
         /// </summary>
-        /// <param name="document"></param>
-        /// <param name="parameterName"></param>
+        /// <param name="document">Inventor.Document</param>
+        /// <param name="parameterName">Name of the parameter as a string.</param>
         /// <returns></returns>
         public static string GetParameterValue(this Inventor.Document document, string parameterName)
         {
@@ -150,6 +149,11 @@ namespace InventorShims
             }
         }
 
+        /// <summary>
+        /// Removes a parameter from a Document object if it exists.
+        /// </summary>
+        /// <param name="document">Inventor.Document</param>
+        /// <param name="parameterName"></param>
         public static void RemoveParameter(this Inventor.Document document, string parameterName)
         {
             //Parameters parameters = GetParameters(document);
@@ -174,6 +178,12 @@ namespace InventorShims
             parameter.Delete();
         }
 
+        /// <summary>
+        /// Returns a parameter object from a document object specified by name.
+        /// </summary>
+        /// <param name="document">Inventor.Document</param>
+        /// <param name="parameterName"></param>
+        /// <returns>Parameter</returns>
         public static Parameter GetParameter(this Inventor.Document document, string parameterName)
         {
             Parameters parameters = GetParameters(document);
@@ -187,11 +197,21 @@ namespace InventorShims
             return null;
         }
 
+        /// <summary>
+        /// Returns a boolean indicating if a Parameter exists within a Document object.
+        /// </summary>
+        /// <param name="parameter">Inventor.Parameter</param>
+        /// <returns>Boolean</returns>
         private static bool ParameterExists(Parameter parameter)
         {
             return (parameter is null) ? false : true;
         }
 
+        /// <summary>
+        /// Returns the Parameters object in a specified Document object.
+        /// </summary>
+        /// <param name="document">Inventor.Document</param>
+        /// <returns>Parameters</returns>
         public static Parameters GetParameters(this Document document)
         {
             switch (document)
@@ -208,6 +228,12 @@ namespace InventorShims
                     return null;
             }
         }
+
+        /// <summary>
+        /// Tests if the provided parameter is writable.  Only kModelParameters and kUserParameters return true.
+        /// </summary>
+        /// <param name="parameter">Parameter</param>
+        /// <returns>Boolean</returns>
         public static bool ParameterIsWritable(Parameter parameter)
         {
             if (parameter.ParameterType == ParameterTypeEnum.kModelParameter || parameter.ParameterType == ParameterTypeEnum.kUserParameter)
@@ -221,8 +247,8 @@ namespace InventorShims
         /// <summary>
         /// Return a list of parameter names within the specified document.
         /// </summary>
-        /// <param name="document"></param>
-        /// <returns></returns>
+        /// <param name="document">Inventor.Document</param>
+        /// <returns>List (of string)</returns>
         public static List<string> GetParameterNames(this Document document)
         {
             Parameters parameters;

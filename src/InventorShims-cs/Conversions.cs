@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace InventorShims
+﻿namespace InventorShims
 {
     /// <summary>
     /// Conversions class handles easily converting numbers to useful things, like Inches > Centimeters, for example
@@ -13,32 +7,40 @@ namespace InventorShims
     {
         #region InchesTo
         /// <summary>
-        /// Handles extending an inches double and returns that double converted to centimeters
+        /// Converts a (double) number from inches to centimeters.
         /// </summary>
         /// <param name="inputNum"></param>
-        /// <returns></returns>
+        /// <returns>double</returns>
         public static double InchesToCentimeters(this double inputNum)
         {
             return inputNum * 2.54;
         }
 
-        // Int overload of the above
+        /// <summary>
+        /// Converts an (integer) number from inches to centimeters.
+        /// </summary>
+        /// <param name="inputNum"></param>
+        /// <returns>double</returns>
         public static double InchesToCentimeters(this int inputNum)
         {
             return inputNum * 2.54;
         }
 
         /// <summary>
-        /// Handles extending an inches double and returns that double converted to millimeters
+        /// Converts a (double) number from inches to millimeters.
         /// </summary>
-        /// <param name="inputNum"></param>
-        /// <returns></returns>
+        /// <param name="inputNum">double</param>
+        /// <returns>double</returns>
         public static double InchesToMillimeters(this double inputNum)
         {
             return InchesToCentimeters(inputNum) * 10;
         }
 
-        // Int overload of the above
+        /// <summary>
+        /// Converts an (integer) number from inches to millimeters.
+        /// </summary>
+        /// <param name="inputNum">integer</param>
+        /// <returns>double</returns>
         public static double InchesToMillimeters(this int inputNum)
         {
             return InchesToCentimeters(inputNum) * 10;
@@ -47,32 +49,40 @@ namespace InventorShims
 
         #region CentimetersTo
         /// <summary>
-        /// Handles extending a double and returns that double converted to inches
+        /// Converts a (double) number from centimeters to inches.
         /// </summary>
-        /// <param name="inputNum"></param>
-        /// <returns></returns>
+        /// <param name="inputNum">double</param>
+        /// <returns>double</returns>
         public static double CentimetersToInches(this double inputNum)
         {
             return inputNum / 2.54;
         }
 
-        // Int overload of the above
+        /// <summary>
+        /// Converts an (integer) number from centimeters to inches.
+        /// </summary>
+        /// <param name="inputNum">integer</param>
+        /// <returns>double</returns>
         public static double CentimetersToInches(this int inputNum)
         {
             return inputNum / 2.54;
         }
 
         /// <summary>
-        /// Handles extending a double and returns that double converted to millimeters
+        /// Converts a (double) number from centimeters to millimeters.
         /// </summary>
-        /// <param name="inputNum"></param>
-        /// <returns></returns>
+        /// <param name="inputNum">double</param>
+        /// <returns>double</returns>
         public static double CentimetersToMillimeters(this double inputNum)
         {
             return inputNum * 10;
         }
 
-        // Int overload of the above
+        /// <summary>
+        /// Converts an (integer) number from centimeters to millimeters.
+        /// </summary>
+        /// <param name="inputNum">integer</param>
+        /// <returns>double</returns>
         public static double CentimetersToMillimeters(this int inputNum)
         {
             return inputNum * 10;
@@ -82,32 +92,40 @@ namespace InventorShims
         #region MillimetersTo
 
         /// <summary>
-        /// Handles extending a double and returns that double converted to millimeters
+        /// Converts a (double) number from millimeters to inches.
         /// </summary>
-        /// <param name="inputNum"></param>
-        /// <returns></returns>
+        /// <param name="inputNum">double</param>
+        /// <returns>double</returns>
         public static double MillimetersToInches(this double inputNum)
         {
             return inputNum * 2.54 * 10;
         }
 
-        // Int overload of the above
+        /// <summary>
+        /// Converts an (integer) number from millimeters to inches.
+        /// </summary>
+        /// <param name="inputNum">integer</param>
+        /// <returns>double</returns>
         public static double MillimetersToInches(this int inputNum)
         {
             return inputNum * 2.54 * 10;
         }
 
         /// <summary>
-        /// Handles extending a double and returns that double converted to millimeters
+        /// Converts a (double) number from millimeters to centimeters.
         /// </summary>
-        /// <param name="inputNum"></param>
-        /// <returns></returns>
+        /// <param name="inputNum">double</param>
+        /// <returns>double</returns>
         public static double MillimetersToCentimeters(this double inputNum)
         {
             return inputNum / 10;
         }
 
-        // Int overload of the above
+        /// <summary>
+        /// Converts a (double) number from millimeters to centimeters.
+        /// </summary>
+        /// <param name="inputNum">integer</param>
+        /// <returns>double</returns>
         public static double MillimetersToCentimeters(this int inputNum)
         {
             return inputNum / 10;

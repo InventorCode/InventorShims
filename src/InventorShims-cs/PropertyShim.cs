@@ -5,7 +5,7 @@ using Inventor;
 namespace InventorShims
 {
     /// <summary>
-    /// Static class to manipulate iproperties.
+    /// Static class to manipulate iproperties for a provided Document object.
     /// </summary>
     public static class PropertyShim
     {
@@ -90,8 +90,8 @@ namespace InventorShims
         /// <summary>
         /// Returns a boolean indicating if the document contains custom PropertySets
         /// </summary>
-        /// <param name="propertySets"></param>
-        /// <returns>boolean</returns>
+        /// <param name="propertySets">PropertySet object</param>
+        /// <returns>Boolean</returns>
         private static bool UserPropertySetsExist(PropertySets propertySets)
         {
             return propertySets.Count >= NativePropertySetLookup.Count ? true : false;
@@ -101,9 +101,9 @@ namespace InventorShims
         /// <summary>
         /// Returns a property object for a user-created custom property.
         /// </summary>
-        /// <param name="document"></param>
+        /// <param name="document">Inventor.Document</param>
         /// <param name="propertyName"></param>
-        /// <returns></returns>
+        /// <returns>Property</returns>
         private static Property GetSuperCustomProperty(this Inventor.Document document, string propertyName)
         {
             foreach (PropertySet i in document.PropertySets)
@@ -156,7 +156,13 @@ namespace InventorShims
 
         } //End GetPropertyValue
 
-
+        /// <summary>
+        /// Return the property value of a the specified Property within a Document object. Uses a long-form signature, specifying the Parameter Set.
+        /// </summary>
+        /// <param name="document">Inventor.Document</param>
+        /// <param name="setName">Parameter Set name as a string.</param>
+        /// <param name="propertyName">Property Name as a string.</param>
+        /// <returns>Object</returns>
         public static object GetPropertyValue(this Document document, string setName, string propertyName)
         {
             Property prop = document.GetProperty(setName, propertyName);
@@ -165,7 +171,12 @@ namespace InventorShims
             return prop.Value;
         }
 
-
+        /// <summary>
+        /// Return the property value of a the specified Property within a Document object. Uses a short-form signature, specifying the Parameter Set.
+        /// </summary>
+        /// <param name="document">Inventor.Document</param>
+        /// <param name="propertyName">Property Name as a string.</param>
+        /// <returns>Object</returns>
         public static Property GetProperty(this Document document, string propertyName)
         {
             PropertySets propertySets = document.PropertySets;
@@ -192,7 +203,13 @@ namespace InventorShims
             return null;
         }
 
-
+        /// <summary>
+        /// Returns the specified Property object in a Document if one exists.  If none exists, null is returned.
+        /// </summary>
+        /// <param name="document">Inventor.Document</param>
+        /// <param name="setName">Property Set Name as a string.</param>
+        /// <param name="propertyName">Property Name as a string.</param>
+        /// <returns>Property</returns>
         public static Property GetProperty(this Document document, string setName, string propertyName)
         {
             try
@@ -206,13 +223,24 @@ namespace InventorShims
             }
         }
 
-
+        /// <summary>
+        /// A simple static function that returns true if the specified property is one of Inventor's built-in iProperties.
+        /// </summary>
+        /// <param name="name">Property Name as a string.</param>
+        /// <returns>Boolean</returns>
         public static bool IsPropertyNative(string name)
         {
             return NativePropertyLookup.ContainsKey(name);
         }
 
-
+        /// <summary>
+        /// Set the specified document property's value.  If the iproperty name exist it will set the value. 
+        /// If the name does not exist, it will add the property with the value you have specified in the 
+        /// "User Defined Properties" property set.  This is the short-form signature.
+        /// </summary>
+        /// <param name="document">Inventor.Document</param>
+        /// <param name="propertyName">Property Name as a string</param>
+        /// <param name="value">Property value</param>
         public static void SetPropertyValue(this Document document, string propertyName, Object value)
         {
             PropertySets propertySets = document.PropertySets;
@@ -241,6 +269,16 @@ namespace InventorShims
             }
         }
 
+        /// <summary>
+        /// Set the specified document property's value.  If the iproperty name exist it will set the value.
+        /// If the name does not exist, it will add the property with the value you have specified in the
+        /// "User Defined Properties" property set.  The long signature function must be used to specify custom
+        /// property groups.
+        /// </summary>
+        /// <param name="document">Inventor.Document</param>
+        /// <param name="propertySetName">Property Set Name as a string</param>
+        /// <param name="propertyName">Property Name as a string</param>
+        /// <param name="value"></param>
         public static void SetPropertyValue(this Document document, string propertySetName, string propertyName, object value)
         {
             PropertySets documentPropertySets = document.PropertySets;
@@ -269,6 +307,12 @@ namespace InventorShims
             }
         }
 
+        /// <summary>
+        /// Removes the specified document property.  If the property is native, it will only delete the iproperty's value.
+        /// This is the short-form signature version of this method.
+        /// </summary>
+        /// <param name="document">Inventor.Document</param>
+        /// <param name="propertyName">Property Name as a string</param>
         public static void RemoveProperty(this Document document, string propertyName)
         {
             PropertySets propertySets = document.PropertySets;
@@ -309,6 +353,13 @@ namespace InventorShims
                 }
         }
 
+        /// <summary>
+        /// Removes the specified document property.  If the property is native, it will only delete the iproperty's value.
+        /// This is the long-form signature version of this method.
+        /// </summary>
+        /// <param name="document">Inventor.Document</param>
+        /// <param name="propertySetName">Property Set Name as a string</param>
+        /// <param name="propertyName">Property Name as a string</param>
         public static void RemoveProperty(this Document document, string propertySetName, string propertyName)
         {
             PropertySets documentPropertySets = document.PropertySets;
@@ -338,6 +389,13 @@ namespace InventorShims
             }
         }
 
+        /// <summary>
+        /// A simple function that returns true/false if the specified property exists in the document.
+        /// This is the short-form signature of this function.
+        /// </summary>
+        /// <param name="document">Inventor.Document</param>
+        /// <param name="propertyName">Property Name as a string</param>
+        /// <returns>Boolean</returns>
         public static bool PropertyExists(this Document document, string propertyName)
         {
 
@@ -367,6 +425,14 @@ namespace InventorShims
             return false;
         }
 
+        /// <summary>
+        /// A simple function that returns true/false if the specified property exists in the document.
+        /// This is the short-form signature of this function.
+        /// </summary>
+        /// <param name="document">Inventor.Document</param>
+        /// <param name="propertySetName">Property Set Name as a string</param>
+        /// <param name="propertyName">Property Name as a string</param>
+        /// <returns>Boolean</returns>
         public static bool PropertyExists(this Document document, string propertySetName, string propertyName)
         {
             //get the propertySet for the provided propertyName (if it exists)
@@ -380,8 +446,14 @@ namespace InventorShims
             {
                 return false;
             }
-
         }
+
+        /// <summary>
+        /// A simple function that returns true/false if the specified custom property exists in the PropertySet.
+        /// </summary>
+        /// <param name="currentPropertySet">Property Set Name as a string</param>
+        /// <param name="propertyName">Property Name as a string</param>
+        /// <returns>Boolean</returns>
         static bool CustomPropertyExists(PropertySet currentPropertySet, string propertyName)
         {
             object a;
@@ -394,7 +466,6 @@ namespace InventorShims
             {
                 return false;
             };
-
         }
 
         static bool PropertySetExists(Document document, string propertySetName)
@@ -403,9 +474,8 @@ namespace InventorShims
             {
                 if (String.Equals(propertySet.Name, propertySetName, StringComparison.OrdinalIgnoreCase))
                     return true;
-            } 
+            }
             return false;
         }
-
     }
 }
