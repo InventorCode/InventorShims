@@ -17,10 +17,10 @@ namespace InventorShims.TranslatorShim
         public ImportUnitsTypeEnum Units { get; set; } = ImportUnitsTypeEnum.kMillimeterUnitsType;
 
         /// <summary>
-        /// Setting this to anything other than Custom will cause the exporter to ignore the following variables: <br/>
-        /// <see cref="SurfaceDeviation"/>, <br/>
-        /// <see cref="NormalDeviation"/>, <br/>
-        /// <see cref="MaxEdgeLength"/>, <br/>
+        /// Setting this to anything other than Custom will cause the exporter to ignore the following variables:<code/>
+        /// <see cref="SurfaceDeviation"/>,<code/>
+        /// <see cref="NormalDeviation"/>,<code/>
+        /// <see cref="MaxEdgeLength"/>,<code/>
         /// <see cref="MaxAspectRatio"/>
         /// </summary>
         public StlResolutionEnum Resolution { get; set; } = StlResolutionEnum.Custom;
@@ -31,9 +31,9 @@ namespace InventorShims.TranslatorShim
         ///<summary>backing variable for <see cref="SurfaceDeviation"/></summary>
         private double _surfaceDeviation = 0.005;
 
-        /// <summary>Max distance between facet edges and surface edges (as a percentage of each body's RangeBox size). <br/>
-        /// Valid values: 0 to 100. <br/>
-        /// Modifying this value automatically changes <see cref="Resolution"/> to <see cref="StlResolutionEnum.Custom"/>
+        /// <summary>Max distance between facet edges and surface edges (as a percentage of each body's RangeBox size).<code/>
+        /// Modifying this value automatically changes <see cref="Resolution"/> to <see cref="StlResolutionEnum.Custom"/><code/>
+        /// Valid values: 0 to 100
         /// </summary>
         public double SurfaceDeviation
         {
@@ -50,9 +50,9 @@ namespace InventorShims.TranslatorShim
         ///<summary>backing variable for <see cref="NormalDeviation"/></summary>
         private double _normalDeviation = 10.0;
 
-        /// <summary>The max angle between adjacent face normals of approximated curves. <br/>
-        /// Valid values: 0 to 41. <br/>
-        /// Modifying this value automatically changes <see cref="Resolution"/> to <see cref="StlResolutionEnum.Custom"/>
+        /// <summary>The max angle between adjacent face normals of approximated curves.<code/>
+        /// Modifying this value automatically changes <see cref="Resolution"/> to <see cref="StlResolutionEnum.Custom"/><code/>
+        /// Valid values: 0 to 41
         /// </summary>
         public double NormalDeviation
         {
@@ -69,9 +69,9 @@ namespace InventorShims.TranslatorShim
         ///<summary>backing variable for <see cref="MaxEdgeLength"/></summary>
         private double _maxEdgeLength = 0.0;
 
-        /// <summary>Max distance between the grid lines that are placed on a face during the tessellation process (as a percentage of each body's RangeBox size). <br/>
-        /// Valid Values: 0 to 100 (0 to disable). <br/> 
-        /// Modifying this value automatically changes <see cref="Resolution"/> to <see cref="StlResolutionEnum.Custom"/>
+        /// <summary>Max distance between the grid lines that are placed on a face during the tessellation process (as a percentage of each body's RangeBox size).<code/>
+        /// Modifying this value automatically changes <see cref="Resolution"/> to <see cref="StlResolutionEnum.Custom"/><code/>
+        /// Valid Values: 0 to 100 (0 to disable)
         /// </summary>
         public double MaxEdgeLength
         {
@@ -88,9 +88,9 @@ namespace InventorShims.TranslatorShim
         ///<summary>backing variable for <see cref="MaxAspectRatio"/></summary>
         private double _maxAspectRatio = 0.0;
 
-        /// <summary>Ratio between height and width of facets. <br/>
-        /// Valid Values: 0 to 21.5 (0 to disable). <br/>
-        /// Modifying this value automatically changes <see cref="Resolution"/> to <see cref="StlResolutionEnum.Custom"/>
+        /// <summary>Ratio between height and width of facets.<code/>
+        /// Modifying this value automatically changes <see cref="Resolution"/> to <see cref="StlResolutionEnum.Custom"/><code/>
+        /// Valid Values: 0 to 21.5 (0 to disable)
         /// </summary>
         public double MaxAspectRatio
         {
@@ -111,7 +111,7 @@ namespace InventorShims.TranslatorShim
         public bool ExportColors { get; set; } = true;
 
         /// <summary>
-        /// Exported STL file will be binary instead of plaintext ASCII. <br/>
+        /// Exported STL file will be binary instead of plaintext ASCII.<code/>
         /// Binary files have a smaller filesize, and support colors.
         /// </summary>
         public bool Binary { get; set; } = true;

@@ -34,8 +34,9 @@ namespace InventorShims.TranslatorShim
         ///<summary>Opens the PDF file in its default viewer after it has been created</summary>
         public bool OpenWhenDone { get; set; } = false;
 
-        ///<summary>Includes sheets in the exported file, even if they have the "Exclude from printing" option checked. <br/>
-        ///This export option applies to any of the <see cref="ExportSheets()"/> methods, but not to the <see cref="ExportSheet()"/> methods. <br/>
+        ///<summary>
+        ///Includes sheets in the exported file, even if they have the "Exclude from printing" option checked.<code/>
+        ///This export option applies to any of the <see cref="ExportSheets()"/> methods, but not to the <see cref="ExportSheet()"/> methods.<code/>
         ///This makes temporary edits to the file in memory, which may cause an unwanted Vault checkout prompt to appear if the drawing file is not checked out.
         ///</summary>
         public bool PrintExcludedSheets { get; set; } = false;
@@ -162,8 +163,8 @@ namespace InventorShims.TranslatorShim
             );
         }
 
-        ///<summary>Export specific sheets to a single PDF file with the same folder and filename as the document. <br/>
-        ///The option <see cref="PrintExcludedSheets"/> still applies when using this method. <br/>
+        ///<summary>Export specific sheets to a single PDF file with the same folder and filename as the document.<code/>
+        ///The option <see cref="PrintExcludedSheets"/> still applies when using this method.<code/>
         ///This makes temporary edits to the file in memory, which may cause an unwanted Vault checkout prompt to appear if the drawing file is not checked out.
         ///</summary>
         public void ExportSheets(IEnumerable<Sheet> Sheets)
@@ -176,8 +177,8 @@ namespace InventorShims.TranslatorShim
             );
         }
 
-        ///<summary>Export specific sheets to a single PDF file with the specified full file path. <br/>
-        ///The option <see cref="PrintExcludedSheets"/> still applies when using this method. <br/>
+        ///<summary>Export specific sheets to a single PDF file with the specified full file path.<code/>
+        ///The option <see cref="PrintExcludedSheets"/> still applies when using this method.<code/>
         ///This makes temporary edits to the file in memory, which may cause an unwanted Vault checkout prompt to appear if the drawing file is not checked out.
         ///</summary>
         public void ExportSheets(IEnumerable<Sheet> Sheets, string OutputFile)
@@ -190,8 +191,8 @@ namespace InventorShims.TranslatorShim
             );
         }
 
-        ///<summary>Export specific sheet numbers to a single PDF file with the same folder and filename as the document. <br/>
-        ///The option <see cref="PrintExcludedSheets"/> still applies when using this method. <br/>
+        ///<summary>Export specific sheet numbers to a single PDF file with the same folder and filename as the document.<code/>
+        ///The option <see cref="PrintExcludedSheets"/> still applies when using this method.<code/>
         ///This makes temporary edits to the file in memory, which may cause an unwanted Vault checkout prompt to appear if the drawing file is not checked out.
         ///</summary>
         public void ExportSheets(IEnumerable<int> SheetNumbers)
@@ -204,8 +205,8 @@ namespace InventorShims.TranslatorShim
             );
         }
 
-        ///<summary>Export specific sheet numbers to a single PDF file with the specified full file path. <br/>
-        ///The option <see cref="PrintExcludedSheets"/> still applies when using this method. <br/>
+        ///<summary>Export specific sheet numbers to a single PDF file with the specified full file path.<code/>
+        ///The option <see cref="PrintExcludedSheets"/> still applies when using this method.<code/>
         ///This makes temporary edits to the file in memory, which may cause an unwanted Vault checkout prompt to appear if the drawing file is not checked out.
         ///</summary>
         public void ExportSheets(IEnumerable<int> SheetNumbers, string OutputFile)
