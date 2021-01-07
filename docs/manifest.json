@@ -1,0 +1,378 @@
+{
+  "homepages": [],
+  "source_base_path": "C:/Users/mjordan/_Sync/dev/github/InventorShims/docfx",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/InventorShims.ApplicationShim.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/InventorShims.ApplicationShim.html",
+          "hash": "G/kmDC7ALld+dUS4BwdRpA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/InventorShims.AttributeShim.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/InventorShims.AttributeShim.html",
+          "hash": "Wh16itgKLYIom8oRA70Feg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/InventorShims.Conversions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/InventorShims.Conversions.html",
+          "hash": "QghlFI/E5wATuMACSHYnPA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/InventorShims.DocumentShim.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/InventorShims.DocumentShim.html",
+          "hash": "2NG/VLFxC5S+vY1QZCcfsA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/InventorShims.DrawingDocumentShim.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/InventorShims.DrawingDocumentShim.html",
+          "hash": "Y4OL2OHkEOxCR//Bh5NSWg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/InventorShims.ParameterShim.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/InventorShims.ParameterShim.html",
+          "hash": "XB8JRkXZGPQ+1r9swkLJRg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/InventorShims.PathShim.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/InventorShims.PathShim.html",
+          "hash": "0KXHsOXyHBJQ5yOAybZJ+A=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/InventorShims.PropertyShim.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/InventorShims.PropertyShim.html",
+          "hash": "6C5G3LDfwtfOOzBodM5WGA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/InventorShims.StringShim.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/InventorShims.StringShim.html",
+          "hash": "zLxAd1UIKKA63u0+dGBvZg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/InventorShims.TranslatorShim.DwgExporter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/InventorShims.TranslatorShim.DwgExporter.html",
+          "hash": "UvzcIhVwIUkbo5xr0MkKLg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/InventorShims.TranslatorShim.PdfExporter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/InventorShims.TranslatorShim.PdfExporter.html",
+          "hash": "Uf7eLkcqsUqzQMulfdvgRQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/InventorShims.TranslatorShim.StepExporter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/InventorShims.TranslatorShim.StepExporter.html",
+          "hash": "pfctvhjuxk10DufpsTQwKQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/InventorShims.TranslatorShim.StepImporter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/InventorShims.TranslatorShim.StepImporter.html",
+          "hash": "MUInd5ZknttnccFijgvzUA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/InventorShims.TranslatorShim.StepProtocolEnum.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/InventorShims.TranslatorShim.StepProtocolEnum.html",
+          "hash": "5Wvdz5PbPL0YRV+u3rOmFw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/InventorShims.TranslatorShim.StlExporter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/InventorShims.TranslatorShim.StlExporter.html",
+          "hash": "ul1bnADwjjDsPqKNId4iHA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/InventorShims.TranslatorShim.StlResolutionEnum.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/InventorShims.TranslatorShim.StlResolutionEnum.html",
+          "hash": "WweOxBKslieyprC/2iG1wA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/InventorShims.TranslatorShim.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/InventorShims.TranslatorShim.html",
+          "hash": "PXuJnTzKdZnc5n599B3vlQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/InventorShims.UiShim.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/InventorShims.UiShim.html",
+          "hash": "oLe/CQ4TrKwj3Eq1SmH90g=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/InventorShims.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/InventorShims.html",
+          "hash": "qPQz3nCicpPX9V7sHCJfRA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "api/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/index.html",
+          "hash": "JA+2zvVtCcTYhhzEuHQrMA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html",
+          "hash": "mUlk9/JXz5op8b24APO9Dw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/changelog.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/changelog.html",
+          "hash": "haGTIsFgfiU6EBPDRj3EYw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/contribution-guidelines.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/contribution-guidelines.html",
+          "hash": "PJbp+pVazEuAqnmitCEdvg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/quick-start.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/quick-start.html",
+          "hash": "+sOPkNSkTbVrYtEAg/uZ6w=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "articles/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "articles/toc.html",
+          "hash": "P32dU9CwfoLY9UYm9gh1Ew=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html",
+          "hash": "5RpXBdA8q7Ewj98KMh4X1g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html",
+          "hash": "OOWOY2RALwooV61OMoXzkQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    }
+  ],
+  "incremental_info": [
+    {
+      "status": {
+        "can_incremental": true,
+        "incrementalPhase": "build",
+        "total_file_count": 0,
+        "skipped_file_count": 0
+      },
+      "processors": {
+        "ConceptualDocumentProcessor": {
+          "can_incremental": true,
+          "incrementalPhase": "build",
+          "total_file_count": 5,
+          "skipped_file_count": 5
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": true,
+          "incrementalPhase": "build",
+          "total_file_count": 19,
+          "skipped_file_count": 19
+        },
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        }
+      }
+    },
+    {
+      "status": {
+        "can_incremental": true,
+        "details": "Can support incremental post processing.",
+        "incrementalPhase": "postProcessing",
+        "total_file_count": 0,
+        "skipped_file_count": 0
+      },
+      "processors": {}
+    }
+  ],
+  "version_info": {},
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}

@@ -1,0 +1,145 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Getting Started </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Getting Started ">
+    <meta name="generator" content="docfx 2.56.6.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h3 id="getting-started">Getting Started</h3>
+
+<p>First off, you'll want to get or build a copy of the InventorShims.dll file, or (or advanced users) extract whatever source code you want.  There are several ways to do this:</p>
+<ol>
+<li>The simplest method is to visit the <a href="https://github.com/InventorCode/InventorShims/releases">Releases page</a>, and download the compiled InventorShims.dll file to your computer and reference it in your Inventor iLogic or add-in code.  This will allow you to access the entirety of the InventorShims API.</li>
+<li>By cloning this repo and building the dll yourself.</li>
+<li>By installing the (forthcoming) nuget package for use in Visual Studio.</li>
+<li>By copying out the methods, classes, or modules that are useful and including those in your own vb or C# code-base.</li>
+<li>By using the code in this package as reference material and examples to build your own solution.</li>
+</ol>
+<h3 id="how-to-use-in-ilogic">How to Use in iLogic</h3>
+<p>We'll look at the most simple (#1) method below, coding in iLogic.</p>
+<ul>
+<li><p>Place the InventorShims.dll somewhere your Inventor application can access it.  You may need to add this location to Inventor's External Rules Directory.</p>
+</li>
+<li><p>Place the following in your iLogic rule's header:</p>
+<pre><code class="lang-VB">AddReference &quot;InventorShims.dll&quot;
+Imports InventorShims
+</code></pre>
+</li>
+<li><p>If the path to the InventorShims.dll is not in one of Inventor's external rules directories, you can still reference it by providing the full path to the dll file...</p>
+<pre><code class="lang-VB">AddReference &quot;C:\Path\To\The\InventorShims.dll&quot;
+Imports InventorShims
+</code></pre>
+</li>
+<li><p>And that's it!  Now you can access the API from your iLogic code.  Call functions such as:</p>
+<pre><code class="lang-VB">PathShim.IsLibraryPath(&quot;C:\This\Is\A\Test&quot;, ThisApplication)
+</code></pre>
+</li>
+<li><p>View the documentation pages for the API.  You can include just a portion of the API at a time if you want.  For example, if you want to add an include to the iProperty set of functions, your include statement would look like <code>Imports InventorShims.iProperty</code></p>
+</li>
+</ul>
+<ul>
+<li>For add-in development, add the InventorShims.dll as a reference to your project.</li>
+<li>Visit the <a href="https://inventorcode.github.io/InventorShims/">InventorShims API Documentation</a> for a more detailed guide.</li>
+</ul>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/InventorCode/InventorShims/blob/jr/docfx/docfx/articles/quick-start.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

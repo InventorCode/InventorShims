@@ -1,0 +1,879 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class DocumentShim
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class DocumentShim
+   ">
+    <meta name="generator" content="docfx 2.56.6.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="InventorShims.DocumentShim">
+  
+  
+  <h1 id="InventorShims_DocumentShim" data-uid="InventorShims.DocumentShim" class="text-break">Class DocumentShim
+  </h1>
+  <div class="markdown level0 summary"><p>Methods that extended the Inventor.Document object with additional functionality.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">DocumentShim</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="InventorShims.html">InventorShims</a></h6>
+  <h6><strong>Assembly</strong>: InventorShims_cs.dll</h6>
+  <h5 id="InventorShims_DocumentShim_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static class DocumentShim</code></pre>
+  </div>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/InventorCode/InventorShims/new/jr/docfx/apiSpec/new?filename=InventorShims_DocumentShim_GetDocumentFromObject_System_Object_.md&amp;value=---%0Auid%3A%20InventorShims.DocumentShim.GetDocumentFromObject(System.Object)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/InventorCode/InventorShims/blob/jr/docfx/src/InventorShims-cs/DocumentShim.cs/#L242">View Source</a>
+  </span>
+  <a id="InventorShims_DocumentShim_GetDocumentFromObject_" data-uid="InventorShims.DocumentShim.GetDocumentFromObject*"></a>
+  <h4 id="InventorShims_DocumentShim_GetDocumentFromObject_System_Object_" data-uid="InventorShims.DocumentShim.GetDocumentFromObject(System.Object)">GetDocumentFromObject(Object)</h4>
+  <div class="markdown level1 summary"><p>Tries to get an Inventor.Document object from a supplied object.  If one is found it will be returned; if not, null is returned.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Document GetDocumentFromObject(this object obj)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">obj</span></td>
+        <td><p>Object</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Document</span></td>
+        <td><p>Inventor.Document</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/InventorCode/InventorShims/new/jr/docfx/apiSpec/new?filename=InventorShims_DocumentShim_GetDocumentsFromSelectSet_SelectSet_.md&amp;value=---%0Auid%3A%20InventorShims.DocumentShim.GetDocumentsFromSelectSet(SelectSet)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/InventorCode/InventorShims/blob/jr/docfx/src/InventorShims-cs/DocumentShim.cs/#L205">View Source</a>
+  </span>
+  <a id="InventorShims_DocumentShim_GetDocumentsFromSelectSet_" data-uid="InventorShims.DocumentShim.GetDocumentsFromSelectSet*"></a>
+  <h4 id="InventorShims_DocumentShim_GetDocumentsFromSelectSet_SelectSet_" data-uid="InventorShims.DocumentShim.GetDocumentsFromSelectSet(SelectSet)">GetDocumentsFromSelectSet(SelectSet)</h4>
+  <div class="markdown level1 summary"><p>Returns a list of Documents from a provided SelectSet.  If no Documents are found, an
+empty list is returned.  Only unique documents objects are returned.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static List&lt;Document&gt; GetDocumentsFromSelectSet(this SelectSet selectSet)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">SelectSet</span></td>
+        <td><span class="parametername">selectSet</span></td>
+        <td><p>Inventor.SelectSet</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.List</span>&lt;<span class="xref">Document</span>&gt;</td>
+        <td><p>List(of Documents)</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/InventorCode/InventorShims/new/jr/docfx/apiSpec/new?filename=InventorShims_DocumentShim_IsAssembly_Document_.md&amp;value=---%0Auid%3A%20InventorShims.DocumentShim.IsAssembly(Document)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/InventorCode/InventorShims/blob/jr/docfx/src/InventorShims-cs/DocumentShim.cs/#L117">View Source</a>
+  </span>
+  <a id="InventorShims_DocumentShim_IsAssembly_" data-uid="InventorShims.DocumentShim.IsAssembly*"></a>
+  <h4 id="InventorShims_DocumentShim_IsAssembly_Document_" data-uid="InventorShims.DocumentShim.IsAssembly(Document)">IsAssembly(Document)</h4>
+  <div class="markdown level1 summary"><p>Returns true if document is an assembly</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsAssembly(this Document documentToTest)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Document</span></td>
+        <td><span class="parametername">documentToTest</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/InventorCode/InventorShims/new/jr/docfx/apiSpec/new?filename=InventorShims_DocumentShim_IsDrawing_Document_.md&amp;value=---%0Auid%3A%20InventorShims.DocumentShim.IsDrawing(Document)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/InventorCode/InventorShims/blob/jr/docfx/src/InventorShims-cs/DocumentShim.cs/#L127">View Source</a>
+  </span>
+  <a id="InventorShims_DocumentShim_IsDrawing_" data-uid="InventorShims.DocumentShim.IsDrawing*"></a>
+  <h4 id="InventorShims_DocumentShim_IsDrawing_Document_" data-uid="InventorShims.DocumentShim.IsDrawing(Document)">IsDrawing(Document)</h4>
+  <div class="markdown level1 summary"><p>Returns true if document is a drawing</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsDrawing(this Document documentToTest)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Document</span></td>
+        <td><span class="parametername">documentToTest</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/InventorCode/InventorShims/new/jr/docfx/apiSpec/new?filename=InventorShims_DocumentShim_IsForeignModel_Document_.md&amp;value=---%0Auid%3A%20InventorShims.DocumentShim.IsForeignModel(Document)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/InventorCode/InventorShims/blob/jr/docfx/src/InventorShims-cs/DocumentShim.cs/#L147">View Source</a>
+  </span>
+  <a id="InventorShims_DocumentShim_IsForeignModel_" data-uid="InventorShims.DocumentShim.IsForeignModel*"></a>
+  <h4 id="InventorShims_DocumentShim_IsForeignModel_Document_" data-uid="InventorShims.DocumentShim.IsForeignModel(Document)">IsForeignModel(Document)</h4>
+  <div class="markdown level1 summary"><p>Returns true if document is a ForeignModel</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsForeignModel(this Document documentToTest)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Document</span></td>
+        <td><span class="parametername">documentToTest</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/InventorCode/InventorShims/new/jr/docfx/apiSpec/new?filename=InventorShims_DocumentShim_IsPart_Document_.md&amp;value=---%0Auid%3A%20InventorShims.DocumentShim.IsPart(Document)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/InventorCode/InventorShims/blob/jr/docfx/src/InventorShims-cs/DocumentShim.cs/#L107">View Source</a>
+  </span>
+  <a id="InventorShims_DocumentShim_IsPart_" data-uid="InventorShims.DocumentShim.IsPart*"></a>
+  <h4 id="InventorShims_DocumentShim_IsPart_Document_" data-uid="InventorShims.DocumentShim.IsPart(Document)">IsPart(Document)</h4>
+  <div class="markdown level1 summary"><p>Returns true if document is a part</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsPart(this Document documentToTest)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Document</span></td>
+        <td><span class="parametername">documentToTest</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/InventorCode/InventorShims/new/jr/docfx/apiSpec/new?filename=InventorShims_DocumentShim_IsPresentation_Document_.md&amp;value=---%0Auid%3A%20InventorShims.DocumentShim.IsPresentation(Document)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/InventorCode/InventorShims/blob/jr/docfx/src/InventorShims-cs/DocumentShim.cs/#L137">View Source</a>
+  </span>
+  <a id="InventorShims_DocumentShim_IsPresentation_" data-uid="InventorShims.DocumentShim.IsPresentation*"></a>
+  <h4 id="InventorShims_DocumentShim_IsPresentation_Document_" data-uid="InventorShims.DocumentShim.IsPresentation(Document)">IsPresentation(Document)</h4>
+  <div class="markdown level1 summary"><p>Returns true if document is a presentation</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsPresentation(this Document documentToTest)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Document</span></td>
+        <td><span class="parametername">documentToTest</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/InventorCode/InventorShims/new/jr/docfx/apiSpec/new?filename=InventorShims_DocumentShim_IsSat_Document_.md&amp;value=---%0Auid%3A%20InventorShims.DocumentShim.IsSat(Document)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/InventorCode/InventorShims/blob/jr/docfx/src/InventorShims-cs/DocumentShim.cs/#L157">View Source</a>
+  </span>
+  <a id="InventorShims_DocumentShim_IsSat_" data-uid="InventorShims.DocumentShim.IsSat*"></a>
+  <h4 id="InventorShims_DocumentShim_IsSat_Document_" data-uid="InventorShims.DocumentShim.IsSat(Document)">IsSat(Document)</h4>
+  <div class="markdown level1 summary"><p>Returns true if document is an SAT reference</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsSat(this Document documentToTest)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Document</span></td>
+        <td><span class="parametername">documentToTest</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/InventorCode/InventorShims/new/jr/docfx/apiSpec/new?filename=InventorShims_DocumentShim_IsUnknown_Document_.md&amp;value=---%0Auid%3A%20InventorShims.DocumentShim.IsUnknown(Document)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/InventorCode/InventorShims/blob/jr/docfx/src/InventorShims-cs/DocumentShim.cs/#L167">View Source</a>
+  </span>
+  <a id="InventorShims_DocumentShim_IsUnknown_" data-uid="InventorShims.DocumentShim.IsUnknown*"></a>
+  <h4 id="InventorShims_DocumentShim_IsUnknown_Document_" data-uid="InventorShims.DocumentShim.IsUnknown(Document)">IsUnknown(Document)</h4>
+  <div class="markdown level1 summary"><p>Returns true if document is unknown</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsUnknown(this Document documentToTest)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Document</span></td>
+        <td><span class="parametername">documentToTest</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/InventorCode/InventorShims/new/jr/docfx/apiSpec/new?filename=InventorShims_DocumentShim_ObjectIsDocument_System_Object_.md&amp;value=---%0Auid%3A%20InventorShims.DocumentShim.ObjectIsDocument(System.Object)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/InventorCode/InventorShims/blob/jr/docfx/src/InventorShims-cs/DocumentShim.cs/#L385">View Source</a>
+  </span>
+  <a id="InventorShims_DocumentShim_ObjectIsDocument_" data-uid="InventorShims.DocumentShim.ObjectIsDocument*"></a>
+  <h4 id="InventorShims_DocumentShim_ObjectIsDocument_System_Object_" data-uid="InventorShims.DocumentShim.ObjectIsDocument(System.Object)">ObjectIsDocument(Object)</h4>
+  <div class="markdown level1 summary"><p>Returns true if an object is a document</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool ObjectIsDocument(dynamic obj)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">obj</span></td>
+        <td><p>Object</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>Boolean</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/InventorCode/InventorShims/new/jr/docfx/apiSpec/new?filename=InventorShims_DocumentShim_OrbitToIsoFrontRightTop_Document_.md&amp;value=---%0Auid%3A%20InventorShims.DocumentShim.OrbitToIsoFrontRightTop(Document)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/InventorCode/InventorShims/blob/jr/docfx/src/InventorShims-cs/DocumentShim.cs/#L27">View Source</a>
+  </span>
+  <a id="InventorShims_DocumentShim_OrbitToIsoFrontRightTop_" data-uid="InventorShims.DocumentShim.OrbitToIsoFrontRightTop*"></a>
+  <h4 id="InventorShims_DocumentShim_OrbitToIsoFrontRightTop_Document_" data-uid="InventorShims.DocumentShim.OrbitToIsoFrontRightTop(Document)">OrbitToIsoFrontRightTop(Document)</h4>
+  <div class="markdown level1 summary"><p>Orbits around the part/assembly to show the view from a front isometric angle on the view cube</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void OrbitToIsoFrontRightTop(this Document documentToWork)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Document</span></td>
+        <td><span class="parametername">documentToWork</span></td>
+        <td><p>Document object</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/InventorCode/InventorShims/new/jr/docfx/apiSpec/new?filename=InventorShims_DocumentShim_ReturnSpecificDocumentObject_Inventor_Document_.md&amp;value=---%0Auid%3A%20InventorShims.DocumentShim.ReturnSpecificDocumentObject(Inventor.Document)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/InventorCode/InventorShims/blob/jr/docfx/src/InventorShims-cs/DocumentShim.cs/#L178">View Source</a>
+  </span>
+  <a id="InventorShims_DocumentShim_ReturnSpecificDocumentObject_" data-uid="InventorShims.DocumentShim.ReturnSpecificDocumentObject*"></a>
+  <h4 id="InventorShims_DocumentShim_ReturnSpecificDocumentObject_Inventor_Document_" data-uid="InventorShims.DocumentShim.ReturnSpecificDocumentObject(Inventor.Document)">ReturnSpecificDocumentObject(Inventor.Document)</h4>
+  <div class="markdown level1 summary"><p>Returns a Document Object subtype if a subtype exists.  If not, a generic Inventor.Document is returned.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static dynamic ReturnSpecificDocumentObject(this Inventor.Document document)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Inventor.Document</span></td>
+        <td><span class="parametername">document</span></td>
+        <td><p>Document object</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><p>dynamic</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/InventorCode/InventorShims/new/jr/docfx/apiSpec/new?filename=InventorShims_DocumentShim_SaveSilently_Document_.md&amp;value=---%0Auid%3A%20InventorShims.DocumentShim.SaveSilently(Document)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/InventorCode/InventorShims/blob/jr/docfx/src/InventorShims-cs/DocumentShim.cs/#L82">View Source</a>
+  </span>
+  <a id="InventorShims_DocumentShim_SaveSilently_" data-uid="InventorShims.DocumentShim.SaveSilently*"></a>
+  <h4 id="InventorShims_DocumentShim_SaveSilently_Document_" data-uid="InventorShims.DocumentShim.SaveSilently(Document)">SaveSilently(Document)</h4>
+  <div class="markdown level1 summary"><p>Saves the document without showing anything to the user</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void SaveSilently(this Document documentToWork)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Document</span></td>
+        <td><span class="parametername">documentToWork</span></td>
+        <td><p>Document object</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/InventorCode/InventorShims/new/jr/docfx/apiSpec/new?filename=InventorShims_DocumentShim_SaveWithFileDialog_Document_.md&amp;value=---%0Auid%3A%20InventorShims.DocumentShim.SaveWithFileDialog(Document)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/InventorCode/InventorShims/blob/jr/docfx/src/InventorShims-cs/DocumentShim.cs/#L94">View Source</a>
+  </span>
+  <a id="InventorShims_DocumentShim_SaveWithFileDialog_" data-uid="InventorShims.DocumentShim.SaveWithFileDialog*"></a>
+  <h4 id="InventorShims_DocumentShim_SaveWithFileDialog_Document_" data-uid="InventorShims.DocumentShim.SaveWithFileDialog(Document)">SaveWithFileDialog(Document)</h4>
+  <div class="markdown level1 summary"><p>Saves, but shows the user a file dialog so they can pick where to save the document</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void SaveWithFileDialog(this Document documentToWork)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Document</span></td>
+        <td><span class="parametername">documentToWork</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/InventorCode/InventorShims/new/jr/docfx/apiSpec/new?filename=InventorShims_DocumentShim_ScreenShot_Document_System_String_System_Boolean_System_Boolean_.md&amp;value=---%0Auid%3A%20InventorShims.DocumentShim.ScreenShot(Document%2CSystem.String%2CSystem.Boolean%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/InventorCode/InventorShims/blob/jr/docfx/src/InventorShims-cs/DocumentShim.cs/#L40">View Source</a>
+  </span>
+  <a id="InventorShims_DocumentShim_ScreenShot_" data-uid="InventorShims.DocumentShim.ScreenShot*"></a>
+  <h4 id="InventorShims_DocumentShim_ScreenShot_Document_System_String_System_Boolean_System_Boolean_" data-uid="InventorShims.DocumentShim.ScreenShot(Document,System.String,System.Boolean,System.Boolean)">ScreenShot(Document, String, Boolean, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Takes a screenshot of the document</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void ScreenShot(this Document documentToWork, string locationToSaveImage, bool setWhiteBg = false, bool orbitToIso = false)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Document</span></td>
+        <td><span class="parametername">documentToWork</span></td>
+        <td><p>Document object</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">locationToSaveImage</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">setWhiteBg</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">orbitToIso</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/InventorCode/InventorShims/new/jr/docfx/apiSpec/new?filename=InventorShims_DocumentShim_ZoomExtents_Document_.md&amp;value=---%0Auid%3A%20InventorShims.DocumentShim.ZoomExtents(Document)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/InventorCode/InventorShims/blob/jr/docfx/src/InventorShims-cs/DocumentShim.cs/#L17">View Source</a>
+  </span>
+  <a id="InventorShims_DocumentShim_ZoomExtents_" data-uid="InventorShims.DocumentShim.ZoomExtents*"></a>
+  <h4 id="InventorShims_DocumentShim_ZoomExtents_Document_" data-uid="InventorShims.DocumentShim.ZoomExtents(Document)">ZoomExtents(Document)</h4>
+  <div class="markdown level1 summary"><p>Zooms extents in a drawing, part, or assembly.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void ZoomExtents(this Document documentToWork)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Document</span></td>
+        <td><span class="parametername">documentToWork</span></td>
+        <td><p>Document object</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/InventorCode/InventorShims/new/jr/docfx/apiSpec/new?filename=InventorShims_DocumentShim.md&amp;value=---%0Auid%3A%20InventorShims.DocumentShim%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/InventorCode/InventorShims/blob/jr/docfx/src/InventorShims-cs/DocumentShim.cs/#L11" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>
