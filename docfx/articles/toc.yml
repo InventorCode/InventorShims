@@ -1,0 +1,6 @@
+- name: Quick Start Guide
+  href: quick-start.md
+- name: Contribution Guidelines
+  href: contribution-guidelines.md
+- name: Changelog
+  href: changelog.md
