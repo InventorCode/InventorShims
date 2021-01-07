@@ -1,0 +1,159 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Contributions </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Contributions ">
+    <meta name="generator" content="docfx 2.56.6.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h3 id="contributions">Contributions</h3>
+
+<p>Contributions of any type are welcome!  If you want to help...</p>
+<ul>
+<li>Please drop into issues and see if there are any outstanding ones that you would like to tackle.</li>
+<li>Add any issues you want and we can discuss.</li>
+<li>Fork the code and add some functionality!</li>
+</ul>
+<p>If you want to contribute, the process proceeds as follows:</p>
+<ol>
+<li>fork the repo</li>
+<li>create a new feature branch in your forked repo</li>
+<li>make changes</li>
+<li>commit your work</li>
+<li>then issue a pull request back to this repo (upstream) for a code review.</li>
+</ol>
+<h3 id="languages">Languages</h3>
+<p>At this time there are two languages in this repo - vb.net and c#.  Each resides within a seperate project within the Visual Studio solution. These two projects are built and merged into a single dll resource file by post-build hooks in the visual studio solution.</p>
+<h3 id="branch-guidance">Branch Guidance</h3>
+<p><em>Master</em> will be the main repository branch; this branch will contain the most up-to-date code.  All short-lived branches will be merged back into <em>Master</em> after a code review by repo maintainers.</p>
+<p><em>release</em> will be utilized as the release branch.  Releases will be tagged and binary builds added into github as a Release.  Long term support releases may be supported in the future; if implementated, they will each reside in a <em>release/v#.#.#</em> branch.</p>
+<p>The following branch names are suggested for short-lived branches...</p>
+<ul>
+<li>feature/xx</li>
+<li>bugfix/xx</li>
+<li>issue/xx</li>
+<li>username/xx</li>
+</ul>
+<h3 id="dependencies-for-build">Dependencies for Build</h3>
+<ul>
+<li>Visual Studio Compatible IDE</li>
+<li>.Net 4.7 (for Inventor 2020 support)</li>
+<li>ILMerge nuget package</li>
+<li>Inventor 2020 SDK installation (minimum)</li>
+<li>Docfx
+<ul>
+<li>local install in the PATH</li>
+<li>Currently is a separate build process.  This will be migrated into the InventorShims build hooks.</li>
+</ul>
+</li>
+</ul>
+<h3 id="version-numbers">Version Numbers</h3>
+<p>Versioning will follow <a href="https://semver.org/">Sematic Versioning</a> once version 1.0.0 is released. The version numbers will follow the format <code>MAJOR.MINOR.PATCH</code> where:</p>
+<ul>
+<li>MAJOR - incompatible API changes</li>
+<li>MINOR - added functionality in a backwards compatible manner</li>
+<li>PATCH - backwards compatible bug fixes</li>
+</ul>
+<h3 id="license">License</h3>
+<p>This code is under an MIT license.</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/InventorCode/InventorShims/blob/jr/docfx/docfx/articles/contribution-guidelines.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>
