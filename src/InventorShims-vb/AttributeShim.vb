@@ -1,7 +1,7 @@
 Imports Inventor
 
 
-Public Class AttributeShim
+Public Class AttributeShim_Old
 
     ''' <summary>
     ''' Sets the value of a specified attribute in the provided object. The attribute is specified by it's
