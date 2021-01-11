@@ -3,6 +3,7 @@ using System;
 using System.Linq.Expressions;
 using Inventor;
 using InventorShims;
+using System.Diagnostics;
 
 namespace ApplicationShimTests
 {
@@ -20,37 +21,46 @@ namespace ApplicationShimTests
 
             Assert.IsNotNull(testVariable);
 
+            Process[] procs = Process.GetProcessesByName("Inventor");
             app.Quit();
+            if (procs.Length == 1) { procs[0].WaitForExit(); }
+
             app = null;
+            GC.Collect();
+            GC.WaitForPendingFinalizers();
 
         }
     }
 
 
     [TestClass]
-    public class NewInstance {
+    public class NewInstance
+    {
 
-    [TestMethod]
-            public void Works_isVisible()
+        [TestMethod]
+        public void Works_isVisible()
+        {
+            Inventor.Application app = null;
+            app = ApplicationShim.NewInstance();
+
+            try
             {
-                Inventor.Application app = null;
-                app = ApplicationShim.NewInstance();
-
-                try
-                {
-                    Assert.IsNotNull(app);
-                }
-
-                finally
-                {
-                    if (app != null)
-                    {
-                        app.Quit();
-                        app = null;
-                    }
-                }
-
+                Assert.IsNotNull(app);
             }
+
+            finally
+            {
+                if (app != null)
+                {
+                    Process[] procs = Process.GetProcessesByName("Inventor");
+                    app.Quit();
+                    if (procs.Length == 1) { procs[0].WaitForExit(); }
+                    app = null;
+                    GC.Collect();
+                    GC.WaitForPendingFinalizers();
+                }
+            }
+        }
 
         [TestMethod]
         public void Works_isInvisible()
@@ -67,8 +77,13 @@ namespace ApplicationShimTests
             {
                 if (app != null)
                 {
+                    Process[] procs = Process.GetProcessesByName("Inventor");
                     app.Quit();
+                    if (procs.Length == 1) { procs[0].WaitForExit(); }
+
                     app = null;
+                    GC.Collect();
+                    GC.WaitForPendingFinalizers();
                 }
             }
 

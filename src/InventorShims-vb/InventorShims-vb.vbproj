@@ -75,7 +75,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="PathShim.vb" />
-    <Compile Include="AttributeShim.vb" />
+    <None Include="AttributeShim.vb" />
     <None Include="DrawingViewShim.vb" />
     <None Include="iProperty.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />

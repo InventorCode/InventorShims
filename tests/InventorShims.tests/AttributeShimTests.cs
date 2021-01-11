@@ -5,10 +5,10 @@ using Inventor;
 namespace AttributeShim_Tests
 {
     [TestClass]
-    public class AttributeExists
+    public class AttributeExistss
     {
         [TestMethod]
-        public void DoesNotExist_returnsFalse()
+        public void AttDoesNotExist_returnsFalse()
         {
 
             Inventor.Application app = ApplicationShim.Instance();
@@ -25,7 +25,7 @@ namespace AttributeShim_Tests
         }
 
         [TestMethod]
-        public void DoesExist_returnsTrue()
+        public void AttDoesExist_returnsTrue()
         {
             Inventor.Application app = ApplicationShim.Instance();
             var path = app.DesignProjectManager.ActiveDesignProject.TemplatesPath;
@@ -390,6 +390,7 @@ namespace AttributeShim_Tests
             finally { doc.Close(true); }
         }
 
+
         [TestMethod]
         public void Bool_SetNew()
         {
@@ -404,7 +405,7 @@ namespace AttributeShim_Tests
 
             try
             {
-                Assert.AreEqual(1, result);
+                Assert.AreEqual(result, 1);
             }
             finally { doc.Close(true); }
         }

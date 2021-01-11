@@ -67,6 +67,7 @@ namespace PathShims_Tests
         [TestMethod]
         public void GoodInput()
         {
+            //TODO: figure out why this test fails with "Default" project... sometimes.
             Inventor.Application app = ApplicationShim.Instance();
 
             var designProject = app.DesignProjectManager.ActiveDesignProject;
