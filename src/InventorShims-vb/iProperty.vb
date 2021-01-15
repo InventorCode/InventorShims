@@ -1,7 +1,7 @@
 ﻿'Imports System.Runtime.CompilerServices
 Imports Inventor
 
-Public Class iProperty
+Public Class iProperty_Old
 
     Shared ReadOnly PropertyLookup As Dictionary(Of String, String) = New Dictionary(Of String, String)(StringComparer.OrdinalIgnoreCase) From
         {{"Title", "Inventor Summary Information"},
