@@ -83,7 +83,7 @@ namespace PathShims_Tests
 
             try
             {
-                Assert.IsTrue(PathShim.IsLibraryPath(test, ref app));
+                Assert.IsTrue(test.IsLibraryPath(app));
 
             }
             finally
@@ -99,7 +99,7 @@ namespace PathShims_Tests
 
             var test = @"C:\Zarthastoriatarigula\the\fiverth";
  
-                Assert.IsFalse(PathShim.IsLibraryPath(test, ref app));
+                Assert.IsFalse(test.IsLibraryPath(app));
         }
 
         [TestMethod]
@@ -109,7 +109,7 @@ namespace PathShims_Tests
 
             var test = "";
 
-                Assert.IsFalse(PathShim.IsLibraryPath(test, ref app));
+                Assert.IsFalse(test.IsLibraryPath(app));
         }
 
         [TestMethod]
@@ -119,7 +119,7 @@ namespace PathShims_Tests
 
             string test = null;
 
-                Assert.IsFalse(PathShim.IsLibraryPath(test, ref app));
+                Assert.IsFalse(test.IsLibraryPath(app));
         }
 
     }
@@ -135,7 +135,7 @@ namespace PathShims_Tests
 
             string test = app.DesignProjectManager.ActiveDesignProject.ContentCenterPath;
 
-                Assert.IsTrue(PathShim.IsContentCenterPath(test, ref app));
+                Assert.IsTrue(test.IsContentCenterPath(app));
         }
 
         [TestMethod]
@@ -146,7 +146,7 @@ namespace PathShims_Tests
             string test = app.DesignProjectManager.ActiveDesignProject.ContentCenterPath;
             test = PathShim.TrimEndingDirectorySeparator(test);
 
-                Assert.IsTrue(PathShim.IsContentCenterPath(test, ref app));
+                Assert.IsTrue(test.IsContentCenterPath(app));
         }
 
 
@@ -156,7 +156,7 @@ namespace PathShims_Tests
             Inventor.Application app = ApplicationShim.Instance();
             string test = @"C:\Windows\";
 
-                Assert.IsFalse(PathShim.IsContentCenterPath(test, ref app));
+                Assert.IsFalse(test.IsContentCenterPath(app));
         }
 
         [TestMethod]
@@ -165,7 +165,7 @@ namespace PathShims_Tests
             Inventor.Application app = ApplicationShim.Instance();
             var test = string.Empty;
 
-                Assert.IsFalse(PathShim.IsContentCenterPath(test, ref app));
+                Assert.IsFalse(test.IsContentCenterPath(app));
         }
 
         [TestMethod]
@@ -178,7 +178,7 @@ namespace PathShims_Tests
 
             string test = null;
             
-            Assert.IsFalse(PathShim.IsContentCenterPath(test, ref app));
+            Assert.IsFalse(test.IsContentCenterPath(app));
 
         }
 
