@@ -54,6 +54,7 @@
   <ItemGroup>
     <Compile Include="ApplicationShim.cs" />
     <Compile Include="AttributeShim.cs" />
+    <Compile Include="PathShim.cs" />
     <Compile Include="DrawingDocumentShim.cs" />
     <Compile Include="UiShim.cs" />
     <Compile Include="Conversions.cs" />
