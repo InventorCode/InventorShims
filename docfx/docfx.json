@@ -61,6 +61,14 @@
     "noLangKeyword": false,
     "keepFileLink": false,
     "cleanupCacheHistory": false,
-    "disableGitFeatures": false
+    "disableGitFeatures": false,
+    "globalMetadata": {
+      "_appTitle": "InventorShims Documentation",
+      "_gitContribute": {
+        "repo": "https://github.com/InventorCode/InventorShims.git",
+        "branch": "master",
+        "apiSpecFolder": "docs-ref-overwrite"
+      }
+    }
   }
 }

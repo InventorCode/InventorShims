@@ -9,10 +9,10 @@
       "output": {
         ".html": {
           "relative_path": "api/InventorShims.ApplicationShim.html",
-          "hash": "G/kmDC7ALld+dUS4BwdRpA=="
+          "hash": "Pc4ZW4nOnPD/Ie+lv6SNkw=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -21,10 +21,10 @@
       "output": {
         ".html": {
           "relative_path": "api/InventorShims.AttributeShim.html",
-          "hash": "Wh16itgKLYIom8oRA70Feg=="
+          "hash": "Q1eb07T7LOekBXlY4KH71A=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -33,10 +33,10 @@
       "output": {
         ".html": {
           "relative_path": "api/InventorShims.Conversions.html",
-          "hash": "QghlFI/E5wATuMACSHYnPA=="
+          "hash": "xY8YblAJ724HqBv991SpLg=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -45,10 +45,10 @@
       "output": {
         ".html": {
           "relative_path": "api/InventorShims.DocumentShim.html",
-          "hash": "2NG/VLFxC5S+vY1QZCcfsA=="
+          "hash": "jHOtifK7zYlVb8utngaJVQ=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -57,10 +57,10 @@
       "output": {
         ".html": {
           "relative_path": "api/InventorShims.DrawingDocumentShim.html",
-          "hash": "Y4OL2OHkEOxCR//Bh5NSWg=="
+          "hash": "YTMQhzYUkf31Un/Mh4tq0Q=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -69,10 +69,10 @@
       "output": {
         ".html": {
           "relative_path": "api/InventorShims.ParameterShim.html",
-          "hash": "XB8JRkXZGPQ+1r9swkLJRg=="
+          "hash": "lw8Pi4h93zjLWmJd/cCTcQ=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -81,10 +81,10 @@
       "output": {
         ".html": {
           "relative_path": "api/InventorShims.PathShim.html",
-          "hash": "0KXHsOXyHBJQ5yOAybZJ+A=="
+          "hash": "Dh0Ox3PshBR+51rgB56/RA=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -93,10 +93,10 @@
       "output": {
         ".html": {
           "relative_path": "api/InventorShims.PropertyShim.html",
-          "hash": "6C5G3LDfwtfOOzBodM5WGA=="
+          "hash": "V9hWxBJ1EEDHEMPwsDz5pQ=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -105,10 +105,10 @@
       "output": {
         ".html": {
           "relative_path": "api/InventorShims.StringShim.html",
-          "hash": "zLxAd1UIKKA63u0+dGBvZg=="
+          "hash": "/vniFPVxUlNMHHkNTCgH/w=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -117,10 +117,10 @@
       "output": {
         ".html": {
           "relative_path": "api/InventorShims.TranslatorShim.DwgExporter.html",
-          "hash": "UvzcIhVwIUkbo5xr0MkKLg=="
+          "hash": "AyQK5VDJwg5U80FBkTsJmw=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -129,10 +129,10 @@
       "output": {
         ".html": {
           "relative_path": "api/InventorShims.TranslatorShim.PdfExporter.html",
-          "hash": "Uf7eLkcqsUqzQMulfdvgRQ=="
+          "hash": "omWp3YAtv3F3h6vzALxZNw=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -141,10 +141,10 @@
       "output": {
         ".html": {
           "relative_path": "api/InventorShims.TranslatorShim.StepExporter.html",
-          "hash": "pfctvhjuxk10DufpsTQwKQ=="
+          "hash": "tSUBAGWd3xIafh3joGs6sQ=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -153,10 +153,10 @@
       "output": {
         ".html": {
           "relative_path": "api/InventorShims.TranslatorShim.StepImporter.html",
-          "hash": "MUInd5ZknttnccFijgvzUA=="
+          "hash": "4EwFZ5LKhRIX/5H6P01BEg=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -165,10 +165,10 @@
       "output": {
         ".html": {
           "relative_path": "api/InventorShims.TranslatorShim.StepProtocolEnum.html",
-          "hash": "5Wvdz5PbPL0YRV+u3rOmFw=="
+          "hash": "USh7BXXNI3HPL2u8+l/d+w=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -177,10 +177,10 @@
       "output": {
         ".html": {
           "relative_path": "api/InventorShims.TranslatorShim.StlExporter.html",
-          "hash": "ul1bnADwjjDsPqKNId4iHA=="
+          "hash": "3WKgBsGJa620LM0leKct9A=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -189,10 +189,10 @@
       "output": {
         ".html": {
           "relative_path": "api/InventorShims.TranslatorShim.StlResolutionEnum.html",
-          "hash": "WweOxBKslieyprC/2iG1wA=="
+          "hash": "gUSoBsyrCSydiOR8gl7T+g=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -201,10 +201,10 @@
       "output": {
         ".html": {
           "relative_path": "api/InventorShims.TranslatorShim.html",
-          "hash": "PXuJnTzKdZnc5n599B3vlQ=="
+          "hash": "Oj+lhfQDuIC+rnPWiYnSQQ=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -213,10 +213,10 @@
       "output": {
         ".html": {
           "relative_path": "api/InventorShims.UiShim.html",
-          "hash": "oLe/CQ4TrKwj3Eq1SmH90g=="
+          "hash": "uKRVeVtFQ3bURHVT88aNIA=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -225,10 +225,10 @@
       "output": {
         ".html": {
           "relative_path": "api/InventorShims.html",
-          "hash": "qPQz3nCicpPX9V7sHCJfRA=="
+          "hash": "XMxqChB/f2+2s6QXXU4l0A=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -237,10 +237,10 @@
       "output": {
         ".html": {
           "relative_path": "api/index.html",
-          "hash": "JA+2zvVtCcTYhhzEuHQrMA=="
+          "hash": "xaCg74fcAIo2oYbx01jvKw=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -261,10 +261,10 @@
       "output": {
         ".html": {
           "relative_path": "articles/changelog.html",
-          "hash": "haGTIsFgfiU6EBPDRj3EYw=="
+          "hash": "gkJdHU0V4JV0XOyAFHwC4g=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -273,10 +273,10 @@
       "output": {
         ".html": {
           "relative_path": "articles/contribution-guidelines.html",
-          "hash": "PJbp+pVazEuAqnmitCEdvg=="
+          "hash": "x1DoMczi1EgZhCy0ENyCDw=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -285,10 +285,10 @@
       "output": {
         ".html": {
           "relative_path": "articles/quick-start.html",
-          "hash": "+sOPkNSkTbVrYtEAg/uZ6w=="
+          "hash": "JMxkdfLkK0nzE93pNWHPaA=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -309,10 +309,10 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "5RpXBdA8q7Ewj98KMh4X1g=="
+          "hash": "OR0wfUFENDay6XwjC5b0gA=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -331,23 +331,25 @@
   "incremental_info": [
     {
       "status": {
-        "can_incremental": true,
+        "can_incremental": false,
+        "details": "Cannot build incrementally because config changed.",
         "incrementalPhase": "build",
         "total_file_count": 0,
-        "skipped_file_count": 0
+        "skipped_file_count": 0,
+        "full_build_reason_code": "ConfigChanged"
       },
       "processors": {
         "ConceptualDocumentProcessor": {
-          "can_incremental": true,
+          "can_incremental": false,
           "incrementalPhase": "build",
           "total_file_count": 5,
-          "skipped_file_count": 5
+          "skipped_file_count": 0
         },
         "ManagedReferenceDocumentProcessor": {
-          "can_incremental": true,
+          "can_incremental": false,
           "incrementalPhase": "build",
           "total_file_count": 19,
-          "skipped_file_count": 19
+          "skipped_file_count": 0
         },
         "TocDocumentProcessor": {
           "can_incremental": false,

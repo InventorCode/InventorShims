@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
   
@@ -6,10 +6,10 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>Class PathShim
-   </title>
+   | InventorShims Documentation </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class PathShim
-   ">
+   | InventorShims Documentation ">
     <meta name="generator" content="docfx 2.56.6.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
@@ -73,7 +73,8 @@
   
   <h1 id="InventorShims_PathShim" data-uid="InventorShims.PathShim" class="text-break">Class PathShim
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>A collection of static methods to manipulate and test string paths</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -101,34 +102,32 @@
       <span class="xref">System.Object.GetType()</span>
     </div>
     <div>
-      <span class="xref">System.Object.Finalize()</span>
-    </div>
-    <div>
       <span class="xref">System.Object.MemberwiseClone()</span>
     </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="InventorShims.html">InventorShims</a></h6>
-  <h6><strong>Assembly</strong>: InventorShims_vb.dll</h6>
+  <h6><strong>Assembly</strong>: InventorShims_cs.dll</h6>
   <h5 id="InventorShims_PathShim_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class PathShim</code></pre>
+    <pre><code class="lang-csharp hljs">public static class PathShim</code></pre>
   </div>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/InventorCode/InventorShims/new/jr/docfxDocs/apiSpec/new?filename=InventorShims_PathShim_IsContentCenterPath_System_String_Inventor_Application__.md&amp;value=---%0Auid%3A%20InventorShims.PathShim.IsContentCenterPath(System.String%2CInventor.Application%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/InventorCode/InventorShims/new/master/docs-ref-overwrite/new?filename=InventorShims_PathShim_IsContentCenterPath_System_String_Application_.md&amp;value=---%0Auid%3A%20InventorShims.PathShim.IsContentCenterPath(System.String%2CApplication)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/InventorCode/InventorShims/blob/jr/docfxDocs/src/InventorShims-vb/PathShim.vb/#L51">View Source</a>
+    <a href="https://github.com/InventorCode/InventorShims/blob/jr/fixDocfxViewSourceBug/src/InventorShims-cs/PathShim.cs/#L110">View Source</a>
   </span>
   <a id="InventorShims_PathShim_IsContentCenterPath_" data-uid="InventorShims.PathShim.IsContentCenterPath*"></a>
-  <h4 id="InventorShims_PathShim_IsContentCenterPath_System_String_Inventor_Application__" data-uid="InventorShims.PathShim.IsContentCenterPath(System.String,Inventor.Application@)">IsContentCenterPath(String, ref Application)</h4>
-  <div class="markdown level1 summary"></div>
+  <h4 id="InventorShims_PathShim_IsContentCenterPath_System_String_Application_" data-uid="InventorShims.PathShim.IsContentCenterPath(System.String,Application)">IsContentCenterPath(String, Application)</h4>
+  <div class="markdown level1 summary"><p>A function that checks if the provided string contains a Content Center Library path.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static bool IsContentCenterPath(string path, ref Application inventorApp)</code></pre>
+    <pre><code class="lang-csharp hljs">public static bool IsContentCenterPath(this string path, Application inventorApp)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -143,12 +142,14 @@
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">path</span></td>
-        <td></td>
+        <td><p>Path as a string.</p>
+</td>
       </tr>
       <tr>
-        <td><span class="xref">Inventor.Application</span></td>
+        <td><span class="xref">Application</span></td>
         <td><span class="parametername">inventorApp</span></td>
-        <td></td>
+        <td><p>Inventor.Application object.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -169,18 +170,19 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/InventorCode/InventorShims/new/jr/docfxDocs/apiSpec/new?filename=InventorShims_PathShim_IsLibraryPath_System_String_Inventor_Application__.md&amp;value=---%0Auid%3A%20InventorShims.PathShim.IsLibraryPath(System.String%2CInventor.Application%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/InventorCode/InventorShims/new/master/docs-ref-overwrite/new?filename=InventorShims_PathShim_IsLibraryPath_System_String_Application_.md&amp;value=---%0Auid%3A%20InventorShims.PathShim.IsLibraryPath(System.String%2CApplication)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/InventorCode/InventorShims/blob/jr/docfxDocs/src/InventorShims-vb/PathShim.vb/#L34">View Source</a>
+    <a href="https://github.com/InventorCode/InventorShims/blob/jr/fixDocfxViewSourceBug/src/InventorShims-cs/PathShim.cs/#L85">View Source</a>
   </span>
   <a id="InventorShims_PathShim_IsLibraryPath_" data-uid="InventorShims.PathShim.IsLibraryPath*"></a>
-  <h4 id="InventorShims_PathShim_IsLibraryPath_System_String_Inventor_Application__" data-uid="InventorShims.PathShim.IsLibraryPath(System.String,Inventor.Application@)">IsLibraryPath(String, ref Application)</h4>
-  <div class="markdown level1 summary"></div>
+  <h4 id="InventorShims_PathShim_IsLibraryPath_System_String_Application_" data-uid="InventorShims.PathShim.IsLibraryPath(System.String,Application)">IsLibraryPath(String, Application)</h4>
+  <div class="markdown level1 summary"><p>A function that checks if the provided string contains an Inventor library path.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static bool IsLibraryPath(string path, ref Application inventorApp)</code></pre>
+    <pre><code class="lang-csharp hljs">public static bool IsLibraryPath(this string path, Application inventorApp)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -195,12 +197,14 @@
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">path</span></td>
-        <td></td>
+        <td><p>Path as a string.</p>
+</td>
       </tr>
       <tr>
-        <td><span class="xref">Inventor.Application</span></td>
+        <td><span class="xref">Application</span></td>
         <td><span class="parametername">inventorApp</span></td>
-        <td></td>
+        <td><p>Inventor.Application object.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -221,14 +225,16 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/InventorCode/InventorShims/new/jr/docfxDocs/apiSpec/new?filename=InventorShims_PathShim_TrimEndingDirectorySeparator_System_String_.md&amp;value=---%0Auid%3A%20InventorShims.PathShim.TrimEndingDirectorySeparator(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/InventorCode/InventorShims/new/master/docs-ref-overwrite/new?filename=InventorShims_PathShim_TrimEndingDirectorySeparator_System_String_.md&amp;value=---%0Auid%3A%20InventorShims.PathShim.TrimEndingDirectorySeparator(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/InventorCode/InventorShims/blob/jr/docfxDocs/src/InventorShims-vb/PathShim.vb/#L73">View Source</a>
+    <a href="https://github.com/InventorCode/InventorShims/blob/jr/fixDocfxViewSourceBug/src/InventorShims-cs/PathShim.cs/#L60">View Source</a>
   </span>
   <a id="InventorShims_PathShim_TrimEndingDirectorySeparator_" data-uid="InventorShims.PathShim.TrimEndingDirectorySeparator*"></a>
   <h4 id="InventorShims_PathShim_TrimEndingDirectorySeparator_System_String_" data-uid="InventorShims.PathShim.TrimEndingDirectorySeparator(System.String)">TrimEndingDirectorySeparator(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Provided a string that ends in a &quot;/&quot; or &quot;&amp;quot;, returns the string without those
+ending characters.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -247,7 +253,8 @@
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">path</span></td>
-        <td></td>
+        <td><p>string</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -262,20 +269,23 @@
     <tbody>
       <tr>
         <td><span class="xref">System.String</span></td>
-        <td></td>
+        <td><p>string</p>
+</td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/InventorCode/InventorShims/new/jr/docfxDocs/apiSpec/new?filename=InventorShims_PathShim_UpOneLevel_System_String_.md&amp;value=---%0Auid%3A%20InventorShims.PathShim.UpOneLevel(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/InventorCode/InventorShims/new/master/docs-ref-overwrite/new?filename=InventorShims_PathShim_UpOneLevel_System_String_.md&amp;value=---%0Auid%3A%20InventorShims.PathShim.UpOneLevel(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/InventorCode/InventorShims/blob/jr/docfxDocs/src/InventorShims-vb/PathShim.vb/#L5">View Source</a>
+    <a href="https://github.com/InventorCode/InventorShims/blob/jr/fixDocfxViewSourceBug/src/InventorShims-cs/PathShim.cs/#L18">View Source</a>
   </span>
   <a id="InventorShims_PathShim_UpOneLevel_" data-uid="InventorShims.PathShim.UpOneLevel*"></a>
   <h4 id="InventorShims_PathShim_UpOneLevel_System_String_" data-uid="InventorShims.PathShim.UpOneLevel(System.String)">UpOneLevel(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Provided a string directory path, returns the path with the last
+directory removed.  E.g. UpOneLevel(&quot;C:\Work\Stuff&amp;quot;) returns &quot;C:\Work&quot;</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -294,7 +304,8 @@
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">path</span></td>
-        <td></td>
+        <td><p>The path as a string</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -309,7 +320,8 @@
     <tbody>
       <tr>
         <td><span class="xref">System.String</span></td>
-        <td></td>
+        <td><p>A string</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -321,10 +333,10 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/InventorCode/InventorShims/new/jr/docfxDocs/apiSpec/new?filename=InventorShims_PathShim.md&amp;value=---%0Auid%3A%20InventorShims.PathShim%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/InventorCode/InventorShims/new/master/docs-ref-overwrite/new?filename=InventorShims_PathShim.md&amp;value=---%0Auid%3A%20InventorShims.PathShim%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/InventorCode/InventorShims/blob/jr/docfxDocs/src/InventorShims-vb/PathShim.vb/#L3" class="contribution-link">View Source</a>
+                    <a href="https://github.com/InventorCode/InventorShims/blob/jr/fixDocfxViewSourceBug/src/InventorShims-cs/PathShim.cs/#L9" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>
