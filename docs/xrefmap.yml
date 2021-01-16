@@ -180,19 +180,6 @@ references:
   isSpec: "True"
   fullName: InventorShims.AttributeShim.SetAttributeValue
   nameWithType: AttributeShim.SetAttributeValue
-- uid: InventorShims.AttributeShim.SetAttributeValueEngine(System.Object,System.String,System.String,System.Object,Inventor.ValueTypeEnum)
-  name: SetAttributeValueEngine(Object, String, String, Object, ValueTypeEnum)
-  href: api/InventorShims.AttributeShim.html#InventorShims_AttributeShim_SetAttributeValueEngine_System_Object_System_String_System_String_System_Object_Inventor_ValueTypeEnum_
-  commentId: M:InventorShims.AttributeShim.SetAttributeValueEngine(System.Object,System.String,System.String,System.Object,Inventor.ValueTypeEnum)
-  fullName: InventorShims.AttributeShim.SetAttributeValueEngine(System.Object, System.String, System.String, System.Object, Inventor.ValueTypeEnum)
-  nameWithType: AttributeShim.SetAttributeValueEngine(Object, String, String, Object, ValueTypeEnum)
-- uid: InventorShims.AttributeShim.SetAttributeValueEngine*
-  name: SetAttributeValueEngine
-  href: api/InventorShims.AttributeShim.html#InventorShims_AttributeShim_SetAttributeValueEngine_
-  commentId: Overload:InventorShims.AttributeShim.SetAttributeValueEngine
-  isSpec: "True"
-  fullName: InventorShims.AttributeShim.SetAttributeValueEngine
-  nameWithType: AttributeShim.SetAttributeValueEngine
 - uid: InventorShims.Conversions
   name: Conversions
   href: api/InventorShims.Conversions.html
@@ -661,15 +648,12 @@ references:
   commentId: T:InventorShims.PathShim
   fullName: InventorShims.PathShim
   nameWithType: PathShim
-- uid: InventorShims.PathShim.IsContentCenterPath(System.String,Inventor.Application@)
-  name: IsContentCenterPath(String, ref Application)
-  href: api/InventorShims.PathShim.html#InventorShims_PathShim_IsContentCenterPath_System_String_Inventor_Application__
-  commentId: M:InventorShims.PathShim.IsContentCenterPath(System.String,Inventor.Application@)
-  name.vb: IsContentCenterPath(String, ByRef Application)
-  fullName: InventorShims.PathShim.IsContentCenterPath(System.String, ref Inventor.Application)
-  fullName.vb: InventorShims.PathShim.IsContentCenterPath(System.String, ByRef Inventor.Application)
-  nameWithType: PathShim.IsContentCenterPath(String, ref Application)
-  nameWithType.vb: PathShim.IsContentCenterPath(String, ByRef Application)
+- uid: InventorShims.PathShim.IsContentCenterPath(System.String,Application)
+  name: IsContentCenterPath(String, Application)
+  href: api/InventorShims.PathShim.html#InventorShims_PathShim_IsContentCenterPath_System_String_Application_
+  commentId: M:InventorShims.PathShim.IsContentCenterPath(System.String,Application)
+  fullName: InventorShims.PathShim.IsContentCenterPath(System.String, Application)
+  nameWithType: PathShim.IsContentCenterPath(String, Application)
 - uid: InventorShims.PathShim.IsContentCenterPath*
   name: IsContentCenterPath
   href: api/InventorShims.PathShim.html#InventorShims_PathShim_IsContentCenterPath_
@@ -677,15 +661,12 @@ references:
   isSpec: "True"
   fullName: InventorShims.PathShim.IsContentCenterPath
   nameWithType: PathShim.IsContentCenterPath
-- uid: InventorShims.PathShim.IsLibraryPath(System.String,Inventor.Application@)
-  name: IsLibraryPath(String, ref Application)
-  href: api/InventorShims.PathShim.html#InventorShims_PathShim_IsLibraryPath_System_String_Inventor_Application__
-  commentId: M:InventorShims.PathShim.IsLibraryPath(System.String,Inventor.Application@)
-  name.vb: IsLibraryPath(String, ByRef Application)
-  fullName: InventorShims.PathShim.IsLibraryPath(System.String, ref Inventor.Application)
-  fullName.vb: InventorShims.PathShim.IsLibraryPath(System.String, ByRef Inventor.Application)
-  nameWithType: PathShim.IsLibraryPath(String, ref Application)
-  nameWithType.vb: PathShim.IsLibraryPath(String, ByRef Application)
+- uid: InventorShims.PathShim.IsLibraryPath(System.String,Application)
+  name: IsLibraryPath(String, Application)
+  href: api/InventorShims.PathShim.html#InventorShims_PathShim_IsLibraryPath_System_String_Application_
+  commentId: M:InventorShims.PathShim.IsLibraryPath(System.String,Application)
+  fullName: InventorShims.PathShim.IsLibraryPath(System.String, Application)
+  nameWithType: PathShim.IsLibraryPath(String, Application)
 - uid: InventorShims.PathShim.IsLibraryPath*
   name: IsLibraryPath
   href: api/InventorShims.PathShim.html#InventorShims_PathShim_IsLibraryPath_
