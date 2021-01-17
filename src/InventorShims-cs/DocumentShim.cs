@@ -75,17 +75,30 @@ namespace InventorShims
                 invObj.ColorSchemes.BackgroundType = userBackgroundType;
             }
         }
-        
+
         /// <summary>
         /// Saves the document without showing anything to the user
         /// </summary>
-        /// <param name="documentToWork">Document object</param>
-        public static void SaveSilently(this Document documentToWork)
+        /// <param name="document">Document object</param>
+        public static void SaveSilently(this Document document)
         {
+            Application app = (Inventor.Application)document.Parent;
+
             // Save files without prompt
-            ((Inventor.Application)documentToWork.Parent).SilentOperation = true;
-            documentToWork.Save();
-            ((Inventor.Application)documentToWork.Parent).SilentOperation = false;
+            app.SilentOperation = true;
+
+            try
+            {
+                document.Save();
+            }
+            catch (Exception e)
+            {
+                new SystemException("The document could not be saved silently.");
+            }
+            finally
+            {
+                app.SilentOperation = false;
+            }
         }
         
 
