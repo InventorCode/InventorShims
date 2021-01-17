@@ -88,16 +88,6 @@ namespace InventorShims
             ((Inventor.Application)documentToWork.Parent).SilentOperation = false;
         }
         
-        /// <summary>
-        /// Saves, but shows the user a file dialog so they can pick where to save the document
-        /// </summary>
-        /// <param name="documentToWork"></param>
-        public static void SaveWithFileDialog(this Document documentToWork)
-        {
-            // Save files without prompt
-            ((Inventor.Application)documentToWork.Parent).SilentOperation = false;
-            documentToWork.Save();
-        }
 
         #region Document type booleans
         /// <summary>
