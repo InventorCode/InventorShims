@@ -47,7 +47,6 @@ Global
 		{E3FBC284-4903-491E-9665-DD34D1A0D5B0}.GetDocumentFromObject-tests|Any CPU.ActiveCfg = GetDocumentFromObject-tests|Any CPU
 		{E3FBC284-4903-491E-9665-DD34D1A0D5B0}.GetDocumentFromObject-tests|Any CPU.Build.0 = GetDocumentFromObject-tests|Any CPU
 		{E3FBC284-4903-491E-9665-DD34D1A0D5B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E3FBC284-4903-491E-9665-DD34D1A0D5B0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
