@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using Inventor;
+using System.Diagnostics;
 
 namespace InventorShims
 {
@@ -204,6 +205,10 @@ namespace InventorShims
         /// <returns>List(of Documents)</returns>
         public static List<Document> GetDocumentsFromSelectSet(this SelectSet selectSet)
         {
+            Debug.Listeners.Add(new TextWriterTraceListener(Console.Out));
+            Debug.AutoFlush = true;
+            Debug.Indent();
+            Debug.WriteLine("Entering GetDocumentsFromSelectSet method...");
 
             List<Document> documentList = new List<Document>();
 
@@ -218,13 +223,15 @@ namespace InventorShims
             foreach (dynamic i in selectSet)
                 {
                 tempDocument = GetDocumentFromObject(i);
-                Console.WriteLine("item  " + i.type);
+
+                Debug.WriteLine("item  " + (string)i.type.ToString());
                 
                 if (tempDocument is null) {
-                    Console.WriteLine("this object is not a document");
+                    Debug.WriteLine("this object is not a document");
                     continue;
                     }
-                Console.WriteLine("this object is a document.");
+
+                Debug.WriteLine("this object is a document.");
                 documentList.Add(tempDocument);
                 }
 
@@ -293,7 +300,8 @@ namespace InventorShims
         }
 
         /// <summary>
-        /// Tries to get an Inventor.Document object from a supplied object.  If one is found it will be returned; if not, null is returned.
+        /// Tries to get an Inventor.Document object from a supplied object within a drawing.
+        /// If one is found it will be returned; if not, null is returned.
         /// </summary>
         /// <param name="obj">Object</param>
         /// <param name="document">Inventor.DrawingDocument</param>
@@ -332,26 +340,31 @@ namespace InventorShims
                     break;
                     //There was an error at 'Set oCCdef = oCompOcc.Definition.Document'
 
-//TODO: still not working here!!!!!!!!!!
-
 
                 case 117478144: //kDrawingCurveSegmentObject
-                    //try to set the drawing curve object to point at the containingOccurrence object.
-                    //Edge Objects and Edge Proxy Objects   
+                    //Edge Objects and Edge Proxy Objects
                     
                     DrawingCurveSegment drawingCurveSegment = (DrawingCurveSegment)obj;
                     DrawingCurve drawingCurve = drawingCurveSegment.Parent;
-                    dynamic modelGeometry = drawingCurve.Parent;
+
+                    //get the modelGeometry, if it cannot be accessed, the file is likely unreferenced...
+                    dynamic modelGeometry = null;
+                    try { modelGeometry = drawingCurve.ModelGeometry; }
+                    catch
+                    {
+                        returnDocument = null;
+                        break;
+                    }
 
                     try //for a selected DrawingCurveSegment belonging to an assembly component
                     {
-                        returnDocument = modelGeometry.ContainingOccurrence.Definition.Document;
+                        returnDocument = (Document)modelGeometry.ContainingOccurrence.Definition.Document;
                         break;
                     } catch { }
 
                     try //for a selected DrawingCurveSegment belonging to a part
                     {
-                        returnDocument = modelGeometry.Parent.ComponentDefinition.Document;
+                        returnDocument = (Document)modelGeometry.Parent.ComponentDefinition.Document;
                         break;
                     } catch { }
                     break;
@@ -378,12 +391,12 @@ namespace InventorShims
         }
 
         /// <summary>
-        /// Returns true if an object is a document
+        /// Returns true if an object is an Inventor Document.
         /// </summary>
         /// <param name="obj">Object</param>
         /// <returns>Boolean</returns>
         public static bool ObjectIsDocument(dynamic obj)
-        {   
+        {
             //ObjectTypeEnum.kDocumentObject
             return obj.type == 50332160 ? true : false;
         }
