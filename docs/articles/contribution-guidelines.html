@@ -115,6 +115,28 @@
 <li>MINOR - added functionality in a backwards compatible manner</li>
 <li>PATCH - backwards compatible bug fixes</li>
 </ul>
+<h3 id="commit-guidelines">Commit Guidelines</h3>
+<p><a href="https://www.conventionalcommits.org/en">Conventional Commits</a> will be used as the commit message guidelines.  Following these simple guidelines will ensure commit message consistency that simplifies changelog generation and version number management.  Contributors are encouraged to visit the page and read the tutorial and spec.  Pull requests are expected to follow this convention.</p>
+<p>A simple, breezy tutorial follows... commit messages should be in the form &quot;KEYWORD: message&quot;.  Commit may have multiple lines. Try to keep each commit to a single keyword.  This keyword is one of the following:</p>
+<ul>
+<li>build</li>
+<li>chore</li>
+<li>ci</li>
+<li>docs</li>
+<li>feat</li>
+<li>fix</li>
+<li>refactor</li>
+<li>revert</li>
+<li>style</li>
+<li>test</li>
+</ul>
+<p>Breaking changes in the codebase are denoted by an exclamation mark after a keyword, such as:</p>
+<ul>
+<li>feat!</li>
+<li>fix!</li>
+<li>etc...</li>
+</ul>
+<p>A footer <code>BREAKING CHANGE:</code> should also be included in the commit message for human readability, but is not strictly required.</p>
 <h3 id="license">License</h3>
 <p>This code is under an MIT license.</p>
 </article>

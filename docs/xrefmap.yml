@@ -475,19 +475,6 @@ references:
   isSpec: "True"
   fullName: InventorShims.DocumentShim.SaveSilently
   nameWithType: DocumentShim.SaveSilently
-- uid: InventorShims.DocumentShim.SaveWithFileDialog(Document)
-  name: SaveWithFileDialog(Document)
-  href: api/InventorShims.DocumentShim.html#InventorShims_DocumentShim_SaveWithFileDialog_Document_
-  commentId: M:InventorShims.DocumentShim.SaveWithFileDialog(Document)
-  fullName: InventorShims.DocumentShim.SaveWithFileDialog(Document)
-  nameWithType: DocumentShim.SaveWithFileDialog(Document)
-- uid: InventorShims.DocumentShim.SaveWithFileDialog*
-  name: SaveWithFileDialog
-  href: api/InventorShims.DocumentShim.html#InventorShims_DocumentShim_SaveWithFileDialog_
-  commentId: Overload:InventorShims.DocumentShim.SaveWithFileDialog
-  isSpec: "True"
-  fullName: InventorShims.DocumentShim.SaveWithFileDialog
-  nameWithType: DocumentShim.SaveWithFileDialog
 - uid: InventorShims.DocumentShim.ScreenShot(Document,System.String,System.Boolean,System.Boolean)
   name: ScreenShot(Document, String, Boolean, Boolean)
   href: api/InventorShims.DocumentShim.html#InventorShims_DocumentShim_ScreenShot_Document_System_String_System_Boolean_System_Boolean_
@@ -514,25 +501,6 @@ references:
   isSpec: "True"
   fullName: InventorShims.DocumentShim.ZoomExtents
   nameWithType: DocumentShim.ZoomExtents
-- uid: InventorShims.DrawingDocumentShim
-  name: DrawingDocumentShim
-  href: api/InventorShims.DrawingDocumentShim.html
-  commentId: T:InventorShims.DrawingDocumentShim
-  fullName: InventorShims.DrawingDocumentShim
-  nameWithType: DrawingDocumentShim
-- uid: InventorShims.DrawingDocumentShim.SaveWithFileDialog(DrawingDocument)
-  name: SaveWithFileDialog(DrawingDocument)
-  href: api/InventorShims.DrawingDocumentShim.html#InventorShims_DrawingDocumentShim_SaveWithFileDialog_DrawingDocument_
-  commentId: M:InventorShims.DrawingDocumentShim.SaveWithFileDialog(DrawingDocument)
-  fullName: InventorShims.DrawingDocumentShim.SaveWithFileDialog(DrawingDocument)
-  nameWithType: DrawingDocumentShim.SaveWithFileDialog(DrawingDocument)
-- uid: InventorShims.DrawingDocumentShim.SaveWithFileDialog*
-  name: SaveWithFileDialog
-  href: api/InventorShims.DrawingDocumentShim.html#InventorShims_DrawingDocumentShim_SaveWithFileDialog_
-  commentId: Overload:InventorShims.DrawingDocumentShim.SaveWithFileDialog
-  isSpec: "True"
-  fullName: InventorShims.DrawingDocumentShim.SaveWithFileDialog
-  nameWithType: DrawingDocumentShim.SaveWithFileDialog
 - uid: InventorShims.ParameterShim
   name: ParameterShim
   href: api/InventorShims.ParameterShim.html

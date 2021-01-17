@@ -45,19 +45,7 @@
       "output": {
         ".html": {
           "relative_path": "api/InventorShims.DocumentShim.html",
-          "hash": "9WRMU/pldUAqeavRQ/WMsA=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/InventorShims.DrawingDocumentShim.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/InventorShims.DrawingDocumentShim.html",
-          "hash": "aAGNaMczEli5mgPMGH8NoA=="
+          "hash": "MwO/JEh8k7Tw+Y4AI/FYCQ=="
         }
       },
       "is_incremental": false,
@@ -225,7 +213,7 @@
       "output": {
         ".html": {
           "relative_path": "api/InventorShims.html",
-          "hash": "XMxqChB/f2+2s6QXXU4l0A=="
+          "hash": "9LCVa0winRXU3itXbAVoyA=="
         }
       },
       "is_incremental": false,
@@ -249,7 +237,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "mUlk9/JXz5op8b24APO9Dw=="
+          "hash": "uKjtDwY5d+ajcE9r7xghMA=="
         }
       },
       "is_incremental": false,
@@ -273,7 +261,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/contribution-guidelines.html",
-          "hash": "x1DoMczi1EgZhCy0ENyCDw=="
+          "hash": "SJdZOjHKzAE7gOC/6hzgyA=="
         }
       },
       "is_incremental": false,
@@ -298,17 +286,6 @@
         ".html": {
           "relative_path": "articles/toc.html",
           "hash": "P32dU9CwfoLY9UYm9gh1Ew=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "images/logo.svg",
-      "output": {
-        "resource": {
-          "relative_path": "images/logo.svg"
         }
       },
       "is_incremental": false,
@@ -359,14 +336,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 19,
-          "skipped_file_count": 0
-        },
-        "ResourceDocumentProcessor": {
-          "can_incremental": false,
-          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
-          "incrementalPhase": "build",
-          "total_file_count": 0,
+          "total_file_count": 18,
           "skipped_file_count": 0
         },
         "TocDocumentProcessor": {
