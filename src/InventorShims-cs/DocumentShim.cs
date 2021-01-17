@@ -75,29 +75,32 @@ namespace InventorShims
                 invObj.ColorSchemes.BackgroundType = userBackgroundType;
             }
         }
-        
+
         /// <summary>
         /// Saves the document without showing anything to the user
         /// </summary>
-        /// <param name="documentToWork">Document object</param>
-        public static void SaveSilently(this Document documentToWork)
+        /// <param name="document">Document object</param>
+        public static void SaveSilently(this Document document)
         {
+            Application app = (Inventor.Application)document.Parent;
+
             // Save files without prompt
-            ((Inventor.Application)documentToWork.Parent).SilentOperation = true;
-            documentToWork.Save();
-            ((Inventor.Application)documentToWork.Parent).SilentOperation = false;
+            app.SilentOperation = true;
+
+            try
+            {
+                document.Save();
+            }
+            catch (Exception e)
+            {
+                new SystemException("The document could not be saved silently.", e);
+            }
+            finally
+            {
+                app.SilentOperation = false;
+            }
         }
         
-        /// <summary>
-        /// Saves, but shows the user a file dialog so they can pick where to save the document
-        /// </summary>
-        /// <param name="documentToWork"></param>
-        public static void SaveWithFileDialog(this Document documentToWork)
-        {
-            // Save files without prompt
-            ((Inventor.Application)documentToWork.Parent).SilentOperation = false;
-            documentToWork.Save();
-        }
 
         #region Document type booleans
         /// <summary>
