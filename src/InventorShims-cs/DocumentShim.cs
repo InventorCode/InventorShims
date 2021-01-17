@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using Inventor;
+using System.Diagnostics;
 
 namespace InventorShims
 {
@@ -204,6 +205,10 @@ namespace InventorShims
         /// <returns>List(of Documents)</returns>
         public static List<Document> GetDocumentsFromSelectSet(this SelectSet selectSet)
         {
+            Debug.Listeners.Add(new TextWriterTraceListener(Console.Out));
+            Debug.AutoFlush = true;
+            Debug.Indent();
+            Debug.WriteLine("Entering GetDocumentsFromSelectSet method...");
 
             List<Document> documentList = new List<Document>();
 
@@ -218,13 +223,15 @@ namespace InventorShims
             foreach (dynamic i in selectSet)
                 {
                 tempDocument = GetDocumentFromObject(i);
-                Console.WriteLine("item  " + i.type);
+
+                Debug.WriteLine("item  " + (string)i.type.ToString());
                 
                 if (tempDocument is null) {
-                    Console.WriteLine("this object is not a document");
+                    Debug.WriteLine("this object is not a document");
                     continue;
                     }
-                Console.WriteLine("this object is a document.");
+
+                Debug.WriteLine("this object is a document.");
                 documentList.Add(tempDocument);
                 }
 
@@ -384,12 +391,12 @@ namespace InventorShims
         }
 
         /// <summary>
-        /// Returns true if an object is a document
+        /// Returns true if an object is an Inventor Document.
         /// </summary>
         /// <param name="obj">Object</param>
         /// <returns>Boolean</returns>
         public static bool ObjectIsDocument(dynamic obj)
-        {   
+        {
             //ObjectTypeEnum.kDocumentObject
             return obj.type == 50332160 ? true : false;
         }
