@@ -49,6 +49,31 @@ Versioning will follow [Sematic Versioning](https://semver.org/) once version 1.
 * MINOR - added functionality in a backwards compatible manner
 * PATCH - backwards compatible bug fixes
 
+### Commit Guidelines
+
+[Conventional Commits](https://www.conventionalcommits.org/en) will be used as the commit message guidelines.  Following these simple guidelines will ensure commit message consistency that simplifies changelog generation and version number management.  Contributors are encouraged to visit the page and read the tutorial and spec.  Pull requests are expected to follow this convention.
+
+A simple, breezy tutorial follows... commit messages should be in the form "KEYWORD: message".  Commit may have multiple lines. Try to keep each commit to a single keyword.  This keyword is one of the following:
+
+- build
+- chore
+- ci
+- docs
+- feat
+- fix
+- refactor
+- revert
+- style
+- test
+
+Breaking changes in the codebase are denoted by an exclamation mark after a keyword, such as:
+
+- feat!
+- fix!
+- etc...
+
+A footer ```BREAKING CHANGE:``` should also be included in the commit message for human readability, but is not strictly required.
+
 ### License
 
 This code is under an MIT license.
