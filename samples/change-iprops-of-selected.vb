@@ -1,4 +1,4 @@
-AddReference "InventorShims.dll"
+﻿AddReference "InventorShims.dll"
 Imports InventorShims.DocumentShim
 Imports InventorShims.PropertyShim
 
@@ -24,7 +24,7 @@ Sub Main()
 
 			'if nothing is selected... select something!
 			If oSSet.count = 0 Then
-				oSSet.Select(oApp.CommandManager.Pick(SelectionFilterEnum.kAllEntitiesFilter, "Select thing(s)..."));
+				oSSet.Select(oApp.CommandManager.Pick(SelectionFilterEnum.kAllEntitiesFilter, "Select thing(s)..."))
 			End If
 
 			'if there are selected objects, get their associated documents...
@@ -43,6 +43,9 @@ Sub Main()
 End Sub
 
 
-Sub ChangeIProperty(oDoc)
-	SetPropertyValue(oDoc, "Title", "Some Cool Title!")
+Sub ChangeIProperty(i)
+	SetPropertyValue(i, "Title", "Some Cool Title!")
+	
+	'Uncomment to show the part titles in messageboxes...
+	'MsgBox(GetPropertyValue(i, "Title"))
 End Sub
