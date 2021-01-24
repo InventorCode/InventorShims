@@ -245,6 +245,31 @@ namespace InventorShims
         }
 
         /// <summary>
+        /// Tests if the parameter matching the provided parameterName is writable.  Only kModelParameters and kUserParameters return true.
+        /// <code></code>VB sample:<code>Dim answer As Boolean = ParameterIsWritable(oDoc, "ThisParameterName")</code>
+        /// </summary>
+        /// <param name="document">Document</param>
+        /// <param name="parameterName">String</param>
+        /// <returns>Boolean</returns>
+        public static bool ParameterIsWritable(Document document, string parameterName)
+        {
+            Parameter parameter = null;
+            try
+            {
+                parameter = GetParameter(document, parameterName);
+
+                if (parameter.ParameterType == ParameterTypeEnum.kModelParameter || parameter.ParameterType == ParameterTypeEnum.kUserParameter)
+                {
+                    return true;
+                }
+            }
+            catch
+            { }
+
+            return false;
+        }
+
+        /// <summary>
         /// Return a list of parameter names within the specified document.
         /// </summary>
         /// <param name="document">Inventor.Document</param>
