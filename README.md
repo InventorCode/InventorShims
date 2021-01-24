@@ -16,7 +16,9 @@ The minimum supported version of Inventor will be 2020.
 
 ## Documentation
 
-API Documentation can be found at [InventorShims API Docs](https://inventorcode.github.io/InventorShims/).  Documentation is built with DocFX; the documentation source is located at [/docfx/](https://github.com/InventorCode/InventorShims/tree/master/docfx).
+API Documentation can be found at [InventorShims API Docs](https://inventorcode.github.io/InventorShims/api/InventorShims.html).  Documentation is built with DocFX; the documentation source is located at [/docfx/](https://github.com/InventorCode/InventorShims/tree/master/docfx).
+
+General documentation can be found [here](https://inventorcode.github.io/InventorShims/articles/quick-start.html).
 
 ## Getting Started
 
