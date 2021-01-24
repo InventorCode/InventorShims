@@ -234,7 +234,7 @@ namespace InventorShims
         /// </summary>
         /// <param name="parameter">Parameter</param>
         /// <returns>Boolean</returns>
-        public static bool ParameterIsWritable(Parameter parameter)
+        public static bool ParameterIsWritable(this Parameter parameter)
         {
             if (parameter.ParameterType == ParameterTypeEnum.kModelParameter || parameter.ParameterType == ParameterTypeEnum.kUserParameter)
             {
