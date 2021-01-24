@@ -5,12 +5,16 @@ using Inventor;
 namespace InventorShims
 {
     /// <summary>
-    /// A set of extension methods for the Document Parameters.
+    /// A set of methods to interact with Document Parameters in a more intuitive way.  They will tend to fail more
+    /// gracefully than the built-in parameter manipulation methods.  For example, if you attempt to set the value
+    /// of a parameter that does not exist in the document, that parameter is created instead of throwing an exception
+    /// and crashing your code if you don't handle it.
     /// </summary>
     public static class ParameterShim
     {
         /// <summary>
         /// Sets the value of a numeric parameter, or creates one if one does not exist.
+        /// <code></code>VB sample:<code>SetParameterValue(oDoc, "ParameterName", 42, "in"))</code>
         /// </summary>
         /// <param name="document">Inventor.Document</param>
         /// <param name="parameterName"></param>
@@ -44,6 +48,7 @@ namespace InventorShims
 
         /// <summary>
         /// Sets the value of a text parameter, or creates one if one does not exist.
+        /// <code></code>VB sample:<code>SetParameterValue(oDoc, "ParameterName", "This is a text value!"))</code>
         /// </summary>
         /// <param name="document">Inventor.Document</param>
         /// <param name="parameterName"></param>
@@ -79,6 +84,7 @@ namespace InventorShims
 
         /// <summary>
         /// Sets the value of a boolean parameter, or creates one if one does not exist.
+        /// <code></code>VB sample:<code>SetParameterValue(oDoc, "ParameterName", true))</code>
         /// </summary>
         /// <param name="document">Inventor.Document</param>
         /// <param name="parameterName"></param>
@@ -115,6 +121,7 @@ namespace InventorShims
 
         /// <summary>
         /// Gets the value of a numeric parameter.
+        /// <code></code>VB sample:<code>Msgbox(GetParameterValue(oDoc, "ParameterName"))</code>
         /// </summary>
         /// <param name="document">Inventor.Document</param>
         /// <param name="parameterName">Name of the parameter as a string.</param>
@@ -151,6 +158,7 @@ namespace InventorShims
 
         /// <summary>
         /// Removes a parameter from a Document object if it exists.
+        ///   <code></code>VB sample:<code>RemoveParameter(oDoc, "ParameterName")</code>
         /// </summary>
         /// <param name="document">Inventor.Document</param>
         /// <param name="parameterName"></param>
@@ -180,6 +188,7 @@ namespace InventorShims
 
         /// <summary>
         /// Returns a parameter object from a document object specified by name.
+        ///  <code></code>VB sample:<code>Dim oParameter As Parameter = GetParameter(oDoc, "ParameterName")</code>
         /// </summary>
         /// <param name="document">Inventor.Document</param>
         /// <param name="parameterName"></param>
@@ -199,6 +208,7 @@ namespace InventorShims
 
         /// <summary>
         /// Returns a boolean indicating if a Parameter exists within a Document object.
+        /// <code></code>VB sample:<code>Dim answer As Boolean = ParameterExists(oParameter)</code>
         /// </summary>
         /// <param name="parameter">Inventor.Parameter</param>
         /// <returns>Boolean</returns>
@@ -209,6 +219,7 @@ namespace InventorShims
 
         /// <summary>
         /// Returns the Parameters object in a specified Document object.
+        /// <code></code>VB sample:<code>Dim oParams As Parameters = GetParameters(oDoc)</code>
         /// </summary>
         /// <param name="document">Inventor.Document</param>
         /// <returns>Parameters</returns>
@@ -231,6 +242,7 @@ namespace InventorShims
 
         /// <summary>
         /// Tests if the provided parameter is writable.  Only kModelParameters and kUserParameters return true.
+        /// <code></code>VB sample:<code>Dim answer As Boolean = ParameterIsWritable(oParameter)</code>
         /// </summary>
         /// <param name="parameter">Parameter</param>
         /// <returns>Boolean</returns>
