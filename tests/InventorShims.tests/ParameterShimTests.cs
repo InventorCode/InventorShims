@@ -265,4 +265,52 @@ namespace ParameterShim_Tests
         }
 
     }
-}
+
+    [TestClass]
+    public class ParameterIsWritable
+    {
+        [TestMethod]
+        public void GoodInput_ReturnsTrue()
+        {
+            Inventor.Application app = ApplicationShim.Instance();
+            var path = app.DesignProjectManager.ActiveDesignProject.TemplatesPath;
+            Document doc = app.Documents.Add(DocumentTypeEnum.kPartDocumentObject, path + "Standard.ipt", true);
+
+            doc.SetParameterValue("testing", "16", "cm");
+
+            var testing = ParameterShim.ParameterIsWritable(doc, "testing");
+
+            try
+            {
+                Assert.AreEqual(true, testing);
+            }
+            finally
+            {
+                doc.Close(true);
+            }
+
+        }
+
+        [TestMethod]
+        public void NoParameter_ReturnsFalse()
+        {
+            Inventor.Application app = ApplicationShim.Instance();
+            var path = app.DesignProjectManager.ActiveDesignProject.TemplatesPath;
+            Document doc = app.Documents.Add(DocumentTypeEnum.kPartDocumentObject, path + "Standard.ipt", true);
+
+            //doc.SetParameterValue("testing", "16", "cm");
+
+            var testing = ParameterShim.ParameterIsWritable(doc, "testing");
+
+            try
+            {
+                Assert.AreEqual(false, testing);
+            }
+            finally
+            {
+                doc.Close(true);
+            }
+
+        }
+    }
+    }
