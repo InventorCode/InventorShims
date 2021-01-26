@@ -22,8 +22,6 @@ You can visit the other docs on this site to learn more about the API, how to us
 
 ### Download
 
-*Please note: InventorShims is currently in pre-release state. As initial development continues, the API structure may be in flux slightly until 1.0.0 is released.  Major architectural changes should be finished, but things may still shift around.  Luckily deployment of an updated version takes less than a minute.*
-
 Visit the [releases page](https://github.com/InventorCode/InventorShims/releases) and download the latest InventorShims release.
 
 ### How to Install
