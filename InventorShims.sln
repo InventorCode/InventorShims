@@ -10,7 +10,7 @@ Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "InventorShims.manual", "tes
 EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "InventorShims-vb", "src\InventorShims-vb\InventorShims-vb.vbproj", "{FB816A14-783C-4DF1-9975-F384CF56A7C8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InventorShims-cs", "src\InventorShims-cs\InventorShims-cs.csproj", "{DE9044A0-4809-4828-ADEE-FA787925CBCF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InventorShims", "src\InventorShims\InventorShims.csproj", "{DE9044A0-4809-4828-ADEE-FA787925CBCF}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InventorShims.tests", "tests\InventorShims.tests\InventorShims.tests.csproj", "{9A4C4253-55EA-4218-9FE0-9E473562A096}"
 EndProject
