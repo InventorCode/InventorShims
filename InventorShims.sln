@@ -27,11 +27,8 @@ Global
 		{295AABC2-2250-4279-B9C7-E33C352FCDE4}.GetDocumentFromObject-tests|Any CPU.ActiveCfg = GetDocumentFromObject-tests|Any CPU
 		{295AABC2-2250-4279-B9C7-E33C352FCDE4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FB816A14-783C-4DF1-9975-F384CF56A7C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{FB816A14-783C-4DF1-9975-F384CF56A7C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FB816A14-783C-4DF1-9975-F384CF56A7C8}.GetDocumentFromObject-tests|Any CPU.ActiveCfg = GetDocumentFromObject-tests|Any CPU
-		{FB816A14-783C-4DF1-9975-F384CF56A7C8}.GetDocumentFromObject-tests|Any CPU.Build.0 = GetDocumentFromObject-tests|Any CPU
 		{FB816A14-783C-4DF1-9975-F384CF56A7C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{FB816A14-783C-4DF1-9975-F384CF56A7C8}.Release|Any CPU.Build.0 = Release|Any CPU
 		{DE9044A0-4809-4828-ADEE-FA787925CBCF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{DE9044A0-4809-4828-ADEE-FA787925CBCF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DE9044A0-4809-4828-ADEE-FA787925CBCF}.GetDocumentFromObject-tests|Any CPU.ActiveCfg = GetDocumentFromObject-tests|Any CPU

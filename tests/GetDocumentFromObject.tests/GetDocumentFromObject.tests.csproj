@@ -87,10 +87,6 @@
       <Project>{de9044a0-4809-4828-adee-fa787925cbcf}</Project>
       <Name>InventorShims</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\src\InventorShims-vb\InventorShims-vb.vbproj">
-      <Project>{fb816a14-783c-4df1-9975-f384cf56a7c8}</Project>
-      <Name>InventorShims-vb</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7">

@@ -9,7 +9,7 @@
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>InventorShims</RootNamespace>
-    <AssemblyName>InventorShims_cs</AssemblyName>
+    <AssemblyName>InventorShims</AssemblyName>
     <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -24,7 +24,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <DocumentationFile>..\..\artifacts\debug\InventorShims_cs.xml</DocumentationFile>
+    <DocumentationFile>..\..\artifacts\debug\InventorShims.xml</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -33,7 +33,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <DocumentationFile>..\..\artifacts\release\InventorShims_cs.xml</DocumentationFile>
+    <DocumentationFile>..\..\artifacts\release\InventorShims.xml</DocumentationFile>
     <PlatformTarget>AnyCPU</PlatformTarget>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'GetDocumentFromObject-tests|AnyCPU'">
@@ -83,13 +83,6 @@
     <Compile Include="WinMacros.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\InventorShims-vb\InventorShims-vb.vbproj">
-      <Project>{fb816a14-783c-4df1-9975-f384cf56a7c8}</Project>
-      <Name>InventorShims-vb</Name>
-      <Private>False</Private>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
@@ -128,9 +121,8 @@
     <Exec Command="$(ILMergeConsolePath) /target:library /allowDup /out:$(OutDir)InventorShims.dll $(OutDir)InventorShims_vb.dll $(OutDir)InventorShims_cs.dll" />
   </Target>
   <PropertyGroup>
-    <PostBuildEvent>If EXIST "$(TargetDir)InventorShims_vb.dll" (
-$(ILMergeConsolePath) /target:library /allowDup /xmldocs /out:"$(TargetDir)InventorShims.dll" "$(TargetDir)InventorShims_vb.dll" "$(TargetDir)InventorShims_cs.dll"
-)</PostBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
   </PropertyGroup>
   <PropertyGroup>
     <PreBuildEvent>

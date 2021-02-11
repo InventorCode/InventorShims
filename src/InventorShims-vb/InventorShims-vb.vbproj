@@ -130,9 +130,8 @@
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <PropertyGroup>
-    <PostBuildEvent>If EXIST "$(TargetDir)InventorShims_cs.dll" (
-$(ILMergeConsolePath) /target:library /allowDup /xmldocs /out:"$(TargetDir)InventorShims.dll" "$(TargetDir)InventorShims_vb.dll" "$(TargetDir)InventorShims_cs.dll"
-)</PostBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
   </PropertyGroup>
   <PropertyGroup>
     <PreBuildEvent>
