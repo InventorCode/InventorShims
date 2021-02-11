@@ -95,7 +95,6 @@ namespace InventorShims
         private static bool UserPropertySetsExist(PropertySets propertySets)
         {
             return propertySets.Count >= NativePropertySetLookup.Count ? true : false;
-
         }
 
         /// <summary>
@@ -130,7 +129,6 @@ namespace InventorShims
             /// <returns>string</returns>
             private static object GetSuperCustomPropertyValue(Inventor.Document document, string propertyName)
             {
-
                 Property temp = document.GetSuperCustomProperty(propertyName);
                 //try
                 //    {
@@ -138,7 +136,6 @@ namespace InventorShims
                 //    }
                 //catch { return "";}
             }
-
 
             /// <summary>
             /// Returns the iProperty Value for a provided document and propertyName. Short signature.
@@ -153,7 +150,6 @@ namespace InventorShims
                 return "";
 
             return prop.Value;
-
         } //End GetPropertyValue
 
         /// <summary>
@@ -167,7 +163,6 @@ namespace InventorShims
         {
             Property prop = document.GetProperty(setName, propertyName);
             if (prop is null) return "";
-            
             return prop.Value;
         }
 
@@ -244,7 +239,6 @@ namespace InventorShims
         public static void SetPropertyValue(this Document document, string propertyName, Object value)
         {
             PropertySets propertySets = document.PropertySets;
-            
             //If the property exists as a built-in property, set the value
             if (NativePropertyLookup.TryGetValue(propertyName, out string setName))
             {
@@ -374,7 +368,6 @@ namespace InventorShims
                     return;
                 }
                 catch {}
-                
                 //if property still exists...
                 if (CustomPropertyExists(documentPropertySets[propertySetName], propertyName))
                 {
@@ -398,7 +391,6 @@ namespace InventorShims
         /// <returns>Boolean</returns>
         public static bool PropertyExists(this Document document, string propertyName)
         {
-
             if (IsPropertyNative(propertyName))
                 return true;
 

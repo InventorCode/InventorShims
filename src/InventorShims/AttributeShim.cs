@@ -8,7 +8,6 @@ namespace InventorShims
     /// </summary>
     public static class AttributeShim
     {
-
         /// <summary>
         /// Sets the value of a specified attribute in the provided object. The attribute is specified by it's
         /// name. If no such attribute exists, one is created. If the containing object is not attribute
@@ -23,7 +22,6 @@ namespace InventorShims
             SetAttributeValueEngine(obj, attributeSetName, attributeName, value, Inventor.ValueTypeEnum.kStringType);
         }
 
-
         /// <summary>
         /// Sets the value of a specified attribute in the provided object. The attribute is specified by it's
         /// name. If no such attribute exists, one is created. If the containing object is not attribute
@@ -37,7 +35,6 @@ namespace InventorShims
         {
             SetAttributeValueEngine(obj, attributeSetName, attributeName, value, Inventor.ValueTypeEnum.kIntegerType);
         }
-
 
         /// <summary>
         /// Sets the value of a specified attribute in the provided object. The attribute is specified by it's
@@ -96,7 +93,6 @@ namespace InventorShims
             }
         }
 
-
         /// <summary>
         /// This static function will create an Attribute Set for the provided object if one with that name
         /// does not already exist.  The newly created AttributeSet object is returned.  If the object is not
@@ -116,7 +112,6 @@ namespace InventorShims
 
             if (AttributeSetExists(obj, attributeSetName))
             {
-                
                 return temp.AttributeSets[attributeSetName];
             }
             else
@@ -149,7 +144,6 @@ namespace InventorShims
             {
                 return "";
             }
-
         }
 
         /// <summary>
@@ -171,7 +165,6 @@ namespace InventorShims
             }
         }
 
-
         /// <summary>
         /// This static method will remove a specified AttributeSet from the provided Object if one exists.
         ///  If the object is not attribute capable, the function will throw a system exception.
@@ -188,7 +181,6 @@ namespace InventorShims
                 attributeSets[attributeSetName].Delete();
             }
         }
-
 
         /// <summary>
         /// This static function will return boolean value indicating if the specified AttributeSet
@@ -210,7 +202,6 @@ namespace InventorShims
             return attributeSets.NameIsUsed[attributeSetName];
 
         }
-
 
         /// <summary>
         /// This static function will return boolean value indicating if the specified Attribute
@@ -254,7 +245,6 @@ namespace InventorShims
             {
                 attributeSets = temp.AttributeSets;
                 return true;
-
             }
             catch (Exception e)
             {

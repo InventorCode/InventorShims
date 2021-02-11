@@ -288,7 +288,6 @@ namespace InventorShims
         private static Document GetDocumentFromObjectInAssembly(dynamic obj)
         {
             switch (obj.type) {
-
                 //###   In Assembly Document [kAssemblyDocumentObject]   ###
                 case 67113776: //kComponentOccurrenceObject:
                 case 67113888: //kComponentOccurrenceProxyObject
@@ -343,10 +342,8 @@ namespace InventorShims
                     break;
                     //There was an error at 'Set oCCdef = oCompOcc.Definition.Document'
 
-
                 case 117478144: //kDrawingCurveSegmentObject
                     //Edge Objects and Edge Proxy Objects
-                    
                     DrawingCurveSegment drawingCurveSegment = (DrawingCurveSegment)obj;
                     DrawingCurve drawingCurve = drawingCurveSegment.Parent;
 
@@ -372,7 +369,6 @@ namespace InventorShims
                     } catch { }
                     break;
 
-
                 case 117444096: //kPartsListObject:
                     returnDocument = obj.ReferencedFile.ReferencedDocument;
                     break;
@@ -390,7 +386,6 @@ namespace InventorShims
             }
 
             return returnDocument ?? null;
-
         }
 
         /// <summary>

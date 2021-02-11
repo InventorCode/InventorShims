@@ -8,7 +8,6 @@ namespace InventorShims
     /// </summary>
     public static class PathShim
     {
-
         /// <summary>
         /// Provided a string directory path, returns the path with the last
         /// directory removed.  E.g. UpOneLevel("C:\Work\Stuff\") returns "C:\Work"
@@ -59,10 +58,8 @@ namespace InventorShims
         /// <returns>string</returns>
         public static string TrimEndingDirectorySeparator(string path)
         {
-
             char DirectorySeparatorChar = System.IO.Path.DirectorySeparatorChar;
             char AltDirectorySeparatorChar = System.IO.Path.AltDirectorySeparatorChar;
-
 
             if (path.EndsWith(DirectorySeparatorChar.ToString()))
             {
@@ -73,7 +70,6 @@ namespace InventorShims
                 path = path.Remove(path.LastIndexOf(AltDirectorySeparatorChar));
             }
             return path;
-
         }
 
         /// <summary>
