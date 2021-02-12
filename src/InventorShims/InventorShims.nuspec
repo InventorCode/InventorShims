@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>InventorShims</id>
+    <version>1.1.0</version>
+    <title>InventorShims</title>
+    <authors>InventorCode</authors>
+    <owners>InventorCode</owners>
+    <licenseUrl>https://raw.githubusercontent.com/InventorCode/InventorShims/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/InventorCode/InventorShims</projectUrl>
+    <iconUrl>https://raw.githubusercontent.com/InventorCode/InventorShims/master/images/InventorCode-brackets-logo-64x64.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>A collection of extension APIs for Autodesk Inventor. </description>
+    <releaseNotes>Summary of changes made in this release of the package.</releaseNotes>
+    <copyright>Copyright 2021</copyright>
+    <tags>Autodesk Inventor API</tags>
+  </metadata>
+</package>
