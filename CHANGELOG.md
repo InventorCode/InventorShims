@@ -1,4 +1,37 @@
 
+<a name="1.1.0"></a>
+## [1.1.0](https://github.com/InventorCode/InventorShims/compare/v1.0.0...1.1.0) (2021-02-11)
+
+### Chore
+
+* add nuspec
+* add logo for nuget package
+* Removed InventorShims-vs from builds
+* renamed InventorShims-cs to InventorShims
+
+### Docs
+
+* added initial changelog
+* removed reference to pre-release state.
+* Updated API docs link in readme
+* Added samples to ParameterShim, added more to the class description.
+* Added ParameterShim and PathShim samples.
+
+### Feat
+
+* added git-chglog config
+* ParameterIsWritable string signature added
+* ParameterIsWritable now acts as an extension method
+
+### Style
+
+* remove whitespace
+
+### Test
+
+* Added ParameterIsWritable unit tests.
+
+
 <a name="v1.0.0"></a>
 ## [v1.0.0](https://github.com/InventorCode/InventorShims/compare/v0.1.0...v1.0.0) (2021-01-17)
 

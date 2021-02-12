@@ -6,12 +6,12 @@
     <title>InventorShims</title>
     <authors>InventorCode</authors>
     <owners>InventorCode</owners>
-    <licenseUrl>https://raw.githubusercontent.com/InventorCode/InventorShims/master/LICENSE</licenseUrl>
+    <license type="expression">MIT</license>
     <projectUrl>https://github.com/InventorCode/InventorShims</projectUrl>
     <iconUrl>https://raw.githubusercontent.com/InventorCode/InventorShims/master/images/InventorCode-brackets-logo-64x64.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>A collection of extension APIs for Autodesk Inventor. </description>
-    <releaseNotes>Summary of changes made in this release of the package.</releaseNotes>
+    <releaseNotes>Initial nuget package release.</releaseNotes>
     <copyright>Copyright 2021</copyright>
     <tags>Autodesk Inventor API</tags>
   </metadata>
