@@ -16,19 +16,19 @@ The minimum supported version of Inventor will be 2020.
 
 ## Documentation
 
-API Documentation can be found at [InventorShims API Docs](https://inventorcode.github.io/InventorShims/api/InventorShims.html).  Documentation is built with DocFX; the documentation source is located at [/docfx/](https://github.com/InventorCode/InventorShims/tree/master/docfx).
+Find the detailed API Documentation at [InventorShims API Docs](https://inventorcode.github.io/InventorShims/api/InventorShims.html).  This documentation is built using DocFX; the documentation source is at [/docfx/](https://github.com/InventorCode/InventorShims/tree/master/docfx).
 
-General documentation can be found [here](https://inventorcode.github.io/InventorShims/articles/quick-start.html).
+For general documentation see the [Quick-Start Guide](https://inventorcode.github.io/InventorShims/articles/quick-start.html).
 
 ## Getting Started
 
-First off, you'll want to get or build a copy of the InventorShims.dll file, or (or advanced users) extract whatever source code you want.  There are several ways to do this:
+First off, you'll want to download or build a copy of the InventorShims.dll file. There are several options available:
 
-1. By visiting the [Releases page](https://github.com/InventorCode/InventorShims/releases), downloading the compiled InventorShims.dll file to your computer, and referencing it in your Inventor iLogic or add-in code.  This will allow you to access the entirety of the InventorShims API.
-2. By cloning this repo and building the dll yourself.
-3. By installing the (forthcoming) nuget package for use in Visual Studio.
-4. By copying out the methods, classes, or modules that are useful and including those in your own vb or C# code-base.
-5. By using the code in this package as reference material and examples to build your own solution.
+1. Include the [InventorShims nuget package](https://www.nuget.org/packages/InventorShims/) in your .net project.
+2. Visit the [Releases page](https://github.com/InventorCode/InventorShims/releases) and downld the compiled InventorShims.dll and referenceit in your Inventor iLogic or add-in code.  This will allow you to access the entirety of the InventorShims API.
+3. Clone this repo and building the dll yourself.
+4. Copy out the methods, classes, or modules that are useful and including those in your own code.
+5. Use the code in this package as reference material or examples.
 
 ## How to Use
 
