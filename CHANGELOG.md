@@ -1,9 +1,23 @@
 
-<a name="1.1.0"></a>
-## [1.1.0](https://github.com/InventorCode/InventorShims/compare/v1.0.0...1.1.0) (2021-02-11)
+<a name="1.1.1"></a>
+## [1.1.1](https://github.com/InventorCode/InventorShims/compare/v1.1.0...1.1.1) (2021-02-11)
 
 ### Chore
 
+* remove ILMerge nuget package
+
+### Docs
+
+* rebuild
+* remove InventorShims-vb
+
+
+<a name="v1.1.0"></a>
+## [v1.1.0](https://github.com/InventorCode/InventorShims/compare/v1.0.0...v1.1.0) (2021-02-11)
+
+### Chore
+
+* update nuget config, changelog, versions
 * add nuspec
 * add logo for nuget package
 * Removed InventorShims-vs from builds
