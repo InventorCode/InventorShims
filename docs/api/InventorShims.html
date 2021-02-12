@@ -90,7 +90,10 @@
       <section><p>Methods that extended the Inventor.Document object with additional functionality.</p>
 </section>
       <h4><a class="xref" href="InventorShims.ParameterShim.html">ParameterShim</a></h4>
-      <section><p>A set of extension methods for the Document Parameters.</p>
+      <section><p>A set of methods to interact with Document Parameters in a more intuitive way.  They will tend to fail more
+gracefully than the built-in parameter manipulation methods.  For example, if you attempt to set the value
+of a parameter that does not exist in the document, that parameter is created instead of throwing an exception
+and crashing your code if you don't handle it.</p>
 </section>
       <h4><a class="xref" href="InventorShims.PathShim.html">PathShim</a></h4>
       <section><p>A collection of static methods to manipulate and test string paths</p>

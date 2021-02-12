@@ -559,6 +559,12 @@ references:
   isSpec: "True"
   fullName: InventorShims.ParameterShim.GetParameterValue
   nameWithType: ParameterShim.GetParameterValue
+- uid: InventorShims.ParameterShim.ParameterIsWritable(Document,System.String)
+  name: ParameterIsWritable(Document, String)
+  href: api/InventorShims.ParameterShim.html#InventorShims_ParameterShim_ParameterIsWritable_Document_System_String_
+  commentId: M:InventorShims.ParameterShim.ParameterIsWritable(Document,System.String)
+  fullName: InventorShims.ParameterShim.ParameterIsWritable(Document, System.String)
+  nameWithType: ParameterShim.ParameterIsWritable(Document, String)
 - uid: InventorShims.ParameterShim.ParameterIsWritable(Parameter)
   name: ParameterIsWritable(Parameter)
   href: api/InventorShims.ParameterShim.html#InventorShims_ParameterShim_ParameterIsWritable_Parameter_

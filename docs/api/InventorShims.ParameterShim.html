@@ -73,7 +73,10 @@
   
   <h1 id="InventorShims_ParameterShim" data-uid="InventorShims.ParameterShim" class="text-break">Class ParameterShim
   </h1>
-  <div class="markdown level0 summary"><p>A set of extension methods for the Document Parameters.</p>
+  <div class="markdown level0 summary"><p>A set of methods to interact with Document Parameters in a more intuitive way.  They will tend to fail more
+gracefully than the built-in parameter manipulation methods.  For example, if you attempt to set the value
+of a parameter that does not exist in the document, that parameter is created instead of throwing an exception
+and crashing your code if you don't handle it.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
@@ -106,7 +109,7 @@
     </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="InventorShims.html">InventorShims</a></h6>
-  <h6><strong>Assembly</strong>: InventorShims_cs.dll</h6>
+  <h6><strong>Assembly</strong>: InventorShims.dll</h6>
   <h5 id="InventorShims_ParameterShim_syntax">Syntax</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static class ParameterShim</code></pre>
@@ -118,11 +121,12 @@
     <a href="https://github.com/InventorCode/InventorShims/new/master/docs-ref-overwrite/new?filename=InventorShims_ParameterShim_GetParameter_Inventor_Document_System_String_.md&amp;value=---%0Auid%3A%20InventorShims.ParameterShim.GetParameter(Inventor.Document%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/InventorCode/InventorShims/blob/master/src/InventorShims-cs/ParameterShim.cs/#L187">View Source</a>
+    <a href="https://github.com/InventorCode/InventorShims/blob/release/src/InventorShims/ParameterShim.cs/#L196">View Source</a>
   </span>
   <a id="InventorShims_ParameterShim_GetParameter_" data-uid="InventorShims.ParameterShim.GetParameter*"></a>
   <h4 id="InventorShims_ParameterShim_GetParameter_Inventor_Document_System_String_" data-uid="InventorShims.ParameterShim.GetParameter(Inventor.Document,System.String)">GetParameter(Inventor.Document, String)</h4>
   <div class="markdown level1 summary"><p>Returns a parameter object from a document object specified by name.</p>
+<br>VB sample:<pre><code>Dim oParameter As Parameter = GetParameter(oDoc, &quot;ParameterName&quot;)</code></pre>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -173,7 +177,7 @@
     <a href="https://github.com/InventorCode/InventorShims/new/master/docs-ref-overwrite/new?filename=InventorShims_ParameterShim_GetParameterNames_Document_.md&amp;value=---%0Auid%3A%20InventorShims.ParameterShim.GetParameterNames(Document)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/InventorCode/InventorShims/blob/master/src/InventorShims-cs/ParameterShim.cs/#L252">View Source</a>
+    <a href="https://github.com/InventorCode/InventorShims/blob/release/src/InventorShims/ParameterShim.cs/#L289">View Source</a>
   </span>
   <a id="InventorShims_ParameterShim_GetParameterNames_" data-uid="InventorShims.ParameterShim.GetParameterNames*"></a>
   <h4 id="InventorShims_ParameterShim_GetParameterNames_Document_" data-uid="InventorShims.ParameterShim.GetParameterNames(Document)">GetParameterNames(Document)</h4>
@@ -223,11 +227,12 @@
     <a href="https://github.com/InventorCode/InventorShims/new/master/docs-ref-overwrite/new?filename=InventorShims_ParameterShim_GetParameters_Document_.md&amp;value=---%0Auid%3A%20InventorShims.ParameterShim.GetParameters(Document)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/InventorCode/InventorShims/blob/master/src/InventorShims-cs/ParameterShim.cs/#L215">View Source</a>
+    <a href="https://github.com/InventorCode/InventorShims/blob/release/src/InventorShims/ParameterShim.cs/#L226">View Source</a>
   </span>
   <a id="InventorShims_ParameterShim_GetParameters_" data-uid="InventorShims.ParameterShim.GetParameters*"></a>
   <h4 id="InventorShims_ParameterShim_GetParameters_Document_" data-uid="InventorShims.ParameterShim.GetParameters(Document)">GetParameters(Document)</h4>
   <div class="markdown level1 summary"><p>Returns the Parameters object in a specified Document object.</p>
+<br>VB sample:<pre><code>Dim oParams As Parameters = GetParameters(oDoc)</code></pre>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -273,11 +278,12 @@
     <a href="https://github.com/InventorCode/InventorShims/new/master/docs-ref-overwrite/new?filename=InventorShims_ParameterShim_GetParameterValue_Inventor_Document_System_String_.md&amp;value=---%0Auid%3A%20InventorShims.ParameterShim.GetParameterValue(Inventor.Document%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/InventorCode/InventorShims/blob/master/src/InventorShims-cs/ParameterShim.cs/#L122">View Source</a>
+    <a href="https://github.com/InventorCode/InventorShims/blob/release/src/InventorShims/ParameterShim.cs/#L129">View Source</a>
   </span>
   <a id="InventorShims_ParameterShim_GetParameterValue_" data-uid="InventorShims.ParameterShim.GetParameterValue*"></a>
   <h4 id="InventorShims_ParameterShim_GetParameterValue_Inventor_Document_System_String_" data-uid="InventorShims.ParameterShim.GetParameterValue(Inventor.Document,System.String)">GetParameterValue(Inventor.Document, String)</h4>
   <div class="markdown level1 summary"><p>Gets the value of a numeric parameter.</p>
+<br>VB sample:<pre><code>Msgbox(GetParameterValue(oDoc, &quot;ParameterName&quot;))</code></pre>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -325,19 +331,77 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/InventorCode/InventorShims/new/master/docs-ref-overwrite/new?filename=InventorShims_ParameterShim_ParameterIsWritable_Parameter_.md&amp;value=---%0Auid%3A%20InventorShims.ParameterShim.ParameterIsWritable(Parameter)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/InventorCode/InventorShims/new/master/docs-ref-overwrite/new?filename=InventorShims_ParameterShim_ParameterIsWritable_Document_System_String_.md&amp;value=---%0Auid%3A%20InventorShims.ParameterShim.ParameterIsWritable(Document%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/InventorCode/InventorShims/blob/master/src/InventorShims-cs/ParameterShim.cs/#L237">View Source</a>
+    <a href="https://github.com/InventorCode/InventorShims/blob/release/src/InventorShims/ParameterShim.cs/#L266">View Source</a>
   </span>
   <a id="InventorShims_ParameterShim_ParameterIsWritable_" data-uid="InventorShims.ParameterShim.ParameterIsWritable*"></a>
-  <h4 id="InventorShims_ParameterShim_ParameterIsWritable_Parameter_" data-uid="InventorShims.ParameterShim.ParameterIsWritable(Parameter)">ParameterIsWritable(Parameter)</h4>
-  <div class="markdown level1 summary"><p>Tests if the provided parameter is writable.  Only kModelParameters and kUserParameters return true.</p>
+  <h4 id="InventorShims_ParameterShim_ParameterIsWritable_Document_System_String_" data-uid="InventorShims.ParameterShim.ParameterIsWritable(Document,System.String)">ParameterIsWritable(Document, String)</h4>
+  <div class="markdown level1 summary"><p>Tests if the parameter matching the provided parameterName is writable.  Only kModelParameters and kUserParameters return true.</p>
+<br>VB sample:<pre><code>Dim answer As Boolean = ParameterIsWritable(oDoc, &quot;ThisParameterName&quot;)</code></pre>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static bool ParameterIsWritable(Parameter parameter)</code></pre>
+    <pre><code class="lang-csharp hljs">public static bool ParameterIsWritable(Document document, string parameterName)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Document</span></td>
+        <td><span class="parametername">document</span></td>
+        <td><p>Document</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">parameterName</span></td>
+        <td><p>String</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>Boolean</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/InventorCode/InventorShims/new/master/docs-ref-overwrite/new?filename=InventorShims_ParameterShim_ParameterIsWritable_Parameter_.md&amp;value=---%0Auid%3A%20InventorShims.ParameterShim.ParameterIsWritable(Parameter)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/InventorCode/InventorShims/blob/release/src/InventorShims/ParameterShim.cs/#L249">View Source</a>
+  </span>
+  <a id="InventorShims_ParameterShim_ParameterIsWritable_" data-uid="InventorShims.ParameterShim.ParameterIsWritable*"></a>
+  <h4 id="InventorShims_ParameterShim_ParameterIsWritable_Parameter_" data-uid="InventorShims.ParameterShim.ParameterIsWritable(Parameter)">ParameterIsWritable(Parameter)</h4>
+  <div class="markdown level1 summary"><p>Tests if the provided parameter is writable.  Only kModelParameters and kUserParameters return true.</p>
+<br>VB sample:<pre><code>Dim answer As Boolean = ParameterIsWritable(oParameter)</code></pre>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool ParameterIsWritable(this Parameter parameter)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -378,11 +442,12 @@
     <a href="https://github.com/InventorCode/InventorShims/new/master/docs-ref-overwrite/new?filename=InventorShims_ParameterShim_RemoveParameter_Inventor_Document_System_String_.md&amp;value=---%0Auid%3A%20InventorShims.ParameterShim.RemoveParameter(Inventor.Document%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/InventorCode/InventorShims/blob/master/src/InventorShims-cs/ParameterShim.cs/#L157">View Source</a>
+    <a href="https://github.com/InventorCode/InventorShims/blob/release/src/InventorShims/ParameterShim.cs/#L165">View Source</a>
   </span>
   <a id="InventorShims_ParameterShim_RemoveParameter_" data-uid="InventorShims.ParameterShim.RemoveParameter*"></a>
   <h4 id="InventorShims_ParameterShim_RemoveParameter_Inventor_Document_System_String_" data-uid="InventorShims.ParameterShim.RemoveParameter(Inventor.Document,System.String)">RemoveParameter(Inventor.Document, String)</h4>
   <div class="markdown level1 summary"><p>Removes a parameter from a Document object if it exists.</p>
+<br>VB sample:<pre><code>RemoveParameter(oDoc, &quot;ParameterName&quot;)</code></pre>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -417,11 +482,12 @@
     <a href="https://github.com/InventorCode/InventorShims/new/master/docs-ref-overwrite/new?filename=InventorShims_ParameterShim_SetParameterValue_Document_System_String_System_Boolean_System_Boolean_.md&amp;value=---%0Auid%3A%20InventorShims.ParameterShim.SetParameterValue(Document%2CSystem.String%2CSystem.Boolean%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/InventorCode/InventorShims/blob/master/src/InventorShims-cs/ParameterShim.cs/#L87">View Source</a>
+    <a href="https://github.com/InventorCode/InventorShims/blob/release/src/InventorShims/ParameterShim.cs/#L93">View Source</a>
   </span>
   <a id="InventorShims_ParameterShim_SetParameterValue_" data-uid="InventorShims.ParameterShim.SetParameterValue*"></a>
   <h4 id="InventorShims_ParameterShim_SetParameterValue_Document_System_String_System_Boolean_System_Boolean_" data-uid="InventorShims.ParameterShim.SetParameterValue(Document,System.String,System.Boolean,System.Boolean)">SetParameterValue(Document, String, Boolean, Boolean)</h4>
   <div class="markdown level1 summary"><p>Sets the value of a boolean parameter, or creates one if one does not exist.</p>
+<br>VB sample:<pre><code>SetParameterValue(oDoc, &quot;ParameterName&quot;, true))</code></pre>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -467,11 +533,12 @@
     <a href="https://github.com/InventorCode/InventorShims/new/master/docs-ref-overwrite/new?filename=InventorShims_ParameterShim_SetParameterValue_Document_System_String_System_String_System_Boolean_.md&amp;value=---%0Auid%3A%20InventorShims.ParameterShim.SetParameterValue(Document%2CSystem.String%2CSystem.String%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/InventorCode/InventorShims/blob/master/src/InventorShims-cs/ParameterShim.cs/#L52">View Source</a>
+    <a href="https://github.com/InventorCode/InventorShims/blob/release/src/InventorShims/ParameterShim.cs/#L57">View Source</a>
   </span>
   <a id="InventorShims_ParameterShim_SetParameterValue_" data-uid="InventorShims.ParameterShim.SetParameterValue*"></a>
   <h4 id="InventorShims_ParameterShim_SetParameterValue_Document_System_String_System_String_System_Boolean_" data-uid="InventorShims.ParameterShim.SetParameterValue(Document,System.String,System.String,System.Boolean)">SetParameterValue(Document, String, String, Boolean)</h4>
   <div class="markdown level1 summary"><p>Sets the value of a text parameter, or creates one if one does not exist.</p>
+<br>VB sample:<pre><code>SetParameterValue(oDoc, &quot;ParameterName&quot;, &quot;This is a text value!&quot;))</code></pre>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -517,11 +584,12 @@
     <a href="https://github.com/InventorCode/InventorShims/new/master/docs-ref-overwrite/new?filename=InventorShims_ParameterShim_SetParameterValue_Document_System_String_System_String_System_String_System_Boolean_.md&amp;value=---%0Auid%3A%20InventorShims.ParameterShim.SetParameterValue(Document%2CSystem.String%2CSystem.String%2CSystem.String%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/InventorCode/InventorShims/blob/master/src/InventorShims-cs/ParameterShim.cs/#L20">View Source</a>
+    <a href="https://github.com/InventorCode/InventorShims/blob/release/src/InventorShims/ParameterShim.cs/#L24">View Source</a>
   </span>
   <a id="InventorShims_ParameterShim_SetParameterValue_" data-uid="InventorShims.ParameterShim.SetParameterValue*"></a>
   <h4 id="InventorShims_ParameterShim_SetParameterValue_Document_System_String_System_String_System_String_System_Boolean_" data-uid="InventorShims.ParameterShim.SetParameterValue(Document,System.String,System.String,System.String,System.Boolean)">SetParameterValue(Document, String, String, String, Boolean)</h4>
   <div class="markdown level1 summary"><p>Sets the value of a numeric parameter, or creates one if one does not exist.</p>
+<br>VB sample:<pre><code>SetParameterValue(oDoc, &quot;ParameterName&quot;, 42, &quot;in&quot;))</code></pre>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -579,7 +647,7 @@
                     <a href="https://github.com/InventorCode/InventorShims/new/master/docs-ref-overwrite/new?filename=InventorShims_ParameterShim.md&amp;value=---%0Auid%3A%20InventorShims.ParameterShim%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/InventorCode/InventorShims/blob/master/src/InventorShims-cs/ParameterShim.cs/#L10" class="contribution-link">View Source</a>
+                    <a href="https://github.com/InventorCode/InventorShims/blob/release/src/InventorShims/ParameterShim.cs/#L13" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>
