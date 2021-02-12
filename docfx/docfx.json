@@ -4,8 +4,7 @@
       "src": [
         {
           "files": [
-            "InventorShims-cs/**.csproj",
-            "InventorShims-vb/**.vbproj"
+            "InventorShims/**.csproj"
           ],
           "src": "../src"
         }
