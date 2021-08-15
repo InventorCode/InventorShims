@@ -9,7 +9,7 @@
       "output": {
         ".html": {
           "relative_path": "api/InventorShims.ApplicationShim.html",
-          "hash": "35/vz1bGE/IdrdpfJtpxkA=="
+          "hash": "vQA8nAHunJn3yRuFSnD6VA=="
         }
       },
       "is_incremental": false,
@@ -21,7 +21,7 @@
       "output": {
         ".html": {
           "relative_path": "api/InventorShims.AttributeShim.html",
-          "hash": "jGDBl9n+4QE/yT+KVbwjxA=="
+          "hash": "dQL2RGx0g3oOH6uZ9GnlEA=="
         }
       },
       "is_incremental": false,
@@ -33,7 +33,7 @@
       "output": {
         ".html": {
           "relative_path": "api/InventorShims.Conversions.html",
-          "hash": "BqSiL8u/pU91jsCYCW1gJw=="
+          "hash": "GJwKuqFiHYGE/s7CgJf04g=="
         }
       },
       "is_incremental": false,
@@ -45,7 +45,19 @@
       "output": {
         ".html": {
           "relative_path": "api/InventorShims.DocumentShim.html",
-          "hash": "nUCw1hEvxru84/5R2GaI6A=="
+          "hash": "GALg5QplK3bVbzpojV1NfA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/InventorShims.ExternalRuleDirectories.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/InventorShims.ExternalRuleDirectories.html",
+          "hash": "nYT1q/puZYjVh1Bl/tmdkw=="
         }
       },
       "is_incremental": false,
@@ -57,7 +69,7 @@
       "output": {
         ".html": {
           "relative_path": "api/InventorShims.ParameterShim.html",
-          "hash": "lSOq5+5Tap5iKchxb99u+Q=="
+          "hash": "jeUdJPK3RAGbYGh5X96txA=="
         }
       },
       "is_incremental": false,
@@ -69,7 +81,7 @@
       "output": {
         ".html": {
           "relative_path": "api/InventorShims.PathShim.html",
-          "hash": "fV+NYk/3RLMYyfsDdpv07w=="
+          "hash": "j++s5ROnUbxCwf3XrnSDrQ=="
         }
       },
       "is_incremental": false,
@@ -81,7 +93,7 @@
       "output": {
         ".html": {
           "relative_path": "api/InventorShims.PropertyShim.html",
-          "hash": "rm/tuaNwW/tGAb0M/AqnnA=="
+          "hash": "agCVICuAC3SDWtsuzds05A=="
         }
       },
       "is_incremental": false,
@@ -93,7 +105,7 @@
       "output": {
         ".html": {
           "relative_path": "api/InventorShims.StringShim.html",
-          "hash": "nMVBYyuMzw16ZGM+HJOD4A=="
+          "hash": "E5Oggh536B9RK3xfC6U4hQ=="
         }
       },
       "is_incremental": false,
@@ -105,7 +117,7 @@
       "output": {
         ".html": {
           "relative_path": "api/InventorShims.TranslatorShim.DwgExporter.html",
-          "hash": "o5FINRlzv6FRjvJcbhx02g=="
+          "hash": "wCx5ua3GAUVUB8A2O4ntCA=="
         }
       },
       "is_incremental": false,
@@ -117,7 +129,7 @@
       "output": {
         ".html": {
           "relative_path": "api/InventorShims.TranslatorShim.PdfExporter.html",
-          "hash": "MiV3cv9l+JzyD4LckVOfDQ=="
+          "hash": "gfYaLMmzfiplaRPIGsOQ+g=="
         }
       },
       "is_incremental": false,
@@ -129,7 +141,7 @@
       "output": {
         ".html": {
           "relative_path": "api/InventorShims.TranslatorShim.StepExporter.html",
-          "hash": "WjGirCgmqGxDEKimBkDslg=="
+          "hash": "gMadthRtcJE5Z/tcI1I2fA=="
         }
       },
       "is_incremental": false,
@@ -141,7 +153,7 @@
       "output": {
         ".html": {
           "relative_path": "api/InventorShims.TranslatorShim.StepImporter.html",
-          "hash": "evX7xTCw10qv0cVun7nAZg=="
+          "hash": "t8/5V4J/0TlpXSSEaJuchQ=="
         }
       },
       "is_incremental": false,
@@ -153,7 +165,7 @@
       "output": {
         ".html": {
           "relative_path": "api/InventorShims.TranslatorShim.StepProtocolEnum.html",
-          "hash": "jBFywMI2PTofljZBjmtUDA=="
+          "hash": "sbjLyEDpQRg1UlzXmdISIQ=="
         }
       },
       "is_incremental": false,
@@ -165,7 +177,7 @@
       "output": {
         ".html": {
           "relative_path": "api/InventorShims.TranslatorShim.StlExporter.html",
-          "hash": "FrRZUkJy+gk4QeztRBLM2Q=="
+          "hash": "6Ri56zV0T8Mh6bCHFCTPWQ=="
         }
       },
       "is_incremental": false,
@@ -177,7 +189,7 @@
       "output": {
         ".html": {
           "relative_path": "api/InventorShims.TranslatorShim.StlResolutionEnum.html",
-          "hash": "F1U9/bkvP9sElNyhdDk/Dw=="
+          "hash": "pOITyNLgibb53D2esgUq3g=="
         }
       },
       "is_incremental": false,
@@ -189,7 +201,7 @@
       "output": {
         ".html": {
           "relative_path": "api/InventorShims.TranslatorShim.html",
-          "hash": "Oj+lhfQDuIC+rnPWiYnSQQ=="
+          "hash": "fVb8AdUPpYJgnxamoND/mw=="
         }
       },
       "is_incremental": false,
@@ -201,7 +213,7 @@
       "output": {
         ".html": {
           "relative_path": "api/InventorShims.UiShim.html",
-          "hash": "BZP7Ag3DALHts9pGXnXceA=="
+          "hash": "QZqE35Jbt2BlZHyJWSi1Iw=="
         }
       },
       "is_incremental": false,
@@ -213,7 +225,7 @@
       "output": {
         ".html": {
           "relative_path": "api/InventorShims.html",
-          "hash": "lisuNKcv0PRBxLT8u+6LSA=="
+          "hash": "bxJBQRX7lvzo3lgHEIsoLw=="
         }
       },
       "is_incremental": false,
@@ -225,7 +237,7 @@
       "output": {
         ".html": {
           "relative_path": "api/index.html",
-          "hash": "xaCg74fcAIo2oYbx01jvKw=="
+          "hash": "hO+0bARyTa52U7rlhJutmg=="
         }
       },
       "is_incremental": false,
@@ -237,7 +249,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "uKjtDwY5d+ajcE9r7xghMA=="
+          "hash": "kMVOxhil0lbeAQY+8J9ZnQ=="
         }
       },
       "is_incremental": false,
@@ -249,7 +261,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/changelog.html",
-          "hash": "gkJdHU0V4JV0XOyAFHwC4g=="
+          "hash": "0uW1ctWLSiym6zgw87HZ6A=="
         }
       },
       "is_incremental": false,
@@ -261,7 +273,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/contribution-guidelines.html",
-          "hash": "SJdZOjHKzAE7gOC/6hzgyA=="
+          "hash": "T88Cbw+DiHPDhOY2EPBDMw=="
         }
       },
       "is_incremental": false,
@@ -273,7 +285,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/quick-start.html",
-          "hash": "JMxkdfLkK0nzE93pNWHPaA=="
+          "hash": "0bi411u2OHPmTSoBcvZYxg=="
         }
       },
       "is_incremental": false,
@@ -297,7 +309,7 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "99E2PVvqSg2ztgIGlZHGFw=="
+          "hash": "atVvCI2HOM4a3nXOFdR92g=="
         }
       },
       "is_incremental": false,
@@ -336,7 +348,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 18,
+          "total_file_count": 19,
           "skipped_file_count": 0
         },
         "TocDocumentProcessor": {
