@@ -1,8 +1,9 @@
 
-## [Unreleased]
+## [1.2.0] - 2021-08-15
 
 ### Added
 - ExternalRuleDirectories object allows you to manipulate the iLogic Addin's list of External Rules Directories in a more straightforward manner.
+
 ### Fixed
 - Added conventional commits keywords to gitversion configuration.
 
