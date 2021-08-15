@@ -1,4 +1,8 @@
 
+## [Unreleased]
+
+### Added
+- ExternalRuleDirectories object allows you to manipulate the iLogic Addin's list of External Rules Directories in a more straightforward manner.
 <a name="1.1.1"></a>
 ## [1.1.1](https://github.com/InventorCode/InventorShims/compare/v1.1.0...1.1.1) (2021-02-11)
 
