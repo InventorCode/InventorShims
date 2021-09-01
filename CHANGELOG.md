@@ -4,7 +4,9 @@
 - ExternalRuleDirectories object now implements the IDisposable interface, allowing the using keyword.
 
 ### Fixed
-- ExternalRuleDirectories.Add was not adding the supplied strings to the directory list.
+- ExternalRuleDirectories.Add was not adding entires properly.
+- ExternalRuleDirectories.Remove was not removing entires properly.
+
 ## [1.2.0] - 2021-08-15
 
 ### Added
