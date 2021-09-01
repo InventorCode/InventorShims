@@ -46,6 +46,7 @@ namespace InventorShims
             }
         }
 
+        private List<string> _directories = new List<string> { };
         public List<string> Directories
         {
             get
@@ -72,6 +73,12 @@ namespace InventorShims
         public void Add(string directory)
         {
             if (!Directories.Contains(directory))
+            {
+                var _directories = Directories;
+                _directories.Add(directory);
+                Directories = _directories;
+            }
+
                 Directories.Add(directory);
         }
 
@@ -81,7 +88,9 @@ namespace InventorShims
         /// <param name="directory">Directory to remove</param>
         public void Remove(string directory)
         {
-            Directories.Remove(directory);
+            var _directories = Directories;
+            _directories.Remove(directory);
+            Directories = _directories;
         }
 
         /// <summary>
@@ -120,8 +129,9 @@ namespace InventorShims
 
                 // TODO: free unmanaged resources (unmanaged objects) and override finalizer
                 Marshal.ReleaseComObject(iLogicAuto);
-
                 Marshal.ReleaseComObject(_app);
+                iLogicAuto = null;
+                _app = null;
 
                 // TODO: set large fields to null
                 disposedValue = true;
