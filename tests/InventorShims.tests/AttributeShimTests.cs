@@ -7,6 +7,15 @@ namespace AttributeShim_Tests
     [TestClass]
     public class AttributeExistss
     {
+
+        [TestInitialize]
+        public void SetProject()
+        {
+            Inventor.Application app = ApplicationShim.Instance();
+            DesignProject project = app.DesignProjectManager.DesignProjects.ItemByName["Default.ipj"];
+            project.Activate();
+        }
+
         [TestMethod]
         public void AttDoesNotExist_returnsFalse()
         {
@@ -357,7 +366,7 @@ namespace AttributeShim_Tests
 
             //create the test Attribute
             var test = "test string";
-            
+
             AttributeShim.SetAttributeValue(doc, "testSet", "testAttribute", test);
             var result = doc.AttributeSets["testSet"]["testAttribute"].Value;
 
