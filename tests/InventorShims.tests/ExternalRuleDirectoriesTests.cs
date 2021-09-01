@@ -1,12 +1,29 @@
 ﻿using InventorShims;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Collections.Generic;
+using System.Windows.Forms;
 
 namespace ExternalRuleDirectories_Tests
 {
     [TestClass]
     public class ExternalRuleDirectoriesTests
     {
+        [TestMethod]
+        public void Dispose_DoesNotThrowError()
+        {
+            ExternalRuleDirectories shim = new ExternalRuleDirectories();
+            shim.Dispose();
+        }
+
+        [TestMethod]
+        public void Using_DoesNotThrowError()
+        {
+            using (ExternalRuleDirectories shim = new ExternalRuleDirectories())
+            {
+
+            }
+        }
+
         [TestMethod]
         public void Constructor_doesNotThrowError()
         {
@@ -30,19 +47,21 @@ namespace ExternalRuleDirectories_Tests
         [TestMethod]
         public void Add_Works()
         {
-            ExternalRuleDirectories shim = new ExternalRuleDirectories();
-            var test = @"C:\Users\Default\AppData\Local\Temp\";
-            shim.Add(test);
-
-            List<string> answer = shim.Directories;
-
-            try
+            using (ExternalRuleDirectories shim = new ExternalRuleDirectories())
             {
-                Assert.IsTrue(answer.Contains(test));
-            }
-            finally
-            {
-                shim.Remove(test);
+                var test = @"C:\Users\Default\AppData\Local\Temp\";
+                shim.Add(test);
+
+                List<string> answer = shim.Directories;
+
+                try
+                {
+                    Assert.IsTrue(answer.Contains(test));
+                }
+                finally
+                {
+                    shim.Remove(test);
+                }
             }
         }
 
