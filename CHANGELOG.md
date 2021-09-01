@@ -1,4 +1,7 @@
+## [Unrealeased]
 
+### Added
+- ExternalRuleDirectories object now implements the IDisposable interface, allowing the using keyword.
 ## [1.2.0] - 2021-08-15
 
 ### Added

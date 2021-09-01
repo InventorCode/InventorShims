@@ -1,24 +1,29 @@
 ﻿using Inventor;
 using System;
 using System.Collections.Generic;
+using System.Runtime.InteropServices;
 
 namespace InventorShims
 {
     /// <summary>
     /// A class that allows for simpler manipulation of the iLogic Addin's list of External Rule Directories.
     /// </summary>
-    public class ExternalRuleDirectories
+    public class ExternalRuleDirectories : IDisposable
     {
+        private bool disposedValue;
+        private Inventor.Application _app;
         private dynamic iLogicAddIn { get; set; }
         private dynamic iLogicAuto { get; set; }
 
         public ExternalRuleDirectories()
         {
-            Initialize(ApplicationShim.Instance());
+            _app = ApplicationShim.Instance();
+            Initialize(_app);
         }
 
-        public ExternalRuleDirectories(Inventor.Application _app)
+        public ExternalRuleDirectories(Inventor.Application local_app)
         {
+            _app = local_app;
             Initialize(_app);
         }
 
@@ -103,5 +108,38 @@ namespace InventorShims
         /// </summary>
         public int Count { get { return Directories.Count; } }
 
+        protected virtual void Dispose(bool disposing)
+        {
+            if (!disposedValue)
+            {
+                if (disposing)
+                {
+                    iLogicAddIn = null;
+                    // TODO: dispose managed state (managed objects)
+                }
+
+                // TODO: free unmanaged resources (unmanaged objects) and override finalizer
+                Marshal.ReleaseComObject(iLogicAuto);
+
+                Marshal.ReleaseComObject(_app);
+
+                // TODO: set large fields to null
+                disposedValue = true;
+            }
+        }
+
+        // // TODO: override finalizer only if 'Dispose(bool disposing)' has code to free unmanaged resources
+        ~ExternalRuleDirectories()
+        {
+            // Do not change this code. Put cleanup code in 'Dispose(bool disposing)' method
+            Dispose(disposing: false);
+        }
+
+        public void Dispose()
+        {
+            // Do not change this code. Put cleanup code in 'Dispose(bool disposing)' method
+            Dispose(disposing: true);
+            GC.SuppressFinalize(this);
+        }
     }
 }
