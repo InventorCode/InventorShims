@@ -46,6 +46,7 @@ namespace InventorShims
             }
         }
 
+        private List<string> _directories = new List<string> { };
         public List<string> Directories
         {
             get
@@ -72,6 +73,12 @@ namespace InventorShims
         public void Add(string directory)
         {
             if (!Directories.Contains(directory))
+            {
+                var _directories = Directories;
+                _directories.Add(directory);
+                Directories = _directories;
+            }
+
                 Directories.Add(directory);
         }
 
