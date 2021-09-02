@@ -1,20 +1,16 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System;
+﻿using Inventor;
 using InventorShims;
-using Inventor;
-using System.Windows.Forms;
+using NUnit.Framework;
 
 namespace ParameterShim_Tests
 {
-    [TestClass]
+    [TestFixture]
     public class GetParameter
     {
-        [TestMethod]
+        [Test]
         public void ParameterExists_returnsParameter()
         {
-            Inventor.Application app = ApplicationShim.Instance();
-            var path = app.DesignProjectManager.ActiveDesignProject.TemplatesPath;
-            Document doc = app.Documents.Add(DocumentTypeEnum.kPartDocumentObject, path + "Standard.ipt", true);
+            var doc = tests.TestUtilities.CreatePartDocument();
 
             doc.SetParameterValue("testing", "16", "cm");
             Parameter test = doc.GetParameter("testing");
@@ -24,15 +20,12 @@ namespace ParameterShim_Tests
                 Assert.IsNotNull(test);
             }
             finally { doc.Close(true); }
-
         }
 
-        [TestMethod]
+        [Test]
         public void ParameterDoesNotExist_returnsNull()
         {
-            Inventor.Application app = ApplicationShim.Instance();
-            var path = app.DesignProjectManager.ActiveDesignProject.TemplatesPath;
-            Document doc = app.Documents.Add(DocumentTypeEnum.kPartDocumentObject, path + "Standard.ipt", true);
+            var doc = tests.TestUtilities.CreatePartDocument();
 
             Parameter test = doc.GetParameter("testing");
 
@@ -41,21 +34,16 @@ namespace ParameterShim_Tests
                 Assert.IsNull(test);
             }
             finally { doc.Close(true); }
-
         }
     }
 
-
-            [TestClass]
+    [TestFixture]
     public class SetParameterValue
     {
-
-        [TestMethod]
+        [Test]
         public void Numeric_CreatesNew()
         {
-            Inventor.Application app = ApplicationShim.Instance();
-            var path = app.DesignProjectManager.ActiveDesignProject.TemplatesPath;
-            Document doc = app.Documents.Add(DocumentTypeEnum.kPartDocumentObject, path + "Standard.ipt", true);
+            var doc = tests.TestUtilities.CreatePartDocument();
 
             doc.SetParameterValue("testing", "16", "cm");
 
@@ -73,12 +61,10 @@ namespace ParameterShim_Tests
             }
         }
 
-        [TestMethod]
+        [Test]
         public void Numeric_OverwritesExisting()
         {
-            Inventor.Application app = ApplicationShim.Instance();
-            var path = app.DesignProjectManager.ActiveDesignProject.TemplatesPath;
-            Document doc = app.Documents.Add(DocumentTypeEnum.kPartDocumentObject, path + "Standard.ipt", true);
+            var doc = tests.TestUtilities.CreatePartDocument();
 
             doc.SetParameterValue("testing", "16", "cm");
             doc.SetParameterValue("testing", "19", "cm");
@@ -97,12 +83,10 @@ namespace ParameterShim_Tests
             }
         }
 
-        [TestMethod]
+        [Test]
         public void Text_CreatesNew()
         {
-            Inventor.Application app = ApplicationShim.Instance();
-            var path = app.DesignProjectManager.ActiveDesignProject.TemplatesPath;
-            Document doc = app.Documents.Add(DocumentTypeEnum.kPartDocumentObject, path + "Standard.ipt", true);
+            var doc = tests.TestUtilities.CreatePartDocument();
 
             doc.SetParameterValue("testing", "This is a test");
 
@@ -120,12 +104,10 @@ namespace ParameterShim_Tests
             }
         }
 
-        [TestMethod]
+        [Test]
         public void Text_OverwritesExisting()
         {
-            Inventor.Application app = ApplicationShim.Instance();
-            var path = app.DesignProjectManager.ActiveDesignProject.TemplatesPath;
-            Document doc = app.Documents.Add(DocumentTypeEnum.kPartDocumentObject, path + "Standard.ipt", true);
+            var doc = tests.TestUtilities.CreatePartDocument();
 
             doc.SetParameterValue("testing", "This is a test");
             doc.SetParameterValue("testing", "This is a test60");
@@ -144,13 +126,10 @@ namespace ParameterShim_Tests
             }
         }
 
-
-        [TestMethod]
+        [Test]
         public void Bool_CreatesNew()
         {
-            Inventor.Application app = ApplicationShim.Instance();
-            var path = app.DesignProjectManager.ActiveDesignProject.TemplatesPath;
-            Document doc = app.Documents.Add(DocumentTypeEnum.kPartDocumentObject, path + "Standard.ipt", true);
+            var doc = tests.TestUtilities.CreatePartDocument();
 
             doc.SetParameterValue("testing", true);
 
@@ -168,12 +147,10 @@ namespace ParameterShim_Tests
             }
         }
 
-        [TestMethod]
+        [Test]
         public void Bool_OverwritesExisting()
         {
-            Inventor.Application app = ApplicationShim.Instance();
-            var path = app.DesignProjectManager.ActiveDesignProject.TemplatesPath;
-            Document doc = app.Documents.Add(DocumentTypeEnum.kPartDocumentObject, path + "Standard.ipt", true);
+            var doc = tests.TestUtilities.CreatePartDocument();
 
             doc.SetParameterValue("testing", true);
             doc.SetParameterValue("testing", false);
@@ -193,15 +170,13 @@ namespace ParameterShim_Tests
         }
     }
 
-    [TestClass]
+    [TestFixture]
     public class GetParameterValue
     {
-        [TestMethod]
+        [Test]
         public void GoodInput_ReturnsValue()
         {
-            Inventor.Application app = ApplicationShim.Instance();
-            var path = app.DesignProjectManager.ActiveDesignProject.TemplatesPath;
-            Document doc = app.Documents.Add(DocumentTypeEnum.kPartDocumentObject, path + "Standard.ipt", true);
+            var doc = tests.TestUtilities.CreatePartDocument();
 
             doc.SetParameterValue("testing", "16", "cm");
 
@@ -215,16 +190,12 @@ namespace ParameterShim_Tests
             {
                 doc.Close(true);
             }
-
         }
 
-
-        [TestMethod]
+        [Test]
         public void NoParameter_ReturnsEmpty()
         {
-            Inventor.Application app = ApplicationShim.Instance();
-            var path = app.DesignProjectManager.ActiveDesignProject.TemplatesPath;
-            Document doc = app.Documents.Add(DocumentTypeEnum.kPartDocumentObject, path + "Standard.ipt", true);
+            var doc = tests.TestUtilities.CreatePartDocument();
 
             var testing = doc.GetParameterValue("testing");
 
@@ -239,16 +210,13 @@ namespace ParameterShim_Tests
         }
     }
 
-    [TestClass]
+    [TestFixture]
     public class RemoveParameter
     {
-
-        [TestMethod]
+        [Test]
         public void Works()
         {
-            Inventor.Application app = ApplicationShim.Instance();
-            var path = app.DesignProjectManager.ActiveDesignProject.TemplatesPath;
-            Document doc = app.Documents.Add(DocumentTypeEnum.kPartDocumentObject, path + "Standard.ipt", true);
+            var doc = tests.TestUtilities.CreatePartDocument();
 
             doc.SetParameterValue("testing", "16", "cm");
             doc.RemoveParameter("testing");
@@ -263,18 +231,15 @@ namespace ParameterShim_Tests
                 doc.Close(true);
             }
         }
-
     }
 
-    [TestClass]
+    [TestFixture]
     public class ParameterIsWritable
     {
-        [TestMethod]
+        [Test]
         public void GoodInput_ReturnsTrue()
         {
-            Inventor.Application app = ApplicationShim.Instance();
-            var path = app.DesignProjectManager.ActiveDesignProject.TemplatesPath;
-            Document doc = app.Documents.Add(DocumentTypeEnum.kPartDocumentObject, path + "Standard.ipt", true);
+            var doc = tests.TestUtilities.CreatePartDocument();
 
             doc.SetParameterValue("testing", "16", "cm");
 
@@ -288,15 +253,12 @@ namespace ParameterShim_Tests
             {
                 doc.Close(true);
             }
-
         }
 
-        [TestMethod]
+        [Test]
         public void NoParameter_ReturnsFalse()
         {
-            Inventor.Application app = ApplicationShim.Instance();
-            var path = app.DesignProjectManager.ActiveDesignProject.TemplatesPath;
-            Document doc = app.Documents.Add(DocumentTypeEnum.kPartDocumentObject, path + "Standard.ipt", true);
+            var doc = tests.TestUtilities.CreatePartDocument();
 
             //doc.SetParameterValue("testing", "16", "cm");
 
@@ -310,7 +272,6 @@ namespace ParameterShim_Tests
             {
                 doc.Close(true);
             }
-
         }
     }
-    }
+}

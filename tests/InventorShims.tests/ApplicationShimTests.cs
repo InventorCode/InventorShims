@@ -1,19 +1,17 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using InventorShims;
+using NUnit.Framework;
 using System;
-using System.Linq.Expressions;
-using Inventor;
-using InventorShims;
 using System.Diagnostics;
+using System.Runtime.InteropServices;
 
 namespace ApplicationShimTests
 {
-    [TestClass]
+    [TestFixture]
     public class Instance
     {
-        [TestMethod]
+        [Test]
         public void GetsOrStartsInstance()
         {
-
             Inventor.Application app = ApplicationShim.Instance();
             app.Visible = true;
 
@@ -25,19 +23,17 @@ namespace ApplicationShimTests
             app.Quit();
             if (procs.Length == 1) { procs[0].WaitForExit(); }
 
+            Marshal.ReleaseComObject(app);
             app = null;
-            GC.Collect();
-            GC.WaitForPendingFinalizers();
-
+            //GC.Collect();
+            //GC.WaitForPendingFinalizers();
         }
     }
 
-
-    [TestClass]
+    [TestFixture]
     public class NewInstance
     {
-
-        [TestMethod]
+        [Test]
         public void Works_isVisible()
         {
             Inventor.Application app = null;
@@ -47,7 +43,6 @@ namespace ApplicationShimTests
             {
                 Assert.IsNotNull(app);
             }
-
             finally
             {
                 if (app != null)
@@ -55,14 +50,16 @@ namespace ApplicationShimTests
                     Process[] procs = Process.GetProcessesByName("Inventor");
                     app.Quit();
                     if (procs.Length == 1) { procs[0].WaitForExit(); }
+
+                    Marshal.ReleaseComObject(app);
                     app = null;
-                    GC.Collect();
-                    GC.WaitForPendingFinalizers();
+                    //GC.Collect();
+                    //GC.WaitForPendingFinalizers();
                 }
             }
         }
 
-        [TestMethod]
+        [Test]
         public void Works_isInvisible()
         {
             Inventor.Application app = null;
@@ -72,7 +69,6 @@ namespace ApplicationShimTests
             {
                 Assert.IsNotNull(app);
             }
-
             finally
             {
                 if (app != null)
@@ -81,14 +77,12 @@ namespace ApplicationShimTests
                     app.Quit();
                     if (procs.Length == 1) { procs[0].WaitForExit(); }
 
+                    Marshal.ReleaseComObject(app);
                     app = null;
-                    GC.Collect();
-                    GC.WaitForPendingFinalizers();
+                    //GC.Collect();
+                    //GC.WaitForPendingFinalizers();
                 }
             }
-
         }
     }
-
 }
-

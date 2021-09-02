@@ -1,73 +1,32 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System;
-using Inventor;
+﻿using Inventor;
 using InventorShims;
+using NUnit.Framework;
+using System.Runtime.InteropServices;
 
 namespace PathShims_Tests
 {
-    [TestClass]
+    [TestFixture]
     public class UpOneLevel
     {
-
-        [TestMethod]
-        public void UpOneLevel_TrailingBackslash()
+        [TestCase(@"C:\A\Test\String\", @"C:\A\Test\")]
+        [TestCase(@"C:\A\Test\String", @"C:\A\Test\")]
+        [TestCase(@"C:\", @"C:")]
+        [TestCase(@"C:/Users/", @"C:/")]
+        [TestCase(@"C:\A\", @"C:\")]
+        [TestCase("C:", null)]
+        [Test]
+        public void UpOneLevel_MultipleInputs(string stringA, string stringB)
         {
-            var stringA = @"C:\A\Test\String\";
-            var stringB = @"C:\A\Test\";
             Assert.AreEqual(PathShim.UpOneLevel(stringA), stringB);
         }
-
-        [TestMethod]
-        public void UpOneLevel_NoTrailingBackslash()
-        {
-            var stringA = @"C:\A\Test\String";
-            var stringB = @"C:\A\Test\";
-            Assert.AreEqual(PathShim.UpOneLevel(stringA), stringB);
-        }
-
-        [TestMethod]
-        public void UpOneLevel_NoBackslashes()
-        {
-            var stringA = @"C:";
-            string stringB = "";
-            Assert.AreNotEqual(PathShim.UpOneLevel(stringA), stringB);
-        }
-
-        [TestMethod]
-        public void UpOneLevel_TwoLevelWithTrailingBackslash()
-        {
-            var stringA = @"C:\A\";
-            var stringB = @"C:\";
-            Assert.AreEqual(PathShim.UpOneLevel(stringA), stringB);
-        }
-
-        [TestMethod]
-        public void UpOneLevel_TopLevel_ReturnsSelf()
-        {
-            var stringA = @"C:\";
-            var stringB = @"C:";
-            Assert.AreEqual(PathShim.UpOneLevel(stringA), stringB);
-        }
-
-        [TestMethod]
-        public void UpOneLevel_ForwardSlashes_ReturnNothing()
-        {
-            var stringA = @"C:/Users/";
-            var stringB = @"C:/";
-            Assert.AreEqual(PathShim.UpOneLevel(stringA), stringB);
-        }
-
     }
 
-
-    [TestClass]
+    [TestFixture]
     public class IsLibraryPath
     {
-
-        [TestMethod]
+        [Test]
         public void GoodInput()
         {
-            //TODO: figure out why this test fails with "Default" project... sometimes.
             Inventor.Application app = ApplicationShim.Instance();
 
             var designProject = app.DesignProjectManager.ActiveDesignProject;
@@ -75,70 +34,65 @@ namespace PathShims_Tests
 
             var i = libraryPaths.Count + 1;
 
-                libraryPaths.Add("temporary path", @"C:\");
+            libraryPaths.Add("temporary path", @"C:\");
 
             string test = libraryPaths[1].Path;
             test = PathShim.TrimEndingDirectorySeparator(test);
 
-
             try
             {
                 Assert.IsTrue(test.IsLibraryPath(app));
-
             }
             finally
             {
                 libraryPaths[i].Delete();
+                Marshal.ReleaseComObject(app);
+                app = null;
             }
         }
 
-        [TestMethod]
-        public void BadInput_WrongPath()
+        [TestCase(@"C:\Zarthastoriatarigula\the\fiverth")]
+        [TestCase("")]
+        [TestCase(null)]
+        [Test]
+        public void BadInput_WrongPath(string testString)
         {
             Inventor.Application app = ApplicationShim.Instance();
 
-            var test = @"C:\Zarthastoriatarigula\the\fiverth";
- 
-                Assert.IsFalse(test.IsLibraryPath(app));
+            try
+            {
+                Assert.IsFalse(testString.IsLibraryPath(app));
+            }
+            finally
+            {
+                Marshal.ReleaseComObject(app);
+                app = null;
+            }
         }
-
-        [TestMethod]
-        public void BadInput_Empty()
-        {
-            Inventor.Application app = ApplicationShim.Instance();
-
-            var test = "";
-
-                Assert.IsFalse(test.IsLibraryPath(app));
-        }
-
-        [TestMethod]
-        public void BadInput_Null()
-        {
-            Inventor.Application app = ApplicationShim.Instance();
-
-            string test = null;
-
-                Assert.IsFalse(test.IsLibraryPath(app));
-        }
-
     }
 
-    [TestClass]
+    [TestFixture]
     public class IsContentCenterPath
     {
-
-        [TestMethod]
+        [Test]
         public void GoodInput()
         {
             Inventor.Application app = ApplicationShim.Instance();
 
             string test = app.DesignProjectManager.ActiveDesignProject.ContentCenterPath;
 
+            try
+            {
                 Assert.IsTrue(test.IsContentCenterPath(app));
-        }
+            }
+            finally
+            {
+                Marshal.ReleaseComObject(app);
+                app = null;
+            }
+}
 
-        [TestMethod]
+        [Test]
         public void GoodInput_NoTrailingSlash()
         {
             Inventor.Application app = ApplicationShim.Instance();
@@ -146,61 +100,46 @@ namespace PathShims_Tests
             string test = app.DesignProjectManager.ActiveDesignProject.ContentCenterPath;
             test = PathShim.TrimEndingDirectorySeparator(test);
 
+            try
+            {
                 Assert.IsTrue(test.IsContentCenterPath(app));
+            }
+            finally
+            {
+                Marshal.ReleaseComObject(app);
+                app = null;
+            }
         }
 
-
-        [TestMethod]
-        public void BadInput_Wrong()
+        [TestCase(@"C:\Windows\")]
+        [TestCase("")]
+        [TestCase(null)]
+        [Test]
+        public void BadInput_Wrong(string testString)
         {
             Inventor.Application app = ApplicationShim.Instance();
-            string test = @"C:\Windows\";
 
-                Assert.IsFalse(test.IsContentCenterPath(app));
+            try
+            {
+                Assert.IsFalse(testString.IsContentCenterPath(app));
+            }
+            finally
+            {
+                Marshal.ReleaseComObject(app);
+                app = null;
+            }
         }
-
-        [TestMethod]
-        public void BadInput_Empty()
-        {
-            Inventor.Application app = ApplicationShim.Instance();
-            var test = string.Empty;
-
-                Assert.IsFalse(test.IsContentCenterPath(app));
-        }
-
-        [TestMethod]
-        public void BadInput_Null()
-        {
-            Inventor.Application app = ApplicationShim.Instance();
-            app.Documents.CloseAll();
-            DesignProject dp = app.DesignProjectManager.ActiveDesignProject;
-            dp.Activate();
-
-            string test = null;
-            
-            Assert.IsFalse(test.IsContentCenterPath(app));
-
-        }
-
     }
 
-    [TestClass]
+    [TestFixture]
     public class TrimTrailingSlash
     {
-        [TestMethod]
-        public void GoodInput_TrailingSlash()
+        [TestCase(@"C:\Windows\SysWow\", @"C:\Windows\SysWow")]
+        [TestCase(@"C:\Windows\SysWow", @"C:\Windows\SysWow")]
+        [Test]
+        public void GoodInput_TrailingSlash(string testA, string testB)
         {
-            string test = @"C:\Windows\SysWow\";
-            string test2 = @"C:\Windows\SysWow";
-            Assert.AreEqual(PathShim.TrimEndingDirectorySeparator(test), test2);
-        }
-
-        [TestMethod]
-        public void GoodInput_NoTrailingSlash()
-        {
-            string test = @"C:\Windows\SysWow";
-            string test2 = @"C:\Windows\SysWow";
-            Assert.AreEqual(PathShim.TrimEndingDirectorySeparator(test), test2);
+            Assert.AreEqual(PathShim.TrimEndingDirectorySeparator(testA), testB);
         }
     }
 }

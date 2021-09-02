@@ -1,70 +1,51 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Inventor;
 using InventorShims;
-using Inventor;
+using NUnit.Framework;
 
 namespace AttributeShim_Tests
 {
-    [TestClass]
-    public class AttributeExistss
+    [TestFixture]
+    public class AttributeExists
     {
-
-        [TestInitialize]
-        public void SetProject()
-        {
-            Inventor.Application app = ApplicationShim.Instance();
-            DesignProject project = app.DesignProjectManager.DesignProjects.ItemByName["Default.ipj"];
-            project.Activate();
-        }
-
-        [TestMethod]
+        [Test]
         public void AttDoesNotExist_returnsFalse()
         {
-
-            Inventor.Application app = ApplicationShim.Instance();
-            var path = app.DesignProjectManager.ActiveDesignProject.TemplatesPath;
-            Document doc = app.Documents.Add(DocumentTypeEnum.kPartDocumentObject, path + "Standard.ipt", true);
+            var doc = tests.TestUtilities.CreatePartDocument();
 
             var result = AttributeShim.AttributeExists(doc, "testSet", "testAttribute");
+
             try
             {
                 Assert.IsFalse(result);
             }
             finally { doc.Close(true); }
-
         }
 
-        [TestMethod]
+        [Test]
         public void AttDoesExist_returnsTrue()
         {
-            Inventor.Application app = ApplicationShim.Instance();
-            var path = app.DesignProjectManager.ActiveDesignProject.TemplatesPath;
-            Document doc = app.Documents.Add(DocumentTypeEnum.kPartDocumentObject, path + "Standard.ipt", true);
+            var doc = tests.TestUtilities.CreatePartDocument();
 
             //create the test attribute
             AttributeSet attributeSet = doc.AttributeSets.Add("testSet");
             Attribute _ = attributeSet.Add("testAttribute", ValueTypeEnum.kStringType, "test string");
 
-
             var result = AttributeShim.AttributeExists(doc, "testSet", "testAttribute");
             try
             {
                 Assert.IsTrue(result);
             }
             finally { doc.Close(true); }
-
         }
     }
 
-    [TestClass]
+    [TestFixture]
     public class AttributeSetExists
     {
-        [TestMethod]
+        [Test]
         public void DoesNotExist_returnsFalse()
         {
-
-            Inventor.Application app = ApplicationShim.Instance();
-            var path = app.DesignProjectManager.ActiveDesignProject.TemplatesPath;
-            Document doc = app.Documents.Add(DocumentTypeEnum.kPartDocumentObject, path + "Standard.ipt", true);
+            var doc = tests.TestUtilities.CreatePartDocument();
 
             var result = AttributeShim.AttributeSetExists(doc, "testSet");
             try
@@ -72,19 +53,15 @@ namespace AttributeShim_Tests
                 Assert.IsFalse(result);
             }
             finally { doc.Close(true); }
-
         }
 
-        [TestMethod]
+        [Test]
         public void DoesExist_returnsTrue()
         {
-            Inventor.Application app = ApplicationShim.Instance();
-            var path = app.DesignProjectManager.ActiveDesignProject.TemplatesPath;
-            Document doc = app.Documents.Add(DocumentTypeEnum.kPartDocumentObject, path + "Standard.ipt", true);
+            var doc = tests.TestUtilities.CreatePartDocument();
 
             //create the test attribute
             AttributeSet attributeSet = doc.AttributeSets.Add("testSet");
-
 
             var result = AttributeShim.AttributeSetExists(doc, "testSet");
             try
@@ -92,14 +69,13 @@ namespace AttributeShim_Tests
                 Assert.IsTrue(result);
             }
             finally { doc.Close(true); }
-
         }
     }
 
-    [TestClass]
+    [TestFixture]
     public class ObjectIsAttributeCapable
     {
-        [TestMethod]
+        [Test]
         public void returnsFalse()
         {
             Inventor.Application app = ApplicationShim.Instance();
@@ -110,18 +86,13 @@ namespace AttributeShim_Tests
             {
                 Assert.IsFalse(result);
             }
-            finally {  }
-
+            finally { }
         }
 
-        [TestMethod]
+        [Test]
         public void returnsTrue()
         {
-            Inventor.Application app = ApplicationShim.Instance();
-            var path = app.DesignProjectManager.ActiveDesignProject.TemplatesPath;
-
-            //Document object is attribute capable.
-            Document doc = app.Documents.Add(DocumentTypeEnum.kPartDocumentObject, path + "Standard.ipt", true);
+            var doc = tests.TestUtilities.CreatePartDocument();
 
             var result = AttributeShim.ObjectIsAttributeCapable(doc);
             try
@@ -129,20 +100,16 @@ namespace AttributeShim_Tests
                 Assert.IsTrue(result);
             }
             finally { doc.Close(true); }
-
         }
     }
 
-    [TestClass]
+    [TestFixture]
     public class RemoveAttributeSet
     {
-        [TestMethod]
+        [Test]
         public void RemovesSetThatExists()
         {
-
-            Inventor.Application app = ApplicationShim.Instance();
-            var path = app.DesignProjectManager.ActiveDesignProject.TemplatesPath;
-            Document doc = app.Documents.Add(DocumentTypeEnum.kPartDocumentObject, path + "Standard.ipt", true);
+            var doc = tests.TestUtilities.CreatePartDocument();
 
             //create the test AttributeSet
             AttributeSet attributeSet = doc.AttributeSets.Add("testSet");
@@ -151,7 +118,7 @@ namespace AttributeShim_Tests
             bool result = false;
             foreach (AttributeSet i in doc.AttributeSets)
             {
-                if (i.Name.Equals("testSet")) {result = true;}
+                if (i.Name.Equals("testSet")) { result = true; }
             }
 
             try
@@ -159,19 +126,15 @@ namespace AttributeShim_Tests
                 Assert.IsFalse(result);
             }
             finally { doc.Close(true); }
-
         }
 
-        [TestMethod]
+        [Test]
         public void RemovesSetThatDoesntExist_noCrash()
         {
-            Inventor.Application app = ApplicationShim.Instance();
-            var path = app.DesignProjectManager.ActiveDesignProject.TemplatesPath;
-            Document doc = app.Documents.Add(DocumentTypeEnum.kPartDocumentObject, path + "Standard.ipt", true);
+            var doc = tests.TestUtilities.CreatePartDocument();
 
             //try to remove an attributeSet that does not exist.  Will this crash?
             AttributeShim.RemoveAttributeSet(doc, "testSet");
-
 
             bool result = false;
             foreach (AttributeSet i in doc.AttributeSets)
@@ -183,20 +146,16 @@ namespace AttributeShim_Tests
                 Assert.IsFalse(result);
             }
             finally { doc.Close(true); }
-
         }
     }
 
-    [TestClass]
+    [TestFixture]
     public class CreateAttributeSet
     {
-        [TestMethod]
+        [Test]
         public void CreateSetThatExists_noCrash()
         {
-
-            Inventor.Application app = ApplicationShim.Instance();
-            var path = app.DesignProjectManager.ActiveDesignProject.TemplatesPath;
-            Document doc = app.Documents.Add(DocumentTypeEnum.kPartDocumentObject, path + "Standard.ipt", true);
+            var doc = tests.TestUtilities.CreatePartDocument();
 
             //create the test AttributeSet
             AttributeSet attributeSet = doc.AttributeSets.Add("testSet");
@@ -213,19 +172,15 @@ namespace AttributeShim_Tests
                 Assert.IsTrue(result);
             }
             finally { doc.Close(true); }
-
         }
 
-        [TestMethod]
+        [Test]
         public void CreateSetThatDoesntExist()
         {
-            Inventor.Application app = ApplicationShim.Instance();
-            var path = app.DesignProjectManager.ActiveDesignProject.TemplatesPath;
-            Document doc = app.Documents.Add(DocumentTypeEnum.kPartDocumentObject, path + "Standard.ipt", true);
+            var doc = tests.TestUtilities.CreatePartDocument();
 
             //try to remove an attributeSet that does not exist.  Will this crash?
             AttributeShim.CreateAttributeSet(doc, "testSet");
-
 
             bool result = false;
             foreach (AttributeSet i in doc.AttributeSets)
@@ -237,20 +192,16 @@ namespace AttributeShim_Tests
                 Assert.IsTrue(result);
             }
             finally { doc.Close(true); }
-
         }
     }
 
-    [TestClass]
+    [TestFixture]
     public class RemoveAttribute
     {
-        [TestMethod]
+        [Test]
         public void RemoveExisting_works()
         {
-
-            Inventor.Application app = ApplicationShim.Instance();
-            var path = app.DesignProjectManager.ActiveDesignProject.TemplatesPath;
-            Document doc = app.Documents.Add(DocumentTypeEnum.kPartDocumentObject, path + "Standard.ipt", true);
+            var doc = tests.TestUtilities.CreatePartDocument();
 
             //create the test AttributeSet
             AttributeSet attributeSet = doc.AttributeSets.Add("testSet");
@@ -269,19 +220,16 @@ namespace AttributeShim_Tests
                 Assert.IsFalse(result);
             }
             finally { doc.Close(true); }
-
         }
 
-        [TestMethod]
+        [Test]
         public void RemovesNonExisting_noCrash()
         {
-            Inventor.Application app = ApplicationShim.Instance();
-            var path = app.DesignProjectManager.ActiveDesignProject.TemplatesPath;
-            Document doc = app.Documents.Add(DocumentTypeEnum.kPartDocumentObject, path + "Standard.ipt", true);
+            var doc = tests.TestUtilities.CreatePartDocument();
 
             //create the test AttributeSet
             AttributeSet attributeSet = doc.AttributeSets.Add("testSet");
-//            Inventor.Attribute attribute = attributeSet.Add("testAttribute", ValueTypeEnum.kStringType, "test string");
+            //            Inventor.Attribute attribute = attributeSet.Add("testAttribute", ValueTypeEnum.kStringType, "test string");
 
             AttributeShim.RemoveAttribute(doc, "testSet", "testAttribute");
 
@@ -296,29 +244,23 @@ namespace AttributeShim_Tests
                 Assert.IsFalse(result);
             }
             finally { doc.Close(true); }
-
         }
     }
 
-    [TestClass]
+    [TestFixture]
     public class GetAttributeValue
     {
-        [TestMethod]
+        [Test]
         public void GetExisting_works()
         {
-            Inventor.Application app = ApplicationShim.Instance();
-            var path = app.DesignProjectManager.ActiveDesignProject.TemplatesPath;
-            Document doc = app.Documents.Add(DocumentTypeEnum.kPartDocumentObject, path + "Standard.ipt", true);
-
+            var doc = tests.TestUtilities.CreatePartDocument();
 
             //create the test Attribute
             var test = "test string";
             AttributeSet attributeSet = doc.AttributeSets.Add("testSet");
             Inventor.Attribute attribute = attributeSet.Add("testAttribute", ValueTypeEnum.kStringType, test);
 
-
             var result = AttributeShim.GetAttributeValue(doc, "testSet", "testAttribute");
-
 
             try
             {
@@ -327,13 +269,10 @@ namespace AttributeShim_Tests
             finally { doc.Close(true); }
         }
 
-        [TestMethod]
+        [Test]
         public void ModifiesExisting_works()
         {
-            Inventor.Application app = ApplicationShim.Instance();
-            var path = app.DesignProjectManager.ActiveDesignProject.TemplatesPath;
-            Document doc = app.Documents.Add(DocumentTypeEnum.kPartDocumentObject, path + "Standard.ipt", true);
-
+            var doc = tests.TestUtilities.CreatePartDocument();
 
             //create the test Attribute
             var test = "test string";
@@ -344,7 +283,6 @@ namespace AttributeShim_Tests
 
             var result = AttributeShim.GetAttributeValue(doc, "testSet", "testAttribute");
 
-
             try
             {
                 Assert.AreEqual(result, test);
@@ -353,16 +291,13 @@ namespace AttributeShim_Tests
         }
     }
 
-    [TestClass]
+    [TestFixture]
     public class SetAttributeValue
     {
-        [TestMethod]
+        [Test]
         public void String_SetNew()
         {
-            Inventor.Application app = ApplicationShim.Instance();
-            var path = app.DesignProjectManager.ActiveDesignProject.TemplatesPath;
-            Document doc = app.Documents.Add(DocumentTypeEnum.kPartDocumentObject, path + "Standard.ipt", true);
-
+            var doc = tests.TestUtilities.CreatePartDocument();
 
             //create the test Attribute
             var test = "test string";
@@ -377,13 +312,10 @@ namespace AttributeShim_Tests
             finally { doc.Close(true); }
         }
 
-        [TestMethod]
+        [Test]
         public void String_SetExisting()
         {
-            Inventor.Application app = ApplicationShim.Instance();
-            var path = app.DesignProjectManager.ActiveDesignProject.TemplatesPath;
-            Document doc = app.Documents.Add(DocumentTypeEnum.kPartDocumentObject, path + "Standard.ipt", true);
-
+            var doc = tests.TestUtilities.CreatePartDocument();
 
             //create the test Attribute
             var test = "test string";
@@ -399,13 +331,10 @@ namespace AttributeShim_Tests
             finally { doc.Close(true); }
         }
 
-
-        [TestMethod]
+        [Test]
         public void Bool_SetNew()
         {
-            Inventor.Application app = ApplicationShim.Instance();
-            var path = app.DesignProjectManager.ActiveDesignProject.TemplatesPath;
-            Document doc = app.Documents.Add(DocumentTypeEnum.kPartDocumentObject, path + "Standard.ipt", true);
+            var doc = tests.TestUtilities.CreatePartDocument();
 
             //create the test Attribute
             var test = true;
@@ -419,12 +348,10 @@ namespace AttributeShim_Tests
             finally { doc.Close(true); }
         }
 
-        [TestMethod]
+        [Test]
         public void Bool_SetExisting()
         {
-            Inventor.Application app = ApplicationShim.Instance();
-            var path = app.DesignProjectManager.ActiveDesignProject.TemplatesPath;
-            Document doc = app.Documents.Add(DocumentTypeEnum.kPartDocumentObject, path + "Standard.ipt", true);
+            var doc = tests.TestUtilities.CreatePartDocument();
 
             //create the test Attribute
             var test = true;
@@ -440,13 +367,10 @@ namespace AttributeShim_Tests
             finally { doc.Close(true); }
         }
 
-        [TestMethod]
+        [Test]
         public void Integer_SetNew()
         {
-            Inventor.Application app = ApplicationShim.Instance();
-            var path = app.DesignProjectManager.ActiveDesignProject.TemplatesPath;
-            Document doc = app.Documents.Add(DocumentTypeEnum.kPartDocumentObject, path + "Standard.ipt", true);
-
+            var doc = tests.TestUtilities.CreatePartDocument();
 
             //create the test Attribute
             var test = 16;
@@ -461,13 +385,10 @@ namespace AttributeShim_Tests
             finally { doc.Close(true); }
         }
 
-        [TestMethod]
+        [Test]
         public void Integer_SetExisting()
         {
-            Inventor.Application app = ApplicationShim.Instance();
-            var path = app.DesignProjectManager.ActiveDesignProject.TemplatesPath;
-            Document doc = app.Documents.Add(DocumentTypeEnum.kPartDocumentObject, path + "Standard.ipt", true);
-
+            var doc = tests.TestUtilities.CreatePartDocument();
 
             //create the test Attribute
             var test = 16;
@@ -483,14 +404,10 @@ namespace AttributeShim_Tests
             finally { doc.Close(true); }
         }
 
-
-        [TestMethod]
+        [Test]
         public void Double_SetNew()
         {
-            Inventor.Application app = ApplicationShim.Instance();
-            var path = app.DesignProjectManager.ActiveDesignProject.TemplatesPath;
-            Document doc = app.Documents.Add(DocumentTypeEnum.kPartDocumentObject, path + "Standard.ipt", true);
-
+            var doc = tests.TestUtilities.CreatePartDocument();
 
             //create the test Attribute
             double test = 16.00;
@@ -505,13 +422,10 @@ namespace AttributeShim_Tests
             finally { doc.Close(true); }
         }
 
-        [TestMethod]
+        [Test]
         public void Double_SetExisting()
         {
-            Inventor.Application app = ApplicationShim.Instance();
-            var path = app.DesignProjectManager.ActiveDesignProject.TemplatesPath;
-            Document doc = app.Documents.Add(DocumentTypeEnum.kPartDocumentObject, path + "Standard.ipt", true);
-
+            var doc = tests.TestUtilities.CreatePartDocument();
 
             //create the test Attribute
             double test = 16.00;
@@ -526,7 +440,5 @@ namespace AttributeShim_Tests
             }
             finally { doc.Close(true); }
         }
-
     }
 }
-
