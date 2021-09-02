@@ -1,13 +1,25 @@
-## [Unrealeased]
+## Unreleased
 
 ### Added
 - ExternalRuleDirectories object now implements the IDisposable interface, allowing the using keyword.
+- Updated Nuke Build system.  Now creates 
+
+### Changed
+- Integration test project "InventorShims.tests" now uses NUnit nuget package.
+    - Refactored some duplicate tests to TestCases. 
+    - Refactored Inventor document creation routines to TestUtilities.cs.
+- Nuke build updated to Nuke 5.3.0
+    - Nuget packages for build project updated.
+- InventorShims.manual tests changed to InventorShims.ilogic.tests.  Removed VS project associated with this.
 
 ### Fixed
 - ExternalRuleDirectories.Add was not adding entires properly.
 - ExternalRuleDirectories.Remove was not removing entires properly.
 
-## [1.2.0] - 2021-08-15
+### Removed
+- InventorShims-vb project has been removed.
+
+## 1.2.0 - 2021-08-15
 
 ### Added
 - ExternalRuleDirectories object allows you to manipulate the iLogic Addin's list of External Rules Directories in a more straightforward manner.
