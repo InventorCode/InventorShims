@@ -1,50 +1,48 @@
 ﻿using InventorShims;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
 using System.Collections.Generic;
-using System.Windows.Forms;
 
 namespace ExternalRuleDirectories_Tests
 {
-    [TestClass]
+    [TestFixture]
     public class ExternalRuleDirectoriesTests
     {
-        [TestMethod]
+        [Test]
         public void Dispose_DoesNotThrowError()
         {
             ExternalRuleDirectories shim = new ExternalRuleDirectories();
             shim.Dispose();
         }
 
-        [TestMethod]
+        [Test]
         public void Using_DoesNotThrowError()
         {
             using (ExternalRuleDirectories shim = new ExternalRuleDirectories())
             {
-
             }
         }
 
-        [TestMethod]
+        [Test]
         public void Constructor_doesNotThrowError()
         {
             ExternalRuleDirectories shim = new ExternalRuleDirectories();
         }
 
-        [TestMethod]
+        [Test]
         public void ConstructorLong_doesNotThrowError()
         {
             Inventor.Application app = ApplicationShim.Instance();
             ExternalRuleDirectories shim = new ExternalRuleDirectories(app);
         }
 
-        [TestMethod]
+        [Test]
         public void ExternalRuleDirectories_doesNotThrowError()
         {
             ExternalRuleDirectories shim = new ExternalRuleDirectories();
             List<string> _ = shim.Directories;
         }
 
-        [TestMethod]
+        [Test]
         public void Add_Works()
         {
             using (ExternalRuleDirectories shim = new ExternalRuleDirectories())
@@ -65,7 +63,7 @@ namespace ExternalRuleDirectories_Tests
             }
         }
 
-        [TestMethod]
+        [Test]
         public void Contains_Works()
         {
             ExternalRuleDirectories shim = new ExternalRuleDirectories();

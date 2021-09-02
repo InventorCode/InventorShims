@@ -1,19 +1,16 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Inventor;
 using InventorShims;
-using Inventor;
+using NUnit.Framework;
 
 namespace DocumentShim_Tests
 {
-    [TestClass]
+    [TestFixture]
     public class ReturnDocumentFromObject_Tests
     {
-        [TestMethod]
+        [Test]
         public void PartDocumentIn_ReturnsDocument()
         {
-
-            Inventor.Application app = ApplicationShim.Instance();
-            var path = app.DesignProjectManager.ActiveDesignProject.TemplatesPath;
-            Document doc = app.Documents.Add(DocumentTypeEnum.kPartDocumentObject, path + "Standard.ipt", true);
+            var doc = tests.TestUtilities.CreatePartDocument();
 
             var doc2 = doc.GetDocumentFromObject();
 
@@ -33,13 +30,10 @@ namespace DocumentShim_Tests
             finally { doc.Close(true); }
         }
 
-        [TestMethod]
+        [Test]
         public void AssemblyDocumentIn_ReturnsDocument()
         {
-
-            Inventor.Application app = ApplicationShim.Instance();
-            var path = app.DesignProjectManager.ActiveDesignProject.TemplatesPath;
-            Document doc = app.Documents.Add(DocumentTypeEnum.kAssemblyDocumentObject, path + "Standard.iam", true);
+            var doc = tests.TestUtilities.CreateAssemblyDocument();
 
             var doc2 = doc.GetDocumentFromObject();
 

@@ -1,20 +1,17 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Inventor;
 using InventorShims;
-using Inventor;
+using NUnit.Framework;
 
 namespace DocumentShim_Tests
 {
-    [TestClass]
+    [TestFixture]
     public class ReturnSpecificDocumentObject
     {
-        [TestMethod]
+        [Test]
         public void PartDocument_IsReturned()
         {
+            var doc = tests.TestUtilities.CreatePartDocument();
 
-            Inventor.Application app = ApplicationShim.Instance();
-            var path = app.DesignProjectManager.ActiveDesignProject.TemplatesPath;
-            Document doc = app.Documents.Add(DocumentTypeEnum.kPartDocumentObject, path + "Standard.ipt", true);
-            
             var doc2 = doc.ReturnSpecificDocumentObject();
 
             //var tt = doc2.GetPropertyValue("Author");
@@ -34,13 +31,10 @@ namespace DocumentShim_Tests
             finally { doc.Close(true); }
         }
 
-        [TestMethod]
+        [Test]
         public void PartDocument_IsNotReturned()
         {
-
-            Inventor.Application app = ApplicationShim.Instance();
-            var path = app.DesignProjectManager.ActiveDesignProject.TemplatesPath;
-            Document doc = app.Documents.Add(DocumentTypeEnum.kPartDocumentObject, path + "Standard.ipt", true);
+            var doc = tests.TestUtilities.CreatePartDocument();
 
             var doc2 = doc.ReturnSpecificDocumentObject();
             //only exists in ParDocuments
@@ -58,13 +52,10 @@ namespace DocumentShim_Tests
             finally { doc.Close(true); }
         }
 
-        [TestMethod]
+        [Test]
         public void AssemblyDocument_IsReturned()
         {
-
-            Inventor.Application app = ApplicationShim.Instance();
-            var path = app.DesignProjectManager.ActiveDesignProject.TemplatesPath;
-            Document doc = app.Documents.Add(DocumentTypeEnum.kAssemblyDocumentObject, path + "Standard.iam", true);
+            var doc = tests.TestUtilities.CreateAssemblyDocument();
 
             var doc2 = doc.ReturnSpecificDocumentObject();
             //only exists in AssemblyDocuments
@@ -82,13 +73,10 @@ namespace DocumentShim_Tests
             finally { doc.Close(true); }
         }
 
-        [TestMethod]
+        [Test]
         public void AssemblyDocument_IsNotReturned()
         {
-
-            Inventor.Application app = ApplicationShim.Instance();
-            var path = app.DesignProjectManager.ActiveDesignProject.TemplatesPath;
-            Document doc = app.Documents.Add(DocumentTypeEnum.kAssemblyDocumentObject, path + "Standard.iam", true);
+            var doc = tests.TestUtilities.CreateAssemblyDocument();
 
             var doc2 = doc.ReturnSpecificDocumentObject();
             //only exists in AssemblyDocuments
@@ -106,20 +94,18 @@ namespace DocumentShim_Tests
             finally { doc.Close(true); }
         }
 
-        [TestMethod]
+        [Test]
         public void DrawingDocument__IsReturned()
         {
-
-            Inventor.Application app = ApplicationShim.Instance();
-            var path = app.DesignProjectManager.ActiveDesignProject.TemplatesPath;
-            Document doc = app.Documents.Add(DocumentTypeEnum.kDrawingDocumentObject, path + "Standard.idw", true);
+            var doc = tests.TestUtilities.CreateDrawingDocument();
 
             var doc2 = doc.ReturnSpecificDocumentObject();
 
             //only exists in DrawingDocuments
             BorderDefinitions test = null;
-            try {
-            test = doc2.BorderDefinitions;
+            try
+            {
+                test = doc2.BorderDefinitions;
             }
             catch { }
 
@@ -130,13 +116,10 @@ namespace DocumentShim_Tests
             finally { doc.Close(true); }
         }
 
-        [TestMethod]
+        [Test]
         public void DrawingDocument__IsNotReturned()
         {
-
-            Inventor.Application app = ApplicationShim.Instance();
-            var path = app.DesignProjectManager.ActiveDesignProject.TemplatesPath;
-            Document doc = app.Documents.Add(DocumentTypeEnum.kDrawingDocumentObject, path + "Standard.idw", true);
+            var doc = tests.TestUtilities.CreateDrawingDocument();
 
             var doc2 = doc.ReturnSpecificDocumentObject();
 
@@ -155,13 +138,10 @@ namespace DocumentShim_Tests
             finally { doc.Close(true); }
         }
 
-        [TestMethod]
+        [Test]
         public void PresentationDocument_IsReturned()
         {
-
-            Inventor.Application app = ApplicationShim.Instance();
-            var path = app.DesignProjectManager.ActiveDesignProject.TemplatesPath;
-            Document doc = app.Documents.Add(DocumentTypeEnum.kPresentationDocumentObject, path + "Standard.ipn", true);
+            var doc = tests.TestUtilities.CreatePresentationDocument();
 
             var doc2 = doc.ReturnSpecificDocumentObject();
 
@@ -180,13 +160,10 @@ namespace DocumentShim_Tests
             finally { doc.Close(true); }
         }
 
-        [TestMethod]
+        [Test]
         public void PresentationDocument__IsNotReturned()
         {
-
-            Inventor.Application app = ApplicationShim.Instance();
-            var path = app.DesignProjectManager.ActiveDesignProject.TemplatesPath;
-            Document doc = app.Documents.Add(DocumentTypeEnum.kPresentationDocumentObject, path + "Standard.ipn", true);
+            var doc = tests.TestUtilities.CreatePresentationDocument();
 
             var doc2 = doc.ReturnSpecificDocumentObject();
 
@@ -205,6 +182,4 @@ namespace DocumentShim_Tests
             finally { doc.Close(true); }
         }
     }
-
 }
-
