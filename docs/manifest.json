@@ -2,7 +2,332 @@
   "homepages": [],
   "source_base_path": "C:/Users/mjordan/_Sync/dev/github/InventorShims/docfx",
   "xrefmap": "xrefmap.yml",
-  "files": [],
+  "files": [
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/InventorShims.ApplicationShim.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/InventorShims.ApplicationShim.html",
+          "hash": "RRc/hRM93aBRNCA+uROwNQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/InventorShims.AttributeShim.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/InventorShims.AttributeShim.html",
+          "hash": "f3OnN8TxBe4b/q1u2o993A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/InventorShims.Conversions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/InventorShims.Conversions.html",
+          "hash": "Wo3a9NwG0GAgz7Ynf5H5Kg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/InventorShims.DocumentShim.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/InventorShims.DocumentShim.html",
+          "hash": "TBf/M2ogaA9/zvKOqc6u2A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/InventorShims.ExternalRuleDirectories.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/InventorShims.ExternalRuleDirectories.html",
+          "hash": "nnnm33RpwQ+hT4EGeHwmRg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/InventorShims.ParameterShim.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/InventorShims.ParameterShim.html",
+          "hash": "mbMnRxqZby1VZQiQ5Op71Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/InventorShims.PathShim.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/InventorShims.PathShim.html",
+          "hash": "YfwUhZHqMqUrr9ZSPTxXPg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/InventorShims.PropertyShim.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/InventorShims.PropertyShim.html",
+          "hash": "8J5hg9H9qvVcueblUAiWFA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/InventorShims.StringShim.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/InventorShims.StringShim.html",
+          "hash": "kCY1ZNVKDhAgPZvtIVI7MA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/InventorShims.TranslatorShim.DwgExporter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/InventorShims.TranslatorShim.DwgExporter.html",
+          "hash": "qXwrArUNuPgnWlJ2difpBg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/InventorShims.TranslatorShim.PdfExporter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/InventorShims.TranslatorShim.PdfExporter.html",
+          "hash": "FFJ2XLQ03b5uBz1FeFVXMg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/InventorShims.TranslatorShim.StepExporter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/InventorShims.TranslatorShim.StepExporter.html",
+          "hash": "KEERWLo6UrPydAg9NR3DFQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/InventorShims.TranslatorShim.StepImporter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/InventorShims.TranslatorShim.StepImporter.html",
+          "hash": "noDxIf6cCiFEaiu9CYRVTA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/InventorShims.TranslatorShim.StepProtocolEnum.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/InventorShims.TranslatorShim.StepProtocolEnum.html",
+          "hash": "uNRbMDrMkp6SX/mbCKSXrw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/InventorShims.TranslatorShim.StlExporter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/InventorShims.TranslatorShim.StlExporter.html",
+          "hash": "NqCdqp+txQtG+/5Mhnz2qg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/InventorShims.TranslatorShim.StlResolutionEnum.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/InventorShims.TranslatorShim.StlResolutionEnum.html",
+          "hash": "jpTNBPHiC4Vu5VGsWzlR2Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/InventorShims.TranslatorShim.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/InventorShims.TranslatorShim.html",
+          "hash": "Oj+lhfQDuIC+rnPWiYnSQQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/InventorShims.UiShim.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/InventorShims.UiShim.html",
+          "hash": "HCoa8/5Y5Th9p9SengAYYQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/InventorShims.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/InventorShims.html",
+          "hash": "l1rAYBoKJili+qpoJmMfyw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "api/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/index.html",
+          "hash": "xaCg74fcAIo2oYbx01jvKw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html",
+          "hash": "kMVOxhil0lbeAQY+8J9ZnQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/CHANGELOG.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/CHANGELOG.html",
+          "hash": "KGS4HISFH1/41ZM9gGc2/g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/Contributing.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/Contributing.html",
+          "hash": "yhEPh3FazW911BmIO9iDVQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/quick-start.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/quick-start.html",
+          "hash": "JMxkdfLkK0nzE93pNWHPaA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "articles/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "articles/toc.html",
+          "hash": "zxgsqc2lO0uomp4SjHXVxQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html",
+          "hash": "99E2PVvqSg2ztgIGlZHGFw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html",
+          "hash": "OOWOY2RALwooV61OMoXzkQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    }
+  ],
   "incremental_info": [
     {
       "status": {

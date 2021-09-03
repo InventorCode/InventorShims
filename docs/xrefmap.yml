@@ -3,1106 +3,1106 @@ sorted: true
 references:
 - uid: InventorShims
   name: InventorShims
-  href: api/InventorShims.yml
+  href: api/InventorShims.html
   commentId: N:InventorShims
   fullName: InventorShims
   nameWithType: InventorShims
 - uid: InventorShims.ApplicationShim
   name: ApplicationShim
-  href: api/InventorShims.ApplicationShim.yml
+  href: api/InventorShims.ApplicationShim.html
   commentId: T:InventorShims.ApplicationShim
   fullName: InventorShims.ApplicationShim
   nameWithType: ApplicationShim
 - uid: InventorShims.ApplicationShim.CurrentInstance
   name: CurrentInstance()
-  href: api/InventorShims.ApplicationShim.yml
+  href: api/InventorShims.ApplicationShim.html#InventorShims_ApplicationShim_CurrentInstance
   commentId: M:InventorShims.ApplicationShim.CurrentInstance
   fullName: InventorShims.ApplicationShim.CurrentInstance()
   nameWithType: ApplicationShim.CurrentInstance()
 - uid: InventorShims.ApplicationShim.CurrentInstance*
   name: CurrentInstance
-  href: api/InventorShims.ApplicationShim.yml
+  href: api/InventorShims.ApplicationShim.html#InventorShims_ApplicationShim_CurrentInstance_
   commentId: Overload:InventorShims.ApplicationShim.CurrentInstance
   isSpec: "True"
   fullName: InventorShims.ApplicationShim.CurrentInstance
   nameWithType: ApplicationShim.CurrentInstance
 - uid: InventorShims.ApplicationShim.Instance
   name: Instance()
-  href: api/InventorShims.ApplicationShim.yml
+  href: api/InventorShims.ApplicationShim.html#InventorShims_ApplicationShim_Instance
   commentId: M:InventorShims.ApplicationShim.Instance
   fullName: InventorShims.ApplicationShim.Instance()
   nameWithType: ApplicationShim.Instance()
 - uid: InventorShims.ApplicationShim.Instance*
   name: Instance
-  href: api/InventorShims.ApplicationShim.yml
+  href: api/InventorShims.ApplicationShim.html#InventorShims_ApplicationShim_Instance_
   commentId: Overload:InventorShims.ApplicationShim.Instance
   isSpec: "True"
   fullName: InventorShims.ApplicationShim.Instance
   nameWithType: ApplicationShim.Instance
 - uid: InventorShims.ApplicationShim.NewInstance(System.Boolean)
   name: NewInstance(Boolean)
-  href: api/InventorShims.ApplicationShim.yml
+  href: api/InventorShims.ApplicationShim.html#InventorShims_ApplicationShim_NewInstance_System_Boolean_
   commentId: M:InventorShims.ApplicationShim.NewInstance(System.Boolean)
   fullName: InventorShims.ApplicationShim.NewInstance(System.Boolean)
   nameWithType: ApplicationShim.NewInstance(Boolean)
 - uid: InventorShims.ApplicationShim.NewInstance*
   name: NewInstance
-  href: api/InventorShims.ApplicationShim.yml
+  href: api/InventorShims.ApplicationShim.html#InventorShims_ApplicationShim_NewInstance_
   commentId: Overload:InventorShims.ApplicationShim.NewInstance
   isSpec: "True"
   fullName: InventorShims.ApplicationShim.NewInstance
   nameWithType: ApplicationShim.NewInstance
 - uid: InventorShims.AttributeShim
   name: AttributeShim
-  href: api/InventorShims.AttributeShim.yml
+  href: api/InventorShims.AttributeShim.html
   commentId: T:InventorShims.AttributeShim
   fullName: InventorShims.AttributeShim
   nameWithType: AttributeShim
 - uid: InventorShims.AttributeShim.AttributeExists(System.Object,System.String,System.String)
   name: AttributeExists(Object, String, String)
-  href: api/InventorShims.AttributeShim.yml
+  href: api/InventorShims.AttributeShim.html#InventorShims_AttributeShim_AttributeExists_System_Object_System_String_System_String_
   commentId: M:InventorShims.AttributeShim.AttributeExists(System.Object,System.String,System.String)
   fullName: InventorShims.AttributeShim.AttributeExists(System.Object, System.String, System.String)
   nameWithType: AttributeShim.AttributeExists(Object, String, String)
 - uid: InventorShims.AttributeShim.AttributeExists*
   name: AttributeExists
-  href: api/InventorShims.AttributeShim.yml
+  href: api/InventorShims.AttributeShim.html#InventorShims_AttributeShim_AttributeExists_
   commentId: Overload:InventorShims.AttributeShim.AttributeExists
   isSpec: "True"
   fullName: InventorShims.AttributeShim.AttributeExists
   nameWithType: AttributeShim.AttributeExists
 - uid: InventorShims.AttributeShim.AttributeSetExists(System.Object,System.String)
   name: AttributeSetExists(Object, String)
-  href: api/InventorShims.AttributeShim.yml
+  href: api/InventorShims.AttributeShim.html#InventorShims_AttributeShim_AttributeSetExists_System_Object_System_String_
   commentId: M:InventorShims.AttributeShim.AttributeSetExists(System.Object,System.String)
   fullName: InventorShims.AttributeShim.AttributeSetExists(System.Object, System.String)
   nameWithType: AttributeShim.AttributeSetExists(Object, String)
 - uid: InventorShims.AttributeShim.AttributeSetExists*
   name: AttributeSetExists
-  href: api/InventorShims.AttributeShim.yml
+  href: api/InventorShims.AttributeShim.html#InventorShims_AttributeShim_AttributeSetExists_
   commentId: Overload:InventorShims.AttributeShim.AttributeSetExists
   isSpec: "True"
   fullName: InventorShims.AttributeShim.AttributeSetExists
   nameWithType: AttributeShim.AttributeSetExists
 - uid: InventorShims.AttributeShim.CreateAttributeSet(System.Object,System.String)
   name: CreateAttributeSet(Object, String)
-  href: api/InventorShims.AttributeShim.yml
+  href: api/InventorShims.AttributeShim.html#InventorShims_AttributeShim_CreateAttributeSet_System_Object_System_String_
   commentId: M:InventorShims.AttributeShim.CreateAttributeSet(System.Object,System.String)
   fullName: InventorShims.AttributeShim.CreateAttributeSet(System.Object, System.String)
   nameWithType: AttributeShim.CreateAttributeSet(Object, String)
 - uid: InventorShims.AttributeShim.CreateAttributeSet*
   name: CreateAttributeSet
-  href: api/InventorShims.AttributeShim.yml
+  href: api/InventorShims.AttributeShim.html#InventorShims_AttributeShim_CreateAttributeSet_
   commentId: Overload:InventorShims.AttributeShim.CreateAttributeSet
   isSpec: "True"
   fullName: InventorShims.AttributeShim.CreateAttributeSet
   nameWithType: AttributeShim.CreateAttributeSet
 - uid: InventorShims.AttributeShim.GetAttributeValue(System.Object,System.String,System.Object)
   name: GetAttributeValue(Object, String, Object)
-  href: api/InventorShims.AttributeShim.yml
+  href: api/InventorShims.AttributeShim.html#InventorShims_AttributeShim_GetAttributeValue_System_Object_System_String_System_Object_
   commentId: M:InventorShims.AttributeShim.GetAttributeValue(System.Object,System.String,System.Object)
   fullName: InventorShims.AttributeShim.GetAttributeValue(System.Object, System.String, System.Object)
   nameWithType: AttributeShim.GetAttributeValue(Object, String, Object)
 - uid: InventorShims.AttributeShim.GetAttributeValue*
   name: GetAttributeValue
-  href: api/InventorShims.AttributeShim.yml
+  href: api/InventorShims.AttributeShim.html#InventorShims_AttributeShim_GetAttributeValue_
   commentId: Overload:InventorShims.AttributeShim.GetAttributeValue
   isSpec: "True"
   fullName: InventorShims.AttributeShim.GetAttributeValue
   nameWithType: AttributeShim.GetAttributeValue
 - uid: InventorShims.AttributeShim.ObjectIsAttributeCapable(System.Object)
   name: ObjectIsAttributeCapable(Object)
-  href: api/InventorShims.AttributeShim.yml
+  href: api/InventorShims.AttributeShim.html#InventorShims_AttributeShim_ObjectIsAttributeCapable_System_Object_
   commentId: M:InventorShims.AttributeShim.ObjectIsAttributeCapable(System.Object)
   fullName: InventorShims.AttributeShim.ObjectIsAttributeCapable(System.Object)
   nameWithType: AttributeShim.ObjectIsAttributeCapable(Object)
 - uid: InventorShims.AttributeShim.ObjectIsAttributeCapable*
   name: ObjectIsAttributeCapable
-  href: api/InventorShims.AttributeShim.yml
+  href: api/InventorShims.AttributeShim.html#InventorShims_AttributeShim_ObjectIsAttributeCapable_
   commentId: Overload:InventorShims.AttributeShim.ObjectIsAttributeCapable
   isSpec: "True"
   fullName: InventorShims.AttributeShim.ObjectIsAttributeCapable
   nameWithType: AttributeShim.ObjectIsAttributeCapable
 - uid: InventorShims.AttributeShim.RemoveAttribute(System.Object,System.String,System.Object)
   name: RemoveAttribute(Object, String, Object)
-  href: api/InventorShims.AttributeShim.yml
+  href: api/InventorShims.AttributeShim.html#InventorShims_AttributeShim_RemoveAttribute_System_Object_System_String_System_Object_
   commentId: M:InventorShims.AttributeShim.RemoveAttribute(System.Object,System.String,System.Object)
   fullName: InventorShims.AttributeShim.RemoveAttribute(System.Object, System.String, System.Object)
   nameWithType: AttributeShim.RemoveAttribute(Object, String, Object)
 - uid: InventorShims.AttributeShim.RemoveAttribute*
   name: RemoveAttribute
-  href: api/InventorShims.AttributeShim.yml
+  href: api/InventorShims.AttributeShim.html#InventorShims_AttributeShim_RemoveAttribute_
   commentId: Overload:InventorShims.AttributeShim.RemoveAttribute
   isSpec: "True"
   fullName: InventorShims.AttributeShim.RemoveAttribute
   nameWithType: AttributeShim.RemoveAttribute
 - uid: InventorShims.AttributeShim.RemoveAttributeSet(System.Object,System.String)
   name: RemoveAttributeSet(Object, String)
-  href: api/InventorShims.AttributeShim.yml
+  href: api/InventorShims.AttributeShim.html#InventorShims_AttributeShim_RemoveAttributeSet_System_Object_System_String_
   commentId: M:InventorShims.AttributeShim.RemoveAttributeSet(System.Object,System.String)
   fullName: InventorShims.AttributeShim.RemoveAttributeSet(System.Object, System.String)
   nameWithType: AttributeShim.RemoveAttributeSet(Object, String)
 - uid: InventorShims.AttributeShim.RemoveAttributeSet*
   name: RemoveAttributeSet
-  href: api/InventorShims.AttributeShim.yml
+  href: api/InventorShims.AttributeShim.html#InventorShims_AttributeShim_RemoveAttributeSet_
   commentId: Overload:InventorShims.AttributeShim.RemoveAttributeSet
   isSpec: "True"
   fullName: InventorShims.AttributeShim.RemoveAttributeSet
   nameWithType: AttributeShim.RemoveAttributeSet
 - uid: InventorShims.AttributeShim.SetAttributeValue(System.Object,System.String,System.String,System.Boolean)
   name: SetAttributeValue(Object, String, String, Boolean)
-  href: api/InventorShims.AttributeShim.yml
+  href: api/InventorShims.AttributeShim.html#InventorShims_AttributeShim_SetAttributeValue_System_Object_System_String_System_String_System_Boolean_
   commentId: M:InventorShims.AttributeShim.SetAttributeValue(System.Object,System.String,System.String,System.Boolean)
   fullName: InventorShims.AttributeShim.SetAttributeValue(System.Object, System.String, System.String, System.Boolean)
   nameWithType: AttributeShim.SetAttributeValue(Object, String, String, Boolean)
 - uid: InventorShims.AttributeShim.SetAttributeValue(System.Object,System.String,System.String,System.Double)
   name: SetAttributeValue(Object, String, String, Double)
-  href: api/InventorShims.AttributeShim.yml
+  href: api/InventorShims.AttributeShim.html#InventorShims_AttributeShim_SetAttributeValue_System_Object_System_String_System_String_System_Double_
   commentId: M:InventorShims.AttributeShim.SetAttributeValue(System.Object,System.String,System.String,System.Double)
   fullName: InventorShims.AttributeShim.SetAttributeValue(System.Object, System.String, System.String, System.Double)
   nameWithType: AttributeShim.SetAttributeValue(Object, String, String, Double)
 - uid: InventorShims.AttributeShim.SetAttributeValue(System.Object,System.String,System.String,System.Int32)
   name: SetAttributeValue(Object, String, String, Int32)
-  href: api/InventorShims.AttributeShim.yml
+  href: api/InventorShims.AttributeShim.html#InventorShims_AttributeShim_SetAttributeValue_System_Object_System_String_System_String_System_Int32_
   commentId: M:InventorShims.AttributeShim.SetAttributeValue(System.Object,System.String,System.String,System.Int32)
   fullName: InventorShims.AttributeShim.SetAttributeValue(System.Object, System.String, System.String, System.Int32)
   nameWithType: AttributeShim.SetAttributeValue(Object, String, String, Int32)
 - uid: InventorShims.AttributeShim.SetAttributeValue(System.Object,System.String,System.String,System.String)
   name: SetAttributeValue(Object, String, String, String)
-  href: api/InventorShims.AttributeShim.yml
+  href: api/InventorShims.AttributeShim.html#InventorShims_AttributeShim_SetAttributeValue_System_Object_System_String_System_String_System_String_
   commentId: M:InventorShims.AttributeShim.SetAttributeValue(System.Object,System.String,System.String,System.String)
   fullName: InventorShims.AttributeShim.SetAttributeValue(System.Object, System.String, System.String, System.String)
   nameWithType: AttributeShim.SetAttributeValue(Object, String, String, String)
 - uid: InventorShims.AttributeShim.SetAttributeValue*
   name: SetAttributeValue
-  href: api/InventorShims.AttributeShim.yml
+  href: api/InventorShims.AttributeShim.html#InventorShims_AttributeShim_SetAttributeValue_
   commentId: Overload:InventorShims.AttributeShim.SetAttributeValue
   isSpec: "True"
   fullName: InventorShims.AttributeShim.SetAttributeValue
   nameWithType: AttributeShim.SetAttributeValue
 - uid: InventorShims.Conversions
   name: Conversions
-  href: api/InventorShims.Conversions.yml
+  href: api/InventorShims.Conversions.html
   commentId: T:InventorShims.Conversions
   fullName: InventorShims.Conversions
   nameWithType: Conversions
 - uid: InventorShims.Conversions.CentimetersToInches(System.Double)
   name: CentimetersToInches(Double)
-  href: api/InventorShims.Conversions.yml
+  href: api/InventorShims.Conversions.html#InventorShims_Conversions_CentimetersToInches_System_Double_
   commentId: M:InventorShims.Conversions.CentimetersToInches(System.Double)
   fullName: InventorShims.Conversions.CentimetersToInches(System.Double)
   nameWithType: Conversions.CentimetersToInches(Double)
 - uid: InventorShims.Conversions.CentimetersToInches(System.Int32)
   name: CentimetersToInches(Int32)
-  href: api/InventorShims.Conversions.yml
+  href: api/InventorShims.Conversions.html#InventorShims_Conversions_CentimetersToInches_System_Int32_
   commentId: M:InventorShims.Conversions.CentimetersToInches(System.Int32)
   fullName: InventorShims.Conversions.CentimetersToInches(System.Int32)
   nameWithType: Conversions.CentimetersToInches(Int32)
 - uid: InventorShims.Conversions.CentimetersToInches*
   name: CentimetersToInches
-  href: api/InventorShims.Conversions.yml
+  href: api/InventorShims.Conversions.html#InventorShims_Conversions_CentimetersToInches_
   commentId: Overload:InventorShims.Conversions.CentimetersToInches
   isSpec: "True"
   fullName: InventorShims.Conversions.CentimetersToInches
   nameWithType: Conversions.CentimetersToInches
 - uid: InventorShims.Conversions.CentimetersToMillimeters(System.Double)
   name: CentimetersToMillimeters(Double)
-  href: api/InventorShims.Conversions.yml
+  href: api/InventorShims.Conversions.html#InventorShims_Conversions_CentimetersToMillimeters_System_Double_
   commentId: M:InventorShims.Conversions.CentimetersToMillimeters(System.Double)
   fullName: InventorShims.Conversions.CentimetersToMillimeters(System.Double)
   nameWithType: Conversions.CentimetersToMillimeters(Double)
 - uid: InventorShims.Conversions.CentimetersToMillimeters(System.Int32)
   name: CentimetersToMillimeters(Int32)
-  href: api/InventorShims.Conversions.yml
+  href: api/InventorShims.Conversions.html#InventorShims_Conversions_CentimetersToMillimeters_System_Int32_
   commentId: M:InventorShims.Conversions.CentimetersToMillimeters(System.Int32)
   fullName: InventorShims.Conversions.CentimetersToMillimeters(System.Int32)
   nameWithType: Conversions.CentimetersToMillimeters(Int32)
 - uid: InventorShims.Conversions.CentimetersToMillimeters*
   name: CentimetersToMillimeters
-  href: api/InventorShims.Conversions.yml
+  href: api/InventorShims.Conversions.html#InventorShims_Conversions_CentimetersToMillimeters_
   commentId: Overload:InventorShims.Conversions.CentimetersToMillimeters
   isSpec: "True"
   fullName: InventorShims.Conversions.CentimetersToMillimeters
   nameWithType: Conversions.CentimetersToMillimeters
 - uid: InventorShims.Conversions.InchesToCentimeters(System.Double)
   name: InchesToCentimeters(Double)
-  href: api/InventorShims.Conversions.yml
+  href: api/InventorShims.Conversions.html#InventorShims_Conversions_InchesToCentimeters_System_Double_
   commentId: M:InventorShims.Conversions.InchesToCentimeters(System.Double)
   fullName: InventorShims.Conversions.InchesToCentimeters(System.Double)
   nameWithType: Conversions.InchesToCentimeters(Double)
 - uid: InventorShims.Conversions.InchesToCentimeters(System.Int32)
   name: InchesToCentimeters(Int32)
-  href: api/InventorShims.Conversions.yml
+  href: api/InventorShims.Conversions.html#InventorShims_Conversions_InchesToCentimeters_System_Int32_
   commentId: M:InventorShims.Conversions.InchesToCentimeters(System.Int32)
   fullName: InventorShims.Conversions.InchesToCentimeters(System.Int32)
   nameWithType: Conversions.InchesToCentimeters(Int32)
 - uid: InventorShims.Conversions.InchesToCentimeters*
   name: InchesToCentimeters
-  href: api/InventorShims.Conversions.yml
+  href: api/InventorShims.Conversions.html#InventorShims_Conversions_InchesToCentimeters_
   commentId: Overload:InventorShims.Conversions.InchesToCentimeters
   isSpec: "True"
   fullName: InventorShims.Conversions.InchesToCentimeters
   nameWithType: Conversions.InchesToCentimeters
 - uid: InventorShims.Conversions.InchesToMillimeters(System.Double)
   name: InchesToMillimeters(Double)
-  href: api/InventorShims.Conversions.yml
+  href: api/InventorShims.Conversions.html#InventorShims_Conversions_InchesToMillimeters_System_Double_
   commentId: M:InventorShims.Conversions.InchesToMillimeters(System.Double)
   fullName: InventorShims.Conversions.InchesToMillimeters(System.Double)
   nameWithType: Conversions.InchesToMillimeters(Double)
 - uid: InventorShims.Conversions.InchesToMillimeters(System.Int32)
   name: InchesToMillimeters(Int32)
-  href: api/InventorShims.Conversions.yml
+  href: api/InventorShims.Conversions.html#InventorShims_Conversions_InchesToMillimeters_System_Int32_
   commentId: M:InventorShims.Conversions.InchesToMillimeters(System.Int32)
   fullName: InventorShims.Conversions.InchesToMillimeters(System.Int32)
   nameWithType: Conversions.InchesToMillimeters(Int32)
 - uid: InventorShims.Conversions.InchesToMillimeters*
   name: InchesToMillimeters
-  href: api/InventorShims.Conversions.yml
+  href: api/InventorShims.Conversions.html#InventorShims_Conversions_InchesToMillimeters_
   commentId: Overload:InventorShims.Conversions.InchesToMillimeters
   isSpec: "True"
   fullName: InventorShims.Conversions.InchesToMillimeters
   nameWithType: Conversions.InchesToMillimeters
 - uid: InventorShims.Conversions.MillimetersToCentimeters(System.Double)
   name: MillimetersToCentimeters(Double)
-  href: api/InventorShims.Conversions.yml
+  href: api/InventorShims.Conversions.html#InventorShims_Conversions_MillimetersToCentimeters_System_Double_
   commentId: M:InventorShims.Conversions.MillimetersToCentimeters(System.Double)
   fullName: InventorShims.Conversions.MillimetersToCentimeters(System.Double)
   nameWithType: Conversions.MillimetersToCentimeters(Double)
 - uid: InventorShims.Conversions.MillimetersToCentimeters(System.Int32)
   name: MillimetersToCentimeters(Int32)
-  href: api/InventorShims.Conversions.yml
+  href: api/InventorShims.Conversions.html#InventorShims_Conversions_MillimetersToCentimeters_System_Int32_
   commentId: M:InventorShims.Conversions.MillimetersToCentimeters(System.Int32)
   fullName: InventorShims.Conversions.MillimetersToCentimeters(System.Int32)
   nameWithType: Conversions.MillimetersToCentimeters(Int32)
 - uid: InventorShims.Conversions.MillimetersToCentimeters*
   name: MillimetersToCentimeters
-  href: api/InventorShims.Conversions.yml
+  href: api/InventorShims.Conversions.html#InventorShims_Conversions_MillimetersToCentimeters_
   commentId: Overload:InventorShims.Conversions.MillimetersToCentimeters
   isSpec: "True"
   fullName: InventorShims.Conversions.MillimetersToCentimeters
   nameWithType: Conversions.MillimetersToCentimeters
 - uid: InventorShims.Conversions.MillimetersToInches(System.Double)
   name: MillimetersToInches(Double)
-  href: api/InventorShims.Conversions.yml
+  href: api/InventorShims.Conversions.html#InventorShims_Conversions_MillimetersToInches_System_Double_
   commentId: M:InventorShims.Conversions.MillimetersToInches(System.Double)
   fullName: InventorShims.Conversions.MillimetersToInches(System.Double)
   nameWithType: Conversions.MillimetersToInches(Double)
 - uid: InventorShims.Conversions.MillimetersToInches(System.Int32)
   name: MillimetersToInches(Int32)
-  href: api/InventorShims.Conversions.yml
+  href: api/InventorShims.Conversions.html#InventorShims_Conversions_MillimetersToInches_System_Int32_
   commentId: M:InventorShims.Conversions.MillimetersToInches(System.Int32)
   fullName: InventorShims.Conversions.MillimetersToInches(System.Int32)
   nameWithType: Conversions.MillimetersToInches(Int32)
 - uid: InventorShims.Conversions.MillimetersToInches*
   name: MillimetersToInches
-  href: api/InventorShims.Conversions.yml
+  href: api/InventorShims.Conversions.html#InventorShims_Conversions_MillimetersToInches_
   commentId: Overload:InventorShims.Conversions.MillimetersToInches
   isSpec: "True"
   fullName: InventorShims.Conversions.MillimetersToInches
   nameWithType: Conversions.MillimetersToInches
 - uid: InventorShims.DocumentShim
   name: DocumentShim
-  href: api/InventorShims.DocumentShim.yml
+  href: api/InventorShims.DocumentShim.html
   commentId: T:InventorShims.DocumentShim
   fullName: InventorShims.DocumentShim
   nameWithType: DocumentShim
 - uid: InventorShims.DocumentShim.GetDocumentFromObject(System.Object)
   name: GetDocumentFromObject(Object)
-  href: api/InventorShims.DocumentShim.yml
+  href: api/InventorShims.DocumentShim.html#InventorShims_DocumentShim_GetDocumentFromObject_System_Object_
   commentId: M:InventorShims.DocumentShim.GetDocumentFromObject(System.Object)
   fullName: InventorShims.DocumentShim.GetDocumentFromObject(System.Object)
   nameWithType: DocumentShim.GetDocumentFromObject(Object)
 - uid: InventorShims.DocumentShim.GetDocumentFromObject*
   name: GetDocumentFromObject
-  href: api/InventorShims.DocumentShim.yml
+  href: api/InventorShims.DocumentShim.html#InventorShims_DocumentShim_GetDocumentFromObject_
   commentId: Overload:InventorShims.DocumentShim.GetDocumentFromObject
   isSpec: "True"
   fullName: InventorShims.DocumentShim.GetDocumentFromObject
   nameWithType: DocumentShim.GetDocumentFromObject
 - uid: InventorShims.DocumentShim.GetDocumentsFromSelectSet(SelectSet)
   name: GetDocumentsFromSelectSet(SelectSet)
-  href: api/InventorShims.DocumentShim.yml
+  href: api/InventorShims.DocumentShim.html#InventorShims_DocumentShim_GetDocumentsFromSelectSet_SelectSet_
   commentId: M:InventorShims.DocumentShim.GetDocumentsFromSelectSet(SelectSet)
   fullName: InventorShims.DocumentShim.GetDocumentsFromSelectSet(SelectSet)
   nameWithType: DocumentShim.GetDocumentsFromSelectSet(SelectSet)
 - uid: InventorShims.DocumentShim.GetDocumentsFromSelectSet*
   name: GetDocumentsFromSelectSet
-  href: api/InventorShims.DocumentShim.yml
+  href: api/InventorShims.DocumentShim.html#InventorShims_DocumentShim_GetDocumentsFromSelectSet_
   commentId: Overload:InventorShims.DocumentShim.GetDocumentsFromSelectSet
   isSpec: "True"
   fullName: InventorShims.DocumentShim.GetDocumentsFromSelectSet
   nameWithType: DocumentShim.GetDocumentsFromSelectSet
 - uid: InventorShims.DocumentShim.IsAssembly(Document)
   name: IsAssembly(Document)
-  href: api/InventorShims.DocumentShim.yml
+  href: api/InventorShims.DocumentShim.html#InventorShims_DocumentShim_IsAssembly_Document_
   commentId: M:InventorShims.DocumentShim.IsAssembly(Document)
   fullName: InventorShims.DocumentShim.IsAssembly(Document)
   nameWithType: DocumentShim.IsAssembly(Document)
 - uid: InventorShims.DocumentShim.IsAssembly*
   name: IsAssembly
-  href: api/InventorShims.DocumentShim.yml
+  href: api/InventorShims.DocumentShim.html#InventorShims_DocumentShim_IsAssembly_
   commentId: Overload:InventorShims.DocumentShim.IsAssembly
   isSpec: "True"
   fullName: InventorShims.DocumentShim.IsAssembly
   nameWithType: DocumentShim.IsAssembly
 - uid: InventorShims.DocumentShim.IsDrawing(Document)
   name: IsDrawing(Document)
-  href: api/InventorShims.DocumentShim.yml
+  href: api/InventorShims.DocumentShim.html#InventorShims_DocumentShim_IsDrawing_Document_
   commentId: M:InventorShims.DocumentShim.IsDrawing(Document)
   fullName: InventorShims.DocumentShim.IsDrawing(Document)
   nameWithType: DocumentShim.IsDrawing(Document)
 - uid: InventorShims.DocumentShim.IsDrawing*
   name: IsDrawing
-  href: api/InventorShims.DocumentShim.yml
+  href: api/InventorShims.DocumentShim.html#InventorShims_DocumentShim_IsDrawing_
   commentId: Overload:InventorShims.DocumentShim.IsDrawing
   isSpec: "True"
   fullName: InventorShims.DocumentShim.IsDrawing
   nameWithType: DocumentShim.IsDrawing
 - uid: InventorShims.DocumentShim.IsForeignModel(Document)
   name: IsForeignModel(Document)
-  href: api/InventorShims.DocumentShim.yml
+  href: api/InventorShims.DocumentShim.html#InventorShims_DocumentShim_IsForeignModel_Document_
   commentId: M:InventorShims.DocumentShim.IsForeignModel(Document)
   fullName: InventorShims.DocumentShim.IsForeignModel(Document)
   nameWithType: DocumentShim.IsForeignModel(Document)
 - uid: InventorShims.DocumentShim.IsForeignModel*
   name: IsForeignModel
-  href: api/InventorShims.DocumentShim.yml
+  href: api/InventorShims.DocumentShim.html#InventorShims_DocumentShim_IsForeignModel_
   commentId: Overload:InventorShims.DocumentShim.IsForeignModel
   isSpec: "True"
   fullName: InventorShims.DocumentShim.IsForeignModel
   nameWithType: DocumentShim.IsForeignModel
 - uid: InventorShims.DocumentShim.IsPart(Document)
   name: IsPart(Document)
-  href: api/InventorShims.DocumentShim.yml
+  href: api/InventorShims.DocumentShim.html#InventorShims_DocumentShim_IsPart_Document_
   commentId: M:InventorShims.DocumentShim.IsPart(Document)
   fullName: InventorShims.DocumentShim.IsPart(Document)
   nameWithType: DocumentShim.IsPart(Document)
 - uid: InventorShims.DocumentShim.IsPart*
   name: IsPart
-  href: api/InventorShims.DocumentShim.yml
+  href: api/InventorShims.DocumentShim.html#InventorShims_DocumentShim_IsPart_
   commentId: Overload:InventorShims.DocumentShim.IsPart
   isSpec: "True"
   fullName: InventorShims.DocumentShim.IsPart
   nameWithType: DocumentShim.IsPart
 - uid: InventorShims.DocumentShim.IsPresentation(Document)
   name: IsPresentation(Document)
-  href: api/InventorShims.DocumentShim.yml
+  href: api/InventorShims.DocumentShim.html#InventorShims_DocumentShim_IsPresentation_Document_
   commentId: M:InventorShims.DocumentShim.IsPresentation(Document)
   fullName: InventorShims.DocumentShim.IsPresentation(Document)
   nameWithType: DocumentShim.IsPresentation(Document)
 - uid: InventorShims.DocumentShim.IsPresentation*
   name: IsPresentation
-  href: api/InventorShims.DocumentShim.yml
+  href: api/InventorShims.DocumentShim.html#InventorShims_DocumentShim_IsPresentation_
   commentId: Overload:InventorShims.DocumentShim.IsPresentation
   isSpec: "True"
   fullName: InventorShims.DocumentShim.IsPresentation
   nameWithType: DocumentShim.IsPresentation
 - uid: InventorShims.DocumentShim.IsSat(Document)
   name: IsSat(Document)
-  href: api/InventorShims.DocumentShim.yml
+  href: api/InventorShims.DocumentShim.html#InventorShims_DocumentShim_IsSat_Document_
   commentId: M:InventorShims.DocumentShim.IsSat(Document)
   fullName: InventorShims.DocumentShim.IsSat(Document)
   nameWithType: DocumentShim.IsSat(Document)
 - uid: InventorShims.DocumentShim.IsSat*
   name: IsSat
-  href: api/InventorShims.DocumentShim.yml
+  href: api/InventorShims.DocumentShim.html#InventorShims_DocumentShim_IsSat_
   commentId: Overload:InventorShims.DocumentShim.IsSat
   isSpec: "True"
   fullName: InventorShims.DocumentShim.IsSat
   nameWithType: DocumentShim.IsSat
 - uid: InventorShims.DocumentShim.IsUnknown(Document)
   name: IsUnknown(Document)
-  href: api/InventorShims.DocumentShim.yml
+  href: api/InventorShims.DocumentShim.html#InventorShims_DocumentShim_IsUnknown_Document_
   commentId: M:InventorShims.DocumentShim.IsUnknown(Document)
   fullName: InventorShims.DocumentShim.IsUnknown(Document)
   nameWithType: DocumentShim.IsUnknown(Document)
 - uid: InventorShims.DocumentShim.IsUnknown*
   name: IsUnknown
-  href: api/InventorShims.DocumentShim.yml
+  href: api/InventorShims.DocumentShim.html#InventorShims_DocumentShim_IsUnknown_
   commentId: Overload:InventorShims.DocumentShim.IsUnknown
   isSpec: "True"
   fullName: InventorShims.DocumentShim.IsUnknown
   nameWithType: DocumentShim.IsUnknown
 - uid: InventorShims.DocumentShim.ObjectIsDocument(System.Object)
   name: ObjectIsDocument(Object)
-  href: api/InventorShims.DocumentShim.yml
+  href: api/InventorShims.DocumentShim.html#InventorShims_DocumentShim_ObjectIsDocument_System_Object_
   commentId: M:InventorShims.DocumentShim.ObjectIsDocument(System.Object)
   fullName: InventorShims.DocumentShim.ObjectIsDocument(System.Object)
   nameWithType: DocumentShim.ObjectIsDocument(Object)
 - uid: InventorShims.DocumentShim.ObjectIsDocument*
   name: ObjectIsDocument
-  href: api/InventorShims.DocumentShim.yml
+  href: api/InventorShims.DocumentShim.html#InventorShims_DocumentShim_ObjectIsDocument_
   commentId: Overload:InventorShims.DocumentShim.ObjectIsDocument
   isSpec: "True"
   fullName: InventorShims.DocumentShim.ObjectIsDocument
   nameWithType: DocumentShim.ObjectIsDocument
 - uid: InventorShims.DocumentShim.OrbitToIsoFrontRightTop(Document)
   name: OrbitToIsoFrontRightTop(Document)
-  href: api/InventorShims.DocumentShim.yml
+  href: api/InventorShims.DocumentShim.html#InventorShims_DocumentShim_OrbitToIsoFrontRightTop_Document_
   commentId: M:InventorShims.DocumentShim.OrbitToIsoFrontRightTop(Document)
   fullName: InventorShims.DocumentShim.OrbitToIsoFrontRightTop(Document)
   nameWithType: DocumentShim.OrbitToIsoFrontRightTop(Document)
 - uid: InventorShims.DocumentShim.OrbitToIsoFrontRightTop*
   name: OrbitToIsoFrontRightTop
-  href: api/InventorShims.DocumentShim.yml
+  href: api/InventorShims.DocumentShim.html#InventorShims_DocumentShim_OrbitToIsoFrontRightTop_
   commentId: Overload:InventorShims.DocumentShim.OrbitToIsoFrontRightTop
   isSpec: "True"
   fullName: InventorShims.DocumentShim.OrbitToIsoFrontRightTop
   nameWithType: DocumentShim.OrbitToIsoFrontRightTop
 - uid: InventorShims.DocumentShim.ReturnSpecificDocumentObject(Inventor.Document)
   name: ReturnSpecificDocumentObject(Inventor.Document)
-  href: api/InventorShims.DocumentShim.yml
+  href: api/InventorShims.DocumentShim.html#InventorShims_DocumentShim_ReturnSpecificDocumentObject_Inventor_Document_
   commentId: M:InventorShims.DocumentShim.ReturnSpecificDocumentObject(Inventor.Document)
   fullName: InventorShims.DocumentShim.ReturnSpecificDocumentObject(Inventor.Document)
   nameWithType: DocumentShim.ReturnSpecificDocumentObject(Inventor.Document)
 - uid: InventorShims.DocumentShim.ReturnSpecificDocumentObject*
   name: ReturnSpecificDocumentObject
-  href: api/InventorShims.DocumentShim.yml
+  href: api/InventorShims.DocumentShim.html#InventorShims_DocumentShim_ReturnSpecificDocumentObject_
   commentId: Overload:InventorShims.DocumentShim.ReturnSpecificDocumentObject
   isSpec: "True"
   fullName: InventorShims.DocumentShim.ReturnSpecificDocumentObject
   nameWithType: DocumentShim.ReturnSpecificDocumentObject
 - uid: InventorShims.DocumentShim.SaveSilently(Document)
   name: SaveSilently(Document)
-  href: api/InventorShims.DocumentShim.yml
+  href: api/InventorShims.DocumentShim.html#InventorShims_DocumentShim_SaveSilently_Document_
   commentId: M:InventorShims.DocumentShim.SaveSilently(Document)
   fullName: InventorShims.DocumentShim.SaveSilently(Document)
   nameWithType: DocumentShim.SaveSilently(Document)
 - uid: InventorShims.DocumentShim.SaveSilently*
   name: SaveSilently
-  href: api/InventorShims.DocumentShim.yml
+  href: api/InventorShims.DocumentShim.html#InventorShims_DocumentShim_SaveSilently_
   commentId: Overload:InventorShims.DocumentShim.SaveSilently
   isSpec: "True"
   fullName: InventorShims.DocumentShim.SaveSilently
   nameWithType: DocumentShim.SaveSilently
 - uid: InventorShims.DocumentShim.ScreenShot(Document,System.String,System.Boolean,System.Boolean)
   name: ScreenShot(Document, String, Boolean, Boolean)
-  href: api/InventorShims.DocumentShim.yml
+  href: api/InventorShims.DocumentShim.html#InventorShims_DocumentShim_ScreenShot_Document_System_String_System_Boolean_System_Boolean_
   commentId: M:InventorShims.DocumentShim.ScreenShot(Document,System.String,System.Boolean,System.Boolean)
   fullName: InventorShims.DocumentShim.ScreenShot(Document, System.String, System.Boolean, System.Boolean)
   nameWithType: DocumentShim.ScreenShot(Document, String, Boolean, Boolean)
 - uid: InventorShims.DocumentShim.ScreenShot*
   name: ScreenShot
-  href: api/InventorShims.DocumentShim.yml
+  href: api/InventorShims.DocumentShim.html#InventorShims_DocumentShim_ScreenShot_
   commentId: Overload:InventorShims.DocumentShim.ScreenShot
   isSpec: "True"
   fullName: InventorShims.DocumentShim.ScreenShot
   nameWithType: DocumentShim.ScreenShot
 - uid: InventorShims.DocumentShim.ZoomExtents(Document)
   name: ZoomExtents(Document)
-  href: api/InventorShims.DocumentShim.yml
+  href: api/InventorShims.DocumentShim.html#InventorShims_DocumentShim_ZoomExtents_Document_
   commentId: M:InventorShims.DocumentShim.ZoomExtents(Document)
   fullName: InventorShims.DocumentShim.ZoomExtents(Document)
   nameWithType: DocumentShim.ZoomExtents(Document)
 - uid: InventorShims.DocumentShim.ZoomExtents*
   name: ZoomExtents
-  href: api/InventorShims.DocumentShim.yml
+  href: api/InventorShims.DocumentShim.html#InventorShims_DocumentShim_ZoomExtents_
   commentId: Overload:InventorShims.DocumentShim.ZoomExtents
   isSpec: "True"
   fullName: InventorShims.DocumentShim.ZoomExtents
   nameWithType: DocumentShim.ZoomExtents
 - uid: InventorShims.ExternalRuleDirectories
   name: ExternalRuleDirectories
-  href: api/InventorShims.ExternalRuleDirectories.yml
+  href: api/InventorShims.ExternalRuleDirectories.html
   commentId: T:InventorShims.ExternalRuleDirectories
   fullName: InventorShims.ExternalRuleDirectories
   nameWithType: ExternalRuleDirectories
 - uid: InventorShims.ExternalRuleDirectories.#ctor
   name: ExternalRuleDirectories()
-  href: api/InventorShims.ExternalRuleDirectories.yml
+  href: api/InventorShims.ExternalRuleDirectories.html#InventorShims_ExternalRuleDirectories__ctor
   commentId: M:InventorShims.ExternalRuleDirectories.#ctor
   fullName: InventorShims.ExternalRuleDirectories.ExternalRuleDirectories()
   nameWithType: ExternalRuleDirectories.ExternalRuleDirectories()
 - uid: InventorShims.ExternalRuleDirectories.#ctor(Inventor.Application)
   name: ExternalRuleDirectories(Inventor.Application)
-  href: api/InventorShims.ExternalRuleDirectories.yml
+  href: api/InventorShims.ExternalRuleDirectories.html#InventorShims_ExternalRuleDirectories__ctor_Inventor_Application_
   commentId: M:InventorShims.ExternalRuleDirectories.#ctor(Inventor.Application)
   fullName: InventorShims.ExternalRuleDirectories.ExternalRuleDirectories(Inventor.Application)
   nameWithType: ExternalRuleDirectories.ExternalRuleDirectories(Inventor.Application)
 - uid: InventorShims.ExternalRuleDirectories.#ctor*
   name: ExternalRuleDirectories
-  href: api/InventorShims.ExternalRuleDirectories.yml
+  href: api/InventorShims.ExternalRuleDirectories.html#InventorShims_ExternalRuleDirectories__ctor_
   commentId: Overload:InventorShims.ExternalRuleDirectories.#ctor
   isSpec: "True"
   fullName: InventorShims.ExternalRuleDirectories.ExternalRuleDirectories
   nameWithType: ExternalRuleDirectories.ExternalRuleDirectories
 - uid: InventorShims.ExternalRuleDirectories.Add(System.String)
   name: Add(String)
-  href: api/InventorShims.ExternalRuleDirectories.yml
+  href: api/InventorShims.ExternalRuleDirectories.html#InventorShims_ExternalRuleDirectories_Add_System_String_
   commentId: M:InventorShims.ExternalRuleDirectories.Add(System.String)
   fullName: InventorShims.ExternalRuleDirectories.Add(System.String)
   nameWithType: ExternalRuleDirectories.Add(String)
 - uid: InventorShims.ExternalRuleDirectories.Add*
   name: Add
-  href: api/InventorShims.ExternalRuleDirectories.yml
+  href: api/InventorShims.ExternalRuleDirectories.html#InventorShims_ExternalRuleDirectories_Add_
   commentId: Overload:InventorShims.ExternalRuleDirectories.Add
   isSpec: "True"
   fullName: InventorShims.ExternalRuleDirectories.Add
   nameWithType: ExternalRuleDirectories.Add
 - uid: InventorShims.ExternalRuleDirectories.Clear
   name: Clear()
-  href: api/InventorShims.ExternalRuleDirectories.yml
+  href: api/InventorShims.ExternalRuleDirectories.html#InventorShims_ExternalRuleDirectories_Clear
   commentId: M:InventorShims.ExternalRuleDirectories.Clear
   fullName: InventorShims.ExternalRuleDirectories.Clear()
   nameWithType: ExternalRuleDirectories.Clear()
 - uid: InventorShims.ExternalRuleDirectories.Clear*
   name: Clear
-  href: api/InventorShims.ExternalRuleDirectories.yml
+  href: api/InventorShims.ExternalRuleDirectories.html#InventorShims_ExternalRuleDirectories_Clear_
   commentId: Overload:InventorShims.ExternalRuleDirectories.Clear
   isSpec: "True"
   fullName: InventorShims.ExternalRuleDirectories.Clear
   nameWithType: ExternalRuleDirectories.Clear
 - uid: InventorShims.ExternalRuleDirectories.Contains(System.String)
   name: Contains(String)
-  href: api/InventorShims.ExternalRuleDirectories.yml
+  href: api/InventorShims.ExternalRuleDirectories.html#InventorShims_ExternalRuleDirectories_Contains_System_String_
   commentId: M:InventorShims.ExternalRuleDirectories.Contains(System.String)
   fullName: InventorShims.ExternalRuleDirectories.Contains(System.String)
   nameWithType: ExternalRuleDirectories.Contains(String)
 - uid: InventorShims.ExternalRuleDirectories.Contains*
   name: Contains
-  href: api/InventorShims.ExternalRuleDirectories.yml
+  href: api/InventorShims.ExternalRuleDirectories.html#InventorShims_ExternalRuleDirectories_Contains_
   commentId: Overload:InventorShims.ExternalRuleDirectories.Contains
   isSpec: "True"
   fullName: InventorShims.ExternalRuleDirectories.Contains
   nameWithType: ExternalRuleDirectories.Contains
 - uid: InventorShims.ExternalRuleDirectories.Count
   name: Count
-  href: api/InventorShims.ExternalRuleDirectories.yml
+  href: api/InventorShims.ExternalRuleDirectories.html#InventorShims_ExternalRuleDirectories_Count
   commentId: P:InventorShims.ExternalRuleDirectories.Count
   fullName: InventorShims.ExternalRuleDirectories.Count
   nameWithType: ExternalRuleDirectories.Count
 - uid: InventorShims.ExternalRuleDirectories.Count*
   name: Count
-  href: api/InventorShims.ExternalRuleDirectories.yml
+  href: api/InventorShims.ExternalRuleDirectories.html#InventorShims_ExternalRuleDirectories_Count_
   commentId: Overload:InventorShims.ExternalRuleDirectories.Count
   isSpec: "True"
   fullName: InventorShims.ExternalRuleDirectories.Count
   nameWithType: ExternalRuleDirectories.Count
 - uid: InventorShims.ExternalRuleDirectories.Directories
   name: Directories
-  href: api/InventorShims.ExternalRuleDirectories.yml
+  href: api/InventorShims.ExternalRuleDirectories.html#InventorShims_ExternalRuleDirectories_Directories
   commentId: P:InventorShims.ExternalRuleDirectories.Directories
   fullName: InventorShims.ExternalRuleDirectories.Directories
   nameWithType: ExternalRuleDirectories.Directories
 - uid: InventorShims.ExternalRuleDirectories.Directories*
   name: Directories
-  href: api/InventorShims.ExternalRuleDirectories.yml
+  href: api/InventorShims.ExternalRuleDirectories.html#InventorShims_ExternalRuleDirectories_Directories_
   commentId: Overload:InventorShims.ExternalRuleDirectories.Directories
   isSpec: "True"
   fullName: InventorShims.ExternalRuleDirectories.Directories
   nameWithType: ExternalRuleDirectories.Directories
 - uid: InventorShims.ExternalRuleDirectories.Dispose
   name: Dispose()
-  href: api/InventorShims.ExternalRuleDirectories.yml
+  href: api/InventorShims.ExternalRuleDirectories.html#InventorShims_ExternalRuleDirectories_Dispose
   commentId: M:InventorShims.ExternalRuleDirectories.Dispose
   fullName: InventorShims.ExternalRuleDirectories.Dispose()
   nameWithType: ExternalRuleDirectories.Dispose()
 - uid: InventorShims.ExternalRuleDirectories.Dispose(System.Boolean)
   name: Dispose(Boolean)
-  href: api/InventorShims.ExternalRuleDirectories.yml
+  href: api/InventorShims.ExternalRuleDirectories.html#InventorShims_ExternalRuleDirectories_Dispose_System_Boolean_
   commentId: M:InventorShims.ExternalRuleDirectories.Dispose(System.Boolean)
   fullName: InventorShims.ExternalRuleDirectories.Dispose(System.Boolean)
   nameWithType: ExternalRuleDirectories.Dispose(Boolean)
 - uid: InventorShims.ExternalRuleDirectories.Dispose*
   name: Dispose
-  href: api/InventorShims.ExternalRuleDirectories.yml
+  href: api/InventorShims.ExternalRuleDirectories.html#InventorShims_ExternalRuleDirectories_Dispose_
   commentId: Overload:InventorShims.ExternalRuleDirectories.Dispose
   isSpec: "True"
   fullName: InventorShims.ExternalRuleDirectories.Dispose
   nameWithType: ExternalRuleDirectories.Dispose
 - uid: InventorShims.ExternalRuleDirectories.Finalize
   name: Finalize()
-  href: api/InventorShims.ExternalRuleDirectories.yml
+  href: api/InventorShims.ExternalRuleDirectories.html#InventorShims_ExternalRuleDirectories_Finalize
   commentId: M:InventorShims.ExternalRuleDirectories.Finalize
   fullName: InventorShims.ExternalRuleDirectories.Finalize()
   nameWithType: ExternalRuleDirectories.Finalize()
 - uid: InventorShims.ExternalRuleDirectories.Finalize*
   name: Finalize
-  href: api/InventorShims.ExternalRuleDirectories.yml
+  href: api/InventorShims.ExternalRuleDirectories.html#InventorShims_ExternalRuleDirectories_Finalize_
   commentId: Overload:InventorShims.ExternalRuleDirectories.Finalize
   isSpec: "True"
   fullName: InventorShims.ExternalRuleDirectories.Finalize
   nameWithType: ExternalRuleDirectories.Finalize
 - uid: InventorShims.ExternalRuleDirectories.Remove(System.String)
   name: Remove(String)
-  href: api/InventorShims.ExternalRuleDirectories.yml
+  href: api/InventorShims.ExternalRuleDirectories.html#InventorShims_ExternalRuleDirectories_Remove_System_String_
   commentId: M:InventorShims.ExternalRuleDirectories.Remove(System.String)
   fullName: InventorShims.ExternalRuleDirectories.Remove(System.String)
   nameWithType: ExternalRuleDirectories.Remove(String)
 - uid: InventorShims.ExternalRuleDirectories.Remove*
   name: Remove
-  href: api/InventorShims.ExternalRuleDirectories.yml
+  href: api/InventorShims.ExternalRuleDirectories.html#InventorShims_ExternalRuleDirectories_Remove_
   commentId: Overload:InventorShims.ExternalRuleDirectories.Remove
   isSpec: "True"
   fullName: InventorShims.ExternalRuleDirectories.Remove
   nameWithType: ExternalRuleDirectories.Remove
 - uid: InventorShims.ParameterShim
   name: ParameterShim
-  href: api/InventorShims.ParameterShim.yml
+  href: api/InventorShims.ParameterShim.html
   commentId: T:InventorShims.ParameterShim
   fullName: InventorShims.ParameterShim
   nameWithType: ParameterShim
 - uid: InventorShims.ParameterShim.GetParameter(Inventor.Document,System.String)
   name: GetParameter(Inventor.Document, String)
-  href: api/InventorShims.ParameterShim.yml
+  href: api/InventorShims.ParameterShim.html#InventorShims_ParameterShim_GetParameter_Inventor_Document_System_String_
   commentId: M:InventorShims.ParameterShim.GetParameter(Inventor.Document,System.String)
   fullName: InventorShims.ParameterShim.GetParameter(Inventor.Document, System.String)
   nameWithType: ParameterShim.GetParameter(Inventor.Document, String)
 - uid: InventorShims.ParameterShim.GetParameter*
   name: GetParameter
-  href: api/InventorShims.ParameterShim.yml
+  href: api/InventorShims.ParameterShim.html#InventorShims_ParameterShim_GetParameter_
   commentId: Overload:InventorShims.ParameterShim.GetParameter
   isSpec: "True"
   fullName: InventorShims.ParameterShim.GetParameter
   nameWithType: ParameterShim.GetParameter
 - uid: InventorShims.ParameterShim.GetParameterNames(Document)
   name: GetParameterNames(Document)
-  href: api/InventorShims.ParameterShim.yml
+  href: api/InventorShims.ParameterShim.html#InventorShims_ParameterShim_GetParameterNames_Document_
   commentId: M:InventorShims.ParameterShim.GetParameterNames(Document)
   fullName: InventorShims.ParameterShim.GetParameterNames(Document)
   nameWithType: ParameterShim.GetParameterNames(Document)
 - uid: InventorShims.ParameterShim.GetParameterNames*
   name: GetParameterNames
-  href: api/InventorShims.ParameterShim.yml
+  href: api/InventorShims.ParameterShim.html#InventorShims_ParameterShim_GetParameterNames_
   commentId: Overload:InventorShims.ParameterShim.GetParameterNames
   isSpec: "True"
   fullName: InventorShims.ParameterShim.GetParameterNames
   nameWithType: ParameterShim.GetParameterNames
 - uid: InventorShims.ParameterShim.GetParameters(Document)
   name: GetParameters(Document)
-  href: api/InventorShims.ParameterShim.yml
+  href: api/InventorShims.ParameterShim.html#InventorShims_ParameterShim_GetParameters_Document_
   commentId: M:InventorShims.ParameterShim.GetParameters(Document)
   fullName: InventorShims.ParameterShim.GetParameters(Document)
   nameWithType: ParameterShim.GetParameters(Document)
 - uid: InventorShims.ParameterShim.GetParameters*
   name: GetParameters
-  href: api/InventorShims.ParameterShim.yml
+  href: api/InventorShims.ParameterShim.html#InventorShims_ParameterShim_GetParameters_
   commentId: Overload:InventorShims.ParameterShim.GetParameters
   isSpec: "True"
   fullName: InventorShims.ParameterShim.GetParameters
   nameWithType: ParameterShim.GetParameters
 - uid: InventorShims.ParameterShim.GetParameterValue(Inventor.Document,System.String)
   name: GetParameterValue(Inventor.Document, String)
-  href: api/InventorShims.ParameterShim.yml
+  href: api/InventorShims.ParameterShim.html#InventorShims_ParameterShim_GetParameterValue_Inventor_Document_System_String_
   commentId: M:InventorShims.ParameterShim.GetParameterValue(Inventor.Document,System.String)
   fullName: InventorShims.ParameterShim.GetParameterValue(Inventor.Document, System.String)
   nameWithType: ParameterShim.GetParameterValue(Inventor.Document, String)
 - uid: InventorShims.ParameterShim.GetParameterValue*
   name: GetParameterValue
-  href: api/InventorShims.ParameterShim.yml
+  href: api/InventorShims.ParameterShim.html#InventorShims_ParameterShim_GetParameterValue_
   commentId: Overload:InventorShims.ParameterShim.GetParameterValue
   isSpec: "True"
   fullName: InventorShims.ParameterShim.GetParameterValue
   nameWithType: ParameterShim.GetParameterValue
 - uid: InventorShims.ParameterShim.ParameterIsWritable(Document,System.String)
   name: ParameterIsWritable(Document, String)
-  href: api/InventorShims.ParameterShim.yml
+  href: api/InventorShims.ParameterShim.html#InventorShims_ParameterShim_ParameterIsWritable_Document_System_String_
   commentId: M:InventorShims.ParameterShim.ParameterIsWritable(Document,System.String)
   fullName: InventorShims.ParameterShim.ParameterIsWritable(Document, System.String)
   nameWithType: ParameterShim.ParameterIsWritable(Document, String)
 - uid: InventorShims.ParameterShim.ParameterIsWritable(Parameter)
   name: ParameterIsWritable(Parameter)
-  href: api/InventorShims.ParameterShim.yml
+  href: api/InventorShims.ParameterShim.html#InventorShims_ParameterShim_ParameterIsWritable_Parameter_
   commentId: M:InventorShims.ParameterShim.ParameterIsWritable(Parameter)
   fullName: InventorShims.ParameterShim.ParameterIsWritable(Parameter)
   nameWithType: ParameterShim.ParameterIsWritable(Parameter)
 - uid: InventorShims.ParameterShim.ParameterIsWritable*
   name: ParameterIsWritable
-  href: api/InventorShims.ParameterShim.yml
+  href: api/InventorShims.ParameterShim.html#InventorShims_ParameterShim_ParameterIsWritable_
   commentId: Overload:InventorShims.ParameterShim.ParameterIsWritable
   isSpec: "True"
   fullName: InventorShims.ParameterShim.ParameterIsWritable
   nameWithType: ParameterShim.ParameterIsWritable
 - uid: InventorShims.ParameterShim.RemoveParameter(Inventor.Document,System.String)
   name: RemoveParameter(Inventor.Document, String)
-  href: api/InventorShims.ParameterShim.yml
+  href: api/InventorShims.ParameterShim.html#InventorShims_ParameterShim_RemoveParameter_Inventor_Document_System_String_
   commentId: M:InventorShims.ParameterShim.RemoveParameter(Inventor.Document,System.String)
   fullName: InventorShims.ParameterShim.RemoveParameter(Inventor.Document, System.String)
   nameWithType: ParameterShim.RemoveParameter(Inventor.Document, String)
 - uid: InventorShims.ParameterShim.RemoveParameter*
   name: RemoveParameter
-  href: api/InventorShims.ParameterShim.yml
+  href: api/InventorShims.ParameterShim.html#InventorShims_ParameterShim_RemoveParameter_
   commentId: Overload:InventorShims.ParameterShim.RemoveParameter
   isSpec: "True"
   fullName: InventorShims.ParameterShim.RemoveParameter
   nameWithType: ParameterShim.RemoveParameter
 - uid: InventorShims.ParameterShim.SetParameterValue(Document,System.String,System.Boolean,System.Boolean)
   name: SetParameterValue(Document, String, Boolean, Boolean)
-  href: api/InventorShims.ParameterShim.yml
+  href: api/InventorShims.ParameterShim.html#InventorShims_ParameterShim_SetParameterValue_Document_System_String_System_Boolean_System_Boolean_
   commentId: M:InventorShims.ParameterShim.SetParameterValue(Document,System.String,System.Boolean,System.Boolean)
   fullName: InventorShims.ParameterShim.SetParameterValue(Document, System.String, System.Boolean, System.Boolean)
   nameWithType: ParameterShim.SetParameterValue(Document, String, Boolean, Boolean)
 - uid: InventorShims.ParameterShim.SetParameterValue(Document,System.String,System.String,System.Boolean)
   name: SetParameterValue(Document, String, String, Boolean)
-  href: api/InventorShims.ParameterShim.yml
+  href: api/InventorShims.ParameterShim.html#InventorShims_ParameterShim_SetParameterValue_Document_System_String_System_String_System_Boolean_
   commentId: M:InventorShims.ParameterShim.SetParameterValue(Document,System.String,System.String,System.Boolean)
   fullName: InventorShims.ParameterShim.SetParameterValue(Document, System.String, System.String, System.Boolean)
   nameWithType: ParameterShim.SetParameterValue(Document, String, String, Boolean)
 - uid: InventorShims.ParameterShim.SetParameterValue(Document,System.String,System.String,System.String,System.Boolean)
   name: SetParameterValue(Document, String, String, String, Boolean)
-  href: api/InventorShims.ParameterShim.yml
+  href: api/InventorShims.ParameterShim.html#InventorShims_ParameterShim_SetParameterValue_Document_System_String_System_String_System_String_System_Boolean_
   commentId: M:InventorShims.ParameterShim.SetParameterValue(Document,System.String,System.String,System.String,System.Boolean)
   fullName: InventorShims.ParameterShim.SetParameterValue(Document, System.String, System.String, System.String, System.Boolean)
   nameWithType: ParameterShim.SetParameterValue(Document, String, String, String, Boolean)
 - uid: InventorShims.ParameterShim.SetParameterValue*
   name: SetParameterValue
-  href: api/InventorShims.ParameterShim.yml
+  href: api/InventorShims.ParameterShim.html#InventorShims_ParameterShim_SetParameterValue_
   commentId: Overload:InventorShims.ParameterShim.SetParameterValue
   isSpec: "True"
   fullName: InventorShims.ParameterShim.SetParameterValue
   nameWithType: ParameterShim.SetParameterValue
 - uid: InventorShims.PathShim
   name: PathShim
-  href: api/InventorShims.PathShim.yml
+  href: api/InventorShims.PathShim.html
   commentId: T:InventorShims.PathShim
   fullName: InventorShims.PathShim
   nameWithType: PathShim
 - uid: InventorShims.PathShim.IsContentCenterPath(System.String,Application)
   name: IsContentCenterPath(String, Application)
-  href: api/InventorShims.PathShim.yml
+  href: api/InventorShims.PathShim.html#InventorShims_PathShim_IsContentCenterPath_System_String_Application_
   commentId: M:InventorShims.PathShim.IsContentCenterPath(System.String,Application)
   fullName: InventorShims.PathShim.IsContentCenterPath(System.String, Application)
   nameWithType: PathShim.IsContentCenterPath(String, Application)
 - uid: InventorShims.PathShim.IsContentCenterPath*
   name: IsContentCenterPath
-  href: api/InventorShims.PathShim.yml
+  href: api/InventorShims.PathShim.html#InventorShims_PathShim_IsContentCenterPath_
   commentId: Overload:InventorShims.PathShim.IsContentCenterPath
   isSpec: "True"
   fullName: InventorShims.PathShim.IsContentCenterPath
   nameWithType: PathShim.IsContentCenterPath
 - uid: InventorShims.PathShim.IsLibraryPath(System.String,Application)
   name: IsLibraryPath(String, Application)
-  href: api/InventorShims.PathShim.yml
+  href: api/InventorShims.PathShim.html#InventorShims_PathShim_IsLibraryPath_System_String_Application_
   commentId: M:InventorShims.PathShim.IsLibraryPath(System.String,Application)
   fullName: InventorShims.PathShim.IsLibraryPath(System.String, Application)
   nameWithType: PathShim.IsLibraryPath(String, Application)
 - uid: InventorShims.PathShim.IsLibraryPath*
   name: IsLibraryPath
-  href: api/InventorShims.PathShim.yml
+  href: api/InventorShims.PathShim.html#InventorShims_PathShim_IsLibraryPath_
   commentId: Overload:InventorShims.PathShim.IsLibraryPath
   isSpec: "True"
   fullName: InventorShims.PathShim.IsLibraryPath
   nameWithType: PathShim.IsLibraryPath
 - uid: InventorShims.PathShim.TrimEndingDirectorySeparator(System.String)
   name: TrimEndingDirectorySeparator(String)
-  href: api/InventorShims.PathShim.yml
+  href: api/InventorShims.PathShim.html#InventorShims_PathShim_TrimEndingDirectorySeparator_System_String_
   commentId: M:InventorShims.PathShim.TrimEndingDirectorySeparator(System.String)
   fullName: InventorShims.PathShim.TrimEndingDirectorySeparator(System.String)
   nameWithType: PathShim.TrimEndingDirectorySeparator(String)
 - uid: InventorShims.PathShim.TrimEndingDirectorySeparator*
   name: TrimEndingDirectorySeparator
-  href: api/InventorShims.PathShim.yml
+  href: api/InventorShims.PathShim.html#InventorShims_PathShim_TrimEndingDirectorySeparator_
   commentId: Overload:InventorShims.PathShim.TrimEndingDirectorySeparator
   isSpec: "True"
   fullName: InventorShims.PathShim.TrimEndingDirectorySeparator
   nameWithType: PathShim.TrimEndingDirectorySeparator
 - uid: InventorShims.PathShim.UpOneLevel(System.String)
   name: UpOneLevel(String)
-  href: api/InventorShims.PathShim.yml
+  href: api/InventorShims.PathShim.html#InventorShims_PathShim_UpOneLevel_System_String_
   commentId: M:InventorShims.PathShim.UpOneLevel(System.String)
   fullName: InventorShims.PathShim.UpOneLevel(System.String)
   nameWithType: PathShim.UpOneLevel(String)
 - uid: InventorShims.PathShim.UpOneLevel*
   name: UpOneLevel
-  href: api/InventorShims.PathShim.yml
+  href: api/InventorShims.PathShim.html#InventorShims_PathShim_UpOneLevel_
   commentId: Overload:InventorShims.PathShim.UpOneLevel
   isSpec: "True"
   fullName: InventorShims.PathShim.UpOneLevel
   nameWithType: PathShim.UpOneLevel
 - uid: InventorShims.PropertyShim
   name: PropertyShim
-  href: api/InventorShims.PropertyShim.yml
+  href: api/InventorShims.PropertyShim.html
   commentId: T:InventorShims.PropertyShim
   fullName: InventorShims.PropertyShim
   nameWithType: PropertyShim
 - uid: InventorShims.PropertyShim.GetProperty(Document,System.String)
   name: GetProperty(Document, String)
-  href: api/InventorShims.PropertyShim.yml
+  href: api/InventorShims.PropertyShim.html#InventorShims_PropertyShim_GetProperty_Document_System_String_
   commentId: M:InventorShims.PropertyShim.GetProperty(Document,System.String)
   fullName: InventorShims.PropertyShim.GetProperty(Document, System.String)
   nameWithType: PropertyShim.GetProperty(Document, String)
 - uid: InventorShims.PropertyShim.GetProperty(Document,System.String,System.String)
   name: GetProperty(Document, String, String)
-  href: api/InventorShims.PropertyShim.yml
+  href: api/InventorShims.PropertyShim.html#InventorShims_PropertyShim_GetProperty_Document_System_String_System_String_
   commentId: M:InventorShims.PropertyShim.GetProperty(Document,System.String,System.String)
   fullName: InventorShims.PropertyShim.GetProperty(Document, System.String, System.String)
   nameWithType: PropertyShim.GetProperty(Document, String, String)
 - uid: InventorShims.PropertyShim.GetProperty*
   name: GetProperty
-  href: api/InventorShims.PropertyShim.yml
+  href: api/InventorShims.PropertyShim.html#InventorShims_PropertyShim_GetProperty_
   commentId: Overload:InventorShims.PropertyShim.GetProperty
   isSpec: "True"
   fullName: InventorShims.PropertyShim.GetProperty
   nameWithType: PropertyShim.GetProperty
 - uid: InventorShims.PropertyShim.GetPropertyValue(Document,System.String)
   name: GetPropertyValue(Document, String)
-  href: api/InventorShims.PropertyShim.yml
+  href: api/InventorShims.PropertyShim.html#InventorShims_PropertyShim_GetPropertyValue_Document_System_String_
   commentId: M:InventorShims.PropertyShim.GetPropertyValue(Document,System.String)
   fullName: InventorShims.PropertyShim.GetPropertyValue(Document, System.String)
   nameWithType: PropertyShim.GetPropertyValue(Document, String)
 - uid: InventorShims.PropertyShim.GetPropertyValue(Document,System.String,System.String)
   name: GetPropertyValue(Document, String, String)
-  href: api/InventorShims.PropertyShim.yml
+  href: api/InventorShims.PropertyShim.html#InventorShims_PropertyShim_GetPropertyValue_Document_System_String_System_String_
   commentId: M:InventorShims.PropertyShim.GetPropertyValue(Document,System.String,System.String)
   fullName: InventorShims.PropertyShim.GetPropertyValue(Document, System.String, System.String)
   nameWithType: PropertyShim.GetPropertyValue(Document, String, String)
 - uid: InventorShims.PropertyShim.GetPropertyValue*
   name: GetPropertyValue
-  href: api/InventorShims.PropertyShim.yml
+  href: api/InventorShims.PropertyShim.html#InventorShims_PropertyShim_GetPropertyValue_
   commentId: Overload:InventorShims.PropertyShim.GetPropertyValue
   isSpec: "True"
   fullName: InventorShims.PropertyShim.GetPropertyValue
   nameWithType: PropertyShim.GetPropertyValue
 - uid: InventorShims.PropertyShim.IsPropertyNative(System.String)
   name: IsPropertyNative(String)
-  href: api/InventorShims.PropertyShim.yml
+  href: api/InventorShims.PropertyShim.html#InventorShims_PropertyShim_IsPropertyNative_System_String_
   commentId: M:InventorShims.PropertyShim.IsPropertyNative(System.String)
   fullName: InventorShims.PropertyShim.IsPropertyNative(System.String)
   nameWithType: PropertyShim.IsPropertyNative(String)
 - uid: InventorShims.PropertyShim.IsPropertyNative*
   name: IsPropertyNative
-  href: api/InventorShims.PropertyShim.yml
+  href: api/InventorShims.PropertyShim.html#InventorShims_PropertyShim_IsPropertyNative_
   commentId: Overload:InventorShims.PropertyShim.IsPropertyNative
   isSpec: "True"
   fullName: InventorShims.PropertyShim.IsPropertyNative
   nameWithType: PropertyShim.IsPropertyNative
 - uid: InventorShims.PropertyShim.PropertyExists(Document,System.String)
   name: PropertyExists(Document, String)
-  href: api/InventorShims.PropertyShim.yml
+  href: api/InventorShims.PropertyShim.html#InventorShims_PropertyShim_PropertyExists_Document_System_String_
   commentId: M:InventorShims.PropertyShim.PropertyExists(Document,System.String)
   fullName: InventorShims.PropertyShim.PropertyExists(Document, System.String)
   nameWithType: PropertyShim.PropertyExists(Document, String)
 - uid: InventorShims.PropertyShim.PropertyExists(Document,System.String,System.String)
   name: PropertyExists(Document, String, String)
-  href: api/InventorShims.PropertyShim.yml
+  href: api/InventorShims.PropertyShim.html#InventorShims_PropertyShim_PropertyExists_Document_System_String_System_String_
   commentId: M:InventorShims.PropertyShim.PropertyExists(Document,System.String,System.String)
   fullName: InventorShims.PropertyShim.PropertyExists(Document, System.String, System.String)
   nameWithType: PropertyShim.PropertyExists(Document, String, String)
 - uid: InventorShims.PropertyShim.PropertyExists*
   name: PropertyExists
-  href: api/InventorShims.PropertyShim.yml
+  href: api/InventorShims.PropertyShim.html#InventorShims_PropertyShim_PropertyExists_
   commentId: Overload:InventorShims.PropertyShim.PropertyExists
   isSpec: "True"
   fullName: InventorShims.PropertyShim.PropertyExists
   nameWithType: PropertyShim.PropertyExists
 - uid: InventorShims.PropertyShim.RemoveProperty(Document,System.String)
   name: RemoveProperty(Document, String)
-  href: api/InventorShims.PropertyShim.yml
+  href: api/InventorShims.PropertyShim.html#InventorShims_PropertyShim_RemoveProperty_Document_System_String_
   commentId: M:InventorShims.PropertyShim.RemoveProperty(Document,System.String)
   fullName: InventorShims.PropertyShim.RemoveProperty(Document, System.String)
   nameWithType: PropertyShim.RemoveProperty(Document, String)
 - uid: InventorShims.PropertyShim.RemoveProperty(Document,System.String,System.String)
   name: RemoveProperty(Document, String, String)
-  href: api/InventorShims.PropertyShim.yml
+  href: api/InventorShims.PropertyShim.html#InventorShims_PropertyShim_RemoveProperty_Document_System_String_System_String_
   commentId: M:InventorShims.PropertyShim.RemoveProperty(Document,System.String,System.String)
   fullName: InventorShims.PropertyShim.RemoveProperty(Document, System.String, System.String)
   nameWithType: PropertyShim.RemoveProperty(Document, String, String)
 - uid: InventorShims.PropertyShim.RemoveProperty*
   name: RemoveProperty
-  href: api/InventorShims.PropertyShim.yml
+  href: api/InventorShims.PropertyShim.html#InventorShims_PropertyShim_RemoveProperty_
   commentId: Overload:InventorShims.PropertyShim.RemoveProperty
   isSpec: "True"
   fullName: InventorShims.PropertyShim.RemoveProperty
   nameWithType: PropertyShim.RemoveProperty
 - uid: InventorShims.PropertyShim.SetPropertyValue(Document,System.String,System.Object)
   name: SetPropertyValue(Document, String, Object)
-  href: api/InventorShims.PropertyShim.yml
+  href: api/InventorShims.PropertyShim.html#InventorShims_PropertyShim_SetPropertyValue_Document_System_String_System_Object_
   commentId: M:InventorShims.PropertyShim.SetPropertyValue(Document,System.String,System.Object)
   fullName: InventorShims.PropertyShim.SetPropertyValue(Document, System.String, System.Object)
   nameWithType: PropertyShim.SetPropertyValue(Document, String, Object)
 - uid: InventorShims.PropertyShim.SetPropertyValue(Document,System.String,System.String,System.Object)
   name: SetPropertyValue(Document, String, String, Object)
-  href: api/InventorShims.PropertyShim.yml
+  href: api/InventorShims.PropertyShim.html#InventorShims_PropertyShim_SetPropertyValue_Document_System_String_System_String_System_Object_
   commentId: M:InventorShims.PropertyShim.SetPropertyValue(Document,System.String,System.String,System.Object)
   fullName: InventorShims.PropertyShim.SetPropertyValue(Document, System.String, System.String, System.Object)
   nameWithType: PropertyShim.SetPropertyValue(Document, String, String, Object)
 - uid: InventorShims.PropertyShim.SetPropertyValue*
   name: SetPropertyValue
-  href: api/InventorShims.PropertyShim.yml
+  href: api/InventorShims.PropertyShim.html#InventorShims_PropertyShim_SetPropertyValue_
   commentId: Overload:InventorShims.PropertyShim.SetPropertyValue
   isSpec: "True"
   fullName: InventorShims.PropertyShim.SetPropertyValue
   nameWithType: PropertyShim.SetPropertyValue
 - uid: InventorShims.StringShim
   name: StringShim
-  href: api/InventorShims.StringShim.yml
+  href: api/InventorShims.StringShim.html
   commentId: T:InventorShims.StringShim
   fullName: InventorShims.StringShim
   nameWithType: StringShim
 - uid: InventorShims.StringShim.ToFractionStringRoundedUp(System.Double,System.Int32)
   name: ToFractionStringRoundedUp(Double, Int32)
-  href: api/InventorShims.StringShim.yml
+  href: api/InventorShims.StringShim.html#InventorShims_StringShim_ToFractionStringRoundedUp_System_Double_System_Int32_
   commentId: M:InventorShims.StringShim.ToFractionStringRoundedUp(System.Double,System.Int32)
   fullName: InventorShims.StringShim.ToFractionStringRoundedUp(System.Double, System.Int32)
   nameWithType: StringShim.ToFractionStringRoundedUp(Double, Int32)
 - uid: InventorShims.StringShim.ToFractionStringRoundedUp*
   name: ToFractionStringRoundedUp
-  href: api/InventorShims.StringShim.yml
+  href: api/InventorShims.StringShim.html#InventorShims_StringShim_ToFractionStringRoundedUp_
   commentId: Overload:InventorShims.StringShim.ToFractionStringRoundedUp
   isSpec: "True"
   fullName: InventorShims.StringShim.ToFractionStringRoundedUp
   nameWithType: StringShim.ToFractionStringRoundedUp
 - uid: InventorShims.TranslatorShim
   name: InventorShims.TranslatorShim
-  href: api/InventorShims.TranslatorShim.yml
+  href: api/InventorShims.TranslatorShim.html
   commentId: N:InventorShims.TranslatorShim
   fullName: InventorShims.TranslatorShim
   nameWithType: InventorShims.TranslatorShim
 - uid: InventorShims.TranslatorShim.DwgExporter
   name: DwgExporter
-  href: api/InventorShims.TranslatorShim.DwgExporter.yml
+  href: api/InventorShims.TranslatorShim.DwgExporter.html
   commentId: T:InventorShims.TranslatorShim.DwgExporter
   fullName: InventorShims.TranslatorShim.DwgExporter
   nameWithType: DwgExporter
 - uid: InventorShims.TranslatorShim.DwgExporter.#ctor(Inventor.Document)
   name: DwgExporter(Inventor.Document)
-  href: api/InventorShims.TranslatorShim.DwgExporter.yml
+  href: api/InventorShims.TranslatorShim.DwgExporter.html#InventorShims_TranslatorShim_DwgExporter__ctor_Inventor_Document_
   commentId: M:InventorShims.TranslatorShim.DwgExporter.#ctor(Inventor.Document)
   fullName: InventorShims.TranslatorShim.DwgExporter.DwgExporter(Inventor.Document)
   nameWithType: DwgExporter.DwgExporter(Inventor.Document)
 - uid: InventorShims.TranslatorShim.DwgExporter.#ctor(Inventor.Document,System.String)
   name: DwgExporter(Inventor.Document, String)
-  href: api/InventorShims.TranslatorShim.DwgExporter.yml
+  href: api/InventorShims.TranslatorShim.DwgExporter.html#InventorShims_TranslatorShim_DwgExporter__ctor_Inventor_Document_System_String_
   commentId: M:InventorShims.TranslatorShim.DwgExporter.#ctor(Inventor.Document,System.String)
   fullName: InventorShims.TranslatorShim.DwgExporter.DwgExporter(Inventor.Document, System.String)
   nameWithType: DwgExporter.DwgExporter(Inventor.Document, String)
 - uid: InventorShims.TranslatorShim.DwgExporter.#ctor*
   name: DwgExporter
-  href: api/InventorShims.TranslatorShim.DwgExporter.yml
+  href: api/InventorShims.TranslatorShim.DwgExporter.html#InventorShims_TranslatorShim_DwgExporter__ctor_
   commentId: Overload:InventorShims.TranslatorShim.DwgExporter.#ctor
   isSpec: "True"
   fullName: InventorShims.TranslatorShim.DwgExporter.DwgExporter
   nameWithType: DwgExporter.DwgExporter
 - uid: InventorShims.TranslatorShim.DwgExporter.ConfigurationFile
   name: ConfigurationFile
-  href: api/InventorShims.TranslatorShim.DwgExporter.yml
+  href: api/InventorShims.TranslatorShim.DwgExporter.html#InventorShims_TranslatorShim_DwgExporter_ConfigurationFile
   commentId: P:InventorShims.TranslatorShim.DwgExporter.ConfigurationFile
   fullName: InventorShims.TranslatorShim.DwgExporter.ConfigurationFile
   nameWithType: DwgExporter.ConfigurationFile
 - uid: InventorShims.TranslatorShim.DwgExporter.ConfigurationFile*
   name: ConfigurationFile
-  href: api/InventorShims.TranslatorShim.DwgExporter.yml
+  href: api/InventorShims.TranslatorShim.DwgExporter.html#InventorShims_TranslatorShim_DwgExporter_ConfigurationFile_
   commentId: Overload:InventorShims.TranslatorShim.DwgExporter.ConfigurationFile
   isSpec: "True"
   fullName: InventorShims.TranslatorShim.DwgExporter.ConfigurationFile
   nameWithType: DwgExporter.ConfigurationFile
 - uid: InventorShims.TranslatorShim.DwgExporter.Document
   name: Document
-  href: api/InventorShims.TranslatorShim.DwgExporter.yml
+  href: api/InventorShims.TranslatorShim.DwgExporter.html#InventorShims_TranslatorShim_DwgExporter_Document
   commentId: P:InventorShims.TranslatorShim.DwgExporter.Document
   fullName: InventorShims.TranslatorShim.DwgExporter.Document
   nameWithType: DwgExporter.Document
 - uid: InventorShims.TranslatorShim.DwgExporter.Document*
   name: Document
-  href: api/InventorShims.TranslatorShim.DwgExporter.yml
+  href: api/InventorShims.TranslatorShim.DwgExporter.html#InventorShims_TranslatorShim_DwgExporter_Document_
   commentId: Overload:InventorShims.TranslatorShim.DwgExporter.Document
   isSpec: "True"
   fullName: InventorShims.TranslatorShim.DwgExporter.Document
   nameWithType: DwgExporter.Document
 - uid: InventorShims.TranslatorShim.DwgExporter.Export
   name: Export()
-  href: api/InventorShims.TranslatorShim.DwgExporter.yml
+  href: api/InventorShims.TranslatorShim.DwgExporter.html#InventorShims_TranslatorShim_DwgExporter_Export
   commentId: M:InventorShims.TranslatorShim.DwgExporter.Export
   fullName: InventorShims.TranslatorShim.DwgExporter.Export()
   nameWithType: DwgExporter.Export()
 - uid: InventorShims.TranslatorShim.DwgExporter.Export(System.String)
   name: Export(String)
-  href: api/InventorShims.TranslatorShim.DwgExporter.yml
+  href: api/InventorShims.TranslatorShim.DwgExporter.html#InventorShims_TranslatorShim_DwgExporter_Export_System_String_
   commentId: M:InventorShims.TranslatorShim.DwgExporter.Export(System.String)
   fullName: InventorShims.TranslatorShim.DwgExporter.Export(System.String)
   nameWithType: DwgExporter.Export(String)
 - uid: InventorShims.TranslatorShim.DwgExporter.Export*
   name: Export
-  href: api/InventorShims.TranslatorShim.DwgExporter.yml
+  href: api/InventorShims.TranslatorShim.DwgExporter.html#InventorShims_TranslatorShim_DwgExporter_Export_
   commentId: Overload:InventorShims.TranslatorShim.DwgExporter.Export
   isSpec: "True"
   fullName: InventorShims.TranslatorShim.DwgExporter.Export
   nameWithType: DwgExporter.Export
 - uid: InventorShims.TranslatorShim.PdfExporter
   name: PdfExporter
-  href: api/InventorShims.TranslatorShim.PdfExporter.yml
+  href: api/InventorShims.TranslatorShim.PdfExporter.html
   commentId: T:InventorShims.TranslatorShim.PdfExporter
   fullName: InventorShims.TranslatorShim.PdfExporter
   nameWithType: PdfExporter
 - uid: InventorShims.TranslatorShim.PdfExporter.#ctor(Inventor.DrawingDocument)
   name: PdfExporter(Inventor.DrawingDocument)
-  href: api/InventorShims.TranslatorShim.PdfExporter.yml
+  href: api/InventorShims.TranslatorShim.PdfExporter.html#InventorShims_TranslatorShim_PdfExporter__ctor_Inventor_DrawingDocument_
   commentId: M:InventorShims.TranslatorShim.PdfExporter.#ctor(Inventor.DrawingDocument)
   fullName: InventorShims.TranslatorShim.PdfExporter.PdfExporter(Inventor.DrawingDocument)
   nameWithType: PdfExporter.PdfExporter(Inventor.DrawingDocument)
 - uid: InventorShims.TranslatorShim.PdfExporter.#ctor*
   name: PdfExporter
-  href: api/InventorShims.TranslatorShim.PdfExporter.yml
+  href: api/InventorShims.TranslatorShim.PdfExporter.html#InventorShims_TranslatorShim_PdfExporter__ctor_
   commentId: Overload:InventorShims.TranslatorShim.PdfExporter.#ctor
   isSpec: "True"
   fullName: InventorShims.TranslatorShim.PdfExporter.PdfExporter
   nameWithType: PdfExporter.PdfExporter
 - uid: InventorShims.TranslatorShim.PdfExporter.AllColorsAsBlack
   name: AllColorsAsBlack
-  href: api/InventorShims.TranslatorShim.PdfExporter.yml
+  href: api/InventorShims.TranslatorShim.PdfExporter.html#InventorShims_TranslatorShim_PdfExporter_AllColorsAsBlack
   commentId: P:InventorShims.TranslatorShim.PdfExporter.AllColorsAsBlack
   fullName: InventorShims.TranslatorShim.PdfExporter.AllColorsAsBlack
   nameWithType: PdfExporter.AllColorsAsBlack
 - uid: InventorShims.TranslatorShim.PdfExporter.AllColorsAsBlack*
   name: AllColorsAsBlack
-  href: api/InventorShims.TranslatorShim.PdfExporter.yml
+  href: api/InventorShims.TranslatorShim.PdfExporter.html#InventorShims_TranslatorShim_PdfExporter_AllColorsAsBlack_
   commentId: Overload:InventorShims.TranslatorShim.PdfExporter.AllColorsAsBlack
   isSpec: "True"
   fullName: InventorShims.TranslatorShim.PdfExporter.AllColorsAsBlack
   nameWithType: PdfExporter.AllColorsAsBlack
 - uid: InventorShims.TranslatorShim.PdfExporter.Document
   name: Document
-  href: api/InventorShims.TranslatorShim.PdfExporter.yml
+  href: api/InventorShims.TranslatorShim.PdfExporter.html#InventorShims_TranslatorShim_PdfExporter_Document
   commentId: P:InventorShims.TranslatorShim.PdfExporter.Document
   fullName: InventorShims.TranslatorShim.PdfExporter.Document
   nameWithType: PdfExporter.Document
 - uid: InventorShims.TranslatorShim.PdfExporter.Document*
   name: Document
-  href: api/InventorShims.TranslatorShim.PdfExporter.yml
+  href: api/InventorShims.TranslatorShim.PdfExporter.html#InventorShims_TranslatorShim_PdfExporter_Document_
   commentId: Overload:InventorShims.TranslatorShim.PdfExporter.Document
   isSpec: "True"
   fullName: InventorShims.TranslatorShim.PdfExporter.Document
   nameWithType: PdfExporter.Document
 - uid: InventorShims.TranslatorShim.PdfExporter.ExportSheet
   name: ExportSheet()
-  href: api/InventorShims.TranslatorShim.PdfExporter.yml
+  href: api/InventorShims.TranslatorShim.PdfExporter.html#InventorShims_TranslatorShim_PdfExporter_ExportSheet
   commentId: M:InventorShims.TranslatorShim.PdfExporter.ExportSheet
   fullName: InventorShims.TranslatorShim.PdfExporter.ExportSheet()
   nameWithType: PdfExporter.ExportSheet()
 - uid: InventorShims.TranslatorShim.PdfExporter.ExportSheet(System.Int32)
   name: ExportSheet(Int32)
-  href: api/InventorShims.TranslatorShim.PdfExporter.yml
+  href: api/InventorShims.TranslatorShim.PdfExporter.html#InventorShims_TranslatorShim_PdfExporter_ExportSheet_System_Int32_
   commentId: M:InventorShims.TranslatorShim.PdfExporter.ExportSheet(System.Int32)
   fullName: InventorShims.TranslatorShim.PdfExporter.ExportSheet(System.Int32)
   nameWithType: PdfExporter.ExportSheet(Int32)
 - uid: InventorShims.TranslatorShim.PdfExporter.ExportSheet(System.Int32,System.String)
   name: ExportSheet(Int32, String)
-  href: api/InventorShims.TranslatorShim.PdfExporter.yml
+  href: api/InventorShims.TranslatorShim.PdfExporter.html#InventorShims_TranslatorShim_PdfExporter_ExportSheet_System_Int32_System_String_
   commentId: M:InventorShims.TranslatorShim.PdfExporter.ExportSheet(System.Int32,System.String)
   fullName: InventorShims.TranslatorShim.PdfExporter.ExportSheet(System.Int32, System.String)
   nameWithType: PdfExporter.ExportSheet(Int32, String)
 - uid: InventorShims.TranslatorShim.PdfExporter.ExportSheet(System.String)
   name: ExportSheet(String)
-  href: api/InventorShims.TranslatorShim.PdfExporter.yml
+  href: api/InventorShims.TranslatorShim.PdfExporter.html#InventorShims_TranslatorShim_PdfExporter_ExportSheet_System_String_
   commentId: M:InventorShims.TranslatorShim.PdfExporter.ExportSheet(System.String)
   fullName: InventorShims.TranslatorShim.PdfExporter.ExportSheet(System.String)
   nameWithType: PdfExporter.ExportSheet(String)
 - uid: InventorShims.TranslatorShim.PdfExporter.ExportSheet*
   name: ExportSheet
-  href: api/InventorShims.TranslatorShim.PdfExporter.yml
+  href: api/InventorShims.TranslatorShim.PdfExporter.html#InventorShims_TranslatorShim_PdfExporter_ExportSheet_
   commentId: Overload:InventorShims.TranslatorShim.PdfExporter.ExportSheet
   isSpec: "True"
   fullName: InventorShims.TranslatorShim.PdfExporter.ExportSheet
   nameWithType: PdfExporter.ExportSheet
 - uid: InventorShims.TranslatorShim.PdfExporter.ExportSheets
   name: ExportSheets()
-  href: api/InventorShims.TranslatorShim.PdfExporter.yml
+  href: api/InventorShims.TranslatorShim.PdfExporter.html#InventorShims_TranslatorShim_PdfExporter_ExportSheets
   commentId: M:InventorShims.TranslatorShim.PdfExporter.ExportSheets
   fullName: InventorShims.TranslatorShim.PdfExporter.ExportSheets()
   nameWithType: PdfExporter.ExportSheets()
 - uid: InventorShims.TranslatorShim.PdfExporter.ExportSheets(System.Collections.Generic.IEnumerable{Sheet})
   name: ExportSheets(IEnumerable<Sheet>)
-  href: api/InventorShims.TranslatorShim.PdfExporter.yml
+  href: api/InventorShims.TranslatorShim.PdfExporter.html#InventorShims_TranslatorShim_PdfExporter_ExportSheets_System_Collections_Generic_IEnumerable_Sheet__
   commentId: M:InventorShims.TranslatorShim.PdfExporter.ExportSheets(System.Collections.Generic.IEnumerable{Sheet})
   name.vb: ExportSheets(IEnumerable(Of Sheet))
   fullName: InventorShims.TranslatorShim.PdfExporter.ExportSheets(System.Collections.Generic.IEnumerable<Sheet>)
@@ -1111,7 +1111,7 @@ references:
   nameWithType.vb: PdfExporter.ExportSheets(IEnumerable(Of Sheet))
 - uid: InventorShims.TranslatorShim.PdfExporter.ExportSheets(System.Collections.Generic.IEnumerable{Sheet},System.String)
   name: ExportSheets(IEnumerable<Sheet>, String)
-  href: api/InventorShims.TranslatorShim.PdfExporter.yml
+  href: api/InventorShims.TranslatorShim.PdfExporter.html#InventorShims_TranslatorShim_PdfExporter_ExportSheets_System_Collections_Generic_IEnumerable_Sheet__System_String_
   commentId: M:InventorShims.TranslatorShim.PdfExporter.ExportSheets(System.Collections.Generic.IEnumerable{Sheet},System.String)
   name.vb: ExportSheets(IEnumerable(Of Sheet), String)
   fullName: InventorShims.TranslatorShim.PdfExporter.ExportSheets(System.Collections.Generic.IEnumerable<Sheet>, System.String)
@@ -1120,7 +1120,7 @@ references:
   nameWithType.vb: PdfExporter.ExportSheets(IEnumerable(Of Sheet), String)
 - uid: InventorShims.TranslatorShim.PdfExporter.ExportSheets(System.Collections.Generic.IEnumerable{System.Int32})
   name: ExportSheets(IEnumerable<Int32>)
-  href: api/InventorShims.TranslatorShim.PdfExporter.yml
+  href: api/InventorShims.TranslatorShim.PdfExporter.html#InventorShims_TranslatorShim_PdfExporter_ExportSheets_System_Collections_Generic_IEnumerable_System_Int32__
   commentId: M:InventorShims.TranslatorShim.PdfExporter.ExportSheets(System.Collections.Generic.IEnumerable{System.Int32})
   name.vb: ExportSheets(IEnumerable(Of Int32))
   fullName: InventorShims.TranslatorShim.PdfExporter.ExportSheets(System.Collections.Generic.IEnumerable<System.Int32>)
@@ -1129,7 +1129,7 @@ references:
   nameWithType.vb: PdfExporter.ExportSheets(IEnumerable(Of Int32))
 - uid: InventorShims.TranslatorShim.PdfExporter.ExportSheets(System.Collections.Generic.IEnumerable{System.Int32},System.String)
   name: ExportSheets(IEnumerable<Int32>, String)
-  href: api/InventorShims.TranslatorShim.PdfExporter.yml
+  href: api/InventorShims.TranslatorShim.PdfExporter.html#InventorShims_TranslatorShim_PdfExporter_ExportSheets_System_Collections_Generic_IEnumerable_System_Int32__System_String_
   commentId: M:InventorShims.TranslatorShim.PdfExporter.ExportSheets(System.Collections.Generic.IEnumerable{System.Int32},System.String)
   name.vb: ExportSheets(IEnumerable(Of Int32), String)
   fullName: InventorShims.TranslatorShim.PdfExporter.ExportSheets(System.Collections.Generic.IEnumerable<System.Int32>, System.String)
@@ -1138,861 +1138,861 @@ references:
   nameWithType.vb: PdfExporter.ExportSheets(IEnumerable(Of Int32), String)
 - uid: InventorShims.TranslatorShim.PdfExporter.ExportSheets(System.Int32)
   name: ExportSheets(Int32)
-  href: api/InventorShims.TranslatorShim.PdfExporter.yml
+  href: api/InventorShims.TranslatorShim.PdfExporter.html#InventorShims_TranslatorShim_PdfExporter_ExportSheets_System_Int32_
   commentId: M:InventorShims.TranslatorShim.PdfExporter.ExportSheets(System.Int32)
   fullName: InventorShims.TranslatorShim.PdfExporter.ExportSheets(System.Int32)
   nameWithType: PdfExporter.ExportSheets(Int32)
 - uid: InventorShims.TranslatorShim.PdfExporter.ExportSheets(System.Int32,System.Int32)
   name: ExportSheets(Int32, Int32)
-  href: api/InventorShims.TranslatorShim.PdfExporter.yml
+  href: api/InventorShims.TranslatorShim.PdfExporter.html#InventorShims_TranslatorShim_PdfExporter_ExportSheets_System_Int32_System_Int32_
   commentId: M:InventorShims.TranslatorShim.PdfExporter.ExportSheets(System.Int32,System.Int32)
   fullName: InventorShims.TranslatorShim.PdfExporter.ExportSheets(System.Int32, System.Int32)
   nameWithType: PdfExporter.ExportSheets(Int32, Int32)
 - uid: InventorShims.TranslatorShim.PdfExporter.ExportSheets(System.Int32,System.Int32,System.String)
   name: ExportSheets(Int32, Int32, String)
-  href: api/InventorShims.TranslatorShim.PdfExporter.yml
+  href: api/InventorShims.TranslatorShim.PdfExporter.html#InventorShims_TranslatorShim_PdfExporter_ExportSheets_System_Int32_System_Int32_System_String_
   commentId: M:InventorShims.TranslatorShim.PdfExporter.ExportSheets(System.Int32,System.Int32,System.String)
   fullName: InventorShims.TranslatorShim.PdfExporter.ExportSheets(System.Int32, System.Int32, System.String)
   nameWithType: PdfExporter.ExportSheets(Int32, Int32, String)
 - uid: InventorShims.TranslatorShim.PdfExporter.ExportSheets(System.Int32,System.String)
   name: ExportSheets(Int32, String)
-  href: api/InventorShims.TranslatorShim.PdfExporter.yml
+  href: api/InventorShims.TranslatorShim.PdfExporter.html#InventorShims_TranslatorShim_PdfExporter_ExportSheets_System_Int32_System_String_
   commentId: M:InventorShims.TranslatorShim.PdfExporter.ExportSheets(System.Int32,System.String)
   fullName: InventorShims.TranslatorShim.PdfExporter.ExportSheets(System.Int32, System.String)
   nameWithType: PdfExporter.ExportSheets(Int32, String)
 - uid: InventorShims.TranslatorShim.PdfExporter.ExportSheets(System.String)
   name: ExportSheets(String)
-  href: api/InventorShims.TranslatorShim.PdfExporter.yml
+  href: api/InventorShims.TranslatorShim.PdfExporter.html#InventorShims_TranslatorShim_PdfExporter_ExportSheets_System_String_
   commentId: M:InventorShims.TranslatorShim.PdfExporter.ExportSheets(System.String)
   fullName: InventorShims.TranslatorShim.PdfExporter.ExportSheets(System.String)
   nameWithType: PdfExporter.ExportSheets(String)
 - uid: InventorShims.TranslatorShim.PdfExporter.ExportSheets*
   name: ExportSheets
-  href: api/InventorShims.TranslatorShim.PdfExporter.yml
+  href: api/InventorShims.TranslatorShim.PdfExporter.html#InventorShims_TranslatorShim_PdfExporter_ExportSheets_
   commentId: Overload:InventorShims.TranslatorShim.PdfExporter.ExportSheets
   isSpec: "True"
   fullName: InventorShims.TranslatorShim.PdfExporter.ExportSheets
   nameWithType: PdfExporter.ExportSheets
 - uid: InventorShims.TranslatorShim.PdfExporter.OpenWhenDone
   name: OpenWhenDone
-  href: api/InventorShims.TranslatorShim.PdfExporter.yml
+  href: api/InventorShims.TranslatorShim.PdfExporter.html#InventorShims_TranslatorShim_PdfExporter_OpenWhenDone
   commentId: P:InventorShims.TranslatorShim.PdfExporter.OpenWhenDone
   fullName: InventorShims.TranslatorShim.PdfExporter.OpenWhenDone
   nameWithType: PdfExporter.OpenWhenDone
 - uid: InventorShims.TranslatorShim.PdfExporter.OpenWhenDone*
   name: OpenWhenDone
-  href: api/InventorShims.TranslatorShim.PdfExporter.yml
+  href: api/InventorShims.TranslatorShim.PdfExporter.html#InventorShims_TranslatorShim_PdfExporter_OpenWhenDone_
   commentId: Overload:InventorShims.TranslatorShim.PdfExporter.OpenWhenDone
   isSpec: "True"
   fullName: InventorShims.TranslatorShim.PdfExporter.OpenWhenDone
   nameWithType: PdfExporter.OpenWhenDone
 - uid: InventorShims.TranslatorShim.PdfExporter.PrintExcludedSheets
   name: PrintExcludedSheets
-  href: api/InventorShims.TranslatorShim.PdfExporter.yml
+  href: api/InventorShims.TranslatorShim.PdfExporter.html#InventorShims_TranslatorShim_PdfExporter_PrintExcludedSheets
   commentId: P:InventorShims.TranslatorShim.PdfExporter.PrintExcludedSheets
   fullName: InventorShims.TranslatorShim.PdfExporter.PrintExcludedSheets
   nameWithType: PdfExporter.PrintExcludedSheets
 - uid: InventorShims.TranslatorShim.PdfExporter.PrintExcludedSheets*
   name: PrintExcludedSheets
-  href: api/InventorShims.TranslatorShim.PdfExporter.yml
+  href: api/InventorShims.TranslatorShim.PdfExporter.html#InventorShims_TranslatorShim_PdfExporter_PrintExcludedSheets_
   commentId: Overload:InventorShims.TranslatorShim.PdfExporter.PrintExcludedSheets
   isSpec: "True"
   fullName: InventorShims.TranslatorShim.PdfExporter.PrintExcludedSheets
   nameWithType: PdfExporter.PrintExcludedSheets
 - uid: InventorShims.TranslatorShim.PdfExporter.RemoveLineWeights
   name: RemoveLineWeights
-  href: api/InventorShims.TranslatorShim.PdfExporter.yml
+  href: api/InventorShims.TranslatorShim.PdfExporter.html#InventorShims_TranslatorShim_PdfExporter_RemoveLineWeights
   commentId: P:InventorShims.TranslatorShim.PdfExporter.RemoveLineWeights
   fullName: InventorShims.TranslatorShim.PdfExporter.RemoveLineWeights
   nameWithType: PdfExporter.RemoveLineWeights
 - uid: InventorShims.TranslatorShim.PdfExporter.RemoveLineWeights*
   name: RemoveLineWeights
-  href: api/InventorShims.TranslatorShim.PdfExporter.yml
+  href: api/InventorShims.TranslatorShim.PdfExporter.html#InventorShims_TranslatorShim_PdfExporter_RemoveLineWeights_
   commentId: Overload:InventorShims.TranslatorShim.PdfExporter.RemoveLineWeights
   isSpec: "True"
   fullName: InventorShims.TranslatorShim.PdfExporter.RemoveLineWeights
   nameWithType: PdfExporter.RemoveLineWeights
 - uid: InventorShims.TranslatorShim.PdfExporter.VectorResolution
   name: VectorResolution
-  href: api/InventorShims.TranslatorShim.PdfExporter.yml
+  href: api/InventorShims.TranslatorShim.PdfExporter.html#InventorShims_TranslatorShim_PdfExporter_VectorResolution
   commentId: P:InventorShims.TranslatorShim.PdfExporter.VectorResolution
   fullName: InventorShims.TranslatorShim.PdfExporter.VectorResolution
   nameWithType: PdfExporter.VectorResolution
 - uid: InventorShims.TranslatorShim.PdfExporter.VectorResolution*
   name: VectorResolution
-  href: api/InventorShims.TranslatorShim.PdfExporter.yml
+  href: api/InventorShims.TranslatorShim.PdfExporter.html#InventorShims_TranslatorShim_PdfExporter_VectorResolution_
   commentId: Overload:InventorShims.TranslatorShim.PdfExporter.VectorResolution
   isSpec: "True"
   fullName: InventorShims.TranslatorShim.PdfExporter.VectorResolution
   nameWithType: PdfExporter.VectorResolution
 - uid: InventorShims.TranslatorShim.StepExporter
   name: StepExporter
-  href: api/InventorShims.TranslatorShim.StepExporter.yml
+  href: api/InventorShims.TranslatorShim.StepExporter.html
   commentId: T:InventorShims.TranslatorShim.StepExporter
   fullName: InventorShims.TranslatorShim.StepExporter
   nameWithType: StepExporter
 - uid: InventorShims.TranslatorShim.StepExporter.#ctor(Inventor.Document)
   name: StepExporter(Inventor.Document)
-  href: api/InventorShims.TranslatorShim.StepExporter.yml
+  href: api/InventorShims.TranslatorShim.StepExporter.html#InventorShims_TranslatorShim_StepExporter__ctor_Inventor_Document_
   commentId: M:InventorShims.TranslatorShim.StepExporter.#ctor(Inventor.Document)
   fullName: InventorShims.TranslatorShim.StepExporter.StepExporter(Inventor.Document)
   nameWithType: StepExporter.StepExporter(Inventor.Document)
 - uid: InventorShims.TranslatorShim.StepExporter.#ctor*
   name: StepExporter
-  href: api/InventorShims.TranslatorShim.StepExporter.yml
+  href: api/InventorShims.TranslatorShim.StepExporter.html#InventorShims_TranslatorShim_StepExporter__ctor_
   commentId: Overload:InventorShims.TranslatorShim.StepExporter.#ctor
   isSpec: "True"
   fullName: InventorShims.TranslatorShim.StepExporter.StepExporter
   nameWithType: StepExporter.StepExporter
 - uid: InventorShims.TranslatorShim.StepExporter.ApplicationProtocol
   name: ApplicationProtocol
-  href: api/InventorShims.TranslatorShim.StepExporter.yml
+  href: api/InventorShims.TranslatorShim.StepExporter.html#InventorShims_TranslatorShim_StepExporter_ApplicationProtocol
   commentId: P:InventorShims.TranslatorShim.StepExporter.ApplicationProtocol
   fullName: InventorShims.TranslatorShim.StepExporter.ApplicationProtocol
   nameWithType: StepExporter.ApplicationProtocol
 - uid: InventorShims.TranslatorShim.StepExporter.ApplicationProtocol*
   name: ApplicationProtocol
-  href: api/InventorShims.TranslatorShim.StepExporter.yml
+  href: api/InventorShims.TranslatorShim.StepExporter.html#InventorShims_TranslatorShim_StepExporter_ApplicationProtocol_
   commentId: Overload:InventorShims.TranslatorShim.StepExporter.ApplicationProtocol
   isSpec: "True"
   fullName: InventorShims.TranslatorShim.StepExporter.ApplicationProtocol
   nameWithType: StepExporter.ApplicationProtocol
 - uid: InventorShims.TranslatorShim.StepExporter.Author
   name: Author
-  href: api/InventorShims.TranslatorShim.StepExporter.yml
+  href: api/InventorShims.TranslatorShim.StepExporter.html#InventorShims_TranslatorShim_StepExporter_Author
   commentId: P:InventorShims.TranslatorShim.StepExporter.Author
   fullName: InventorShims.TranslatorShim.StepExporter.Author
   nameWithType: StepExporter.Author
 - uid: InventorShims.TranslatorShim.StepExporter.Author*
   name: Author
-  href: api/InventorShims.TranslatorShim.StepExporter.yml
+  href: api/InventorShims.TranslatorShim.StepExporter.html#InventorShims_TranslatorShim_StepExporter_Author_
   commentId: Overload:InventorShims.TranslatorShim.StepExporter.Author
   isSpec: "True"
   fullName: InventorShims.TranslatorShim.StepExporter.Author
   nameWithType: StepExporter.Author
 - uid: InventorShims.TranslatorShim.StepExporter.Authorization
   name: Authorization
-  href: api/InventorShims.TranslatorShim.StepExporter.yml
+  href: api/InventorShims.TranslatorShim.StepExporter.html#InventorShims_TranslatorShim_StepExporter_Authorization
   commentId: P:InventorShims.TranslatorShim.StepExporter.Authorization
   fullName: InventorShims.TranslatorShim.StepExporter.Authorization
   nameWithType: StepExporter.Authorization
 - uid: InventorShims.TranslatorShim.StepExporter.Authorization*
   name: Authorization
-  href: api/InventorShims.TranslatorShim.StepExporter.yml
+  href: api/InventorShims.TranslatorShim.StepExporter.html#InventorShims_TranslatorShim_StepExporter_Authorization_
   commentId: Overload:InventorShims.TranslatorShim.StepExporter.Authorization
   isSpec: "True"
   fullName: InventorShims.TranslatorShim.StepExporter.Authorization
   nameWithType: StepExporter.Authorization
 - uid: InventorShims.TranslatorShim.StepExporter.Description
   name: Description
-  href: api/InventorShims.TranslatorShim.StepExporter.yml
+  href: api/InventorShims.TranslatorShim.StepExporter.html#InventorShims_TranslatorShim_StepExporter_Description
   commentId: P:InventorShims.TranslatorShim.StepExporter.Description
   fullName: InventorShims.TranslatorShim.StepExporter.Description
   nameWithType: StepExporter.Description
 - uid: InventorShims.TranslatorShim.StepExporter.Description*
   name: Description
-  href: api/InventorShims.TranslatorShim.StepExporter.yml
+  href: api/InventorShims.TranslatorShim.StepExporter.html#InventorShims_TranslatorShim_StepExporter_Description_
   commentId: Overload:InventorShims.TranslatorShim.StepExporter.Description
   isSpec: "True"
   fullName: InventorShims.TranslatorShim.StepExporter.Description
   nameWithType: StepExporter.Description
 - uid: InventorShims.TranslatorShim.StepExporter.Document
   name: Document
-  href: api/InventorShims.TranslatorShim.StepExporter.yml
+  href: api/InventorShims.TranslatorShim.StepExporter.html#InventorShims_TranslatorShim_StepExporter_Document
   commentId: P:InventorShims.TranslatorShim.StepExporter.Document
   fullName: InventorShims.TranslatorShim.StepExporter.Document
   nameWithType: StepExporter.Document
 - uid: InventorShims.TranslatorShim.StepExporter.Document*
   name: Document
-  href: api/InventorShims.TranslatorShim.StepExporter.yml
+  href: api/InventorShims.TranslatorShim.StepExporter.html#InventorShims_TranslatorShim_StepExporter_Document_
   commentId: Overload:InventorShims.TranslatorShim.StepExporter.Document
   isSpec: "True"
   fullName: InventorShims.TranslatorShim.StepExporter.Document
   nameWithType: StepExporter.Document
 - uid: InventorShims.TranslatorShim.StepExporter.Export
   name: Export()
-  href: api/InventorShims.TranslatorShim.StepExporter.yml
+  href: api/InventorShims.TranslatorShim.StepExporter.html#InventorShims_TranslatorShim_StepExporter_Export
   commentId: M:InventorShims.TranslatorShim.StepExporter.Export
   fullName: InventorShims.TranslatorShim.StepExporter.Export()
   nameWithType: StepExporter.Export()
 - uid: InventorShims.TranslatorShim.StepExporter.Export(System.String)
   name: Export(String)
-  href: api/InventorShims.TranslatorShim.StepExporter.yml
+  href: api/InventorShims.TranslatorShim.StepExporter.html#InventorShims_TranslatorShim_StepExporter_Export_System_String_
   commentId: M:InventorShims.TranslatorShim.StepExporter.Export(System.String)
   fullName: InventorShims.TranslatorShim.StepExporter.Export(System.String)
   nameWithType: StepExporter.Export(String)
 - uid: InventorShims.TranslatorShim.StepExporter.Export*
   name: Export
-  href: api/InventorShims.TranslatorShim.StepExporter.yml
+  href: api/InventorShims.TranslatorShim.StepExporter.html#InventorShims_TranslatorShim_StepExporter_Export_
   commentId: Overload:InventorShims.TranslatorShim.StepExporter.Export
   isSpec: "True"
   fullName: InventorShims.TranslatorShim.StepExporter.Export
   nameWithType: StepExporter.Export
 - uid: InventorShims.TranslatorShim.StepExporter.IncludeSketches
   name: IncludeSketches
-  href: api/InventorShims.TranslatorShim.StepExporter.yml
+  href: api/InventorShims.TranslatorShim.StepExporter.html#InventorShims_TranslatorShim_StepExporter_IncludeSketches
   commentId: P:InventorShims.TranslatorShim.StepExporter.IncludeSketches
   fullName: InventorShims.TranslatorShim.StepExporter.IncludeSketches
   nameWithType: StepExporter.IncludeSketches
 - uid: InventorShims.TranslatorShim.StepExporter.IncludeSketches*
   name: IncludeSketches
-  href: api/InventorShims.TranslatorShim.StepExporter.yml
+  href: api/InventorShims.TranslatorShim.StepExporter.html#InventorShims_TranslatorShim_StepExporter_IncludeSketches_
   commentId: Overload:InventorShims.TranslatorShim.StepExporter.IncludeSketches
   isSpec: "True"
   fullName: InventorShims.TranslatorShim.StepExporter.IncludeSketches
   nameWithType: StepExporter.IncludeSketches
 - uid: InventorShims.TranslatorShim.StepExporter.Organization
   name: Organization
-  href: api/InventorShims.TranslatorShim.StepExporter.yml
+  href: api/InventorShims.TranslatorShim.StepExporter.html#InventorShims_TranslatorShim_StepExporter_Organization
   commentId: P:InventorShims.TranslatorShim.StepExporter.Organization
   fullName: InventorShims.TranslatorShim.StepExporter.Organization
   nameWithType: StepExporter.Organization
 - uid: InventorShims.TranslatorShim.StepExporter.Organization*
   name: Organization
-  href: api/InventorShims.TranslatorShim.StepExporter.yml
+  href: api/InventorShims.TranslatorShim.StepExporter.html#InventorShims_TranslatorShim_StepExporter_Organization_
   commentId: Overload:InventorShims.TranslatorShim.StepExporter.Organization
   isSpec: "True"
   fullName: InventorShims.TranslatorShim.StepExporter.Organization
   nameWithType: StepExporter.Organization
 - uid: InventorShims.TranslatorShim.StepExporter.SplineFitAccuracy
   name: SplineFitAccuracy
-  href: api/InventorShims.TranslatorShim.StepExporter.yml
+  href: api/InventorShims.TranslatorShim.StepExporter.html#InventorShims_TranslatorShim_StepExporter_SplineFitAccuracy
   commentId: P:InventorShims.TranslatorShim.StepExporter.SplineFitAccuracy
   fullName: InventorShims.TranslatorShim.StepExporter.SplineFitAccuracy
   nameWithType: StepExporter.SplineFitAccuracy
 - uid: InventorShims.TranslatorShim.StepExporter.SplineFitAccuracy*
   name: SplineFitAccuracy
-  href: api/InventorShims.TranslatorShim.StepExporter.yml
+  href: api/InventorShims.TranslatorShim.StepExporter.html#InventorShims_TranslatorShim_StepExporter_SplineFitAccuracy_
   commentId: Overload:InventorShims.TranslatorShim.StepExporter.SplineFitAccuracy
   isSpec: "True"
   fullName: InventorShims.TranslatorShim.StepExporter.SplineFitAccuracy
   nameWithType: StepExporter.SplineFitAccuracy
 - uid: InventorShims.TranslatorShim.StepImporter
   name: StepImporter
-  href: api/InventorShims.TranslatorShim.StepImporter.yml
+  href: api/InventorShims.TranslatorShim.StepImporter.html
   commentId: T:InventorShims.TranslatorShim.StepImporter
   fullName: InventorShims.TranslatorShim.StepImporter
   nameWithType: StepImporter
 - uid: InventorShims.TranslatorShim.StepImporter.#ctor(System.String,Inventor.Application)
   name: StepImporter(String, Inventor.Application)
-  href: api/InventorShims.TranslatorShim.StepImporter.yml
+  href: api/InventorShims.TranslatorShim.StepImporter.html#InventorShims_TranslatorShim_StepImporter__ctor_System_String_Inventor_Application_
   commentId: M:InventorShims.TranslatorShim.StepImporter.#ctor(System.String,Inventor.Application)
   fullName: InventorShims.TranslatorShim.StepImporter.StepImporter(System.String, Inventor.Application)
   nameWithType: StepImporter.StepImporter(String, Inventor.Application)
 - uid: InventorShims.TranslatorShim.StepImporter.#ctor*
   name: StepImporter
-  href: api/InventorShims.TranslatorShim.StepImporter.yml
+  href: api/InventorShims.TranslatorShim.StepImporter.html#InventorShims_TranslatorShim_StepImporter__ctor_
   commentId: Overload:InventorShims.TranslatorShim.StepImporter.#ctor
   isSpec: "True"
   fullName: InventorShims.TranslatorShim.StepImporter.StepImporter
   nameWithType: StepImporter.StepImporter
 - uid: InventorShims.TranslatorShim.StepImporter.AdvancedHealing
   name: AdvancedHealing
-  href: api/InventorShims.TranslatorShim.StepImporter.yml
+  href: api/InventorShims.TranslatorShim.StepImporter.html#InventorShims_TranslatorShim_StepImporter_AdvancedHealing
   commentId: P:InventorShims.TranslatorShim.StepImporter.AdvancedHealing
   fullName: InventorShims.TranslatorShim.StepImporter.AdvancedHealing
   nameWithType: StepImporter.AdvancedHealing
 - uid: InventorShims.TranslatorShim.StepImporter.AdvancedHealing*
   name: AdvancedHealing
-  href: api/InventorShims.TranslatorShim.StepImporter.yml
+  href: api/InventorShims.TranslatorShim.StepImporter.html#InventorShims_TranslatorShim_StepImporter_AdvancedHealing_
   commentId: Overload:InventorShims.TranslatorShim.StepImporter.AdvancedHealing
   isSpec: "True"
   fullName: InventorShims.TranslatorShim.StepImporter.AdvancedHealing
   nameWithType: StepImporter.AdvancedHealing
 - uid: InventorShims.TranslatorShim.StepImporter.AutoStitchAndPromote
   name: AutoStitchAndPromote
-  href: api/InventorShims.TranslatorShim.StepImporter.yml
+  href: api/InventorShims.TranslatorShim.StepImporter.html#InventorShims_TranslatorShim_StepImporter_AutoStitchAndPromote
   commentId: P:InventorShims.TranslatorShim.StepImporter.AutoStitchAndPromote
   fullName: InventorShims.TranslatorShim.StepImporter.AutoStitchAndPromote
   nameWithType: StepImporter.AutoStitchAndPromote
 - uid: InventorShims.TranslatorShim.StepImporter.AutoStitchAndPromote*
   name: AutoStitchAndPromote
-  href: api/InventorShims.TranslatorShim.StepImporter.yml
+  href: api/InventorShims.TranslatorShim.StepImporter.html#InventorShims_TranslatorShim_StepImporter_AutoStitchAndPromote_
   commentId: Overload:InventorShims.TranslatorShim.StepImporter.AutoStitchAndPromote
   isSpec: "True"
   fullName: InventorShims.TranslatorShim.StepImporter.AutoStitchAndPromote
   nameWithType: StepImporter.AutoStitchAndPromote
 - uid: InventorShims.TranslatorShim.StepImporter.CheckDuringLoad
   name: CheckDuringLoad
-  href: api/InventorShims.TranslatorShim.StepImporter.yml
+  href: api/InventorShims.TranslatorShim.StepImporter.html#InventorShims_TranslatorShim_StepImporter_CheckDuringLoad
   commentId: P:InventorShims.TranslatorShim.StepImporter.CheckDuringLoad
   fullName: InventorShims.TranslatorShim.StepImporter.CheckDuringLoad
   nameWithType: StepImporter.CheckDuringLoad
 - uid: InventorShims.TranslatorShim.StepImporter.CheckDuringLoad*
   name: CheckDuringLoad
-  href: api/InventorShims.TranslatorShim.StepImporter.yml
+  href: api/InventorShims.TranslatorShim.StepImporter.html#InventorShims_TranslatorShim_StepImporter_CheckDuringLoad_
   commentId: Overload:InventorShims.TranslatorShim.StepImporter.CheckDuringLoad
   isSpec: "True"
   fullName: InventorShims.TranslatorShim.StepImporter.CheckDuringLoad
   nameWithType: StepImporter.CheckDuringLoad
 - uid: InventorShims.TranslatorShim.StepImporter.DisplayWhenDone
   name: DisplayWhenDone
-  href: api/InventorShims.TranslatorShim.StepImporter.yml
+  href: api/InventorShims.TranslatorShim.StepImporter.html#InventorShims_TranslatorShim_StepImporter_DisplayWhenDone
   commentId: P:InventorShims.TranslatorShim.StepImporter.DisplayWhenDone
   fullName: InventorShims.TranslatorShim.StepImporter.DisplayWhenDone
   nameWithType: StepImporter.DisplayWhenDone
 - uid: InventorShims.TranslatorShim.StepImporter.DisplayWhenDone*
   name: DisplayWhenDone
-  href: api/InventorShims.TranslatorShim.StepImporter.yml
+  href: api/InventorShims.TranslatorShim.StepImporter.html#InventorShims_TranslatorShim_StepImporter_DisplayWhenDone_
   commentId: Overload:InventorShims.TranslatorShim.StepImporter.DisplayWhenDone
   isSpec: "True"
   fullName: InventorShims.TranslatorShim.StepImporter.DisplayWhenDone
   nameWithType: StepImporter.DisplayWhenDone
 - uid: InventorShims.TranslatorShim.StepImporter.EdgeSplitAndMerge
   name: EdgeSplitAndMerge
-  href: api/InventorShims.TranslatorShim.StepImporter.yml
+  href: api/InventorShims.TranslatorShim.StepImporter.html#InventorShims_TranslatorShim_StepImporter_EdgeSplitAndMerge
   commentId: P:InventorShims.TranslatorShim.StepImporter.EdgeSplitAndMerge
   fullName: InventorShims.TranslatorShim.StepImporter.EdgeSplitAndMerge
   nameWithType: StepImporter.EdgeSplitAndMerge
 - uid: InventorShims.TranslatorShim.StepImporter.EdgeSplitAndMerge*
   name: EdgeSplitAndMerge
-  href: api/InventorShims.TranslatorShim.StepImporter.yml
+  href: api/InventorShims.TranslatorShim.StepImporter.html#InventorShims_TranslatorShim_StepImporter_EdgeSplitAndMerge_
   commentId: Overload:InventorShims.TranslatorShim.StepImporter.EdgeSplitAndMerge
   isSpec: "True"
   fullName: InventorShims.TranslatorShim.StepImporter.EdgeSplitAndMerge
   nameWithType: StepImporter.EdgeSplitAndMerge
 - uid: InventorShims.TranslatorShim.StepImporter.EmbedTranslationReport
   name: EmbedTranslationReport
-  href: api/InventorShims.TranslatorShim.StepImporter.yml
+  href: api/InventorShims.TranslatorShim.StepImporter.html#InventorShims_TranslatorShim_StepImporter_EmbedTranslationReport
   commentId: P:InventorShims.TranslatorShim.StepImporter.EmbedTranslationReport
   fullName: InventorShims.TranslatorShim.StepImporter.EmbedTranslationReport
   nameWithType: StepImporter.EmbedTranslationReport
 - uid: InventorShims.TranslatorShim.StepImporter.EmbedTranslationReport*
   name: EmbedTranslationReport
-  href: api/InventorShims.TranslatorShim.StepImporter.yml
+  href: api/InventorShims.TranslatorShim.StepImporter.html#InventorShims_TranslatorShim_StepImporter_EmbedTranslationReport_
   commentId: Overload:InventorShims.TranslatorShim.StepImporter.EmbedTranslationReport
   isSpec: "True"
   fullName: InventorShims.TranslatorShim.StepImporter.EmbedTranslationReport
   nameWithType: StepImporter.EmbedTranslationReport
 - uid: InventorShims.TranslatorShim.StepImporter.FaceSplitAndMerge
   name: FaceSplitAndMerge
-  href: api/InventorShims.TranslatorShim.StepImporter.yml
+  href: api/InventorShims.TranslatorShim.StepImporter.html#InventorShims_TranslatorShim_StepImporter_FaceSplitAndMerge
   commentId: P:InventorShims.TranslatorShim.StepImporter.FaceSplitAndMerge
   fullName: InventorShims.TranslatorShim.StepImporter.FaceSplitAndMerge
   nameWithType: StepImporter.FaceSplitAndMerge
 - uid: InventorShims.TranslatorShim.StepImporter.FaceSplitAndMerge*
   name: FaceSplitAndMerge
-  href: api/InventorShims.TranslatorShim.StepImporter.yml
+  href: api/InventorShims.TranslatorShim.StepImporter.html#InventorShims_TranslatorShim_StepImporter_FaceSplitAndMerge_
   commentId: Overload:InventorShims.TranslatorShim.StepImporter.FaceSplitAndMerge
   isSpec: "True"
   fullName: InventorShims.TranslatorShim.StepImporter.FaceSplitAndMerge
   nameWithType: StepImporter.FaceSplitAndMerge
 - uid: InventorShims.TranslatorShim.StepImporter.Filename
   name: Filename
-  href: api/InventorShims.TranslatorShim.StepImporter.yml
+  href: api/InventorShims.TranslatorShim.StepImporter.html#InventorShims_TranslatorShim_StepImporter_Filename
   commentId: P:InventorShims.TranslatorShim.StepImporter.Filename
   fullName: InventorShims.TranslatorShim.StepImporter.Filename
   nameWithType: StepImporter.Filename
 - uid: InventorShims.TranslatorShim.StepImporter.Filename*
   name: Filename
-  href: api/InventorShims.TranslatorShim.StepImporter.yml
+  href: api/InventorShims.TranslatorShim.StepImporter.html#InventorShims_TranslatorShim_StepImporter_Filename_
   commentId: Overload:InventorShims.TranslatorShim.StepImporter.Filename
   isSpec: "True"
   fullName: InventorShims.TranslatorShim.StepImporter.Filename
   nameWithType: StepImporter.Filename
 - uid: InventorShims.TranslatorShim.StepImporter.FilenamePrefix
   name: FilenamePrefix
-  href: api/InventorShims.TranslatorShim.StepImporter.yml
+  href: api/InventorShims.TranslatorShim.StepImporter.html#InventorShims_TranslatorShim_StepImporter_FilenamePrefix
   commentId: P:InventorShims.TranslatorShim.StepImporter.FilenamePrefix
   fullName: InventorShims.TranslatorShim.StepImporter.FilenamePrefix
   nameWithType: StepImporter.FilenamePrefix
 - uid: InventorShims.TranslatorShim.StepImporter.FilenamePrefix*
   name: FilenamePrefix
-  href: api/InventorShims.TranslatorShim.StepImporter.yml
+  href: api/InventorShims.TranslatorShim.StepImporter.html#InventorShims_TranslatorShim_StepImporter_FilenamePrefix_
   commentId: Overload:InventorShims.TranslatorShim.StepImporter.FilenamePrefix
   isSpec: "True"
   fullName: InventorShims.TranslatorShim.StepImporter.FilenamePrefix
   nameWithType: StepImporter.FilenamePrefix
 - uid: InventorShims.TranslatorShim.StepImporter.FilenameSuffix
   name: FilenameSuffix
-  href: api/InventorShims.TranslatorShim.StepImporter.yml
+  href: api/InventorShims.TranslatorShim.StepImporter.html#InventorShims_TranslatorShim_StepImporter_FilenameSuffix
   commentId: P:InventorShims.TranslatorShim.StepImporter.FilenameSuffix
   fullName: InventorShims.TranslatorShim.StepImporter.FilenameSuffix
   nameWithType: StepImporter.FilenameSuffix
 - uid: InventorShims.TranslatorShim.StepImporter.FilenameSuffix*
   name: FilenameSuffix
-  href: api/InventorShims.TranslatorShim.StepImporter.yml
+  href: api/InventorShims.TranslatorShim.StepImporter.html#InventorShims_TranslatorShim_StepImporter_FilenameSuffix_
   commentId: Overload:InventorShims.TranslatorShim.StepImporter.FilenameSuffix
   isSpec: "True"
   fullName: InventorShims.TranslatorShim.StepImporter.FilenameSuffix
   nameWithType: StepImporter.FilenameSuffix
 - uid: InventorShims.TranslatorShim.StepImporter.Import
   name: Import()
-  href: api/InventorShims.TranslatorShim.StepImporter.yml
+  href: api/InventorShims.TranslatorShim.StepImporter.html#InventorShims_TranslatorShim_StepImporter_Import
   commentId: M:InventorShims.TranslatorShim.StepImporter.Import
   fullName: InventorShims.TranslatorShim.StepImporter.Import()
   nameWithType: StepImporter.Import()
 - uid: InventorShims.TranslatorShim.StepImporter.Import*
   name: Import
-  href: api/InventorShims.TranslatorShim.StepImporter.yml
+  href: api/InventorShims.TranslatorShim.StepImporter.html#InventorShims_TranslatorShim_StepImporter_Import_
   commentId: Overload:InventorShims.TranslatorShim.StepImporter.Import
   isSpec: "True"
   fullName: InventorShims.TranslatorShim.StepImporter.Import
   nameWithType: StepImporter.Import
 - uid: InventorShims.TranslatorShim.StepImporter.ImportAsCompositePart
   name: ImportAsCompositePart()
-  href: api/InventorShims.TranslatorShim.StepImporter.yml
+  href: api/InventorShims.TranslatorShim.StepImporter.html#InventorShims_TranslatorShim_StepImporter_ImportAsCompositePart
   commentId: M:InventorShims.TranslatorShim.StepImporter.ImportAsCompositePart
   fullName: InventorShims.TranslatorShim.StepImporter.ImportAsCompositePart()
   nameWithType: StepImporter.ImportAsCompositePart()
 - uid: InventorShims.TranslatorShim.StepImporter.ImportAsCompositePart*
   name: ImportAsCompositePart
-  href: api/InventorShims.TranslatorShim.StepImporter.yml
+  href: api/InventorShims.TranslatorShim.StepImporter.html#InventorShims_TranslatorShim_StepImporter_ImportAsCompositePart_
   commentId: Overload:InventorShims.TranslatorShim.StepImporter.ImportAsCompositePart
   isSpec: "True"
   fullName: InventorShims.TranslatorShim.StepImporter.ImportAsCompositePart
   nameWithType: StepImporter.ImportAsCompositePart
 - uid: InventorShims.TranslatorShim.StepImporter.ImportAsMultiBodyPart
   name: ImportAsMultiBodyPart()
-  href: api/InventorShims.TranslatorShim.StepImporter.yml
+  href: api/InventorShims.TranslatorShim.StepImporter.html#InventorShims_TranslatorShim_StepImporter_ImportAsMultiBodyPart
   commentId: M:InventorShims.TranslatorShim.StepImporter.ImportAsMultiBodyPart
   fullName: InventorShims.TranslatorShim.StepImporter.ImportAsMultiBodyPart()
   nameWithType: StepImporter.ImportAsMultiBodyPart()
 - uid: InventorShims.TranslatorShim.StepImporter.ImportAsMultiBodyPart*
   name: ImportAsMultiBodyPart
-  href: api/InventorShims.TranslatorShim.StepImporter.yml
+  href: api/InventorShims.TranslatorShim.StepImporter.html#InventorShims_TranslatorShim_StepImporter_ImportAsMultiBodyPart_
   commentId: Overload:InventorShims.TranslatorShim.StepImporter.ImportAsMultiBodyPart
   isSpec: "True"
   fullName: InventorShims.TranslatorShim.StepImporter.ImportAsMultiBodyPart
   nameWithType: StepImporter.ImportAsMultiBodyPart
 - uid: InventorShims.TranslatorShim.StepImporter.ImportAsReference
   name: ImportAsReference()
-  href: api/InventorShims.TranslatorShim.StepImporter.yml
+  href: api/InventorShims.TranslatorShim.StepImporter.html#InventorShims_TranslatorShim_StepImporter_ImportAsReference
   commentId: M:InventorShims.TranslatorShim.StepImporter.ImportAsReference
   fullName: InventorShims.TranslatorShim.StepImporter.ImportAsReference()
   nameWithType: StepImporter.ImportAsReference()
 - uid: InventorShims.TranslatorShim.StepImporter.ImportAsReference*
   name: ImportAsReference
-  href: api/InventorShims.TranslatorShim.StepImporter.yml
+  href: api/InventorShims.TranslatorShim.StepImporter.html#InventorShims_TranslatorShim_StepImporter_ImportAsReference_
   commentId: Overload:InventorShims.TranslatorShim.StepImporter.ImportAsReference
   isSpec: "True"
   fullName: InventorShims.TranslatorShim.StepImporter.ImportAsReference
   nameWithType: StepImporter.ImportAsReference
 - uid: InventorShims.TranslatorShim.StepImporter.ImportGraphicalPMI
   name: ImportGraphicalPMI
-  href: api/InventorShims.TranslatorShim.StepImporter.yml
+  href: api/InventorShims.TranslatorShim.StepImporter.html#InventorShims_TranslatorShim_StepImporter_ImportGraphicalPMI
   commentId: P:InventorShims.TranslatorShim.StepImporter.ImportGraphicalPMI
   fullName: InventorShims.TranslatorShim.StepImporter.ImportGraphicalPMI
   nameWithType: StepImporter.ImportGraphicalPMI
 - uid: InventorShims.TranslatorShim.StepImporter.ImportGraphicalPMI*
   name: ImportGraphicalPMI
-  href: api/InventorShims.TranslatorShim.StepImporter.yml
+  href: api/InventorShims.TranslatorShim.StepImporter.html#InventorShims_TranslatorShim_StepImporter_ImportGraphicalPMI_
   commentId: Overload:InventorShims.TranslatorShim.StepImporter.ImportGraphicalPMI
   isSpec: "True"
   fullName: InventorShims.TranslatorShim.StepImporter.ImportGraphicalPMI
   nameWithType: StepImporter.ImportGraphicalPMI
 - uid: InventorShims.TranslatorShim.StepImporter.ImportMeshes
   name: ImportMeshes
-  href: api/InventorShims.TranslatorShim.StepImporter.yml
+  href: api/InventorShims.TranslatorShim.StepImporter.html#InventorShims_TranslatorShim_StepImporter_ImportMeshes
   commentId: P:InventorShims.TranslatorShim.StepImporter.ImportMeshes
   fullName: InventorShims.TranslatorShim.StepImporter.ImportMeshes
   nameWithType: StepImporter.ImportMeshes
 - uid: InventorShims.TranslatorShim.StepImporter.ImportMeshes*
   name: ImportMeshes
-  href: api/InventorShims.TranslatorShim.StepImporter.yml
+  href: api/InventorShims.TranslatorShim.StepImporter.html#InventorShims_TranslatorShim_StepImporter_ImportMeshes_
   commentId: Overload:InventorShims.TranslatorShim.StepImporter.ImportMeshes
   isSpec: "True"
   fullName: InventorShims.TranslatorShim.StepImporter.ImportMeshes
   nameWithType: StepImporter.ImportMeshes
 - uid: InventorShims.TranslatorShim.StepImporter.ImportPoints
   name: ImportPoints
-  href: api/InventorShims.TranslatorShim.StepImporter.yml
+  href: api/InventorShims.TranslatorShim.StepImporter.html#InventorShims_TranslatorShim_StepImporter_ImportPoints
   commentId: P:InventorShims.TranslatorShim.StepImporter.ImportPoints
   fullName: InventorShims.TranslatorShim.StepImporter.ImportPoints
   nameWithType: StepImporter.ImportPoints
 - uid: InventorShims.TranslatorShim.StepImporter.ImportPoints*
   name: ImportPoints
-  href: api/InventorShims.TranslatorShim.StepImporter.yml
+  href: api/InventorShims.TranslatorShim.StepImporter.html#InventorShims_TranslatorShim_StepImporter_ImportPoints_
   commentId: Overload:InventorShims.TranslatorShim.StepImporter.ImportPoints
   isSpec: "True"
   fullName: InventorShims.TranslatorShim.StepImporter.ImportPoints
   nameWithType: StepImporter.ImportPoints
 - uid: InventorShims.TranslatorShim.StepImporter.ImportSolids
   name: ImportSolids
-  href: api/InventorShims.TranslatorShim.StepImporter.yml
+  href: api/InventorShims.TranslatorShim.StepImporter.html#InventorShims_TranslatorShim_StepImporter_ImportSolids
   commentId: P:InventorShims.TranslatorShim.StepImporter.ImportSolids
   fullName: InventorShims.TranslatorShim.StepImporter.ImportSolids
   nameWithType: StepImporter.ImportSolids
 - uid: InventorShims.TranslatorShim.StepImporter.ImportSolids*
   name: ImportSolids
-  href: api/InventorShims.TranslatorShim.StepImporter.yml
+  href: api/InventorShims.TranslatorShim.StepImporter.html#InventorShims_TranslatorShim_StepImporter_ImportSolids_
   commentId: Overload:InventorShims.TranslatorShim.StepImporter.ImportSolids
   isSpec: "True"
   fullName: InventorShims.TranslatorShim.StepImporter.ImportSolids
   nameWithType: StepImporter.ImportSolids
 - uid: InventorShims.TranslatorShim.StepImporter.ImportSurfaces
   name: ImportSurfaces
-  href: api/InventorShims.TranslatorShim.StepImporter.yml
+  href: api/InventorShims.TranslatorShim.StepImporter.html#InventorShims_TranslatorShim_StepImporter_ImportSurfaces
   commentId: P:InventorShims.TranslatorShim.StepImporter.ImportSurfaces
   fullName: InventorShims.TranslatorShim.StepImporter.ImportSurfaces
   nameWithType: StepImporter.ImportSurfaces
 - uid: InventorShims.TranslatorShim.StepImporter.ImportSurfaces*
   name: ImportSurfaces
-  href: api/InventorShims.TranslatorShim.StepImporter.yml
+  href: api/InventorShims.TranslatorShim.StepImporter.html#InventorShims_TranslatorShim_StepImporter_ImportSurfaces_
   commentId: Overload:InventorShims.TranslatorShim.StepImporter.ImportSurfaces
   isSpec: "True"
   fullName: InventorShims.TranslatorShim.StepImporter.ImportSurfaces
   nameWithType: StepImporter.ImportSurfaces
 - uid: InventorShims.TranslatorShim.StepImporter.ImportWires
   name: ImportWires
-  href: api/InventorShims.TranslatorShim.StepImporter.yml
+  href: api/InventorShims.TranslatorShim.StepImporter.html#InventorShims_TranslatorShim_StepImporter_ImportWires
   commentId: P:InventorShims.TranslatorShim.StepImporter.ImportWires
   fullName: InventorShims.TranslatorShim.StepImporter.ImportWires
   nameWithType: StepImporter.ImportWires
 - uid: InventorShims.TranslatorShim.StepImporter.ImportWires*
   name: ImportWires
-  href: api/InventorShims.TranslatorShim.StepImporter.yml
+  href: api/InventorShims.TranslatorShim.StepImporter.html#InventorShims_TranslatorShim_StepImporter_ImportWires_
   commentId: Overload:InventorShims.TranslatorShim.StepImporter.ImportWires
   isSpec: "True"
   fullName: InventorShims.TranslatorShim.StepImporter.ImportWires
   nameWithType: StepImporter.ImportWires
 - uid: InventorShims.TranslatorShim.StepImporter.SaveDuringLoad
   name: SaveDuringLoad
-  href: api/InventorShims.TranslatorShim.StepImporter.yml
+  href: api/InventorShims.TranslatorShim.StepImporter.html#InventorShims_TranslatorShim_StepImporter_SaveDuringLoad
   commentId: P:InventorShims.TranslatorShim.StepImporter.SaveDuringLoad
   fullName: InventorShims.TranslatorShim.StepImporter.SaveDuringLoad
   nameWithType: StepImporter.SaveDuringLoad
 - uid: InventorShims.TranslatorShim.StepImporter.SaveDuringLoad*
   name: SaveDuringLoad
-  href: api/InventorShims.TranslatorShim.StepImporter.yml
+  href: api/InventorShims.TranslatorShim.StepImporter.html#InventorShims_TranslatorShim_StepImporter_SaveDuringLoad_
   commentId: Overload:InventorShims.TranslatorShim.StepImporter.SaveDuringLoad
   isSpec: "True"
   fullName: InventorShims.TranslatorShim.StepImporter.SaveDuringLoad
   nameWithType: StepImporter.SaveDuringLoad
 - uid: InventorShims.TranslatorShim.StepImporter.SaveLocation
   name: SaveLocation
-  href: api/InventorShims.TranslatorShim.StepImporter.yml
+  href: api/InventorShims.TranslatorShim.StepImporter.html#InventorShims_TranslatorShim_StepImporter_SaveLocation
   commentId: P:InventorShims.TranslatorShim.StepImporter.SaveLocation
   fullName: InventorShims.TranslatorShim.StepImporter.SaveLocation
   nameWithType: StepImporter.SaveLocation
 - uid: InventorShims.TranslatorShim.StepImporter.SaveLocation*
   name: SaveLocation
-  href: api/InventorShims.TranslatorShim.StepImporter.yml
+  href: api/InventorShims.TranslatorShim.StepImporter.html#InventorShims_TranslatorShim_StepImporter_SaveLocation_
   commentId: Overload:InventorShims.TranslatorShim.StepImporter.SaveLocation
   isSpec: "True"
   fullName: InventorShims.TranslatorShim.StepImporter.SaveLocation
   nameWithType: StepImporter.SaveLocation
 - uid: InventorShims.TranslatorShim.StepImporter.SaveTranslationReport
   name: SaveTranslationReport
-  href: api/InventorShims.TranslatorShim.StepImporter.yml
+  href: api/InventorShims.TranslatorShim.StepImporter.html#InventorShims_TranslatorShim_StepImporter_SaveTranslationReport
   commentId: P:InventorShims.TranslatorShim.StepImporter.SaveTranslationReport
   fullName: InventorShims.TranslatorShim.StepImporter.SaveTranslationReport
   nameWithType: StepImporter.SaveTranslationReport
 - uid: InventorShims.TranslatorShim.StepImporter.SaveTranslationReport*
   name: SaveTranslationReport
-  href: api/InventorShims.TranslatorShim.StepImporter.yml
+  href: api/InventorShims.TranslatorShim.StepImporter.html#InventorShims_TranslatorShim_StepImporter_SaveTranslationReport_
   commentId: Overload:InventorShims.TranslatorShim.StepImporter.SaveTranslationReport
   isSpec: "True"
   fullName: InventorShims.TranslatorShim.StepImporter.SaveTranslationReport
   nameWithType: StepImporter.SaveTranslationReport
 - uid: InventorShims.TranslatorShim.StepImporter.SurfaceType
   name: SurfaceType
-  href: api/InventorShims.TranslatorShim.StepImporter.yml
+  href: api/InventorShims.TranslatorShim.StepImporter.html#InventorShims_TranslatorShim_StepImporter_SurfaceType
   commentId: P:InventorShims.TranslatorShim.StepImporter.SurfaceType
   fullName: InventorShims.TranslatorShim.StepImporter.SurfaceType
   nameWithType: StepImporter.SurfaceType
 - uid: InventorShims.TranslatorShim.StepImporter.SurfaceType*
   name: SurfaceType
-  href: api/InventorShims.TranslatorShim.StepImporter.yml
+  href: api/InventorShims.TranslatorShim.StepImporter.html#InventorShims_TranslatorShim_StepImporter_SurfaceType_
   commentId: Overload:InventorShims.TranslatorShim.StepImporter.SurfaceType
   isSpec: "True"
   fullName: InventorShims.TranslatorShim.StepImporter.SurfaceType
   nameWithType: StepImporter.SurfaceType
 - uid: InventorShims.TranslatorShim.StepImporter.Units
   name: Units
-  href: api/InventorShims.TranslatorShim.StepImporter.yml
+  href: api/InventorShims.TranslatorShim.StepImporter.html#InventorShims_TranslatorShim_StepImporter_Units
   commentId: P:InventorShims.TranslatorShim.StepImporter.Units
   fullName: InventorShims.TranslatorShim.StepImporter.Units
   nameWithType: StepImporter.Units
 - uid: InventorShims.TranslatorShim.StepImporter.Units*
   name: Units
-  href: api/InventorShims.TranslatorShim.StepImporter.yml
+  href: api/InventorShims.TranslatorShim.StepImporter.html#InventorShims_TranslatorShim_StepImporter_Units_
   commentId: Overload:InventorShims.TranslatorShim.StepImporter.Units
   isSpec: "True"
   fullName: InventorShims.TranslatorShim.StepImporter.Units
   nameWithType: StepImporter.Units
 - uid: InventorShims.TranslatorShim.StepProtocolEnum
   name: StepProtocolEnum
-  href: api/InventorShims.TranslatorShim.StepProtocolEnum.yml
+  href: api/InventorShims.TranslatorShim.StepProtocolEnum.html
   commentId: T:InventorShims.TranslatorShim.StepProtocolEnum
   fullName: InventorShims.TranslatorShim.StepProtocolEnum
   nameWithType: StepProtocolEnum
 - uid: InventorShims.TranslatorShim.StepProtocolEnum.AP203
   name: AP203
-  href: api/InventorShims.TranslatorShim.StepProtocolEnum.yml
+  href: api/InventorShims.TranslatorShim.StepProtocolEnum.html#InventorShims_TranslatorShim_StepProtocolEnum_AP203
   commentId: F:InventorShims.TranslatorShim.StepProtocolEnum.AP203
   fullName: InventorShims.TranslatorShim.StepProtocolEnum.AP203
   nameWithType: StepProtocolEnum.AP203
 - uid: InventorShims.TranslatorShim.StepProtocolEnum.AP214
   name: AP214
-  href: api/InventorShims.TranslatorShim.StepProtocolEnum.yml
+  href: api/InventorShims.TranslatorShim.StepProtocolEnum.html#InventorShims_TranslatorShim_StepProtocolEnum_AP214
   commentId: F:InventorShims.TranslatorShim.StepProtocolEnum.AP214
   fullName: InventorShims.TranslatorShim.StepProtocolEnum.AP214
   nameWithType: StepProtocolEnum.AP214
 - uid: InventorShims.TranslatorShim.StepProtocolEnum.AP242
   name: AP242
-  href: api/InventorShims.TranslatorShim.StepProtocolEnum.yml
+  href: api/InventorShims.TranslatorShim.StepProtocolEnum.html#InventorShims_TranslatorShim_StepProtocolEnum_AP242
   commentId: F:InventorShims.TranslatorShim.StepProtocolEnum.AP242
   fullName: InventorShims.TranslatorShim.StepProtocolEnum.AP242
   nameWithType: StepProtocolEnum.AP242
 - uid: InventorShims.TranslatorShim.StlExporter
   name: StlExporter
-  href: api/InventorShims.TranslatorShim.StlExporter.yml
+  href: api/InventorShims.TranslatorShim.StlExporter.html
   commentId: T:InventorShims.TranslatorShim.StlExporter
   fullName: InventorShims.TranslatorShim.StlExporter
   nameWithType: StlExporter
 - uid: InventorShims.TranslatorShim.StlExporter.#ctor(Inventor.Document)
   name: StlExporter(Inventor.Document)
-  href: api/InventorShims.TranslatorShim.StlExporter.yml
+  href: api/InventorShims.TranslatorShim.StlExporter.html#InventorShims_TranslatorShim_StlExporter__ctor_Inventor_Document_
   commentId: M:InventorShims.TranslatorShim.StlExporter.#ctor(Inventor.Document)
   fullName: InventorShims.TranslatorShim.StlExporter.StlExporter(Inventor.Document)
   nameWithType: StlExporter.StlExporter(Inventor.Document)
 - uid: InventorShims.TranslatorShim.StlExporter.#ctor*
   name: StlExporter
-  href: api/InventorShims.TranslatorShim.StlExporter.yml
+  href: api/InventorShims.TranslatorShim.StlExporter.html#InventorShims_TranslatorShim_StlExporter__ctor_
   commentId: Overload:InventorShims.TranslatorShim.StlExporter.#ctor
   isSpec: "True"
   fullName: InventorShims.TranslatorShim.StlExporter.StlExporter
   nameWithType: StlExporter.StlExporter
 - uid: InventorShims.TranslatorShim.StlExporter.AllowMoveMeshNodes
   name: AllowMoveMeshNodes
-  href: api/InventorShims.TranslatorShim.StlExporter.yml
+  href: api/InventorShims.TranslatorShim.StlExporter.html#InventorShims_TranslatorShim_StlExporter_AllowMoveMeshNodes
   commentId: P:InventorShims.TranslatorShim.StlExporter.AllowMoveMeshNodes
   fullName: InventorShims.TranslatorShim.StlExporter.AllowMoveMeshNodes
   nameWithType: StlExporter.AllowMoveMeshNodes
 - uid: InventorShims.TranslatorShim.StlExporter.AllowMoveMeshNodes*
   name: AllowMoveMeshNodes
-  href: api/InventorShims.TranslatorShim.StlExporter.yml
+  href: api/InventorShims.TranslatorShim.StlExporter.html#InventorShims_TranslatorShim_StlExporter_AllowMoveMeshNodes_
   commentId: Overload:InventorShims.TranslatorShim.StlExporter.AllowMoveMeshNodes
   isSpec: "True"
   fullName: InventorShims.TranslatorShim.StlExporter.AllowMoveMeshNodes
   nameWithType: StlExporter.AllowMoveMeshNodes
 - uid: InventorShims.TranslatorShim.StlExporter.Binary
   name: Binary
-  href: api/InventorShims.TranslatorShim.StlExporter.yml
+  href: api/InventorShims.TranslatorShim.StlExporter.html#InventorShims_TranslatorShim_StlExporter_Binary
   commentId: P:InventorShims.TranslatorShim.StlExporter.Binary
   fullName: InventorShims.TranslatorShim.StlExporter.Binary
   nameWithType: StlExporter.Binary
 - uid: InventorShims.TranslatorShim.StlExporter.Binary*
   name: Binary
-  href: api/InventorShims.TranslatorShim.StlExporter.yml
+  href: api/InventorShims.TranslatorShim.StlExporter.html#InventorShims_TranslatorShim_StlExporter_Binary_
   commentId: Overload:InventorShims.TranslatorShim.StlExporter.Binary
   isSpec: "True"
   fullName: InventorShims.TranslatorShim.StlExporter.Binary
   nameWithType: StlExporter.Binary
 - uid: InventorShims.TranslatorShim.StlExporter.Document
   name: Document
-  href: api/InventorShims.TranslatorShim.StlExporter.yml
+  href: api/InventorShims.TranslatorShim.StlExporter.html#InventorShims_TranslatorShim_StlExporter_Document
   commentId: P:InventorShims.TranslatorShim.StlExporter.Document
   fullName: InventorShims.TranslatorShim.StlExporter.Document
   nameWithType: StlExporter.Document
 - uid: InventorShims.TranslatorShim.StlExporter.Document*
   name: Document
-  href: api/InventorShims.TranslatorShim.StlExporter.yml
+  href: api/InventorShims.TranslatorShim.StlExporter.html#InventorShims_TranslatorShim_StlExporter_Document_
   commentId: Overload:InventorShims.TranslatorShim.StlExporter.Document
   isSpec: "True"
   fullName: InventorShims.TranslatorShim.StlExporter.Document
   nameWithType: StlExporter.Document
 - uid: InventorShims.TranslatorShim.StlExporter.Export
   name: Export()
-  href: api/InventorShims.TranslatorShim.StlExporter.yml
+  href: api/InventorShims.TranslatorShim.StlExporter.html#InventorShims_TranslatorShim_StlExporter_Export
   commentId: M:InventorShims.TranslatorShim.StlExporter.Export
   fullName: InventorShims.TranslatorShim.StlExporter.Export()
   nameWithType: StlExporter.Export()
 - uid: InventorShims.TranslatorShim.StlExporter.Export(System.String)
   name: Export(String)
-  href: api/InventorShims.TranslatorShim.StlExporter.yml
+  href: api/InventorShims.TranslatorShim.StlExporter.html#InventorShims_TranslatorShim_StlExporter_Export_System_String_
   commentId: M:InventorShims.TranslatorShim.StlExporter.Export(System.String)
   fullName: InventorShims.TranslatorShim.StlExporter.Export(System.String)
   nameWithType: StlExporter.Export(String)
 - uid: InventorShims.TranslatorShim.StlExporter.Export*
   name: Export
-  href: api/InventorShims.TranslatorShim.StlExporter.yml
+  href: api/InventorShims.TranslatorShim.StlExporter.html#InventorShims_TranslatorShim_StlExporter_Export_
   commentId: Overload:InventorShims.TranslatorShim.StlExporter.Export
   isSpec: "True"
   fullName: InventorShims.TranslatorShim.StlExporter.Export
   nameWithType: StlExporter.Export
 - uid: InventorShims.TranslatorShim.StlExporter.ExportColors
   name: ExportColors
-  href: api/InventorShims.TranslatorShim.StlExporter.yml
+  href: api/InventorShims.TranslatorShim.StlExporter.html#InventorShims_TranslatorShim_StlExporter_ExportColors
   commentId: P:InventorShims.TranslatorShim.StlExporter.ExportColors
   fullName: InventorShims.TranslatorShim.StlExporter.ExportColors
   nameWithType: StlExporter.ExportColors
 - uid: InventorShims.TranslatorShim.StlExporter.ExportColors*
   name: ExportColors
-  href: api/InventorShims.TranslatorShim.StlExporter.yml
+  href: api/InventorShims.TranslatorShim.StlExporter.html#InventorShims_TranslatorShim_StlExporter_ExportColors_
   commentId: Overload:InventorShims.TranslatorShim.StlExporter.ExportColors
   isSpec: "True"
   fullName: InventorShims.TranslatorShim.StlExporter.ExportColors
   nameWithType: StlExporter.ExportColors
 - uid: InventorShims.TranslatorShim.StlExporter.MaxAspectRatio
   name: MaxAspectRatio
-  href: api/InventorShims.TranslatorShim.StlExporter.yml
+  href: api/InventorShims.TranslatorShim.StlExporter.html#InventorShims_TranslatorShim_StlExporter_MaxAspectRatio
   commentId: P:InventorShims.TranslatorShim.StlExporter.MaxAspectRatio
   fullName: InventorShims.TranslatorShim.StlExporter.MaxAspectRatio
   nameWithType: StlExporter.MaxAspectRatio
 - uid: InventorShims.TranslatorShim.StlExporter.MaxAspectRatio*
   name: MaxAspectRatio
-  href: api/InventorShims.TranslatorShim.StlExporter.yml
+  href: api/InventorShims.TranslatorShim.StlExporter.html#InventorShims_TranslatorShim_StlExporter_MaxAspectRatio_
   commentId: Overload:InventorShims.TranslatorShim.StlExporter.MaxAspectRatio
   isSpec: "True"
   fullName: InventorShims.TranslatorShim.StlExporter.MaxAspectRatio
   nameWithType: StlExporter.MaxAspectRatio
 - uid: InventorShims.TranslatorShim.StlExporter.MaxEdgeLength
   name: MaxEdgeLength
-  href: api/InventorShims.TranslatorShim.StlExporter.yml
+  href: api/InventorShims.TranslatorShim.StlExporter.html#InventorShims_TranslatorShim_StlExporter_MaxEdgeLength
   commentId: P:InventorShims.TranslatorShim.StlExporter.MaxEdgeLength
   fullName: InventorShims.TranslatorShim.StlExporter.MaxEdgeLength
   nameWithType: StlExporter.MaxEdgeLength
 - uid: InventorShims.TranslatorShim.StlExporter.MaxEdgeLength*
   name: MaxEdgeLength
-  href: api/InventorShims.TranslatorShim.StlExporter.yml
+  href: api/InventorShims.TranslatorShim.StlExporter.html#InventorShims_TranslatorShim_StlExporter_MaxEdgeLength_
   commentId: Overload:InventorShims.TranslatorShim.StlExporter.MaxEdgeLength
   isSpec: "True"
   fullName: InventorShims.TranslatorShim.StlExporter.MaxEdgeLength
   nameWithType: StlExporter.MaxEdgeLength
 - uid: InventorShims.TranslatorShim.StlExporter.NormalDeviation
   name: NormalDeviation
-  href: api/InventorShims.TranslatorShim.StlExporter.yml
+  href: api/InventorShims.TranslatorShim.StlExporter.html#InventorShims_TranslatorShim_StlExporter_NormalDeviation
   commentId: P:InventorShims.TranslatorShim.StlExporter.NormalDeviation
   fullName: InventorShims.TranslatorShim.StlExporter.NormalDeviation
   nameWithType: StlExporter.NormalDeviation
 - uid: InventorShims.TranslatorShim.StlExporter.NormalDeviation*
   name: NormalDeviation
-  href: api/InventorShims.TranslatorShim.StlExporter.yml
+  href: api/InventorShims.TranslatorShim.StlExporter.html#InventorShims_TranslatorShim_StlExporter_NormalDeviation_
   commentId: Overload:InventorShims.TranslatorShim.StlExporter.NormalDeviation
   isSpec: "True"
   fullName: InventorShims.TranslatorShim.StlExporter.NormalDeviation
   nameWithType: StlExporter.NormalDeviation
 - uid: InventorShims.TranslatorShim.StlExporter.OneFilePerPartInstance
   name: OneFilePerPartInstance
-  href: api/InventorShims.TranslatorShim.StlExporter.yml
+  href: api/InventorShims.TranslatorShim.StlExporter.html#InventorShims_TranslatorShim_StlExporter_OneFilePerPartInstance
   commentId: P:InventorShims.TranslatorShim.StlExporter.OneFilePerPartInstance
   fullName: InventorShims.TranslatorShim.StlExporter.OneFilePerPartInstance
   nameWithType: StlExporter.OneFilePerPartInstance
 - uid: InventorShims.TranslatorShim.StlExporter.OneFilePerPartInstance*
   name: OneFilePerPartInstance
-  href: api/InventorShims.TranslatorShim.StlExporter.yml
+  href: api/InventorShims.TranslatorShim.StlExporter.html#InventorShims_TranslatorShim_StlExporter_OneFilePerPartInstance_
   commentId: Overload:InventorShims.TranslatorShim.StlExporter.OneFilePerPartInstance
   isSpec: "True"
   fullName: InventorShims.TranslatorShim.StlExporter.OneFilePerPartInstance
   nameWithType: StlExporter.OneFilePerPartInstance
 - uid: InventorShims.TranslatorShim.StlExporter.Resolution
   name: Resolution
-  href: api/InventorShims.TranslatorShim.StlExporter.yml
+  href: api/InventorShims.TranslatorShim.StlExporter.html#InventorShims_TranslatorShim_StlExporter_Resolution
   commentId: P:InventorShims.TranslatorShim.StlExporter.Resolution
   fullName: InventorShims.TranslatorShim.StlExporter.Resolution
   nameWithType: StlExporter.Resolution
 - uid: InventorShims.TranslatorShim.StlExporter.Resolution*
   name: Resolution
-  href: api/InventorShims.TranslatorShim.StlExporter.yml
+  href: api/InventorShims.TranslatorShim.StlExporter.html#InventorShims_TranslatorShim_StlExporter_Resolution_
   commentId: Overload:InventorShims.TranslatorShim.StlExporter.Resolution
   isSpec: "True"
   fullName: InventorShims.TranslatorShim.StlExporter.Resolution
   nameWithType: StlExporter.Resolution
 - uid: InventorShims.TranslatorShim.StlExporter.SurfaceDeviation
   name: SurfaceDeviation
-  href: api/InventorShims.TranslatorShim.StlExporter.yml
+  href: api/InventorShims.TranslatorShim.StlExporter.html#InventorShims_TranslatorShim_StlExporter_SurfaceDeviation
   commentId: P:InventorShims.TranslatorShim.StlExporter.SurfaceDeviation
   fullName: InventorShims.TranslatorShim.StlExporter.SurfaceDeviation
   nameWithType: StlExporter.SurfaceDeviation
 - uid: InventorShims.TranslatorShim.StlExporter.SurfaceDeviation*
   name: SurfaceDeviation
-  href: api/InventorShims.TranslatorShim.StlExporter.yml
+  href: api/InventorShims.TranslatorShim.StlExporter.html#InventorShims_TranslatorShim_StlExporter_SurfaceDeviation_
   commentId: Overload:InventorShims.TranslatorShim.StlExporter.SurfaceDeviation
   isSpec: "True"
   fullName: InventorShims.TranslatorShim.StlExporter.SurfaceDeviation
   nameWithType: StlExporter.SurfaceDeviation
 - uid: InventorShims.TranslatorShim.StlExporter.Units
   name: Units
-  href: api/InventorShims.TranslatorShim.StlExporter.yml
+  href: api/InventorShims.TranslatorShim.StlExporter.html#InventorShims_TranslatorShim_StlExporter_Units
   commentId: P:InventorShims.TranslatorShim.StlExporter.Units
   fullName: InventorShims.TranslatorShim.StlExporter.Units
   nameWithType: StlExporter.Units
 - uid: InventorShims.TranslatorShim.StlExporter.Units*
   name: Units
-  href: api/InventorShims.TranslatorShim.StlExporter.yml
+  href: api/InventorShims.TranslatorShim.StlExporter.html#InventorShims_TranslatorShim_StlExporter_Units_
   commentId: Overload:InventorShims.TranslatorShim.StlExporter.Units
   isSpec: "True"
   fullName: InventorShims.TranslatorShim.StlExporter.Units
   nameWithType: StlExporter.Units
 - uid: InventorShims.TranslatorShim.StlResolutionEnum
   name: StlResolutionEnum
-  href: api/InventorShims.TranslatorShim.StlResolutionEnum.yml
+  href: api/InventorShims.TranslatorShim.StlResolutionEnum.html
   commentId: T:InventorShims.TranslatorShim.StlResolutionEnum
   fullName: InventorShims.TranslatorShim.StlResolutionEnum
   nameWithType: StlResolutionEnum
 - uid: InventorShims.TranslatorShim.StlResolutionEnum.Brep
   name: Brep
-  href: api/InventorShims.TranslatorShim.StlResolutionEnum.yml
+  href: api/InventorShims.TranslatorShim.StlResolutionEnum.html#InventorShims_TranslatorShim_StlResolutionEnum_Brep
   commentId: F:InventorShims.TranslatorShim.StlResolutionEnum.Brep
   fullName: InventorShims.TranslatorShim.StlResolutionEnum.Brep
   nameWithType: StlResolutionEnum.Brep
 - uid: InventorShims.TranslatorShim.StlResolutionEnum.Custom
   name: Custom
-  href: api/InventorShims.TranslatorShim.StlResolutionEnum.yml
+  href: api/InventorShims.TranslatorShim.StlResolutionEnum.html#InventorShims_TranslatorShim_StlResolutionEnum_Custom
   commentId: F:InventorShims.TranslatorShim.StlResolutionEnum.Custom
   fullName: InventorShims.TranslatorShim.StlResolutionEnum.Custom
   nameWithType: StlResolutionEnum.Custom
 - uid: InventorShims.TranslatorShim.StlResolutionEnum.High
   name: High
-  href: api/InventorShims.TranslatorShim.StlResolutionEnum.yml
+  href: api/InventorShims.TranslatorShim.StlResolutionEnum.html#InventorShims_TranslatorShim_StlResolutionEnum_High
   commentId: F:InventorShims.TranslatorShim.StlResolutionEnum.High
   fullName: InventorShims.TranslatorShim.StlResolutionEnum.High
   nameWithType: StlResolutionEnum.High
 - uid: InventorShims.TranslatorShim.StlResolutionEnum.Low
   name: Low
-  href: api/InventorShims.TranslatorShim.StlResolutionEnum.yml
+  href: api/InventorShims.TranslatorShim.StlResolutionEnum.html#InventorShims_TranslatorShim_StlResolutionEnum_Low
   commentId: F:InventorShims.TranslatorShim.StlResolutionEnum.Low
   fullName: InventorShims.TranslatorShim.StlResolutionEnum.Low
   nameWithType: StlResolutionEnum.Low
 - uid: InventorShims.TranslatorShim.StlResolutionEnum.Medium
   name: Medium
-  href: api/InventorShims.TranslatorShim.StlResolutionEnum.yml
+  href: api/InventorShims.TranslatorShim.StlResolutionEnum.html#InventorShims_TranslatorShim_StlResolutionEnum_Medium
   commentId: F:InventorShims.TranslatorShim.StlResolutionEnum.Medium
   fullName: InventorShims.TranslatorShim.StlResolutionEnum.Medium
   nameWithType: StlResolutionEnum.Medium
 - uid: InventorShims.UiShim
   name: UiShim
-  href: api/InventorShims.UiShim.yml
+  href: api/InventorShims.UiShim.html
   commentId: T:InventorShims.UiShim
   fullName: InventorShims.UiShim
   nameWithType: UiShim
 - uid: InventorShims.UiShim.GetActiveColorSchemeBackground(Application)
   name: GetActiveColorSchemeBackground(Application)
-  href: api/InventorShims.UiShim.yml
+  href: api/InventorShims.UiShim.html#InventorShims_UiShim_GetActiveColorSchemeBackground_Application_
   commentId: M:InventorShims.UiShim.GetActiveColorSchemeBackground(Application)
   fullName: InventorShims.UiShim.GetActiveColorSchemeBackground(Application)
   nameWithType: UiShim.GetActiveColorSchemeBackground(Application)
 - uid: InventorShims.UiShim.GetActiveColorSchemeBackground*
   name: GetActiveColorSchemeBackground
-  href: api/InventorShims.UiShim.yml
+  href: api/InventorShims.UiShim.html#InventorShims_UiShim_GetActiveColorSchemeBackground_
   commentId: Overload:InventorShims.UiShim.GetActiveColorSchemeBackground
   isSpec: "True"
   fullName: InventorShims.UiShim.GetActiveColorSchemeBackground
   nameWithType: UiShim.GetActiveColorSchemeBackground
 - uid: InventorShims.UiShim.GetActiveColorSchemeName(Application)
   name: GetActiveColorSchemeName(Application)
-  href: api/InventorShims.UiShim.yml
+  href: api/InventorShims.UiShim.html#InventorShims_UiShim_GetActiveColorSchemeName_Application_
   commentId: M:InventorShims.UiShim.GetActiveColorSchemeName(Application)
   fullName: InventorShims.UiShim.GetActiveColorSchemeName(Application)
   nameWithType: UiShim.GetActiveColorSchemeName(Application)
 - uid: InventorShims.UiShim.GetActiveColorSchemeName*
   name: GetActiveColorSchemeName
-  href: api/InventorShims.UiShim.yml
+  href: api/InventorShims.UiShim.html#InventorShims_UiShim_GetActiveColorSchemeName_
   commentId: Overload:InventorShims.UiShim.GetActiveColorSchemeName
   isSpec: "True"
   fullName: InventorShims.UiShim.GetActiveColorSchemeName
   nameWithType: UiShim.GetActiveColorSchemeName
 - uid: InventorShims.UiShim.SetActiveColorScheme(Application,System.String)
   name: SetActiveColorScheme(Application, String)
-  href: api/InventorShims.UiShim.yml
+  href: api/InventorShims.UiShim.html#InventorShims_UiShim_SetActiveColorScheme_Application_System_String_
   commentId: M:InventorShims.UiShim.SetActiveColorScheme(Application,System.String)
   fullName: InventorShims.UiShim.SetActiveColorScheme(Application, System.String)
   nameWithType: UiShim.SetActiveColorScheme(Application, String)
 - uid: InventorShims.UiShim.SetActiveColorScheme*
   name: SetActiveColorScheme
-  href: api/InventorShims.UiShim.yml
+  href: api/InventorShims.UiShim.html#InventorShims_UiShim_SetActiveColorScheme_
   commentId: Overload:InventorShims.UiShim.SetActiveColorScheme
   isSpec: "True"
   fullName: InventorShims.UiShim.SetActiveColorScheme
