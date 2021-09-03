@@ -1,19 +1,21 @@
-## Unreleased
+## [1.3.0](https://github.com/InventorCode/InventorShims/releases/tag/1.3.0) (2021-09-03)
 
 ### Added
 - ExternalRuleDirectories object now implements the IDisposable interface, allowing the using keyword.
 - Updated Nuke Build system.  Now creates 
 
 ### Changed
-- Integration test project "InventorShims.tests" now uses NUnit nuget package.
-    - Refactored some duplicate tests to TestCases. 
+- Integration test project "InventorShims.tests" now uses the NUnit test framework.
+    - Refactored some duplicate tests into TestCases. 
     - Refactored Inventor document creation routines to TestUtilities.cs.
 - Nuke build updated to Nuke 5.3.0
     - Nuget packages for build project updated.
 - Nuke build targets updated/created:
     - Nuke Compile
     - Nuke Pack
+    - Nuke Push
     - Nuke BuildDocumentation
+    - Nuke PublishGitHubRelease
 - InventorShims.manual tests changed to InventorShims.ilogic.tests.  Removed VS project associated with this.
 
 ### Fixed
