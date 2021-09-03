@@ -65,7 +65,7 @@ $(function () {
   (function () {
     anchors.options = {
       placement: 'left',
-      visible: 'hover'
+      visible: 'touch'
     };
     anchors.add('article h2:not(.no-anchor), article h3:not(.no-anchor), article h4:not(.no-anchor)');
   })();

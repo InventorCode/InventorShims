@@ -21,6 +21,7 @@ using static Nuke.Common.Tools.DocFX.DocFXTasks;
 using static Nuke.Common.Tools.DotNet.DotNetTasks;
 using static Nuke.Common.Tools.MSBuild.MSBuildTasks;
 using static Nuke.Common.Tools.NuGet.NuGetTasks;
+
 //using Nuke.GitHub;
 //using static Nuke.GitHub.GitHubTasks;
 //using System.Threading.Tasks;
@@ -149,12 +150,13 @@ internal class Build : NukeBuild
     //         .SetToken(GitHubAuthenticationToken));
     // });
 
-    private string DocFxFile => RootDirectory / "docfx" / "docfx.json";
     private string DocFxOutputFolder => RootDirectory / "doc";
     private string DocFxIntermediateFolder => TemporaryDirectory / "docfx";
     private string DocFXTemplateFolder => RootDirectory / "docfx" / "templates" / "inventor-shims";
-    string ChangeLogFile => RootDirectory / "CHANGELOG.md";
+    private string ChangeLogFile => RootDirectory / "CHANGELOG.md";
     private string ChangeLogDestination => Path.Join(RootDirectory, "docfx", "articles", "CHANGELOG.md");
+    private string ContributingSource => RootDirectory / "CONTRIBUTING.md";
+    private string ContributingDestination => Path.Join(RootDirectory, "docfx", "articles", "Contributing.md");
 
     private Target BuildDocumentation => _ => _
     .DependsOn(Clean)
@@ -163,19 +165,22 @@ internal class Build : NukeBuild
          {
              //Update CHANGELOG.md
              if (File.Exists(ChangeLogDestination))
-             {
                  File.Delete(ChangeLogDestination);
-             }
              File.Copy(ChangeLogFile, ChangeLogDestination);
+
+             //Update CONTRIBUITNG.md
+             if (File.Exists(ContributingDestination))
+                 File.Delete(ContributingDestination);
+             File.Copy(ContributingSource, ContributingDestination);
 
              //Build documentation
              DocFXBuild(s => s
-         .SetConfigFile(DocFxFile)
+         .SetConfigFile(RootDirectory / "docfx" / "docfx.json")
          .EnableForceRebuild()
          .SetOutputFolder(DocFxOutputFolder)
          .EnableCleanupCacheHistory()
          .SetIntermediateFolder(DocFxIntermediateFolder)
-         .AddTemplates(DocFXTemplateFolder)
+         //.AddTemplates(DocFXTemplateFolder)
          );
          });
 }

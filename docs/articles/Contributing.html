@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Getting Started | InventorShims Documentation </title>
+    <title>Contributions | InventorShims Documentation </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Getting Started | InventorShims Documentation ">
+    <meta name="title" content="Contributions | InventorShims Documentation ">
     <meta name="generator" content="docfx 2.56.6.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
@@ -67,42 +67,74 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h3 id="getting-started">Getting Started</h3>
+<h3 id="contributions">Contributions</h3>
 
-<p>First off, you'll want to get or build a copy of the InventorShims.dll file, or (or advanced users) extract whatever source code you want.  There are several ways to do this:</p>
+<p>Contributions of any type are welcome!  If you want to help...</p>
+<ul>
+<li>Please drop into <a href="https://github.com/InventorCode/InventorShims/issues">issues</a> and see if there are any outstanding ones that you would like to tackle.</li>
+<li>Add any issues you want and we can discuss.</li>
+<li>Fork the code and add some functionality!</li>
+</ul>
+<p>If you want to contribute, the process proceeds as follows:</p>
 <ol>
-<li>The simplest method is to visit the <a href="https://github.com/InventorCode/InventorShims/releases">Releases page</a>, and download the compiled InventorShims.dll file to your computer and reference it in your Inventor iLogic or add-in code.  This will allow you to access the entirety of the InventorShims API.</li>
-<li>By cloning this repo and building the dll yourself.</li>
-<li>By installing the (forthcoming) nuget package for use in Visual Studio.</li>
-<li>By copying out the methods, classes, or modules that are useful and including those in your own vb or C# code-base.</li>
-<li>By using the code in this package as reference material and examples to build your own solution.</li>
+<li>fork the repo</li>
+<li>create a new feature branch in your forked repo</li>
+<li>make changes</li>
+<li>commit your work</li>
+<li>then issue a pull request back to this repo (upstream) for a code review.</li>
 </ol>
-<h3 id="how-to-use-in-ilogic">How to Use in iLogic</h3>
-<p>We'll look at the most simple (#1) method below, coding in iLogic.</p>
+<h3 id="branch-guidance">Branch Guidance</h3>
+<p><em>Master</em> will be the main repository branch; this branch will contain the most up-to-date code.  All short-lived branches will be merged back into <em>Master</em> after a code review by repo maintainers.</p>
+<p>The following branch names are suggested for short-lived branches...</p>
 <ul>
-<li><p>Place the InventorShims.dll somewhere your Inventor application can access it.  You may need to add this location to Inventor's External Rules Directory.</p>
-</li>
-<li><p>Place the following in your iLogic rule's header:</p>
-<pre><code class="lang-VB">AddReference &quot;InventorShims.dll&quot;
-Imports InventorShims
-</code></pre>
-</li>
-<li><p>If the path to the InventorShims.dll is not in one of Inventor's external rules directories, you can still reference it by providing the full path to the dll file...</p>
-<pre><code class="lang-VB">AddReference &quot;C:\Path\To\The\InventorShims.dll&quot;
-Imports InventorShims
-</code></pre>
-</li>
-<li><p>And that's it!  Now you can access the API from your iLogic code.  Call functions such as:</p>
-<pre><code class="lang-VB">PathShim.IsLibraryPath(&quot;C:\This\Is\A\Test&quot;, ThisApplication)
-</code></pre>
-</li>
-<li><p>View the documentation pages for the API.  You can include just a portion of the API at a time if you want.  For example, if you want to add an include to the iProperty set of functions, your include statement would look like <code>Imports InventorShims.iProperty</code></p>
-</li>
+<li>feature/xx</li>
+<li>bugfix/xx</li>
+<li>issue/xx</li>
+<li>username/xx</li>
 </ul>
+<h3 id="dependencies-for-build">Dependencies for Build</h3>
 <ul>
-<li>For add-in development, add the InventorShims.dll as a reference to your project.</li>
-<li>Visit the <a href="https://inventorcode.github.io/InventorShims/">InventorShims API Documentation</a> for a more detailed guide.</li>
+<li>Visual Studio Compatible IDE</li>
+<li>.Net 4.7 (for Inventor 2020 support)</li>
+<li>Inventor 2021 SDK installation (minimum)</li>
 </ul>
+<h3 id="build">Build</h3>
+<p>Builds may be run by opening powershell or cmd in the repo folder and entering the following commands:</p>
+<ul>
+<li><code>Nuke</code>, or</li>
+<li><code>Nuke compile</code></li>
+</ul>
+<h3 id="version-numbers">Version Numbers</h3>
+<p>Versioning will follow <a href="https://semver.org/">Sematic Versioning</a> once version 1.0.0 is released. The version numbers will follow the format <code>MAJOR.MINOR.PATCH</code> where:</p>
+<ul>
+<li>MAJOR - incompatible API changes</li>
+<li>MINOR - added functionality in a backwards compatible manner</li>
+<li>PATCH - backwards compatible bug fixes</li>
+</ul>
+<h3 id="commit-guidelines">Commit Guidelines</h3>
+<p><a href="https://www.conventionalcommits.org/en">Conventional Commits</a> will be used as the commit message guidelines.  Following these simple guidelines will ensure commit message consistency that simplifies changelog generation and version number management.  Contributors are encouraged to visit the page and read the tutorial and spec.  Pull requests are expected to follow this convention.</p>
+<p>A simple, breezy tutorial follows... commit messages should be in the form &quot;KEYWORD: message&quot;.  Commit may have multiple lines. Try to keep each commit to a single keyword.  This keyword is one of the following:</p>
+<ul>
+<li>build</li>
+<li>chore</li>
+<li>ci</li>
+<li>docs</li>
+<li>feat</li>
+<li>fix</li>
+<li>refactor</li>
+<li>revert</li>
+<li>style</li>
+<li>test</li>
+</ul>
+<p>Breaking changes in the codebase are denoted by an exclamation mark after a keyword, such as:</p>
+<ul>
+<li>feat!</li>
+<li>fix!</li>
+<li>etc...</li>
+</ul>
+<p>A footer <code>BREAKING CHANGE:</code> should also be included in the commit message for human readability, but is not strictly required.</p>
+<h3 id="license">License</h3>
+<p>This code is under an MIT license.</p>
 </article>
           </div>
           
@@ -111,7 +143,7 @@ Imports InventorShims
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/InventorCode/InventorShims/blob/master/docfx/articles/quick-start.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/InventorCode/InventorShims/blob/master/docfx/articles/Contributing.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>

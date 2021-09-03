@@ -212,3 +212,4 @@ _Pvt_Extensions/
 ModelManifest.xml
 docfx/log.txt
 tests/Inventor.test.config/OldVersions
+.nuke
