@@ -21,9 +21,9 @@ using static Nuke.Common.Tools.DocFX.DocFXTasks;
 using static Nuke.Common.Tools.DotNet.DotNetTasks;
 using static Nuke.Common.Tools.MSBuild.MSBuildTasks;
 using static Nuke.Common.Tools.NuGet.NuGetTasks;
-using Nuke.GitHub;
-using static Nuke.GitHub.GitHubTasks;
-using System.Threading.Tasks;
+//using Nuke.GitHub;
+//using static Nuke.GitHub.GitHubTasks;
+//using System.Threading.Tasks;
 
 [CheckBuildProjectConfigurations]
 internal class Build : NukeBuild
@@ -123,31 +123,31 @@ internal class Build : NukeBuild
              });
      });
 
-    private Target PublishGitHubRelease => _ => _
-     .DependsOn(Pack)
-     .Requires(() => GitHubAuthenticationToken)
-     .OnlyWhenStatic(() => GitRepository.IsOnMasterBranch() || GitRepository.IsOnReleaseBranch())
-     .Executes<Task>(async () =>
-     {
-         var releaseTag = $"v{GitVersion.MajorMinorPatch}";
+    //private Target PublishGitHubRelease => _ => _
+    // .DependsOn(Pack)
+    // .Requires(() => GitHubAuthenticationToken)
+    // .OnlyWhenStatic(() => GitRepository.IsOnMasterBranch() || GitRepository.IsOnReleaseBranch())
+    // .Executes<Task>(async () =>
+    // {
+    //     var releaseTag = $"v{GitVersion.MajorMinorPatch}";
 
-         var changeLogSectionEntries = ExtractChangelogSectionNotes(ChangeLogFile);
-         var latestChangeLog = changeLogSectionEntries
-             .Aggregate((c, n) => c + Environment.NewLine + n);
-         var completeChangeLog = $"## {releaseTag}" + Environment.NewLine + latestChangeLog;
+    //     var changeLogSectionEntries = ExtractChangelogSectionNotes(ChangeLogFile);
+    //     var latestChangeLog = changeLogSectionEntries
+    //         .Aggregate((c, n) => c + Environment.NewLine + n);
+    //     var completeChangeLog = $"## {releaseTag}" + Environment.NewLine + latestChangeLog;
 
-         var repositoryInfo = GetGitHubRepositoryInfo(GitRepository);
-         var nuGetPackages = GlobFiles(OutputDirectory, "*.nupkg").NotEmpty().ToArray();
+    //     var repositoryInfo = GetGitHubRepositoryInfo(GitRepository);
+    //     var nuGetPackages = GlobFiles(OutputDirectory, "*.nupkg").NotEmpty().ToArray();
 
-         await PublishRelease(s => s
-             .SetArtifactPaths(nuGetPackages)
-             .SetCommitSha(GitVersion.Sha)
-             .SetReleaseNotes(completeChangeLog)
-             .SetRepositoryName(repositoryInfo.repositoryName)
-             .SetRepositoryOwner(repositoryInfo.gitHubOwner)
-             .SetTag(releaseTag)
-             .SetToken(GitHubAuthenticationToken));
-     });
+    //     await PublishRelease(s => s
+    //         .SetArtifactPaths(nuGetPackages)
+    //         .SetCommitSha(GitVersion.Sha)
+    //         .SetReleaseNotes(completeChangeLog)
+    //         .SetRepositoryName(repositoryInfo.repositoryName)
+    //         .SetRepositoryOwner(repositoryInfo.gitHubOwner)
+    //         .SetTag(releaseTag)
+    //         .SetToken(GitHubAuthenticationToken));
+    // });
 
     private string DocFxFile => RootDirectory / "docfx" / "docfx.json";
     private string DocFxOutputFolder => RootDirectory / "doc";

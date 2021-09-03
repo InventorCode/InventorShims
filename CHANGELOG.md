@@ -1,8 +1,9 @@
-## [1.3.0](https://github.com/InventorCode/InventorShims/releases/tag/1.3.0) (2021-09-03)
+## [1.3.1](https://github.com/InventorCode/InventorShims/releases/tag/1.3.1) (2021-09-03)
 
 ### Added
 - ExternalRuleDirectories object now implements the IDisposable interface, allowing the using keyword.
-- Updated Nuke Build system.  Now creates 
+- ExternalRuleDirectories documentation.
+- Updated Nuke Build system.
 
 ### Changed
 - Integration test project "InventorShims.tests" now uses the NUnit test framework.

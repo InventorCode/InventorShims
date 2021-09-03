@@ -15,12 +15,19 @@ namespace InventorShims
         private dynamic iLogicAddIn { get; set; }
         private dynamic iLogicAuto { get; set; }
 
+        /// <summary>
+        /// Constructor that creates an ExternalRuleDirectories object.
+        /// </summary>
         public ExternalRuleDirectories()
         {
             _app = ApplicationShim.Instance();
             Initialize(_app);
         }
 
+        /// <summary>
+        /// Constructor that creates an ExternalRuleDirectories object.
+        /// </summary>
+        /// <param name="local_app">Takes an Inventor.Application object.</param>
         public ExternalRuleDirectories(Inventor.Application local_app)
         {
             _app = local_app;
@@ -47,6 +54,9 @@ namespace InventorShims
         }
 
         private List<string> _directories = new List<string> { };
+        /// <summary>
+        /// Access the iLogic External Rule Directories as a List of strings.
+        /// </summary>
         public List<string> Directories
         {
             get
@@ -85,7 +95,7 @@ namespace InventorShims
         /// <summary>
         /// Removes a directory from the iLogic Addin's list of External Rule Directories.
         /// </summary>
-        /// <param name="directory">Directory to remove</param>
+        /// <param name="directory">Directory to remove as a string.</param>
         public void Remove(string directory)
         {
             var _directories = Directories;
@@ -97,7 +107,7 @@ namespace InventorShims
         /// Determines whether a directory is in the iLogic Addin's list of External Rule Directories.
         /// </summary>
         /// <param name="directory"></param>
-        /// <returns>true if directory is found in the list.</returns>
+        /// <returns>Returns true if directory is found in the list.</returns>
         public bool Contains(string directory)
         {
             return Directories.Contains(directory);
@@ -145,6 +155,9 @@ namespace InventorShims
             Dispose(disposing: false);
         }
 
+        /// <summary>
+        /// Manually dispose of the ExternalRuleDirectories object.
+        /// </summary>
         public void Dispose()
         {
             // Do not change this code. Put cleanup code in 'Dispose(bool disposing)' method
