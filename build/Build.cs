@@ -10,22 +10,20 @@ using Nuke.Common.Tools.DotNet;
 using Nuke.Common.Tools.GitVersion;
 using Nuke.Common.Tools.MSBuild;
 using Nuke.Common.Tools.NuGet;
-using Nuke.Common.Tools.ReportGenerator;
 using Nuke.Common.Utilities.Collections;
-using Nuke.GitHub;
 using System;
 using System.IO;
 using System.Linq;
-using System.Threading.Tasks;
 using static Nuke.Common.ChangeLog.ChangelogTasks;
 using static Nuke.Common.IO.FileSystemTasks;
 using static Nuke.Common.IO.PathConstruction;
 using static Nuke.Common.Tools.DocFX.DocFXTasks;
+using static Nuke.Common.Tools.DotNet.DotNetTasks;
 using static Nuke.Common.Tools.MSBuild.MSBuildTasks;
 using static Nuke.Common.Tools.NuGet.NuGetTasks;
-using static Nuke.Common.Tools.DotNet.DotNetTasks;
+using Nuke.GitHub;
 using static Nuke.GitHub.GitHubTasks;
-
+using System.Threading.Tasks;
 
 [CheckBuildProjectConfigurations]
 internal class Build : NukeBuild
@@ -55,7 +53,7 @@ internal class Build : NukeBuild
     private readonly Tool gVersion;
 
     private AbsolutePath SourceDirectory => RootDirectory / "src";
-    private AbsolutePath ProjectPath => RootDirectory / "src" / "InventorShims"/"InventorShims.csproj";
+    private AbsolutePath ProjectPath => RootDirectory / "src" / "InventorShims" / "InventorShims.csproj";
     private AbsolutePath TestsDirectory => RootDirectory / "tests";
     private AbsolutePath OutputDirectory => RootDirectory / "artifacts";
 
@@ -85,7 +83,7 @@ internal class Build : NukeBuild
              MSBuild(s => s
                  .SetTargetPath(Solution)
                  .SetTargets("Rebuild")
-                 .SetConfiguration(Configuration)
+                 .SetConfiguration("Release")
                  .SetAssemblyVersion(GitVersion.AssemblySemVer)
                  .SetFileVersion(GitVersion.AssemblySemFileVer)
                  .SetInformationalVersion(GitVersion.InformationalVersion)
@@ -123,23 +121,6 @@ internal class Build : NukeBuild
                      .SetApiKey(MyGetApiKey)
                      );
              });
-     });
-
-    private Target Release => _ => _
-     .DependsOn(Compile)
-     .Executes(() =>
-     {
-         //gVersion($"/UpdateAssemblyInfo");
-
-         //MSBuild(s => s
-         //    .SetTargetPath(Solution)
-         //    .SetTargets("Rebuild")
-         //    .SetConfiguration("Debug")
-         //    .SetAssemblyVersion(GitVersion.AssemblySemVer)
-         //    .SetFileVersion(GitVersion.AssemblySemFileVer)
-         //    .SetInformationalVersion(GitVersion.InformationalVersion)
-         //    .SetMaxCpuCount(Environment.ProcessorCount)
-         //    .SetNodeReuse(IsLocalBuild));
      });
 
     private Target PublishGitHubRelease => _ => _
