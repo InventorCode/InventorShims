@@ -25,7 +25,7 @@ namespace InventorShims
         /// Sets the active color scheme name, passed in as a string
         /// </summary>
         /// <param name="inventorAppToWork"></param>
-        /// <returns></returns> 
+        /// <returns></returns>
         public static void SetActiveColorScheme(this Application inventorAppToWork, string colorSchemeNameToActivate)
         {
             inventorAppToWork.ColorSchemes[colorSchemeNameToActivate].Activate();
@@ -34,7 +34,7 @@ namespace InventorShims
         /// Gets the background type enum in a more memorable way
         /// </summary>
         /// <param name="inventorAppToWork"></param>
-        /// <returns></returns>        
+        /// <returns></returns>
         public static BackgroundTypeEnum GetActiveColorSchemeBackground(this Application inventorAppToWork)
         {
             return inventorAppToWork.ColorSchemes.BackgroundType;

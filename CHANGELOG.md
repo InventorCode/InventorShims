@@ -1,13 +1,32 @@
-## [Unrealeased]
+## [1.3.0](https://github.com/InventorCode/InventorShims/releases/tag/1.3.0) (2021-09-03)
 
 ### Added
 - ExternalRuleDirectories object now implements the IDisposable interface, allowing the using keyword.
+- Updated Nuke Build system.  Now creates 
+
+### Changed
+- Integration test project "InventorShims.tests" now uses the NUnit test framework.
+    - Refactored some duplicate tests into TestCases. 
+    - Refactored Inventor document creation routines to TestUtilities.cs.
+- Nuke build updated to Nuke 5.3.0
+    - Nuget packages for build project updated.
+- Nuke build targets updated/created:
+    - Nuke Compile
+    - Nuke Pack
+    - Nuke Push
+    - Nuke BuildDocumentation
+    - Nuke PublishGitHubRelease
+- InventorShims.manual tests changed to InventorShims.ilogic.tests.  Removed VS project associated with this.
 
 ### Fixed
 - ExternalRuleDirectories.Add was not adding entires properly.
 - ExternalRuleDirectories.Remove was not removing entires properly.
 
-## [1.2.0] - 2021-08-15
+### Removed
+- InventorShims-vb project has been removed.
+- Errant NewtonSoft.Json package reference
+
+## [1.2.0](https://github.com/InventorCode/InventorShims/releases/tag/1.2.0) (2021-08-15)
 
 ### Added
 - ExternalRuleDirectories object allows you to manipulate the iLogic Addin's list of External Rules Directories in a more straightforward manner.
@@ -16,8 +35,7 @@
 - Added conventional commits keywords to gitversion configuration.
 
 
-<a name="1.1.1"></a>
-## [1.1.1](https://github.com/InventorCode/InventorShims/compare/v1.1.0...1.1.1) (2021-02-11)
+## [1.1.1](https://github.com/InventorCode/InventorShims/releases/tag/v1.1.1) (2021-02-11)
 
 ### Chore
 
@@ -29,8 +47,7 @@
 * remove InventorShims-vb
 
 
-<a name="v1.1.0"></a>
-## [v1.1.0](https://github.com/InventorCode/InventorShims/compare/v1.0.0...v1.1.0) (2021-02-11)
+## [v1.1.0](https://github.com/InventorCode/InventorShims/releases/tag/v1.1.0) (2021-02-11)
 
 ### Chore
 
@@ -62,9 +79,7 @@
 
 * Added ParameterIsWritable unit tests.
 
-
-<a name="v1.0.0"></a>
-## [v1.0.0](https://github.com/InventorCode/InventorShims/compare/v0.1.0...v1.0.0) (2021-01-17)
+## [v1.0.0](https://github.com/InventorCode/InventorShims/releases/tag/v1.0.0) (2021-01-17)
 
 ### Build
 
@@ -97,7 +112,7 @@
 
 ### Test
 
-* Added debug statments to GetDocumentsFromSelectSet()
+* Added debug statements to GetDocumentsFromSelectSet()
 * GetDocumentFromObject.tests updated
 * ApplicationShim tests now wait for Inventor processes to finish.
 
@@ -105,7 +120,5 @@
 
 * modified for newest PathShim.cs
 
-
-<a name="v0.1.0"></a>
-## v0.1.0 (2020-12-25)
+## [v0.1.0](https://github.com/InventorCode/InventorShims/releases/tag/v0.1.0) (2020-12-25)
 

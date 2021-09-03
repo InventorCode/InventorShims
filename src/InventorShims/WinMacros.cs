@@ -11,7 +11,7 @@ namespace InventorShims
     {
         /// <summary>
         /// Pass int seconds to sleep a number of seconds.
-        /// 
+        ///
         /// Do not use this method where accurate time is important. Accuracy will get worse with values of many seconds.
         /// </summary>
         /// <param name="seconds"></param>
@@ -35,7 +35,7 @@ namespace InventorShims
         }
         /// <summary>
         /// Pass a double to sleep for fractions of a second. (0.1 sleeps for around 1/10 second)
-        /// 
+        ///
         /// Do not use this method where accurate time is important. Accuracy will get worse with values of many seconds.
         /// </summary>
         /// <param name="seconds"></param>
