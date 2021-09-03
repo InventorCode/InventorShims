@@ -1,6 +1,5 @@
 ﻿using InventorShims;
 using NUnit.Framework;
-using System;
 using System.Diagnostics;
 using System.Runtime.InteropServices;
 

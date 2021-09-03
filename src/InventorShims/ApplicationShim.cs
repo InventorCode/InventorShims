@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Runtime.InteropServices;
-using System.Windows.Forms;
 using Inventor;
 
 namespace InventorShims
@@ -43,7 +42,7 @@ namespace InventorShims
                 }
                 catch (Exception e2)
                 {
-                    MessageBox.Show("Unable to start Inventor.  Error message: " + e2.Message);
+                    throw new SystemException("Unable to start Inventor.  Error message: " + e2.Message, e2);
                 }
             }
 
@@ -66,7 +65,7 @@ namespace InventorShims
             }
             catch (Exception e)
             {
-                MessageBox.Show("Unable to get Inventor instance.  Error message: " + e.Message);
+                throw new SystemException("Unable to get Inventor instance.  Error message: " + e.Message, e);
             }
 
             return null;
@@ -94,7 +93,7 @@ namespace InventorShims
                 }
                 catch (Exception e2)
                 {
-                    MessageBox.Show("Unable to start Inventor.  Error message: " + e2.Message);
+                    throw new SystemException("Unable to start Inventor.  Error message: " + e2.Message, e2);
                 }
 
             return null;

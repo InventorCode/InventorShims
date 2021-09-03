@@ -18,4 +18,4 @@ using System.Runtime.InteropServices;
 // [assembly: AssemblyVersion("1.3.0.0")]
 [assembly: AssemblyVersion("1.3.0.0")]
 [assembly: AssemblyFileVersion("1.3.0.0")]
-[assembly: AssemblyInformationalVersion("1.3.0+8.Branch.master.Sha.d010438967853ade421db46b55992022bcb74d66")]
+[assembly: AssemblyInformationalVersion("1.3.0-build-update-nuke.1+13.Branch.build-update-nuke.Sha.067d9fac1a5fb2c6a099e2bb83128fd297cc4742")]

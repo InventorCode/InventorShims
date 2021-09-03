@@ -3,14 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29709.97
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "InventorShims.manual", "tests\InventorShims.manual\InventorShims.manual.vbproj", "{295AABC2-2250-4279-B9C7-E33C352FCDE4}"
-	ProjectSection(ProjectDependencies) = postProject
-		{DE9044A0-4809-4828-ADEE-FA787925CBCF} = {DE9044A0-4809-4828-ADEE-FA787925CBCF}
-	EndProjectSection
-EndProject
-Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "InventorShims-vb", "src\InventorShims-vb\InventorShims-vb.vbproj", "{FB816A14-783C-4DF1-9975-F384CF56A7C8}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InventorShims", "src\InventorShims\InventorShims.csproj", "{DE9044A0-4809-4828-ADEE-FA787925CBCF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InventorShims", "src\InventorShims\InventorShims.csproj", "{DE9044A0-4809-4828-ADEE-FA787925CBCF}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InventorShims.tests", "tests\InventorShims.tests\InventorShims.tests.csproj", "{9A4C4253-55EA-4218-9FE0-9E473562A096}"
 EndProject
@@ -21,32 +14,19 @@ EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
-		GetDocumentFromObject-tests|Any CPU = GetDocumentFromObject-tests|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{295AABC2-2250-4279-B9C7-E33C352FCDE4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{295AABC2-2250-4279-B9C7-E33C352FCDE4}.GetDocumentFromObject-tests|Any CPU.ActiveCfg = GetDocumentFromObject-tests|Any CPU
-		{295AABC2-2250-4279-B9C7-E33C352FCDE4}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{FB816A14-783C-4DF1-9975-F384CF56A7C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{FB816A14-783C-4DF1-9975-F384CF56A7C8}.GetDocumentFromObject-tests|Any CPU.ActiveCfg = GetDocumentFromObject-tests|Any CPU
-		{FB816A14-783C-4DF1-9975-F384CF56A7C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DE9044A0-4809-4828-ADEE-FA787925CBCF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{DE9044A0-4809-4828-ADEE-FA787925CBCF}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DE9044A0-4809-4828-ADEE-FA787925CBCF}.GetDocumentFromObject-tests|Any CPU.ActiveCfg = GetDocumentFromObject-tests|Any CPU
-		{DE9044A0-4809-4828-ADEE-FA787925CBCF}.GetDocumentFromObject-tests|Any CPU.Build.0 = GetDocumentFromObject-tests|Any CPU
 		{DE9044A0-4809-4828-ADEE-FA787925CBCF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DE9044A0-4809-4828-ADEE-FA787925CBCF}.Release|Any CPU.Build.0 = Release|Any CPU
 		{9A4C4253-55EA-4218-9FE0-9E473562A096}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{9A4C4253-55EA-4218-9FE0-9E473562A096}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9A4C4253-55EA-4218-9FE0-9E473562A096}.GetDocumentFromObject-tests|Any CPU.ActiveCfg = GetDocumentFromObject-tests|Any CPU
 		{9A4C4253-55EA-4218-9FE0-9E473562A096}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E3FBC284-4903-491E-9665-DD34D1A0D5B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E3FBC284-4903-491E-9665-DD34D1A0D5B0}.GetDocumentFromObject-tests|Any CPU.ActiveCfg = GetDocumentFromObject-tests|Any CPU
-		{E3FBC284-4903-491E-9665-DD34D1A0D5B0}.GetDocumentFromObject-tests|Any CPU.Build.0 = GetDocumentFromObject-tests|Any CPU
 		{E3FBC284-4903-491E-9665-DD34D1A0D5B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{91A98655-F383-438E-A3DA-2D41BB1A59C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{91A98655-F383-438E-A3DA-2D41BB1A59C7}.GetDocumentFromObject-tests|Any CPU.ActiveCfg = Release|Any CPU
 		{91A98655-F383-438E-A3DA-2D41BB1A59C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
