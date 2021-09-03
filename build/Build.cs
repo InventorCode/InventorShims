@@ -145,7 +145,7 @@ internal class Build : NukeBuild
     private Target PublishGitHubRelease => _ => _
      .DependsOn(Pack)
      .Requires(() => GitHubAuthenticationToken)
-     //.OnlyWhen( GitVersion.BranchName.Equals("master") || GitVersion.BranchName.Equals("origin/master"))
+     .OnlyWhenStatic(() => GitRepository.IsOnMasterBranch() || GitRepository.IsOnReleaseBranch())
      .Executes<Task>(async () =>
      {
          var releaseTag = $"v{GitVersion.MajorMinorPatch}";
