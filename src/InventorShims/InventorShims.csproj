@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net47</TargetFramework>
+    <TargetFramework>net48</TargetFramework>
     <Authors>InventorCode</Authors>
     <Version>1.2.1</Version>
     <PackageProjectUrl>https://github.com/InventorCode/InventorShims</PackageProjectUrl>

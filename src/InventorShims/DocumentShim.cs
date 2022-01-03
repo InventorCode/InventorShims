@@ -1,8 +1,8 @@
-﻿using System;
+﻿using Inventor;
+using System;
 using System.Collections.Generic;
-using System.Linq;
-using Inventor;
 using System.Diagnostics;
+using System.Linq;
 
 namespace InventorShims
 {
@@ -20,7 +20,7 @@ namespace InventorShims
             documentToWork.Activate();
             ((Inventor.Application)documentToWork.Parent).CommandManager.ControlDefinitions["AppZoomallCmd"].Execute();
         }
-        
+
         /// <summary>
         /// Orbits around the part/assembly to show the view from a front isometric angle on the view cube
         /// </summary>
@@ -37,7 +37,7 @@ namespace InventorShims
         /// <param name="locationToSaveImage"></param>
         /// <param name="setWhiteBg"></param>
         /// <param name="orbitToIso"></param>
-        
+
         public static void ScreenShot(this Document documentToWork, string locationToSaveImage, bool setWhiteBg = false, bool orbitToIso = false)
         {
             Inventor.Application invObj = (Inventor.Application)documentToWork.Parent;
@@ -46,14 +46,14 @@ namespace InventorShims
 
             documentToWork.ZoomExtents();
 
-            if(orbitToIso)
+            if (orbitToIso)
             {
                 documentToWork.OrbitToIsoFrontRightTop();
             }
 
             invObj.WindowState = Inventor.WindowsSizeEnum.kMaximize;
 
-            if(setWhiteBg)
+            if (setWhiteBg)
             {
                 // Save current color scheme info
                 userColorScheme = invObj.GetActiveColorSchemeName();
@@ -68,7 +68,7 @@ namespace InventorShims
             // Take screenshot
             invObj.ActiveDocument.SaveAs(locationToSaveImage, true);
 
-            if(setWhiteBg)
+            if (setWhiteBg)
             {
                 // Restore original theme info
                 invObj.ColorSchemes[userColorScheme].Activate();
@@ -100,9 +100,9 @@ namespace InventorShims
                 app.SilentOperation = false;
             }
         }
-        
 
         #region Document type booleans
+
         /// <summary>
         /// Returns true if document is a part
         /// </summary>
@@ -172,7 +172,8 @@ namespace InventorShims
         {
             return documentToTest.DocumentType == Inventor.DocumentTypeEnum.kUnknownDocumentObject;
         }
-        #endregion
+
+        #endregion Document type booleans
 
         /// <summary>
         /// Returns a Document Object subtype if a subtype exists.  If not, a generic Inventor.Document is returned.
@@ -216,27 +217,28 @@ namespace InventorShims
             List<Document> documentList = new List<Document>();
 
             if (selectSet.Count == 0)
-            {       
-                    //nothing is selected, return an null list!
-                    return documentList;
+            {
+                //nothing is selected, return an null list!
+                return documentList;
             }
 
             Document tempDocument = null;
 
             foreach (dynamic i in selectSet)
-                {
+            {
                 tempDocument = GetDocumentFromObject(i);
 
                 Debug.WriteLine("item  " + (string)i.type.ToString());
-                
-                if (tempDocument is null) {
+
+                if (tempDocument is null)
+                {
                     Debug.WriteLine("this object is not a document");
                     continue;
-                    }
+                }
 
                 Debug.WriteLine("this object is a document.");
                 documentList.Add(tempDocument);
-                }
+            }
 
             if (documentList != null)
                 documentList = documentList.Distinct().ToList();
@@ -256,7 +258,7 @@ namespace InventorShims
 
             Inventor.Application app = ApplicationShim.CurrentInstance();
             if (app == null) return null;
-            
+
             Document currentDocument = app.ActiveEditDocument;
             switch (currentDocument.DocumentType)
             {
@@ -287,7 +289,8 @@ namespace InventorShims
         /// <returns>Inventor.Document</returns>
         private static Document GetDocumentFromObjectInAssembly(dynamic obj)
         {
-            switch (obj.type) {
+            switch (obj.type)
+            {
                 //###   In Assembly Document [kAssemblyDocumentObject]   ###
                 case 67113776: //kComponentOccurrenceObject:
                 case 67113888: //kComponentOccurrenceProxyObject
@@ -322,14 +325,17 @@ namespace InventorShims
 
                 case 2130706445: //kGenericObject:
                     dynamic returnObject = null;
-                    try {
+                    try
+                    {
                         //try to get single document from selected part
                         document.ProcessViewSelection((GenericObject)obj, out _, out returnObject);
-                    } catch { break;}
+                    }
+                    catch { break; }
 
                     if (returnObject == null) break;
 
-                    switch (returnObject) {
+                    switch (returnObject)
+                    {
                         case Document doc:
                             returnDocument = doc;
                             break;
@@ -338,9 +344,9 @@ namespace InventorShims
                             //if this doesn't work, try to get the component occurrence instead, and then get the document from that
                             returnDocument = (Document)componentOccurrence.Definition.Document;
                             break;
-                            }
+                    }
                     break;
-                    //There was an error at 'Set oCCdef = oCompOcc.Definition.Document'
+                //There was an error at 'Set oCCdef = oCompOcc.Definition.Document'
 
                 case 117478144: //kDrawingCurveSegmentObject
                     //Edge Objects and Edge Proxy Objects
@@ -360,13 +366,15 @@ namespace InventorShims
                     {
                         returnDocument = (Document)modelGeometry.ContainingOccurrence.Definition.Document;
                         break;
-                    } catch { }
+                    }
+                    catch { }
 
                     try //for a selected DrawingCurveSegment belonging to a part
                     {
                         returnDocument = (Document)modelGeometry.Parent.ComponentDefinition.Document;
                         break;
-                    } catch { }
+                    }
+                    catch { }
                     break;
 
                 case 117444096: //kPartsListObject:
