@@ -406,5 +406,57 @@ namespace InventorShims
             //ObjectTypeEnum.kDocumentObject
             return obj.type == 50332160 ? true : false;
         }
+
+        public static bool IsContentCenter(this Document document) =>
+            document.PropertySets.PropertySetExists("ContentCenter", out _);
+
+        public static bool IsContentCenter(this AssemblyDocument document) => false;
+
+        public static bool IsContentCenter(this PartDocument document) =>
+            document.PropertySets.PropertySetExists("ContentCenter", out _);
+
+        public static bool IsContentCenter(this PresentationDocument document) => false;
+
+        public static bool IsCustomContentCenter(this Document document)
+        {
+            if (document.IsContentCenter())
+            {
+                try
+                {
+                    return ((bool)document.PropertySets["ContentCenter"]["IsCustomPart"].Value);
+                }
+                catch
+                {
+                    return false;
+                }
+            }
+
+            return false;
+        }
+
+        public static bool IsCustomContentCenter(this PartDocument document)
+        {
+            if (document.IsContentCenter())
+            {
+                try
+                {
+                    return ((bool)document.PropertySets["ContentCenter"]["IsCustomPart"].Value);
+                }
+                catch
+                {
+                    return false;
+                }
+            }
+
+            return false;
+        }
+
+        public static bool IsCustomContentCenter(this AssemblyDocument document) => false;
+
+        public static bool IsCustomContentCenter(this DrawingDocument document) => false;
+
+        public static bool IsCustomContentCenter(this PresentationDocument document) => false;
+
+        //IsIPartFactory IsIPartMember
     }
 }
