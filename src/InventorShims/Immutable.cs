@@ -6,7 +6,7 @@ namespace InventorShims
 {
     public static class Immutable
     {
-        public static IEnumerable<Document> GetDocumentsFromSelectSet(this SelectSet selectSet)
+        public static IEnumerable<Document> GetDocuments(this SelectSet selectSet)
         {
             List<Document> documentList = new List<Document>();
 
