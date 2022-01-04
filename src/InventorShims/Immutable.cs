@@ -148,21 +148,40 @@ namespace InventorShims
 
             yield break;
         }
+
         #endregion IEnumerable<Document>
 
-        private static void temp(this Document document)
+        private static void sample_code(this Document document)
         {
-            document.GetAllReferencedDocuments()
+            var test = document.GetAllReferencedDocuments()
                 .Where(s => s.IsModifiable)
                 .Where(s => s.IsPart())
-                .Where(s => s.ReservedForWriteByMe)
-                .ToList();
+                .Where(s => s.ReservedForWriteByMe);
 
-            document.SelectSet.GetDocumentsFromSelectSet()
+            //apply to each in test
+            foreach (var i in test)
+            {
+                i.SetPropertyValue("Author", "Bob");
+            }
+
+            document.SelectSet.GetDocuments()
                 .Where(s => s.IsModifiable)
-                .Where(s => s.IsPart())
-                .Where(s => s.ReservedForWriteByMe)
-                .ToList();
+                .PartDocuments()
+                .ToList()
+                .ForEach(d => d.Rebuild2());
+
+            var justTheAssemblyDocs = document.SelectSet.GetDocuments()
+                .AssemblyDocuments();
+
+            var notTheAssemblyDocs = document.GetAllReferencedDocuments()
+                .Where(s => !s.IsAssembly());
+
+            var JustCustomCCPartDocs = document.GetAllReferencedDocuments()
+                .PartDocuments()
+                .Where(d => d.IsCustomContentCenter());
+
+            var JustCustomCCDocs = document.GetAllReferencedDocuments()
+                .Where(d => d.IsCustomContentCenter());
         }
     }
 }
