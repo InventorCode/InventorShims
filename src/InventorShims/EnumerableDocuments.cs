@@ -6,6 +6,14 @@ namespace InventorShims
 {
     public static class EnumerableDocuments
     {
+        #region IEnumerable GetDocuments providors
+
+        /// <summary>
+        /// Returns an IEnumerable collection of Inventor.Document from a SelectSet object.
+        /// </summary>
+        /// <param name="selectSet">Inventor.SelectionSet</param>
+        /// <returns>IEnumerable<Document></Document></returns>
+        /// <exception cref="System.ArgumentNullException">Throws an error if the selection set is empty.</exception>
         public static IEnumerable<Document> GetDocuments(this SelectSet selectSet)
         {
             if (selectSet.Count == 0)
@@ -21,6 +29,24 @@ namespace InventorShims
                 yield return tempDocument;
             }
         }
+
+        /// <summary>
+        /// Returns an IEnumerable collection of Inventor.Document from a DocumentDescriptor object.
+        /// </summary>
+        /// <param name="dds">Inventor.Document</param>
+        /// <returns>IEnumerable<Document></returns>
+        public static IEnumerable<Document> GetDocuments(this IEnumerable<DocumentDescriptor> dds)
+        {
+            foreach (DocumentDescriptor dd in dds)
+            {
+                if (dd is null)
+                    continue;
+
+                yield return (Document)dd.ReferencedDocument;
+            }
+        }
+
+        #endregion IEnumerable GetDocuments providors
 
         #region IEnumerable<Document> providers
 
@@ -94,7 +120,7 @@ namespace InventorShims
             return (IEnumerable<Document>)document.ReferencingDocuments;
         }
 
-        #endregion IEnumerable<Document> providors
+        #endregion IEnumerable<Document> providers
 
         #region IEnumerable<Document> Filters
 
@@ -130,6 +156,7 @@ namespace InventorShims
 
             yield break;
         }
+
         public static IEnumerable<Document> RemoveDrawingDocuments(this IEnumerable<Document> documents)
         {
             foreach (Document document in documents)
@@ -140,7 +167,6 @@ namespace InventorShims
 
             yield break;
         }
-
 
         public static IEnumerable<PresentationDocument> PresentationDocuments(this IEnumerable<Document> documents)
         {
@@ -193,18 +219,48 @@ namespace InventorShims
                 if (document.IsForeignModel() || document.IsSat() || document.IsUnknown())
                 { }
                 else
-                { 
+                {
                     yield return document;
                 }
             }
 
             yield break;
         }
+
         #endregion IEnumerable<Document> Filters
 
-        #region Samples
+        #region IEnumerable<DocumentDescriptors> providers
 
-        private static void sample_code(this Document document)
+        public static IEnumerable<DocumentDescriptor> GetReferencedDocumentDescriptors(this Document document)
+        {
+            return (IEnumerable<DocumentDescriptor>)document.ReferencedDocumentDescriptors;
+        }
+
+        public static IEnumerable<DocumentDescriptor> GetReferencedDocumentDescriptors(this AssemblyDocument document)
+        {
+            return (IEnumerable<DocumentDescriptor>)document.ReferencedDocumentDescriptors;
+        }
+
+        public static IEnumerable<DocumentDescriptor> GetReferencedDocumentDescriptors(this PresentationDocument document)
+        {
+            return (IEnumerable<DocumentDescriptor>)document.ReferencedDocumentDescriptors;
+        }
+
+        public static IEnumerable<DocumentDescriptor> GetReferencedDocumentDescriptors(this PartDocument document)
+        {
+            return (IEnumerable<DocumentDescriptor>)document.ReferencedDocumentDescriptors;
+        }
+
+        public static IEnumerable<DocumentDescriptor> GetReferencedDocumentDescriptors(this DrawingDocument document)
+        {
+            return (IEnumerable<DocumentDescriptor>)document.ReferencedDocumentDescriptors;
+        }
+
+        #endregion IEnumerable<DocumentDescriptors> providers
+
+        #region IEnumerable Samples
+
+        private static void iEnumerableSmpleCode(this Document document)
         {
             var test = document.GetAllReferencedDocuments()
                 .RemoveNonNativeDocuments()
@@ -217,7 +273,6 @@ namespace InventorShims
             {
                 i.SetPropertyValue("Author", "Bob");
             }
-
 
             document.SelectSet.GetDocuments()
                 .Where(s => s.IsModifiable)
@@ -238,8 +293,15 @@ namespace InventorShims
 
             var JustCustomCCDocs = document.GetAllReferencedDocuments()
                 .Where(d => d.IsCustomContentCenter());
-        }
-        #endregion Samples
 
+            var count = document.GetReferencedDocumentDescriptors()
+                .Where(s => !s.ReferenceMissing)
+                .Where(s => !s.ReferenceSuppressed)
+                .GetDocuments()
+                .PartDocuments()
+                .Count();
+        }
+
+        #endregion IEnumerable Samples
     }
 }
