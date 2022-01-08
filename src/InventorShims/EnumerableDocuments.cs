@@ -8,10 +8,8 @@ namespace InventorShims
     {
         public static IEnumerable<Document> GetDocuments(this SelectSet selectSet)
         {
-            List<Document> documentList = new List<Document>();
-
             if (selectSet.Count == 0)
-                throw new System.ArgumentNullException();
+                throw new System.ArgumentNullException("The selection set was empty.");
 
             foreach (dynamic i in selectSet)
             {
@@ -20,16 +18,7 @@ namespace InventorShims
                 if (tempDocument is null)
                     continue;
 
-                documentList.Add(tempDocument);
-            }
-
-            if (documentList != null)
-            {
-                return documentList.Distinct();
-            }
-            else
-            {
-                return Enumerable.Empty<Document>();
+                yield return tempDocument;
             }
         }
 
@@ -212,7 +201,6 @@ namespace InventorShims
             yield break;
         }
         #endregion IEnumerable<Document> Filters
-
 
         #region Samples
 
