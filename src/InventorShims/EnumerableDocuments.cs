@@ -256,6 +256,17 @@ namespace InventorShims
             return (IEnumerable<DocumentDescriptor>)document.ReferencedDocumentDescriptors;
         }
 
+        public static IEnumerable<DocumentDescriptor> GetAllLeafOccurencesDocumentDescriptors(this AssemblyDocument document)
+        {
+            var componentDefinition = document.ComponentDefinition;
+            var leafOccurences = componentDefinition.Occurrences.AllLeafOccurrences;
+
+            foreach (ComponentOccurrence occurence in leafOccurences)
+            {
+                yield return occurence.ReferencedDocumentDescriptor;
+            }
+        }
+
         #endregion IEnumerable<DocumentDescriptors> providers
 
         #region IEnumerable Samples
@@ -266,6 +277,7 @@ namespace InventorShims
                 .RemoveNonNativeDocuments()
                 .Where(s => s.IsModifiable)
                 .Where(s => s.IsPart())
+                .SkipWhile(s => s.NeedsMigrating)
                 .Where(s => s.ReservedForWriteByMe);
 
             //apply to each in test
