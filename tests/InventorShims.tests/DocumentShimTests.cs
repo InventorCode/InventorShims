@@ -1,10 +1,31 @@
 ﻿using Inventor;
 using InventorShims;
 using NUnit.Framework;
+using NSubstitute;
 
 namespace DocumentShim_Tests
 {
     [TestFixture]
+    public class Nsub_tests
+    {
+
+        [Test]
+        public void Nsub_test()
+        {
+            Document doc = Substitute.For<Document>();
+            doc.PropertySets["99"]["hhgf"].Value.Returns("hello");
+            doc.NeedsMigrating.Returns(true);
+            Assert.IsTrue(doc.NeedsMigrating);
+            Assert.Equals(doc.PropertySets["99"]["hhgf"].Value, "hello");
+
+            PropertySets fakePropSets = Substitute.For<PropertySets>();
+            doc.PropertySets.Returns(fakePropSets);
+
+            Assert.IsNotNull(doc.PropertySets);
+        }
+    }
+
+        [TestFixture]
     public class ReturnSpecificDocumentObject
     {
         [Test]
