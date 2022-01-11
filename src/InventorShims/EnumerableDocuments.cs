@@ -52,72 +52,92 @@ namespace InventorShims
 
         public static IEnumerable<Document> GetAllReferencedDocuments(this Document document)
         {
-            return (IEnumerable<Document>)document.AllReferencedDocuments;
+            foreach (Document doc in document.AllReferencedDocuments)
+                yield return doc;
         }
 
         public static IEnumerable<Document> GetAllReferencedDocuments(this AssemblyDocument document)
         {
-            return (IEnumerable<Document>)document.AllReferencedDocuments;
+            foreach (Document doc in document.AllReferencedDocuments)
+                yield return doc;
         }
 
         public static IEnumerable<Document> GetAllReferencedDocuments(this PresentationDocument document)
         {
-            return (IEnumerable<Document>)document.AllReferencedDocuments;
+            foreach (Document doc in document.AllReferencedDocuments)
+                yield return doc;
         }
 
         public static IEnumerable<Document> GetAllReferencedDocuments(this PartDocument document)
         {
-            return (IEnumerable<Document>)document.AllReferencedDocuments;
+            foreach (Document doc in document.AllReferencedDocuments)
+                yield return doc;
         }
 
         public static IEnumerable<Document> GetAllReferencedDocuments(this DrawingDocument document)
         {
-            return (IEnumerable<Document>)document.AllReferencedDocuments;
+            foreach (Document doc in document.AllReferencedDocuments)
+                yield return doc;
         }
 
         public static IEnumerable<Document> GetReferencedDocuments(this Document document)
         {
-            return (IEnumerable<Document>)document.AllReferencedDocuments;
+            foreach (Document doc in document.ReferencedDocuments)
+                yield return doc;
         }
 
         public static IEnumerable<Document> GetReferencedDocuments(this AssemblyDocument document)
         {
-            return (IEnumerable<Document>)document.ReferencedDocuments;
+            foreach (Document doc in document.ReferencedDocuments)
+                yield return doc;
         }
 
         public static IEnumerable<Document> GetReferencedDocuments(this PresentationDocument document)
         {
-            return (IEnumerable<Document>)document.ReferencedDocuments;
+            foreach (Document doc in document.ReferencedDocuments)
+                yield return doc;
         }
 
         public static IEnumerable<Document> GetReferencedDocuments(this PartDocument document)
         {
-            return (IEnumerable<Document>)document.ReferencedDocuments;
+            foreach (Document doc in document.ReferencedDocuments)
+                yield return doc;
         }
 
         public static IEnumerable<Document> GetReferencedDocuments(this DrawingDocument document)
         {
-            return (IEnumerable<Document>)document.ReferencedDocuments;
+            foreach (Document doc in document.ReferencedDocuments)
+                yield return doc;
+        }
+
+        public static IEnumerable<Document> GetReferencingDocuments(this Document document)
+        {
+            foreach (Document doc in document.ReferencingDocuments)
+                yield return doc;
         }
 
         public static IEnumerable<Document> GetReferencingDocuments(this AssemblyDocument document)
         {
-            return (IEnumerable<Document>)document.ReferencingDocuments;
+            foreach (Document doc in document.ReferencingDocuments)
+                yield return doc;
         }
 
         public static IEnumerable<Document> GetReferencingDocuments(this PresentationDocument document)
         {
-            return (IEnumerable<Document>)document.ReferencingDocuments;
+            foreach (Document doc in document.ReferencingDocuments)
+                yield return doc;
         }
 
         public static IEnumerable<Document> GetReferencingDocuments(this PartDocument document)
         {
-            return (IEnumerable<Document>)document.ReferencingDocuments;
+            foreach (Document doc in document.ReferencingDocuments)
+                yield return doc;
         }
 
         public static IEnumerable<Document> GetReferencingDocuments(this DrawingDocument document)
         {
-            return (IEnumerable<Document>)document.ReferencingDocuments;
+            foreach (Document doc in document.ReferencingDocuments)
+                yield return doc;
         }
 
         #endregion IEnumerable<Document> providers
@@ -233,30 +253,35 @@ namespace InventorShims
 
         public static IEnumerable<DocumentDescriptor> GetReferencedDocumentDescriptors(this Document document)
         {
-            return (IEnumerable<DocumentDescriptor>)document.ReferencedDocumentDescriptors;
+            foreach (DocumentDescriptor dd in document.ReferencedDocumentDescriptors)
+                yield return dd;
         }
 
         public static IEnumerable<DocumentDescriptor> GetReferencedDocumentDescriptors(this AssemblyDocument document)
         {
-            return (IEnumerable<DocumentDescriptor>)document.ReferencedDocumentDescriptors;
+            foreach (DocumentDescriptor dd in document.ReferencedDocumentDescriptors)
+                yield return dd;
         }
 
         public static IEnumerable<DocumentDescriptor> GetReferencedDocumentDescriptors(this PresentationDocument document)
         {
-            return (IEnumerable<DocumentDescriptor>)document.ReferencedDocumentDescriptors;
+            foreach (DocumentDescriptor dd in document.ReferencedDocumentDescriptors)
+                yield return dd;
         }
 
         public static IEnumerable<DocumentDescriptor> GetReferencedDocumentDescriptors(this PartDocument document)
         {
-            return (IEnumerable<DocumentDescriptor>)document.ReferencedDocumentDescriptors;
+            foreach (DocumentDescriptor dd in document.ReferencedDocumentDescriptors)
+                yield return dd;
         }
 
         public static IEnumerable<DocumentDescriptor> GetReferencedDocumentDescriptors(this DrawingDocument document)
         {
-            return (IEnumerable<DocumentDescriptor>)document.ReferencedDocumentDescriptors;
+            foreach (DocumentDescriptor dd in document.ReferencedDocumentDescriptors)
+                yield return dd;
         }
 
-        public static IEnumerable<DocumentDescriptor> GetAllLeafOccurencesDocumentDescriptors(this AssemblyDocument document)
+        public static IEnumerable<DocumentDescriptor> GetAllLeafOccurrencesDocumentDescriptors(this AssemblyDocument document)
         {
             var componentDefinition = document.ComponentDefinition;
             var leafOccurences = componentDefinition.Occurrences.AllLeafOccurrences;

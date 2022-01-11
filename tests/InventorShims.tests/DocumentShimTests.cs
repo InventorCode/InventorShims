@@ -2,6 +2,8 @@
 using InventorShims;
 using NUnit.Framework;
 using NSubstitute;
+using System.Linq;
+using static InventorShims.EnumerableDocuments;
 
 namespace DocumentShim_Tests
 {
@@ -22,6 +24,18 @@ namespace DocumentShim_Tests
             doc.PropertySets.Returns(fakePropSets);
 
             Assert.IsNotNull(doc.PropertySets);
+        }
+
+        [Test]
+        public void testtest()
+        {
+
+            //var app = InventorShims.ApplicationShim.CurrentInstance();
+            //AssemblyDocument doc = (AssemblyDocument)app.ActiveDocument;
+
+            //var test = doc.GetAllReferencedDocuments().PartDocuments().Distinct().Count();
+
+            //Assert.AreEqual(1, test);
         }
     }
 
