@@ -13,7 +13,7 @@ namespace InventorShims.TranslatorShim
         ///<summary>The document to be exported</summary>
         public Inventor.Document Document { get; set; } = null;
 
-        ///<value>Defaults to mm.</value>
+        ///<summary>Defaults to mm.</summary>
         public ImportUnitsTypeEnum Units { get; set; } = ImportUnitsTypeEnum.kMillimeterUnitsType;
 
         /// <summary>

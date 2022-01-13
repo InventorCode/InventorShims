@@ -407,16 +407,41 @@ namespace InventorShims
             return obj.type == 50332160 ? true : false;
         }
 
+        /// <summary>
+        /// Checks if a Document is a ContentCenter part; returns a bool.
+        /// </summary>
+        /// <param name="document"></param>
+        /// <returns></returns>
         public static bool IsContentCenter(this Document document) =>
             document.PropertySets.PropertySetExists("ContentCenter", out _);
 
+        /// <summary>
+        /// Checks if an AssemblyDocument is a ContentCenter part; returns false.
+        /// </summary>
+        /// <param name="document"></param>
+        /// <returns></returns>
         public static bool IsContentCenter(this AssemblyDocument document) => false;
 
+        /// <summary>
+        /// Checks if a PartDocument is a ContentCenter part; returns a bool.
+        /// </summary>
+        /// <param name="document"></param>
+        /// <returns></returns>
         public static bool IsContentCenter(this PartDocument document) =>
             document.PropertySets.PropertySetExists("ContentCenter", out _);
 
+        /// <summary>
+        /// Checks if a PresentationDocument is a ContentCenter part; returns false.
+        /// </summary>
+        /// <param name="document"></param>
+        /// <returns></returns>
         public static bool IsContentCenter(this PresentationDocument document) => false;
 
+        /// <summary>
+        /// Checks if a Document is a Custom ContentCenter part; returns a bool.
+        /// </summary>
+        /// <param name="document"></param>
+        /// <returns></returns>
         public static bool IsCustomContentCenter(this Document document)
         {
             if (document.IsContentCenter())
@@ -434,27 +459,33 @@ namespace InventorShims
             return false;
         }
 
+        /// <summary>
+        /// Checks if a PartDocument is a Custom ContentCenter part; returns a bool.
+        /// </summary>
+        /// <param name="document"></param>
+        /// <returns></returns>
         public static bool IsCustomContentCenter(this PartDocument document)
-        {
-            if (document.IsContentCenter())
-            {
-                try
-                {
-                    return ((bool)document.PropertySets["ContentCenter"]["IsCustomPart"].Value);
-                }
-                catch
-                {
-                    return false;
-                }
-            }
+            => IsCustomContentCenter((Document)document);
 
-            return false;
-        }
-
+        /// <summary>
+        /// Checks if an AssemblyDocument is a Custom ContentCenter part; returns false.
+        /// </summary>
+        /// <param name="document"></param>
+        /// <returns></returns>
         public static bool IsCustomContentCenter(this AssemblyDocument document) => false;
 
+        /// <summary>
+        /// Checks if a DrawingDocument is a Custom ContentCenter part; returns false.
+        /// </summary>
+        /// <param name="document"></param>
+        /// <returns></returns>
         public static bool IsCustomContentCenter(this DrawingDocument document) => false;
 
+        /// <summary>
+        /// Checks if a PresentationDocument is a Custom ContentCenter part; returns false.
+        /// </summary>
+        /// <param name="document"></param>
+        /// <returns></returns>
         public static bool IsCustomContentCenter(this PresentationDocument document) => false;
 
         //IsIPartFactory IsIPartMember
@@ -466,7 +497,7 @@ namespace InventorShims
         /// Returns an IEnumerable collection of Inventor.Document from a SelectSet object.
         /// </summary>
         /// <param name="selectSet">Inventor.SelectionSet</param>
-        /// <returns>IEnumerable<Document></Document></returns>
+        /// <returns>IEnumerable Document</returns>
         /// <exception cref="System.ArgumentNullException">Throws an error if the selection set is empty.</exception>
         public static IEnumerable<Document> GetDocuments(this SelectSet selectSet)
         {
@@ -488,7 +519,7 @@ namespace InventorShims
         /// Returns an IEnumerable collection of Inventor.Document from a DocumentDescriptor object.
         /// </summary>
         /// <param name="documentDiscriptors"></param>
-        /// <returns>IEnumerable<Document></returns>
+        /// <returns>IEnumerable Document</returns>
         public static IEnumerable<Document> GetDocuments(this IEnumerable<DocumentDescriptor> documentDiscriptors)
         {
             foreach (DocumentDescriptor document in documentDiscriptors)
@@ -501,7 +532,7 @@ namespace InventorShims
         }
 
         /// <summary>
-        /// Returns an IEnumerable<Document> of all referenced documents in a Document object.
+        /// Returns an IEnumerable{Document} of all referenced documents in a Document object.
         /// </summary>
         /// <param name="document"></param>
         /// <returns></returns>
@@ -513,7 +544,7 @@ namespace InventorShims
         }
 
         /// <summary>
-        /// Returns an IEnumerable<Document> of all referenced documents in an AssemblyDocument object.
+        /// Returns an IEnumerable{Document} of all referenced documents in an AssemblyDocument object.
         /// </summary>
         /// <param name="document"></param>
         /// <returns></returns>
@@ -524,7 +555,7 @@ namespace InventorShims
         }
 
         /// <summary>
-        /// Returns an IEnumerable<Document> of all referenced documents in a PresentationDocument object.
+        /// Returns an IEnumerable{Document} of all referenced documents in a PresentationDocument object.
         /// </summary>
         /// <param name="document"></param>
         /// <returns></returns>
@@ -535,7 +566,7 @@ namespace InventorShims
         }
 
         /// <summary>
-        /// Returns an IEnumerable<Document> of all referenced documents in a PartDocument object.
+        /// Returns an IEnumerable{Document} of all referenced documents in a PartDocument object.
         /// </summary>
         /// <param name="document"></param>
         /// <returns></returns>
@@ -546,7 +577,7 @@ namespace InventorShims
         }
 
         /// <summary>
-        /// Returns an IEnumerable<Document> of all referenced documents in a DrawingDocument object.
+        /// Returns an IEnumerable{Document} of all referenced documents in a DrawingDocument object.
         /// </summary>
         /// <param name="document"></param>
         /// <returns></returns>
@@ -557,7 +588,7 @@ namespace InventorShims
         }
 
         /// <summary>
-        /// Returns an IEnumerable<Document> of referenced documents in a Document object.
+        /// Returns an IEnumerable{Document} of referenced documents in a Document object.
         /// </summary>
         /// <param name="document"></param>
         /// <returns></returns>
@@ -568,7 +599,7 @@ namespace InventorShims
         }
 
         /// <summary>
-        /// Returns an IEnumerable<Document> of referenced documents in an AssemblyDocument object.
+        /// Returns an IEnumerable{Document} of referenced documents in an AssemblyDocument object.
         /// </summary>
         /// <param name="document"></param>
         /// <returns></returns>
@@ -579,7 +610,7 @@ namespace InventorShims
         }
 
         /// <summary>
-        /// Returns an IEnumerable<Document> of referenced documents in a PresentationDocument object.
+        /// Returns an IEnumerable{Document} of referenced documents in a PresentationDocument object.
         /// </summary>
         /// <param name="document"></param>
         /// <returns></returns>
@@ -590,7 +621,7 @@ namespace InventorShims
         }
 
         /// <summary>
-        /// Returns an IEnumerable<Document> of referenced documents in a PartDocument object.
+        /// Returns an IEnumerable{Document} of referenced documents in a PartDocument object.
         /// </summary>
         /// <param name="document"></param>
         /// <returns></returns>
@@ -601,7 +632,7 @@ namespace InventorShims
         }
 
         /// <summary>
-        /// Returns an IEnumerable<Document> of referenced documents in a DrawingDocument object.
+        /// Returns an IEnumerable{Document} of referenced documents in a DrawingDocument object.
         /// </summary>
         /// <param name="document"></param>
         /// <returns></returns>
@@ -612,7 +643,7 @@ namespace InventorShims
         }
 
         /// <summary>
-        /// Returns an IEnumerable<Document> of referencing documents in a Document object.
+        /// Returns an IEnumerable{Document} of referencing documents in a Document object.
         /// </summary>
         /// <param name="document"></param>
         /// <returns></returns>
@@ -623,7 +654,7 @@ namespace InventorShims
         }
 
         /// <summary>
-        /// Returns an IEnumerable<Document> of referencing documents in an AssemblyDocument object.
+        /// Returns an IEnumerable{Document} of referencing documents in an AssemblyDocument object.
         /// </summary>
         /// <param name="document"></param>
         /// <returns></returns>
@@ -634,7 +665,7 @@ namespace InventorShims
         }
 
         /// <summary>
-        /// Returns an IEnumerable<Document> of referencing documents in a PresentationDocument object.
+        /// Returns an IEnumerable{Document} of referencing documents in a PresentationDocument object.
         /// </summary>
         /// <param name="document"></param>
         /// <returns></returns>
@@ -645,7 +676,7 @@ namespace InventorShims
         }
 
         /// <summary>
-        /// Returns an IEnumerable<Document> of referencing documents in a PartDocument object.
+        /// Returns an IEnumerable{Document} of referencing documents in a PartDocument object.
         /// </summary>
         /// <param name="document"></param>
         /// <returns></returns>
@@ -656,7 +687,7 @@ namespace InventorShims
         }
 
         /// <summary>
-        /// Returns an IEnumerable<Document> of referencing documents in a DrawingDocument object.
+        /// Returns an IEnumerable{Document} of referencing documents in a DrawingDocument object.
         /// </summary>
         /// <param name="document"></param>
         /// <returns></returns>
@@ -671,7 +702,7 @@ namespace InventorShims
         #region IEnumerable Filters
 
         /// <summary>
-        /// Returns an IEnumerable<AssemblyDocument> of just the AssemblyDocuments from an IEnumerable<Document> collection.
+        /// Returns an IEnumerable{AssemblyDocument} of just the AssemblyDocuments from an IEnumerable{Document} collection.
         /// </summary>
         /// <param name="documents"></param>
         /// <returns></returns>
@@ -687,7 +718,7 @@ namespace InventorShims
         }
 
         /// <summary>
-        /// Returns an IEnumerable<Document> with the AssemblyDocuments removed from an IEnumerable<Document> collection.
+        /// Returns an IEnumerable{Document} with the AssemblyDocuments removed from an IEnumerable{Document} collection.
         /// </summary>
         /// <param name="documents"></param>
         /// <returns></returns>
@@ -703,7 +734,7 @@ namespace InventorShims
         }
 
         /// <summary>
-        /// Returns an IEnumerable<AssemblyDocument> of just the DrawingDocuments from an IEnumerable<Document> collection.
+        /// Returns an IEnumerable{AssemblyDocument} of just the DrawingDocuments from an IEnumerable{Document} collection.
         /// </summary>
         /// <param name="documents"></param>
         /// <returns></returns>
@@ -719,7 +750,7 @@ namespace InventorShims
         }
 
         /// <summary>
-        /// Returns an IEnumerable<Document> with the DrawingDocuments removed from an IEnumerable<Document> collection.
+        /// Returns an IEnumerable{Document} with the DrawingDocuments removed from an IEnumerable{Document} collection.
         /// </summary>
         /// <param name="documents"></param>
         /// <returns></returns>
@@ -735,7 +766,7 @@ namespace InventorShims
         }
 
         /// <summary>
-        /// Returns an IEnumerable<AssemblyDocument> of just the PresentationDocuments from an IEnumerable<Document> collection.
+        /// Returns an IEnumerable{AssemblyDocument} of just the PresentationDocuments from an IEnumerable{Document} collection.
         /// </summary>
         /// <param name="documents"></param>
         /// <returns></returns>
@@ -751,7 +782,7 @@ namespace InventorShims
         }
 
         /// <summary>
-        /// Returns an IEnumerable<Document> with the PresentationDocuments removed from an IEnumerable<Document> collection.
+        /// Returns an IEnumerable{Document} with the PresentationDocuments removed from an IEnumerable{Document} collection.
         /// </summary>
         /// <param name="documents"></param>
         /// <returns></returns>
@@ -767,7 +798,7 @@ namespace InventorShims
         }
 
         /// <summary>
-        /// Returns an IEnumerable<AssemblyDocument> of just the PartDocuments from an IEnumerable<Document> collection.
+        /// Returns an IEnumerable{AssemblyDocument} of just the PartDocuments from an IEnumerable{Document} collection.
         /// </summary>
         /// <param name="documents"></param>
         /// <returns></returns>
@@ -783,7 +814,7 @@ namespace InventorShims
         }
 
         /// <summary>
-        /// Returns an IEnumerable<Document> with the PartDocuments removed from an IEnumerable<Document> collection.
+        /// Returns an IEnumerable{Document} with the PartDocuments removed from an IEnumerable{Document} collection.
         /// </summary>
         /// <param name="documents"></param>
         /// <returns></returns>
@@ -799,7 +830,7 @@ namespace InventorShims
         }
 
         /// <summary>
-        /// Returns an IEnumerable<Document> with the Non-Native Documents (ForeignModel, SAT, Unknown) removed from an IEnumerable<Document> collection.
+        /// Returns an IEnumerable{Document} with the Non-Native Documents (ForeignModel, SAT, Unknown) removed from an IEnumerable{Document} collection.
         /// </summary>
         /// <param name="documents"></param>
         /// <returns></returns>
@@ -823,7 +854,7 @@ namespace InventorShims
         #region IEnumerable<DocumentDescriptors> providers
 
         /// <summary>
-        /// Returns an IEnumerable<DocumentDescriptors> of referenced documents in a Document object.
+        /// Returns an IEnumerable{DocumentDescriptors} of referenced documents in a Document object.
         /// </summary>
         /// <param name="document"></param>
         /// <returns></returns>
@@ -834,7 +865,7 @@ namespace InventorShims
         }
 
         /// <summary>
-        /// Returns an IEnumerable<DocumentDescriptors> of referenced documents in a AssemblyDocument object.
+        /// Returns an IEnumerable{DocumentDescriptors} of referenced documents in a AssemblyDocument object.
         /// </summary>
         /// <param name="document"></param>
         /// <returns></returns>
@@ -845,7 +876,7 @@ namespace InventorShims
         }
 
         /// <summary>
-        /// Returns an IEnumerable<DocumentDescriptors> of referenced documents in a PresentationDocument object.
+        /// Returns an IEnumerable{DocumentDescriptors} of referenced documents in a PresentationDocument object.
         /// </summary>
         /// <param name="document"></param>
         /// <returns></returns>
@@ -856,7 +887,7 @@ namespace InventorShims
         }
 
         /// <summary>
-        /// Returns an IEnumerable<DocumentDescriptors> of referenced documents in a PartDocument object.
+        /// Returns an IEnumerable{DocumentDescriptors} of referenced documents in a PartDocument object.
         /// </summary>
         /// <param name="document"></param>
         /// <returns></returns>
@@ -867,7 +898,7 @@ namespace InventorShims
         }
 
         /// <summary>
-        /// Returns an IEnumerable<DocumentDescriptors> of referencing documents in a DrawingDocument object.
+        /// Returns an IEnumerable{DocumentDescriptors} of referencing documents in a DrawingDocument object.
         /// </summary>
         /// <param name="document"></param>
         /// <returns></returns>
@@ -878,7 +909,7 @@ namespace InventorShims
         }
 
         /// <summary>
-        /// Returns an IEnumerable<DocumentDescriptors> of all leaf documents in an AssemblyDocument object.
+        /// Returns an IEnumerable{DocumentDescriptors} of all leaf documents in an AssemblyDocument object.
         /// </summary>
         /// <param name="document"></param>
         /// <returns></returns>

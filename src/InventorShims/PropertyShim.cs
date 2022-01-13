@@ -291,7 +291,7 @@ namespace InventorShims
                 Property prop = document.PropertySets[setName][propertyName];
                 return prop ?? null;
             }
-            catch (Exception ex)
+            catch
             {
                 return null;
             }

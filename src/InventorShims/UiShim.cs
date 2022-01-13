@@ -25,6 +25,7 @@ namespace InventorShims
         /// Sets the active color scheme name, passed in as a string
         /// </summary>
         /// <param name="inventorAppToWork"></param>
+        /// <param name="colorSchemeNameToActivate"></param>
         /// <returns></returns>
         public static void SetActiveColorScheme(this Application inventorAppToWork, string colorSchemeNameToActivate)
         {
