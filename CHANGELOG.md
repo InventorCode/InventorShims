@@ -1,3 +1,34 @@
+## [Unreleased](https://github.com/InventorCode/InventorShims/releases/tag/1.4.0) (2022-01-??)
+
+### Added
+- PropertyShim extension methods now work on the following document types:
+    - PartDocument
+    - AssemblyDocument
+    - DrawingDocument
+    - PresentationDocument
+- .Net Framework version bumped to 4.8
+- General extension methods:
+    - bool DocumentShim.IsContentCenter(this Document) extension method for various Document types
+    - bool DocumentShim.IsCustomContentCenter(this Document) extension method for various Document types
+- Extension methods for use with LINQ and fluent design:
+    - IEnumerable<Document> GetDocuments(this SelectSet...)
+    - IEnumerable<Document> GetDocuments(this IEnumerable<DocumentDescriptor> documents)
+    - IEnumerable<Document> GetAllReferencedDocuments(this Document document) for various Document types
+    - IEnumerable<Document> GetReferencedDocuments(this Document document) for various Document types
+    - IEnumerable<Document> GetReferencingDocuments(this Document document) for various Document types
+    - IEnumerable<Document> RemoveAssemblyDocuments(this IEnumerable<Document> documents)
+    - IEnumerable<Document> RemoveDrawingDocuments(this IEnumerable<Document> documents)
+    - IEnumerable<Document> RemovePresentationDocuments(this IEnumerable<Document> documents)
+    - IEnumerable<Document> RemovePartDocuments(this IEnumerable<Document> documents)
+    - IEnumerable<Document> RemoveNonNativeDocuments(this IEnumerable<Document> documents)
+    - IEnumerable<DocumentDescriptor> GetReferencedDocumentDescriptors(this Document document) for various Document types
+    - IEnumerable<DocumentDescriptor> GetAllLeafOccurrencesDocumentDescriptors(this AssemblyDocument document)
+    - IEnumerable<AssemblyDocument> AssemblyDocuments(this IEnumerable<Document> documents)
+    - IEnumerable<DrawingDocument> DrawingDocuments(this IEnumerable<Document> documents)
+    - IEnumerable<PresentationDocument> PresentationDocuments(this IEnumerable<Document> documents)
+    - IEnumerable<PartDocument> PartDocuments(this IEnumerable<Document> documents)
+    - 
+
 ## [1.3.1](https://github.com/InventorCode/InventorShims/releases/tag/1.3.1) (2021-09-03)
 
 ### Added
