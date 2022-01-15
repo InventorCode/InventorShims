@@ -154,7 +154,7 @@ namespace InventorShims
         /// <param name="document">Inventor.Document</param>
         /// <param name="parameterName">Name of the parameter as a string.</param>
         /// <returns></returns>
-        public static string GetParameterValue(this Inventor.Document document, string parameterName)
+        public static string GetParameterValue(this Document document, string parameterName)
         {
             Parameter parameter = document.GetParameter(parameterName);
 
@@ -200,7 +200,7 @@ namespace InventorShims
         /// </summary>
         /// <param name="document">Inventor.Document</param>
         /// <param name="parameterName"></param>
-        public static void RemoveParameter(this Inventor.Document document, string parameterName)
+        public static void RemoveParameter(this Document document, string parameterName)
         {
             //Parameters parameters = GetParameters(document);
             //_ = parameters ?? throw new ArgumentException("This document " + document.FullDocumentName + " does not support parameters.");
@@ -241,7 +241,7 @@ namespace InventorShims
         /// <param name="document">Inventor.Document</param>
         /// <param name="parameterName"></param>
         /// <returns>Parameter</returns>
-        public static Parameter GetParameter(this Inventor.Document document, string parameterName)
+        public static Parameter GetParameter(this Document document, string parameterName)
         {
             Parameters parameters = GetParameters(document);
             _ = parameters ?? throw new ArgumentException("This document " + document.FullDocumentName + " does not support parameters.");
@@ -282,13 +282,14 @@ namespace InventorShims
         {
             switch (document)
             {
-                case PartDocument _:
-                    PartDocument part = (PartDocument)document;
-                    return part.ComponentDefinition.Parameters;
+                case PartDocument part:
+                    return GetParameters(part);
 
-                case AssemblyDocument _:
-                    AssemblyDocument assembly = (AssemblyDocument)document;
-                    return assembly.ComponentDefinition.Parameters;
+                case AssemblyDocument assembly:
+                    return GetParameters(assembly);
+
+                case DrawingDocument drawing:
+                    return GetParameters(drawing);
 
                 default:
                     return null;
@@ -296,11 +297,11 @@ namespace InventorShims
         }
 
         public static Parameters GetParameters(this AssemblyDocument document)
-            => GetParameters((Document)document);
+            => document.ComponentDefinition.Parameters;
         public static Parameters GetParameters(this PartDocument document)
-            => GetParameters((Document)document);
+            => document.ComponentDefinition.Parameters;
         public static Parameters GetParameters(this DrawingDocument document)
-            => GetParameters((Document)document);
+            => document.Parameters;
 
         /// <summary>
         /// Tests if the provided parameter is writable.  Only kModelParameters and kUserParameters return true.
