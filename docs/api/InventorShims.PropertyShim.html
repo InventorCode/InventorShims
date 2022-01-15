@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
   
@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class PropertyShim
    | InventorShims Documentation ">
-    <meta name="generator" content="docfx 2.56.6.0">
+    <meta name="generator" content="docfx 2.58.9.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -115,14 +115,129 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/InventorCode/InventorShims/new/master/docs-ref-overwrite/new?filename=InventorShims_PropertyShim_GetProperty_Document_System_String_.md&amp;value=---%0Auid%3A%20InventorShims.PropertyShim.GetProperty(Document%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/InventorCode/InventorShims/new/master/docs-ref-overwrite/new?filename=InventorShims_PropertyShim_GetProperty_Inventor_AssemblyDocument_System_String_.md&amp;value=---%0Auid%3A%20InventorShims.PropertyShim.GetProperty(Inventor.AssemblyDocument%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/InventorCode/InventorShims/blob/build/update-nuke/src/InventorShims/PropertyShim.cs/#L175">View Source</a>
+    <a href="https://github.com/InventorCode/InventorShims/blob/feat/fluentdocs/src/InventorShims/PropertyShim.cs/#L246">View Source</a>
   </span>
   <a id="InventorShims_PropertyShim_GetProperty_" data-uid="InventorShims.PropertyShim.GetProperty*"></a>
-  <h4 id="InventorShims_PropertyShim_GetProperty_Document_System_String_" data-uid="InventorShims.PropertyShim.GetProperty(Document,System.String)">GetProperty(Document, String)</h4>
-  <div class="markdown level1 summary"><p>Return the property value of a the specified Property within a Document object. Uses a short-form signature, specifying the Parameter Set.</p>
+  <h4 id="InventorShims_PropertyShim_GetProperty_Inventor_AssemblyDocument_System_String_" data-uid="InventorShims.PropertyShim.GetProperty(Inventor.AssemblyDocument,System.String)">GetProperty(AssemblyDocument, String)</h4>
+  <div class="markdown level1 summary"><p>Return the property of a the specified Property within a AssemblyDocument object. Uses a short-form signature.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Property GetProperty(this AssemblyDocument document, string propertyName)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Inventor.AssemblyDocument</span></td>
+        <td><span class="parametername">document</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">propertyName</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Inventor.Property</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/InventorCode/InventorShims/new/master/docs-ref-overwrite/new?filename=InventorShims_PropertyShim_GetProperty_Inventor_AssemblyDocument_System_String_System_String_.md&amp;value=---%0Auid%3A%20InventorShims.PropertyShim.GetProperty(Inventor.AssemblyDocument%2CSystem.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/InventorCode/InventorShims/blob/feat/fluentdocs/src/InventorShims/PropertyShim.cs/#L307">View Source</a>
+  </span>
+  <a id="InventorShims_PropertyShim_GetProperty_" data-uid="InventorShims.PropertyShim.GetProperty*"></a>
+  <h4 id="InventorShims_PropertyShim_GetProperty_Inventor_AssemblyDocument_System_String_System_String_" data-uid="InventorShims.PropertyShim.GetProperty(Inventor.AssemblyDocument,System.String,System.String)">GetProperty(AssemblyDocument, String, String)</h4>
+  <div class="markdown level1 summary"><p>Returns the specified Property object in a AssemblyDocument if one exists.  If none exists, null is returned.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Property GetProperty(this AssemblyDocument document, string setName, string propertyName)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Inventor.AssemblyDocument</span></td>
+        <td><span class="parametername">document</span></td>
+        <td><p>Inventor.AssemblyDocument</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">setName</span></td>
+        <td><p>Property Set Name as a string.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">propertyName</span></td>
+        <td><p>Property Name as a string.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Inventor.Property</span></td>
+        <td><p>Property</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/InventorCode/InventorShims/new/master/docs-ref-overwrite/new?filename=InventorShims_PropertyShim_GetProperty_Inventor_Document_System_String_.md&amp;value=---%0Auid%3A%20InventorShims.PropertyShim.GetProperty(Inventor.Document%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/InventorCode/InventorShims/blob/feat/fluentdocs/src/InventorShims/PropertyShim.cs/#L214">View Source</a>
+  </span>
+  <a id="InventorShims_PropertyShim_GetProperty_" data-uid="InventorShims.PropertyShim.GetProperty*"></a>
+  <h4 id="InventorShims_PropertyShim_GetProperty_Inventor_Document_System_String_" data-uid="InventorShims.PropertyShim.GetProperty(Inventor.Document,System.String)">GetProperty(Document, String)</h4>
+  <div class="markdown level1 summary"><p>Return the property of a the specified Property within a Document object. Uses a short-form signature.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -140,7 +255,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Document</span></td>
+        <td><span class="xref">Inventor.Document</span></td>
         <td><span class="parametername">document</span></td>
         <td><p>Inventor.Document</p>
 </td>
@@ -163,7 +278,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Property</span></td>
+        <td><span class="xref">Inventor.Property</span></td>
         <td><p>Object</p>
 </td>
       </tr>
@@ -171,13 +286,13 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/InventorCode/InventorShims/new/master/docs-ref-overwrite/new?filename=InventorShims_PropertyShim_GetProperty_Document_System_String_System_String_.md&amp;value=---%0Auid%3A%20InventorShims.PropertyShim.GetProperty(Document%2CSystem.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/InventorCode/InventorShims/new/master/docs-ref-overwrite/new?filename=InventorShims_PropertyShim_GetProperty_Inventor_Document_System_String_System_String_.md&amp;value=---%0Auid%3A%20InventorShims.PropertyShim.GetProperty(Inventor.Document%2CSystem.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/InventorCode/InventorShims/blob/build/update-nuke/src/InventorShims/PropertyShim.cs/#L208">View Source</a>
+    <a href="https://github.com/InventorCode/InventorShims/blob/feat/fluentdocs/src/InventorShims/PropertyShim.cs/#L287">View Source</a>
   </span>
   <a id="InventorShims_PropertyShim_GetProperty_" data-uid="InventorShims.PropertyShim.GetProperty*"></a>
-  <h4 id="InventorShims_PropertyShim_GetProperty_Document_System_String_System_String_" data-uid="InventorShims.PropertyShim.GetProperty(Document,System.String,System.String)">GetProperty(Document, String, String)</h4>
+  <h4 id="InventorShims_PropertyShim_GetProperty_Inventor_Document_System_String_System_String_" data-uid="InventorShims.PropertyShim.GetProperty(Inventor.Document,System.String,System.String)">GetProperty(Document, String, String)</h4>
   <div class="markdown level1 summary"><p>Returns the specified Property object in a Document if one exists.  If none exists, null is returned.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -196,7 +311,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Document</span></td>
+        <td><span class="xref">Inventor.Document</span></td>
         <td><span class="parametername">document</span></td>
         <td><p>Inventor.Document</p>
 </td>
@@ -225,7 +340,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Property</span></td>
+        <td><span class="xref">Inventor.Property</span></td>
         <td><p>Property</p>
 </td>
       </tr>
@@ -233,19 +348,19 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/InventorCode/InventorShims/new/master/docs-ref-overwrite/new?filename=InventorShims_PropertyShim_GetPropertyValue_Document_System_String_.md&amp;value=---%0Auid%3A%20InventorShims.PropertyShim.GetPropertyValue(Document%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/InventorCode/InventorShims/new/master/docs-ref-overwrite/new?filename=InventorShims_PropertyShim_GetProperty_Inventor_DrawingDocument_System_String_.md&amp;value=---%0Auid%3A%20InventorShims.PropertyShim.GetProperty(Inventor.DrawingDocument%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/InventorCode/InventorShims/blob/build/update-nuke/src/InventorShims/PropertyShim.cs/#L146">View Source</a>
+    <a href="https://github.com/InventorCode/InventorShims/blob/feat/fluentdocs/src/InventorShims/PropertyShim.cs/#L255">View Source</a>
   </span>
-  <a id="InventorShims_PropertyShim_GetPropertyValue_" data-uid="InventorShims.PropertyShim.GetPropertyValue*"></a>
-  <h4 id="InventorShims_PropertyShim_GetPropertyValue_Document_System_String_" data-uid="InventorShims.PropertyShim.GetPropertyValue(Document,System.String)">GetPropertyValue(Document, String)</h4>
-  <div class="markdown level1 summary"><p>Returns the iProperty Value for a provided document and propertyName. Short signature.</p>
+  <a id="InventorShims_PropertyShim_GetProperty_" data-uid="InventorShims.PropertyShim.GetProperty*"></a>
+  <h4 id="InventorShims_PropertyShim_GetProperty_Inventor_DrawingDocument_System_String_" data-uid="InventorShims.PropertyShim.GetProperty(Inventor.DrawingDocument,System.String)">GetProperty(DrawingDocument, String)</h4>
+  <div class="markdown level1 summary"><p>Return the property of a the specified Property within a DrawingDocument object. Uses a short-form signature.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static object GetPropertyValue(this Document document, string propertyName)</code></pre>
+    <pre><code class="lang-csharp hljs">public static Property GetProperty(this DrawingDocument document, string propertyName)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -258,7 +373,352 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Document</span></td>
+        <td><span class="xref">Inventor.DrawingDocument</span></td>
+        <td><span class="parametername">document</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">propertyName</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Inventor.Property</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/InventorCode/InventorShims/new/master/docs-ref-overwrite/new?filename=InventorShims_PropertyShim_GetProperty_Inventor_DrawingDocument_System_String_System_String_.md&amp;value=---%0Auid%3A%20InventorShims.PropertyShim.GetProperty(Inventor.DrawingDocument%2CSystem.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/InventorCode/InventorShims/blob/feat/fluentdocs/src/InventorShims/PropertyShim.cs/#L317">View Source</a>
+  </span>
+  <a id="InventorShims_PropertyShim_GetProperty_" data-uid="InventorShims.PropertyShim.GetProperty*"></a>
+  <h4 id="InventorShims_PropertyShim_GetProperty_Inventor_DrawingDocument_System_String_System_String_" data-uid="InventorShims.PropertyShim.GetProperty(Inventor.DrawingDocument,System.String,System.String)">GetProperty(DrawingDocument, String, String)</h4>
+  <div class="markdown level1 summary"><p>Returns the specified Property object in a DrawingDocument if one exists.  If none exists, null is returned.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Property GetProperty(this DrawingDocument document, string setName, string propertyName)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Inventor.DrawingDocument</span></td>
+        <td><span class="parametername">document</span></td>
+        <td><p>Inventor.DrawingDocument</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">setName</span></td>
+        <td><p>Property Set Name as a string.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">propertyName</span></td>
+        <td><p>Property Name as a string.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Inventor.Property</span></td>
+        <td><p>Property</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/InventorCode/InventorShims/new/master/docs-ref-overwrite/new?filename=InventorShims_PropertyShim_GetProperty_Inventor_PartDocument_System_String_.md&amp;value=---%0Auid%3A%20InventorShims.PropertyShim.GetProperty(Inventor.PartDocument%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/InventorCode/InventorShims/blob/feat/fluentdocs/src/InventorShims/PropertyShim.cs/#L273">View Source</a>
+  </span>
+  <a id="InventorShims_PropertyShim_GetProperty_" data-uid="InventorShims.PropertyShim.GetProperty*"></a>
+  <h4 id="InventorShims_PropertyShim_GetProperty_Inventor_PartDocument_System_String_" data-uid="InventorShims.PropertyShim.GetProperty(Inventor.PartDocument,System.String)">GetProperty(PartDocument, String)</h4>
+  <div class="markdown level1 summary"><p>Return the property of a the specified Property within a PartDocument object. Uses a short-form signature.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Property GetProperty(this PartDocument document, string propertyName)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Inventor.PartDocument</span></td>
+        <td><span class="parametername">document</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">propertyName</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Inventor.Property</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/InventorCode/InventorShims/new/master/docs-ref-overwrite/new?filename=InventorShims_PropertyShim_GetProperty_Inventor_PartDocument_System_String_System_String_.md&amp;value=---%0Auid%3A%20InventorShims.PropertyShim.GetProperty(Inventor.PartDocument%2CSystem.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/InventorCode/InventorShims/blob/feat/fluentdocs/src/InventorShims/PropertyShim.cs/#L337">View Source</a>
+  </span>
+  <a id="InventorShims_PropertyShim_GetProperty_" data-uid="InventorShims.PropertyShim.GetProperty*"></a>
+  <h4 id="InventorShims_PropertyShim_GetProperty_Inventor_PartDocument_System_String_System_String_" data-uid="InventorShims.PropertyShim.GetProperty(Inventor.PartDocument,System.String,System.String)">GetProperty(PartDocument, String, String)</h4>
+  <div class="markdown level1 summary"><p>Returns the specified Property object in a PartDocument if one exists.  If none exists, null is returned.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Property GetProperty(this PartDocument document, string setName, string propertyName)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Inventor.PartDocument</span></td>
+        <td><span class="parametername">document</span></td>
+        <td><p>Inventor.PartDocument</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">setName</span></td>
+        <td><p>Property Set Name as a string.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">propertyName</span></td>
+        <td><p>Property Name as a string.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Inventor.Property</span></td>
+        <td><p>Property</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/InventorCode/InventorShims/new/master/docs-ref-overwrite/new?filename=InventorShims_PropertyShim_GetProperty_Inventor_PresentationDocument_System_String_.md&amp;value=---%0Auid%3A%20InventorShims.PropertyShim.GetProperty(Inventor.PresentationDocument%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/InventorCode/InventorShims/blob/feat/fluentdocs/src/InventorShims/PropertyShim.cs/#L264">View Source</a>
+  </span>
+  <a id="InventorShims_PropertyShim_GetProperty_" data-uid="InventorShims.PropertyShim.GetProperty*"></a>
+  <h4 id="InventorShims_PropertyShim_GetProperty_Inventor_PresentationDocument_System_String_" data-uid="InventorShims.PropertyShim.GetProperty(Inventor.PresentationDocument,System.String)">GetProperty(PresentationDocument, String)</h4>
+  <div class="markdown level1 summary"><p>Return the property of a the specified Property within a PresentationDocument object. Uses a short-form signature.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Property GetProperty(this PresentationDocument document, string propertyName)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Inventor.PresentationDocument</span></td>
+        <td><span class="parametername">document</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">propertyName</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Inventor.Property</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/InventorCode/InventorShims/new/master/docs-ref-overwrite/new?filename=InventorShims_PropertyShim_GetProperty_Inventor_PresentationDocument_System_String_System_String_.md&amp;value=---%0Auid%3A%20InventorShims.PropertyShim.GetProperty(Inventor.PresentationDocument%2CSystem.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/InventorCode/InventorShims/blob/feat/fluentdocs/src/InventorShims/PropertyShim.cs/#L327">View Source</a>
+  </span>
+  <a id="InventorShims_PropertyShim_GetProperty_" data-uid="InventorShims.PropertyShim.GetProperty*"></a>
+  <h4 id="InventorShims_PropertyShim_GetProperty_Inventor_PresentationDocument_System_String_System_String_" data-uid="InventorShims.PropertyShim.GetProperty(Inventor.PresentationDocument,System.String,System.String)">GetProperty(PresentationDocument, String, String)</h4>
+  <div class="markdown level1 summary"><p>Returns the specified Property object in a PresentationDocument if one exists.  If none exists, null is returned.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Property GetProperty(this PresentationDocument document, string setName, string propertyName)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Inventor.PresentationDocument</span></td>
+        <td><span class="parametername">document</span></td>
+        <td><p>Inventor.PresentationDocument</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">setName</span></td>
+        <td><p>Property Set Name as a string.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">propertyName</span></td>
+        <td><p>Property Name as a string.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Inventor.Property</span></td>
+        <td><p>Property</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/InventorCode/InventorShims/new/master/docs-ref-overwrite/new?filename=InventorShims_PropertyShim_GetPropertyValue_Inventor_AssemblyDocument_System_String_.md&amp;value=---%0Auid%3A%20InventorShims.PropertyShim.GetPropertyValue(Inventor.AssemblyDocument%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/InventorCode/InventorShims/blob/feat/fluentdocs/src/InventorShims/PropertyShim.cs/#L116">View Source</a>
+  </span>
+  <a id="InventorShims_PropertyShim_GetPropertyValue_" data-uid="InventorShims.PropertyShim.GetPropertyValue*"></a>
+  <h4 id="InventorShims_PropertyShim_GetPropertyValue_Inventor_AssemblyDocument_System_String_" data-uid="InventorShims.PropertyShim.GetPropertyValue(Inventor.AssemblyDocument,System.String)">GetPropertyValue(AssemblyDocument, String)</h4>
+  <div class="markdown level1 summary"><p>Returns the iProperty Value for a provided AssemblyDocument and propertyName. Short signature.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static object GetPropertyValue(this AssemblyDocument document, string propertyName)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Inventor.AssemblyDocument</span></td>
         <td><span class="parametername">document</span></td>
         <td></td>
       </tr>
@@ -286,14 +746,125 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/InventorCode/InventorShims/new/master/docs-ref-overwrite/new?filename=InventorShims_PropertyShim_GetPropertyValue_Document_System_String_System_String_.md&amp;value=---%0Auid%3A%20InventorShims.PropertyShim.GetPropertyValue(Document%2CSystem.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/InventorCode/InventorShims/new/master/docs-ref-overwrite/new?filename=InventorShims_PropertyShim_GetPropertyValue_Inventor_AssemblyDocument_System_String_System_String_.md&amp;value=---%0Auid%3A%20InventorShims.PropertyShim.GetPropertyValue(Inventor.AssemblyDocument%2CSystem.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/InventorCode/InventorShims/blob/build/update-nuke/src/InventorShims/PropertyShim.cs/#L162">View Source</a>
+    <a href="https://github.com/InventorCode/InventorShims/blob/feat/fluentdocs/src/InventorShims/PropertyShim.cs/#L171">View Source</a>
   </span>
   <a id="InventorShims_PropertyShim_GetPropertyValue_" data-uid="InventorShims.PropertyShim.GetPropertyValue*"></a>
-  <h4 id="InventorShims_PropertyShim_GetPropertyValue_Document_System_String_System_String_" data-uid="InventorShims.PropertyShim.GetPropertyValue(Document,System.String,System.String)">GetPropertyValue(Document, String, String)</h4>
-  <div class="markdown level1 summary"><p>Return the property value of a the specified Property within a Document object. Uses a long-form signature, specifying the Parameter Set.</p>
+  <h4 id="InventorShims_PropertyShim_GetPropertyValue_Inventor_AssemblyDocument_System_String_System_String_" data-uid="InventorShims.PropertyShim.GetPropertyValue(Inventor.AssemblyDocument,System.String,System.String)">GetPropertyValue(AssemblyDocument, String, String)</h4>
+  <div class="markdown level1 summary"><p>Return the property value of a the specified Property within an AssemblyDocument object. Uses a long-form signature, specifying the Property Set.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static object GetPropertyValue(this AssemblyDocument document, string setName, string propertyName)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Inventor.AssemblyDocument</span></td>
+        <td><span class="parametername">document</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">setName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">propertyName</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/InventorCode/InventorShims/new/master/docs-ref-overwrite/new?filename=InventorShims_PropertyShim_GetPropertyValue_Inventor_Document_System_String_.md&amp;value=---%0Auid%3A%20InventorShims.PropertyShim.GetPropertyValue(Inventor.Document%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/InventorCode/InventorShims/blob/feat/fluentdocs/src/InventorShims/PropertyShim.cs/#L101">View Source</a>
+  </span>
+  <a id="InventorShims_PropertyShim_GetPropertyValue_" data-uid="InventorShims.PropertyShim.GetPropertyValue*"></a>
+  <h4 id="InventorShims_PropertyShim_GetPropertyValue_Inventor_Document_System_String_" data-uid="InventorShims.PropertyShim.GetPropertyValue(Inventor.Document,System.String)">GetPropertyValue(Document, String)</h4>
+  <div class="markdown level1 summary"><p>Returns the iProperty Value for a provided document and propertyName. Short signature.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static object GetPropertyValue(this Document document, string propertyName)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Inventor.Document</span></td>
+        <td><span class="parametername">document</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">propertyName</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/InventorCode/InventorShims/new/master/docs-ref-overwrite/new?filename=InventorShims_PropertyShim_GetPropertyValue_Inventor_Document_System_String_System_String_.md&amp;value=---%0Auid%3A%20InventorShims.PropertyShim.GetPropertyValue(Inventor.Document%2CSystem.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/InventorCode/InventorShims/blob/feat/fluentdocs/src/InventorShims/PropertyShim.cs/#L157">View Source</a>
+  </span>
+  <a id="InventorShims_PropertyShim_GetPropertyValue_" data-uid="InventorShims.PropertyShim.GetPropertyValue*"></a>
+  <h4 id="InventorShims_PropertyShim_GetPropertyValue_Inventor_Document_System_String_System_String_" data-uid="InventorShims.PropertyShim.GetPropertyValue(Inventor.Document,System.String,System.String)">GetPropertyValue(Document, String, String)</h4>
+  <div class="markdown level1 summary"><p>Return the property value of a the specified Property within a Document object. Uses a long-form signature, specifying the Property Set.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -311,7 +882,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Document</span></td>
+        <td><span class="xref">Inventor.Document</span></td>
         <td><span class="parametername">document</span></td>
         <td><p>Inventor.Document</p>
 </td>
@@ -319,7 +890,7 @@
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">setName</span></td>
-        <td><p>Parameter Set name as a string.</p>
+        <td><p>Property Set name as a string.</p>
 </td>
       </tr>
       <tr>
@@ -348,10 +919,343 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
+    <a href="https://github.com/InventorCode/InventorShims/new/master/docs-ref-overwrite/new?filename=InventorShims_PropertyShim_GetPropertyValue_Inventor_DrawingDocument_System_String_.md&amp;value=---%0Auid%3A%20InventorShims.PropertyShim.GetPropertyValue(Inventor.DrawingDocument%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/InventorCode/InventorShims/blob/feat/fluentdocs/src/InventorShims/PropertyShim.cs/#L125">View Source</a>
+  </span>
+  <a id="InventorShims_PropertyShim_GetPropertyValue_" data-uid="InventorShims.PropertyShim.GetPropertyValue*"></a>
+  <h4 id="InventorShims_PropertyShim_GetPropertyValue_Inventor_DrawingDocument_System_String_" data-uid="InventorShims.PropertyShim.GetPropertyValue(Inventor.DrawingDocument,System.String)">GetPropertyValue(DrawingDocument, String)</h4>
+  <div class="markdown level1 summary"><p>Returns the iProperty Value for a provided DrawingDocument and propertyName. Short signature.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static object GetPropertyValue(this DrawingDocument document, string propertyName)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Inventor.DrawingDocument</span></td>
+        <td><span class="parametername">document</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">propertyName</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/InventorCode/InventorShims/new/master/docs-ref-overwrite/new?filename=InventorShims_PropertyShim_GetPropertyValue_Inventor_DrawingDocument_System_String_System_String_.md&amp;value=---%0Auid%3A%20InventorShims.PropertyShim.GetPropertyValue(Inventor.DrawingDocument%2CSystem.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/InventorCode/InventorShims/blob/feat/fluentdocs/src/InventorShims/PropertyShim.cs/#L181">View Source</a>
+  </span>
+  <a id="InventorShims_PropertyShim_GetPropertyValue_" data-uid="InventorShims.PropertyShim.GetPropertyValue*"></a>
+  <h4 id="InventorShims_PropertyShim_GetPropertyValue_Inventor_DrawingDocument_System_String_System_String_" data-uid="InventorShims.PropertyShim.GetPropertyValue(Inventor.DrawingDocument,System.String,System.String)">GetPropertyValue(DrawingDocument, String, String)</h4>
+  <div class="markdown level1 summary"><p>Return the property value of a the specified Property within a DrawingDocument object. Uses a long-form signature, specifying the Property Set.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static object GetPropertyValue(this DrawingDocument document, string setName, string propertyName)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Inventor.DrawingDocument</span></td>
+        <td><span class="parametername">document</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">setName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">propertyName</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/InventorCode/InventorShims/new/master/docs-ref-overwrite/new?filename=InventorShims_PropertyShim_GetPropertyValue_Inventor_PartDocument_System_String_.md&amp;value=---%0Auid%3A%20InventorShims.PropertyShim.GetPropertyValue(Inventor.PartDocument%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/InventorCode/InventorShims/blob/feat/fluentdocs/src/InventorShims/PropertyShim.cs/#L143">View Source</a>
+  </span>
+  <a id="InventorShims_PropertyShim_GetPropertyValue_" data-uid="InventorShims.PropertyShim.GetPropertyValue*"></a>
+  <h4 id="InventorShims_PropertyShim_GetPropertyValue_Inventor_PartDocument_System_String_" data-uid="InventorShims.PropertyShim.GetPropertyValue(Inventor.PartDocument,System.String)">GetPropertyValue(PartDocument, String)</h4>
+  <div class="markdown level1 summary"><p>Returns the iProperty Value for a provided PartDocument and propertyName. Short signature.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static object GetPropertyValue(this PartDocument document, string propertyName)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Inventor.PartDocument</span></td>
+        <td><span class="parametername">document</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">propertyName</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/InventorCode/InventorShims/new/master/docs-ref-overwrite/new?filename=InventorShims_PropertyShim_GetPropertyValue_Inventor_PartDocument_System_String_System_String_.md&amp;value=---%0Auid%3A%20InventorShims.PropertyShim.GetPropertyValue(Inventor.PartDocument%2CSystem.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/InventorCode/InventorShims/blob/feat/fluentdocs/src/InventorShims/PropertyShim.cs/#L201">View Source</a>
+  </span>
+  <a id="InventorShims_PropertyShim_GetPropertyValue_" data-uid="InventorShims.PropertyShim.GetPropertyValue*"></a>
+  <h4 id="InventorShims_PropertyShim_GetPropertyValue_Inventor_PartDocument_System_String_System_String_" data-uid="InventorShims.PropertyShim.GetPropertyValue(Inventor.PartDocument,System.String,System.String)">GetPropertyValue(PartDocument, String, String)</h4>
+  <div class="markdown level1 summary"><p>Return the property value of a the specified Property within a PartDocument object. Uses a long-form signature, specifying the Property Set.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static object GetPropertyValue(this PartDocument document, string setName, string propertyName)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Inventor.PartDocument</span></td>
+        <td><span class="parametername">document</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">setName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">propertyName</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/InventorCode/InventorShims/new/master/docs-ref-overwrite/new?filename=InventorShims_PropertyShim_GetPropertyValue_Inventor_PresentationDocument_System_String_.md&amp;value=---%0Auid%3A%20InventorShims.PropertyShim.GetPropertyValue(Inventor.PresentationDocument%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/InventorCode/InventorShims/blob/feat/fluentdocs/src/InventorShims/PropertyShim.cs/#L134">View Source</a>
+  </span>
+  <a id="InventorShims_PropertyShim_GetPropertyValue_" data-uid="InventorShims.PropertyShim.GetPropertyValue*"></a>
+  <h4 id="InventorShims_PropertyShim_GetPropertyValue_Inventor_PresentationDocument_System_String_" data-uid="InventorShims.PropertyShim.GetPropertyValue(Inventor.PresentationDocument,System.String)">GetPropertyValue(PresentationDocument, String)</h4>
+  <div class="markdown level1 summary"><p>Returns the iProperty Value for a provided PresentationDocument and propertyName. Short signature.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static object GetPropertyValue(this PresentationDocument document, string propertyName)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Inventor.PresentationDocument</span></td>
+        <td><span class="parametername">document</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">propertyName</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/InventorCode/InventorShims/new/master/docs-ref-overwrite/new?filename=InventorShims_PropertyShim_GetPropertyValue_Inventor_PresentationDocument_System_String_System_String_.md&amp;value=---%0Auid%3A%20InventorShims.PropertyShim.GetPropertyValue(Inventor.PresentationDocument%2CSystem.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/InventorCode/InventorShims/blob/feat/fluentdocs/src/InventorShims/PropertyShim.cs/#L191">View Source</a>
+  </span>
+  <a id="InventorShims_PropertyShim_GetPropertyValue_" data-uid="InventorShims.PropertyShim.GetPropertyValue*"></a>
+  <h4 id="InventorShims_PropertyShim_GetPropertyValue_Inventor_PresentationDocument_System_String_System_String_" data-uid="InventorShims.PropertyShim.GetPropertyValue(Inventor.PresentationDocument,System.String,System.String)">GetPropertyValue(PresentationDocument, String, String)</h4>
+  <div class="markdown level1 summary"><p>Return the property value of a the specified Property within a PresentationDocument object. Uses a long-form signature, specifying the Property Set.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static object GetPropertyValue(this PresentationDocument document, string setName, string propertyName)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Inventor.PresentationDocument</span></td>
+        <td><span class="parametername">document</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">setName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">propertyName</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
     <a href="https://github.com/InventorCode/InventorShims/new/master/docs-ref-overwrite/new?filename=InventorShims_PropertyShim_IsPropertyNative_System_String_.md&amp;value=---%0Auid%3A%20InventorShims.PropertyShim.IsPropertyNative(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/InventorCode/InventorShims/blob/build/update-nuke/src/InventorShims/PropertyShim.cs/#L226">View Source</a>
+    <a href="https://github.com/InventorCode/InventorShims/blob/feat/fluentdocs/src/InventorShims/PropertyShim.cs/#L889">View Source</a>
   </span>
   <a id="InventorShims_PropertyShim_IsPropertyNative_" data-uid="InventorShims.PropertyShim.IsPropertyNative*"></a>
   <h4 id="InventorShims_PropertyShim_IsPropertyNative_System_String_" data-uid="InventorShims.PropertyShim.IsPropertyNative(System.String)">IsPropertyNative(String)</h4>
@@ -398,14 +1302,134 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/InventorCode/InventorShims/new/master/docs-ref-overwrite/new?filename=InventorShims_PropertyShim_PropertyExists_Document_System_String_.md&amp;value=---%0Auid%3A%20InventorShims.PropertyShim.PropertyExists(Document%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/InventorCode/InventorShims/new/master/docs-ref-overwrite/new?filename=InventorShims_PropertyShim_PropertyExists_Inventor_AssemblyDocument_System_String_.md&amp;value=---%0Auid%3A%20InventorShims.PropertyShim.PropertyExists(Inventor.AssemblyDocument%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/InventorCode/InventorShims/blob/build/update-nuke/src/InventorShims/PropertyShim.cs/#L392">View Source</a>
+    <a href="https://github.com/InventorCode/InventorShims/blob/feat/fluentdocs/src/InventorShims/PropertyShim.cs/#L728">View Source</a>
   </span>
   <a id="InventorShims_PropertyShim_PropertyExists_" data-uid="InventorShims.PropertyShim.PropertyExists*"></a>
-  <h4 id="InventorShims_PropertyShim_PropertyExists_Document_System_String_" data-uid="InventorShims.PropertyShim.PropertyExists(Document,System.String)">PropertyExists(Document, String)</h4>
-  <div class="markdown level1 summary"><p>A simple function that returns true/false if the specified property exists in the document.
+  <h4 id="InventorShims_PropertyShim_PropertyExists_Inventor_AssemblyDocument_System_String_" data-uid="InventorShims.PropertyShim.PropertyExists(Inventor.AssemblyDocument,System.String)">PropertyExists(AssemblyDocument, String)</h4>
+  <div class="markdown level1 summary"><p>A simple function that returns true/false if the specified property exists in the AssemblyDocument.
+This is the short-form signature of this function.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool PropertyExists(this AssemblyDocument document, string propertyName)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Inventor.AssemblyDocument</span></td>
+        <td><span class="parametername">document</span></td>
+        <td><p>Inventor.AssemblyDocument</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">propertyName</span></td>
+        <td><p>Property Name as a string</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>Boolean</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/InventorCode/InventorShims/new/master/docs-ref-overwrite/new?filename=InventorShims_PropertyShim_PropertyExists_Inventor_AssemblyDocument_System_String_System_String_.md&amp;value=---%0Auid%3A%20InventorShims.PropertyShim.PropertyExists(Inventor.AssemblyDocument%2CSystem.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/InventorCode/InventorShims/blob/feat/fluentdocs/src/InventorShims/PropertyShim.cs/#L796">View Source</a>
+  </span>
+  <a id="InventorShims_PropertyShim_PropertyExists_" data-uid="InventorShims.PropertyShim.PropertyExists*"></a>
+  <h4 id="InventorShims_PropertyShim_PropertyExists_Inventor_AssemblyDocument_System_String_System_String_" data-uid="InventorShims.PropertyShim.PropertyExists(Inventor.AssemblyDocument,System.String,System.String)">PropertyExists(AssemblyDocument, String, String)</h4>
+  <div class="markdown level1 summary"><p>A simple function that returns true/false if the specified property exists in the AssemblyDocument.
+This is the short-form signature of this function.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool PropertyExists(this AssemblyDocument document, string propertySetName, string propertyName)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Inventor.AssemblyDocument</span></td>
+        <td><span class="parametername">document</span></td>
+        <td><p>Inventor.AssemblyDocument</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">propertySetName</span></td>
+        <td><p>Property Set Name as a string</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">propertyName</span></td>
+        <td><p>Property Name as a string</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>Boolean</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/InventorCode/InventorShims/new/master/docs-ref-overwrite/new?filename=InventorShims_PropertyShim_PropertyExists_Inventor_Document_System_String_.md&amp;value=---%0Auid%3A%20InventorShims.PropertyShim.PropertyExists(Inventor.Document%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/InventorCode/InventorShims/blob/feat/fluentdocs/src/InventorShims/PropertyShim.cs/#L693">View Source</a>
+  </span>
+  <a id="InventorShims_PropertyShim_PropertyExists_" data-uid="InventorShims.PropertyShim.PropertyExists*"></a>
+  <h4 id="InventorShims_PropertyShim_PropertyExists_Inventor_Document_System_String_" data-uid="InventorShims.PropertyShim.PropertyExists(Inventor.Document,System.String)">PropertyExists(Document, String)</h4>
+  <div class="markdown level1 summary"><p>A simple function that returns true/false if the specified property exists in the Document.
 This is the short-form signature of this function.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -424,7 +1448,7 @@ This is the short-form signature of this function.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Document</span></td>
+        <td><span class="xref">Inventor.Document</span></td>
         <td><span class="parametername">document</span></td>
         <td><p>Inventor.Document</p>
 </td>
@@ -455,14 +1479,14 @@ This is the short-form signature of this function.</p>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/InventorCode/InventorShims/new/master/docs-ref-overwrite/new?filename=InventorShims_PropertyShim_PropertyExists_Document_System_String_System_String_.md&amp;value=---%0Auid%3A%20InventorShims.PropertyShim.PropertyExists(Document%2CSystem.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/InventorCode/InventorShims/new/master/docs-ref-overwrite/new?filename=InventorShims_PropertyShim_PropertyExists_Inventor_Document_System_String_System_String_.md&amp;value=---%0Auid%3A%20InventorShims.PropertyShim.PropertyExists(Inventor.Document%2CSystem.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/InventorCode/InventorShims/blob/build/update-nuke/src/InventorShims/PropertyShim.cs/#L428">View Source</a>
+    <a href="https://github.com/InventorCode/InventorShims/blob/feat/fluentdocs/src/InventorShims/PropertyShim.cs/#L773">View Source</a>
   </span>
   <a id="InventorShims_PropertyShim_PropertyExists_" data-uid="InventorShims.PropertyShim.PropertyExists*"></a>
-  <h4 id="InventorShims_PropertyShim_PropertyExists_Document_System_String_System_String_" data-uid="InventorShims.PropertyShim.PropertyExists(Document,System.String,System.String)">PropertyExists(Document, String, String)</h4>
-  <div class="markdown level1 summary"><p>A simple function that returns true/false if the specified property exists in the document.
+  <h4 id="InventorShims_PropertyShim_PropertyExists_Inventor_Document_System_String_System_String_" data-uid="InventorShims.PropertyShim.PropertyExists(Inventor.Document,System.String,System.String)">PropertyExists(Document, String, String)</h4>
+  <div class="markdown level1 summary"><p>A simple function that returns true/false if the specified property exists in the Document.
 This is the short-form signature of this function.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -481,7 +1505,7 @@ This is the short-form signature of this function.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Document</span></td>
+        <td><span class="xref">Inventor.Document</span></td>
         <td><span class="parametername">document</span></td>
         <td><p>Inventor.Document</p>
 </td>
@@ -518,13 +1542,461 @@ This is the short-form signature of this function.</p>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/InventorCode/InventorShims/new/master/docs-ref-overwrite/new?filename=InventorShims_PropertyShim_RemoveProperty_Document_System_String_.md&amp;value=---%0Auid%3A%20InventorShims.PropertyShim.RemoveProperty(Document%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/InventorCode/InventorShims/new/master/docs-ref-overwrite/new?filename=InventorShims_PropertyShim_PropertyExists_Inventor_DrawingDocument_System_String_.md&amp;value=---%0Auid%3A%20InventorShims.PropertyShim.PropertyExists(Inventor.DrawingDocument%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/InventorCode/InventorShims/blob/build/update-nuke/src/InventorShims/PropertyShim.cs/#L310">View Source</a>
+    <a href="https://github.com/InventorCode/InventorShims/blob/feat/fluentdocs/src/InventorShims/PropertyShim.cs/#L738">View Source</a>
+  </span>
+  <a id="InventorShims_PropertyShim_PropertyExists_" data-uid="InventorShims.PropertyShim.PropertyExists*"></a>
+  <h4 id="InventorShims_PropertyShim_PropertyExists_Inventor_DrawingDocument_System_String_" data-uid="InventorShims.PropertyShim.PropertyExists(Inventor.DrawingDocument,System.String)">PropertyExists(DrawingDocument, String)</h4>
+  <div class="markdown level1 summary"><p>A simple function that returns true/false if the specified property exists in the DrawingDocument.
+This is the short-form signature of this function.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool PropertyExists(this DrawingDocument document, string propertyName)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Inventor.DrawingDocument</span></td>
+        <td><span class="parametername">document</span></td>
+        <td><p>Inventor.DrawingDocument</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">propertyName</span></td>
+        <td><p>Property Name as a string</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>Boolean</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/InventorCode/InventorShims/new/master/docs-ref-overwrite/new?filename=InventorShims_PropertyShim_PropertyExists_Inventor_DrawingDocument_System_String_System_String_.md&amp;value=---%0Auid%3A%20InventorShims.PropertyShim.PropertyExists(Inventor.DrawingDocument%2CSystem.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/InventorCode/InventorShims/blob/feat/fluentdocs/src/InventorShims/PropertyShim.cs/#L807">View Source</a>
+  </span>
+  <a id="InventorShims_PropertyShim_PropertyExists_" data-uid="InventorShims.PropertyShim.PropertyExists*"></a>
+  <h4 id="InventorShims_PropertyShim_PropertyExists_Inventor_DrawingDocument_System_String_System_String_" data-uid="InventorShims.PropertyShim.PropertyExists(Inventor.DrawingDocument,System.String,System.String)">PropertyExists(DrawingDocument, String, String)</h4>
+  <div class="markdown level1 summary"><p>A simple function that returns true/false if the specified property exists in the DrawingDocument.
+This is the short-form signature of this function.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool PropertyExists(this DrawingDocument document, string propertySetName, string propertyName)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Inventor.DrawingDocument</span></td>
+        <td><span class="parametername">document</span></td>
+        <td><p>Inventor.DrawingDocument</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">propertySetName</span></td>
+        <td><p>Property Set Name as a string</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">propertyName</span></td>
+        <td><p>Property Name as a string</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>Boolean</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/InventorCode/InventorShims/new/master/docs-ref-overwrite/new?filename=InventorShims_PropertyShim_PropertyExists_Inventor_PartDocument_System_String_.md&amp;value=---%0Auid%3A%20InventorShims.PropertyShim.PropertyExists(Inventor.PartDocument%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/InventorCode/InventorShims/blob/feat/fluentdocs/src/InventorShims/PropertyShim.cs/#L758">View Source</a>
+  </span>
+  <a id="InventorShims_PropertyShim_PropertyExists_" data-uid="InventorShims.PropertyShim.PropertyExists*"></a>
+  <h4 id="InventorShims_PropertyShim_PropertyExists_Inventor_PartDocument_System_String_" data-uid="InventorShims.PropertyShim.PropertyExists(Inventor.PartDocument,System.String)">PropertyExists(PartDocument, String)</h4>
+  <div class="markdown level1 summary"><p>A simple function that returns true/false if the specified property exists in the PartDocument.
+This is the short-form signature of this function.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool PropertyExists(this PartDocument document, string propertyName)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Inventor.PartDocument</span></td>
+        <td><span class="parametername">document</span></td>
+        <td><p>Inventor.PartDocument</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">propertyName</span></td>
+        <td><p>Property Name as a string</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>Boolean</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/InventorCode/InventorShims/new/master/docs-ref-overwrite/new?filename=InventorShims_PropertyShim_PropertyExists_Inventor_PartDocument_System_String_System_String_.md&amp;value=---%0Auid%3A%20InventorShims.PropertyShim.PropertyExists(Inventor.PartDocument%2CSystem.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/InventorCode/InventorShims/blob/feat/fluentdocs/src/InventorShims/PropertyShim.cs/#L829">View Source</a>
+  </span>
+  <a id="InventorShims_PropertyShim_PropertyExists_" data-uid="InventorShims.PropertyShim.PropertyExists*"></a>
+  <h4 id="InventorShims_PropertyShim_PropertyExists_Inventor_PartDocument_System_String_System_String_" data-uid="InventorShims.PropertyShim.PropertyExists(Inventor.PartDocument,System.String,System.String)">PropertyExists(PartDocument, String, String)</h4>
+  <div class="markdown level1 summary"><p>A simple function that returns true/false if the specified property exists in the PartDocument.
+This is the short-form signature of this function.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool PropertyExists(this PartDocument document, string propertySetName, string propertyName)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Inventor.PartDocument</span></td>
+        <td><span class="parametername">document</span></td>
+        <td><p>Inventor.PartDocument</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">propertySetName</span></td>
+        <td><p>Property Set Name as a string</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">propertyName</span></td>
+        <td><p>Property Name as a string</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>Boolean</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/InventorCode/InventorShims/new/master/docs-ref-overwrite/new?filename=InventorShims_PropertyShim_PropertyExists_Inventor_PresentationDocument_System_String_.md&amp;value=---%0Auid%3A%20InventorShims.PropertyShim.PropertyExists(Inventor.PresentationDocument%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/InventorCode/InventorShims/blob/feat/fluentdocs/src/InventorShims/PropertyShim.cs/#L748">View Source</a>
+  </span>
+  <a id="InventorShims_PropertyShim_PropertyExists_" data-uid="InventorShims.PropertyShim.PropertyExists*"></a>
+  <h4 id="InventorShims_PropertyShim_PropertyExists_Inventor_PresentationDocument_System_String_" data-uid="InventorShims.PropertyShim.PropertyExists(Inventor.PresentationDocument,System.String)">PropertyExists(PresentationDocument, String)</h4>
+  <div class="markdown level1 summary"><p>A simple function that returns true/false if the specified property exists in the PresentationDocument.
+This is the short-form signature of this function.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool PropertyExists(this PresentationDocument document, string propertyName)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Inventor.PresentationDocument</span></td>
+        <td><span class="parametername">document</span></td>
+        <td><p>Inventor.PresentationDocument</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">propertyName</span></td>
+        <td><p>Property Name as a string</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>Boolean</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/InventorCode/InventorShims/new/master/docs-ref-overwrite/new?filename=InventorShims_PropertyShim_PropertyExists_Inventor_PresentationDocument_System_String_System_String_.md&amp;value=---%0Auid%3A%20InventorShims.PropertyShim.PropertyExists(Inventor.PresentationDocument%2CSystem.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/InventorCode/InventorShims/blob/feat/fluentdocs/src/InventorShims/PropertyShim.cs/#L818">View Source</a>
+  </span>
+  <a id="InventorShims_PropertyShim_PropertyExists_" data-uid="InventorShims.PropertyShim.PropertyExists*"></a>
+  <h4 id="InventorShims_PropertyShim_PropertyExists_Inventor_PresentationDocument_System_String_System_String_" data-uid="InventorShims.PropertyShim.PropertyExists(Inventor.PresentationDocument,System.String,System.String)">PropertyExists(PresentationDocument, String, String)</h4>
+  <div class="markdown level1 summary"><p>A simple function that returns true/false if the specified property exists in the PresentationDocument.
+This is the short-form signature of this function.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool PropertyExists(this PresentationDocument document, string propertySetName, string propertyName)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Inventor.PresentationDocument</span></td>
+        <td><span class="parametername">document</span></td>
+        <td><p>Inventor.PresentationDocument</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">propertySetName</span></td>
+        <td><p>Property Set Name as a string</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">propertyName</span></td>
+        <td><p>Property Name as a string</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>Boolean</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/InventorCode/InventorShims/new/master/docs-ref-overwrite/new?filename=InventorShims_PropertyShim_RemoveProperty_Inventor_AssemblyDocument_System_String_.md&amp;value=---%0Auid%3A%20InventorShims.PropertyShim.RemoveProperty(Inventor.AssemblyDocument%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/InventorCode/InventorShims/blob/feat/fluentdocs/src/InventorShims/PropertyShim.cs/#L573">View Source</a>
   </span>
   <a id="InventorShims_PropertyShim_RemoveProperty_" data-uid="InventorShims.PropertyShim.RemoveProperty*"></a>
-  <h4 id="InventorShims_PropertyShim_RemoveProperty_Document_System_String_" data-uid="InventorShims.PropertyShim.RemoveProperty(Document,System.String)">RemoveProperty(Document, String)</h4>
+  <h4 id="InventorShims_PropertyShim_RemoveProperty_Inventor_AssemblyDocument_System_String_" data-uid="InventorShims.PropertyShim.RemoveProperty(Inventor.AssemblyDocument,System.String)">RemoveProperty(AssemblyDocument, String)</h4>
+  <div class="markdown level1 summary"><p>Removes the specified AssemblyDocument property.  If the property is native, it will only delete the iproperty's value.
+This is the short-form signature version of this method.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void RemoveProperty(this AssemblyDocument document, string propertyName)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Inventor.AssemblyDocument</span></td>
+        <td><span class="parametername">document</span></td>
+        <td><p>Inventor.AssemblyDocument</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">propertyName</span></td>
+        <td><p>Property Name as a string</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/InventorCode/InventorShims/new/master/docs-ref-overwrite/new?filename=InventorShims_PropertyShim_RemoveProperty_Inventor_AssemblyDocument_System_String_System_String_.md&amp;value=---%0Auid%3A%20InventorShims.PropertyShim.RemoveProperty(Inventor.AssemblyDocument%2CSystem.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/InventorCode/InventorShims/blob/feat/fluentdocs/src/InventorShims/PropertyShim.cs/#L649">View Source</a>
+  </span>
+  <a id="InventorShims_PropertyShim_RemoveProperty_" data-uid="InventorShims.PropertyShim.RemoveProperty*"></a>
+  <h4 id="InventorShims_PropertyShim_RemoveProperty_Inventor_AssemblyDocument_System_String_System_String_" data-uid="InventorShims.PropertyShim.RemoveProperty(Inventor.AssemblyDocument,System.String,System.String)">RemoveProperty(AssemblyDocument, String, String)</h4>
+  <div class="markdown level1 summary"><p>Removes the specified AssemblyDocument property.  If the property is native, it will only delete the iproperty's value.
+This is the long-form signature version of this method.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void RemoveProperty(this AssemblyDocument document, string propertySetName, string propertyName)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Inventor.AssemblyDocument</span></td>
+        <td><span class="parametername">document</span></td>
+        <td><p>Inventor.AssemblyDocument</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">propertySetName</span></td>
+        <td><p>Property Set Name as a string</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">propertyName</span></td>
+        <td><p>Property Name as a string</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/InventorCode/InventorShims/new/master/docs-ref-overwrite/new?filename=InventorShims_PropertyShim_RemoveProperty_Inventor_Document_System_String_.md&amp;value=---%0Auid%3A%20InventorShims.PropertyShim.RemoveProperty(Inventor.Document%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/InventorCode/InventorShims/blob/feat/fluentdocs/src/InventorShims/PropertyShim.cs/#L527">View Source</a>
+  </span>
+  <a id="InventorShims_PropertyShim_RemoveProperty_" data-uid="InventorShims.PropertyShim.RemoveProperty*"></a>
+  <h4 id="InventorShims_PropertyShim_RemoveProperty_Inventor_Document_System_String_" data-uid="InventorShims.PropertyShim.RemoveProperty(Inventor.Document,System.String)">RemoveProperty(Document, String)</h4>
   <div class="markdown level1 summary"><p>Removes the specified document property.  If the property is native, it will only delete the iproperty's value.
 This is the short-form signature version of this method.</p>
 </div>
@@ -544,7 +2016,7 @@ This is the short-form signature version of this method.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Document</span></td>
+        <td><span class="xref">Inventor.Document</span></td>
         <td><span class="parametername">document</span></td>
         <td><p>Inventor.Document</p>
 </td>
@@ -559,14 +2031,14 @@ This is the short-form signature version of this method.</p>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/InventorCode/InventorShims/new/master/docs-ref-overwrite/new?filename=InventorShims_PropertyShim_RemoveProperty_Document_System_String_System_String_.md&amp;value=---%0Auid%3A%20InventorShims.PropertyShim.RemoveProperty(Document%2CSystem.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/InventorCode/InventorShims/new/master/docs-ref-overwrite/new?filename=InventorShims_PropertyShim_RemoveProperty_Inventor_Document_System_String_System_String_.md&amp;value=---%0Auid%3A%20InventorShims.PropertyShim.RemoveProperty(Inventor.Document%2CSystem.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/InventorCode/InventorShims/blob/build/update-nuke/src/InventorShims/PropertyShim.cs/#L357">View Source</a>
+    <a href="https://github.com/InventorCode/InventorShims/blob/feat/fluentdocs/src/InventorShims/PropertyShim.cs/#L614">View Source</a>
   </span>
   <a id="InventorShims_PropertyShim_RemoveProperty_" data-uid="InventorShims.PropertyShim.RemoveProperty*"></a>
-  <h4 id="InventorShims_PropertyShim_RemoveProperty_Document_System_String_System_String_" data-uid="InventorShims.PropertyShim.RemoveProperty(Document,System.String,System.String)">RemoveProperty(Document, String, String)</h4>
-  <div class="markdown level1 summary"><p>Removes the specified document property.  If the property is native, it will only delete the iproperty's value.
+  <h4 id="InventorShims_PropertyShim_RemoveProperty_Inventor_Document_System_String_System_String_" data-uid="InventorShims.PropertyShim.RemoveProperty(Inventor.Document,System.String,System.String)">RemoveProperty(Document, String, String)</h4>
+  <div class="markdown level1 summary"><p>Removes the specified Document property.  If the property is native, it will only delete the iproperty's value.
 This is the long-form signature version of this method.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -585,7 +2057,7 @@ This is the long-form signature version of this method.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Document</span></td>
+        <td><span class="xref">Inventor.Document</span></td>
         <td><span class="parametername">document</span></td>
         <td><p>Inventor.Document</p>
 </td>
@@ -606,13 +2078,379 @@ This is the long-form signature version of this method.</p>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/InventorCode/InventorShims/new/master/docs-ref-overwrite/new?filename=InventorShims_PropertyShim_SetPropertyValue_Document_System_String_System_Object_.md&amp;value=---%0Auid%3A%20InventorShims.PropertyShim.SetPropertyValue(Document%2CSystem.String%2CSystem.Object)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/InventorCode/InventorShims/new/master/docs-ref-overwrite/new?filename=InventorShims_PropertyShim_RemoveProperty_Inventor_DrawingDocument_System_String_.md&amp;value=---%0Auid%3A%20InventorShims.PropertyShim.RemoveProperty(Inventor.DrawingDocument%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/InventorCode/InventorShims/blob/build/update-nuke/src/InventorShims/PropertyShim.cs/#L239">View Source</a>
+    <a href="https://github.com/InventorCode/InventorShims/blob/feat/fluentdocs/src/InventorShims/PropertyShim.cs/#L582">View Source</a>
+  </span>
+  <a id="InventorShims_PropertyShim_RemoveProperty_" data-uid="InventorShims.PropertyShim.RemoveProperty*"></a>
+  <h4 id="InventorShims_PropertyShim_RemoveProperty_Inventor_DrawingDocument_System_String_" data-uid="InventorShims.PropertyShim.RemoveProperty(Inventor.DrawingDocument,System.String)">RemoveProperty(DrawingDocument, String)</h4>
+  <div class="markdown level1 summary"><p>Removes the specified DrawingDocument property.  If the property is native, it will only delete the iproperty's value.
+This is the short-form signature version of this method.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void RemoveProperty(this DrawingDocument document, string propertyName)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Inventor.DrawingDocument</span></td>
+        <td><span class="parametername">document</span></td>
+        <td><p>Inventor.DrawingDocument</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">propertyName</span></td>
+        <td><p>Property Name as a string</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/InventorCode/InventorShims/new/master/docs-ref-overwrite/new?filename=InventorShims_PropertyShim_RemoveProperty_Inventor_DrawingDocument_System_String_System_String_.md&amp;value=---%0Auid%3A%20InventorShims.PropertyShim.RemoveProperty(Inventor.DrawingDocument%2CSystem.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/InventorCode/InventorShims/blob/feat/fluentdocs/src/InventorShims/PropertyShim.cs/#L659">View Source</a>
+  </span>
+  <a id="InventorShims_PropertyShim_RemoveProperty_" data-uid="InventorShims.PropertyShim.RemoveProperty*"></a>
+  <h4 id="InventorShims_PropertyShim_RemoveProperty_Inventor_DrawingDocument_System_String_System_String_" data-uid="InventorShims.PropertyShim.RemoveProperty(Inventor.DrawingDocument,System.String,System.String)">RemoveProperty(DrawingDocument, String, String)</h4>
+  <div class="markdown level1 summary"><p>Removes the specified DrawingDocument property.  If the property is native, it will only delete the iproperty's value.
+This is the long-form signature version of this method.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void RemoveProperty(this DrawingDocument document, string propertySetName, string propertyName)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Inventor.DrawingDocument</span></td>
+        <td><span class="parametername">document</span></td>
+        <td><p>Inventor.DrawingDocument</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">propertySetName</span></td>
+        <td><p>Property Set Name as a string</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">propertyName</span></td>
+        <td><p>Property Name as a string</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/InventorCode/InventorShims/new/master/docs-ref-overwrite/new?filename=InventorShims_PropertyShim_RemoveProperty_Inventor_PartDocument_System_String_.md&amp;value=---%0Auid%3A%20InventorShims.PropertyShim.RemoveProperty(Inventor.PartDocument%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/InventorCode/InventorShims/blob/feat/fluentdocs/src/InventorShims/PropertyShim.cs/#L600">View Source</a>
+  </span>
+  <a id="InventorShims_PropertyShim_RemoveProperty_" data-uid="InventorShims.PropertyShim.RemoveProperty*"></a>
+  <h4 id="InventorShims_PropertyShim_RemoveProperty_Inventor_PartDocument_System_String_" data-uid="InventorShims.PropertyShim.RemoveProperty(Inventor.PartDocument,System.String)">RemoveProperty(PartDocument, String)</h4>
+  <div class="markdown level1 summary"><p>Removes the specified PartDocument property.  If the property is native, it will only delete the iproperty's value.
+This is the short-form signature version of this method.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void RemoveProperty(this PartDocument document, string propertyName)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Inventor.PartDocument</span></td>
+        <td><span class="parametername">document</span></td>
+        <td><p>Inventor.PartDocument</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">propertyName</span></td>
+        <td><p>Property Name as a string</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/InventorCode/InventorShims/new/master/docs-ref-overwrite/new?filename=InventorShims_PropertyShim_RemoveProperty_Inventor_PartDocument_System_String_System_String_.md&amp;value=---%0Auid%3A%20InventorShims.PropertyShim.RemoveProperty(Inventor.PartDocument%2CSystem.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/InventorCode/InventorShims/blob/feat/fluentdocs/src/InventorShims/PropertyShim.cs/#L679">View Source</a>
+  </span>
+  <a id="InventorShims_PropertyShim_RemoveProperty_" data-uid="InventorShims.PropertyShim.RemoveProperty*"></a>
+  <h4 id="InventorShims_PropertyShim_RemoveProperty_Inventor_PartDocument_System_String_System_String_" data-uid="InventorShims.PropertyShim.RemoveProperty(Inventor.PartDocument,System.String,System.String)">RemoveProperty(PartDocument, String, String)</h4>
+  <div class="markdown level1 summary"><p>Removes the specified PartDocument property.  If the property is native, it will only delete the iproperty's value.
+This is the long-form signature version of this method.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void RemoveProperty(this PartDocument document, string propertySetName, string propertyName)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Inventor.PartDocument</span></td>
+        <td><span class="parametername">document</span></td>
+        <td><p>Inventor.PartDocument</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">propertySetName</span></td>
+        <td><p>Property Set Name as a string</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">propertyName</span></td>
+        <td><p>Property Name as a string</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/InventorCode/InventorShims/new/master/docs-ref-overwrite/new?filename=InventorShims_PropertyShim_RemoveProperty_Inventor_PresentationDocument_System_String_.md&amp;value=---%0Auid%3A%20InventorShims.PropertyShim.RemoveProperty(Inventor.PresentationDocument%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/InventorCode/InventorShims/blob/feat/fluentdocs/src/InventorShims/PropertyShim.cs/#L591">View Source</a>
+  </span>
+  <a id="InventorShims_PropertyShim_RemoveProperty_" data-uid="InventorShims.PropertyShim.RemoveProperty*"></a>
+  <h4 id="InventorShims_PropertyShim_RemoveProperty_Inventor_PresentationDocument_System_String_" data-uid="InventorShims.PropertyShim.RemoveProperty(Inventor.PresentationDocument,System.String)">RemoveProperty(PresentationDocument, String)</h4>
+  <div class="markdown level1 summary"><p>Removes the specified PresentationDocument property.  If the property is native, it will only delete the iproperty's value.
+This is the short-form signature version of this method.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void RemoveProperty(this PresentationDocument document, string propertyName)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Inventor.PresentationDocument</span></td>
+        <td><span class="parametername">document</span></td>
+        <td><p>Inventor.PresentationDocument</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">propertyName</span></td>
+        <td><p>Property Name as a string</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/InventorCode/InventorShims/new/master/docs-ref-overwrite/new?filename=InventorShims_PropertyShim_RemoveProperty_Inventor_PresentationDocument_System_String_System_String_.md&amp;value=---%0Auid%3A%20InventorShims.PropertyShim.RemoveProperty(Inventor.PresentationDocument%2CSystem.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/InventorCode/InventorShims/blob/feat/fluentdocs/src/InventorShims/PropertyShim.cs/#L669">View Source</a>
+  </span>
+  <a id="InventorShims_PropertyShim_RemoveProperty_" data-uid="InventorShims.PropertyShim.RemoveProperty*"></a>
+  <h4 id="InventorShims_PropertyShim_RemoveProperty_Inventor_PresentationDocument_System_String_System_String_" data-uid="InventorShims.PropertyShim.RemoveProperty(Inventor.PresentationDocument,System.String,System.String)">RemoveProperty(PresentationDocument, String, String)</h4>
+  <div class="markdown level1 summary"><p>Removes the specified PresentationDocument property.  If the property is native, it will only delete the iproperty's value.
+This is the long-form signature version of this method.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void RemoveProperty(this PresentationDocument document, string propertySetName, string propertyName)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Inventor.PresentationDocument</span></td>
+        <td><span class="parametername">document</span></td>
+        <td><p>Inventor.PresentationDocument</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">propertySetName</span></td>
+        <td><p>Property Set Name as a string</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">propertyName</span></td>
+        <td><p>Property Name as a string</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/InventorCode/InventorShims/new/master/docs-ref-overwrite/new?filename=InventorShims_PropertyShim_SetPropertyValue_Inventor_AssemblyDocument_System_String_System_Object_.md&amp;value=---%0Auid%3A%20InventorShims.PropertyShim.SetPropertyValue(Inventor.AssemblyDocument%2CSystem.String%2CSystem.Object)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/InventorCode/InventorShims/blob/feat/fluentdocs/src/InventorShims/PropertyShim.cs/#L387">View Source</a>
   </span>
   <a id="InventorShims_PropertyShim_SetPropertyValue_" data-uid="InventorShims.PropertyShim.SetPropertyValue*"></a>
-  <h4 id="InventorShims_PropertyShim_SetPropertyValue_Document_System_String_System_Object_" data-uid="InventorShims.PropertyShim.SetPropertyValue(Document,System.String,System.Object)">SetPropertyValue(Document, String, Object)</h4>
+  <h4 id="InventorShims_PropertyShim_SetPropertyValue_Inventor_AssemblyDocument_System_String_System_Object_" data-uid="InventorShims.PropertyShim.SetPropertyValue(Inventor.AssemblyDocument,System.String,System.Object)">SetPropertyValue(AssemblyDocument, String, Object)</h4>
+  <div class="markdown level1 summary"><p>Set the specified AssemblyDocument property's value.  If the iproperty name exist it will set the value.
+If the name does not exist, it will add the property with the value you have specified in the
+&quot;User Defined Properties&quot; property set.  This is the short-form signature.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void SetPropertyValue(this AssemblyDocument document, string propertyName, object value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Inventor.AssemblyDocument</span></td>
+        <td><span class="parametername">document</span></td>
+        <td><p>Inventor.AssemblyDocument</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">propertyName</span></td>
+        <td><p>Property Name as a string</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">value</span></td>
+        <td><p>Property value</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/InventorCode/InventorShims/new/master/docs-ref-overwrite/new?filename=InventorShims_PropertyShim_SetPropertyValue_Inventor_AssemblyDocument_System_String_System_String_System_Object_.md&amp;value=---%0Auid%3A%20InventorShims.PropertyShim.SetPropertyValue(Inventor.AssemblyDocument%2CSystem.String%2CSystem.String%2CSystem.Object)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/InventorCode/InventorShims/blob/feat/fluentdocs/src/InventorShims/PropertyShim.cs/#L514">View Source</a>
+  </span>
+  <a id="InventorShims_PropertyShim_SetPropertyValue_" data-uid="InventorShims.PropertyShim.SetPropertyValue*"></a>
+  <h4 id="InventorShims_PropertyShim_SetPropertyValue_Inventor_AssemblyDocument_System_String_System_String_System_Object_" data-uid="InventorShims.PropertyShim.SetPropertyValue(Inventor.AssemblyDocument,System.String,System.String,System.Object)">SetPropertyValue(AssemblyDocument, String, String, Object)</h4>
+  <div class="markdown level1 summary"><p>Set the specified AssemblyDocument property's value.  If the iproperty name exist it will set the value.
+If the name does not exist, it will add the property with the value you have specified in the
+&quot;User Defined Properties&quot; property set.  The long signature function must be used to specify custom
+property groups.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void SetPropertyValue(this AssemblyDocument document, string propertySetName, string propertyName, object value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Inventor.AssemblyDocument</span></td>
+        <td><span class="parametername">document</span></td>
+        <td><p>Inventor.AssemblyDocument</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">propertySetName</span></td>
+        <td><p>Property Set Name as a string</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">propertyName</span></td>
+        <td><p>Property Name as a string</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/InventorCode/InventorShims/new/master/docs-ref-overwrite/new?filename=InventorShims_PropertyShim_SetPropertyValue_Inventor_Document_System_String_System_Object_.md&amp;value=---%0Auid%3A%20InventorShims.PropertyShim.SetPropertyValue(Inventor.Document%2CSystem.String%2CSystem.Object)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/InventorCode/InventorShims/blob/feat/fluentdocs/src/InventorShims/PropertyShim.cs/#L352">View Source</a>
+  </span>
+  <a id="InventorShims_PropertyShim_SetPropertyValue_" data-uid="InventorShims.PropertyShim.SetPropertyValue*"></a>
+  <h4 id="InventorShims_PropertyShim_SetPropertyValue_Inventor_Document_System_String_System_Object_" data-uid="InventorShims.PropertyShim.SetPropertyValue(Inventor.Document,System.String,System.Object)">SetPropertyValue(Document, String, Object)</h4>
   <div class="markdown level1 summary"><p>Set the specified document property's value.  If the iproperty name exist it will set the value.
 If the name does not exist, it will add the property with the value you have specified in the
 &quot;User Defined Properties&quot; property set.  This is the short-form signature.</p>
@@ -633,7 +2471,7 @@ If the name does not exist, it will add the property with the value you have spe
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Document</span></td>
+        <td><span class="xref">Inventor.Document</span></td>
         <td><span class="parametername">document</span></td>
         <td><p>Inventor.Document</p>
 </td>
@@ -654,13 +2492,13 @@ If the name does not exist, it will add the property with the value you have spe
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/InventorCode/InventorShims/new/master/docs-ref-overwrite/new?filename=InventorShims_PropertyShim_SetPropertyValue_Document_System_String_System_String_System_Object_.md&amp;value=---%0Auid%3A%20InventorShims.PropertyShim.SetPropertyValue(Document%2CSystem.String%2CSystem.String%2CSystem.Object)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/InventorCode/InventorShims/new/master/docs-ref-overwrite/new?filename=InventorShims_PropertyShim_SetPropertyValue_Inventor_Document_System_String_System_String_System_Object_.md&amp;value=---%0Auid%3A%20InventorShims.PropertyShim.SetPropertyValue(Inventor.Document%2CSystem.String%2CSystem.String%2CSystem.Object)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/InventorCode/InventorShims/blob/build/update-nuke/src/InventorShims/PropertyShim.cs/#L276">View Source</a>
+    <a href="https://github.com/InventorCode/InventorShims/blob/feat/fluentdocs/src/InventorShims/PropertyShim.cs/#L437">View Source</a>
   </span>
   <a id="InventorShims_PropertyShim_SetPropertyValue_" data-uid="InventorShims.PropertyShim.SetPropertyValue*"></a>
-  <h4 id="InventorShims_PropertyShim_SetPropertyValue_Document_System_String_System_String_System_Object_" data-uid="InventorShims.PropertyShim.SetPropertyValue(Document,System.String,System.String,System.Object)">SetPropertyValue(Document, String, String, Object)</h4>
+  <h4 id="InventorShims_PropertyShim_SetPropertyValue_Inventor_Document_System_String_System_String_System_Object_" data-uid="InventorShims.PropertyShim.SetPropertyValue(Inventor.Document,System.String,System.String,System.Object)">SetPropertyValue(Document, String, String, Object)</h4>
   <div class="markdown level1 summary"><p>Set the specified document property's value.  If the iproperty name exist it will set the value.
 If the name does not exist, it will add the property with the value you have specified in the
 &quot;User Defined Properties&quot; property set.  The long signature function must be used to specify custom
@@ -682,9 +2520,315 @@ property groups.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Document</span></td>
+        <td><span class="xref">Inventor.Document</span></td>
         <td><span class="parametername">document</span></td>
         <td><p>Inventor.Document</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">propertySetName</span></td>
+        <td><p>Property Set Name as a string</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">propertyName</span></td>
+        <td><p>Property Name as a string</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/InventorCode/InventorShims/new/master/docs-ref-overwrite/new?filename=InventorShims_PropertyShim_SetPropertyValue_Inventor_DrawingDocument_System_String_System_Object_.md&amp;value=---%0Auid%3A%20InventorShims.PropertyShim.SetPropertyValue(Inventor.DrawingDocument%2CSystem.String%2CSystem.Object)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/InventorCode/InventorShims/blob/feat/fluentdocs/src/InventorShims/PropertyShim.cs/#L398">View Source</a>
+  </span>
+  <a id="InventorShims_PropertyShim_SetPropertyValue_" data-uid="InventorShims.PropertyShim.SetPropertyValue*"></a>
+  <h4 id="InventorShims_PropertyShim_SetPropertyValue_Inventor_DrawingDocument_System_String_System_Object_" data-uid="InventorShims.PropertyShim.SetPropertyValue(Inventor.DrawingDocument,System.String,System.Object)">SetPropertyValue(DrawingDocument, String, Object)</h4>
+  <div class="markdown level1 summary"><p>Set the specified DrawingDocument property's value.  If the iproperty name exist it will set the value.
+If the name does not exist, it will add the property with the value you have specified in the
+&quot;User Defined Properties&quot; property set.  This is the short-form signature.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void SetPropertyValue(this DrawingDocument document, string propertyName, object value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Inventor.DrawingDocument</span></td>
+        <td><span class="parametername">document</span></td>
+        <td><p>Inventor.DrawingDocument</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">propertyName</span></td>
+        <td><p>Property Name as a string</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">value</span></td>
+        <td><p>Property value</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/InventorCode/InventorShims/new/master/docs-ref-overwrite/new?filename=InventorShims_PropertyShim_SetPropertyValue_Inventor_DrawingDocument_System_String_System_String_System_Object_.md&amp;value=---%0Auid%3A%20InventorShims.PropertyShim.SetPropertyValue(Inventor.DrawingDocument%2CSystem.String%2CSystem.String%2CSystem.Object)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/InventorCode/InventorShims/blob/feat/fluentdocs/src/InventorShims/PropertyShim.cs/#L475">View Source</a>
+  </span>
+  <a id="InventorShims_PropertyShim_SetPropertyValue_" data-uid="InventorShims.PropertyShim.SetPropertyValue*"></a>
+  <h4 id="InventorShims_PropertyShim_SetPropertyValue_Inventor_DrawingDocument_System_String_System_String_System_Object_" data-uid="InventorShims.PropertyShim.SetPropertyValue(Inventor.DrawingDocument,System.String,System.String,System.Object)">SetPropertyValue(DrawingDocument, String, String, Object)</h4>
+  <div class="markdown level1 summary"><p>Set the specified DrawingDocument property's value.  If the iproperty name exist it will set the value.
+If the name does not exist, it will add the property with the value you have specified in the
+&quot;User Defined Properties&quot; property set.  The long signature function must be used to specify custom
+property groups.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void SetPropertyValue(this DrawingDocument document, string propertySetName, string propertyName, object value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Inventor.DrawingDocument</span></td>
+        <td><span class="parametername">document</span></td>
+        <td><p>Inventor.DrawingDocument</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">propertySetName</span></td>
+        <td><p>Property Set Name as a string</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">propertyName</span></td>
+        <td><p>Property Name as a string</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/InventorCode/InventorShims/new/master/docs-ref-overwrite/new?filename=InventorShims_PropertyShim_SetPropertyValue_Inventor_PartDocument_System_String_System_Object_.md&amp;value=---%0Auid%3A%20InventorShims.PropertyShim.SetPropertyValue(Inventor.PartDocument%2CSystem.String%2CSystem.Object)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/InventorCode/InventorShims/blob/feat/fluentdocs/src/InventorShims/PropertyShim.cs/#L420">View Source</a>
+  </span>
+  <a id="InventorShims_PropertyShim_SetPropertyValue_" data-uid="InventorShims.PropertyShim.SetPropertyValue*"></a>
+  <h4 id="InventorShims_PropertyShim_SetPropertyValue_Inventor_PartDocument_System_String_System_Object_" data-uid="InventorShims.PropertyShim.SetPropertyValue(Inventor.PartDocument,System.String,System.Object)">SetPropertyValue(PartDocument, String, Object)</h4>
+  <div class="markdown level1 summary"><p>Set the specified Partdocument property's value.  If the iproperty name exist it will set the value.
+If the name does not exist, it will add the property with the value you have specified in the
+&quot;User Defined Properties&quot; property set.  This is the short-form signature.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void SetPropertyValue(this PartDocument document, string propertyName, object value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Inventor.PartDocument</span></td>
+        <td><span class="parametername">document</span></td>
+        <td><p>Inventor.PartDocument</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">propertyName</span></td>
+        <td><p>Property Name as a string</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">value</span></td>
+        <td><p>Property value</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/InventorCode/InventorShims/new/master/docs-ref-overwrite/new?filename=InventorShims_PropertyShim_SetPropertyValue_Inventor_PartDocument_System_String_System_String_System_Object_.md&amp;value=---%0Auid%3A%20InventorShims.PropertyShim.SetPropertyValue(Inventor.PartDocument%2CSystem.String%2CSystem.String%2CSystem.Object)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/InventorCode/InventorShims/blob/feat/fluentdocs/src/InventorShims/PropertyShim.cs/#L501">View Source</a>
+  </span>
+  <a id="InventorShims_PropertyShim_SetPropertyValue_" data-uid="InventorShims.PropertyShim.SetPropertyValue*"></a>
+  <h4 id="InventorShims_PropertyShim_SetPropertyValue_Inventor_PartDocument_System_String_System_String_System_Object_" data-uid="InventorShims.PropertyShim.SetPropertyValue(Inventor.PartDocument,System.String,System.String,System.Object)">SetPropertyValue(PartDocument, String, String, Object)</h4>
+  <div class="markdown level1 summary"><p>Set the specified PartDocument property's value.  If the iproperty name exist it will set the value.
+If the name does not exist, it will add the property with the value you have specified in the
+&quot;User Defined Properties&quot; property set.  The long signature function must be used to specify custom
+property groups.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void SetPropertyValue(this PartDocument document, string propertySetName, string propertyName, object value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Inventor.PartDocument</span></td>
+        <td><span class="parametername">document</span></td>
+        <td><p>Inventor.PartDocument</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">propertySetName</span></td>
+        <td><p>Property Set Name as a string</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">propertyName</span></td>
+        <td><p>Property Name as a string</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/InventorCode/InventorShims/new/master/docs-ref-overwrite/new?filename=InventorShims_PropertyShim_SetPropertyValue_Inventor_PresentationDocument_System_String_System_Object_.md&amp;value=---%0Auid%3A%20InventorShims.PropertyShim.SetPropertyValue(Inventor.PresentationDocument%2CSystem.String%2CSystem.Object)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/InventorCode/InventorShims/blob/feat/fluentdocs/src/InventorShims/PropertyShim.cs/#L409">View Source</a>
+  </span>
+  <a id="InventorShims_PropertyShim_SetPropertyValue_" data-uid="InventorShims.PropertyShim.SetPropertyValue*"></a>
+  <h4 id="InventorShims_PropertyShim_SetPropertyValue_Inventor_PresentationDocument_System_String_System_Object_" data-uid="InventorShims.PropertyShim.SetPropertyValue(Inventor.PresentationDocument,System.String,System.Object)">SetPropertyValue(PresentationDocument, String, Object)</h4>
+  <div class="markdown level1 summary"><p>Set the specified Presentationdocument property's value.  If the iproperty name exist it will set the value.
+If the name does not exist, it will add the property with the value you have specified in the
+&quot;User Defined Properties&quot; property set.  This is the short-form signature.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void SetPropertyValue(this PresentationDocument document, string propertyName, object value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Inventor.PresentationDocument</span></td>
+        <td><span class="parametername">document</span></td>
+        <td><p>Inventor.PresentationDocument</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">propertyName</span></td>
+        <td><p>Property Name as a string</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">value</span></td>
+        <td><p>Property value</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/InventorCode/InventorShims/new/master/docs-ref-overwrite/new?filename=InventorShims_PropertyShim_SetPropertyValue_Inventor_PresentationDocument_System_String_System_String_System_Object_.md&amp;value=---%0Auid%3A%20InventorShims.PropertyShim.SetPropertyValue(Inventor.PresentationDocument%2CSystem.String%2CSystem.String%2CSystem.Object)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/InventorCode/InventorShims/blob/feat/fluentdocs/src/InventorShims/PropertyShim.cs/#L488">View Source</a>
+  </span>
+  <a id="InventorShims_PropertyShim_SetPropertyValue_" data-uid="InventorShims.PropertyShim.SetPropertyValue*"></a>
+  <h4 id="InventorShims_PropertyShim_SetPropertyValue_Inventor_PresentationDocument_System_String_System_String_System_Object_" data-uid="InventorShims.PropertyShim.SetPropertyValue(Inventor.PresentationDocument,System.String,System.String,System.Object)">SetPropertyValue(PresentationDocument, String, String, Object)</h4>
+  <div class="markdown level1 summary"><p>Set the specified PresentationDocument property's value.  If the iproperty name exist it will set the value.
+If the name does not exist, it will add the property with the value you have specified in the
+&quot;User Defined Properties&quot; property set.  The long signature function must be used to specify custom
+property groups.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void SetPropertyValue(this PresentationDocument document, string propertySetName, string propertyName, object value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Inventor.PresentationDocument</span></td>
+        <td><span class="parametername">document</span></td>
+        <td><p>Inventor.PresentationDocument</p>
 </td>
       </tr>
       <tr>
@@ -717,7 +2861,7 @@ property groups.</p>
                     <a href="https://github.com/InventorCode/InventorShims/new/master/docs-ref-overwrite/new?filename=InventorShims_PropertyShim.md&amp;value=---%0Auid%3A%20InventorShims.PropertyShim%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/InventorCode/InventorShims/blob/build/update-nuke/src/InventorShims/PropertyShim.cs/#L10" class="contribution-link">View Source</a>
+                    <a href="https://github.com/InventorCode/InventorShims/blob/feat/fluentdocs/src/InventorShims/PropertyShim.cs/#L10" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>
