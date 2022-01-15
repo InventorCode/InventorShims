@@ -8,7 +8,7 @@ namespace ParameterShim_Tests
     public class GetParameter
     {
         [Test]
-        public void ParameterExists_returnsParameter()
+        public void ParameterExists_Document_returnsParameter()
         {
             var doc = tests.TestUtilities.CreatePartDocument();
 
@@ -23,7 +23,22 @@ namespace ParameterShim_Tests
         }
 
         [Test]
-        public void ParameterDoesNotExist_returnsNull()
+        public void ParameterExists_PartDocument_returnsParameter()
+        {
+            var doc = tests.TestUtilities.CreatePartDocument();
+            PartDocument partDoc = (PartDocument)doc;
+            
+            partDoc.SetParameterValue("testing", "16", "cm");
+            Parameter test = partDoc.GetParameter("testing");
+
+            try
+            {
+                Assert.IsNotNull(test);
+            }
+            finally { doc.Close(true); }
+        }
+        [Test]
+        public void ParameterDoesNotExist_Document_returnsNull()
         {
             var doc = tests.TestUtilities.CreatePartDocument();
 
