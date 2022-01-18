@@ -499,7 +499,7 @@ namespace InventorShims
         /// <param name="selectSet">Inventor.SelectionSet</param>
         /// <returns>IEnumerable Document</returns>
         /// <exception cref="System.ArgumentNullException">Throws an error if the selection set is empty.</exception>
-        public static IEnumerable<Document> GetDocuments(this SelectSet selectSet)
+        public static IEnumerable<Document> EnumerateDocuments(this SelectSet selectSet)
         {
             if (selectSet.Count == 0)
                 throw new System.ArgumentNullException("The selection set was empty.");
@@ -520,7 +520,7 @@ namespace InventorShims
         /// </summary>
         /// <param name="documentDiscriptors"></param>
         /// <returns>IEnumerable Document</returns>
-        public static IEnumerable<Document> GetDocuments(this IEnumerable<DocumentDescriptor> documentDiscriptors)
+        public static IEnumerable<Document> EnumerateDocuments(this IEnumerable<DocumentDescriptor> documentDiscriptors)
         {
             foreach (DocumentDescriptor document in documentDiscriptors)
             {
@@ -536,7 +536,7 @@ namespace InventorShims
         /// </summary>
         /// <param name="document"></param>
         /// <returns></returns>
-        public static IEnumerable<Document> GetAllReferencedDocuments(this Document document)
+        public static IEnumerable<Document> EnumerateAllReferencedDocuments(this Document document)
         {
             //keep calling method on document to get the next reference
             foreach (Document doc in document.AllReferencedDocuments)
@@ -548,7 +548,7 @@ namespace InventorShims
         /// </summary>
         /// <param name="document"></param>
         /// <returns></returns>
-        public static IEnumerable<Document> GetAllReferencedDocuments(this AssemblyDocument document)
+        public static IEnumerable<Document> EnumerateAllReferencedDocuments(this AssemblyDocument document)
         {
             foreach (Document doc in document.AllReferencedDocuments)
                 yield return doc;
@@ -559,7 +559,7 @@ namespace InventorShims
         /// </summary>
         /// <param name="document"></param>
         /// <returns></returns>
-        public static IEnumerable<Document> GetAllReferencedDocuments(this PresentationDocument document)
+        public static IEnumerable<Document> EnumerateAllReferencedDocuments(this PresentationDocument document)
         {
             foreach (Document doc in document.AllReferencedDocuments)
                 yield return doc;
@@ -570,7 +570,7 @@ namespace InventorShims
         /// </summary>
         /// <param name="document"></param>
         /// <returns></returns>
-        public static IEnumerable<Document> GetAllReferencedDocuments(this PartDocument document)
+        public static IEnumerable<Document> EnumerateAllReferencedDocuments(this PartDocument document)
         {
             foreach (Document doc in document.AllReferencedDocuments)
                 yield return doc;
@@ -581,7 +581,7 @@ namespace InventorShims
         /// </summary>
         /// <param name="document"></param>
         /// <returns></returns>
-        public static IEnumerable<Document> GetAllReferencedDocuments(this DrawingDocument document)
+        public static IEnumerable<Document> EnumerateAllReferencedDocuments(this DrawingDocument document)
         {
             foreach (Document doc in document.AllReferencedDocuments)
                 yield return doc;
@@ -592,7 +592,7 @@ namespace InventorShims
         /// </summary>
         /// <param name="document"></param>
         /// <returns></returns>
-        public static IEnumerable<Document> GetReferencedDocuments(this Document document)
+        public static IEnumerable<Document> EnumerateReferencedDocuments(this Document document)
         {
             foreach (Document doc in document.ReferencedDocuments)
                 yield return doc;
@@ -603,7 +603,7 @@ namespace InventorShims
         /// </summary>
         /// <param name="document"></param>
         /// <returns></returns>
-        public static IEnumerable<Document> GetReferencedDocuments(this AssemblyDocument document)
+        public static IEnumerable<Document> EnumerateReferencedDocuments(this AssemblyDocument document)
         {
             foreach (Document doc in document.ReferencedDocuments)
                 yield return doc;
@@ -614,7 +614,7 @@ namespace InventorShims
         /// </summary>
         /// <param name="document"></param>
         /// <returns></returns>
-        public static IEnumerable<Document> GetReferencedDocuments(this PresentationDocument document)
+        public static IEnumerable<Document> EnumerateReferencedDocuments(this PresentationDocument document)
         {
             foreach (Document doc in document.ReferencedDocuments)
                 yield return doc;
@@ -625,7 +625,7 @@ namespace InventorShims
         /// </summary>
         /// <param name="document"></param>
         /// <returns></returns>
-        public static IEnumerable<Document> GetReferencedDocuments(this PartDocument document)
+        public static IEnumerable<Document> EnumerateReferencedDocuments(this PartDocument document)
         {
             foreach (Document doc in document.ReferencedDocuments)
                 yield return doc;
@@ -636,7 +636,7 @@ namespace InventorShims
         /// </summary>
         /// <param name="document"></param>
         /// <returns></returns>
-        public static IEnumerable<Document> GetReferencedDocuments(this DrawingDocument document)
+        public static IEnumerable<Document> EnumerateReferencedDocuments(this DrawingDocument document)
         {
             foreach (Document doc in document.ReferencedDocuments)
                 yield return doc;
@@ -647,7 +647,7 @@ namespace InventorShims
         /// </summary>
         /// <param name="document"></param>
         /// <returns></returns>
-        public static IEnumerable<Document> GetReferencingDocuments(this Document document)
+        public static IEnumerable<Document> EnumerateReferencingDocuments(this Document document)
         {
             foreach (Document doc in document.ReferencingDocuments)
                 yield return doc;
@@ -658,7 +658,7 @@ namespace InventorShims
         /// </summary>
         /// <param name="document"></param>
         /// <returns></returns>
-        public static IEnumerable<Document> GetReferencingDocuments(this AssemblyDocument document)
+        public static IEnumerable<Document> EnumerateReferencingDocuments(this AssemblyDocument document)
         {
             foreach (Document doc in document.ReferencingDocuments)
                 yield return doc;
@@ -669,7 +669,7 @@ namespace InventorShims
         /// </summary>
         /// <param name="document"></param>
         /// <returns></returns>
-        public static IEnumerable<Document> GetReferencingDocuments(this PresentationDocument document)
+        public static IEnumerable<Document> EnumerateReferencingDocuments(this PresentationDocument document)
         {
             foreach (Document doc in document.ReferencingDocuments)
                 yield return doc;
@@ -680,7 +680,7 @@ namespace InventorShims
         /// </summary>
         /// <param name="document"></param>
         /// <returns></returns>
-        public static IEnumerable<Document> GetReferencingDocuments(this PartDocument document)
+        public static IEnumerable<Document> EnumerateReferencingDocuments(this PartDocument document)
         {
             foreach (Document doc in document.ReferencingDocuments)
                 yield return doc;
@@ -691,7 +691,7 @@ namespace InventorShims
         /// </summary>
         /// <param name="document"></param>
         /// <returns></returns>
-        public static IEnumerable<Document> GetReferencingDocuments(this DrawingDocument document)
+        public static IEnumerable<Document> EnumerateReferencingDocuments(this DrawingDocument document)
         {
             foreach (Document doc in document.ReferencingDocuments)
                 yield return doc;
@@ -858,7 +858,7 @@ namespace InventorShims
         /// </summary>
         /// <param name="document"></param>
         /// <returns></returns>
-        public static IEnumerable<DocumentDescriptor> GetReferencedDocumentDescriptors(this Document document)
+        public static IEnumerable<DocumentDescriptor> EnumerateReferencedDocumentDescriptors(this Document document)
         {
             foreach (DocumentDescriptor dd in document.ReferencedDocumentDescriptors)
                 yield return dd;
@@ -869,7 +869,7 @@ namespace InventorShims
         /// </summary>
         /// <param name="document"></param>
         /// <returns></returns>
-        public static IEnumerable<DocumentDescriptor> GetReferencedDocumentDescriptors(this AssemblyDocument document)
+        public static IEnumerable<DocumentDescriptor> EnumerateReferencedDocumentDescriptors(this AssemblyDocument document)
         {
             foreach (DocumentDescriptor dd in document.ReferencedDocumentDescriptors)
                 yield return dd;
@@ -880,7 +880,7 @@ namespace InventorShims
         /// </summary>
         /// <param name="document"></param>
         /// <returns></returns>
-        public static IEnumerable<DocumentDescriptor> GetReferencedDocumentDescriptors(this PresentationDocument document)
+        public static IEnumerable<DocumentDescriptor> EnumerateReferencedDocumentDescriptors(this PresentationDocument document)
         {
             foreach (DocumentDescriptor dd in document.ReferencedDocumentDescriptors)
                 yield return dd;
@@ -891,7 +891,7 @@ namespace InventorShims
         /// </summary>
         /// <param name="document"></param>
         /// <returns></returns>
-        public static IEnumerable<DocumentDescriptor> GetReferencedDocumentDescriptors(this PartDocument document)
+        public static IEnumerable<DocumentDescriptor> EnumerateReferencedDocumentDescriptors(this PartDocument document)
         {
             foreach (DocumentDescriptor dd in document.ReferencedDocumentDescriptors)
                 yield return dd;
@@ -902,7 +902,7 @@ namespace InventorShims
         /// </summary>
         /// <param name="document"></param>
         /// <returns></returns>
-        public static IEnumerable<DocumentDescriptor> GetReferencedDocumentDescriptors(this DrawingDocument document)
+        public static IEnumerable<DocumentDescriptor> EnumerateReferencedDocumentDescriptors(this DrawingDocument document)
         {
             foreach (DocumentDescriptor dd in document.ReferencedDocumentDescriptors)
                 yield return dd;
@@ -913,7 +913,7 @@ namespace InventorShims
         /// </summary>
         /// <param name="document"></param>
         /// <returns></returns>
-        public static IEnumerable<DocumentDescriptor> GetAllLeafOccurrencesDocumentDescriptors(this AssemblyDocument document)
+        public static IEnumerable<DocumentDescriptor> EnumerateAllLeafOccurrencesDocumentDescriptors(this AssemblyDocument document)
         {
             var componentDefinition = document.ComponentDefinition;
             var leafOccurences = componentDefinition.Occurrences.AllLeafOccurrences;
@@ -930,7 +930,7 @@ namespace InventorShims
 
         private static void iEnumerableSmpleCode(this Document document)
         {
-            var test = document.GetAllReferencedDocuments()
+            var test = document.EnumerateAllReferencedDocuments()
                 .RemoveNonNativeDocuments()
                 .Where(s => s.IsModifiable)
                 .Where(s => s.IsPart())
@@ -943,30 +943,30 @@ namespace InventorShims
                 i.SetPropertyValue("Author", "Bob");
             }
 
-            document.SelectSet.GetDocuments()
+            document.SelectSet.EnumerateDocuments()
                 .Where(s => s.IsModifiable)
                 .PartDocuments()
                 .Distinct()
                 .ToList()
                 .ForEach(d => d.SetAttributeValue("MyAttribSet", "Attribute2", "Value"));
 
-            var justTheAssemblyDocs = document.SelectSet.GetDocuments()
+            var justTheAssemblyDocs = document.SelectSet.EnumerateDocuments()
                 .AssemblyDocuments();
 
-            var notTheAssemblyDocs = document.GetAllReferencedDocuments()
+            var notTheAssemblyDocs = document.EnumerateAllReferencedDocuments()
                 .Where(s => !s.IsAssembly());
 
-            var JustCustomCCPartDocs = document.GetAllReferencedDocuments()
+            var JustCustomCCPartDocs = document.EnumerateAllReferencedDocuments()
                 .PartDocuments()
                 .Where(d => d.IsCustomContentCenter());
 
-            var JustCustomCCDocs = document.GetAllReferencedDocuments()
+            var JustCustomCCDocs = document.EnumerateAllReferencedDocuments()
                 .Where(d => d.IsCustomContentCenter());
 
-            var count = document.GetReferencedDocumentDescriptors()
+            var count = document.EnumerateReferencedDocumentDescriptors()
                 .Where(s => !s.ReferenceMissing)
                 .Where(s => !s.ReferenceSuppressed)
-                .GetDocuments()
+                .EnumerateDocuments()
                 .PartDocuments()
                 .Count();
         }
