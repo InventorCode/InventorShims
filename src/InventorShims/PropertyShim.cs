@@ -114,7 +114,7 @@ namespace InventorShims
         /// <param name="propertyName"></param>
         /// <returns></returns>
         public static object GetPropertyValue(this AssemblyDocument document, string propertyName)
-            => GetPropertyValue((Document)document, propertyName, null);
+            => GetPropertyValue((Document)document, propertyName);
 
         /// <summary>
         /// Returns the iProperty Value for a provided DrawingDocument and propertyName. Short signature.
@@ -123,7 +123,7 @@ namespace InventorShims
         /// <param name="propertyName"></param>
         /// <returns></returns>
         public static object GetPropertyValue(this DrawingDocument document, string propertyName)
-            => GetPropertyValue((Document)document, propertyName, null);
+            => GetPropertyValue((Document)document, propertyName);
 
         /// <summary>
         /// Returns the iProperty Value for a provided PresentationDocument and propertyName. Short signature.
@@ -132,7 +132,7 @@ namespace InventorShims
         /// <param name="propertyName"></param>
         /// <returns></returns>
         public static object GetPropertyValue(this PresentationDocument document, string propertyName)
-            => GetPropertyValue((Document)document, propertyName, null);
+            => GetPropertyValue((Document)document, propertyName);
 
         /// <summary>
         /// Returns the iProperty Value for a provided PartDocument and propertyName. Short signature.
@@ -141,7 +141,7 @@ namespace InventorShims
         /// <param name="propertyName"></param>
         /// <returns></returns>
         public static object GetPropertyValue(this PartDocument document, string propertyName)
-            => GetPropertyValue((Document)document, propertyName, null);
+            => GetPropertyValue((Document)document, propertyName);
 
         #endregion GetPropertyValue Short Form
 
