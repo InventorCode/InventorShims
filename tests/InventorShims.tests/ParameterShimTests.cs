@@ -1,6 +1,7 @@
 ﻿using Inventor;
 using InventorShims;
 using NUnit.Framework;
+using System.Linq;
 
 namespace ParameterShim_Tests
 {
@@ -439,6 +440,77 @@ namespace ParameterShim_Tests
     }
 
     [TestFixture]
+    public class EnumerateParameters
+    {
+        [Test]
+        public void Document_works()
+        {
+            var doc = tests.TestUtilities.CreatePartDocument();
+
+            doc.SetParameterValue("testing1", "16", "cm");
+            doc.SetParameterValue("testing2", "16", "cm");
+            doc.SetParameterValue("testing3", "16", "cm");
+            doc.SetParameterValue("testing4", "16", "cm");
+
+            var test = doc.EnumerateParameters().Count();
+
+            try { Assert.AreEqual(test, 4); }
+            finally { doc.Close(true); }
+        }
+
+        [Test]
+        public void PartDocument_works()
+        {
+            var doc = tests.TestUtilities.CreatePartDocument();
+            PartDocument doc2 = (PartDocument)doc;
+
+            doc2.SetParameterValue("testing1", "16", "cm");
+            doc2.SetParameterValue("testing2", "16", "cm");
+            doc2.SetParameterValue("testing3", "16", "cm");
+            doc2.SetParameterValue("testing4", "16", "cm");
+
+            var test = doc2.EnumerateParameters().Count();
+
+            try { Assert.AreEqual(test, 4); }
+            finally { doc2 = null; doc.Close(true); }
+        }
+
+        [Test]
+        public void AssemblyDocument_works()
+        {
+            var doc = tests.TestUtilities.CreateAssemblyDocument();
+            AssemblyDocument doc2 = (AssemblyDocument)doc;
+
+            doc2.SetParameterValue("testing1", "16", "cm");
+            doc2.SetParameterValue("testing2", "16", "cm");
+            doc2.SetParameterValue("testing3", "16", "cm");
+            doc2.SetParameterValue("testing4", "16", "cm");
+
+            var test = doc2.EnumerateParameters().Count();
+
+            try { Assert.AreEqual(test, 4); }
+            finally { doc2 = null; doc.Close(true); }
+        }
+
+        [Test]
+        public void DrawingDocument_works()
+        {
+            var doc = tests.TestUtilities.CreateDrawingDocument();
+            DrawingDocument doc2 = (DrawingDocument)doc;
+
+            doc2.SetParameterValue("testing1", "16", "cm");
+            doc2.SetParameterValue("testing2", "16", "cm");
+            doc2.SetParameterValue("testing3", "16", "cm");
+            doc2.SetParameterValue("testing4", "16", "cm");
+
+            var test = doc2.EnumerateParameters().Count();
+
+            try { Assert.AreEqual(test, 4); }
+            finally { doc2 = null; doc.Close(true); }
+        }
+    }
+
+        [TestFixture]
     public class GetParameterValue
     {
         [Test]
