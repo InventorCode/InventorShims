@@ -56,7 +56,6 @@ namespace InventorShims
         public static void SetParameterValue(this DrawingDocument document, string parameterName, string parameterValue, string units, bool clobberFlag = true)
     => SetParameterValue((Document)document, parameterName, parameterValue, units, clobberFlag);
 
-
         /// <summary>
         /// Sets the value of a text parameter, or creates one if one does not exist.
         /// <code></code>VB sample:<code>SetParameterValue(oDoc, "ParameterName", "This is a text value!"))</code>
@@ -101,7 +100,6 @@ namespace InventorShims
         public static void SetParameterValue(this DrawingDocument document, string parameterName, string parameterValue, bool clobberFlag = true)
     => SetParameterValue((Document)document, parameterName, parameterValue, clobberFlag);
 
-
         /// <summary>
         /// Sets the value of a boolean parameter, or creates one if one does not exist.
         /// <code></code>VB sample:<code>SetParameterValue(oDoc, "ParameterName", true))</code>
@@ -145,7 +143,6 @@ namespace InventorShims
 
         public static void SetParameterValue(this DrawingDocument document, string parameterName, bool parameterValue, bool clobberFlag = true)
             => SetParameterValue((Document)document, parameterName, parameterValue, clobberFlag);
-
 
         /// <summary>
         /// Gets the value of a numeric parameter.
@@ -193,7 +190,6 @@ namespace InventorShims
         public static string GetParameterValue(this DrawingDocument document, string parameterName)
             => GetParameterValue((Document)document, parameterName);
 
-
         /// <summary>
         /// Removes a parameter from a Document object if it exists.
         ///   <code></code>VB sample:<code>RemoveParameter(oDoc, "ParameterName")</code>
@@ -233,7 +229,6 @@ namespace InventorShims
         public static void RemoveParameter(this DrawingDocument document, string parameterName)
             => RemoveParameter((Document)document, parameterName);
 
-
         /// <summary>
         /// Returns a parameter object from a document object specified by name.
         ///  <code></code>VB sample:<code>Dim oParameter As Parameter = GetParameter(oDoc, "ParameterName")</code>
@@ -256,8 +251,10 @@ namespace InventorShims
 
         public static Parameter GetParameter(this AssemblyDocument document, string parameterName)
             => GetParameter((Document)document, parameterName);
+
         public static Parameter GetParameter(this PartDocument document, string parameterName)
             => GetParameter((Document)document, parameterName);
+
         public static Parameter GetParameter(this DrawingDocument document, string parameterName)
             => GetParameter((Document)document, parameterName);
 
@@ -298,10 +295,48 @@ namespace InventorShims
 
         public static Parameters GetParameters(this AssemblyDocument document)
             => document.ComponentDefinition.Parameters;
+
         public static Parameters GetParameters(this PartDocument document)
             => document.ComponentDefinition.Parameters;
+
         public static Parameters GetParameters(this DrawingDocument document)
             => document.Parameters;
+
+        public static IEnumerable<Parameter> EnumerateParameters(this Document document)
+        {
+            Parameters parameters = document.GetParameters();
+            foreach (Parameter parameter in parameters)
+            {
+                yield return parameter;
+            }
+        }
+
+        public static IEnumerable<Parameter> EnumerateParameters(this AssemblyDocument document)
+        {
+            Parameters parameters = document.GetParameters();
+            foreach (Parameter parameter in parameters)
+            {
+                yield return parameter;
+            }
+        }
+
+        public static IEnumerable<Parameter> EnumerateParameters(this PartDocument document)
+        {
+            Parameters parameters = document.GetParameters();
+            foreach (Parameter parameter in parameters)
+            {
+                yield return parameter;
+            }
+        }
+
+        public static IEnumerable<Parameter> EnumerateParameters(this DrawingDocument document)
+        {
+            Parameters parameters = document.GetParameters();
+            foreach (Parameter parameter in parameters)
+            {
+                yield return parameter;
+            }
+        }
 
         /// <summary>
         /// Tests if the provided parameter is writable.  Only kModelParameters and kUserParameters return true.
@@ -346,11 +381,12 @@ namespace InventorShims
 
         public static bool ParameterIsWritable(AssemblyDocument document, string parameterName)
             => ParameterIsWritable(document, parameterName);
+
         public static bool ParameterIsWritable(PartDocument document, string parameterName)
             => ParameterIsWritable(document, parameterName);
+
         public static bool ParameterIsWritable(DrawingDocument document, string parameterName)
             => ParameterIsWritable(document, parameterName);
-
 
         /// <summary>
         /// Return a list of parameter names within the specified document.
@@ -366,10 +402,10 @@ namespace InventorShims
 
                 case DocumentTypeEnum.kAssemblyDocumentObject:
                     return GetParameterNames((AssemblyDocument)document);
-                
+
                 case DocumentTypeEnum.kDrawingDocumentObject:
                     return GetParameterNames((DrawingDocument)document);
-                
+
                 default:
                     throw new Exception("Unknown type of document passed to GetParameterNames");
             }
