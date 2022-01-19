@@ -4,7 +4,7 @@ using Nuke.Common.Git;
 using Nuke.Common.IO;
 using Nuke.Common.ProjectModel;
 using Nuke.Common.Tooling;
-using Nuke.Common.Tools.DocFX;
+//using Nuke.Common.Tools.DocFX;
 using Nuke.Common.Tools.DotCover;
 using Nuke.Common.Tools.DotNet;
 using Nuke.Common.Tools.GitVersion;
@@ -12,19 +12,16 @@ using Nuke.Common.Tools.MSBuild;
 using Nuke.Common.Tools.NuGet;
 using Nuke.Common.Utilities.Collections;
 using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using static Nuke.Common.ChangeLog.ChangelogTasks;
 using static Nuke.Common.IO.FileSystemTasks;
 using static Nuke.Common.IO.PathConstruction;
-using static Nuke.Common.Tools.DocFX.DocFXTasks;
+//using static Nuke.Common.Tools.DocFX.DocFXTasks;
 using static Nuke.Common.Tools.DotNet.DotNetTasks;
 using static Nuke.Common.Tools.MSBuild.MSBuildTasks;
 using static Nuke.Common.Tools.NuGet.NuGetTasks;
-
-//using Nuke.GitHub;
-//using static Nuke.GitHub.GitHubTasks;
-//using System.Threading.Tasks;
 
 [CheckBuildProjectConfigurations]
 internal class Build : NukeBuild
@@ -32,7 +29,7 @@ internal class Build : NukeBuild
     // Console application entry. Also defines the default target.
     public static int Main() => Execute<Build>(x => x.Compile);
 
-    //[GitVersion] private readonly GitVersion GitVersion;
+    //    [GitVersion] private readonly GitVersion GitVersion;
     // Semantic versioning. Must have 'GitVersion.CommandLine' referenced.
 
     [GitRepository] private readonly GitRepository GitRepository;
@@ -46,12 +43,9 @@ internal class Build : NukeBuild
     private readonly Configuration Configuration = IsLocalBuild ? Configuration.Debug : Configuration.Release;
 
     [Solution] private readonly Solution Solution;
-    [GitVersion(Framework = "netcoreapp3.1")] private readonly GitVersion GitVersion;
 
-    [PackageExecutable(
-    packageId: "GitVersion.CommandLine",
-    packageExecutable: "gitversion.exe")]
-    private readonly Tool gVersion;
+    [GitVersion(Framework = "net5.0")]
+    private readonly GitVersion GitVersion;
 
     private AbsolutePath SourceDirectory => RootDirectory / "src";
     private AbsolutePath ProjectPath => RootDirectory / "src" / "InventorShims" / "InventorShims.csproj";
@@ -59,70 +53,70 @@ internal class Build : NukeBuild
     private AbsolutePath OutputDirectory => RootDirectory / "artifacts";
 
     private Target Clean => _ => _
-         .Before(Restore)
-         .Executes(() =>
-         {
-             SourceDirectory.GlobDirectories("**/bin", "**/obj").ForEach(DeleteDirectory);
-             TestsDirectory.GlobDirectories("**/bin", "**/obj").ForEach(DeleteDirectory);
-             EnsureCleanDirectory(OutputDirectory);
-         });
+           .Before(Restore)
+           .Executes(() =>
+           {
+               SourceDirectory.GlobDirectories("**/bin", "**/obj").ForEach(DeleteDirectory);
+               TestsDirectory.GlobDirectories("**/bin", "**/obj").ForEach(DeleteDirectory);
+               EnsureCleanDirectory(OutputDirectory);
+           });
 
     private Target Restore => _ => _
-         .Executes(() =>
-         {
-             MSBuild(s => s
-                 .SetTargetPath(Solution)
-                 .SetTargets("Restore"));
-         });
+           .Executes(() =>
+           {
+               MSBuild(s => s
+                   .SetTargetPath(Solution)
+                   .SetTargets("Restore"));
+           });
 
     private Target Compile => _ => _
-         .DependsOn(Restore)
-         .Executes(() =>
-         {
-             gVersion($"/UpdateAssemblyInfo");
-
-             MSBuild(s => s
-                 .SetTargetPath(Solution)
-                 .SetTargets("Rebuild")
-                 .SetConfiguration("Release")
-                 .SetAssemblyVersion(GitVersion.AssemblySemVer)
-                 .SetFileVersion(GitVersion.AssemblySemFileVer)
-                 .SetInformationalVersion(GitVersion.InformationalVersion)
-                 .SetMaxCpuCount(Environment.ProcessorCount)
-                 .SetNodeReuse(IsLocalBuild));
-         });
-
-    private string NuGetReleaseNotes => GetNuGetReleaseNotes(RootDirectory / "CHANGELOG.md");
+           .DependsOn(Restore)
+           .Executes(() =>
+           {
+              MSBuild(s => s
+                    .SetTargetPath(Solution)
+                    .SetTargets("Rebuild")
+                    .SetConfiguration("Release")
+                    .SetAssemblyVersion(GitVersion.AssemblySemVer)
+                    .SetFileVersion(GitVersion.AssemblySemFileVer)
+                    .SetInformationalVersion(GitVersion.InformationalVersion)
+                    .SetMaxCpuCount(Environment.ProcessorCount)
+                    .SetNodeReuse(IsLocalBuild));
+           });
 
     private Target Pack => _ => _
-     .DependsOn(Compile)
-     .Executes(() =>
-     {
-         DotNetPack(s => s
-             .SetProject(ProjectPath)
-             .SetVersion(GitVersion.NuGetVersionV2)
-             .SetPackageReleaseNotes(GetNuGetReleaseNotes(ChangeLogFile, GitRepository))
-             .SetOutputDirectory(OutputDirectory)
-             ); ;
-     });
+       .DependsOn(Compile)
+       .Executes(() =>
+       {
+           DotNetPack(s => s
+               .SetProject(ProjectPath)
+               .SetVersion(GitVersion.NuGetVersionV2)
+               .SetOutputDirectory(OutputDirectory)
+               ); ;
+       });
+
+    IReadOnlyCollection<AbsolutePath> Packages => OutputDirectory.GlobFiles("*.nupkg");
 
     private Target Push => _ => _
-     .DependsOn(Pack)
-     .Requires(() => MyGetSource)
-     .Requires(() => MyGetApiKey)
-     .Executes(() =>
-     {
-         GlobFiles(OutputDirectory, "*.nupkg").NotEmpty()
-             .Where(x => !x.EndsWith("symbols.nupkg"))
-             .ForEach(x =>
-             {
-                 NuGetPush(s => s
-                     .SetTargetPath(x)
-                     .SetSource(MyGetSource)
-                     .SetApiKey(MyGetApiKey)
-                     );
-             });
-     });
+       .DependsOn(Pack)
+       .Consumes(Pack)
+       .Requires(() => MyGetSource)
+       .Requires(() => MyGetApiKey)
+       .Executes(() =>
+       {
+           //GlobFiles(OutputDirectory, "*.nupkg").NotEmpty()
+           //    .Where(x => !x.EndsWith("symbols.nupkg"))
+           //    .ForEach(x =>
+           //    {
+                   DotNetNuGetPush(s => s
+            .SetSource(MyGetSource)
+            .SetApiKey(MyGetApiKey)
+            .CombineWith(Packages, (_, file) => _
+                .SetTargetPath(file)));
+               //});
+       });
+
+
 
     //private Target PublishGitHubRelease => _ => _
     // .DependsOn(Pack)
@@ -158,29 +152,29 @@ internal class Build : NukeBuild
     private string ContributingSource => RootDirectory / "CONTRIBUTING.md";
     private string ContributingDestination => Path.Join(RootDirectory, "docfx", "articles", "Contributing.md");
 
-    private Target BuildDocumentation => _ => _
-    .DependsOn(Clean)
-    .DependsOn(Restore)
-         .Executes(() =>
-         {
-             //Update CHANGELOG.md
-             if (File.Exists(ChangeLogDestination))
-                 File.Delete(ChangeLogDestination);
-             File.Copy(ChangeLogFile, ChangeLogDestination);
+    //private Target docs => _ => _
+    //  .DependsOn(Clean)
+    //  .DependsOn(Restore)
+    //       .Executes(() =>
+    //       {
+            //  //Update CHANGELOG.md
+            //  if (File.Exists(ChangeLogDestination))
+            //       File.Delete(ChangeLogDestination);
+            //   File.Copy(ChangeLogFile, ChangeLogDestination);
 
-             //Update CONTRIBUITNG.md
-             if (File.Exists(ContributingDestination))
-                 File.Delete(ContributingDestination);
-             File.Copy(ContributingSource, ContributingDestination);
+            //  //Update CONTRIBUITNG.md
+            //  if (File.Exists(ContributingDestination))
+            //       File.Delete(ContributingDestination);
+            //   File.Copy(ContributingSource, ContributingDestination);
 
-             //Build documentation
-             DocFXBuild(s => s
-         .SetConfigFile(RootDirectory / "docfx" / "docfx.json")
-         .EnableForceRebuild()
-         .SetOutputFolder(DocFxOutputFolder)
-         .EnableCleanupCacheHistory()
-         .SetIntermediateFolder(DocFxIntermediateFolder)
-         //.AddTemplates(DocFXTemplateFolder)
-         );
-         });
+            //  //Build documentation
+            //  DocFXBuild(s => s
+            //.SetConfigFile(RootDirectory / "docfx" / "docfx.json")
+            //.SetOutputFolder(DocFxOutputFolder)
+            //.EnableForceRebuild()
+            //.EnableCleanupCacheHistory()
+            //.SetIntermediateFolder(DocFxIntermediateFolder)
+            ////.AddTemplates(DocFXTemplateFolder)
+            //);
+           //});
 }
