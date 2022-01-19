@@ -14,14 +14,11 @@ using Nuke.Common.Utilities.Collections;
 using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using static Nuke.Common.ChangeLog.ChangelogTasks;
 using static Nuke.Common.IO.FileSystemTasks;
 using static Nuke.Common.IO.PathConstruction;
 //using static Nuke.Common.Tools.DocFX.DocFXTasks;
 using static Nuke.Common.Tools.DotNet.DotNetTasks;
 using static Nuke.Common.Tools.MSBuild.MSBuildTasks;
-using static Nuke.Common.Tools.NuGet.NuGetTasks;
 
 [CheckBuildProjectConfigurations]
 internal class Build : NukeBuild
@@ -53,70 +50,63 @@ internal class Build : NukeBuild
     private AbsolutePath OutputDirectory => RootDirectory / "artifacts";
 
     private Target Clean => _ => _
-           .Before(Restore)
-           .Executes(() =>
-           {
-               SourceDirectory.GlobDirectories("**/bin", "**/obj").ForEach(DeleteDirectory);
-               TestsDirectory.GlobDirectories("**/bin", "**/obj").ForEach(DeleteDirectory);
-               EnsureCleanDirectory(OutputDirectory);
-           });
+             .Before(Restore)
+             .Executes(() =>
+             {
+                 SourceDirectory.GlobDirectories("**/bin", "**/obj").ForEach(DeleteDirectory);
+                 TestsDirectory.GlobDirectories("**/bin", "**/obj").ForEach(DeleteDirectory);
+                 EnsureCleanDirectory(OutputDirectory);
+             });
 
     private Target Restore => _ => _
-           .Executes(() =>
-           {
-               MSBuild(s => s
-                   .SetTargetPath(Solution)
-                   .SetTargets("Restore"));
-           });
+             .Executes(() =>
+             {
+                 MSBuild(s => s
+                     .SetTargetPath(Solution)
+                     .SetTargets("Restore"));
+             });
 
     private Target Compile => _ => _
-           .DependsOn(Restore)
-           .Executes(() =>
-           {
-              MSBuild(s => s
-                    .SetTargetPath(Solution)
-                    .SetTargets("Rebuild")
-                    .SetConfiguration("Release")
-                    .SetAssemblyVersion(GitVersion.AssemblySemVer)
-                    .SetFileVersion(GitVersion.AssemblySemFileVer)
-                    .SetInformationalVersion(GitVersion.InformationalVersion)
-                    .SetMaxCpuCount(Environment.ProcessorCount)
-                    .SetNodeReuse(IsLocalBuild));
-           });
+             .DependsOn(Restore)
+             .Executes(() =>
+             {
+                 MSBuild(s => s
+                       .SetTargetPath(Solution)
+                       .SetTargets("Rebuild")
+                       .SetConfiguration("Release")
+                       .SetAssemblyVersion(GitVersion.AssemblySemVer)
+                       .SetFileVersion(GitVersion.AssemblySemFileVer)
+                       .SetInformationalVersion(GitVersion.InformationalVersion)
+                       .SetMaxCpuCount(Environment.ProcessorCount)
+                       .SetNodeReuse(IsLocalBuild));
+             });
 
     private Target Pack => _ => _
-       .DependsOn(Compile)
-       .Executes(() =>
-       {
-           DotNetPack(s => s
-               .SetProject(ProjectPath)
-               .SetVersion(GitVersion.NuGetVersionV2)
-               .SetOutputDirectory(OutputDirectory)
-               ); ;
-       });
+         .DependsOn(Compile)
+         .Executes(() =>
+         {
+             DotNetPack(s => s
+                 .SetProject(ProjectPath)
+                 .SetVersion(GitVersion.NuGetVersionV2)
+                 .SetOutputDirectory(OutputDirectory)
+                 ); ;
+         });
 
-    IReadOnlyCollection<AbsolutePath> Packages => OutputDirectory.GlobFiles("*.nupkg");
+    private IReadOnlyCollection<AbsolutePath> Packages => OutputDirectory.GlobFiles("*.nupkg");
 
     private Target Push => _ => _
-       .DependsOn(Pack)
-       .Consumes(Pack)
-       .Requires(() => MyGetSource)
-       .Requires(() => MyGetApiKey)
-       .Executes(() =>
-       {
-           //GlobFiles(OutputDirectory, "*.nupkg").NotEmpty()
-           //    .Where(x => !x.EndsWith("symbols.nupkg"))
-           //    .ForEach(x =>
-           //    {
-                   DotNetNuGetPush(s => s
-            .SetSource(MyGetSource)
-            .SetApiKey(MyGetApiKey)
-            .CombineWith(Packages, (_, file) => _
+         .DependsOn(Pack)
+         .Consumes(Pack)
+         .Requires(() => MyGetSource)
+         .Requires(() => MyGetApiKey)
+         .Executes(() =>
+         {
+             DotNetNuGetPush(s => s
+                .SetSource(MyGetSource)
+                .SetApiKey(MyGetApiKey)
+                .CombineWith(Packages, (_, file) => _
                 .SetTargetPath(file)));
-               //});
-       });
-
-
+         });
 
     //private Target PublishGitHubRelease => _ => _
     // .DependsOn(Pack)
@@ -144,37 +134,39 @@ internal class Build : NukeBuild
     //         .SetToken(GitHubAuthenticationToken));
     // });
 
-    private string DocFxOutputFolder => RootDirectory / "doc";
-    private string DocFxIntermediateFolder => TemporaryDirectory / "docfx";
-    private string DocFXTemplateFolder => RootDirectory / "docfx" / "templates" / "inventor-shims";
-    private string ChangeLogFile => RootDirectory / "CHANGELOG.md";
+    private AbsolutePath DocFxRoot => RootDirectory / "docfx";
+    private AbsolutePath DocFxOutputFolder => RootDirectory / "docs";
+    private AbsolutePath DocFxIntermediateFolder => TemporaryDirectory / "docfx";
+    private AbsolutePath DocFXTemplateFolder => RootDirectory / "docfx" / "templates" / "inventor-shims";
+    private AbsolutePath ChangeLogFile => RootDirectory / "CHANGELOG.md";
     private string ChangeLogDestination => Path.Join(RootDirectory, "docfx", "articles", "CHANGELOG.md");
-    private string ContributingSource => RootDirectory / "CONTRIBUTING.md";
+    private AbsolutePath ContributingSource => RootDirectory / "CONTRIBUTING.md";
     private string ContributingDestination => Path.Join(RootDirectory, "docfx", "articles", "Contributing.md");
+    private AbsolutePath DocFxFile => DocFxRoot / "docfx.json";
 
     //private Target docs => _ => _
-    //  .DependsOn(Clean)
-    //  .DependsOn(Restore)
-    //       .Executes(() =>
-    //       {
-            //  //Update CHANGELOG.md
-            //  if (File.Exists(ChangeLogDestination))
-            //       File.Delete(ChangeLogDestination);
-            //   File.Copy(ChangeLogFile, ChangeLogDestination);
+    //    .DependsOn(Clean)
+    //    .DependsOn(Restore)
+    //         .Executes(() =>
+    //         {
+    //            //Update CHANGELOG.md
+    //            if (File.Exists(ChangeLogDestination))
+    //                 File.Delete(ChangeLogDestination);
+    //             File.Copy(ChangeLogFile, ChangeLogDestination);
 
-            //  //Update CONTRIBUITNG.md
-            //  if (File.Exists(ContributingDestination))
-            //       File.Delete(ContributingDestination);
-            //   File.Copy(ContributingSource, ContributingDestination);
+    //            //Update CONTRIBUITNG.md
+    //            if (File.Exists(ContributingDestination))
+    //                 File.Delete(ContributingDestination);
+    //             File.Copy(ContributingSource, ContributingDestination);
 
-            //  //Build documentation
-            //  DocFXBuild(s => s
-            //.SetConfigFile(RootDirectory / "docfx" / "docfx.json")
-            //.SetOutputFolder(DocFxOutputFolder)
-            //.EnableForceRebuild()
-            //.EnableCleanupCacheHistory()
-            //.SetIntermediateFolder(DocFxIntermediateFolder)
-            ////.AddTemplates(DocFXTemplateFolder)
-            //);
-           //});
+    //            //Build documentation
+    //            DocFXBuild(s => s
+    //           .SetConfigFile(RootDirectory / "docfx" / "docfx.json")
+    //           .SetOutputFolder(DocFxOutputFolder)
+    //           .EnableForceRebuild()
+    //           .EnableCleanupCacheHistory()
+    //           .SetIntermediateFolder(DocFxIntermediateFolder)
+    //           //.AddTemplates(DocFXTemplateFolder)
+    //           );
+    //         });
 }

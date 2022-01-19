@@ -82,7 +82,6 @@
             "enum": [
               "Clean",
               "Compile",
-              "docs",
               "Pack",
               "Push",
               "Restore"
@@ -101,7 +100,6 @@
             "enum": [
               "Clean",
               "Compile",
-              "docs",
               "Pack",
               "Push",
               "Restore"
