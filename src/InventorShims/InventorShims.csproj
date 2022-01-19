@@ -12,6 +12,9 @@
     <PackageTags>Autodesk Inventor API</PackageTags>
     <Description>A collection of extension APIs for Autodesk Inventor.</Description>
     <Copyright>Copyright 2021</Copyright>
+	  <PackageReleaseNotes>
+		  Changelog at https:=//github.com/InventorCode/InventorShims/blob/feat/fluentdocs/CHANGELOG.md
+	  </PackageReleaseNotes>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
