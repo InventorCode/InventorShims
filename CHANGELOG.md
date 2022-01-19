@@ -1,4 +1,4 @@
-## [Unreleased](https://github.com/InventorCode/InventorShims/releases/tag/2.40) (2022-01-??)
+## [2.0.0](https://github.com/InventorCode/InventorShims/releases/tag/v2.0.0) (2022-01-??)
 
 ### Added
 
@@ -12,7 +12,7 @@
     - PartDocument
     - AssemblyDocument
     - DrawingDocument
-
+- Ilogic code samples for some of the added extension methods.
 - Extension methods for use with LINQ and fluent design.
 
 #### New general extension methods:
