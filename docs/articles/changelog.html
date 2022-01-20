@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>1.3.1 (2021-09-03) | InventorShims Documentation </title>
+    <title>2.0.0 (2022-01-??) | InventorShims Documentation </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="1.3.1 (2021-09-03) | InventorShims Documentation ">
+    <meta name="title" content="2.0.0 (2022-01-??) | InventorShims Documentation ">
     <meta name="generator" content="docfx 2.58.9.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
@@ -67,15 +67,178 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h2 id="131-2021-09-03"><a href="https://github.com/InventorCode/InventorShims/releases/tag/1.3.1">1.3.1</a> (2021-09-03)</h2>
+<h2 id="200-2022-01-"><a href="https://github.com/InventorCode/InventorShims/releases/tag/v2.0.0">2.0.0</a> (2022-01-??)</h2>
 
 <h3 id="added">Added</h3>
+<ul>
+<li><p>PropertyShim extension methods now work on the following document types:</p>
+<ul>
+<li>PartDocument</li>
+<li>AssemblyDocument</li>
+<li>DrawingDocument</li>
+<li>PresentationDocument</li>
+</ul>
+</li>
+<li><p>ParameterShim extension methods now work with the following document types:</p>
+<ul>
+<li>PartDocument</li>
+<li>AssemblyDocument</li>
+<li>DrawingDocument</li>
+</ul>
+</li>
+<li><p>Ilogic code samples for some of the added extension methods.</p>
+</li>
+<li><p>Extension methods for use with LINQ and fluent design.</p>
+</li>
+</ul>
+<h4 id="new-general-extension-methods">New general extension methods:</h4>
+<table>
+<thead>
+<tr>
+<th>extension method</th>
+<th>on object</th>
+<th>returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>IsContentCenter</td>
+<td>Document, PartDocument, AssemblyDocument, DrawingDocument, PresentationDocument</td>
+<td>bool</td>
+</tr>
+<tr>
+<td>IsCustomContentCenter</td>
+<td>Document, PartDocument, AssemblyDocument, DrawingDocument, PresentationDocument</td>
+<td>bool</td>
+</tr>
+</tbody>
+</table>
+<h4 id="new-ienumerable-providers">New IEnumerable Providers</h4>
+<table>
+<thead>
+<tr>
+<th>extension method</th>
+<th>on object</th>
+<th>returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>EnumerateDocuments</td>
+<td>SelectSet</td>
+<td>IEnumerable&lt;Document&gt;</td>
+</tr>
+<tr>
+<td>EnumerateDocuments</td>
+<td>IEnumerable&lt;DocumentDescriptor&gt;</td>
+<td>IEnumerable&lt;Document&gt;</td>
+</tr>
+<tr>
+<td>EnumerateAllReferencedDocuments</td>
+<td>Document</td>
+<td>IEnumerable&lt;Document&gt;</td>
+</tr>
+<tr>
+<td>EnumerateAllReferencedDocuments</td>
+<td>Document, PartDocument, AssemblyDocument, DrawingDocument, PresentationDocument</td>
+<td>IEnumerable&lt;Document&gt;</td>
+</tr>
+<tr>
+<td>EnumerateReferencedDocuments</td>
+<td>Document, PartDocument, AssemblyDocument, DrawingDocument, PresentationDocument</td>
+<td>IEnumerable&lt;Document&gt;</td>
+</tr>
+<tr>
+<td>EnumerateReferencingDocuments</td>
+<td>Document, PartDocument, AssemblyDocument, DrawingDocument, PresentationDocument</td>
+<td>IEnumerable&lt;Document&gt;</td>
+</tr>
+<tr>
+<td>EnumerateReferencedDocumentDescriptors</td>
+<td>Document, PartDocument, AssemblyDocument, DrawingDocument, PresentationDocument</td>
+<td>IEnumerable&lt;DocumentDescriptors&gt;</td>
+</tr>
+<tr>
+<td>EnumerateAllLeafOccurrencesDocumentDescriptors</td>
+<td>AssemblyDocument</td>
+<td>IEnumerable&lt;DocumentDescriptors&gt;</td>
+</tr>
+<tr>
+<td>EnumerateParameters</td>
+<td>Document, PartDocument, AssemblyDocument, DrawingDocument</td>
+<td>IEnumerable&lt;Parameter&gt;</td>
+</tr>
+</tbody>
+</table>
+<h4 id="new-ienumerable-filters">New IEnumerable Filters</h4>
+<table>
+<thead>
+<tr>
+<th>extension method</th>
+<th>on object</th>
+<th>returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AssemblyDocuments</td>
+<td>IEnumerable&lt;Document&gt;</td>
+<td>IEnumerable&lt;AssemblyDocument&gt;</td>
+</tr>
+<tr>
+<td>DrawingDocuments</td>
+<td>IEnumerable&lt;Document&gt;</td>
+<td>IEnumerable&lt;DrawingDocument&gt;</td>
+</tr>
+<tr>
+<td>PresentationDocuments</td>
+<td>IEnumerable&lt;Document&gt;</td>
+<td>IEnumerable&lt;PresentationDocument&gt;</td>
+</tr>
+<tr>
+<td>PartDocuments</td>
+<td>IEnumerable&lt;Document&gt;</td>
+<td>IEnumerable&lt;PartDocument&gt;</td>
+</tr>
+<tr>
+<td>RemoveAssemblyDocuments</td>
+<td>IEnumerable&lt;Document&gt;</td>
+<td>IEnumerable&lt;Document&gt;</td>
+</tr>
+<tr>
+<td>RemoveDrawingDocuments</td>
+<td>IEnumerable&lt;Document&gt;</td>
+<td>IEnumerable&lt;Document&gt;</td>
+</tr>
+<tr>
+<td>RemovePresentationDocuments</td>
+<td>IEnumerable&lt;Document&gt;</td>
+<td>IEnumerable&lt;Document&gt;</td>
+</tr>
+<tr>
+<td>RemovePartDocuments</td>
+<td>IEnumerable&lt;Document&gt;</td>
+<td>IEnumerable&lt;Document&gt;</td>
+</tr>
+<tr>
+<td>RemoveNonNativeDocuments</td>
+<td>IEnumerable&lt;Document&gt;</td>
+<td>IEnumerable&lt;Document&gt;</td>
+</tr>
+</tbody>
+</table>
+<h3 id="changed">Changed</h3>
+<ul>
+<li>.Net Framework version bumped to 4.8</li>
+</ul>
+<h2 id="131-2021-09-03"><a href="https://github.com/InventorCode/InventorShims/releases/tag/1.3.1">1.3.1</a> (2021-09-03)</h2>
+<h3 id="added-1">Added</h3>
 <ul>
 <li>ExternalRuleDirectories object now implements the IDisposable interface, allowing the using keyword.</li>
 <li>ExternalRuleDirectories documentation.</li>
 <li>Updated Nuke Build system.</li>
 </ul>
-<h3 id="changed">Changed</h3>
+<h3 id="changed-1">Changed</h3>
 <ul>
 <li>Integration test project &quot;InventorShims.tests&quot; now uses the NUnit test framework.
 <ul>
@@ -110,7 +273,7 @@
 <li>Errant NewtonSoft.Json package reference</li>
 </ul>
 <h2 id="120-2021-08-15"><a href="https://github.com/InventorCode/InventorShims/releases/tag/1.2.0">1.2.0</a> (2021-08-15)</h2>
-<h3 id="added-1">Added</h3>
+<h3 id="added-2">Added</h3>
 <ul>
 <li>ExternalRuleDirectories object allows you to manipulate the iLogic Addin's list of External Rules Directories in a more straightforward manner.</li>
 </ul>
@@ -208,7 +371,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/InventorCode/InventorShims/blob/master/docfx/articles/changelog.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/InventorCode/InventorShims/blob/master/docfx/articles/CHANGELOG.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>
