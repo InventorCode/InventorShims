@@ -134,15 +134,15 @@ internal class Build : NukeBuild
     //         .SetToken(GitHubAuthenticationToken));
     // });
 
-    private AbsolutePath DocFxRoot => RootDirectory / "docfx";
-    private AbsolutePath DocFxOutputFolder => RootDirectory / "docs";
-    private AbsolutePath DocFxIntermediateFolder => TemporaryDirectory / "docfx";
-    private AbsolutePath DocFXTemplateFolder => RootDirectory / "docfx" / "templates" / "inventor-shims";
-    private AbsolutePath ChangeLogFile => RootDirectory / "CHANGELOG.md";
-    private string ChangeLogDestination => Path.Join(RootDirectory, "docfx", "articles", "CHANGELOG.md");
-    private AbsolutePath ContributingSource => RootDirectory / "CONTRIBUTING.md";
-    private string ContributingDestination => Path.Join(RootDirectory, "docfx", "articles", "Contributing.md");
-    private AbsolutePath DocFxFile => DocFxRoot / "docfx.json";
+    //private AbsolutePath DocFxRoot => RootDirectory / "docfx";
+    //private AbsolutePath DocFxOutputFolder => RootDirectory / "docs";
+    //private AbsolutePath DocFxIntermediateFolder => TemporaryDirectory / "docfx";
+    //private AbsolutePath DocFXTemplateFolder => RootDirectory / "docfx" / "templates" / "inventor-shims";
+    //private AbsolutePath ChangeLogFile => RootDirectory / "CHANGELOG.md";
+    //private string ChangeLogDestination => Path.Join(RootDirectory, "docfx", "articles", "CHANGELOG.md");
+    //private AbsolutePath ContributingSource => RootDirectory / "CONTRIBUTING.md";
+    //private string ContributingDestination => Path.Join(RootDirectory, "docfx", "articles", "Contributing.md");
+    //private AbsolutePath DocFxFile => DocFxRoot / "docfx.json";
 
     //private Target docs => _ => _
     //    .DependsOn(Clean)

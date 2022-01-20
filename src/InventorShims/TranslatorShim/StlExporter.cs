@@ -25,6 +25,9 @@ namespace InventorShims.TranslatorShim
         /// </summary>
         public StlResolutionEnum Resolution { get; set; } = StlResolutionEnum.Custom;
 
+        /// <summary>
+        /// 
+        /// </summary>
         public bool AllowMoveMeshNodes { get; set; } = false;
 
 
