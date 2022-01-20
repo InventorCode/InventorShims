@@ -25,7 +25,7 @@ namespace InventorShims
             {
                 return (Inventor.Application) Marshal.GetActiveObject("Inventor.Application");
             }
-            catch (Exception e)
+            catch
             {
                 // is inventor not visible/in interactive mode?
             }
@@ -67,8 +67,6 @@ namespace InventorShims
             {
                 throw new SystemException("Unable to get Inventor instance.  Error message: " + e.Message, e);
             }
-
-            return null;
         }
 
         /// <summary>
@@ -95,8 +93,6 @@ namespace InventorShims
                 {
                     throw new SystemException("Unable to start Inventor.  Error message: " + e2.Message, e2);
                 }
-
-            return null;
         }
     }
 }

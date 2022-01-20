@@ -1,5 +1,6 @@
 ﻿using Inventor;
 using InventorShims;
+using System;
 
 namespace tests
 {
@@ -35,5 +36,6 @@ namespace tests
             Document doc = app.Documents.Add(DocumentTypeEnum.kPresentationDocumentObject, path + "Standard.ipn", true);
             return doc;
         }
+
     }
 }

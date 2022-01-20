@@ -1,6 +1,6 @@
-﻿using System;
+﻿using Inventor;
+using System;
 using System.Collections.Generic;
-using Inventor;
 
 namespace InventorShims
 {
@@ -9,7 +9,9 @@ namespace InventorShims
     /// </summary>
     public static class PropertyShim
     {
-            private static Dictionary<string, string> NativePropertyLookup = new Dictionary<string, string>()
+        #region PropertyLookup
+
+        private static Dictionary<string, string> NativePropertyLookup = new Dictionary<string, string>()
         {
             {"Title", "Inventor Summary Information"},
             {"Subject", "Inventor Summary Information"},
@@ -78,8 +80,7 @@ namespace InventorShims
             {"Flat Pattern Defer Update", "Design Tracking Properties"}
         };
 
-
-            private static HashSet<string> NativePropertySetLookup = new HashSet<string>
+        private static HashSet<string> NativePropertySetLookup = new HashSet<string>
         {
             "Inventor Summary Information",
             "Inventor Document Summary Information",
@@ -87,76 +88,70 @@ namespace InventorShims
             "Inventor User Defined Properties"
         };
 
-        /// <summary>
-        /// Returns a boolean indicating if the document contains custom PropertySets
-        /// </summary>
-        /// <param name="propertySets">PropertySet object</param>
-        /// <returns>Boolean</returns>
-        private static bool UserPropertySetsExist(PropertySets propertySets)
-        {
-            return propertySets.Count >= NativePropertySetLookup.Count ? true : false;
-        }
+        #endregion PropertyLookup
+
+        #region GetPropertyValue Short Form
 
         /// <summary>
-        /// Returns a property object for a user-created custom property.
+        /// Returns the iProperty Value for a provided document and propertyName. Short signature.
         /// </summary>
-        /// <param name="document">Inventor.Document</param>
+        /// <param name="document"></param>
         /// <param name="propertyName"></param>
-        /// <returns>Property</returns>
-        private static Property GetSuperCustomProperty(this Inventor.Document document, string propertyName)
-        {
-            foreach (PropertySet i in document.PropertySets)
-            {
-                //ignore stock propertySets
-                if (NativePropertySetLookup.Contains(i.DisplayName))
-                { continue; }
-                foreach (Property j in i)
-                {
-                    if (j.DisplayName == propertyName)
-                    {
-                        return j;
-                    }
-                }
-            }
-            return null;
-        }
-
-            /// <summary>
-            /// Returns a string if the user propertySets contain the specified property name.
-            /// </summary>
-            /// <param name="document"></param>
-            /// <param name="propertyName"></param>
-            /// <returns>string</returns>
-            private static object GetSuperCustomPropertyValue(Inventor.Document document, string propertyName)
-            {
-                Property temp = document.GetSuperCustomProperty(propertyName);
-                //try
-                //    {
-                        return temp.Value ?? "";
-                //    }
-                //catch { return "";}
-            }
-
-            /// <summary>
-            /// Returns the iProperty Value for a provided document and propertyName. Short signature.
-            /// </summary>
-            /// <param name="document"></param>
-            /// <param name="propertyName"></param>
-            /// <returns></returns>
-            public static object GetPropertyValue(this Document document, string propertyName)
+        /// <returns></returns>
+        public static object GetPropertyValue(this Document document, string propertyName)
         {
             Property prop = document.GetProperty(propertyName);
             if (prop is null)
                 return "";
 
             return prop.Value;
-        } //End GetPropertyValue
+        }
 
         /// <summary>
-        /// Return the property value of a the specified Property within a Document object. Uses a long-form signature, specifying the Parameter Set.
+        /// Returns the iProperty Value for a provided AssemblyDocument and propertyName. Short signature.
+        /// </summary>
+        /// <param name="document"></param>
+        /// <param name="propertyName"></param>
+        /// <returns></returns>
+        public static object GetPropertyValue(this AssemblyDocument document, string propertyName)
+            => GetPropertyValue((Document)document, propertyName);
+
+        /// <summary>
+        /// Returns the iProperty Value for a provided DrawingDocument and propertyName. Short signature.
+        /// </summary>
+        /// <param name="document"></param>
+        /// <param name="propertyName"></param>
+        /// <returns></returns>
+        public static object GetPropertyValue(this DrawingDocument document, string propertyName)
+            => GetPropertyValue((Document)document, propertyName);
+
+        /// <summary>
+        /// Returns the iProperty Value for a provided PresentationDocument and propertyName. Short signature.
+        /// </summary>
+        /// <param name="document"></param>
+        /// <param name="propertyName"></param>
+        /// <returns></returns>
+        public static object GetPropertyValue(this PresentationDocument document, string propertyName)
+            => GetPropertyValue((Document)document, propertyName);
+
+        /// <summary>
+        /// Returns the iProperty Value for a provided PartDocument and propertyName. Short signature.
+        /// </summary>
+        /// <param name="document"></param>
+        /// <param name="propertyName"></param>
+        /// <returns></returns>
+        public static object GetPropertyValue(this PartDocument document, string propertyName)
+            => GetPropertyValue((Document)document, propertyName);
+
+        #endregion GetPropertyValue Short Form
+
+        #region GetPropertyValue Long Form
+
+        /// <summary>
+        /// Return the property value of a the specified Property within a Document object. Uses a long-form signature, specifying the Property Set.
         /// </summary>
         /// <param name="document">Inventor.Document</param>
-        /// <param name="setName">Parameter Set name as a string.</param>
+        /// <param name="setName">Property Set name as a string.</param>
         /// <param name="propertyName">Property Name as a string.</param>
         /// <returns>Object</returns>
         public static object GetPropertyValue(this Document document, string setName, string propertyName)
@@ -167,7 +162,51 @@ namespace InventorShims
         }
 
         /// <summary>
-        /// Return the property value of a the specified Property within a Document object. Uses a short-form signature, specifying the Parameter Set.
+        /// Return the property value of a the specified Property within an AssemblyDocument object. Uses a long-form signature, specifying the Property Set.
+        /// </summary>
+        /// <param name="document"></param>
+        /// <param name="setName"></param>
+        /// <param name="propertyName"></param>
+        /// <returns></returns>
+        public static object GetPropertyValue(this AssemblyDocument document, string setName, string propertyName)
+            => GetPropertyValue((Document)document, setName, propertyName);
+
+        /// <summary>
+        /// Return the property value of a the specified Property within a DrawingDocument object. Uses a long-form signature, specifying the Property Set.
+        /// </summary>
+        /// <param name="document"></param>
+        /// <param name="setName"></param>
+        /// <param name="propertyName"></param>
+        /// <returns></returns>
+        public static object GetPropertyValue(this DrawingDocument document, string setName, string propertyName)
+            => GetPropertyValue((Document)document, setName, propertyName);
+
+        /// <summary>
+        /// Return the property value of a the specified Property within a PresentationDocument object. Uses a long-form signature, specifying the Property Set.
+        /// </summary>
+        /// <param name="document"></param>
+        /// <param name="setName"></param>
+        /// <param name="propertyName"></param>
+        /// <returns></returns>
+        public static object GetPropertyValue(this PresentationDocument document, string setName, string propertyName)
+            => GetPropertyValue((Document)document, setName, propertyName);
+
+        /// <summary>
+        /// Return the property value of a the specified Property within a PartDocument object. Uses a long-form signature, specifying the Property Set.
+        /// </summary>
+        /// <param name="document"></param>
+        /// <param name="setName"></param>
+        /// <param name="propertyName"></param>
+        /// <returns></returns>
+        public static object GetPropertyValue(this PartDocument document, string setName, string propertyName)
+            => GetPropertyValue((Document)document, setName, propertyName);
+
+        #endregion GetPropertyValue Long Form
+
+        #region GetProperty Short Form
+
+        /// <summary>
+        /// Return the property of a the specified Property within a Document object. Uses a short-form signature.
         /// </summary>
         /// <param name="document">Inventor.Document</param>
         /// <param name="propertyName">Property Name as a string.</param>
@@ -199,6 +238,46 @@ namespace InventorShims
         }
 
         /// <summary>
+        /// Return the property of a the specified Property within a AssemblyDocument object. Uses a short-form signature.
+        /// </summary>
+        /// <param name="document"></param>
+        /// <param name="propertyName"></param>
+        /// <returns></returns>
+        public static Property GetProperty(this AssemblyDocument document, string propertyName)
+            => GetProperty((Document)document, propertyName);
+
+        /// <summary>
+        /// Return the property of a the specified Property within a DrawingDocument object. Uses a short-form signature.
+        /// </summary>
+        /// <param name="document"></param>
+        /// <param name="propertyName"></param>
+        /// <returns></returns>
+        public static Property GetProperty(this DrawingDocument document, string propertyName)
+            => GetProperty((Document)document, propertyName);
+
+        /// <summary>
+        /// Return the property of a the specified Property within a PresentationDocument object. Uses a short-form signature.
+        /// </summary>
+        /// <param name="document"></param>
+        /// <param name="propertyName"></param>
+        /// <returns></returns>
+        public static Property GetProperty(this PresentationDocument document, string propertyName)
+            => GetProperty((Document)document, propertyName);
+
+        /// <summary>
+        /// Return the property of a the specified Property within a PartDocument object. Uses a short-form signature.
+        /// </summary>
+        /// <param name="document"></param>
+        /// <param name="propertyName"></param>
+        /// <returns></returns>
+        public static Property GetProperty(this PartDocument document, string propertyName)
+            => GetProperty((Document)document, propertyName);
+
+        #endregion GetProperty Short Form
+
+        #region GetProperty Long Form
+
+        /// <summary>
         /// Returns the specified Property object in a Document if one exists.  If none exists, null is returned.
         /// </summary>
         /// <param name="document">Inventor.Document</param>
@@ -209,28 +288,62 @@ namespace InventorShims
         {
             try
             {
-            Property prop = document.PropertySets[setName][propertyName];
-            return prop ?? null;
+                Property prop = document.PropertySets[setName][propertyName];
+                return prop ?? null;
             }
-            catch (Exception ex)
+            catch
             {
                 return null;
             }
         }
 
         /// <summary>
-        /// A simple static function that returns true if the specified property is one of Inventor's built-in iProperties.
+        /// Returns the specified Property object in a AssemblyDocument if one exists.  If none exists, null is returned.
         /// </summary>
-        /// <param name="name">Property Name as a string.</param>
-        /// <returns>Boolean</returns>
-        public static bool IsPropertyNative(string name)
-        {
-            return NativePropertyLookup.ContainsKey(name);
-        }
+        /// <param name="document">Inventor.AssemblyDocument</param>
+        /// <param name="setName">Property Set Name as a string.</param>
+        /// <param name="propertyName">Property Name as a string.</param>
+        /// <returns>Property</returns>
+        public static Property GetProperty(this AssemblyDocument document, string setName, string propertyName)
+            => GetProperty((Document)document, setName, propertyName);
 
         /// <summary>
-        /// Set the specified document property's value.  If the iproperty name exist it will set the value. 
-        /// If the name does not exist, it will add the property with the value you have specified in the 
+        /// Returns the specified Property object in a DrawingDocument if one exists.  If none exists, null is returned.
+        /// </summary>
+        /// <param name="document">Inventor.DrawingDocument</param>
+        /// <param name="setName">Property Set Name as a string.</param>
+        /// <param name="propertyName">Property Name as a string.</param>
+        /// <returns>Property</returns>
+        public static Property GetProperty(this DrawingDocument document, string setName, string propertyName)
+            => GetProperty((Document)document, setName, propertyName);
+
+        /// <summary>
+        /// Returns the specified Property object in a PresentationDocument if one exists.  If none exists, null is returned.
+        /// </summary>
+        /// <param name="document">Inventor.PresentationDocument</param>
+        /// <param name="setName">Property Set Name as a string.</param>
+        /// <param name="propertyName">Property Name as a string.</param>
+        /// <returns>Property</returns>
+        public static Property GetProperty(this PresentationDocument document, string setName, string propertyName)
+            => GetProperty((Document)document, setName, propertyName);
+
+        /// <summary>
+        /// Returns the specified Property object in a PartDocument if one exists.  If none exists, null is returned.
+        /// </summary>
+        /// <param name="document">Inventor.PartDocument</param>
+        /// <param name="setName">Property Set Name as a string.</param>
+        /// <param name="propertyName">Property Name as a string.</param>
+        /// <returns>Property</returns>
+        public static Property GetProperty(this PartDocument document, string setName, string propertyName)
+            => GetProperty((Document)document, setName, propertyName);
+
+        #endregion GetProperty Long Form
+
+        #region SetPropertyValue Short Form
+
+        /// <summary>
+        /// Set the specified document property's value.  If the iproperty name exist it will set the value.
+        /// If the name does not exist, it will add the property with the value you have specified in the
         /// "User Defined Properties" property set.  This is the short-form signature.
         /// </summary>
         /// <param name="document">Inventor.Document</param>
@@ -247,7 +360,7 @@ namespace InventorShims
                     propertySets[setName][propertyName].Value = value;
                     return;
                 }
-                catch {};
+                catch { };
             }
 
             //The property was not found in standard properties.  Search the custom properties...
@@ -262,6 +375,54 @@ namespace InventorShims
                 i.Add(value, propertyName);
             }
         }
+
+        /// <summary>
+        /// Set the specified AssemblyDocument property's value.  If the iproperty name exist it will set the value.
+        /// If the name does not exist, it will add the property with the value you have specified in the
+        /// "User Defined Properties" property set.  This is the short-form signature.
+        /// </summary>
+        /// <param name="document">Inventor.AssemblyDocument</param>
+        /// <param name="propertyName">Property Name as a string</param>
+        /// <param name="value">Property value</param>
+        public static void SetPropertyValue(this AssemblyDocument document, string propertyName, Object value)
+            => SetPropertyValue((Document)document, propertyName, value);
+
+        /// <summary>
+        /// Set the specified DrawingDocument property's value.  If the iproperty name exist it will set the value.
+        /// If the name does not exist, it will add the property with the value you have specified in the
+        /// "User Defined Properties" property set.  This is the short-form signature.
+        /// </summary>
+        /// <param name="document">Inventor.DrawingDocument</param>
+        /// <param name="propertyName">Property Name as a string</param>
+        /// <param name="value">Property value</param>
+        public static void SetPropertyValue(this DrawingDocument document, string propertyName, Object value)
+            => SetPropertyValue((Document)document, propertyName, value);
+
+        /// <summary>
+        /// Set the specified Presentationdocument property's value.  If the iproperty name exist it will set the value.
+        /// If the name does not exist, it will add the property with the value you have specified in the
+        /// "User Defined Properties" property set.  This is the short-form signature.
+        /// </summary>
+        /// <param name="document">Inventor.PresentationDocument</param>
+        /// <param name="propertyName">Property Name as a string</param>
+        /// <param name="value">Property value</param>
+        public static void SetPropertyValue(this PresentationDocument document, string propertyName, Object value)
+            => SetPropertyValue((Document)document, propertyName, value);
+
+        /// <summary>
+        /// Set the specified Partdocument property's value.  If the iproperty name exist it will set the value.
+        /// If the name does not exist, it will add the property with the value you have specified in the
+        /// "User Defined Properties" property set.  This is the short-form signature.
+        /// </summary>
+        /// <param name="document">Inventor.PartDocument</param>
+        /// <param name="propertyName">Property Name as a string</param>
+        /// <param name="value">Property value</param>
+        public static void SetPropertyValue(this PartDocument document, string propertyName, Object value)
+            => SetPropertyValue((Document)document, propertyName, value);
+
+        #endregion SetPropertyValue Short Form
+
+        #region SetPropertyValue Long Form
 
         /// <summary>
         /// Set the specified document property's value.  If the iproperty name exist it will set the value.
@@ -302,6 +463,62 @@ namespace InventorShims
         }
 
         /// <summary>
+        /// Set the specified DrawingDocument property's value.  If the iproperty name exist it will set the value.
+        /// If the name does not exist, it will add the property with the value you have specified in the
+        /// "User Defined Properties" property set.  The long signature function must be used to specify custom
+        /// property groups.
+        /// </summary>
+        /// <param name="document">Inventor.DrawingDocument</param>
+        /// <param name="propertySetName">Property Set Name as a string</param>
+        /// <param name="propertyName">Property Name as a string</param>
+        /// <param name="value"></param>
+        public static void SetPropertyValue(this DrawingDocument document, string propertySetName, string propertyName, object value)
+            => SetPropertyValue((Document)document, propertySetName, propertyName, value);
+
+        /// <summary>
+        /// Set the specified PresentationDocument property's value.  If the iproperty name exist it will set the value.
+        /// If the name does not exist, it will add the property with the value you have specified in the
+        /// "User Defined Properties" property set.  The long signature function must be used to specify custom
+        /// property groups.
+        /// </summary>
+        /// <param name="document">Inventor.PresentationDocument</param>
+        /// <param name="propertySetName">Property Set Name as a string</param>
+        /// <param name="propertyName">Property Name as a string</param>
+        /// <param name="value"></param>
+        public static void SetPropertyValue(this PresentationDocument document, string propertySetName, string propertyName, object value)
+            => SetPropertyValue((Document)document, propertySetName, propertyName, value);
+
+        /// <summary>
+        /// Set the specified PartDocument property's value.  If the iproperty name exist it will set the value.
+        /// If the name does not exist, it will add the property with the value you have specified in the
+        /// "User Defined Properties" property set.  The long signature function must be used to specify custom
+        /// property groups.
+        /// </summary>
+        /// <param name="document">Inventor.PartDocument</param>
+        /// <param name="propertySetName">Property Set Name as a string</param>
+        /// <param name="propertyName">Property Name as a string</param>
+        /// <param name="value"></param>
+        public static void SetPropertyValue(this PartDocument document, string propertySetName, string propertyName, object value)
+            => SetPropertyValue((Document)document, propertySetName, propertyName, value);
+
+        /// <summary>
+        /// Set the specified AssemblyDocument property's value.  If the iproperty name exist it will set the value.
+        /// If the name does not exist, it will add the property with the value you have specified in the
+        /// "User Defined Properties" property set.  The long signature function must be used to specify custom
+        /// property groups.
+        /// </summary>
+        /// <param name="document">Inventor.AssemblyDocument</param>
+        /// <param name="propertySetName">Property Set Name as a string</param>
+        /// <param name="propertyName">Property Name as a string</param>
+        /// <param name="value"></param>
+        public static void SetPropertyValue(this AssemblyDocument document, string propertySetName, string propertyName, object value)
+            => SetPropertyValue((Document)document, propertySetName, propertyName, value);
+
+        #endregion SetPropertyValue Long Form
+
+        #region RemoveProperty Short Form
+
+        /// <summary>
         /// Removes the specified document property.  If the property is native, it will only delete the iproperty's value.
         /// This is the short-form signature version of this method.
         /// </summary>
@@ -329,7 +546,7 @@ namespace InventorShims
                 i[propertyName].Delete();
                 return;
             }
-            catch {}
+            catch { }
 
             //still not found, search other custom property sets!
             if (UserPropertySetsExist(propertySets))
@@ -348,7 +565,47 @@ namespace InventorShims
         }
 
         /// <summary>
-        /// Removes the specified document property.  If the property is native, it will only delete the iproperty's value.
+        /// Removes the specified AssemblyDocument property.  If the property is native, it will only delete the iproperty's value.
+        /// This is the short-form signature version of this method.
+        /// </summary>
+        /// <param name="document">Inventor.AssemblyDocument</param>
+        /// <param name="propertyName">Property Name as a string</param>
+        public static void RemoveProperty(this AssemblyDocument document, string propertyName)
+            => RemoveProperty((Document)document, propertyName);
+
+        /// <summary>
+        /// Removes the specified DrawingDocument property.  If the property is native, it will only delete the iproperty's value.
+        /// This is the short-form signature version of this method.
+        /// </summary>
+        /// <param name="document">Inventor.DrawingDocument</param>
+        /// <param name="propertyName">Property Name as a string</param>
+        public static void RemoveProperty(this DrawingDocument document, string propertyName)
+            => RemoveProperty((Document)document, propertyName);
+
+        /// <summary>
+        /// Removes the specified PresentationDocument property.  If the property is native, it will only delete the iproperty's value.
+        /// This is the short-form signature version of this method.
+        /// </summary>
+        /// <param name="document">Inventor.PresentationDocument</param>
+        /// <param name="propertyName">Property Name as a string</param>
+        public static void RemoveProperty(this PresentationDocument document, string propertyName)
+            => RemoveProperty((Document)document, propertyName);
+
+        /// <summary>
+        /// Removes the specified PartDocument property.  If the property is native, it will only delete the iproperty's value.
+        /// This is the short-form signature version of this method.
+        /// </summary>
+        /// <param name="document">Inventor.PartDocument</param>
+        /// <param name="propertyName">Property Name as a string</param>
+        public static void RemoveProperty(this PartDocument document, string propertyName)
+            => RemoveProperty((Document)document, propertyName);
+
+        #endregion RemoveProperty Short Form
+
+        #region RemoveProperty Long Form
+
+        /// <summary>
+        /// Removes the specified Document property.  If the property is native, it will only delete the iproperty's value.
         /// This is the long-form signature version of this method.
         /// </summary>
         /// <param name="document">Inventor.Document</param>
@@ -367,7 +624,7 @@ namespace InventorShims
                     documentPropertySets[propertySetName][propertyName].Delete();
                     return;
                 }
-                catch {}
+                catch { }
                 //if property still exists...
                 if (CustomPropertyExists(documentPropertySets[propertySetName], propertyName))
                 {
@@ -383,7 +640,51 @@ namespace InventorShims
         }
 
         /// <summary>
-        /// A simple function that returns true/false if the specified property exists in the document.
+        /// Removes the specified AssemblyDocument property.  If the property is native, it will only delete the iproperty's value.
+        /// This is the long-form signature version of this method.
+        /// </summary>
+        /// <param name="document">Inventor.AssemblyDocument</param>
+        /// <param name="propertySetName">Property Set Name as a string</param>
+        /// <param name="propertyName">Property Name as a string</param>
+        public static void RemoveProperty(this AssemblyDocument document, string propertySetName, string propertyName)
+            => RemoveProperty((Document)document, propertySetName, propertyName);
+
+        /// <summary>
+        /// Removes the specified DrawingDocument property.  If the property is native, it will only delete the iproperty's value.
+        /// This is the long-form signature version of this method.
+        /// </summary>
+        /// <param name="document">Inventor.DrawingDocument</param>
+        /// <param name="propertySetName">Property Set Name as a string</param>
+        /// <param name="propertyName">Property Name as a string</param>
+        public static void RemoveProperty(this DrawingDocument document, string propertySetName, string propertyName)
+            => RemoveProperty((Document)document, propertySetName, propertyName);
+
+        /// <summary>
+        /// Removes the specified PresentationDocument property.  If the property is native, it will only delete the iproperty's value.
+        /// This is the long-form signature version of this method.
+        /// </summary>
+        /// <param name="document">Inventor.PresentationDocument</param>
+        /// <param name="propertySetName">Property Set Name as a string</param>
+        /// <param name="propertyName">Property Name as a string</param>
+        public static void RemoveProperty(this PresentationDocument document, string propertySetName, string propertyName)
+            => RemoveProperty((Document)document, propertySetName, propertyName);
+
+        /// <summary>
+        /// Removes the specified PartDocument property.  If the property is native, it will only delete the iproperty's value.
+        /// This is the long-form signature version of this method.
+        /// </summary>
+        /// <param name="document">Inventor.PartDocument</param>
+        /// <param name="propertySetName">Property Set Name as a string</param>
+        /// <param name="propertyName">Property Name as a string</param>
+        public static void RemoveProperty(this PartDocument document, string propertySetName, string propertyName)
+            => RemoveProperty((Document)document, propertySetName, propertyName);
+
+        #endregion RemoveProperty Long Form
+
+        #region PropertyExists Short Form
+
+        /// <summary>
+        /// A simple function that returns true/false if the specified property exists in the Document.
         /// This is the short-form signature of this function.
         /// </summary>
         /// <param name="document">Inventor.Document</param>
@@ -418,7 +719,51 @@ namespace InventorShims
         }
 
         /// <summary>
-        /// A simple function that returns true/false if the specified property exists in the document.
+        /// A simple function that returns true/false if the specified property exists in the AssemblyDocument.
+        /// This is the short-form signature of this function.
+        /// </summary>
+        /// <param name="document">Inventor.AssemblyDocument</param>
+        /// <param name="propertyName">Property Name as a string</param>
+        /// <returns>Boolean</returns>
+        public static bool PropertyExists(this AssemblyDocument document, string propertyName)
+            => PropertyExists((Document)document, propertyName);
+
+        /// <summary>
+        /// A simple function that returns true/false if the specified property exists in the DrawingDocument.
+        /// This is the short-form signature of this function.
+        /// </summary>
+        /// <param name="document">Inventor.DrawingDocument</param>
+        /// <param name="propertyName">Property Name as a string</param>
+        /// <returns>Boolean</returns>
+        public static bool PropertyExists(this DrawingDocument document, string propertyName)
+            => PropertyExists((Document)document, propertyName);
+
+        /// <summary>
+        /// A simple function that returns true/false if the specified property exists in the PresentationDocument.
+        /// This is the short-form signature of this function.
+        /// </summary>
+        /// <param name="document">Inventor.PresentationDocument</param>
+        /// <param name="propertyName">Property Name as a string</param>
+        /// <returns>Boolean</returns>
+        public static bool PropertyExists(this PresentationDocument document, string propertyName)
+            => PropertyExists((Document)document, propertyName);
+
+        /// <summary>
+        /// A simple function that returns true/false if the specified property exists in the PartDocument.
+        /// This is the short-form signature of this function.
+        /// </summary>
+        /// <param name="document">Inventor.PartDocument</param>
+        /// <param name="propertyName">Property Name as a string</param>
+        /// <returns>Boolean</returns>
+        public static bool PropertyExists(this PartDocument document, string propertyName)
+            => PropertyExists((Document)document, propertyName);
+
+        #endregion PropertyExists Short Form
+
+        #region PropertyExists Long Form
+
+        /// <summary>
+        /// A simple function that returns true/false if the specified property exists in the Document.
         /// This is the short-form signature of this function.
         /// </summary>
         /// <param name="document">Inventor.Document</param>
@@ -441,12 +786,118 @@ namespace InventorShims
         }
 
         /// <summary>
+        /// A simple function that returns true/false if the specified property exists in the AssemblyDocument.
+        /// This is the short-form signature of this function.
+        /// </summary>
+        /// <param name="document">Inventor.AssemblyDocument</param>
+        /// <param name="propertySetName">Property Set Name as a string</param>
+        /// <param name="propertyName">Property Name as a string</param>
+        /// <returns>Boolean</returns>
+        public static bool PropertyExists(this AssemblyDocument document, string propertySetName, string propertyName)
+            => PropertyExists((Document)document, propertySetName, propertyName);
+
+        /// <summary>
+        /// A simple function that returns true/false if the specified property exists in the DrawingDocument.
+        /// This is the short-form signature of this function.
+        /// </summary>
+        /// <param name="document">Inventor.DrawingDocument</param>
+        /// <param name="propertySetName">Property Set Name as a string</param>
+        /// <param name="propertyName">Property Name as a string</param>
+        /// <returns>Boolean</returns>
+        public static bool PropertyExists(this DrawingDocument document, string propertySetName, string propertyName)
+            => PropertyExists((Document)document, propertySetName, propertyName);
+
+        /// <summary>
+        /// A simple function that returns true/false if the specified property exists in the PresentationDocument.
+        /// This is the short-form signature of this function.
+        /// </summary>
+        /// <param name="document">Inventor.PresentationDocument</param>
+        /// <param name="propertySetName">Property Set Name as a string</param>
+        /// <param name="propertyName">Property Name as a string</param>
+        /// <returns>Boolean</returns>
+        public static bool PropertyExists(this PresentationDocument document, string propertySetName, string propertyName)
+            => PropertyExists((Document)document, propertySetName, propertyName);
+
+        /// <summary>
+        /// A simple function that returns true/false if the specified property exists in the PartDocument.
+        /// This is the short-form signature of this function.
+        /// </summary>
+        /// <param name="document">Inventor.PartDocument</param>
+        /// <param name="propertySetName">Property Set Name as a string</param>
+        /// <param name="propertyName">Property Name as a string</param>
+        /// <returns>Boolean</returns>
+        public static bool PropertyExists(this PartDocument document, string propertySetName, string propertyName)
+            => PropertyExists((Document)document, propertySetName, propertyName);
+
+        #endregion PropertyExists Long Form
+
+        /// <summary>
+        /// Returns a boolean indicating if the document contains custom PropertySets
+        /// </summary>
+        /// <param name="propertySets">PropertySet object</param>
+        /// <returns>Boolean</returns>
+        private static bool UserPropertySetsExist(PropertySets propertySets)
+        {
+            return propertySets.Count >= NativePropertySetLookup.Count ? true : false;
+        }
+
+        /// <summary>
+        /// Returns a property object for a user-created custom property.
+        /// </summary>
+        /// <param name="document">Inventor.Document</param>
+        /// <param name="propertyName"></param>
+        /// <returns>Property</returns>
+        private static Property GetSuperCustomProperty(this Inventor.Document document, string propertyName)
+        {
+            foreach (PropertySet i in document.PropertySets)
+            {
+                //ignore stock propertySets
+                if (NativePropertySetLookup.Contains(i.DisplayName))
+                { continue; }
+                foreach (Property j in i)
+                {
+                    if (j.DisplayName == propertyName)
+                    {
+                        return j;
+                    }
+                }
+            }
+            return null;
+        }
+
+        /// <summary>
+        /// Returns a string if the user propertySets contain the specified property name.
+        /// </summary>
+        /// <param name="document"></param>
+        /// <param name="propertyName"></param>
+        /// <returns>string</returns>
+        private static object GetSuperCustomPropertyValue(Inventor.Document document, string propertyName)
+        {
+            Property temp = document.GetSuperCustomProperty(propertyName);
+            //try
+            //    {
+            return temp.Value ?? "";
+            //    }
+            //catch { return "";}
+        }
+
+        /// <summary>
+        /// A simple static function that returns true if the specified property is one of Inventor's built-in iProperties.
+        /// </summary>
+        /// <param name="name">Property Name as a string.</param>
+        /// <returns>Boolean</returns>
+        public static bool IsPropertyNative(string name)
+        {
+            return NativePropertyLookup.ContainsKey(name);
+        }
+
+        /// <summary>
         /// A simple function that returns true/false if the specified custom property exists in the PropertySet.
         /// </summary>
         /// <param name="currentPropertySet">Property Set Name as a string</param>
         /// <param name="propertyName">Property Name as a string</param>
         /// <returns>Boolean</returns>
-        static bool CustomPropertyExists(PropertySet currentPropertySet, string propertyName)
+        private static bool CustomPropertyExists(PropertySet currentPropertySet, string propertyName)
         {
             object a;
             try
@@ -460,7 +911,7 @@ namespace InventorShims
             };
         }
 
-        static bool PropertySetExists(Document document, string propertySetName)
+        private static bool PropertySetExists(Document document, string propertySetName)
         {
             foreach (PropertySet propertySet in document.PropertySets)
             {

@@ -125,8 +125,12 @@ namespace InventorShims
         /// <summary>
         /// Get the number of directories contained in ExternalRuleDirectories.
         /// </summary>
-        public int Count { get { return Directories.Count; } }
+        public int Count { get => Directories.Count; }
 
+        /// <summary>
+        /// Dispose of the ExternalRuleDirectories object.
+        /// </summary>
+        /// <param name="disposing"></param>
         protected virtual void Dispose(bool disposing)
         {
             if (!disposedValue)
@@ -149,6 +153,9 @@ namespace InventorShims
         }
 
         // // TODO: override finalizer only if 'Dispose(bool disposing)' has code to free unmanaged resources
+        /// <summary>
+        /// Finalizer
+        /// </summary>
         ~ExternalRuleDirectories()
         {
             // Do not change this code. Put cleanup code in 'Dispose(bool disposing)' method

@@ -1,2 +1,0 @@
-nuget pack
-nuget push InventorShims.1.1.2.nupkg <APIKEY> -Source https://api.nuget.org/v3/index.json

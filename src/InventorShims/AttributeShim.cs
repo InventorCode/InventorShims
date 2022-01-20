@@ -246,7 +246,7 @@ namespace InventorShims
                 attributeSets = temp.AttributeSets;
                 return true;
             }
-            catch (Exception e)
+            catch
             {
                 return false;
             }

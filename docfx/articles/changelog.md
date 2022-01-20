@@ -1,3 +1,57 @@
+## [2.0.0](https://github.com/InventorCode/InventorShims/releases/tag/v2.0.0) (2022-01-??)
+
+### Added
+
+- PropertyShim extension methods now work on the following document types:
+    - PartDocument
+    - AssemblyDocument
+    - DrawingDocument
+    - PresentationDocument
+
+- ParameterShim extension methods now work with the following document types:
+    - PartDocument
+    - AssemblyDocument
+    - DrawingDocument
+- Ilogic code samples for some of the added extension methods.
+- Extension methods for use with LINQ and fluent design.
+
+#### New general extension methods:
+
+|extension method|on object|returns|
+|---|---|---|
+|IsContentCenter|Document, PartDocument, AssemblyDocument, DrawingDocument, PresentationDocument|bool|
+|IsCustomContentCenter|Document, PartDocument, AssemblyDocument, DrawingDocument, PresentationDocument|bool|
+
+#### New IEnumerable Providers
+
+|extension method|on object|returns|
+|---|---|---|
+|EnumerateDocuments|SelectSet|IEnumerable\<Document>|
+|EnumerateDocuments|IEnumerable\<DocumentDescriptor>|IEnumerable\<Document>|
+|EnumerateAllReferencedDocuments|Document|IEnumerable\<Document>|
+|EnumerateAllReferencedDocuments|Document, PartDocument, AssemblyDocument, DrawingDocument, PresentationDocument|IEnumerable\<Document>|
+|EnumerateReferencedDocuments|Document, PartDocument, AssemblyDocument, DrawingDocument, PresentationDocument|IEnumerable\<Document>|
+|EnumerateReferencingDocuments|Document, PartDocument, AssemblyDocument, DrawingDocument, PresentationDocument|IEnumerable\<Document>|
+|EnumerateReferencedDocumentDescriptors|Document, PartDocument, AssemblyDocument, DrawingDocument, PresentationDocument|IEnumerable\<DocumentDescriptors>|
+|EnumerateAllLeafOccurrencesDocumentDescriptors|AssemblyDocument|IEnumerable\<DocumentDescriptors>|
+|EnumerateParameters|Document, PartDocument, AssemblyDocument, DrawingDocument|IEnumerable\<Parameter>|
+
+#### New IEnumerable Filters
+
+|extension method|on object|returns|
+|---|---|---|
+|AssemblyDocuments|IEnumerable\<Document>|IEnumerable\<AssemblyDocument>|
+|DrawingDocuments|IEnumerable\<Document>|IEnumerable\<DrawingDocument>|
+|PresentationDocuments|IEnumerable\<Document>|IEnumerable\<PresentationDocument>|
+|PartDocuments|IEnumerable\<Document>|IEnumerable\<PartDocument>|
+|RemoveAssemblyDocuments|IEnumerable\<Document>|IEnumerable\<Document>|
+|RemoveDrawingDocuments|IEnumerable\<Document>|IEnumerable\<Document>|
+|RemovePresentationDocuments|IEnumerable\<Document>|IEnumerable\<Document>|
+|RemovePartDocuments|IEnumerable\<Document>|IEnumerable\<Document>|
+|RemoveNonNativeDocuments|IEnumerable\<Document>|IEnumerable\<Document>|
+
+### Changed
+- .Net Framework version bumped to 4.8
 ## [1.3.1](https://github.com/InventorCode/InventorShims/releases/tag/1.3.1) (2021-09-03)
 
 ### Added

@@ -88,8 +88,14 @@ namespace InventorShims.TranslatorShim
         /// <summary>If selected, slight alterations in the surface geometry are allowed to stitch the surfaces.</summary>
         public bool AdvancedHealing { get; set; } = false;
 
+        /// <summary>
+        /// 
+        /// </summary>
         public bool EdgeSplitAndMerge { get; set; } = true;
 
+        /// <summary>
+        /// 
+        /// </summary>
         public bool FaceSplitAndMerge { get; set; } = true;
 
         /// <summary>

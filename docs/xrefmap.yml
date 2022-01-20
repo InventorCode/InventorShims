@@ -306,6 +306,221 @@ references:
   commentId: T:InventorShims.DocumentShim
   fullName: InventorShims.DocumentShim
   nameWithType: DocumentShim
+- uid: InventorShims.DocumentShim.AssemblyDocuments(System.Collections.Generic.IEnumerable{Inventor.Document})
+  name: AssemblyDocuments(IEnumerable<Document>)
+  href: api/InventorShims.DocumentShim.html#InventorShims_DocumentShim_AssemblyDocuments_System_Collections_Generic_IEnumerable_Inventor_Document__
+  commentId: M:InventorShims.DocumentShim.AssemblyDocuments(System.Collections.Generic.IEnumerable{Inventor.Document})
+  name.vb: AssemblyDocuments(IEnumerable(Of Document))
+  fullName: InventorShims.DocumentShim.AssemblyDocuments(System.Collections.Generic.IEnumerable<Inventor.Document>)
+  fullName.vb: InventorShims.DocumentShim.AssemblyDocuments(System.Collections.Generic.IEnumerable(Of Inventor.Document))
+  nameWithType: DocumentShim.AssemblyDocuments(IEnumerable<Document>)
+  nameWithType.vb: DocumentShim.AssemblyDocuments(IEnumerable(Of Document))
+- uid: InventorShims.DocumentShim.AssemblyDocuments*
+  name: AssemblyDocuments
+  href: api/InventorShims.DocumentShim.html#InventorShims_DocumentShim_AssemblyDocuments_
+  commentId: Overload:InventorShims.DocumentShim.AssemblyDocuments
+  isSpec: "True"
+  fullName: InventorShims.DocumentShim.AssemblyDocuments
+  nameWithType: DocumentShim.AssemblyDocuments
+- uid: InventorShims.DocumentShim.DrawingDocuments(System.Collections.Generic.IEnumerable{Inventor.Document})
+  name: DrawingDocuments(IEnumerable<Document>)
+  href: api/InventorShims.DocumentShim.html#InventorShims_DocumentShim_DrawingDocuments_System_Collections_Generic_IEnumerable_Inventor_Document__
+  commentId: M:InventorShims.DocumentShim.DrawingDocuments(System.Collections.Generic.IEnumerable{Inventor.Document})
+  name.vb: DrawingDocuments(IEnumerable(Of Document))
+  fullName: InventorShims.DocumentShim.DrawingDocuments(System.Collections.Generic.IEnumerable<Inventor.Document>)
+  fullName.vb: InventorShims.DocumentShim.DrawingDocuments(System.Collections.Generic.IEnumerable(Of Inventor.Document))
+  nameWithType: DocumentShim.DrawingDocuments(IEnumerable<Document>)
+  nameWithType.vb: DocumentShim.DrawingDocuments(IEnumerable(Of Document))
+- uid: InventorShims.DocumentShim.DrawingDocuments*
+  name: DrawingDocuments
+  href: api/InventorShims.DocumentShim.html#InventorShims_DocumentShim_DrawingDocuments_
+  commentId: Overload:InventorShims.DocumentShim.DrawingDocuments
+  isSpec: "True"
+  fullName: InventorShims.DocumentShim.DrawingDocuments
+  nameWithType: DocumentShim.DrawingDocuments
+- uid: InventorShims.DocumentShim.EnumerateAllLeafOccurrencesDocumentDescriptors(Inventor.AssemblyDocument)
+  name: EnumerateAllLeafOccurrencesDocumentDescriptors(AssemblyDocument)
+  href: api/InventorShims.DocumentShim.html#InventorShims_DocumentShim_EnumerateAllLeafOccurrencesDocumentDescriptors_Inventor_AssemblyDocument_
+  commentId: M:InventorShims.DocumentShim.EnumerateAllLeafOccurrencesDocumentDescriptors(Inventor.AssemblyDocument)
+  fullName: InventorShims.DocumentShim.EnumerateAllLeafOccurrencesDocumentDescriptors(Inventor.AssemblyDocument)
+  nameWithType: DocumentShim.EnumerateAllLeafOccurrencesDocumentDescriptors(AssemblyDocument)
+- uid: InventorShims.DocumentShim.EnumerateAllLeafOccurrencesDocumentDescriptors*
+  name: EnumerateAllLeafOccurrencesDocumentDescriptors
+  href: api/InventorShims.DocumentShim.html#InventorShims_DocumentShim_EnumerateAllLeafOccurrencesDocumentDescriptors_
+  commentId: Overload:InventorShims.DocumentShim.EnumerateAllLeafOccurrencesDocumentDescriptors
+  isSpec: "True"
+  fullName: InventorShims.DocumentShim.EnumerateAllLeafOccurrencesDocumentDescriptors
+  nameWithType: DocumentShim.EnumerateAllLeafOccurrencesDocumentDescriptors
+- uid: InventorShims.DocumentShim.EnumerateAllReferencedDocuments(Inventor.AssemblyDocument)
+  name: EnumerateAllReferencedDocuments(AssemblyDocument)
+  href: api/InventorShims.DocumentShim.html#InventorShims_DocumentShim_EnumerateAllReferencedDocuments_Inventor_AssemblyDocument_
+  commentId: M:InventorShims.DocumentShim.EnumerateAllReferencedDocuments(Inventor.AssemblyDocument)
+  fullName: InventorShims.DocumentShim.EnumerateAllReferencedDocuments(Inventor.AssemblyDocument)
+  nameWithType: DocumentShim.EnumerateAllReferencedDocuments(AssemblyDocument)
+- uid: InventorShims.DocumentShim.EnumerateAllReferencedDocuments(Inventor.Document)
+  name: EnumerateAllReferencedDocuments(Document)
+  href: api/InventorShims.DocumentShim.html#InventorShims_DocumentShim_EnumerateAllReferencedDocuments_Inventor_Document_
+  commentId: M:InventorShims.DocumentShim.EnumerateAllReferencedDocuments(Inventor.Document)
+  fullName: InventorShims.DocumentShim.EnumerateAllReferencedDocuments(Inventor.Document)
+  nameWithType: DocumentShim.EnumerateAllReferencedDocuments(Document)
+- uid: InventorShims.DocumentShim.EnumerateAllReferencedDocuments(Inventor.DrawingDocument)
+  name: EnumerateAllReferencedDocuments(DrawingDocument)
+  href: api/InventorShims.DocumentShim.html#InventorShims_DocumentShim_EnumerateAllReferencedDocuments_Inventor_DrawingDocument_
+  commentId: M:InventorShims.DocumentShim.EnumerateAllReferencedDocuments(Inventor.DrawingDocument)
+  fullName: InventorShims.DocumentShim.EnumerateAllReferencedDocuments(Inventor.DrawingDocument)
+  nameWithType: DocumentShim.EnumerateAllReferencedDocuments(DrawingDocument)
+- uid: InventorShims.DocumentShim.EnumerateAllReferencedDocuments(Inventor.PartDocument)
+  name: EnumerateAllReferencedDocuments(PartDocument)
+  href: api/InventorShims.DocumentShim.html#InventorShims_DocumentShim_EnumerateAllReferencedDocuments_Inventor_PartDocument_
+  commentId: M:InventorShims.DocumentShim.EnumerateAllReferencedDocuments(Inventor.PartDocument)
+  fullName: InventorShims.DocumentShim.EnumerateAllReferencedDocuments(Inventor.PartDocument)
+  nameWithType: DocumentShim.EnumerateAllReferencedDocuments(PartDocument)
+- uid: InventorShims.DocumentShim.EnumerateAllReferencedDocuments(Inventor.PresentationDocument)
+  name: EnumerateAllReferencedDocuments(PresentationDocument)
+  href: api/InventorShims.DocumentShim.html#InventorShims_DocumentShim_EnumerateAllReferencedDocuments_Inventor_PresentationDocument_
+  commentId: M:InventorShims.DocumentShim.EnumerateAllReferencedDocuments(Inventor.PresentationDocument)
+  fullName: InventorShims.DocumentShim.EnumerateAllReferencedDocuments(Inventor.PresentationDocument)
+  nameWithType: DocumentShim.EnumerateAllReferencedDocuments(PresentationDocument)
+- uid: InventorShims.DocumentShim.EnumerateAllReferencedDocuments*
+  name: EnumerateAllReferencedDocuments
+  href: api/InventorShims.DocumentShim.html#InventorShims_DocumentShim_EnumerateAllReferencedDocuments_
+  commentId: Overload:InventorShims.DocumentShim.EnumerateAllReferencedDocuments
+  isSpec: "True"
+  fullName: InventorShims.DocumentShim.EnumerateAllReferencedDocuments
+  nameWithType: DocumentShim.EnumerateAllReferencedDocuments
+- uid: InventorShims.DocumentShim.EnumerateDocuments(Inventor.SelectSet)
+  name: EnumerateDocuments(SelectSet)
+  href: api/InventorShims.DocumentShim.html#InventorShims_DocumentShim_EnumerateDocuments_Inventor_SelectSet_
+  commentId: M:InventorShims.DocumentShim.EnumerateDocuments(Inventor.SelectSet)
+  fullName: InventorShims.DocumentShim.EnumerateDocuments(Inventor.SelectSet)
+  nameWithType: DocumentShim.EnumerateDocuments(SelectSet)
+- uid: InventorShims.DocumentShim.EnumerateDocuments(System.Collections.Generic.IEnumerable{Inventor.DocumentDescriptor})
+  name: EnumerateDocuments(IEnumerable<DocumentDescriptor>)
+  href: api/InventorShims.DocumentShim.html#InventorShims_DocumentShim_EnumerateDocuments_System_Collections_Generic_IEnumerable_Inventor_DocumentDescriptor__
+  commentId: M:InventorShims.DocumentShim.EnumerateDocuments(System.Collections.Generic.IEnumerable{Inventor.DocumentDescriptor})
+  name.vb: EnumerateDocuments(IEnumerable(Of DocumentDescriptor))
+  fullName: InventorShims.DocumentShim.EnumerateDocuments(System.Collections.Generic.IEnumerable<Inventor.DocumentDescriptor>)
+  fullName.vb: InventorShims.DocumentShim.EnumerateDocuments(System.Collections.Generic.IEnumerable(Of Inventor.DocumentDescriptor))
+  nameWithType: DocumentShim.EnumerateDocuments(IEnumerable<DocumentDescriptor>)
+  nameWithType.vb: DocumentShim.EnumerateDocuments(IEnumerable(Of DocumentDescriptor))
+- uid: InventorShims.DocumentShim.EnumerateDocuments*
+  name: EnumerateDocuments
+  href: api/InventorShims.DocumentShim.html#InventorShims_DocumentShim_EnumerateDocuments_
+  commentId: Overload:InventorShims.DocumentShim.EnumerateDocuments
+  isSpec: "True"
+  fullName: InventorShims.DocumentShim.EnumerateDocuments
+  nameWithType: DocumentShim.EnumerateDocuments
+- uid: InventorShims.DocumentShim.EnumerateReferencedDocumentDescriptors(Inventor.AssemblyDocument)
+  name: EnumerateReferencedDocumentDescriptors(AssemblyDocument)
+  href: api/InventorShims.DocumentShim.html#InventorShims_DocumentShim_EnumerateReferencedDocumentDescriptors_Inventor_AssemblyDocument_
+  commentId: M:InventorShims.DocumentShim.EnumerateReferencedDocumentDescriptors(Inventor.AssemblyDocument)
+  fullName: InventorShims.DocumentShim.EnumerateReferencedDocumentDescriptors(Inventor.AssemblyDocument)
+  nameWithType: DocumentShim.EnumerateReferencedDocumentDescriptors(AssemblyDocument)
+- uid: InventorShims.DocumentShim.EnumerateReferencedDocumentDescriptors(Inventor.Document)
+  name: EnumerateReferencedDocumentDescriptors(Document)
+  href: api/InventorShims.DocumentShim.html#InventorShims_DocumentShim_EnumerateReferencedDocumentDescriptors_Inventor_Document_
+  commentId: M:InventorShims.DocumentShim.EnumerateReferencedDocumentDescriptors(Inventor.Document)
+  fullName: InventorShims.DocumentShim.EnumerateReferencedDocumentDescriptors(Inventor.Document)
+  nameWithType: DocumentShim.EnumerateReferencedDocumentDescriptors(Document)
+- uid: InventorShims.DocumentShim.EnumerateReferencedDocumentDescriptors(Inventor.DrawingDocument)
+  name: EnumerateReferencedDocumentDescriptors(DrawingDocument)
+  href: api/InventorShims.DocumentShim.html#InventorShims_DocumentShim_EnumerateReferencedDocumentDescriptors_Inventor_DrawingDocument_
+  commentId: M:InventorShims.DocumentShim.EnumerateReferencedDocumentDescriptors(Inventor.DrawingDocument)
+  fullName: InventorShims.DocumentShim.EnumerateReferencedDocumentDescriptors(Inventor.DrawingDocument)
+  nameWithType: DocumentShim.EnumerateReferencedDocumentDescriptors(DrawingDocument)
+- uid: InventorShims.DocumentShim.EnumerateReferencedDocumentDescriptors(Inventor.PartDocument)
+  name: EnumerateReferencedDocumentDescriptors(PartDocument)
+  href: api/InventorShims.DocumentShim.html#InventorShims_DocumentShim_EnumerateReferencedDocumentDescriptors_Inventor_PartDocument_
+  commentId: M:InventorShims.DocumentShim.EnumerateReferencedDocumentDescriptors(Inventor.PartDocument)
+  fullName: InventorShims.DocumentShim.EnumerateReferencedDocumentDescriptors(Inventor.PartDocument)
+  nameWithType: DocumentShim.EnumerateReferencedDocumentDescriptors(PartDocument)
+- uid: InventorShims.DocumentShim.EnumerateReferencedDocumentDescriptors(Inventor.PresentationDocument)
+  name: EnumerateReferencedDocumentDescriptors(PresentationDocument)
+  href: api/InventorShims.DocumentShim.html#InventorShims_DocumentShim_EnumerateReferencedDocumentDescriptors_Inventor_PresentationDocument_
+  commentId: M:InventorShims.DocumentShim.EnumerateReferencedDocumentDescriptors(Inventor.PresentationDocument)
+  fullName: InventorShims.DocumentShim.EnumerateReferencedDocumentDescriptors(Inventor.PresentationDocument)
+  nameWithType: DocumentShim.EnumerateReferencedDocumentDescriptors(PresentationDocument)
+- uid: InventorShims.DocumentShim.EnumerateReferencedDocumentDescriptors*
+  name: EnumerateReferencedDocumentDescriptors
+  href: api/InventorShims.DocumentShim.html#InventorShims_DocumentShim_EnumerateReferencedDocumentDescriptors_
+  commentId: Overload:InventorShims.DocumentShim.EnumerateReferencedDocumentDescriptors
+  isSpec: "True"
+  fullName: InventorShims.DocumentShim.EnumerateReferencedDocumentDescriptors
+  nameWithType: DocumentShim.EnumerateReferencedDocumentDescriptors
+- uid: InventorShims.DocumentShim.EnumerateReferencedDocuments(Inventor.AssemblyDocument)
+  name: EnumerateReferencedDocuments(AssemblyDocument)
+  href: api/InventorShims.DocumentShim.html#InventorShims_DocumentShim_EnumerateReferencedDocuments_Inventor_AssemblyDocument_
+  commentId: M:InventorShims.DocumentShim.EnumerateReferencedDocuments(Inventor.AssemblyDocument)
+  fullName: InventorShims.DocumentShim.EnumerateReferencedDocuments(Inventor.AssemblyDocument)
+  nameWithType: DocumentShim.EnumerateReferencedDocuments(AssemblyDocument)
+- uid: InventorShims.DocumentShim.EnumerateReferencedDocuments(Inventor.Document)
+  name: EnumerateReferencedDocuments(Document)
+  href: api/InventorShims.DocumentShim.html#InventorShims_DocumentShim_EnumerateReferencedDocuments_Inventor_Document_
+  commentId: M:InventorShims.DocumentShim.EnumerateReferencedDocuments(Inventor.Document)
+  fullName: InventorShims.DocumentShim.EnumerateReferencedDocuments(Inventor.Document)
+  nameWithType: DocumentShim.EnumerateReferencedDocuments(Document)
+- uid: InventorShims.DocumentShim.EnumerateReferencedDocuments(Inventor.DrawingDocument)
+  name: EnumerateReferencedDocuments(DrawingDocument)
+  href: api/InventorShims.DocumentShim.html#InventorShims_DocumentShim_EnumerateReferencedDocuments_Inventor_DrawingDocument_
+  commentId: M:InventorShims.DocumentShim.EnumerateReferencedDocuments(Inventor.DrawingDocument)
+  fullName: InventorShims.DocumentShim.EnumerateReferencedDocuments(Inventor.DrawingDocument)
+  nameWithType: DocumentShim.EnumerateReferencedDocuments(DrawingDocument)
+- uid: InventorShims.DocumentShim.EnumerateReferencedDocuments(Inventor.PartDocument)
+  name: EnumerateReferencedDocuments(PartDocument)
+  href: api/InventorShims.DocumentShim.html#InventorShims_DocumentShim_EnumerateReferencedDocuments_Inventor_PartDocument_
+  commentId: M:InventorShims.DocumentShim.EnumerateReferencedDocuments(Inventor.PartDocument)
+  fullName: InventorShims.DocumentShim.EnumerateReferencedDocuments(Inventor.PartDocument)
+  nameWithType: DocumentShim.EnumerateReferencedDocuments(PartDocument)
+- uid: InventorShims.DocumentShim.EnumerateReferencedDocuments(Inventor.PresentationDocument)
+  name: EnumerateReferencedDocuments(PresentationDocument)
+  href: api/InventorShims.DocumentShim.html#InventorShims_DocumentShim_EnumerateReferencedDocuments_Inventor_PresentationDocument_
+  commentId: M:InventorShims.DocumentShim.EnumerateReferencedDocuments(Inventor.PresentationDocument)
+  fullName: InventorShims.DocumentShim.EnumerateReferencedDocuments(Inventor.PresentationDocument)
+  nameWithType: DocumentShim.EnumerateReferencedDocuments(PresentationDocument)
+- uid: InventorShims.DocumentShim.EnumerateReferencedDocuments*
+  name: EnumerateReferencedDocuments
+  href: api/InventorShims.DocumentShim.html#InventorShims_DocumentShim_EnumerateReferencedDocuments_
+  commentId: Overload:InventorShims.DocumentShim.EnumerateReferencedDocuments
+  isSpec: "True"
+  fullName: InventorShims.DocumentShim.EnumerateReferencedDocuments
+  nameWithType: DocumentShim.EnumerateReferencedDocuments
+- uid: InventorShims.DocumentShim.EnumerateReferencingDocuments(Inventor.AssemblyDocument)
+  name: EnumerateReferencingDocuments(AssemblyDocument)
+  href: api/InventorShims.DocumentShim.html#InventorShims_DocumentShim_EnumerateReferencingDocuments_Inventor_AssemblyDocument_
+  commentId: M:InventorShims.DocumentShim.EnumerateReferencingDocuments(Inventor.AssemblyDocument)
+  fullName: InventorShims.DocumentShim.EnumerateReferencingDocuments(Inventor.AssemblyDocument)
+  nameWithType: DocumentShim.EnumerateReferencingDocuments(AssemblyDocument)
+- uid: InventorShims.DocumentShim.EnumerateReferencingDocuments(Inventor.Document)
+  name: EnumerateReferencingDocuments(Document)
+  href: api/InventorShims.DocumentShim.html#InventorShims_DocumentShim_EnumerateReferencingDocuments_Inventor_Document_
+  commentId: M:InventorShims.DocumentShim.EnumerateReferencingDocuments(Inventor.Document)
+  fullName: InventorShims.DocumentShim.EnumerateReferencingDocuments(Inventor.Document)
+  nameWithType: DocumentShim.EnumerateReferencingDocuments(Document)
+- uid: InventorShims.DocumentShim.EnumerateReferencingDocuments(Inventor.DrawingDocument)
+  name: EnumerateReferencingDocuments(DrawingDocument)
+  href: api/InventorShims.DocumentShim.html#InventorShims_DocumentShim_EnumerateReferencingDocuments_Inventor_DrawingDocument_
+  commentId: M:InventorShims.DocumentShim.EnumerateReferencingDocuments(Inventor.DrawingDocument)
+  fullName: InventorShims.DocumentShim.EnumerateReferencingDocuments(Inventor.DrawingDocument)
+  nameWithType: DocumentShim.EnumerateReferencingDocuments(DrawingDocument)
+- uid: InventorShims.DocumentShim.EnumerateReferencingDocuments(Inventor.PartDocument)
+  name: EnumerateReferencingDocuments(PartDocument)
+  href: api/InventorShims.DocumentShim.html#InventorShims_DocumentShim_EnumerateReferencingDocuments_Inventor_PartDocument_
+  commentId: M:InventorShims.DocumentShim.EnumerateReferencingDocuments(Inventor.PartDocument)
+  fullName: InventorShims.DocumentShim.EnumerateReferencingDocuments(Inventor.PartDocument)
+  nameWithType: DocumentShim.EnumerateReferencingDocuments(PartDocument)
+- uid: InventorShims.DocumentShim.EnumerateReferencingDocuments(Inventor.PresentationDocument)
+  name: EnumerateReferencingDocuments(PresentationDocument)
+  href: api/InventorShims.DocumentShim.html#InventorShims_DocumentShim_EnumerateReferencingDocuments_Inventor_PresentationDocument_
+  commentId: M:InventorShims.DocumentShim.EnumerateReferencingDocuments(Inventor.PresentationDocument)
+  fullName: InventorShims.DocumentShim.EnumerateReferencingDocuments(Inventor.PresentationDocument)
+  nameWithType: DocumentShim.EnumerateReferencingDocuments(PresentationDocument)
+- uid: InventorShims.DocumentShim.EnumerateReferencingDocuments*
+  name: EnumerateReferencingDocuments
+  href: api/InventorShims.DocumentShim.html#InventorShims_DocumentShim_EnumerateReferencingDocuments_
+  commentId: Overload:InventorShims.DocumentShim.EnumerateReferencingDocuments
+  isSpec: "True"
+  fullName: InventorShims.DocumentShim.EnumerateReferencingDocuments
+  nameWithType: DocumentShim.EnumerateReferencingDocuments
 - uid: InventorShims.DocumentShim.GetDocumentFromObject(System.Object)
   name: GetDocumentFromObject(Object)
   href: api/InventorShims.DocumentShim.html#InventorShims_DocumentShim_GetDocumentFromObject_System_Object_
@@ -319,11 +534,11 @@ references:
   isSpec: "True"
   fullName: InventorShims.DocumentShim.GetDocumentFromObject
   nameWithType: DocumentShim.GetDocumentFromObject
-- uid: InventorShims.DocumentShim.GetDocumentsFromSelectSet(SelectSet)
+- uid: InventorShims.DocumentShim.GetDocumentsFromSelectSet(Inventor.SelectSet)
   name: GetDocumentsFromSelectSet(SelectSet)
-  href: api/InventorShims.DocumentShim.html#InventorShims_DocumentShim_GetDocumentsFromSelectSet_SelectSet_
-  commentId: M:InventorShims.DocumentShim.GetDocumentsFromSelectSet(SelectSet)
-  fullName: InventorShims.DocumentShim.GetDocumentsFromSelectSet(SelectSet)
+  href: api/InventorShims.DocumentShim.html#InventorShims_DocumentShim_GetDocumentsFromSelectSet_Inventor_SelectSet_
+  commentId: M:InventorShims.DocumentShim.GetDocumentsFromSelectSet(Inventor.SelectSet)
+  fullName: InventorShims.DocumentShim.GetDocumentsFromSelectSet(Inventor.SelectSet)
   nameWithType: DocumentShim.GetDocumentsFromSelectSet(SelectSet)
 - uid: InventorShims.DocumentShim.GetDocumentsFromSelectSet*
   name: GetDocumentsFromSelectSet
@@ -332,11 +547,11 @@ references:
   isSpec: "True"
   fullName: InventorShims.DocumentShim.GetDocumentsFromSelectSet
   nameWithType: DocumentShim.GetDocumentsFromSelectSet
-- uid: InventorShims.DocumentShim.IsAssembly(Document)
+- uid: InventorShims.DocumentShim.IsAssembly(Inventor.Document)
   name: IsAssembly(Document)
-  href: api/InventorShims.DocumentShim.html#InventorShims_DocumentShim_IsAssembly_Document_
-  commentId: M:InventorShims.DocumentShim.IsAssembly(Document)
-  fullName: InventorShims.DocumentShim.IsAssembly(Document)
+  href: api/InventorShims.DocumentShim.html#InventorShims_DocumentShim_IsAssembly_Inventor_Document_
+  commentId: M:InventorShims.DocumentShim.IsAssembly(Inventor.Document)
+  fullName: InventorShims.DocumentShim.IsAssembly(Inventor.Document)
   nameWithType: DocumentShim.IsAssembly(Document)
 - uid: InventorShims.DocumentShim.IsAssembly*
   name: IsAssembly
@@ -345,11 +560,79 @@ references:
   isSpec: "True"
   fullName: InventorShims.DocumentShim.IsAssembly
   nameWithType: DocumentShim.IsAssembly
-- uid: InventorShims.DocumentShim.IsDrawing(Document)
+- uid: InventorShims.DocumentShim.IsContentCenter(Inventor.AssemblyDocument)
+  name: IsContentCenter(AssemblyDocument)
+  href: api/InventorShims.DocumentShim.html#InventorShims_DocumentShim_IsContentCenter_Inventor_AssemblyDocument_
+  commentId: M:InventorShims.DocumentShim.IsContentCenter(Inventor.AssemblyDocument)
+  fullName: InventorShims.DocumentShim.IsContentCenter(Inventor.AssemblyDocument)
+  nameWithType: DocumentShim.IsContentCenter(AssemblyDocument)
+- uid: InventorShims.DocumentShim.IsContentCenter(Inventor.Document)
+  name: IsContentCenter(Document)
+  href: api/InventorShims.DocumentShim.html#InventorShims_DocumentShim_IsContentCenter_Inventor_Document_
+  commentId: M:InventorShims.DocumentShim.IsContentCenter(Inventor.Document)
+  fullName: InventorShims.DocumentShim.IsContentCenter(Inventor.Document)
+  nameWithType: DocumentShim.IsContentCenter(Document)
+- uid: InventorShims.DocumentShim.IsContentCenter(Inventor.PartDocument)
+  name: IsContentCenter(PartDocument)
+  href: api/InventorShims.DocumentShim.html#InventorShims_DocumentShim_IsContentCenter_Inventor_PartDocument_
+  commentId: M:InventorShims.DocumentShim.IsContentCenter(Inventor.PartDocument)
+  fullName: InventorShims.DocumentShim.IsContentCenter(Inventor.PartDocument)
+  nameWithType: DocumentShim.IsContentCenter(PartDocument)
+- uid: InventorShims.DocumentShim.IsContentCenter(Inventor.PresentationDocument)
+  name: IsContentCenter(PresentationDocument)
+  href: api/InventorShims.DocumentShim.html#InventorShims_DocumentShim_IsContentCenter_Inventor_PresentationDocument_
+  commentId: M:InventorShims.DocumentShim.IsContentCenter(Inventor.PresentationDocument)
+  fullName: InventorShims.DocumentShim.IsContentCenter(Inventor.PresentationDocument)
+  nameWithType: DocumentShim.IsContentCenter(PresentationDocument)
+- uid: InventorShims.DocumentShim.IsContentCenter*
+  name: IsContentCenter
+  href: api/InventorShims.DocumentShim.html#InventorShims_DocumentShim_IsContentCenter_
+  commentId: Overload:InventorShims.DocumentShim.IsContentCenter
+  isSpec: "True"
+  fullName: InventorShims.DocumentShim.IsContentCenter
+  nameWithType: DocumentShim.IsContentCenter
+- uid: InventorShims.DocumentShim.IsCustomContentCenter(Inventor.AssemblyDocument)
+  name: IsCustomContentCenter(AssemblyDocument)
+  href: api/InventorShims.DocumentShim.html#InventorShims_DocumentShim_IsCustomContentCenter_Inventor_AssemblyDocument_
+  commentId: M:InventorShims.DocumentShim.IsCustomContentCenter(Inventor.AssemblyDocument)
+  fullName: InventorShims.DocumentShim.IsCustomContentCenter(Inventor.AssemblyDocument)
+  nameWithType: DocumentShim.IsCustomContentCenter(AssemblyDocument)
+- uid: InventorShims.DocumentShim.IsCustomContentCenter(Inventor.Document)
+  name: IsCustomContentCenter(Document)
+  href: api/InventorShims.DocumentShim.html#InventorShims_DocumentShim_IsCustomContentCenter_Inventor_Document_
+  commentId: M:InventorShims.DocumentShim.IsCustomContentCenter(Inventor.Document)
+  fullName: InventorShims.DocumentShim.IsCustomContentCenter(Inventor.Document)
+  nameWithType: DocumentShim.IsCustomContentCenter(Document)
+- uid: InventorShims.DocumentShim.IsCustomContentCenter(Inventor.DrawingDocument)
+  name: IsCustomContentCenter(DrawingDocument)
+  href: api/InventorShims.DocumentShim.html#InventorShims_DocumentShim_IsCustomContentCenter_Inventor_DrawingDocument_
+  commentId: M:InventorShims.DocumentShim.IsCustomContentCenter(Inventor.DrawingDocument)
+  fullName: InventorShims.DocumentShim.IsCustomContentCenter(Inventor.DrawingDocument)
+  nameWithType: DocumentShim.IsCustomContentCenter(DrawingDocument)
+- uid: InventorShims.DocumentShim.IsCustomContentCenter(Inventor.PartDocument)
+  name: IsCustomContentCenter(PartDocument)
+  href: api/InventorShims.DocumentShim.html#InventorShims_DocumentShim_IsCustomContentCenter_Inventor_PartDocument_
+  commentId: M:InventorShims.DocumentShim.IsCustomContentCenter(Inventor.PartDocument)
+  fullName: InventorShims.DocumentShim.IsCustomContentCenter(Inventor.PartDocument)
+  nameWithType: DocumentShim.IsCustomContentCenter(PartDocument)
+- uid: InventorShims.DocumentShim.IsCustomContentCenter(Inventor.PresentationDocument)
+  name: IsCustomContentCenter(PresentationDocument)
+  href: api/InventorShims.DocumentShim.html#InventorShims_DocumentShim_IsCustomContentCenter_Inventor_PresentationDocument_
+  commentId: M:InventorShims.DocumentShim.IsCustomContentCenter(Inventor.PresentationDocument)
+  fullName: InventorShims.DocumentShim.IsCustomContentCenter(Inventor.PresentationDocument)
+  nameWithType: DocumentShim.IsCustomContentCenter(PresentationDocument)
+- uid: InventorShims.DocumentShim.IsCustomContentCenter*
+  name: IsCustomContentCenter
+  href: api/InventorShims.DocumentShim.html#InventorShims_DocumentShim_IsCustomContentCenter_
+  commentId: Overload:InventorShims.DocumentShim.IsCustomContentCenter
+  isSpec: "True"
+  fullName: InventorShims.DocumentShim.IsCustomContentCenter
+  nameWithType: DocumentShim.IsCustomContentCenter
+- uid: InventorShims.DocumentShim.IsDrawing(Inventor.Document)
   name: IsDrawing(Document)
-  href: api/InventorShims.DocumentShim.html#InventorShims_DocumentShim_IsDrawing_Document_
-  commentId: M:InventorShims.DocumentShim.IsDrawing(Document)
-  fullName: InventorShims.DocumentShim.IsDrawing(Document)
+  href: api/InventorShims.DocumentShim.html#InventorShims_DocumentShim_IsDrawing_Inventor_Document_
+  commentId: M:InventorShims.DocumentShim.IsDrawing(Inventor.Document)
+  fullName: InventorShims.DocumentShim.IsDrawing(Inventor.Document)
   nameWithType: DocumentShim.IsDrawing(Document)
 - uid: InventorShims.DocumentShim.IsDrawing*
   name: IsDrawing
@@ -358,11 +641,11 @@ references:
   isSpec: "True"
   fullName: InventorShims.DocumentShim.IsDrawing
   nameWithType: DocumentShim.IsDrawing
-- uid: InventorShims.DocumentShim.IsForeignModel(Document)
+- uid: InventorShims.DocumentShim.IsForeignModel(Inventor.Document)
   name: IsForeignModel(Document)
-  href: api/InventorShims.DocumentShim.html#InventorShims_DocumentShim_IsForeignModel_Document_
-  commentId: M:InventorShims.DocumentShim.IsForeignModel(Document)
-  fullName: InventorShims.DocumentShim.IsForeignModel(Document)
+  href: api/InventorShims.DocumentShim.html#InventorShims_DocumentShim_IsForeignModel_Inventor_Document_
+  commentId: M:InventorShims.DocumentShim.IsForeignModel(Inventor.Document)
+  fullName: InventorShims.DocumentShim.IsForeignModel(Inventor.Document)
   nameWithType: DocumentShim.IsForeignModel(Document)
 - uid: InventorShims.DocumentShim.IsForeignModel*
   name: IsForeignModel
@@ -371,11 +654,11 @@ references:
   isSpec: "True"
   fullName: InventorShims.DocumentShim.IsForeignModel
   nameWithType: DocumentShim.IsForeignModel
-- uid: InventorShims.DocumentShim.IsPart(Document)
+- uid: InventorShims.DocumentShim.IsPart(Inventor.Document)
   name: IsPart(Document)
-  href: api/InventorShims.DocumentShim.html#InventorShims_DocumentShim_IsPart_Document_
-  commentId: M:InventorShims.DocumentShim.IsPart(Document)
-  fullName: InventorShims.DocumentShim.IsPart(Document)
+  href: api/InventorShims.DocumentShim.html#InventorShims_DocumentShim_IsPart_Inventor_Document_
+  commentId: M:InventorShims.DocumentShim.IsPart(Inventor.Document)
+  fullName: InventorShims.DocumentShim.IsPart(Inventor.Document)
   nameWithType: DocumentShim.IsPart(Document)
 - uid: InventorShims.DocumentShim.IsPart*
   name: IsPart
@@ -384,11 +667,11 @@ references:
   isSpec: "True"
   fullName: InventorShims.DocumentShim.IsPart
   nameWithType: DocumentShim.IsPart
-- uid: InventorShims.DocumentShim.IsPresentation(Document)
+- uid: InventorShims.DocumentShim.IsPresentation(Inventor.Document)
   name: IsPresentation(Document)
-  href: api/InventorShims.DocumentShim.html#InventorShims_DocumentShim_IsPresentation_Document_
-  commentId: M:InventorShims.DocumentShim.IsPresentation(Document)
-  fullName: InventorShims.DocumentShim.IsPresentation(Document)
+  href: api/InventorShims.DocumentShim.html#InventorShims_DocumentShim_IsPresentation_Inventor_Document_
+  commentId: M:InventorShims.DocumentShim.IsPresentation(Inventor.Document)
+  fullName: InventorShims.DocumentShim.IsPresentation(Inventor.Document)
   nameWithType: DocumentShim.IsPresentation(Document)
 - uid: InventorShims.DocumentShim.IsPresentation*
   name: IsPresentation
@@ -397,11 +680,11 @@ references:
   isSpec: "True"
   fullName: InventorShims.DocumentShim.IsPresentation
   nameWithType: DocumentShim.IsPresentation
-- uid: InventorShims.DocumentShim.IsSat(Document)
+- uid: InventorShims.DocumentShim.IsSat(Inventor.Document)
   name: IsSat(Document)
-  href: api/InventorShims.DocumentShim.html#InventorShims_DocumentShim_IsSat_Document_
-  commentId: M:InventorShims.DocumentShim.IsSat(Document)
-  fullName: InventorShims.DocumentShim.IsSat(Document)
+  href: api/InventorShims.DocumentShim.html#InventorShims_DocumentShim_IsSat_Inventor_Document_
+  commentId: M:InventorShims.DocumentShim.IsSat(Inventor.Document)
+  fullName: InventorShims.DocumentShim.IsSat(Inventor.Document)
   nameWithType: DocumentShim.IsSat(Document)
 - uid: InventorShims.DocumentShim.IsSat*
   name: IsSat
@@ -410,11 +693,11 @@ references:
   isSpec: "True"
   fullName: InventorShims.DocumentShim.IsSat
   nameWithType: DocumentShim.IsSat
-- uid: InventorShims.DocumentShim.IsUnknown(Document)
+- uid: InventorShims.DocumentShim.IsUnknown(Inventor.Document)
   name: IsUnknown(Document)
-  href: api/InventorShims.DocumentShim.html#InventorShims_DocumentShim_IsUnknown_Document_
-  commentId: M:InventorShims.DocumentShim.IsUnknown(Document)
-  fullName: InventorShims.DocumentShim.IsUnknown(Document)
+  href: api/InventorShims.DocumentShim.html#InventorShims_DocumentShim_IsUnknown_Inventor_Document_
+  commentId: M:InventorShims.DocumentShim.IsUnknown(Inventor.Document)
+  fullName: InventorShims.DocumentShim.IsUnknown(Inventor.Document)
   nameWithType: DocumentShim.IsUnknown(Document)
 - uid: InventorShims.DocumentShim.IsUnknown*
   name: IsUnknown
@@ -436,11 +719,11 @@ references:
   isSpec: "True"
   fullName: InventorShims.DocumentShim.ObjectIsDocument
   nameWithType: DocumentShim.ObjectIsDocument
-- uid: InventorShims.DocumentShim.OrbitToIsoFrontRightTop(Document)
+- uid: InventorShims.DocumentShim.OrbitToIsoFrontRightTop(Inventor.Document)
   name: OrbitToIsoFrontRightTop(Document)
-  href: api/InventorShims.DocumentShim.html#InventorShims_DocumentShim_OrbitToIsoFrontRightTop_Document_
-  commentId: M:InventorShims.DocumentShim.OrbitToIsoFrontRightTop(Document)
-  fullName: InventorShims.DocumentShim.OrbitToIsoFrontRightTop(Document)
+  href: api/InventorShims.DocumentShim.html#InventorShims_DocumentShim_OrbitToIsoFrontRightTop_Inventor_Document_
+  commentId: M:InventorShims.DocumentShim.OrbitToIsoFrontRightTop(Inventor.Document)
+  fullName: InventorShims.DocumentShim.OrbitToIsoFrontRightTop(Inventor.Document)
   nameWithType: DocumentShim.OrbitToIsoFrontRightTop(Document)
 - uid: InventorShims.DocumentShim.OrbitToIsoFrontRightTop*
   name: OrbitToIsoFrontRightTop
@@ -449,12 +732,124 @@ references:
   isSpec: "True"
   fullName: InventorShims.DocumentShim.OrbitToIsoFrontRightTop
   nameWithType: DocumentShim.OrbitToIsoFrontRightTop
+- uid: InventorShims.DocumentShim.PartDocuments(System.Collections.Generic.IEnumerable{Inventor.Document})
+  name: PartDocuments(IEnumerable<Document>)
+  href: api/InventorShims.DocumentShim.html#InventorShims_DocumentShim_PartDocuments_System_Collections_Generic_IEnumerable_Inventor_Document__
+  commentId: M:InventorShims.DocumentShim.PartDocuments(System.Collections.Generic.IEnumerable{Inventor.Document})
+  name.vb: PartDocuments(IEnumerable(Of Document))
+  fullName: InventorShims.DocumentShim.PartDocuments(System.Collections.Generic.IEnumerable<Inventor.Document>)
+  fullName.vb: InventorShims.DocumentShim.PartDocuments(System.Collections.Generic.IEnumerable(Of Inventor.Document))
+  nameWithType: DocumentShim.PartDocuments(IEnumerable<Document>)
+  nameWithType.vb: DocumentShim.PartDocuments(IEnumerable(Of Document))
+- uid: InventorShims.DocumentShim.PartDocuments*
+  name: PartDocuments
+  href: api/InventorShims.DocumentShim.html#InventorShims_DocumentShim_PartDocuments_
+  commentId: Overload:InventorShims.DocumentShim.PartDocuments
+  isSpec: "True"
+  fullName: InventorShims.DocumentShim.PartDocuments
+  nameWithType: DocumentShim.PartDocuments
+- uid: InventorShims.DocumentShim.PresentationDocuments(System.Collections.Generic.IEnumerable{Inventor.Document})
+  name: PresentationDocuments(IEnumerable<Document>)
+  href: api/InventorShims.DocumentShim.html#InventorShims_DocumentShim_PresentationDocuments_System_Collections_Generic_IEnumerable_Inventor_Document__
+  commentId: M:InventorShims.DocumentShim.PresentationDocuments(System.Collections.Generic.IEnumerable{Inventor.Document})
+  name.vb: PresentationDocuments(IEnumerable(Of Document))
+  fullName: InventorShims.DocumentShim.PresentationDocuments(System.Collections.Generic.IEnumerable<Inventor.Document>)
+  fullName.vb: InventorShims.DocumentShim.PresentationDocuments(System.Collections.Generic.IEnumerable(Of Inventor.Document))
+  nameWithType: DocumentShim.PresentationDocuments(IEnumerable<Document>)
+  nameWithType.vb: DocumentShim.PresentationDocuments(IEnumerable(Of Document))
+- uid: InventorShims.DocumentShim.PresentationDocuments*
+  name: PresentationDocuments
+  href: api/InventorShims.DocumentShim.html#InventorShims_DocumentShim_PresentationDocuments_
+  commentId: Overload:InventorShims.DocumentShim.PresentationDocuments
+  isSpec: "True"
+  fullName: InventorShims.DocumentShim.PresentationDocuments
+  nameWithType: DocumentShim.PresentationDocuments
+- uid: InventorShims.DocumentShim.RemoveAssemblyDocuments(System.Collections.Generic.IEnumerable{Inventor.Document})
+  name: RemoveAssemblyDocuments(IEnumerable<Document>)
+  href: api/InventorShims.DocumentShim.html#InventorShims_DocumentShim_RemoveAssemblyDocuments_System_Collections_Generic_IEnumerable_Inventor_Document__
+  commentId: M:InventorShims.DocumentShim.RemoveAssemblyDocuments(System.Collections.Generic.IEnumerable{Inventor.Document})
+  name.vb: RemoveAssemblyDocuments(IEnumerable(Of Document))
+  fullName: InventorShims.DocumentShim.RemoveAssemblyDocuments(System.Collections.Generic.IEnumerable<Inventor.Document>)
+  fullName.vb: InventorShims.DocumentShim.RemoveAssemblyDocuments(System.Collections.Generic.IEnumerable(Of Inventor.Document))
+  nameWithType: DocumentShim.RemoveAssemblyDocuments(IEnumerable<Document>)
+  nameWithType.vb: DocumentShim.RemoveAssemblyDocuments(IEnumerable(Of Document))
+- uid: InventorShims.DocumentShim.RemoveAssemblyDocuments*
+  name: RemoveAssemblyDocuments
+  href: api/InventorShims.DocumentShim.html#InventorShims_DocumentShim_RemoveAssemblyDocuments_
+  commentId: Overload:InventorShims.DocumentShim.RemoveAssemblyDocuments
+  isSpec: "True"
+  fullName: InventorShims.DocumentShim.RemoveAssemblyDocuments
+  nameWithType: DocumentShim.RemoveAssemblyDocuments
+- uid: InventorShims.DocumentShim.RemoveDrawingDocuments(System.Collections.Generic.IEnumerable{Inventor.Document})
+  name: RemoveDrawingDocuments(IEnumerable<Document>)
+  href: api/InventorShims.DocumentShim.html#InventorShims_DocumentShim_RemoveDrawingDocuments_System_Collections_Generic_IEnumerable_Inventor_Document__
+  commentId: M:InventorShims.DocumentShim.RemoveDrawingDocuments(System.Collections.Generic.IEnumerable{Inventor.Document})
+  name.vb: RemoveDrawingDocuments(IEnumerable(Of Document))
+  fullName: InventorShims.DocumentShim.RemoveDrawingDocuments(System.Collections.Generic.IEnumerable<Inventor.Document>)
+  fullName.vb: InventorShims.DocumentShim.RemoveDrawingDocuments(System.Collections.Generic.IEnumerable(Of Inventor.Document))
+  nameWithType: DocumentShim.RemoveDrawingDocuments(IEnumerable<Document>)
+  nameWithType.vb: DocumentShim.RemoveDrawingDocuments(IEnumerable(Of Document))
+- uid: InventorShims.DocumentShim.RemoveDrawingDocuments*
+  name: RemoveDrawingDocuments
+  href: api/InventorShims.DocumentShim.html#InventorShims_DocumentShim_RemoveDrawingDocuments_
+  commentId: Overload:InventorShims.DocumentShim.RemoveDrawingDocuments
+  isSpec: "True"
+  fullName: InventorShims.DocumentShim.RemoveDrawingDocuments
+  nameWithType: DocumentShim.RemoveDrawingDocuments
+- uid: InventorShims.DocumentShim.RemoveNonNativeDocuments(System.Collections.Generic.IEnumerable{Inventor.Document})
+  name: RemoveNonNativeDocuments(IEnumerable<Document>)
+  href: api/InventorShims.DocumentShim.html#InventorShims_DocumentShim_RemoveNonNativeDocuments_System_Collections_Generic_IEnumerable_Inventor_Document__
+  commentId: M:InventorShims.DocumentShim.RemoveNonNativeDocuments(System.Collections.Generic.IEnumerable{Inventor.Document})
+  name.vb: RemoveNonNativeDocuments(IEnumerable(Of Document))
+  fullName: InventorShims.DocumentShim.RemoveNonNativeDocuments(System.Collections.Generic.IEnumerable<Inventor.Document>)
+  fullName.vb: InventorShims.DocumentShim.RemoveNonNativeDocuments(System.Collections.Generic.IEnumerable(Of Inventor.Document))
+  nameWithType: DocumentShim.RemoveNonNativeDocuments(IEnumerable<Document>)
+  nameWithType.vb: DocumentShim.RemoveNonNativeDocuments(IEnumerable(Of Document))
+- uid: InventorShims.DocumentShim.RemoveNonNativeDocuments*
+  name: RemoveNonNativeDocuments
+  href: api/InventorShims.DocumentShim.html#InventorShims_DocumentShim_RemoveNonNativeDocuments_
+  commentId: Overload:InventorShims.DocumentShim.RemoveNonNativeDocuments
+  isSpec: "True"
+  fullName: InventorShims.DocumentShim.RemoveNonNativeDocuments
+  nameWithType: DocumentShim.RemoveNonNativeDocuments
+- uid: InventorShims.DocumentShim.RemovePartDocuments(System.Collections.Generic.IEnumerable{Inventor.Document})
+  name: RemovePartDocuments(IEnumerable<Document>)
+  href: api/InventorShims.DocumentShim.html#InventorShims_DocumentShim_RemovePartDocuments_System_Collections_Generic_IEnumerable_Inventor_Document__
+  commentId: M:InventorShims.DocumentShim.RemovePartDocuments(System.Collections.Generic.IEnumerable{Inventor.Document})
+  name.vb: RemovePartDocuments(IEnumerable(Of Document))
+  fullName: InventorShims.DocumentShim.RemovePartDocuments(System.Collections.Generic.IEnumerable<Inventor.Document>)
+  fullName.vb: InventorShims.DocumentShim.RemovePartDocuments(System.Collections.Generic.IEnumerable(Of Inventor.Document))
+  nameWithType: DocumentShim.RemovePartDocuments(IEnumerable<Document>)
+  nameWithType.vb: DocumentShim.RemovePartDocuments(IEnumerable(Of Document))
+- uid: InventorShims.DocumentShim.RemovePartDocuments*
+  name: RemovePartDocuments
+  href: api/InventorShims.DocumentShim.html#InventorShims_DocumentShim_RemovePartDocuments_
+  commentId: Overload:InventorShims.DocumentShim.RemovePartDocuments
+  isSpec: "True"
+  fullName: InventorShims.DocumentShim.RemovePartDocuments
+  nameWithType: DocumentShim.RemovePartDocuments
+- uid: InventorShims.DocumentShim.RemovePresentationDocuments(System.Collections.Generic.IEnumerable{Inventor.Document})
+  name: RemovePresentationDocuments(IEnumerable<Document>)
+  href: api/InventorShims.DocumentShim.html#InventorShims_DocumentShim_RemovePresentationDocuments_System_Collections_Generic_IEnumerable_Inventor_Document__
+  commentId: M:InventorShims.DocumentShim.RemovePresentationDocuments(System.Collections.Generic.IEnumerable{Inventor.Document})
+  name.vb: RemovePresentationDocuments(IEnumerable(Of Document))
+  fullName: InventorShims.DocumentShim.RemovePresentationDocuments(System.Collections.Generic.IEnumerable<Inventor.Document>)
+  fullName.vb: InventorShims.DocumentShim.RemovePresentationDocuments(System.Collections.Generic.IEnumerable(Of Inventor.Document))
+  nameWithType: DocumentShim.RemovePresentationDocuments(IEnumerable<Document>)
+  nameWithType.vb: DocumentShim.RemovePresentationDocuments(IEnumerable(Of Document))
+- uid: InventorShims.DocumentShim.RemovePresentationDocuments*
+  name: RemovePresentationDocuments
+  href: api/InventorShims.DocumentShim.html#InventorShims_DocumentShim_RemovePresentationDocuments_
+  commentId: Overload:InventorShims.DocumentShim.RemovePresentationDocuments
+  isSpec: "True"
+  fullName: InventorShims.DocumentShim.RemovePresentationDocuments
+  nameWithType: DocumentShim.RemovePresentationDocuments
 - uid: InventorShims.DocumentShim.ReturnSpecificDocumentObject(Inventor.Document)
-  name: ReturnSpecificDocumentObject(Inventor.Document)
+  name: ReturnSpecificDocumentObject(Document)
   href: api/InventorShims.DocumentShim.html#InventorShims_DocumentShim_ReturnSpecificDocumentObject_Inventor_Document_
   commentId: M:InventorShims.DocumentShim.ReturnSpecificDocumentObject(Inventor.Document)
   fullName: InventorShims.DocumentShim.ReturnSpecificDocumentObject(Inventor.Document)
-  nameWithType: DocumentShim.ReturnSpecificDocumentObject(Inventor.Document)
+  nameWithType: DocumentShim.ReturnSpecificDocumentObject(Document)
 - uid: InventorShims.DocumentShim.ReturnSpecificDocumentObject*
   name: ReturnSpecificDocumentObject
   href: api/InventorShims.DocumentShim.html#InventorShims_DocumentShim_ReturnSpecificDocumentObject_
@@ -462,11 +857,11 @@ references:
   isSpec: "True"
   fullName: InventorShims.DocumentShim.ReturnSpecificDocumentObject
   nameWithType: DocumentShim.ReturnSpecificDocumentObject
-- uid: InventorShims.DocumentShim.SaveSilently(Document)
+- uid: InventorShims.DocumentShim.SaveSilently(Inventor.Document)
   name: SaveSilently(Document)
-  href: api/InventorShims.DocumentShim.html#InventorShims_DocumentShim_SaveSilently_Document_
-  commentId: M:InventorShims.DocumentShim.SaveSilently(Document)
-  fullName: InventorShims.DocumentShim.SaveSilently(Document)
+  href: api/InventorShims.DocumentShim.html#InventorShims_DocumentShim_SaveSilently_Inventor_Document_
+  commentId: M:InventorShims.DocumentShim.SaveSilently(Inventor.Document)
+  fullName: InventorShims.DocumentShim.SaveSilently(Inventor.Document)
   nameWithType: DocumentShim.SaveSilently(Document)
 - uid: InventorShims.DocumentShim.SaveSilently*
   name: SaveSilently
@@ -475,11 +870,11 @@ references:
   isSpec: "True"
   fullName: InventorShims.DocumentShim.SaveSilently
   nameWithType: DocumentShim.SaveSilently
-- uid: InventorShims.DocumentShim.ScreenShot(Document,System.String,System.Boolean,System.Boolean)
+- uid: InventorShims.DocumentShim.ScreenShot(Inventor.Document,System.String,System.Boolean,System.Boolean)
   name: ScreenShot(Document, String, Boolean, Boolean)
-  href: api/InventorShims.DocumentShim.html#InventorShims_DocumentShim_ScreenShot_Document_System_String_System_Boolean_System_Boolean_
-  commentId: M:InventorShims.DocumentShim.ScreenShot(Document,System.String,System.Boolean,System.Boolean)
-  fullName: InventorShims.DocumentShim.ScreenShot(Document, System.String, System.Boolean, System.Boolean)
+  href: api/InventorShims.DocumentShim.html#InventorShims_DocumentShim_ScreenShot_Inventor_Document_System_String_System_Boolean_System_Boolean_
+  commentId: M:InventorShims.DocumentShim.ScreenShot(Inventor.Document,System.String,System.Boolean,System.Boolean)
+  fullName: InventorShims.DocumentShim.ScreenShot(Inventor.Document, System.String, System.Boolean, System.Boolean)
   nameWithType: DocumentShim.ScreenShot(Document, String, Boolean, Boolean)
 - uid: InventorShims.DocumentShim.ScreenShot*
   name: ScreenShot
@@ -488,11 +883,11 @@ references:
   isSpec: "True"
   fullName: InventorShims.DocumentShim.ScreenShot
   nameWithType: DocumentShim.ScreenShot
-- uid: InventorShims.DocumentShim.ZoomExtents(Document)
+- uid: InventorShims.DocumentShim.ZoomExtents(Inventor.Document)
   name: ZoomExtents(Document)
-  href: api/InventorShims.DocumentShim.html#InventorShims_DocumentShim_ZoomExtents_Document_
-  commentId: M:InventorShims.DocumentShim.ZoomExtents(Document)
-  fullName: InventorShims.DocumentShim.ZoomExtents(Document)
+  href: api/InventorShims.DocumentShim.html#InventorShims_DocumentShim_ZoomExtents_Inventor_Document_
+  commentId: M:InventorShims.DocumentShim.ZoomExtents(Inventor.Document)
+  fullName: InventorShims.DocumentShim.ZoomExtents(Inventor.Document)
   nameWithType: DocumentShim.ZoomExtents(Document)
 - uid: InventorShims.DocumentShim.ZoomExtents*
   name: ZoomExtents
@@ -514,11 +909,11 @@ references:
   fullName: InventorShims.ExternalRuleDirectories.ExternalRuleDirectories()
   nameWithType: ExternalRuleDirectories.ExternalRuleDirectories()
 - uid: InventorShims.ExternalRuleDirectories.#ctor(Inventor.Application)
-  name: ExternalRuleDirectories(Inventor.Application)
+  name: ExternalRuleDirectories(Application)
   href: api/InventorShims.ExternalRuleDirectories.html#InventorShims_ExternalRuleDirectories__ctor_Inventor_Application_
   commentId: M:InventorShims.ExternalRuleDirectories.#ctor(Inventor.Application)
   fullName: InventorShims.ExternalRuleDirectories.ExternalRuleDirectories(Inventor.Application)
-  nameWithType: ExternalRuleDirectories.ExternalRuleDirectories(Inventor.Application)
+  nameWithType: ExternalRuleDirectories.ExternalRuleDirectories(Application)
 - uid: InventorShims.ExternalRuleDirectories.#ctor*
   name: ExternalRuleDirectories
   href: api/InventorShims.ExternalRuleDirectories.html#InventorShims_ExternalRuleDirectories__ctor_
@@ -642,12 +1037,74 @@ references:
   commentId: T:InventorShims.ParameterShim
   fullName: InventorShims.ParameterShim
   nameWithType: ParameterShim
+- uid: InventorShims.ParameterShim.EnumerateParameterNames(Inventor.Parameters)
+  name: EnumerateParameterNames(Parameters)
+  href: api/InventorShims.ParameterShim.html#InventorShims_ParameterShim_EnumerateParameterNames_Inventor_Parameters_
+  commentId: M:InventorShims.ParameterShim.EnumerateParameterNames(Inventor.Parameters)
+  fullName: InventorShims.ParameterShim.EnumerateParameterNames(Inventor.Parameters)
+  nameWithType: ParameterShim.EnumerateParameterNames(Parameters)
+- uid: InventorShims.ParameterShim.EnumerateParameterNames*
+  name: EnumerateParameterNames
+  href: api/InventorShims.ParameterShim.html#InventorShims_ParameterShim_EnumerateParameterNames_
+  commentId: Overload:InventorShims.ParameterShim.EnumerateParameterNames
+  isSpec: "True"
+  fullName: InventorShims.ParameterShim.EnumerateParameterNames
+  nameWithType: ParameterShim.EnumerateParameterNames
+- uid: InventorShims.ParameterShim.EnumerateParameters(Inventor.AssemblyDocument)
+  name: EnumerateParameters(AssemblyDocument)
+  href: api/InventorShims.ParameterShim.html#InventorShims_ParameterShim_EnumerateParameters_Inventor_AssemblyDocument_
+  commentId: M:InventorShims.ParameterShim.EnumerateParameters(Inventor.AssemblyDocument)
+  fullName: InventorShims.ParameterShim.EnumerateParameters(Inventor.AssemblyDocument)
+  nameWithType: ParameterShim.EnumerateParameters(AssemblyDocument)
+- uid: InventorShims.ParameterShim.EnumerateParameters(Inventor.Document)
+  name: EnumerateParameters(Document)
+  href: api/InventorShims.ParameterShim.html#InventorShims_ParameterShim_EnumerateParameters_Inventor_Document_
+  commentId: M:InventorShims.ParameterShim.EnumerateParameters(Inventor.Document)
+  fullName: InventorShims.ParameterShim.EnumerateParameters(Inventor.Document)
+  nameWithType: ParameterShim.EnumerateParameters(Document)
+- uid: InventorShims.ParameterShim.EnumerateParameters(Inventor.DrawingDocument)
+  name: EnumerateParameters(DrawingDocument)
+  href: api/InventorShims.ParameterShim.html#InventorShims_ParameterShim_EnumerateParameters_Inventor_DrawingDocument_
+  commentId: M:InventorShims.ParameterShim.EnumerateParameters(Inventor.DrawingDocument)
+  fullName: InventorShims.ParameterShim.EnumerateParameters(Inventor.DrawingDocument)
+  nameWithType: ParameterShim.EnumerateParameters(DrawingDocument)
+- uid: InventorShims.ParameterShim.EnumerateParameters(Inventor.PartDocument)
+  name: EnumerateParameters(PartDocument)
+  href: api/InventorShims.ParameterShim.html#InventorShims_ParameterShim_EnumerateParameters_Inventor_PartDocument_
+  commentId: M:InventorShims.ParameterShim.EnumerateParameters(Inventor.PartDocument)
+  fullName: InventorShims.ParameterShim.EnumerateParameters(Inventor.PartDocument)
+  nameWithType: ParameterShim.EnumerateParameters(PartDocument)
+- uid: InventorShims.ParameterShim.EnumerateParameters*
+  name: EnumerateParameters
+  href: api/InventorShims.ParameterShim.html#InventorShims_ParameterShim_EnumerateParameters_
+  commentId: Overload:InventorShims.ParameterShim.EnumerateParameters
+  isSpec: "True"
+  fullName: InventorShims.ParameterShim.EnumerateParameters
+  nameWithType: ParameterShim.EnumerateParameters
+- uid: InventorShims.ParameterShim.GetParameter(Inventor.AssemblyDocument,System.String)
+  name: GetParameter(AssemblyDocument, String)
+  href: api/InventorShims.ParameterShim.html#InventorShims_ParameterShim_GetParameter_Inventor_AssemblyDocument_System_String_
+  commentId: M:InventorShims.ParameterShim.GetParameter(Inventor.AssemblyDocument,System.String)
+  fullName: InventorShims.ParameterShim.GetParameter(Inventor.AssemblyDocument, System.String)
+  nameWithType: ParameterShim.GetParameter(AssemblyDocument, String)
 - uid: InventorShims.ParameterShim.GetParameter(Inventor.Document,System.String)
-  name: GetParameter(Inventor.Document, String)
+  name: GetParameter(Document, String)
   href: api/InventorShims.ParameterShim.html#InventorShims_ParameterShim_GetParameter_Inventor_Document_System_String_
   commentId: M:InventorShims.ParameterShim.GetParameter(Inventor.Document,System.String)
   fullName: InventorShims.ParameterShim.GetParameter(Inventor.Document, System.String)
-  nameWithType: ParameterShim.GetParameter(Inventor.Document, String)
+  nameWithType: ParameterShim.GetParameter(Document, String)
+- uid: InventorShims.ParameterShim.GetParameter(Inventor.DrawingDocument,System.String)
+  name: GetParameter(DrawingDocument, String)
+  href: api/InventorShims.ParameterShim.html#InventorShims_ParameterShim_GetParameter_Inventor_DrawingDocument_System_String_
+  commentId: M:InventorShims.ParameterShim.GetParameter(Inventor.DrawingDocument,System.String)
+  fullName: InventorShims.ParameterShim.GetParameter(Inventor.DrawingDocument, System.String)
+  nameWithType: ParameterShim.GetParameter(DrawingDocument, String)
+- uid: InventorShims.ParameterShim.GetParameter(Inventor.PartDocument,System.String)
+  name: GetParameter(PartDocument, String)
+  href: api/InventorShims.ParameterShim.html#InventorShims_ParameterShim_GetParameter_Inventor_PartDocument_System_String_
+  commentId: M:InventorShims.ParameterShim.GetParameter(Inventor.PartDocument,System.String)
+  fullName: InventorShims.ParameterShim.GetParameter(Inventor.PartDocument, System.String)
+  nameWithType: ParameterShim.GetParameter(PartDocument, String)
 - uid: InventorShims.ParameterShim.GetParameter*
   name: GetParameter
   href: api/InventorShims.ParameterShim.html#InventorShims_ParameterShim_GetParameter_
@@ -655,12 +1112,30 @@ references:
   isSpec: "True"
   fullName: InventorShims.ParameterShim.GetParameter
   nameWithType: ParameterShim.GetParameter
-- uid: InventorShims.ParameterShim.GetParameterNames(Document)
+- uid: InventorShims.ParameterShim.GetParameterNames(Inventor.AssemblyDocument)
+  name: GetParameterNames(AssemblyDocument)
+  href: api/InventorShims.ParameterShim.html#InventorShims_ParameterShim_GetParameterNames_Inventor_AssemblyDocument_
+  commentId: M:InventorShims.ParameterShim.GetParameterNames(Inventor.AssemblyDocument)
+  fullName: InventorShims.ParameterShim.GetParameterNames(Inventor.AssemblyDocument)
+  nameWithType: ParameterShim.GetParameterNames(AssemblyDocument)
+- uid: InventorShims.ParameterShim.GetParameterNames(Inventor.Document)
   name: GetParameterNames(Document)
-  href: api/InventorShims.ParameterShim.html#InventorShims_ParameterShim_GetParameterNames_Document_
-  commentId: M:InventorShims.ParameterShim.GetParameterNames(Document)
-  fullName: InventorShims.ParameterShim.GetParameterNames(Document)
+  href: api/InventorShims.ParameterShim.html#InventorShims_ParameterShim_GetParameterNames_Inventor_Document_
+  commentId: M:InventorShims.ParameterShim.GetParameterNames(Inventor.Document)
+  fullName: InventorShims.ParameterShim.GetParameterNames(Inventor.Document)
   nameWithType: ParameterShim.GetParameterNames(Document)
+- uid: InventorShims.ParameterShim.GetParameterNames(Inventor.DrawingDocument)
+  name: GetParameterNames(DrawingDocument)
+  href: api/InventorShims.ParameterShim.html#InventorShims_ParameterShim_GetParameterNames_Inventor_DrawingDocument_
+  commentId: M:InventorShims.ParameterShim.GetParameterNames(Inventor.DrawingDocument)
+  fullName: InventorShims.ParameterShim.GetParameterNames(Inventor.DrawingDocument)
+  nameWithType: ParameterShim.GetParameterNames(DrawingDocument)
+- uid: InventorShims.ParameterShim.GetParameterNames(Inventor.PartDocument)
+  name: GetParameterNames(PartDocument)
+  href: api/InventorShims.ParameterShim.html#InventorShims_ParameterShim_GetParameterNames_Inventor_PartDocument_
+  commentId: M:InventorShims.ParameterShim.GetParameterNames(Inventor.PartDocument)
+  fullName: InventorShims.ParameterShim.GetParameterNames(Inventor.PartDocument)
+  nameWithType: ParameterShim.GetParameterNames(PartDocument)
 - uid: InventorShims.ParameterShim.GetParameterNames*
   name: GetParameterNames
   href: api/InventorShims.ParameterShim.html#InventorShims_ParameterShim_GetParameterNames_
@@ -668,12 +1143,30 @@ references:
   isSpec: "True"
   fullName: InventorShims.ParameterShim.GetParameterNames
   nameWithType: ParameterShim.GetParameterNames
-- uid: InventorShims.ParameterShim.GetParameters(Document)
+- uid: InventorShims.ParameterShim.GetParameters(Inventor.AssemblyDocument)
+  name: GetParameters(AssemblyDocument)
+  href: api/InventorShims.ParameterShim.html#InventorShims_ParameterShim_GetParameters_Inventor_AssemblyDocument_
+  commentId: M:InventorShims.ParameterShim.GetParameters(Inventor.AssemblyDocument)
+  fullName: InventorShims.ParameterShim.GetParameters(Inventor.AssemblyDocument)
+  nameWithType: ParameterShim.GetParameters(AssemblyDocument)
+- uid: InventorShims.ParameterShim.GetParameters(Inventor.Document)
   name: GetParameters(Document)
-  href: api/InventorShims.ParameterShim.html#InventorShims_ParameterShim_GetParameters_Document_
-  commentId: M:InventorShims.ParameterShim.GetParameters(Document)
-  fullName: InventorShims.ParameterShim.GetParameters(Document)
+  href: api/InventorShims.ParameterShim.html#InventorShims_ParameterShim_GetParameters_Inventor_Document_
+  commentId: M:InventorShims.ParameterShim.GetParameters(Inventor.Document)
+  fullName: InventorShims.ParameterShim.GetParameters(Inventor.Document)
   nameWithType: ParameterShim.GetParameters(Document)
+- uid: InventorShims.ParameterShim.GetParameters(Inventor.DrawingDocument)
+  name: GetParameters(DrawingDocument)
+  href: api/InventorShims.ParameterShim.html#InventorShims_ParameterShim_GetParameters_Inventor_DrawingDocument_
+  commentId: M:InventorShims.ParameterShim.GetParameters(Inventor.DrawingDocument)
+  fullName: InventorShims.ParameterShim.GetParameters(Inventor.DrawingDocument)
+  nameWithType: ParameterShim.GetParameters(DrawingDocument)
+- uid: InventorShims.ParameterShim.GetParameters(Inventor.PartDocument)
+  name: GetParameters(PartDocument)
+  href: api/InventorShims.ParameterShim.html#InventorShims_ParameterShim_GetParameters_Inventor_PartDocument_
+  commentId: M:InventorShims.ParameterShim.GetParameters(Inventor.PartDocument)
+  fullName: InventorShims.ParameterShim.GetParameters(Inventor.PartDocument)
+  nameWithType: ParameterShim.GetParameters(PartDocument)
 - uid: InventorShims.ParameterShim.GetParameters*
   name: GetParameters
   href: api/InventorShims.ParameterShim.html#InventorShims_ParameterShim_GetParameters_
@@ -681,12 +1174,30 @@ references:
   isSpec: "True"
   fullName: InventorShims.ParameterShim.GetParameters
   nameWithType: ParameterShim.GetParameters
+- uid: InventorShims.ParameterShim.GetParameterValue(Inventor.AssemblyDocument,System.String)
+  name: GetParameterValue(AssemblyDocument, String)
+  href: api/InventorShims.ParameterShim.html#InventorShims_ParameterShim_GetParameterValue_Inventor_AssemblyDocument_System_String_
+  commentId: M:InventorShims.ParameterShim.GetParameterValue(Inventor.AssemblyDocument,System.String)
+  fullName: InventorShims.ParameterShim.GetParameterValue(Inventor.AssemblyDocument, System.String)
+  nameWithType: ParameterShim.GetParameterValue(AssemblyDocument, String)
 - uid: InventorShims.ParameterShim.GetParameterValue(Inventor.Document,System.String)
-  name: GetParameterValue(Inventor.Document, String)
+  name: GetParameterValue(Document, String)
   href: api/InventorShims.ParameterShim.html#InventorShims_ParameterShim_GetParameterValue_Inventor_Document_System_String_
   commentId: M:InventorShims.ParameterShim.GetParameterValue(Inventor.Document,System.String)
   fullName: InventorShims.ParameterShim.GetParameterValue(Inventor.Document, System.String)
-  nameWithType: ParameterShim.GetParameterValue(Inventor.Document, String)
+  nameWithType: ParameterShim.GetParameterValue(Document, String)
+- uid: InventorShims.ParameterShim.GetParameterValue(Inventor.DrawingDocument,System.String)
+  name: GetParameterValue(DrawingDocument, String)
+  href: api/InventorShims.ParameterShim.html#InventorShims_ParameterShim_GetParameterValue_Inventor_DrawingDocument_System_String_
+  commentId: M:InventorShims.ParameterShim.GetParameterValue(Inventor.DrawingDocument,System.String)
+  fullName: InventorShims.ParameterShim.GetParameterValue(Inventor.DrawingDocument, System.String)
+  nameWithType: ParameterShim.GetParameterValue(DrawingDocument, String)
+- uid: InventorShims.ParameterShim.GetParameterValue(Inventor.PartDocument,System.String)
+  name: GetParameterValue(PartDocument, String)
+  href: api/InventorShims.ParameterShim.html#InventorShims_ParameterShim_GetParameterValue_Inventor_PartDocument_System_String_
+  commentId: M:InventorShims.ParameterShim.GetParameterValue(Inventor.PartDocument,System.String)
+  fullName: InventorShims.ParameterShim.GetParameterValue(Inventor.PartDocument, System.String)
+  nameWithType: ParameterShim.GetParameterValue(PartDocument, String)
 - uid: InventorShims.ParameterShim.GetParameterValue*
   name: GetParameterValue
   href: api/InventorShims.ParameterShim.html#InventorShims_ParameterShim_GetParameterValue_
@@ -694,18 +1205,36 @@ references:
   isSpec: "True"
   fullName: InventorShims.ParameterShim.GetParameterValue
   nameWithType: ParameterShim.GetParameterValue
-- uid: InventorShims.ParameterShim.ParameterIsWritable(Document,System.String)
+- uid: InventorShims.ParameterShim.ParameterIsWritable(Inventor.AssemblyDocument,System.String)
+  name: ParameterIsWritable(AssemblyDocument, String)
+  href: api/InventorShims.ParameterShim.html#InventorShims_ParameterShim_ParameterIsWritable_Inventor_AssemblyDocument_System_String_
+  commentId: M:InventorShims.ParameterShim.ParameterIsWritable(Inventor.AssemblyDocument,System.String)
+  fullName: InventorShims.ParameterShim.ParameterIsWritable(Inventor.AssemblyDocument, System.String)
+  nameWithType: ParameterShim.ParameterIsWritable(AssemblyDocument, String)
+- uid: InventorShims.ParameterShim.ParameterIsWritable(Inventor.Document,System.String)
   name: ParameterIsWritable(Document, String)
-  href: api/InventorShims.ParameterShim.html#InventorShims_ParameterShim_ParameterIsWritable_Document_System_String_
-  commentId: M:InventorShims.ParameterShim.ParameterIsWritable(Document,System.String)
-  fullName: InventorShims.ParameterShim.ParameterIsWritable(Document, System.String)
+  href: api/InventorShims.ParameterShim.html#InventorShims_ParameterShim_ParameterIsWritable_Inventor_Document_System_String_
+  commentId: M:InventorShims.ParameterShim.ParameterIsWritable(Inventor.Document,System.String)
+  fullName: InventorShims.ParameterShim.ParameterIsWritable(Inventor.Document, System.String)
   nameWithType: ParameterShim.ParameterIsWritable(Document, String)
-- uid: InventorShims.ParameterShim.ParameterIsWritable(Parameter)
+- uid: InventorShims.ParameterShim.ParameterIsWritable(Inventor.DrawingDocument,System.String)
+  name: ParameterIsWritable(DrawingDocument, String)
+  href: api/InventorShims.ParameterShim.html#InventorShims_ParameterShim_ParameterIsWritable_Inventor_DrawingDocument_System_String_
+  commentId: M:InventorShims.ParameterShim.ParameterIsWritable(Inventor.DrawingDocument,System.String)
+  fullName: InventorShims.ParameterShim.ParameterIsWritable(Inventor.DrawingDocument, System.String)
+  nameWithType: ParameterShim.ParameterIsWritable(DrawingDocument, String)
+- uid: InventorShims.ParameterShim.ParameterIsWritable(Inventor.Parameter)
   name: ParameterIsWritable(Parameter)
-  href: api/InventorShims.ParameterShim.html#InventorShims_ParameterShim_ParameterIsWritable_Parameter_
-  commentId: M:InventorShims.ParameterShim.ParameterIsWritable(Parameter)
-  fullName: InventorShims.ParameterShim.ParameterIsWritable(Parameter)
+  href: api/InventorShims.ParameterShim.html#InventorShims_ParameterShim_ParameterIsWritable_Inventor_Parameter_
+  commentId: M:InventorShims.ParameterShim.ParameterIsWritable(Inventor.Parameter)
+  fullName: InventorShims.ParameterShim.ParameterIsWritable(Inventor.Parameter)
   nameWithType: ParameterShim.ParameterIsWritable(Parameter)
+- uid: InventorShims.ParameterShim.ParameterIsWritable(Inventor.PartDocument,System.String)
+  name: ParameterIsWritable(PartDocument, String)
+  href: api/InventorShims.ParameterShim.html#InventorShims_ParameterShim_ParameterIsWritable_Inventor_PartDocument_System_String_
+  commentId: M:InventorShims.ParameterShim.ParameterIsWritable(Inventor.PartDocument,System.String)
+  fullName: InventorShims.ParameterShim.ParameterIsWritable(Inventor.PartDocument, System.String)
+  nameWithType: ParameterShim.ParameterIsWritable(PartDocument, String)
 - uid: InventorShims.ParameterShim.ParameterIsWritable*
   name: ParameterIsWritable
   href: api/InventorShims.ParameterShim.html#InventorShims_ParameterShim_ParameterIsWritable_
@@ -713,12 +1242,30 @@ references:
   isSpec: "True"
   fullName: InventorShims.ParameterShim.ParameterIsWritable
   nameWithType: ParameterShim.ParameterIsWritable
+- uid: InventorShims.ParameterShim.RemoveParameter(Inventor.AssemblyDocument,System.String)
+  name: RemoveParameter(AssemblyDocument, String)
+  href: api/InventorShims.ParameterShim.html#InventorShims_ParameterShim_RemoveParameter_Inventor_AssemblyDocument_System_String_
+  commentId: M:InventorShims.ParameterShim.RemoveParameter(Inventor.AssemblyDocument,System.String)
+  fullName: InventorShims.ParameterShim.RemoveParameter(Inventor.AssemblyDocument, System.String)
+  nameWithType: ParameterShim.RemoveParameter(AssemblyDocument, String)
 - uid: InventorShims.ParameterShim.RemoveParameter(Inventor.Document,System.String)
-  name: RemoveParameter(Inventor.Document, String)
+  name: RemoveParameter(Document, String)
   href: api/InventorShims.ParameterShim.html#InventorShims_ParameterShim_RemoveParameter_Inventor_Document_System_String_
   commentId: M:InventorShims.ParameterShim.RemoveParameter(Inventor.Document,System.String)
   fullName: InventorShims.ParameterShim.RemoveParameter(Inventor.Document, System.String)
-  nameWithType: ParameterShim.RemoveParameter(Inventor.Document, String)
+  nameWithType: ParameterShim.RemoveParameter(Document, String)
+- uid: InventorShims.ParameterShim.RemoveParameter(Inventor.DrawingDocument,System.String)
+  name: RemoveParameter(DrawingDocument, String)
+  href: api/InventorShims.ParameterShim.html#InventorShims_ParameterShim_RemoveParameter_Inventor_DrawingDocument_System_String_
+  commentId: M:InventorShims.ParameterShim.RemoveParameter(Inventor.DrawingDocument,System.String)
+  fullName: InventorShims.ParameterShim.RemoveParameter(Inventor.DrawingDocument, System.String)
+  nameWithType: ParameterShim.RemoveParameter(DrawingDocument, String)
+- uid: InventorShims.ParameterShim.RemoveParameter(Inventor.PartDocument,System.String)
+  name: RemoveParameter(PartDocument, String)
+  href: api/InventorShims.ParameterShim.html#InventorShims_ParameterShim_RemoveParameter_Inventor_PartDocument_System_String_
+  commentId: M:InventorShims.ParameterShim.RemoveParameter(Inventor.PartDocument,System.String)
+  fullName: InventorShims.ParameterShim.RemoveParameter(Inventor.PartDocument, System.String)
+  nameWithType: ParameterShim.RemoveParameter(PartDocument, String)
 - uid: InventorShims.ParameterShim.RemoveParameter*
   name: RemoveParameter
   href: api/InventorShims.ParameterShim.html#InventorShims_ParameterShim_RemoveParameter_
@@ -726,24 +1273,78 @@ references:
   isSpec: "True"
   fullName: InventorShims.ParameterShim.RemoveParameter
   nameWithType: ParameterShim.RemoveParameter
-- uid: InventorShims.ParameterShim.SetParameterValue(Document,System.String,System.Boolean,System.Boolean)
+- uid: InventorShims.ParameterShim.SetParameterValue(Inventor.AssemblyDocument,System.String,System.Boolean,System.Boolean)
+  name: SetParameterValue(AssemblyDocument, String, Boolean, Boolean)
+  href: api/InventorShims.ParameterShim.html#InventorShims_ParameterShim_SetParameterValue_Inventor_AssemblyDocument_System_String_System_Boolean_System_Boolean_
+  commentId: M:InventorShims.ParameterShim.SetParameterValue(Inventor.AssemblyDocument,System.String,System.Boolean,System.Boolean)
+  fullName: InventorShims.ParameterShim.SetParameterValue(Inventor.AssemblyDocument, System.String, System.Boolean, System.Boolean)
+  nameWithType: ParameterShim.SetParameterValue(AssemblyDocument, String, Boolean, Boolean)
+- uid: InventorShims.ParameterShim.SetParameterValue(Inventor.AssemblyDocument,System.String,System.String,System.Boolean)
+  name: SetParameterValue(AssemblyDocument, String, String, Boolean)
+  href: api/InventorShims.ParameterShim.html#InventorShims_ParameterShim_SetParameterValue_Inventor_AssemblyDocument_System_String_System_String_System_Boolean_
+  commentId: M:InventorShims.ParameterShim.SetParameterValue(Inventor.AssemblyDocument,System.String,System.String,System.Boolean)
+  fullName: InventorShims.ParameterShim.SetParameterValue(Inventor.AssemblyDocument, System.String, System.String, System.Boolean)
+  nameWithType: ParameterShim.SetParameterValue(AssemblyDocument, String, String, Boolean)
+- uid: InventorShims.ParameterShim.SetParameterValue(Inventor.AssemblyDocument,System.String,System.String,System.String,System.Boolean)
+  name: SetParameterValue(AssemblyDocument, String, String, String, Boolean)
+  href: api/InventorShims.ParameterShim.html#InventorShims_ParameterShim_SetParameterValue_Inventor_AssemblyDocument_System_String_System_String_System_String_System_Boolean_
+  commentId: M:InventorShims.ParameterShim.SetParameterValue(Inventor.AssemblyDocument,System.String,System.String,System.String,System.Boolean)
+  fullName: InventorShims.ParameterShim.SetParameterValue(Inventor.AssemblyDocument, System.String, System.String, System.String, System.Boolean)
+  nameWithType: ParameterShim.SetParameterValue(AssemblyDocument, String, String, String, Boolean)
+- uid: InventorShims.ParameterShim.SetParameterValue(Inventor.Document,System.String,System.Boolean,System.Boolean)
   name: SetParameterValue(Document, String, Boolean, Boolean)
-  href: api/InventorShims.ParameterShim.html#InventorShims_ParameterShim_SetParameterValue_Document_System_String_System_Boolean_System_Boolean_
-  commentId: M:InventorShims.ParameterShim.SetParameterValue(Document,System.String,System.Boolean,System.Boolean)
-  fullName: InventorShims.ParameterShim.SetParameterValue(Document, System.String, System.Boolean, System.Boolean)
+  href: api/InventorShims.ParameterShim.html#InventorShims_ParameterShim_SetParameterValue_Inventor_Document_System_String_System_Boolean_System_Boolean_
+  commentId: M:InventorShims.ParameterShim.SetParameterValue(Inventor.Document,System.String,System.Boolean,System.Boolean)
+  fullName: InventorShims.ParameterShim.SetParameterValue(Inventor.Document, System.String, System.Boolean, System.Boolean)
   nameWithType: ParameterShim.SetParameterValue(Document, String, Boolean, Boolean)
-- uid: InventorShims.ParameterShim.SetParameterValue(Document,System.String,System.String,System.Boolean)
+- uid: InventorShims.ParameterShim.SetParameterValue(Inventor.Document,System.String,System.String,System.Boolean)
   name: SetParameterValue(Document, String, String, Boolean)
-  href: api/InventorShims.ParameterShim.html#InventorShims_ParameterShim_SetParameterValue_Document_System_String_System_String_System_Boolean_
-  commentId: M:InventorShims.ParameterShim.SetParameterValue(Document,System.String,System.String,System.Boolean)
-  fullName: InventorShims.ParameterShim.SetParameterValue(Document, System.String, System.String, System.Boolean)
+  href: api/InventorShims.ParameterShim.html#InventorShims_ParameterShim_SetParameterValue_Inventor_Document_System_String_System_String_System_Boolean_
+  commentId: M:InventorShims.ParameterShim.SetParameterValue(Inventor.Document,System.String,System.String,System.Boolean)
+  fullName: InventorShims.ParameterShim.SetParameterValue(Inventor.Document, System.String, System.String, System.Boolean)
   nameWithType: ParameterShim.SetParameterValue(Document, String, String, Boolean)
-- uid: InventorShims.ParameterShim.SetParameterValue(Document,System.String,System.String,System.String,System.Boolean)
+- uid: InventorShims.ParameterShim.SetParameterValue(Inventor.Document,System.String,System.String,System.String,System.Boolean)
   name: SetParameterValue(Document, String, String, String, Boolean)
-  href: api/InventorShims.ParameterShim.html#InventorShims_ParameterShim_SetParameterValue_Document_System_String_System_String_System_String_System_Boolean_
-  commentId: M:InventorShims.ParameterShim.SetParameterValue(Document,System.String,System.String,System.String,System.Boolean)
-  fullName: InventorShims.ParameterShim.SetParameterValue(Document, System.String, System.String, System.String, System.Boolean)
+  href: api/InventorShims.ParameterShim.html#InventorShims_ParameterShim_SetParameterValue_Inventor_Document_System_String_System_String_System_String_System_Boolean_
+  commentId: M:InventorShims.ParameterShim.SetParameterValue(Inventor.Document,System.String,System.String,System.String,System.Boolean)
+  fullName: InventorShims.ParameterShim.SetParameterValue(Inventor.Document, System.String, System.String, System.String, System.Boolean)
   nameWithType: ParameterShim.SetParameterValue(Document, String, String, String, Boolean)
+- uid: InventorShims.ParameterShim.SetParameterValue(Inventor.DrawingDocument,System.String,System.Boolean,System.Boolean)
+  name: SetParameterValue(DrawingDocument, String, Boolean, Boolean)
+  href: api/InventorShims.ParameterShim.html#InventorShims_ParameterShim_SetParameterValue_Inventor_DrawingDocument_System_String_System_Boolean_System_Boolean_
+  commentId: M:InventorShims.ParameterShim.SetParameterValue(Inventor.DrawingDocument,System.String,System.Boolean,System.Boolean)
+  fullName: InventorShims.ParameterShim.SetParameterValue(Inventor.DrawingDocument, System.String, System.Boolean, System.Boolean)
+  nameWithType: ParameterShim.SetParameterValue(DrawingDocument, String, Boolean, Boolean)
+- uid: InventorShims.ParameterShim.SetParameterValue(Inventor.DrawingDocument,System.String,System.String,System.Boolean)
+  name: SetParameterValue(DrawingDocument, String, String, Boolean)
+  href: api/InventorShims.ParameterShim.html#InventorShims_ParameterShim_SetParameterValue_Inventor_DrawingDocument_System_String_System_String_System_Boolean_
+  commentId: M:InventorShims.ParameterShim.SetParameterValue(Inventor.DrawingDocument,System.String,System.String,System.Boolean)
+  fullName: InventorShims.ParameterShim.SetParameterValue(Inventor.DrawingDocument, System.String, System.String, System.Boolean)
+  nameWithType: ParameterShim.SetParameterValue(DrawingDocument, String, String, Boolean)
+- uid: InventorShims.ParameterShim.SetParameterValue(Inventor.DrawingDocument,System.String,System.String,System.String,System.Boolean)
+  name: SetParameterValue(DrawingDocument, String, String, String, Boolean)
+  href: api/InventorShims.ParameterShim.html#InventorShims_ParameterShim_SetParameterValue_Inventor_DrawingDocument_System_String_System_String_System_String_System_Boolean_
+  commentId: M:InventorShims.ParameterShim.SetParameterValue(Inventor.DrawingDocument,System.String,System.String,System.String,System.Boolean)
+  fullName: InventorShims.ParameterShim.SetParameterValue(Inventor.DrawingDocument, System.String, System.String, System.String, System.Boolean)
+  nameWithType: ParameterShim.SetParameterValue(DrawingDocument, String, String, String, Boolean)
+- uid: InventorShims.ParameterShim.SetParameterValue(Inventor.PartDocument,System.String,System.Boolean,System.Boolean)
+  name: SetParameterValue(PartDocument, String, Boolean, Boolean)
+  href: api/InventorShims.ParameterShim.html#InventorShims_ParameterShim_SetParameterValue_Inventor_PartDocument_System_String_System_Boolean_System_Boolean_
+  commentId: M:InventorShims.ParameterShim.SetParameterValue(Inventor.PartDocument,System.String,System.Boolean,System.Boolean)
+  fullName: InventorShims.ParameterShim.SetParameterValue(Inventor.PartDocument, System.String, System.Boolean, System.Boolean)
+  nameWithType: ParameterShim.SetParameterValue(PartDocument, String, Boolean, Boolean)
+- uid: InventorShims.ParameterShim.SetParameterValue(Inventor.PartDocument,System.String,System.String,System.Boolean)
+  name: SetParameterValue(PartDocument, String, String, Boolean)
+  href: api/InventorShims.ParameterShim.html#InventorShims_ParameterShim_SetParameterValue_Inventor_PartDocument_System_String_System_String_System_Boolean_
+  commentId: M:InventorShims.ParameterShim.SetParameterValue(Inventor.PartDocument,System.String,System.String,System.Boolean)
+  fullName: InventorShims.ParameterShim.SetParameterValue(Inventor.PartDocument, System.String, System.String, System.Boolean)
+  nameWithType: ParameterShim.SetParameterValue(PartDocument, String, String, Boolean)
+- uid: InventorShims.ParameterShim.SetParameterValue(Inventor.PartDocument,System.String,System.String,System.String,System.Boolean)
+  name: SetParameterValue(PartDocument, String, String, String, Boolean)
+  href: api/InventorShims.ParameterShim.html#InventorShims_ParameterShim_SetParameterValue_Inventor_PartDocument_System_String_System_String_System_String_System_Boolean_
+  commentId: M:InventorShims.ParameterShim.SetParameterValue(Inventor.PartDocument,System.String,System.String,System.String,System.Boolean)
+  fullName: InventorShims.ParameterShim.SetParameterValue(Inventor.PartDocument, System.String, System.String, System.String, System.Boolean)
+  nameWithType: ParameterShim.SetParameterValue(PartDocument, String, String, String, Boolean)
 - uid: InventorShims.ParameterShim.SetParameterValue*
   name: SetParameterValue
   href: api/InventorShims.ParameterShim.html#InventorShims_ParameterShim_SetParameterValue_
@@ -757,11 +1358,11 @@ references:
   commentId: T:InventorShims.PathShim
   fullName: InventorShims.PathShim
   nameWithType: PathShim
-- uid: InventorShims.PathShim.IsContentCenterPath(System.String,Application)
+- uid: InventorShims.PathShim.IsContentCenterPath(System.String,Inventor.Application)
   name: IsContentCenterPath(String, Application)
-  href: api/InventorShims.PathShim.html#InventorShims_PathShim_IsContentCenterPath_System_String_Application_
-  commentId: M:InventorShims.PathShim.IsContentCenterPath(System.String,Application)
-  fullName: InventorShims.PathShim.IsContentCenterPath(System.String, Application)
+  href: api/InventorShims.PathShim.html#InventorShims_PathShim_IsContentCenterPath_System_String_Inventor_Application_
+  commentId: M:InventorShims.PathShim.IsContentCenterPath(System.String,Inventor.Application)
+  fullName: InventorShims.PathShim.IsContentCenterPath(System.String, Inventor.Application)
   nameWithType: PathShim.IsContentCenterPath(String, Application)
 - uid: InventorShims.PathShim.IsContentCenterPath*
   name: IsContentCenterPath
@@ -770,11 +1371,11 @@ references:
   isSpec: "True"
   fullName: InventorShims.PathShim.IsContentCenterPath
   nameWithType: PathShim.IsContentCenterPath
-- uid: InventorShims.PathShim.IsLibraryPath(System.String,Application)
+- uid: InventorShims.PathShim.IsLibraryPath(System.String,Inventor.Application)
   name: IsLibraryPath(String, Application)
-  href: api/InventorShims.PathShim.html#InventorShims_PathShim_IsLibraryPath_System_String_Application_
-  commentId: M:InventorShims.PathShim.IsLibraryPath(System.String,Application)
-  fullName: InventorShims.PathShim.IsLibraryPath(System.String, Application)
+  href: api/InventorShims.PathShim.html#InventorShims_PathShim_IsLibraryPath_System_String_Inventor_Application_
+  commentId: M:InventorShims.PathShim.IsLibraryPath(System.String,Inventor.Application)
+  fullName: InventorShims.PathShim.IsLibraryPath(System.String, Inventor.Application)
   nameWithType: PathShim.IsLibraryPath(String, Application)
 - uid: InventorShims.PathShim.IsLibraryPath*
   name: IsLibraryPath
@@ -815,18 +1416,66 @@ references:
   commentId: T:InventorShims.PropertyShim
   fullName: InventorShims.PropertyShim
   nameWithType: PropertyShim
-- uid: InventorShims.PropertyShim.GetProperty(Document,System.String)
+- uid: InventorShims.PropertyShim.GetProperty(Inventor.AssemblyDocument,System.String)
+  name: GetProperty(AssemblyDocument, String)
+  href: api/InventorShims.PropertyShim.html#InventorShims_PropertyShim_GetProperty_Inventor_AssemblyDocument_System_String_
+  commentId: M:InventorShims.PropertyShim.GetProperty(Inventor.AssemblyDocument,System.String)
+  fullName: InventorShims.PropertyShim.GetProperty(Inventor.AssemblyDocument, System.String)
+  nameWithType: PropertyShim.GetProperty(AssemblyDocument, String)
+- uid: InventorShims.PropertyShim.GetProperty(Inventor.AssemblyDocument,System.String,System.String)
+  name: GetProperty(AssemblyDocument, String, String)
+  href: api/InventorShims.PropertyShim.html#InventorShims_PropertyShim_GetProperty_Inventor_AssemblyDocument_System_String_System_String_
+  commentId: M:InventorShims.PropertyShim.GetProperty(Inventor.AssemblyDocument,System.String,System.String)
+  fullName: InventorShims.PropertyShim.GetProperty(Inventor.AssemblyDocument, System.String, System.String)
+  nameWithType: PropertyShim.GetProperty(AssemblyDocument, String, String)
+- uid: InventorShims.PropertyShim.GetProperty(Inventor.Document,System.String)
   name: GetProperty(Document, String)
-  href: api/InventorShims.PropertyShim.html#InventorShims_PropertyShim_GetProperty_Document_System_String_
-  commentId: M:InventorShims.PropertyShim.GetProperty(Document,System.String)
-  fullName: InventorShims.PropertyShim.GetProperty(Document, System.String)
+  href: api/InventorShims.PropertyShim.html#InventorShims_PropertyShim_GetProperty_Inventor_Document_System_String_
+  commentId: M:InventorShims.PropertyShim.GetProperty(Inventor.Document,System.String)
+  fullName: InventorShims.PropertyShim.GetProperty(Inventor.Document, System.String)
   nameWithType: PropertyShim.GetProperty(Document, String)
-- uid: InventorShims.PropertyShim.GetProperty(Document,System.String,System.String)
+- uid: InventorShims.PropertyShim.GetProperty(Inventor.Document,System.String,System.String)
   name: GetProperty(Document, String, String)
-  href: api/InventorShims.PropertyShim.html#InventorShims_PropertyShim_GetProperty_Document_System_String_System_String_
-  commentId: M:InventorShims.PropertyShim.GetProperty(Document,System.String,System.String)
-  fullName: InventorShims.PropertyShim.GetProperty(Document, System.String, System.String)
+  href: api/InventorShims.PropertyShim.html#InventorShims_PropertyShim_GetProperty_Inventor_Document_System_String_System_String_
+  commentId: M:InventorShims.PropertyShim.GetProperty(Inventor.Document,System.String,System.String)
+  fullName: InventorShims.PropertyShim.GetProperty(Inventor.Document, System.String, System.String)
   nameWithType: PropertyShim.GetProperty(Document, String, String)
+- uid: InventorShims.PropertyShim.GetProperty(Inventor.DrawingDocument,System.String)
+  name: GetProperty(DrawingDocument, String)
+  href: api/InventorShims.PropertyShim.html#InventorShims_PropertyShim_GetProperty_Inventor_DrawingDocument_System_String_
+  commentId: M:InventorShims.PropertyShim.GetProperty(Inventor.DrawingDocument,System.String)
+  fullName: InventorShims.PropertyShim.GetProperty(Inventor.DrawingDocument, System.String)
+  nameWithType: PropertyShim.GetProperty(DrawingDocument, String)
+- uid: InventorShims.PropertyShim.GetProperty(Inventor.DrawingDocument,System.String,System.String)
+  name: GetProperty(DrawingDocument, String, String)
+  href: api/InventorShims.PropertyShim.html#InventorShims_PropertyShim_GetProperty_Inventor_DrawingDocument_System_String_System_String_
+  commentId: M:InventorShims.PropertyShim.GetProperty(Inventor.DrawingDocument,System.String,System.String)
+  fullName: InventorShims.PropertyShim.GetProperty(Inventor.DrawingDocument, System.String, System.String)
+  nameWithType: PropertyShim.GetProperty(DrawingDocument, String, String)
+- uid: InventorShims.PropertyShim.GetProperty(Inventor.PartDocument,System.String)
+  name: GetProperty(PartDocument, String)
+  href: api/InventorShims.PropertyShim.html#InventorShims_PropertyShim_GetProperty_Inventor_PartDocument_System_String_
+  commentId: M:InventorShims.PropertyShim.GetProperty(Inventor.PartDocument,System.String)
+  fullName: InventorShims.PropertyShim.GetProperty(Inventor.PartDocument, System.String)
+  nameWithType: PropertyShim.GetProperty(PartDocument, String)
+- uid: InventorShims.PropertyShim.GetProperty(Inventor.PartDocument,System.String,System.String)
+  name: GetProperty(PartDocument, String, String)
+  href: api/InventorShims.PropertyShim.html#InventorShims_PropertyShim_GetProperty_Inventor_PartDocument_System_String_System_String_
+  commentId: M:InventorShims.PropertyShim.GetProperty(Inventor.PartDocument,System.String,System.String)
+  fullName: InventorShims.PropertyShim.GetProperty(Inventor.PartDocument, System.String, System.String)
+  nameWithType: PropertyShim.GetProperty(PartDocument, String, String)
+- uid: InventorShims.PropertyShim.GetProperty(Inventor.PresentationDocument,System.String)
+  name: GetProperty(PresentationDocument, String)
+  href: api/InventorShims.PropertyShim.html#InventorShims_PropertyShim_GetProperty_Inventor_PresentationDocument_System_String_
+  commentId: M:InventorShims.PropertyShim.GetProperty(Inventor.PresentationDocument,System.String)
+  fullName: InventorShims.PropertyShim.GetProperty(Inventor.PresentationDocument, System.String)
+  nameWithType: PropertyShim.GetProperty(PresentationDocument, String)
+- uid: InventorShims.PropertyShim.GetProperty(Inventor.PresentationDocument,System.String,System.String)
+  name: GetProperty(PresentationDocument, String, String)
+  href: api/InventorShims.PropertyShim.html#InventorShims_PropertyShim_GetProperty_Inventor_PresentationDocument_System_String_System_String_
+  commentId: M:InventorShims.PropertyShim.GetProperty(Inventor.PresentationDocument,System.String,System.String)
+  fullName: InventorShims.PropertyShim.GetProperty(Inventor.PresentationDocument, System.String, System.String)
+  nameWithType: PropertyShim.GetProperty(PresentationDocument, String, String)
 - uid: InventorShims.PropertyShim.GetProperty*
   name: GetProperty
   href: api/InventorShims.PropertyShim.html#InventorShims_PropertyShim_GetProperty_
@@ -834,18 +1483,66 @@ references:
   isSpec: "True"
   fullName: InventorShims.PropertyShim.GetProperty
   nameWithType: PropertyShim.GetProperty
-- uid: InventorShims.PropertyShim.GetPropertyValue(Document,System.String)
+- uid: InventorShims.PropertyShim.GetPropertyValue(Inventor.AssemblyDocument,System.String)
+  name: GetPropertyValue(AssemblyDocument, String)
+  href: api/InventorShims.PropertyShim.html#InventorShims_PropertyShim_GetPropertyValue_Inventor_AssemblyDocument_System_String_
+  commentId: M:InventorShims.PropertyShim.GetPropertyValue(Inventor.AssemblyDocument,System.String)
+  fullName: InventorShims.PropertyShim.GetPropertyValue(Inventor.AssemblyDocument, System.String)
+  nameWithType: PropertyShim.GetPropertyValue(AssemblyDocument, String)
+- uid: InventorShims.PropertyShim.GetPropertyValue(Inventor.AssemblyDocument,System.String,System.String)
+  name: GetPropertyValue(AssemblyDocument, String, String)
+  href: api/InventorShims.PropertyShim.html#InventorShims_PropertyShim_GetPropertyValue_Inventor_AssemblyDocument_System_String_System_String_
+  commentId: M:InventorShims.PropertyShim.GetPropertyValue(Inventor.AssemblyDocument,System.String,System.String)
+  fullName: InventorShims.PropertyShim.GetPropertyValue(Inventor.AssemblyDocument, System.String, System.String)
+  nameWithType: PropertyShim.GetPropertyValue(AssemblyDocument, String, String)
+- uid: InventorShims.PropertyShim.GetPropertyValue(Inventor.Document,System.String)
   name: GetPropertyValue(Document, String)
-  href: api/InventorShims.PropertyShim.html#InventorShims_PropertyShim_GetPropertyValue_Document_System_String_
-  commentId: M:InventorShims.PropertyShim.GetPropertyValue(Document,System.String)
-  fullName: InventorShims.PropertyShim.GetPropertyValue(Document, System.String)
+  href: api/InventorShims.PropertyShim.html#InventorShims_PropertyShim_GetPropertyValue_Inventor_Document_System_String_
+  commentId: M:InventorShims.PropertyShim.GetPropertyValue(Inventor.Document,System.String)
+  fullName: InventorShims.PropertyShim.GetPropertyValue(Inventor.Document, System.String)
   nameWithType: PropertyShim.GetPropertyValue(Document, String)
-- uid: InventorShims.PropertyShim.GetPropertyValue(Document,System.String,System.String)
+- uid: InventorShims.PropertyShim.GetPropertyValue(Inventor.Document,System.String,System.String)
   name: GetPropertyValue(Document, String, String)
-  href: api/InventorShims.PropertyShim.html#InventorShims_PropertyShim_GetPropertyValue_Document_System_String_System_String_
-  commentId: M:InventorShims.PropertyShim.GetPropertyValue(Document,System.String,System.String)
-  fullName: InventorShims.PropertyShim.GetPropertyValue(Document, System.String, System.String)
+  href: api/InventorShims.PropertyShim.html#InventorShims_PropertyShim_GetPropertyValue_Inventor_Document_System_String_System_String_
+  commentId: M:InventorShims.PropertyShim.GetPropertyValue(Inventor.Document,System.String,System.String)
+  fullName: InventorShims.PropertyShim.GetPropertyValue(Inventor.Document, System.String, System.String)
   nameWithType: PropertyShim.GetPropertyValue(Document, String, String)
+- uid: InventorShims.PropertyShim.GetPropertyValue(Inventor.DrawingDocument,System.String)
+  name: GetPropertyValue(DrawingDocument, String)
+  href: api/InventorShims.PropertyShim.html#InventorShims_PropertyShim_GetPropertyValue_Inventor_DrawingDocument_System_String_
+  commentId: M:InventorShims.PropertyShim.GetPropertyValue(Inventor.DrawingDocument,System.String)
+  fullName: InventorShims.PropertyShim.GetPropertyValue(Inventor.DrawingDocument, System.String)
+  nameWithType: PropertyShim.GetPropertyValue(DrawingDocument, String)
+- uid: InventorShims.PropertyShim.GetPropertyValue(Inventor.DrawingDocument,System.String,System.String)
+  name: GetPropertyValue(DrawingDocument, String, String)
+  href: api/InventorShims.PropertyShim.html#InventorShims_PropertyShim_GetPropertyValue_Inventor_DrawingDocument_System_String_System_String_
+  commentId: M:InventorShims.PropertyShim.GetPropertyValue(Inventor.DrawingDocument,System.String,System.String)
+  fullName: InventorShims.PropertyShim.GetPropertyValue(Inventor.DrawingDocument, System.String, System.String)
+  nameWithType: PropertyShim.GetPropertyValue(DrawingDocument, String, String)
+- uid: InventorShims.PropertyShim.GetPropertyValue(Inventor.PartDocument,System.String)
+  name: GetPropertyValue(PartDocument, String)
+  href: api/InventorShims.PropertyShim.html#InventorShims_PropertyShim_GetPropertyValue_Inventor_PartDocument_System_String_
+  commentId: M:InventorShims.PropertyShim.GetPropertyValue(Inventor.PartDocument,System.String)
+  fullName: InventorShims.PropertyShim.GetPropertyValue(Inventor.PartDocument, System.String)
+  nameWithType: PropertyShim.GetPropertyValue(PartDocument, String)
+- uid: InventorShims.PropertyShim.GetPropertyValue(Inventor.PartDocument,System.String,System.String)
+  name: GetPropertyValue(PartDocument, String, String)
+  href: api/InventorShims.PropertyShim.html#InventorShims_PropertyShim_GetPropertyValue_Inventor_PartDocument_System_String_System_String_
+  commentId: M:InventorShims.PropertyShim.GetPropertyValue(Inventor.PartDocument,System.String,System.String)
+  fullName: InventorShims.PropertyShim.GetPropertyValue(Inventor.PartDocument, System.String, System.String)
+  nameWithType: PropertyShim.GetPropertyValue(PartDocument, String, String)
+- uid: InventorShims.PropertyShim.GetPropertyValue(Inventor.PresentationDocument,System.String)
+  name: GetPropertyValue(PresentationDocument, String)
+  href: api/InventorShims.PropertyShim.html#InventorShims_PropertyShim_GetPropertyValue_Inventor_PresentationDocument_System_String_
+  commentId: M:InventorShims.PropertyShim.GetPropertyValue(Inventor.PresentationDocument,System.String)
+  fullName: InventorShims.PropertyShim.GetPropertyValue(Inventor.PresentationDocument, System.String)
+  nameWithType: PropertyShim.GetPropertyValue(PresentationDocument, String)
+- uid: InventorShims.PropertyShim.GetPropertyValue(Inventor.PresentationDocument,System.String,System.String)
+  name: GetPropertyValue(PresentationDocument, String, String)
+  href: api/InventorShims.PropertyShim.html#InventorShims_PropertyShim_GetPropertyValue_Inventor_PresentationDocument_System_String_System_String_
+  commentId: M:InventorShims.PropertyShim.GetPropertyValue(Inventor.PresentationDocument,System.String,System.String)
+  fullName: InventorShims.PropertyShim.GetPropertyValue(Inventor.PresentationDocument, System.String, System.String)
+  nameWithType: PropertyShim.GetPropertyValue(PresentationDocument, String, String)
 - uid: InventorShims.PropertyShim.GetPropertyValue*
   name: GetPropertyValue
   href: api/InventorShims.PropertyShim.html#InventorShims_PropertyShim_GetPropertyValue_
@@ -866,18 +1563,66 @@ references:
   isSpec: "True"
   fullName: InventorShims.PropertyShim.IsPropertyNative
   nameWithType: PropertyShim.IsPropertyNative
-- uid: InventorShims.PropertyShim.PropertyExists(Document,System.String)
+- uid: InventorShims.PropertyShim.PropertyExists(Inventor.AssemblyDocument,System.String)
+  name: PropertyExists(AssemblyDocument, String)
+  href: api/InventorShims.PropertyShim.html#InventorShims_PropertyShim_PropertyExists_Inventor_AssemblyDocument_System_String_
+  commentId: M:InventorShims.PropertyShim.PropertyExists(Inventor.AssemblyDocument,System.String)
+  fullName: InventorShims.PropertyShim.PropertyExists(Inventor.AssemblyDocument, System.String)
+  nameWithType: PropertyShim.PropertyExists(AssemblyDocument, String)
+- uid: InventorShims.PropertyShim.PropertyExists(Inventor.AssemblyDocument,System.String,System.String)
+  name: PropertyExists(AssemblyDocument, String, String)
+  href: api/InventorShims.PropertyShim.html#InventorShims_PropertyShim_PropertyExists_Inventor_AssemblyDocument_System_String_System_String_
+  commentId: M:InventorShims.PropertyShim.PropertyExists(Inventor.AssemblyDocument,System.String,System.String)
+  fullName: InventorShims.PropertyShim.PropertyExists(Inventor.AssemblyDocument, System.String, System.String)
+  nameWithType: PropertyShim.PropertyExists(AssemblyDocument, String, String)
+- uid: InventorShims.PropertyShim.PropertyExists(Inventor.Document,System.String)
   name: PropertyExists(Document, String)
-  href: api/InventorShims.PropertyShim.html#InventorShims_PropertyShim_PropertyExists_Document_System_String_
-  commentId: M:InventorShims.PropertyShim.PropertyExists(Document,System.String)
-  fullName: InventorShims.PropertyShim.PropertyExists(Document, System.String)
+  href: api/InventorShims.PropertyShim.html#InventorShims_PropertyShim_PropertyExists_Inventor_Document_System_String_
+  commentId: M:InventorShims.PropertyShim.PropertyExists(Inventor.Document,System.String)
+  fullName: InventorShims.PropertyShim.PropertyExists(Inventor.Document, System.String)
   nameWithType: PropertyShim.PropertyExists(Document, String)
-- uid: InventorShims.PropertyShim.PropertyExists(Document,System.String,System.String)
+- uid: InventorShims.PropertyShim.PropertyExists(Inventor.Document,System.String,System.String)
   name: PropertyExists(Document, String, String)
-  href: api/InventorShims.PropertyShim.html#InventorShims_PropertyShim_PropertyExists_Document_System_String_System_String_
-  commentId: M:InventorShims.PropertyShim.PropertyExists(Document,System.String,System.String)
-  fullName: InventorShims.PropertyShim.PropertyExists(Document, System.String, System.String)
+  href: api/InventorShims.PropertyShim.html#InventorShims_PropertyShim_PropertyExists_Inventor_Document_System_String_System_String_
+  commentId: M:InventorShims.PropertyShim.PropertyExists(Inventor.Document,System.String,System.String)
+  fullName: InventorShims.PropertyShim.PropertyExists(Inventor.Document, System.String, System.String)
   nameWithType: PropertyShim.PropertyExists(Document, String, String)
+- uid: InventorShims.PropertyShim.PropertyExists(Inventor.DrawingDocument,System.String)
+  name: PropertyExists(DrawingDocument, String)
+  href: api/InventorShims.PropertyShim.html#InventorShims_PropertyShim_PropertyExists_Inventor_DrawingDocument_System_String_
+  commentId: M:InventorShims.PropertyShim.PropertyExists(Inventor.DrawingDocument,System.String)
+  fullName: InventorShims.PropertyShim.PropertyExists(Inventor.DrawingDocument, System.String)
+  nameWithType: PropertyShim.PropertyExists(DrawingDocument, String)
+- uid: InventorShims.PropertyShim.PropertyExists(Inventor.DrawingDocument,System.String,System.String)
+  name: PropertyExists(DrawingDocument, String, String)
+  href: api/InventorShims.PropertyShim.html#InventorShims_PropertyShim_PropertyExists_Inventor_DrawingDocument_System_String_System_String_
+  commentId: M:InventorShims.PropertyShim.PropertyExists(Inventor.DrawingDocument,System.String,System.String)
+  fullName: InventorShims.PropertyShim.PropertyExists(Inventor.DrawingDocument, System.String, System.String)
+  nameWithType: PropertyShim.PropertyExists(DrawingDocument, String, String)
+- uid: InventorShims.PropertyShim.PropertyExists(Inventor.PartDocument,System.String)
+  name: PropertyExists(PartDocument, String)
+  href: api/InventorShims.PropertyShim.html#InventorShims_PropertyShim_PropertyExists_Inventor_PartDocument_System_String_
+  commentId: M:InventorShims.PropertyShim.PropertyExists(Inventor.PartDocument,System.String)
+  fullName: InventorShims.PropertyShim.PropertyExists(Inventor.PartDocument, System.String)
+  nameWithType: PropertyShim.PropertyExists(PartDocument, String)
+- uid: InventorShims.PropertyShim.PropertyExists(Inventor.PartDocument,System.String,System.String)
+  name: PropertyExists(PartDocument, String, String)
+  href: api/InventorShims.PropertyShim.html#InventorShims_PropertyShim_PropertyExists_Inventor_PartDocument_System_String_System_String_
+  commentId: M:InventorShims.PropertyShim.PropertyExists(Inventor.PartDocument,System.String,System.String)
+  fullName: InventorShims.PropertyShim.PropertyExists(Inventor.PartDocument, System.String, System.String)
+  nameWithType: PropertyShim.PropertyExists(PartDocument, String, String)
+- uid: InventorShims.PropertyShim.PropertyExists(Inventor.PresentationDocument,System.String)
+  name: PropertyExists(PresentationDocument, String)
+  href: api/InventorShims.PropertyShim.html#InventorShims_PropertyShim_PropertyExists_Inventor_PresentationDocument_System_String_
+  commentId: M:InventorShims.PropertyShim.PropertyExists(Inventor.PresentationDocument,System.String)
+  fullName: InventorShims.PropertyShim.PropertyExists(Inventor.PresentationDocument, System.String)
+  nameWithType: PropertyShim.PropertyExists(PresentationDocument, String)
+- uid: InventorShims.PropertyShim.PropertyExists(Inventor.PresentationDocument,System.String,System.String)
+  name: PropertyExists(PresentationDocument, String, String)
+  href: api/InventorShims.PropertyShim.html#InventorShims_PropertyShim_PropertyExists_Inventor_PresentationDocument_System_String_System_String_
+  commentId: M:InventorShims.PropertyShim.PropertyExists(Inventor.PresentationDocument,System.String,System.String)
+  fullName: InventorShims.PropertyShim.PropertyExists(Inventor.PresentationDocument, System.String, System.String)
+  nameWithType: PropertyShim.PropertyExists(PresentationDocument, String, String)
 - uid: InventorShims.PropertyShim.PropertyExists*
   name: PropertyExists
   href: api/InventorShims.PropertyShim.html#InventorShims_PropertyShim_PropertyExists_
@@ -885,18 +1630,66 @@ references:
   isSpec: "True"
   fullName: InventorShims.PropertyShim.PropertyExists
   nameWithType: PropertyShim.PropertyExists
-- uid: InventorShims.PropertyShim.RemoveProperty(Document,System.String)
+- uid: InventorShims.PropertyShim.RemoveProperty(Inventor.AssemblyDocument,System.String)
+  name: RemoveProperty(AssemblyDocument, String)
+  href: api/InventorShims.PropertyShim.html#InventorShims_PropertyShim_RemoveProperty_Inventor_AssemblyDocument_System_String_
+  commentId: M:InventorShims.PropertyShim.RemoveProperty(Inventor.AssemblyDocument,System.String)
+  fullName: InventorShims.PropertyShim.RemoveProperty(Inventor.AssemblyDocument, System.String)
+  nameWithType: PropertyShim.RemoveProperty(AssemblyDocument, String)
+- uid: InventorShims.PropertyShim.RemoveProperty(Inventor.AssemblyDocument,System.String,System.String)
+  name: RemoveProperty(AssemblyDocument, String, String)
+  href: api/InventorShims.PropertyShim.html#InventorShims_PropertyShim_RemoveProperty_Inventor_AssemblyDocument_System_String_System_String_
+  commentId: M:InventorShims.PropertyShim.RemoveProperty(Inventor.AssemblyDocument,System.String,System.String)
+  fullName: InventorShims.PropertyShim.RemoveProperty(Inventor.AssemblyDocument, System.String, System.String)
+  nameWithType: PropertyShim.RemoveProperty(AssemblyDocument, String, String)
+- uid: InventorShims.PropertyShim.RemoveProperty(Inventor.Document,System.String)
   name: RemoveProperty(Document, String)
-  href: api/InventorShims.PropertyShim.html#InventorShims_PropertyShim_RemoveProperty_Document_System_String_
-  commentId: M:InventorShims.PropertyShim.RemoveProperty(Document,System.String)
-  fullName: InventorShims.PropertyShim.RemoveProperty(Document, System.String)
+  href: api/InventorShims.PropertyShim.html#InventorShims_PropertyShim_RemoveProperty_Inventor_Document_System_String_
+  commentId: M:InventorShims.PropertyShim.RemoveProperty(Inventor.Document,System.String)
+  fullName: InventorShims.PropertyShim.RemoveProperty(Inventor.Document, System.String)
   nameWithType: PropertyShim.RemoveProperty(Document, String)
-- uid: InventorShims.PropertyShim.RemoveProperty(Document,System.String,System.String)
+- uid: InventorShims.PropertyShim.RemoveProperty(Inventor.Document,System.String,System.String)
   name: RemoveProperty(Document, String, String)
-  href: api/InventorShims.PropertyShim.html#InventorShims_PropertyShim_RemoveProperty_Document_System_String_System_String_
-  commentId: M:InventorShims.PropertyShim.RemoveProperty(Document,System.String,System.String)
-  fullName: InventorShims.PropertyShim.RemoveProperty(Document, System.String, System.String)
+  href: api/InventorShims.PropertyShim.html#InventorShims_PropertyShim_RemoveProperty_Inventor_Document_System_String_System_String_
+  commentId: M:InventorShims.PropertyShim.RemoveProperty(Inventor.Document,System.String,System.String)
+  fullName: InventorShims.PropertyShim.RemoveProperty(Inventor.Document, System.String, System.String)
   nameWithType: PropertyShim.RemoveProperty(Document, String, String)
+- uid: InventorShims.PropertyShim.RemoveProperty(Inventor.DrawingDocument,System.String)
+  name: RemoveProperty(DrawingDocument, String)
+  href: api/InventorShims.PropertyShim.html#InventorShims_PropertyShim_RemoveProperty_Inventor_DrawingDocument_System_String_
+  commentId: M:InventorShims.PropertyShim.RemoveProperty(Inventor.DrawingDocument,System.String)
+  fullName: InventorShims.PropertyShim.RemoveProperty(Inventor.DrawingDocument, System.String)
+  nameWithType: PropertyShim.RemoveProperty(DrawingDocument, String)
+- uid: InventorShims.PropertyShim.RemoveProperty(Inventor.DrawingDocument,System.String,System.String)
+  name: RemoveProperty(DrawingDocument, String, String)
+  href: api/InventorShims.PropertyShim.html#InventorShims_PropertyShim_RemoveProperty_Inventor_DrawingDocument_System_String_System_String_
+  commentId: M:InventorShims.PropertyShim.RemoveProperty(Inventor.DrawingDocument,System.String,System.String)
+  fullName: InventorShims.PropertyShim.RemoveProperty(Inventor.DrawingDocument, System.String, System.String)
+  nameWithType: PropertyShim.RemoveProperty(DrawingDocument, String, String)
+- uid: InventorShims.PropertyShim.RemoveProperty(Inventor.PartDocument,System.String)
+  name: RemoveProperty(PartDocument, String)
+  href: api/InventorShims.PropertyShim.html#InventorShims_PropertyShim_RemoveProperty_Inventor_PartDocument_System_String_
+  commentId: M:InventorShims.PropertyShim.RemoveProperty(Inventor.PartDocument,System.String)
+  fullName: InventorShims.PropertyShim.RemoveProperty(Inventor.PartDocument, System.String)
+  nameWithType: PropertyShim.RemoveProperty(PartDocument, String)
+- uid: InventorShims.PropertyShim.RemoveProperty(Inventor.PartDocument,System.String,System.String)
+  name: RemoveProperty(PartDocument, String, String)
+  href: api/InventorShims.PropertyShim.html#InventorShims_PropertyShim_RemoveProperty_Inventor_PartDocument_System_String_System_String_
+  commentId: M:InventorShims.PropertyShim.RemoveProperty(Inventor.PartDocument,System.String,System.String)
+  fullName: InventorShims.PropertyShim.RemoveProperty(Inventor.PartDocument, System.String, System.String)
+  nameWithType: PropertyShim.RemoveProperty(PartDocument, String, String)
+- uid: InventorShims.PropertyShim.RemoveProperty(Inventor.PresentationDocument,System.String)
+  name: RemoveProperty(PresentationDocument, String)
+  href: api/InventorShims.PropertyShim.html#InventorShims_PropertyShim_RemoveProperty_Inventor_PresentationDocument_System_String_
+  commentId: M:InventorShims.PropertyShim.RemoveProperty(Inventor.PresentationDocument,System.String)
+  fullName: InventorShims.PropertyShim.RemoveProperty(Inventor.PresentationDocument, System.String)
+  nameWithType: PropertyShim.RemoveProperty(PresentationDocument, String)
+- uid: InventorShims.PropertyShim.RemoveProperty(Inventor.PresentationDocument,System.String,System.String)
+  name: RemoveProperty(PresentationDocument, String, String)
+  href: api/InventorShims.PropertyShim.html#InventorShims_PropertyShim_RemoveProperty_Inventor_PresentationDocument_System_String_System_String_
+  commentId: M:InventorShims.PropertyShim.RemoveProperty(Inventor.PresentationDocument,System.String,System.String)
+  fullName: InventorShims.PropertyShim.RemoveProperty(Inventor.PresentationDocument, System.String, System.String)
+  nameWithType: PropertyShim.RemoveProperty(PresentationDocument, String, String)
 - uid: InventorShims.PropertyShim.RemoveProperty*
   name: RemoveProperty
   href: api/InventorShims.PropertyShim.html#InventorShims_PropertyShim_RemoveProperty_
@@ -904,18 +1697,66 @@ references:
   isSpec: "True"
   fullName: InventorShims.PropertyShim.RemoveProperty
   nameWithType: PropertyShim.RemoveProperty
-- uid: InventorShims.PropertyShim.SetPropertyValue(Document,System.String,System.Object)
+- uid: InventorShims.PropertyShim.SetPropertyValue(Inventor.AssemblyDocument,System.String,System.Object)
+  name: SetPropertyValue(AssemblyDocument, String, Object)
+  href: api/InventorShims.PropertyShim.html#InventorShims_PropertyShim_SetPropertyValue_Inventor_AssemblyDocument_System_String_System_Object_
+  commentId: M:InventorShims.PropertyShim.SetPropertyValue(Inventor.AssemblyDocument,System.String,System.Object)
+  fullName: InventorShims.PropertyShim.SetPropertyValue(Inventor.AssemblyDocument, System.String, System.Object)
+  nameWithType: PropertyShim.SetPropertyValue(AssemblyDocument, String, Object)
+- uid: InventorShims.PropertyShim.SetPropertyValue(Inventor.AssemblyDocument,System.String,System.String,System.Object)
+  name: SetPropertyValue(AssemblyDocument, String, String, Object)
+  href: api/InventorShims.PropertyShim.html#InventorShims_PropertyShim_SetPropertyValue_Inventor_AssemblyDocument_System_String_System_String_System_Object_
+  commentId: M:InventorShims.PropertyShim.SetPropertyValue(Inventor.AssemblyDocument,System.String,System.String,System.Object)
+  fullName: InventorShims.PropertyShim.SetPropertyValue(Inventor.AssemblyDocument, System.String, System.String, System.Object)
+  nameWithType: PropertyShim.SetPropertyValue(AssemblyDocument, String, String, Object)
+- uid: InventorShims.PropertyShim.SetPropertyValue(Inventor.Document,System.String,System.Object)
   name: SetPropertyValue(Document, String, Object)
-  href: api/InventorShims.PropertyShim.html#InventorShims_PropertyShim_SetPropertyValue_Document_System_String_System_Object_
-  commentId: M:InventorShims.PropertyShim.SetPropertyValue(Document,System.String,System.Object)
-  fullName: InventorShims.PropertyShim.SetPropertyValue(Document, System.String, System.Object)
+  href: api/InventorShims.PropertyShim.html#InventorShims_PropertyShim_SetPropertyValue_Inventor_Document_System_String_System_Object_
+  commentId: M:InventorShims.PropertyShim.SetPropertyValue(Inventor.Document,System.String,System.Object)
+  fullName: InventorShims.PropertyShim.SetPropertyValue(Inventor.Document, System.String, System.Object)
   nameWithType: PropertyShim.SetPropertyValue(Document, String, Object)
-- uid: InventorShims.PropertyShim.SetPropertyValue(Document,System.String,System.String,System.Object)
+- uid: InventorShims.PropertyShim.SetPropertyValue(Inventor.Document,System.String,System.String,System.Object)
   name: SetPropertyValue(Document, String, String, Object)
-  href: api/InventorShims.PropertyShim.html#InventorShims_PropertyShim_SetPropertyValue_Document_System_String_System_String_System_Object_
-  commentId: M:InventorShims.PropertyShim.SetPropertyValue(Document,System.String,System.String,System.Object)
-  fullName: InventorShims.PropertyShim.SetPropertyValue(Document, System.String, System.String, System.Object)
+  href: api/InventorShims.PropertyShim.html#InventorShims_PropertyShim_SetPropertyValue_Inventor_Document_System_String_System_String_System_Object_
+  commentId: M:InventorShims.PropertyShim.SetPropertyValue(Inventor.Document,System.String,System.String,System.Object)
+  fullName: InventorShims.PropertyShim.SetPropertyValue(Inventor.Document, System.String, System.String, System.Object)
   nameWithType: PropertyShim.SetPropertyValue(Document, String, String, Object)
+- uid: InventorShims.PropertyShim.SetPropertyValue(Inventor.DrawingDocument,System.String,System.Object)
+  name: SetPropertyValue(DrawingDocument, String, Object)
+  href: api/InventorShims.PropertyShim.html#InventorShims_PropertyShim_SetPropertyValue_Inventor_DrawingDocument_System_String_System_Object_
+  commentId: M:InventorShims.PropertyShim.SetPropertyValue(Inventor.DrawingDocument,System.String,System.Object)
+  fullName: InventorShims.PropertyShim.SetPropertyValue(Inventor.DrawingDocument, System.String, System.Object)
+  nameWithType: PropertyShim.SetPropertyValue(DrawingDocument, String, Object)
+- uid: InventorShims.PropertyShim.SetPropertyValue(Inventor.DrawingDocument,System.String,System.String,System.Object)
+  name: SetPropertyValue(DrawingDocument, String, String, Object)
+  href: api/InventorShims.PropertyShim.html#InventorShims_PropertyShim_SetPropertyValue_Inventor_DrawingDocument_System_String_System_String_System_Object_
+  commentId: M:InventorShims.PropertyShim.SetPropertyValue(Inventor.DrawingDocument,System.String,System.String,System.Object)
+  fullName: InventorShims.PropertyShim.SetPropertyValue(Inventor.DrawingDocument, System.String, System.String, System.Object)
+  nameWithType: PropertyShim.SetPropertyValue(DrawingDocument, String, String, Object)
+- uid: InventorShims.PropertyShim.SetPropertyValue(Inventor.PartDocument,System.String,System.Object)
+  name: SetPropertyValue(PartDocument, String, Object)
+  href: api/InventorShims.PropertyShim.html#InventorShims_PropertyShim_SetPropertyValue_Inventor_PartDocument_System_String_System_Object_
+  commentId: M:InventorShims.PropertyShim.SetPropertyValue(Inventor.PartDocument,System.String,System.Object)
+  fullName: InventorShims.PropertyShim.SetPropertyValue(Inventor.PartDocument, System.String, System.Object)
+  nameWithType: PropertyShim.SetPropertyValue(PartDocument, String, Object)
+- uid: InventorShims.PropertyShim.SetPropertyValue(Inventor.PartDocument,System.String,System.String,System.Object)
+  name: SetPropertyValue(PartDocument, String, String, Object)
+  href: api/InventorShims.PropertyShim.html#InventorShims_PropertyShim_SetPropertyValue_Inventor_PartDocument_System_String_System_String_System_Object_
+  commentId: M:InventorShims.PropertyShim.SetPropertyValue(Inventor.PartDocument,System.String,System.String,System.Object)
+  fullName: InventorShims.PropertyShim.SetPropertyValue(Inventor.PartDocument, System.String, System.String, System.Object)
+  nameWithType: PropertyShim.SetPropertyValue(PartDocument, String, String, Object)
+- uid: InventorShims.PropertyShim.SetPropertyValue(Inventor.PresentationDocument,System.String,System.Object)
+  name: SetPropertyValue(PresentationDocument, String, Object)
+  href: api/InventorShims.PropertyShim.html#InventorShims_PropertyShim_SetPropertyValue_Inventor_PresentationDocument_System_String_System_Object_
+  commentId: M:InventorShims.PropertyShim.SetPropertyValue(Inventor.PresentationDocument,System.String,System.Object)
+  fullName: InventorShims.PropertyShim.SetPropertyValue(Inventor.PresentationDocument, System.String, System.Object)
+  nameWithType: PropertyShim.SetPropertyValue(PresentationDocument, String, Object)
+- uid: InventorShims.PropertyShim.SetPropertyValue(Inventor.PresentationDocument,System.String,System.String,System.Object)
+  name: SetPropertyValue(PresentationDocument, String, String, Object)
+  href: api/InventorShims.PropertyShim.html#InventorShims_PropertyShim_SetPropertyValue_Inventor_PresentationDocument_System_String_System_String_System_Object_
+  commentId: M:InventorShims.PropertyShim.SetPropertyValue(Inventor.PresentationDocument,System.String,System.String,System.Object)
+  fullName: InventorShims.PropertyShim.SetPropertyValue(Inventor.PresentationDocument, System.String, System.String, System.Object)
+  nameWithType: PropertyShim.SetPropertyValue(PresentationDocument, String, String, Object)
 - uid: InventorShims.PropertyShim.SetPropertyValue*
   name: SetPropertyValue
   href: api/InventorShims.PropertyShim.html#InventorShims_PropertyShim_SetPropertyValue_
@@ -955,17 +1796,17 @@ references:
   fullName: InventorShims.TranslatorShim.DwgExporter
   nameWithType: DwgExporter
 - uid: InventorShims.TranslatorShim.DwgExporter.#ctor(Inventor.Document)
-  name: DwgExporter(Inventor.Document)
+  name: DwgExporter(Document)
   href: api/InventorShims.TranslatorShim.DwgExporter.html#InventorShims_TranslatorShim_DwgExporter__ctor_Inventor_Document_
   commentId: M:InventorShims.TranslatorShim.DwgExporter.#ctor(Inventor.Document)
   fullName: InventorShims.TranslatorShim.DwgExporter.DwgExporter(Inventor.Document)
-  nameWithType: DwgExporter.DwgExporter(Inventor.Document)
+  nameWithType: DwgExporter.DwgExporter(Document)
 - uid: InventorShims.TranslatorShim.DwgExporter.#ctor(Inventor.Document,System.String)
-  name: DwgExporter(Inventor.Document, String)
+  name: DwgExporter(Document, String)
   href: api/InventorShims.TranslatorShim.DwgExporter.html#InventorShims_TranslatorShim_DwgExporter__ctor_Inventor_Document_System_String_
   commentId: M:InventorShims.TranslatorShim.DwgExporter.#ctor(Inventor.Document,System.String)
   fullName: InventorShims.TranslatorShim.DwgExporter.DwgExporter(Inventor.Document, System.String)
-  nameWithType: DwgExporter.DwgExporter(Inventor.Document, String)
+  nameWithType: DwgExporter.DwgExporter(Document, String)
 - uid: InventorShims.TranslatorShim.DwgExporter.#ctor*
   name: DwgExporter
   href: api/InventorShims.TranslatorShim.DwgExporter.html#InventorShims_TranslatorShim_DwgExporter__ctor_
@@ -1025,11 +1866,11 @@ references:
   fullName: InventorShims.TranslatorShim.PdfExporter
   nameWithType: PdfExporter
 - uid: InventorShims.TranslatorShim.PdfExporter.#ctor(Inventor.DrawingDocument)
-  name: PdfExporter(Inventor.DrawingDocument)
+  name: PdfExporter(DrawingDocument)
   href: api/InventorShims.TranslatorShim.PdfExporter.html#InventorShims_TranslatorShim_PdfExporter__ctor_Inventor_DrawingDocument_
   commentId: M:InventorShims.TranslatorShim.PdfExporter.#ctor(Inventor.DrawingDocument)
   fullName: InventorShims.TranslatorShim.PdfExporter.PdfExporter(Inventor.DrawingDocument)
-  nameWithType: PdfExporter.PdfExporter(Inventor.DrawingDocument)
+  nameWithType: PdfExporter.PdfExporter(DrawingDocument)
 - uid: InventorShims.TranslatorShim.PdfExporter.#ctor*
   name: PdfExporter
   href: api/InventorShims.TranslatorShim.PdfExporter.html#InventorShims_TranslatorShim_PdfExporter__ctor_
@@ -1100,22 +1941,22 @@ references:
   commentId: M:InventorShims.TranslatorShim.PdfExporter.ExportSheets
   fullName: InventorShims.TranslatorShim.PdfExporter.ExportSheets()
   nameWithType: PdfExporter.ExportSheets()
-- uid: InventorShims.TranslatorShim.PdfExporter.ExportSheets(System.Collections.Generic.IEnumerable{Sheet})
+- uid: InventorShims.TranslatorShim.PdfExporter.ExportSheets(System.Collections.Generic.IEnumerable{Inventor.Sheet})
   name: ExportSheets(IEnumerable<Sheet>)
-  href: api/InventorShims.TranslatorShim.PdfExporter.html#InventorShims_TranslatorShim_PdfExporter_ExportSheets_System_Collections_Generic_IEnumerable_Sheet__
-  commentId: M:InventorShims.TranslatorShim.PdfExporter.ExportSheets(System.Collections.Generic.IEnumerable{Sheet})
+  href: api/InventorShims.TranslatorShim.PdfExporter.html#InventorShims_TranslatorShim_PdfExporter_ExportSheets_System_Collections_Generic_IEnumerable_Inventor_Sheet__
+  commentId: M:InventorShims.TranslatorShim.PdfExporter.ExportSheets(System.Collections.Generic.IEnumerable{Inventor.Sheet})
   name.vb: ExportSheets(IEnumerable(Of Sheet))
-  fullName: InventorShims.TranslatorShim.PdfExporter.ExportSheets(System.Collections.Generic.IEnumerable<Sheet>)
-  fullName.vb: InventorShims.TranslatorShim.PdfExporter.ExportSheets(System.Collections.Generic.IEnumerable(Of Sheet))
+  fullName: InventorShims.TranslatorShim.PdfExporter.ExportSheets(System.Collections.Generic.IEnumerable<Inventor.Sheet>)
+  fullName.vb: InventorShims.TranslatorShim.PdfExporter.ExportSheets(System.Collections.Generic.IEnumerable(Of Inventor.Sheet))
   nameWithType: PdfExporter.ExportSheets(IEnumerable<Sheet>)
   nameWithType.vb: PdfExporter.ExportSheets(IEnumerable(Of Sheet))
-- uid: InventorShims.TranslatorShim.PdfExporter.ExportSheets(System.Collections.Generic.IEnumerable{Sheet},System.String)
+- uid: InventorShims.TranslatorShim.PdfExporter.ExportSheets(System.Collections.Generic.IEnumerable{Inventor.Sheet},System.String)
   name: ExportSheets(IEnumerable<Sheet>, String)
-  href: api/InventorShims.TranslatorShim.PdfExporter.html#InventorShims_TranslatorShim_PdfExporter_ExportSheets_System_Collections_Generic_IEnumerable_Sheet__System_String_
-  commentId: M:InventorShims.TranslatorShim.PdfExporter.ExportSheets(System.Collections.Generic.IEnumerable{Sheet},System.String)
+  href: api/InventorShims.TranslatorShim.PdfExporter.html#InventorShims_TranslatorShim_PdfExporter_ExportSheets_System_Collections_Generic_IEnumerable_Inventor_Sheet__System_String_
+  commentId: M:InventorShims.TranslatorShim.PdfExporter.ExportSheets(System.Collections.Generic.IEnumerable{Inventor.Sheet},System.String)
   name.vb: ExportSheets(IEnumerable(Of Sheet), String)
-  fullName: InventorShims.TranslatorShim.PdfExporter.ExportSheets(System.Collections.Generic.IEnumerable<Sheet>, System.String)
-  fullName.vb: InventorShims.TranslatorShim.PdfExporter.ExportSheets(System.Collections.Generic.IEnumerable(Of Sheet), System.String)
+  fullName: InventorShims.TranslatorShim.PdfExporter.ExportSheets(System.Collections.Generic.IEnumerable<Inventor.Sheet>, System.String)
+  fullName.vb: InventorShims.TranslatorShim.PdfExporter.ExportSheets(System.Collections.Generic.IEnumerable(Of Inventor.Sheet), System.String)
   nameWithType: PdfExporter.ExportSheets(IEnumerable<Sheet>, String)
   nameWithType.vb: PdfExporter.ExportSheets(IEnumerable(Of Sheet), String)
 - uid: InventorShims.TranslatorShim.PdfExporter.ExportSheets(System.Collections.Generic.IEnumerable{System.Int32})
@@ -1232,11 +2073,11 @@ references:
   fullName: InventorShims.TranslatorShim.StepExporter
   nameWithType: StepExporter
 - uid: InventorShims.TranslatorShim.StepExporter.#ctor(Inventor.Document)
-  name: StepExporter(Inventor.Document)
+  name: StepExporter(Document)
   href: api/InventorShims.TranslatorShim.StepExporter.html#InventorShims_TranslatorShim_StepExporter__ctor_Inventor_Document_
   commentId: M:InventorShims.TranslatorShim.StepExporter.#ctor(Inventor.Document)
   fullName: InventorShims.TranslatorShim.StepExporter.StepExporter(Inventor.Document)
-  nameWithType: StepExporter.StepExporter(Inventor.Document)
+  nameWithType: StepExporter.StepExporter(Document)
 - uid: InventorShims.TranslatorShim.StepExporter.#ctor*
   name: StepExporter
   href: api/InventorShims.TranslatorShim.StepExporter.html#InventorShims_TranslatorShim_StepExporter__ctor_
@@ -1374,11 +2215,11 @@ references:
   fullName: InventorShims.TranslatorShim.StepImporter
   nameWithType: StepImporter
 - uid: InventorShims.TranslatorShim.StepImporter.#ctor(System.String,Inventor.Application)
-  name: StepImporter(String, Inventor.Application)
+  name: StepImporter(String, Application)
   href: api/InventorShims.TranslatorShim.StepImporter.html#InventorShims_TranslatorShim_StepImporter__ctor_System_String_Inventor_Application_
   commentId: M:InventorShims.TranslatorShim.StepImporter.#ctor(System.String,Inventor.Application)
   fullName: InventorShims.TranslatorShim.StepImporter.StepImporter(System.String, Inventor.Application)
-  nameWithType: StepImporter.StepImporter(String, Inventor.Application)
+  nameWithType: StepImporter.StepImporter(String, Application)
 - uid: InventorShims.TranslatorShim.StepImporter.#ctor*
   name: StepImporter
   href: api/InventorShims.TranslatorShim.StepImporter.html#InventorShims_TranslatorShim_StepImporter__ctor_
@@ -1742,11 +2583,11 @@ references:
   fullName: InventorShims.TranslatorShim.StlExporter
   nameWithType: StlExporter
 - uid: InventorShims.TranslatorShim.StlExporter.#ctor(Inventor.Document)
-  name: StlExporter(Inventor.Document)
+  name: StlExporter(Document)
   href: api/InventorShims.TranslatorShim.StlExporter.html#InventorShims_TranslatorShim_StlExporter__ctor_Inventor_Document_
   commentId: M:InventorShims.TranslatorShim.StlExporter.#ctor(Inventor.Document)
   fullName: InventorShims.TranslatorShim.StlExporter.StlExporter(Inventor.Document)
-  nameWithType: StlExporter.StlExporter(Inventor.Document)
+  nameWithType: StlExporter.StlExporter(Document)
 - uid: InventorShims.TranslatorShim.StlExporter.#ctor*
   name: StlExporter
   href: api/InventorShims.TranslatorShim.StlExporter.html#InventorShims_TranslatorShim_StlExporter__ctor_
@@ -1958,11 +2799,11 @@ references:
   commentId: T:InventorShims.UiShim
   fullName: InventorShims.UiShim
   nameWithType: UiShim
-- uid: InventorShims.UiShim.GetActiveColorSchemeBackground(Application)
+- uid: InventorShims.UiShim.GetActiveColorSchemeBackground(Inventor.Application)
   name: GetActiveColorSchemeBackground(Application)
-  href: api/InventorShims.UiShim.html#InventorShims_UiShim_GetActiveColorSchemeBackground_Application_
-  commentId: M:InventorShims.UiShim.GetActiveColorSchemeBackground(Application)
-  fullName: InventorShims.UiShim.GetActiveColorSchemeBackground(Application)
+  href: api/InventorShims.UiShim.html#InventorShims_UiShim_GetActiveColorSchemeBackground_Inventor_Application_
+  commentId: M:InventorShims.UiShim.GetActiveColorSchemeBackground(Inventor.Application)
+  fullName: InventorShims.UiShim.GetActiveColorSchemeBackground(Inventor.Application)
   nameWithType: UiShim.GetActiveColorSchemeBackground(Application)
 - uid: InventorShims.UiShim.GetActiveColorSchemeBackground*
   name: GetActiveColorSchemeBackground
@@ -1971,11 +2812,11 @@ references:
   isSpec: "True"
   fullName: InventorShims.UiShim.GetActiveColorSchemeBackground
   nameWithType: UiShim.GetActiveColorSchemeBackground
-- uid: InventorShims.UiShim.GetActiveColorSchemeName(Application)
+- uid: InventorShims.UiShim.GetActiveColorSchemeName(Inventor.Application)
   name: GetActiveColorSchemeName(Application)
-  href: api/InventorShims.UiShim.html#InventorShims_UiShim_GetActiveColorSchemeName_Application_
-  commentId: M:InventorShims.UiShim.GetActiveColorSchemeName(Application)
-  fullName: InventorShims.UiShim.GetActiveColorSchemeName(Application)
+  href: api/InventorShims.UiShim.html#InventorShims_UiShim_GetActiveColorSchemeName_Inventor_Application_
+  commentId: M:InventorShims.UiShim.GetActiveColorSchemeName(Inventor.Application)
+  fullName: InventorShims.UiShim.GetActiveColorSchemeName(Inventor.Application)
   nameWithType: UiShim.GetActiveColorSchemeName(Application)
 - uid: InventorShims.UiShim.GetActiveColorSchemeName*
   name: GetActiveColorSchemeName
@@ -1984,11 +2825,11 @@ references:
   isSpec: "True"
   fullName: InventorShims.UiShim.GetActiveColorSchemeName
   nameWithType: UiShim.GetActiveColorSchemeName
-- uid: InventorShims.UiShim.SetActiveColorScheme(Application,System.String)
+- uid: InventorShims.UiShim.SetActiveColorScheme(Inventor.Application,System.String)
   name: SetActiveColorScheme(Application, String)
-  href: api/InventorShims.UiShim.html#InventorShims_UiShim_SetActiveColorScheme_Application_System_String_
-  commentId: M:InventorShims.UiShim.SetActiveColorScheme(Application,System.String)
-  fullName: InventorShims.UiShim.SetActiveColorScheme(Application, System.String)
+  href: api/InventorShims.UiShim.html#InventorShims_UiShim_SetActiveColorScheme_Inventor_Application_System_String_
+  commentId: M:InventorShims.UiShim.SetActiveColorScheme(Inventor.Application,System.String)
+  fullName: InventorShims.UiShim.SetActiveColorScheme(Inventor.Application, System.String)
   nameWithType: UiShim.SetActiveColorScheme(Application, String)
 - uid: InventorShims.UiShim.SetActiveColorScheme*
   name: SetActiveColorScheme

@@ -1,8 +1,8 @@
-﻿using System;
+﻿using Inventor;
+using System;
 using System.Collections.Generic;
-using System.Linq;
-using Inventor;
 using System.Diagnostics;
+using System.Linq;
 
 namespace InventorShims
 {
@@ -20,7 +20,7 @@ namespace InventorShims
             documentToWork.Activate();
             ((Inventor.Application)documentToWork.Parent).CommandManager.ControlDefinitions["AppZoomallCmd"].Execute();
         }
-        
+
         /// <summary>
         /// Orbits around the part/assembly to show the view from a front isometric angle on the view cube
         /// </summary>
@@ -37,7 +37,7 @@ namespace InventorShims
         /// <param name="locationToSaveImage"></param>
         /// <param name="setWhiteBg"></param>
         /// <param name="orbitToIso"></param>
-        
+
         public static void ScreenShot(this Document documentToWork, string locationToSaveImage, bool setWhiteBg = false, bool orbitToIso = false)
         {
             Inventor.Application invObj = (Inventor.Application)documentToWork.Parent;
@@ -46,14 +46,14 @@ namespace InventorShims
 
             documentToWork.ZoomExtents();
 
-            if(orbitToIso)
+            if (orbitToIso)
             {
                 documentToWork.OrbitToIsoFrontRightTop();
             }
 
             invObj.WindowState = Inventor.WindowsSizeEnum.kMaximize;
 
-            if(setWhiteBg)
+            if (setWhiteBg)
             {
                 // Save current color scheme info
                 userColorScheme = invObj.GetActiveColorSchemeName();
@@ -68,7 +68,7 @@ namespace InventorShims
             // Take screenshot
             invObj.ActiveDocument.SaveAs(locationToSaveImage, true);
 
-            if(setWhiteBg)
+            if (setWhiteBg)
             {
                 // Restore original theme info
                 invObj.ColorSchemes[userColorScheme].Activate();
@@ -100,9 +100,9 @@ namespace InventorShims
                 app.SilentOperation = false;
             }
         }
-        
 
         #region Document type booleans
+
         /// <summary>
         /// Returns true if document is a part
         /// </summary>
@@ -172,7 +172,8 @@ namespace InventorShims
         {
             return documentToTest.DocumentType == Inventor.DocumentTypeEnum.kUnknownDocumentObject;
         }
-        #endregion
+
+        #endregion Document type booleans
 
         /// <summary>
         /// Returns a Document Object subtype if a subtype exists.  If not, a generic Inventor.Document is returned.
@@ -216,27 +217,28 @@ namespace InventorShims
             List<Document> documentList = new List<Document>();
 
             if (selectSet.Count == 0)
-            {       
-                    //nothing is selected, return an null list!
-                    return documentList;
+            {
+                //nothing is selected, return an null list!
+                return documentList;
             }
 
             Document tempDocument = null;
 
             foreach (dynamic i in selectSet)
-                {
+            {
                 tempDocument = GetDocumentFromObject(i);
 
                 Debug.WriteLine("item  " + (string)i.type.ToString());
-                
-                if (tempDocument is null) {
+
+                if (tempDocument is null)
+                {
                     Debug.WriteLine("this object is not a document");
                     continue;
-                    }
+                }
 
                 Debug.WriteLine("this object is a document.");
                 documentList.Add(tempDocument);
-                }
+            }
 
             if (documentList != null)
                 documentList = documentList.Distinct().ToList();
@@ -256,7 +258,7 @@ namespace InventorShims
 
             Inventor.Application app = ApplicationShim.CurrentInstance();
             if (app == null) return null;
-            
+
             Document currentDocument = app.ActiveEditDocument;
             switch (currentDocument.DocumentType)
             {
@@ -287,7 +289,8 @@ namespace InventorShims
         /// <returns>Inventor.Document</returns>
         private static Document GetDocumentFromObjectInAssembly(dynamic obj)
         {
-            switch (obj.type) {
+            switch (obj.type)
+            {
                 //###   In Assembly Document [kAssemblyDocumentObject]   ###
                 case 67113776: //kComponentOccurrenceObject:
                 case 67113888: //kComponentOccurrenceProxyObject
@@ -322,14 +325,17 @@ namespace InventorShims
 
                 case 2130706445: //kGenericObject:
                     dynamic returnObject = null;
-                    try {
+                    try
+                    {
                         //try to get single document from selected part
                         document.ProcessViewSelection((GenericObject)obj, out _, out returnObject);
-                    } catch { break;}
+                    }
+                    catch { break; }
 
                     if (returnObject == null) break;
 
-                    switch (returnObject) {
+                    switch (returnObject)
+                    {
                         case Document doc:
                             returnDocument = doc;
                             break;
@@ -338,9 +344,9 @@ namespace InventorShims
                             //if this doesn't work, try to get the component occurrence instead, and then get the document from that
                             returnDocument = (Document)componentOccurrence.Definition.Document;
                             break;
-                            }
+                    }
                     break;
-                    //There was an error at 'Set oCCdef = oCompOcc.Definition.Document'
+                //There was an error at 'Set oCCdef = oCompOcc.Definition.Document'
 
                 case 117478144: //kDrawingCurveSegmentObject
                     //Edge Objects and Edge Proxy Objects
@@ -360,13 +366,15 @@ namespace InventorShims
                     {
                         returnDocument = (Document)modelGeometry.ContainingOccurrence.Definition.Document;
                         break;
-                    } catch { }
+                    }
+                    catch { }
 
                     try //for a selected DrawingCurveSegment belonging to a part
                     {
                         returnDocument = (Document)modelGeometry.Parent.ComponentDefinition.Document;
                         break;
-                    } catch { }
+                    }
+                    catch { }
                     break;
 
                 case 117444096: //kPartsListObject:
@@ -398,5 +406,570 @@ namespace InventorShims
             //ObjectTypeEnum.kDocumentObject
             return obj.type == 50332160 ? true : false;
         }
+
+        /// <summary>
+        /// Checks if a Document is a ContentCenter part; returns a bool.
+        /// </summary>
+        /// <param name="document"></param>
+        /// <returns></returns>
+        public static bool IsContentCenter(this Document document) =>
+            document.PropertySets.PropertySetExists("ContentCenter", out _);
+
+        /// <summary>
+        /// Checks if an AssemblyDocument is a ContentCenter part; returns false.
+        /// </summary>
+        /// <param name="document"></param>
+        /// <returns></returns>
+        public static bool IsContentCenter(this AssemblyDocument document) => false;
+
+        /// <summary>
+        /// Checks if a PartDocument is a ContentCenter part; returns a bool.
+        /// </summary>
+        /// <param name="document"></param>
+        /// <returns></returns>
+        public static bool IsContentCenter(this PartDocument document) =>
+            document.PropertySets.PropertySetExists("ContentCenter", out _);
+
+        /// <summary>
+        /// Checks if a PresentationDocument is a ContentCenter part; returns false.
+        /// </summary>
+        /// <param name="document"></param>
+        /// <returns></returns>
+        public static bool IsContentCenter(this PresentationDocument document) => false;
+
+        /// <summary>
+        /// Checks if a Document is a Custom ContentCenter part; returns a bool.
+        /// </summary>
+        /// <param name="document"></param>
+        /// <returns></returns>
+        public static bool IsCustomContentCenter(this Document document)
+        {
+            if (document.IsContentCenter())
+            {
+                try
+                {
+                    return ((bool)document.PropertySets["ContentCenter"]["IsCustomPart"].Value);
+                }
+                catch
+                {
+                    return false;
+                }
+            }
+
+            return false;
+        }
+
+        /// <summary>
+        /// Checks if a PartDocument is a Custom ContentCenter part; returns a bool.
+        /// </summary>
+        /// <param name="document"></param>
+        /// <returns></returns>
+        public static bool IsCustomContentCenter(this PartDocument document)
+            => IsCustomContentCenter((Document)document);
+
+        /// <summary>
+        /// Checks if an AssemblyDocument is a Custom ContentCenter part; returns false.
+        /// </summary>
+        /// <param name="document"></param>
+        /// <returns></returns>
+        public static bool IsCustomContentCenter(this AssemblyDocument document) => false;
+
+        /// <summary>
+        /// Checks if a DrawingDocument is a Custom ContentCenter part; returns false.
+        /// </summary>
+        /// <param name="document"></param>
+        /// <returns></returns>
+        public static bool IsCustomContentCenter(this DrawingDocument document) => false;
+
+        /// <summary>
+        /// Checks if a PresentationDocument is a Custom ContentCenter part; returns false.
+        /// </summary>
+        /// <param name="document"></param>
+        /// <returns></returns>
+        public static bool IsCustomContentCenter(this PresentationDocument document) => false;
+
+        //IsIPartFactory IsIPartMember
+
+        
+        #region IEnumerable<Document> providors
+
+        /// <summary>
+        /// Returns an IEnumerable collection of Inventor.Document from a SelectSet object.
+        /// </summary>
+        /// <param name="selectSet">Inventor.SelectionSet</param>
+        /// <returns>IEnumerable Document</returns>
+        /// <exception cref="System.ArgumentNullException">Throws an error if the selection set is empty.</exception>
+        public static IEnumerable<Document> EnumerateDocuments(this SelectSet selectSet)
+        {
+            if (selectSet.Count == 0)
+                throw new System.ArgumentNullException("The selection set was empty.");
+
+            foreach (dynamic i in selectSet)
+            {
+                Document tempDocument = DocumentShim.GetDocumentFromObject(i);
+
+                if (tempDocument is null)
+                    continue;
+
+                yield return tempDocument;
+            }
+        }
+
+        /// <summary>
+        /// Returns an IEnumerable collection of Inventor.Document from a DocumentDescriptor object.
+        /// </summary>
+        /// <param name="documentDiscriptors"></param>
+        /// <returns>IEnumerable Document</returns>
+        public static IEnumerable<Document> EnumerateDocuments(this IEnumerable<DocumentDescriptor> documentDiscriptors)
+        {
+            foreach (DocumentDescriptor document in documentDiscriptors)
+            {
+                if (document is null)
+                    continue;
+
+                yield return (Document)document.ReferencedDocument;
+            }
+        }
+
+        /// <summary>
+        /// Returns an IEnumerable{Document} of all referenced documents in a Document object.
+        /// </summary>
+        /// <param name="document"></param>
+        /// <returns></returns>
+        public static IEnumerable<Document> EnumerateAllReferencedDocuments(this Document document)
+        {
+            //keep calling method on document to get the next reference
+            foreach (Document doc in document.AllReferencedDocuments)
+                yield return doc;
+        }
+
+        /// <summary>
+        /// Returns an IEnumerable{Document} of all referenced documents in an AssemblyDocument object.
+        /// </summary>
+        /// <param name="document"></param>
+        /// <returns></returns>
+        public static IEnumerable<Document> EnumerateAllReferencedDocuments(this AssemblyDocument document)
+        {
+            foreach (Document doc in document.AllReferencedDocuments)
+                yield return doc;
+        }
+
+        /// <summary>
+        /// Returns an IEnumerable{Document} of all referenced documents in a PresentationDocument object.
+        /// </summary>
+        /// <param name="document"></param>
+        /// <returns></returns>
+        public static IEnumerable<Document> EnumerateAllReferencedDocuments(this PresentationDocument document)
+        {
+            foreach (Document doc in document.AllReferencedDocuments)
+                yield return doc;
+        }
+
+        /// <summary>
+        /// Returns an IEnumerable{Document} of all referenced documents in a PartDocument object.
+        /// </summary>
+        /// <param name="document"></param>
+        /// <returns></returns>
+        public static IEnumerable<Document> EnumerateAllReferencedDocuments(this PartDocument document)
+        {
+            foreach (Document doc in document.AllReferencedDocuments)
+                yield return doc;
+        }
+
+        /// <summary>
+        /// Returns an IEnumerable{Document} of all referenced documents in a DrawingDocument object.
+        /// </summary>
+        /// <param name="document"></param>
+        /// <returns></returns>
+        public static IEnumerable<Document> EnumerateAllReferencedDocuments(this DrawingDocument document)
+        {
+            foreach (Document doc in document.AllReferencedDocuments)
+                yield return doc;
+        }
+
+        /// <summary>
+        /// Returns an IEnumerable{Document} of referenced documents in a Document object.
+        /// </summary>
+        /// <param name="document"></param>
+        /// <returns></returns>
+        public static IEnumerable<Document> EnumerateReferencedDocuments(this Document document)
+        {
+            foreach (Document doc in document.ReferencedDocuments)
+                yield return doc;
+        }
+
+        /// <summary>
+        /// Returns an IEnumerable{Document} of referenced documents in an AssemblyDocument object.
+        /// </summary>
+        /// <param name="document"></param>
+        /// <returns></returns>
+        public static IEnumerable<Document> EnumerateReferencedDocuments(this AssemblyDocument document)
+        {
+            foreach (Document doc in document.ReferencedDocuments)
+                yield return doc;
+        }
+
+        /// <summary>
+        /// Returns an IEnumerable{Document} of referenced documents in a PresentationDocument object.
+        /// </summary>
+        /// <param name="document"></param>
+        /// <returns></returns>
+        public static IEnumerable<Document> EnumerateReferencedDocuments(this PresentationDocument document)
+        {
+            foreach (Document doc in document.ReferencedDocuments)
+                yield return doc;
+        }
+
+        /// <summary>
+        /// Returns an IEnumerable{Document} of referenced documents in a PartDocument object.
+        /// </summary>
+        /// <param name="document"></param>
+        /// <returns></returns>
+        public static IEnumerable<Document> EnumerateReferencedDocuments(this PartDocument document)
+        {
+            foreach (Document doc in document.ReferencedDocuments)
+                yield return doc;
+        }
+
+        /// <summary>
+        /// Returns an IEnumerable{Document} of referenced documents in a DrawingDocument object.
+        /// </summary>
+        /// <param name="document"></param>
+        /// <returns></returns>
+        public static IEnumerable<Document> EnumerateReferencedDocuments(this DrawingDocument document)
+        {
+            foreach (Document doc in document.ReferencedDocuments)
+                yield return doc;
+        }
+
+        /// <summary>
+        /// Returns an IEnumerable{Document} of referencing documents in a Document object.
+        /// </summary>
+        /// <param name="document"></param>
+        /// <returns></returns>
+        public static IEnumerable<Document> EnumerateReferencingDocuments(this Document document)
+        {
+            foreach (Document doc in document.ReferencingDocuments)
+                yield return doc;
+        }
+
+        /// <summary>
+        /// Returns an IEnumerable{Document} of referencing documents in an AssemblyDocument object.
+        /// </summary>
+        /// <param name="document"></param>
+        /// <returns></returns>
+        public static IEnumerable<Document> EnumerateReferencingDocuments(this AssemblyDocument document)
+        {
+            foreach (Document doc in document.ReferencingDocuments)
+                yield return doc;
+        }
+
+        /// <summary>
+        /// Returns an IEnumerable{Document} of referencing documents in a PresentationDocument object.
+        /// </summary>
+        /// <param name="document"></param>
+        /// <returns></returns>
+        public static IEnumerable<Document> EnumerateReferencingDocuments(this PresentationDocument document)
+        {
+            foreach (Document doc in document.ReferencingDocuments)
+                yield return doc;
+        }
+
+        /// <summary>
+        /// Returns an IEnumerable{Document} of referencing documents in a PartDocument object.
+        /// </summary>
+        /// <param name="document"></param>
+        /// <returns></returns>
+        public static IEnumerable<Document> EnumerateReferencingDocuments(this PartDocument document)
+        {
+            foreach (Document doc in document.ReferencingDocuments)
+                yield return doc;
+        }
+
+        /// <summary>
+        /// Returns an IEnumerable{Document} of referencing documents in a DrawingDocument object.
+        /// </summary>
+        /// <param name="document"></param>
+        /// <returns></returns>
+        public static IEnumerable<Document> EnumerateReferencingDocuments(this DrawingDocument document)
+        {
+            foreach (Document doc in document.ReferencingDocuments)
+                yield return doc;
+        }
+
+        #endregion IEnumerable<Document> providors
+
+        #region IEnumerable Filters
+
+        /// <summary>
+        /// Returns an IEnumerable{AssemblyDocument} of just the AssemblyDocuments from an IEnumerable{Document} collection.
+        /// </summary>
+        /// <param name="documents"></param>
+        /// <returns></returns>
+        public static IEnumerable<AssemblyDocument> AssemblyDocuments(this IEnumerable<Document> documents)
+        {
+            foreach (Document document in documents)
+            {
+                if (document.IsAssembly())
+                    yield return (AssemblyDocument)document;
+            }
+
+            yield break;
+        }
+
+        /// <summary>
+        /// Returns an IEnumerable{Document} with the AssemblyDocuments removed from an IEnumerable{Document} collection.
+        /// </summary>
+        /// <param name="documents"></param>
+        /// <returns></returns>
+        public static IEnumerable<Document> RemoveAssemblyDocuments(this IEnumerable<Document> documents)
+        {
+            foreach (Document document in documents)
+            {
+                if (!document.IsAssembly())
+                    yield return document;
+            }
+
+            yield break;
+        }
+
+        /// <summary>
+        /// Returns an IEnumerable{AssemblyDocument} of just the DrawingDocuments from an IEnumerable{Document} collection.
+        /// </summary>
+        /// <param name="documents"></param>
+        /// <returns></returns>
+        public static IEnumerable<DrawingDocument> DrawingDocuments(this IEnumerable<Document> documents)
+        {
+            foreach (Document document in documents)
+            {
+                if (document.IsDrawing())
+                    yield return (DrawingDocument)document;
+            }
+
+            yield break;
+        }
+
+        /// <summary>
+        /// Returns an IEnumerable{Document} with the DrawingDocuments removed from an IEnumerable{Document} collection.
+        /// </summary>
+        /// <param name="documents"></param>
+        /// <returns></returns>
+        public static IEnumerable<Document> RemoveDrawingDocuments(this IEnumerable<Document> documents)
+        {
+            foreach (Document document in documents)
+            {
+                if (!document.IsDrawing())
+                    yield return document;
+            }
+
+            yield break;
+        }
+
+        /// <summary>
+        /// Returns an IEnumerable{AssemblyDocument} of just the PresentationDocuments from an IEnumerable{Document} collection.
+        /// </summary>
+        /// <param name="documents"></param>
+        /// <returns></returns>
+        public static IEnumerable<PresentationDocument> PresentationDocuments(this IEnumerable<Document> documents)
+        {
+            foreach (Document document in documents)
+            {
+                if (document.IsPresentation())
+                    yield return (PresentationDocument)document;
+            }
+
+            yield break;
+        }
+
+        /// <summary>
+        /// Returns an IEnumerable{Document} with the PresentationDocuments removed from an IEnumerable{Document} collection.
+        /// </summary>
+        /// <param name="documents"></param>
+        /// <returns></returns>
+        public static IEnumerable<Document> RemovePresentationDocuments(this IEnumerable<Document> documents)
+        {
+            foreach (Document document in documents)
+            {
+                if (!document.IsPresentation())
+                    yield return document;
+            }
+
+            yield break;
+        }
+
+        /// <summary>
+        /// Returns an IEnumerable{AssemblyDocument} of just the PartDocuments from an IEnumerable{Document} collection.
+        /// </summary>
+        /// <param name="documents"></param>
+        /// <returns></returns>
+        public static IEnumerable<PartDocument> PartDocuments(this IEnumerable<Document> documents)
+        {
+            foreach (Document document in documents)
+            {
+                if (document.IsPart())
+                    yield return (PartDocument)document;
+            }
+
+            yield break;
+        }
+
+        /// <summary>
+        /// Returns an IEnumerable{Document} with the PartDocuments removed from an IEnumerable{Document} collection.
+        /// </summary>
+        /// <param name="documents"></param>
+        /// <returns></returns>
+        public static IEnumerable<Document> RemovePartDocuments(this IEnumerable<Document> documents)
+        {
+            foreach (Document document in documents)
+            {
+                if (!document.IsPart())
+                    yield return document;
+            }
+
+            yield break;
+        }
+
+        /// <summary>
+        /// Returns an IEnumerable{Document} with the Non-Native Documents (ForeignModel, SAT, Unknown) removed from an IEnumerable{Document} collection.
+        /// </summary>
+        /// <param name="documents"></param>
+        /// <returns></returns>
+        public static IEnumerable<Document> RemoveNonNativeDocuments(this IEnumerable<Document> documents)
+        {
+            foreach (Document document in documents)
+            {
+                if (document.IsForeignModel() || document.IsSat() || document.IsUnknown())
+                { }
+                else
+                {
+                    yield return document;
+                }
+            }
+
+            yield break;
+        }
+
+        #endregion IEnumerable Filters
+
+        #region IEnumerable<DocumentDescriptors> providers
+
+        /// <summary>
+        /// Returns an IEnumerable{DocumentDescriptors} of referenced documents in a Document object.
+        /// </summary>
+        /// <param name="document"></param>
+        /// <returns></returns>
+        public static IEnumerable<DocumentDescriptor> EnumerateReferencedDocumentDescriptors(this Document document)
+        {
+            foreach (DocumentDescriptor dd in document.ReferencedDocumentDescriptors)
+                yield return dd;
+        }
+
+        /// <summary>
+        /// Returns an IEnumerable{DocumentDescriptors} of referenced documents in a AssemblyDocument object.
+        /// </summary>
+        /// <param name="document"></param>
+        /// <returns></returns>
+        public static IEnumerable<DocumentDescriptor> EnumerateReferencedDocumentDescriptors(this AssemblyDocument document)
+        {
+            foreach (DocumentDescriptor dd in document.ReferencedDocumentDescriptors)
+                yield return dd;
+        }
+
+        /// <summary>
+        /// Returns an IEnumerable{DocumentDescriptors} of referenced documents in a PresentationDocument object.
+        /// </summary>
+        /// <param name="document"></param>
+        /// <returns></returns>
+        public static IEnumerable<DocumentDescriptor> EnumerateReferencedDocumentDescriptors(this PresentationDocument document)
+        {
+            foreach (DocumentDescriptor dd in document.ReferencedDocumentDescriptors)
+                yield return dd;
+        }
+
+        /// <summary>
+        /// Returns an IEnumerable{DocumentDescriptors} of referenced documents in a PartDocument object.
+        /// </summary>
+        /// <param name="document"></param>
+        /// <returns></returns>
+        public static IEnumerable<DocumentDescriptor> EnumerateReferencedDocumentDescriptors(this PartDocument document)
+        {
+            foreach (DocumentDescriptor dd in document.ReferencedDocumentDescriptors)
+                yield return dd;
+        }
+
+        /// <summary>
+        /// Returns an IEnumerable{DocumentDescriptors} of referencing documents in a DrawingDocument object.
+        /// </summary>
+        /// <param name="document"></param>
+        /// <returns></returns>
+        public static IEnumerable<DocumentDescriptor> EnumerateReferencedDocumentDescriptors(this DrawingDocument document)
+        {
+            foreach (DocumentDescriptor dd in document.ReferencedDocumentDescriptors)
+                yield return dd;
+        }
+
+        /// <summary>
+        /// Returns an IEnumerable{DocumentDescriptors} of all leaf documents in an AssemblyDocument object.
+        /// </summary>
+        /// <param name="document"></param>
+        /// <returns></returns>
+        public static IEnumerable<DocumentDescriptor> EnumerateAllLeafOccurrencesDocumentDescriptors(this AssemblyDocument document)
+        {
+            var componentDefinition = document.ComponentDefinition;
+            var leafOccurences = componentDefinition.Occurrences.AllLeafOccurrences;
+
+            foreach (ComponentOccurrence occurence in leafOccurences)
+            {
+                yield return occurence.ReferencedDocumentDescriptor;
+            }
+        }
+
+        #endregion IEnumerable<DocumentDescriptors> providers
+
+        #region IEnumerable Samples
+
+        private static void iEnumerableSmpleCode(this Document document)
+        {
+            var test = document.EnumerateAllReferencedDocuments()
+                .RemoveNonNativeDocuments()
+                .Where(s => s.IsModifiable)
+                .Where(s => s.IsPart())
+                .SkipWhile(s => s.NeedsMigrating)
+                .Where(s => s.ReservedForWriteByMe);
+
+            //apply to each in test
+            foreach (var i in test)
+            {
+                i.SetPropertyValue("Author", "Bob");
+            }
+
+            document.SelectSet.EnumerateDocuments()
+                .Where(s => s.IsModifiable)
+                .PartDocuments()
+                .Distinct()
+                .ToList()
+                .ForEach(d => d.SetAttributeValue("MyAttribSet", "Attribute2", "Value"));
+
+            var justTheAssemblyDocs = document.SelectSet.EnumerateDocuments()
+                .AssemblyDocuments();
+
+            var notTheAssemblyDocs = document.EnumerateAllReferencedDocuments()
+                .Where(s => !s.IsAssembly());
+
+            var JustCustomCCPartDocs = document.EnumerateAllReferencedDocuments()
+                .PartDocuments()
+                .Where(d => d.IsCustomContentCenter());
+
+            var JustCustomCCDocs = document.EnumerateAllReferencedDocuments()
+                .Where(d => d.IsCustomContentCenter());
+
+            var count = document.EnumerateReferencedDocumentDescriptors()
+                .Where(s => !s.ReferenceMissing)
+                .Where(s => !s.ReferenceSuppressed)
+                .EnumerateDocuments()
+                .PartDocuments()
+                .Count();
+        }
+        #endregion
     }
 }
