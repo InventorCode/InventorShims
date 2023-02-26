@@ -201,6 +201,8 @@ namespace InventorShims
             }
         }
 
+
+
         /// <summary>
         /// Returns a list of Documents from a provided SelectSet.  If no Documents are found, an
         /// empty list is returned.  Only unique documents objects are returned.
@@ -408,6 +410,17 @@ namespace InventorShims
         }
 
         /// <summary>
+        /// Returns true if the edit-in place mode is active.
+        /// </summary>
+        /// <param name="document"></param>
+        /// <returns>Boolean</returns>
+        public static bool IsEditInPlaceActive(this Document document)
+        {
+            var test = document.ActivatedObject;
+            return (test is not null);
+        }
+
+        /// <summary>
         /// Checks if a Document is a ContentCenter part; returns a bool.
         /// </summary>
         /// <param name="document"></param>
@@ -490,7 +503,7 @@ namespace InventorShims
 
         //IsIPartFactory IsIPartMember
 
-        
+
         #region IEnumerable<Document> providors
 
         /// <summary>
